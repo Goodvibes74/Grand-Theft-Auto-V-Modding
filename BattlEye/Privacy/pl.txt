@@ -1,0 +1,15 @@
+Aby realizować swój cel polegający na zapobieganiu i wykrywaniu korzystania z oprogramowania do oszukiwania w celu zapewnienia uczciwego środowiska gry, BattlEye może przetwarzać następujące informacje od użytkownika:
+
+- Adres IP
+- Identyfikatory gry (np. nazwa w grze, identyfikator konta itp.)
+- Informacje i identyfikatory urządzeń sprzętowych (np. numery seryjne)
+- Informacje o uruchomionym systemie operacyjnym
+- Informacje o plikach i pamięci związanych z grą i systemem operacyjnym
+- Informacje o uruchomionych procesach, sterownikach i innym kodzie wykonywalnym
+- Nazwy plików zawarte w innych informacjach wymienionych tutaj, które mogą również zawierać nazwę użytkownika systemu operacyjnego.
+
+BattlEye stosuje politykę minimalizacji danych, która zapewnia, że dane są przechowywane tylko wtedy, gdy jest to konieczne, tj. gdy BattlEye znajdzie informacje, które mogą potencjalnie wskazywać na użycie oprogramowania do oszukiwania. W rezultacie BattlEye generalnie nie przechowuje żadnych informacji o większości użytkowników.
+
+BattlEye może przechowywać informacje przez cały okres świadczenia usług związanych z grą.
+
+Użytkownik może w dowolnym momencie skontaktować się z Rockstar Games w celu skorzystania z przysługujących mu praw w związku z przetwarzaniem danych. Więcej informacji można znaleźć w Polityce prywatności BattlEye, https://www.battleye.com/privacy-policy/, oraz Polityce prywatności Rockstar Games, https://www.rockstargames.com/privacy.

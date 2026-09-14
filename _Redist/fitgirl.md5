@@ -1,0 +1,598 @@
+77bca75ac5b2445daa982c4afcc96e81 *..\BattlEye\EULA\cs.txt
+60a7a9ae31dc1d06ccb35f6a08532e7d *..\BattlEye\EULA\de.txt
+033e3772eef25e4016ca81c0d6170c6b *..\BattlEye\EULA\en.txt
+90ce0b3c0f8e7fb8921d387ac052beff *..\BattlEye\EULA\es.txt
+fe93b9837800a2c683c5022c221d0c9c *..\BattlEye\EULA\fr.txt
+ea1388f2a4ec3e388b81da447ba9d556 *..\BattlEye\EULA\it.txt
+0d0f4ab9d3b5d9ceac2cdfa767ae8d6d *..\BattlEye\EULA\ja.txt
+983b5eb7e202ce1b513638c6ec13bc5c *..\BattlEye\EULA\ko.txt
+6dd303533a02009e782e30a4db19e552 *..\BattlEye\EULA\nl.txt
+366603c068ae5fa6562d04fd5f8d2eb6 *..\BattlEye\EULA\pl.txt
+e723721e944fd850f80cd3527c351d12 *..\BattlEye\EULA\pt.txt
+3c8772835cd4dd070fb22cb2c43c2496 *..\BattlEye\EULA\ru.txt
+e8c4d7b3b00dc95cd0cf2113dfaa2317 *..\BattlEye\EULA\tr.txt
+e1d95c226ec752c6c2c4e724ca8e19b6 *..\BattlEye\EULA\zh-TW.txt
+04c16d1ef4beb92dcd364c70baf5e503 *..\BattlEye\EULA\zh.txt
+5885ebdc595ec9dbf2a64642a813a97e *..\BattlEye\Privacy\cs.txt
+21651875a67de650d54170d2753b3d96 *..\BattlEye\Privacy\de.txt
+018f598a7c319c7eb384babc48cfa9f4 *..\BattlEye\Privacy\en.txt
+db372a902c6a832952f6eeaa7bad9c12 *..\BattlEye\Privacy\es.txt
+a8681bdbea1e98029a252d91bfe51dbb *..\BattlEye\Privacy\fr.txt
+0926792c19736cf3fafedf8b9cb022ca *..\BattlEye\Privacy\it.txt
+1e4ed83b4274914a8ec630e655938049 *..\BattlEye\Privacy\ja.txt
+14d0a4b7282fb0f839c65cfb2d8842e4 *..\BattlEye\Privacy\ko.txt
+7747b00e7a76cfe8257f6f54cfdc2e31 *..\BattlEye\Privacy\nl.txt
+bb4f2e55957f5b4f1d947226221b6c14 *..\BattlEye\Privacy\pl.txt
+17120bd27ad6251e3200133153e40b6a *..\BattlEye\Privacy\pt.txt
+c2cbd2d0be766562f21b223d817e8573 *..\BattlEye\Privacy\ru.txt
+3b02b525a7a239dbdcc8e4acbb1d57c0 *..\BattlEye\Privacy\tr.txt
+6de10b609e78ddd3f904c7cac0409d5b *..\BattlEye\Privacy\zh-TW.txt
+a430cef9c1f753e45f2126e21d66d4ac *..\BattlEye\Privacy\zh.txt
+610277c199806dde89e3e9fbe345ce79 *..\BattlEye\Text\cs.ini
+69260767e965883aee947c131eaa03ff *..\BattlEye\Text\de.ini
+ea51aefe72acf43638df2791df6f9141 *..\BattlEye\Text\en.ini
+aaf644406eebb2121603410224f1af8c *..\BattlEye\Text\es.ini
+6a52639189be4c2e5a59c7ef963d03d4 *..\BattlEye\Text\fr.ini
+d72a4a0a66c3e169913abc0bcd16bcc9 *..\BattlEye\Text\it.ini
+a28ad0fb754bb0b1f7cb6670c6119f75 *..\BattlEye\Text\ja.ini
+6546a209d01847f31d82b9aac7ed16a9 *..\BattlEye\Text\ko.ini
+d5831046462d1a5a5d5956212d42a2dd *..\BattlEye\Text\nl.ini
+4b2b0d19ef1abe3a28cab1481786efd5 *..\BattlEye\Text\pl.ini
+2ba77cf2464b30268fe414cdac3f7bc7 *..\BattlEye\Text\pt.ini
+1aad9cb7ef274408a6b410d0458c3539 *..\BattlEye\Text\ru.ini
+40a8849fe93b59ebdd7a9770aa37704f *..\BattlEye\Text\tr.ini
+546e8b99cde2d9e1f48e0b3e07f15b95 *..\BattlEye\Text\zh-TW.ini
+8957587eeaab6c060c918cecddff1814 *..\BattlEye\Text\zh.ini
+39e8652c52ea75bcaab2d7f5b140e574 *..\BattlEye\BEClient_x64.cfg
+78ce2dce8419822d5594cd4eacabe767 *..\BattlEye\BEClient_x64.dll
+aae3d07367d86c98478c90de4c94f119 *..\BattlEye\BELauncher.ini
+39e8652c52ea75bcaab2d7f5b140e574 *..\BattlEye\BEServer_x64.cfg
+27e563267a4d402c91ed2889e0088ef2 *..\BattlEye\BEServer_x64.dll
+25ece00e21da7aaaed96c7f23c38bda4 *..\BattlEye\BEService_x64.exe
+9452ca7963b62ae584a5d9c35abaaf2e *..\BattlEye\Licenses.txt
+a853299889ff1f867e060b30e273c350 *..\steam_settings\depots.txt
+addb64f45802d1b09e89057f2f91395b *..\steam_settings\DLC.txt
+636da1d35e805b00eae0fcd8333f9234 *..\steam_settings\force_account_name.txt
+11268d988aaaab3fc3d86852a0f06443 *..\steam_settings\steam_interfaces.txt
+f6753a682c98031b1cb88d785f973c0c *..\update\x64\data\errorcodes\american.txt
+0eb62efac780c25cb3ee123c573aa2fb *..\update\x64\data\errorcodes\chinese.txt
+c47a1baaa87fceceb70685e0933cfc10 *..\update\x64\data\errorcodes\chinesesimp.txt
+982fcd4eb587065f3ca412522faa89e0 *..\update\x64\data\errorcodes\french.txt
+4f1aff93deb2aea7336292d4f0b7cff9 *..\update\x64\data\errorcodes\german.txt
+bebd7c70b9e9342894fd101be19d6633 *..\update\x64\data\errorcodes\italian.txt
+738b67a1831fdfed0cab6208d59ad08f *..\update\x64\data\errorcodes\japanese.txt
+79e51abb6c41e29b92c1bf2e93a920fe *..\update\x64\data\errorcodes\korean.txt
+88cfa9f32e65df757c75d12c304d949f *..\update\x64\data\errorcodes\mexican.txt
+49a1912bf718a38f75099d554d2e13d0 *..\update\x64\data\errorcodes\polish.txt
+a4b33d4f6cce144a382767d65a9cf7cf *..\update\x64\data\errorcodes\portuguese.txt
+606203c3f09eb05cc2c822e6fc35fa4f *..\update\x64\data\errorcodes\russian.txt
+7f714ad768ccebd83c5a511ec0d0a824 *..\update\x64\data\errorcodes\spanish.txt
+3ba36ad6de6461d5676868cc3031dec9 *..\update\x64\dlcpacks\mp2023_01\dlc.rpf
+10a09d96cf6e83303463767c8b321188 *..\update\x64\dlcpacks\mp2023_01_g9ec\dlc.rpf
+92270c0938469467251d7f9a6c8ed350 *..\update\x64\dlcpacks\mp2023_02\dlc.rpf
+8449267157882a0d0d90ec7f872aa07c *..\update\x64\dlcpacks\mp2023_02_g9ec\dlc.rpf
+bc8cb7d7a1863e4a0193e3893941fe01 *..\update\x64\dlcpacks\mp2024_01\dlc.rpf
+c662bcd333844ce5408c31dfe9206158 *..\update\x64\dlcpacks\mp2024_01_g9ec\dlc.rpf
+9fe895af21ff311f48bd3670b07b4a0c *..\update\x64\dlcpacks\mp2024_02\dlc.rpf
+f592fe58a89f888cd1e353df331a3d45 *..\update\x64\dlcpacks\mp2024_02_g9ec\dlc.rpf
+05b697cf9b705430b136295f659392fb *..\update\x64\dlcpacks\mp2025_01\dlc.rpf
+72d2b1b92c7dd216edc18ebb263aecbc *..\update\x64\dlcpacks\mp2025_01_G9EC\dlc.rpf
+2de5d5817c697b7196027d18dae5d1af *..\update\x64\dlcpacks\mp2025_02\dlc.rpf
+00921af638857d3d0e64664760616e6e *..\update\x64\dlcpacks\mp2025_02_g9ec\dlc.rpf
+ff7048ad6e21badb1e68f486a207091f *..\update\x64\dlcpacks\mpairraces\dlc.rpf
+02cee302d599ef5af7940d1aa43cb921 *..\update\x64\dlcpacks\mpapartment\dlc.rpf
+d7ba652435dafe28d41a9d362253834e *..\update\x64\dlcpacks\mpassault\dlc.rpf
+ac7ccdebad5d29d8d6697f46b50b87fc *..\update\x64\dlcpacks\mpbattle\dlc.rpf
+3c2e24b034cab10ee3e0ec75654420ed *..\update\x64\dlcpacks\mpbattle\dlc1.rpf
+cc2922c85f1a6667988dc37088169db2 *..\update\x64\dlcpacks\mpbiker\dlc.rpf
+a4d0910b796c06949ddecaf59e9e7abd *..\update\x64\dlcpacks\mpchristmas2\dlc.rpf
+d931ea0794c3380151b4d5496ec82b0c *..\update\x64\dlcpacks\mpchristmas2017\dlc.rpf
+6b6d129c37e4e054c30880a8663a2137 *..\update\x64\dlcpacks\mpchristmas2018\dlc.rpf
+cba65d137a6a772222e9499154f1d3ab *..\update\x64\dlcpacks\mpchristmas3\dlc.rpf
+20986dc0c763097912e753491c7c5b28 *..\update\x64\dlcpacks\mpchristmas3_g9ec\dlc.rpf
+d37cf537a05358abe40f3256c7fd593f *..\update\x64\dlcpacks\mpexecutive\dlc.rpf
+d56185d458584404d8b7691ad333cfc7 *..\update\x64\dlcpacks\mpg9ec\dlc.rpf
+787c0fdb8a419eadc04a2f35ba51b028 *..\update\x64\dlcpacks\mpgunrunning\dlc.rpf
+3ef847c2c5bbff72d09fdb8dd7a23367 *..\update\x64\dlcpacks\mphalloween\dlc.rpf
+268ebd26d4e608e22c97a4406a441304 *..\update\x64\dlcpacks\mpheist\dlc.rpf
+ce64006715b7c320a04b8dfd2e1d3f73 *..\update\x64\dlcpacks\mpheist3\dlc.rpf
+5520ae5dab789c4359d02c8191197ce5 *..\update\x64\dlcpacks\mpheist4\dlc.rpf
+52ede8336be64f3247c21e3284ba356e *..\update\x64\dlcpacks\mpheist4\dlc1.rpf
+a3541f4cafd35f2d90f4e6a6d8f24aaa *..\update\x64\dlcpacks\mpheist4\dlc2.rpf
+4df92fb10454bf569b425acc223b4f1c *..\update\x64\dlcpacks\mpimportexport\dlc.rpf
+ba7d62c1494faecf1f35254fa7a265e1 *..\update\x64\dlcpacks\mpjanuary2016\dlc.rpf
+af18a05af6922b7af3daa353014cac21 *..\update\x64\dlcpacks\mplowrider\dlc.rpf
+16aea3603b00ff6dc5fa53d1d27498d5 *..\update\x64\dlcpacks\mplowrider2\dlc.rpf
+64656efa4b68075de5d36630eb3df1ce *..\update\x64\dlcpacks\mpluxe\dlc.rpf
+0b707b7b0c5fa846b0c7e3795bbb752d *..\update\x64\dlcpacks\mpluxe2\dlc.rpf
+cbd02bff9d631941cb1be25323f577b9 *..\update\x64\dlcpacks\mppatchesng\dlc.rpf
+2efea9ac2629bb3bdbe6bdc0e0d14894 *..\update\x64\dlcpacks\mpreplay\dlc.rpf
+f62c7258f697812837a9f602aea7143e *..\update\x64\dlcpacks\mpsecurity\dlc.rpf
+b68b20fa8149ccb2604ba66ad0312d8d *..\update\x64\dlcpacks\mpsecurity\dlc1.rpf
+de3154bbc19fa8e4d4f7c5ad8310cffd *..\update\x64\dlcpacks\mpsmuggler\dlc.rpf
+924ba24cda50276419fd98a1e3d6b327 *..\update\x64\dlcpacks\mpspecialraces\dlc.rpf
+f44f2933345872808786bff1300386ee *..\update\x64\dlcpacks\mpstunt\dlc.rpf
+1c42546106918d35b52a6892b7463834 *..\update\x64\dlcpacks\mpsum\dlc.rpf
+85aa3174ba1d29c768a9fc6042f1b9bd *..\update\x64\dlcpacks\mpsum2\dlc.rpf
+28196bafaf7b7a79d8fdc2b7b8dcac1f *..\update\x64\dlcpacks\mpSum2_G9EC\dlc.rpf
+945fa2f1cd04c3a8a8099f60acc3a316 *..\update\x64\dlcpacks\mptuner\dlc.rpf
+1d72614ba30192cafac3ee37ab6c32a1 *..\update\x64\dlcpacks\mptuner\dlc1.rpf
+572fbe80370d4c4e1afa3becbe6b2615 *..\update\x64\dlcpacks\mpvalentines2\dlc.rpf
+4d77ea5bc38646e76592be9518d73cf1 *..\update\x64\dlcpacks\mpvinewood\dlc.rpf
+0ca85b971ccae96b1342cdf62d0ef644 *..\update\x64\dlcpacks\mpxmas_604490\dlc.rpf
+2af34c647ebfd8840176dd0e1cbbdd37 *..\update\x64\dlcpacks\patch2023_01\dlc.rpf
+963185905a68070abffc1107bb1e150e *..\update\x64\dlcpacks\patch2023_01_g9ec\dlc.rpf
+990b5b554f4650b10e33df2e3d2767de *..\update\x64\dlcpacks\patch2023_02\dlc.rpf
+49e6ceec7318d8b788e4fb855551240e *..\update\x64\dlcpacks\patch2024_01\dlc.rpf
+e01b47bd37c1f4fa15f135bd17e60a40 *..\update\x64\dlcpacks\patch2024_01_g9ec\dlc.rpf
+02ab20a5c29cf3bdc70767d83fce473f *..\update\x64\dlcpacks\patch2024_02\dlc.rpf
+7f793c2e06ab93ffba19c5adab6191fa *..\update\x64\dlcpacks\patch2025_01\dlc.rpf
+0e0d22a3cdd5391d4d26660ab84554ef *..\update\x64\dlcpacks\patch2025_02\dlc.rpf
+494c248e1ee7ed8c2394e7b5f0a35e60 *..\update\x64\dlcpacks\patch2025_02_g9ec\dlc.rpf
+1bcf10ae4fbdfc743339072b92d4a993 *..\update\x64\dlcpacks\patchday10ng\dlc.rpf
+b502c76cbf94653d8a9128b33714dd0c *..\update\x64\dlcpacks\patchday11ng\dlc.rpf
+9b85eae38a859f4fec8ed289821fccf4 *..\update\x64\dlcpacks\patchday12ng\dlc.rpf
+ba4892e52e7b558aeab16716db1bb621 *..\update\x64\dlcpacks\patchday13ng\dlc.rpf
+d1bce738736bb767db87589c1362f8f5 *..\update\x64\dlcpacks\patchday14ng\dlc.rpf
+d48a49833f55b9db6727eb2d7a618b7c *..\update\x64\dlcpacks\patchday15ng\dlc.rpf
+9e3387e2f33a1bfcc99bdeb059d6b919 *..\update\x64\dlcpacks\patchday16ng\dlc.rpf
+82a2d153b8e062fbd53779f0927a791d *..\update\x64\dlcpacks\patchday17ng\dlc.rpf
+23185de5b5b262f92d4daa67c89f38ba *..\update\x64\dlcpacks\patchday18ng\dlc.rpf
+05fb84f416cddee078443d18f753c1cc *..\update\x64\dlcpacks\patchday19ng\dlc.rpf
+e0300b04dfae8d26335f8555ff817e71 *..\update\x64\dlcpacks\patchday1ng\dlc.rpf
+0e78879d7aa35c04a036e34d3eeda996 *..\update\x64\dlcpacks\patchday20ng\dlc.rpf
+9d5ce68b38a3d4f4a1f7e91efcdf1ccf *..\update\x64\dlcpacks\patchday21ng\dlc.rpf
+7c0f47eedc53f70c1e7d64294b62e5f2 *..\update\x64\dlcpacks\patchday22ng\dlc.rpf
+5a6f27e602b0a6153c7b5cfb6b8cd9f9 *..\update\x64\dlcpacks\patchday23ng\dlc.rpf
+a2f7fbc3b6f5a92975f87dcbddf46b4e *..\update\x64\dlcpacks\patchday24ng\dlc.rpf
+4bfd533df591994dffc7f25980f7997a *..\update\x64\dlcpacks\patchday25ng\dlc.rpf
+fa4d0c8ef78c9c48b01a83847359f6fb *..\update\x64\dlcpacks\patchday26ng\dlc.rpf
+9d1c5128c4385103ab52ceff364cc5fa *..\update\x64\dlcpacks\patchday27g9ecng\dlc.rpf
+8738c0aa8967823387cf37a0075f7bfd *..\update\x64\dlcpacks\patchday27ng\dlc.rpf
+bd01431a398193cf32cbcb0f77b9a1d9 *..\update\x64\dlcpacks\patchday28g9ecng\dlc.rpf
+6766696ab560101f8792334a5f284360 *..\update\x64\dlcpacks\patchday28ng\dlc.rpf
+944683e32536c908611a2f9bc2e0111c *..\update\x64\dlcpacks\patchday2bng\dlc.rpf
+f48d5113ed030b737d84b323bfc7dc18 *..\update\x64\dlcpacks\patchday2ng\dlc.rpf
+8a53726d7a79d0dcb9019d1e479c2b8e *..\update\x64\dlcpacks\patchday3ng\dlc.rpf
+67cf27f27c020f5196f1b96628e062dd *..\update\x64\dlcpacks\patchday4ng\dlc.rpf
+ff98184310852ef5bc64ba9ae057086f *..\update\x64\dlcpacks\patchday5ng\dlc.rpf
+46018995d24532336bec65173c37f1ef *..\update\x64\dlcpacks\patchday6ng\dlc.rpf
+be057243bc5fa4dd6a68ac79a4db53c5 *..\update\x64\dlcpacks\patchday7ng\dlc.rpf
+991cc2b602e1f5dde41c258a83f7b9d0 *..\update\x64\dlcpacks\patchday8ng\dlc.rpf
+99813e1b9610fc940e8faedfcb16da86 *..\update\x64\dlcpacks\patchday9ng\dlc.rpf
+676ad7ed576e9774108b0356813cc067 *..\update\x64\dlcpacks\patchdayg9ecng\dlc.rpf
+e167eb0dc575268df9c622cdc6ce2e83 *..\update\x64\metadata.dat
+5238f7ffb6e054714c6397f81b220b46 *..\update\update.rpf
+48cd691113daa0dc7f707014162efa87 *..\update\update2.rpf
+dee58a003406da3553f78e534622ac50 *..\x64\audio\sfx\ANIMALS.rpf
+2a7a5ee23da6459b2ebd2c04dbe1b846 *..\x64\audio\sfx\ANIMALS_FAR.rpf
+647cea419643808e7ffc82b1d311fa13 *..\x64\audio\sfx\ANIMALS_NEAR.rpf
+995f71489084297f31943373c619f68e *..\x64\audio\sfx\CUTSCENE_MASTERED_ONLY.rpf
+c2696f76149ac57fa1a61636762aa4c7 *..\x64\audio\sfx\DLC_GTAO.rpf
+c07eb284089b4b9db7fcebe7029cbd54 *..\x64\audio\sfx\INTERACTIVE_MUSIC.rpf
+4ed22957a50553182cedf5510d1e8e36 *..\x64\audio\sfx\ONESHOT_AMBIENCE.rpf
+08e42851ff2ee25ef844101bb4eb125e *..\x64\audio\sfx\PAIN.rpf
+30e1ddea02d92e334523301b37bbc2cf *..\x64\audio\sfx\POLICE_SCANNER.rpf
+6ed5fd973aee29d1043280a95fd1374a *..\x64\audio\sfx\PROLOGUE.rpf
+88f6352fd3f00f61534749268c1ec772 *..\x64\audio\sfx\RADIO_01_CLASS_ROCK.rpf
+9c4ffb44058b17364282e49719c6615f *..\x64\audio\sfx\RADIO_02_POP.rpf
+a64dddc3087fdf48d0614dd36212e1a2 *..\x64\audio\sfx\RADIO_03_HIPHOP_NEW.rpf
+7817e46dc9a0fa29803e233451041ecb *..\x64\audio\sfx\RADIO_04_PUNK.rpf
+30684ca056f66e89377d68c9f2a18dad *..\x64\audio\sfx\RADIO_05_TALK_01.rpf
+f7fdd6057f57a608a4ffac3388296ed7 *..\x64\audio\sfx\RADIO_06_COUNTRY.rpf
+3d88e531a07149775eb77108c9bd64e6 *..\x64\audio\sfx\RADIO_07_DANCE_01.rpf
+6fde3f68a4069a96f6a4bcae32efbc36 *..\x64\audio\sfx\RADIO_08_MEXICAN.rpf
+b3ce929628e98d781b99e65d55aa796f *..\x64\audio\sfx\RADIO_09_HIPHOP_OLD.rpf
+6d2491f98bf0721a49aa20fcec24a979 *..\x64\audio\sfx\RADIO_11_TALK_02.rpf
+55fa363694db588f0d7fc2d1c04a4bd4 *..\x64\audio\sfx\RADIO_12_REGGAE.rpf
+2f864478a763fae03a195df99accb625 *..\x64\audio\sfx\RADIO_13_JAZZ.rpf
+9ce6c2c68e98c7040ab6c1c7ceca7b43 *..\x64\audio\sfx\RADIO_14_DANCE_02.rpf
+8ebeb03478b905ff57dfaeb5bafd022c *..\x64\audio\sfx\RADIO_15_MOTOWN.rpf
+ea96f48138bd53d5b92cd0999b4b9592 *..\x64\audio\sfx\RADIO_16_SILVERLAKE.rpf
+b29cb8ead7e02ac7f2df77472ee8e0be *..\x64\audio\sfx\RADIO_17_FUNK.rpf
+31477aa6eacea5bc981e492c2bef29f1 *..\x64\audio\sfx\RADIO_18_90S_ROCK.rpf
+e12223a4fd61efc90e75b5d4d8bc6f76 *..\x64\audio\sfx\RADIO_ADVERTS.rpf
+058c51b09fd4be0bfb0d7adfb4d7f965 *..\x64\audio\sfx\RADIO_NEWS.rpf
+df2407e6dec6b5fd18034ef0f47ad6bb *..\x64\audio\sfx\RESIDENT.rpf
+b3577479e9bf194c58df5e404c0ee00f *..\x64\audio\sfx\SCRIPT.rpf
+829ba72532ee84a204f44c552dcc9da9 *..\x64\audio\sfx\SS_AC.rpf
+161caaa12df6b6729aa0b03de5da00f0 *..\x64\audio\sfx\SS_DE.rpf
+4330b09d4d707484987afb1279d1bda1 *..\x64\audio\sfx\SS_FF.rpf
+1f3a143f4d4d7101aaeab776b6fc7edd *..\x64\audio\sfx\SS_GM.rpf
+f32c9414327fbebfbf41d6663241d3c6 *..\x64\audio\sfx\SS_NP.rpf
+71d13bfa850457d7bdc9aeee9f65e1cf *..\x64\audio\sfx\SS_QR.rpf
+5f17f2ae91ea8ba3e35a937e515d1e19 *..\x64\audio\sfx\SS_ST.rpf
+a325ab1785d255c24592aed6a9c5b52e *..\x64\audio\sfx\SS_UZ.rpf
+8af66d9ad9de11227e95192ec65448b6 *..\x64\audio\sfx\STREAMED_AMBIENCE.rpf
+84b960d31585d589af1701bdc48c3921 *..\x64\audio\sfx\STREAMED_VEHICLES.rpf
+a34dbb719d6098d8cfdf5f51b0bb9b82 *..\x64\audio\sfx\STREAMED_VEHICLES_GRANULAR.rpf
+511f2ab0c22a55caf096ada395bebe55 *..\x64\audio\sfx\STREAMED_VEHICLES_GRANULAR_NPC.rpf
+15076fe0ba7f57112882a179c4db0a65 *..\x64\audio\sfx\STREAMED_VEHICLES_LOW_LATENCY.rpf
+9b1fc10f15e2115f0945ee848120aa46 *..\x64\audio\sfx\STREAMS.rpf
+8b4398938db36a617877ba3c1db47247 *..\x64\audio\sfx\S_FULL_AMB_F.rpf
+8e2028e2e0f1d407cb27e354b6c3e12d *..\x64\audio\sfx\S_FULL_AMB_M.rpf
+193804dce2772060149c8e897d2f89d8 *..\x64\audio\sfx\S_FULL_GAN.rpf
+69e05ebbe2c4839534d8a8e850610dc6 *..\x64\audio\sfx\S_FULL_SER.rpf
+0365ec49c281fc58d6719604bb0719b2 *..\x64\audio\sfx\S_MINI_AMB.rpf
+e87de77e82fd106c29a2fd42d915961f *..\x64\audio\sfx\S_MINI_GAN.rpf
+6917a980d346317cbfcc8f2d474d7111 *..\x64\audio\sfx\S_MINI_SER.rpf
+54503436d735aad5d4e9327e6bf89e99 *..\x64\audio\sfx\S_MISC.rpf
+b4a3c9bfd7a818dc47e34ec05fc946da *..\x64\audio\sfx\WEAPONS_PLAYER.rpf
+3f674ab6f7ce814cd4fcf21ad5536165 *..\x64\audio\audio_rel.rpf
+5be62ba4ad701711c5754256dd38c184 *..\x64\audio\occlusion.rpf
+f6753a682c98031b1cb88d785f973c0c *..\x64\data\errorcodes\american.txt
+0eb62efac780c25cb3ee123c573aa2fb *..\x64\data\errorcodes\chinese.txt
+c47a1baaa87fceceb70685e0933cfc10 *..\x64\data\errorcodes\chinesesimp.txt
+982fcd4eb587065f3ca412522faa89e0 *..\x64\data\errorcodes\french.txt
+4f1aff93deb2aea7336292d4f0b7cff9 *..\x64\data\errorcodes\german.txt
+bebd7c70b9e9342894fd101be19d6633 *..\x64\data\errorcodes\italian.txt
+738b67a1831fdfed0cab6208d59ad08f *..\x64\data\errorcodes\japanese.txt
+79e51abb6c41e29b92c1bf2e93a920fe *..\x64\data\errorcodes\korean.txt
+88cfa9f32e65df757c75d12c304d949f *..\x64\data\errorcodes\mexican.txt
+49a1912bf718a38f75099d554d2e13d0 *..\x64\data\errorcodes\polish.txt
+a4b33d4f6cce144a382767d65a9cf7cf *..\x64\data\errorcodes\portuguese.txt
+606203c3f09eb05cc2c822e6fc35fa4f *..\x64\data\errorcodes\russian.txt
+7f714ad768ccebd83c5a511ec0d0a824 *..\x64\data\errorcodes\spanish.txt
+e167eb0dc575268df9c622cdc6ce2e83 *..\x64\metadata.dat
+    *..\*..\*..\*..\*..\        0.sfv
+518c9da8d048f1db89e835254e369ee0 *..\bink2w64.dll
+32a37cabf00be64d98074eb8be92377c *..\bink2w64.dll.orig
+bbe724acef5f9fcfd85a38c4e35e2f00 *..\common.rpf
+7ea872c2f9803cfb4223098b85e70cc0 *..\d3dcompiler_46.dll
+8355e491fa90ca00045be22bb556b213 *..\d3dcsx_46.dll
+5c9be6ae5f403391e36b905be8f80d8f *..\fvad.dll
+1732f28b6944d9f830f7da0b5f8cc4c3 *..\GFSDK_ShadowLib.win64.dll
+6b7e625a91a102ed3e9ebc60d1b8a8ab *..\GFSDK_TXAA.win64.dll
+33ceb6c57a5335773cf0c85f449abc17 *..\GFSDK_TXAA_AlphaResolve.win64.dll
+3f4eb3d3df4549e4fb9436304ad0246f *..\GPUPerfAPIDX11-x64.dll
+3909fa82c6104f7590705d1e847c589b *..\GTA V Language Changer.exe
+0a30b72c682bcdc9cdd2b3a040c847e0 *..\GTA5.exe
+54458a2d9cb5fd811d88922e5d26bd06 *..\GTA5_BE.exe
+0dfeb82f340c5ec14d7624ff33c19815 *..\GTAVLanguageSelect.exe
+0dfeb82f340c5ec14d7624ff33c19815 *..\GTAVLauncher.exe
+34123cd37a06c09b2860f8ebcbbe9d6f *..\installscript.vdf
+ad497aaa5e45d411970486a6ddc5dbed *..\installscript_sdk.vdf
+54db45e017f53f9d94cb4b941098f4ab *..\launc.dll
+7335fa44dfc031ed4099c3d2b7ead0b9 *..\libcurl.dll
+c15da99f07a6ebc9f1137ced54d7f0a0 *..\libtox.dll
+058f863ac68bae39ba49deea8a93117e *..\NvPmApi.Core.win64.dll
+de4d864df6f671bf01e60c8f7a0b897d *..\opus.dll
+7074a5b7f046cc12b375ddb5b2f35589 *..\opusenc.dll
+0fe478ed14cd81342dc54022c0e5bdc2 *..\orig_socialclub.dll
+2e9a3f66afba8a427a45442e3c6c0260 *..\PlayGTAV.bat
+7b43b28b900a6f424424b130355143b4 *..\PlayGTAV.exe
+0dfeb82f340c5ec14d7624ff33c19815 *..\PlayGTAV.exe.orig
+0078a3357b01b569b7168df06b951c38 *..\socialclub.dll
+ef194713ae1cfb641147165ead3495c0 *..\steam_api64.dll
+cac66a8487a2ef6d3b1b8a66c20d1c12 *..\steam_api64.dll.orig
+270a72e51e56508d77b916759e98e6c0 *..\steam_appid.txt
+207fc5d8aea2f6a14c9c910d801cd71f *..\title.rgl
+eb0ec566293a46f64f522242687722cb *..\version.txt
+d9f38c705df61b72853c31b12f3bf0d0 *..\versioninfo.txt
+edfbe6855ec32a21a698abc27a899341 *..\x64a.rpf
+70af24cd4fe2c8ee58edb902f018a558 *..\x64b.rpf
+2a0f6f1c35ad567fe8e56b9c9cc4e4c6 *..\x64c.rpf
+c8757b052ab5079c7749bcce02538b2e *..\x64d.rpf
+e5416c0b0000dad4014e0c5e9b878ff9 *..\x64e.rpf
+5c6fc965d56ae6d422cd6cbe5a65a3a5 *..\x64f.rpf
+1d8a64b337c3e07dffec0f53530cdb8e *..\x64g.rpf
+fe657d9282df303b080c3a2f6771c9ea *..\x64h.rpf
+bb271d313467465d62c75e208236487b *..\x64i.rpf
+143deee4c7699b9f07ef21d43ae0915b *..\x64j.rpf
+da2c88b4ca69c99a86868a9433084a9d *..\x64k.rpf
+f4307b005a3e90192f235959621781d1 *..\x64l.rpf
+a1304d84875747aa7405465d37d3c6fb *..\x64m.rpf
+c48a14fe1c301360a16e8b0c5472fd1d *..\x64n.rpf
+6715a4eabbbc8868f15630bf917db49a *..\x64o.rpf
+6ad56befada1db7cccd9cea7834c825b *..\x64p.rpf
+ff6d09527d7fdc005d3fa78435e09c8a *..\x64q.rpf
+1465c9da5cc17b68f14915b6c1d815bc *..\x64r.rpf
+2c6e61201eb4f60d5c3c1e9ae6d67a32 *..\x64s.rpf
+4c15a54a4c9573d7a0bcfa4689d9d1ed *..\x64t.rpf
+2c9cff0cc5f99ad2218e4c4de39881b7 *..\x64u.rpf
+db647120263d0282b6f6c555f6112a1c *..\x64v.rpf
+46a4abe50bfc78c30c0173d888cf2c4a *..\x64w.rpf
+1f1138189afeaff75bbbd8c0a9e3d1c3 *..\XCurl.dll
+5364af2746216f8d3de2f0418ef45375 *..\zlib1.dll
+e764343d807aea91b36fc51deaebd250 *..\Brady Guide\Brady Guide.pdf
+9fa1e4c9949b96335accebe167f537f4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\01. Chronixx - Odd Ras.mp3
+d5abf991a7c53c858f7cc453f38e6abe *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\02. Dennis Brown - Money in My Pocket.mp3
+4a505aa78a91c49a20f20b80dd52933d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\03. Gregory Issacs - Night Nurse.mp3
+5bc55e8a3417806b60c0a5402b5f0781 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\04. Half Pint - Crazy Girl.mp3
+8fad97c39e4ad7e09eba7517f146fb9e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\05. Joe Gibbs & The Professionals - Chapter Three.mp3
+77e49721cf14cdda458bc902dba9a700 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\06. Junior Delgado - Sons of Slaves.mp3
+98a7d68f6a7736a92a2c7c7f256c7a48 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\07. KonShens - Gun Shot a Fire.mp3
+4bc6426768c4a65381b822d875309266 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\08. Lee 'Scratch' Perry - Disco Devil.mp3
+1deeec82ec013d5b2b7aca200ba4e239 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\09. Lee 'Scratch' Perry - I Am a Madman.mp3
+06c4c6376d2069f965a4cb3b511a9f38 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\10. Protoje - Kingston Be Wise.mp3
+99801b7dcd040106edfea44bf0d55bef *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\11. The Upsetters - Grumblin' Dub.mp3
+253a9935feed5619da0e615ece232981 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\12. Tommy Lee - Psycho.mp3
+927d1020003ea7d7a6cc787ca03f0db6 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\13. Vybz Kartel Ft. Popcaan - We Never Fear Dem (So Bad Riddim).mp3
+b82d29e8ff3f170f2d671691be024164 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Blue Ark\14. Yellowman - Nobody Move, Nobody Get Hurt.mp3
+6fdc7f33a804045f92d466f0bea6fcb1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\01. Agent Orange - Bored of You.mp3
+ec5c8524433258359129af3692afc90f *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\02. Black Flag - My War.mp3
+2d88058828d50670b3ff91957deaba43 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\03. Circle Jerks - Rock House.mp3
+2242cdc158cbc1581abf37122fc9e9ff *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\04. Fear - The Mouth Don't Stop (The Trouble with Women IS).mp3
+038144254ab085f4d17777a09ecae82b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\05. Suicidal Tendencies - Subliminal.mp3
+3bc48457dd7485a27882d7b07b360e01 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\06. T.S.O.L. - Abolish Government.mp3
+45ae5f3550983c864863aaaa0f95ad10 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\07. The Adolescents - Amoeba.mp3
+c67cc142fc38e7772c8b79d33ae87c0b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\08. The Descendents - Pervert.mp3
+0f16e65466cda433e9c1e22f0e98881f *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\09. The Germs - Lexicon Devil.mp3
+a354981125ac74aaa670cbbac0d81578 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\10. The Weirdos - Life of Crime.mp3
+022434bc961d47298d021d1b69a67b5b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Channel X\11. Youth Brigade - Blown away.mp3
+6a9378c00e9b32669e900f044cea17df *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\01. Don Cheto - El Tatuado.mp3
+bb25a9b1144d6d97aa5a9e4fc8b7fb51 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\02. Fandango - Autos, Moda Y Rock and Roll.mp3
+1b730a97b43584ab85c0a9db64c62fae *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\03. Fiebre De Jack - She's a Tease.mp3
+cf052bf8f38b6871014b0848a7e52d27 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\04. Hechizeros Band - El sonidito.mp3
+61f0befb24b8f1069aa0c9ba479797e7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\05. La Liga ft. Alika - Tengo El Don.mp3
+bbf8f3a78958a30cae59b017b7f86cde *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\07. La Vida Boheme - Radio Capital.mp3
+60ee3b1e3758fd186433f3df13773470 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\08. Los Angeles Negros - El Rey Y Yo.mp3
+af3c1b7f536a3500e25ac0a21a949a14 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\09. Los Buitres de Culiacan - El Cocaino.mp3
+0b97bb2e22dba30e7fc725d9e3efe82f *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\10. Los Tigres Del Norte - La Granja.mp3
+1234a13a0f879fa31a639ff1570ef7a8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\11. Maldita Vecindad - Pachuco.mp3
+2f08267e80b104e1d1359aa3da0e7368 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\12. Mexican Institute of Sound - Es-toy.mp3
+913201668db60a28999783e449b30fc7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\East Los FM\13. Milkman - Fresco.mp3
+4bf796f34ac75152bfde6ea9bd130ceb *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\01. Aphex Twin - Windowlicker.mp3
+2ac7c1b2cf48ffbc4a6c201860b27747 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\02. Dabrye - Encoded Flow.mp3
+d2ce6ee862216fdaaedc63e7f27a4b2c *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\03. Hudson Mohawke - 100hm.mp3
+6b336d645f66731eaa45b416589a6aff *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\04. Kingdom - Stalker.mp3
+8cbb651b2be3cc2b96adeaf1b94d0d6c *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\05. Machinedrum - She Died There.mp3
+60af8c5e7a75e6d900caa057a8d246e5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\06. Outkast - Elevators (Me & You).mp3
+345d57053d8b550daeaae468dd8d803a *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\07. Performed by Flying Lotus - Computer Face.mp3
+6430b44e9b22926e659da9792cbb4dfb *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\08. Performed by Flying Lotus Ft Erykah Badu - See Thru to U.mp3
+2e6e54f4bdf5b6d6a7c47e78c1e79908 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\09. Performed by Flying Lotus Ft Niki Randa - Getting There.mp3
+511509b3e64eae176f268313f95e8375 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\10. Performed by Flying Lotus Ft Niki Randa - The Kill.mp3
+d861ae74376f2d2c8053f6759f108bc2 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\11. Performed by Thundercat - Oh Sheit It's X.mp3
+70f577c8c60ac0fd909197738ade04f8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\12. Shadow Child - 23.mp3
+1af76e082eb8f21573e8d87a1c616985 *..\Grand Theft Auto V Soundtrack (Radio Stations)\FlyLo FM\13. Tyler The Creator - Garbage.mp3
+9cc972d4b2724271f01988e001eba4cd *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\01. Billy Squier - Lonely Is the Night.mp3
+13d7128320867b85866564f3e3e5fa18 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\02. Bob Seger - Hollywood Nights.mp3
+c7c1ab847896d93a99a1a1b518ac25fa *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\03. Bob Seger - Night Moves.mp3
+337b536e0c69b1445c29cc27abc36765 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\04. Chicago - If You Leave Me Now.mp3
+27f02710d1717277b26162c2c665d449 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\05. Def Leppard - Photograph.mp3
+0446a06d9232e792b2025411d4670a75 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\06. Don Johnson - Heartbeat.mp3
+a479d545cefeab50664508bb3a75151e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\07. Elton John - Saturday Night's Alright for Fighting.mp3
+257232593d3727ab551386b0b4ccf0c7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\08. Foreigner - Dirty White Boy.mp3
+0d1ac6a29f02208c7452f83b32fd1173 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\09. Gerry Rafferty - Baker Street.mp3
+58e4fe71708548356daa8da758a5a246 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\10. Greg Kihn Band - The Breakup Song.mp3
+3b7f464b3b009746e0d10508ec768741 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\11. Julian Lennon - Too Late For Goodbyes.mp3
+8b4ad274961d7cb4610597c8a7553d6b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\12. Kenny Loggins - I'm Free (Heaven Helps the Man).mp3
+a0d3b7e94393fb3ffc4382ca52584a61 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\13. Phil Collins - I Don't Care Anymore.mp3
+1e588350429ae8e3b6c673df46dc8236 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\14. Queen - Radio Ga Ga.mp3
+bcc66acf06ce5ae1f09d0cfd9eb8e014 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\15. Robert Plant - Big Log.mp3
+3e1e08a469cd712bc5ed36101bc54832 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\16. Simple Minds - All The Things She Said.mp3
+df8218a4a175e0ad1fbb85cda3e1c73b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\17. Steve Miller Band - Take the Money and Run.mp3
+9a420dbed977fc7615a0379c8a7346c4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\18. Steve Winwood - Higher Love.mp3
+ad5a93d899c409c78c3468b9d2666717 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\19. Stevie Nicks - I Can't Wait.mp3
+52223ad4f6ee6f6d05d0cf7f08c6a7fa *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\20. The Alan Parsons Project - I Wouldn't Want to Be Like You.mp3
+f3c2dc2bce8be3392115f06ca3c198a4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\21. The Cult - Rain.mp3
+468dd83747df23dba94716c9668bc6d0 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\22. The Doobie Brothers - What a Fool Believes.mp3
+8afcabecf2b33cf6cb4d5effb9c8a23f *..\Grand Theft Auto V Soundtrack (Radio Stations)\Los Santos Rock Radio\23. The Small Faces - Ogdens' Nut Gone Flake.mp3
+d399a618bf738562d12d68bf0c968fce *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\01. All Saints - Pure Shores.mp3
+7bd17e43298c8c1b160af0d26f7e387d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\02. Amerie - 1 Thing.mp3
+cdd2654f7377360f1005a37395dc0f52 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\03. Britney Spears - Gimme more.mp3
+b00f104e494a89699eacc635c4f8e9fd *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\04. Corona - Rhythm of the night.mp3
+7610fceafc863367610c6fdb96e5d38d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\05. Fergie - Glamorous.mp3
+4a12f4cc5233502e0f77cf9700364a8d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\06. Hall & Oates - Adult Education.mp3
+afa4e9c292ad5eb850e42a4a362aa903 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\07. Jane Child - Don't Wanna Fall In Love.mp3
+f469ae8efa07115d5af3ef303257bb12 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\08. Kelly Rowland - Work (Freemasons Remix).mp3
+5f1d3ad4f95a3dd12a1f8301071754c5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\09. Mis-Teeq - Scandalous.mp3
+d0f7cbb03128cdd9e1d099999eeca004 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\10. Modjo - Lady (Here Me Tonight).mp3
+310e5595897ec719861ff78da19798f8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\11. N-Joi - Anthem.mp3
+d9ee30da962988faaed30b55b52cb48a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\12. Pet Shop Boys - West End Girls.mp3
+17235b81edb0afb4031c954f61347805 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\13. Rihanna - Only Girl (In the World).mp3
+bb98a7efbd3f6615d2720590d7715305 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\14. Robyn - With Every Heartbeat.mp3
+1db09af40becb1a7edd52e4428b36cbb *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\15. Stardust - The Music Sounds Better with You.mp3
+158d25d1138089114f1ff8db9fbd2b8a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Non-Stop-Pop FM\16. Wham - Everything She Wants.mp3
+0138d886b493b0488cb3027289fc1379 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\01. A$AP Rocky feat. Aston Matthews & Joey Fatts - R-Cali.mp3
+283c99916194a6e73fb69ddb3db9cce5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\02. AB Soul ft Kendrick Lamar - Illuminate.mp3
+617688a94c9fdd564e4d8543deec60d5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\03. Clyde Carson ft. The Team - Slow Down.mp3
+8f2f37fade8743f0759c9b862b110ae4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\04. Freddie Gibbs - Still Livin'.mp3
+295a8beebae1e19bc4e3e64dcbc316dc *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\05. Gangrene - Bassheads.mp3
+41da08837ebb086fdc2f640a76a0d96a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\06. Gucci Mane ft. Ciara - Too Hood.mp3
+a81c836c744d00f980195daf211d0021 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\07. Jay Rock feat. Kendrick Lamar - Hood Gone Love It.mp3
+4153d641ceb2161e61a9220b6ca09bf1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\08. Kendrick Lamar - A.D.H.D.mp3
+2c8caf7faceed6b7b90f9369e2d9bd09 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\09. Marion Band$  feat. Nipsey Hussle (prod. by 1500 or Nothin') - Hold Up.mp3
+0ff22138c07bd33ca197962282bfd297 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\10. Problem ft. Glasses Malone - Say That Then.mp3
+5734233fd16a0e8825ed66546fc8374c *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\11. The Game feat. 2Chainz & Rick Ross - Ali Bomaye.mp3
+5fd813568f626624b6412afdb86a6161 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Los Santos\12. YG - I'm a Real 1 (Prod. By DJ Mustard).mp3
+73a07d482b1a1a6955014aaccfffca05 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\01. Battle Tapes - Feel the Same.mp3
+02201f7041d285e6783b8f657556f4d3 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\02. Black Strobe - Boogie in Zero Gravity.mp3
+642322bf494f3f64c5e313590132802b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\03. Dan Croll - From Nowhere (Baardsen Remix).mp3
+34b5854e2e867748f73116b4c105ede1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\04. DJ Mehdi - Lucky Boy (Outlines Remix).mp3
+709b712e07f27d0e96f538caaa44d22b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\05. Feathers - Dark Matter.mp3
+83c98542f78a8ea52dab2dad6bf8db8b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\06. Jai Paul - Jasmine.mp3
+23bc62667372f531633d0fbbcaf78242 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\07. Miami Horror - Sometimes.mp3
+0799b6c2442582163c750d681a0f80d4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\08. Poolside - Do You Believe.mp3
+1c2139caf045a05f7c39aa1aa0ec6528 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\09. The C90's - Shine a Light (Flight Facilities Remix).mp3
+41940855649f710b69f17eecb1e154a9 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\10. The Chain Gang of 1974 - Sleepwalking.mp3
+d298e75d60cd3084314f19421ae5beb4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\11. Tony Castles - Heart In The Pipes (Kauf Remix).mp3
+5cf1d53f5df850e8ce7e2a183e3036b7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\12. Toro y Moi - So Many.mp3
+e5e68ad1a2c95ad07829b1f581738790 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\13. Twin Shadow - Old Love, New Love.mp3
+f47ea333e4178b3141b1cc9858e1829d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\14. Twin Shadow - Shooting Holes.mp3
+b1619397132789ae7d4bacc2bd9ea91e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Radio Mirror Park\15. Yacht - Psychic City (Classixx Remix).mp3
+cba2e073f2e107f8270e96191dbf08bd *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\01. C.W. McCall - Convoy Theme Song.mp3
+362ec5c381e8224e437a89f68276121e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\02. Charlie Feathers - Can't Hardly Stand It.mp3
+e5abf94ab473b8e0ea945308c9112f4e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\03. Hank Thompson - It Don't Hurt Anymore.mp3
+1163035ae2066f04cc2be4988a518282 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\04. Hasil Adkins - Get Out of My Car.mp3
+b73d2bfbb9dd5e9628cbe4ab1be29438 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\05. Jerry Reed - You Took All The Ramblin' Out of Me.mp3
+9941ab7dc34fb39ae552c5094a82e81f *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\06. Johnny Cash - General Lee.mp3
+bd7d0c7b466b222bc24cb5bdc61fc94b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\07. Johnny Paycheck - It Won't Be Long.mp3
+618904548acdd556facbce07ed4c4658 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\08. Ozark Mountain Daredevils - If You Wanna Get to Heaven.mp3
+1aae236a39796695f779fecab0cd90dd *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\09. Waylon Jennings - Are You Sure Hank Done It This Way.mp3
+b39293291e5917500a21674e2c18416f *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\10. Waylon Jennings - I Ain't Living Long Like This.mp3
+fffb8f2dbf17265d9aeafba312931269 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Rebel Radio\11. Willie Nelson - Whiskey River.mp3
+388d4a174e22a5e510619e914edf3bd8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\01. Daniel Avery - Naive Reception.mp3
+3cec7d9e07a66f2938f420600bcbfbe4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\02. Daniel Maloso - Body Music.mp3
+d77f634dfeae6d7d98337726d6457efc *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\03. FKClub - The Strange Art (Inflagranti Remix).mp3
+cde1308108b4b2f60173983bca779cae *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\04. Goose - Synrise (Soulwax Remix).mp3
+f44648bdd1f627e605c6c626ef1e423e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\05. Green Velvet & Harvard Bass - Lazer Beams.mp3
+f36cd21992d3824390695e04194baeb5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\06. Jackson And His Computer Band - Arp #1.mp3
+bfa894844c56e9c2aa447ffb0f895372 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\07. Joe Goddard feat. Valentina - Gabriel (Soulwax Remix).mp3
+067476bde5dab937bf10291593e4e80e *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\08. Matias Aguayo - El Sucu Tucu.mp3
+abd93c4595ac61bba93c8202ba52f455 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\09. Mim Suleiman - Mingi.mp3
+d7193ffd947b6dbc18ca3e9975813a3b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\10. Palmbomen - Stock.mp3
+2d9c7f2c7e2ece8c2b2128aa9ff15681 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\11. Pulp - After You (Soulwax Remix).mp3
+c212b53516a3973872e3372be5974669 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\12. Supersempfft - Let's Beam Him Up.mp3
+5b2b5b4c331a0d8cd5aeb05ca1601b22 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\13. The Hacker - Shockwave (Gesaffelstein Remix).mp3
+da921b7297762bccc985226002abbd7a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\14. Tiga - Plush (Jacques Lu Cont Remix).mp3
+a11d11dcc0991048bbcfe43782c861df *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\15. Tom Rowlands - Nothing But Pleasure.mp3
+e1d78ab2746f7c108b348431de65c545 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\16. Transistorcake - Mr. Croissant Taker.mp3
+300946dfae5fb2558f7b8fce6b0bc767 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Soulwax FM\17. Zombie Nation - Tryouts.mp3
+efb196436bb8a0c730f163cf79acd53d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\01. Bernard Wright - Haboglabotribin'.mp3
+15dfb2d10f058f40765c8b3529e29a73 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\02. Bootsy Collins - I'd Rather Be with You.mp3
+97fe3f9c8a4b472b0d3424fc5188ae4a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\03. D. Train - You're the One for Me.mp3
+42d0f52738abe7312eaf66885eb33ff8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\04. Eddie Murphy - Party All the Time.mp3
+304d2b6f8dabc66fdc7ad77fd059a1f1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\05. Evelyn Champagne King - I'm in Love.mp3
+d9d22ce4da4d2f4e38af3e7b7e7d9431 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\06. Kano - Can't Hold Back (Your Lovin').mp3
+3ecc7afa2a84a40e3b6ab6af5042b346 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\07. Kleer - Tonight.mp3
+47e526ef0c7bb0a6cf2536cf83976691 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\08. One Way - Cutie Pie.mp3
+cf48af3f1dc55d7386e127da34de6794 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\09. Rick James - Give It to Me Baby.mp3
+2bfdaf44c9feebfae68ba671cb02f5c7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\10. Sho Nuff - Funkasize You.mp3
+31c0cf5da077a75a89b1df873785f66b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\11. Stevie Wonder - Skeletons.mp3
+127f19850ef65ce0bc5db147c7315e21 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\12. Taana Gardner - Heartbeat (Club Version).mp3
+fbc06c254ad22a805522d19aa2cdffa4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Space 103.2\13. Zapp - Hearbreaker, PTS. 1-2.mp3
+a840e9870ad41352ef40e985cd005ef4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\01. Aaron Neville - Hercules.mp3
+61ca6beb2e6efa17d69f0ec86985d6b8 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\02. BT Express - Do It ('til You're Satisfied).mp3
+f6383a0c1d956d5c660b18c6e64e5421 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\03. El Chicano - Viva Tirado.mp3
+799141b629b1cc7fe2e1eb2622a9fc33 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\04. George McCrae - I Get Lifted.mp3
+fcb3a500d8523e7ced30c338dd6cb89d *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\05. Marlena Shaw - California Soul.mp3
+5a64095e1b7c6ed7f492f1f804f50ef5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\06. Smokey Robinson & the Miracles - Cruisin'.mp3
+7fcc321901ea3af49b9a55c7f9809959 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\07. The Delfonics - Ready or Not Here I Come (Can't Hide from Love).mp3
+96b59eb8c4c92d597c9e45ccce690883 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\08. The Five Stairsteps - O-O-H Child.mp3
+d9e21956bb8d8775a13e3e1ee4619269 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\09. The Soul Searchers - Ashley's Roachclip.mp3
+79f455d2b3da7583de9b7ac5fb8c99b2 *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\10. The Trammps - Rubber Band.mp3
+e7ffaba1735e1560e04538c97d28672d *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\11. The Undisputed Truth - Smiling Faces Sometimes.mp3
+eb9bfd2c9a1c9a7f887f3b8ba0d3f32e *..\Grand Theft Auto V Soundtrack (Radio Stations)\The LowDown 91.1\12. War - The Cisco Kid.mp3
+c1dbf809a17931a7321ebb3cdbdee47d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\01. Bass Drum of Death - Crawling After You.mp3
+a97e3d07f0f3436bb1f50b72aa9974f9 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\02. Ceremony - Hysteria.mp3
+db836eeb0aac35a64acfd67fb94099b6 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\03. Fidlar - Cocaine.mp3
+4cddaa0d41f56014168e14da5390d612 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\04. Hot Snakes - This Mystic Decade.mp3
+37f022853d587e38d35357f387f0acc2 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\05. METZ - Wet Blanket.mp3
+d55000c1b4de556813261a0055f9d657 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\06. Moon Duo - Sleepwalker.mp3
+71410dbd122438d903a345423ea6bc8a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\07. Sam Flax - Fire Doesnt Burn Itself.mp3
+175b376136b93cbde19bc5a6e6dfc08b *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\08. Shark - California Grrls.mp3
+2fe00a51832a54815080d09e34325151 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\09. The Black Angels - Black Grease.mp3
+0c21243defbe0738384b20b7d7369f60 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\10. The Oh Sees - The Dream.mp3
+cc5a38de878cba8ae732f9794cce0c10 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Vinewood Boulevard Radio\11. Ty Segall - Diddy Wah Diddy.mp3
+a5bcbf77b090a6418280b376342883e7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\01. 2Pac - Ambitionz Az a Ridah.mp3
+d05f29c985d9cfd40890daa8cd12939c *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\02. Compton's Most Wanted - Late Night Hype.mp3
+1328a1270bff9234aaff20a9c0eeed9a *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\03. DJ Quik - Dollaz & Sense.mp3
+98c89f88e5027cc07dab67a907eaeacd *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\04. Dr. Dre (ft. Snoop Dogg) - Still D.R.E..mp3
+a1e5f1045b6ab112697576c554ea1ba3 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\05. Dr. Dre (ft. Snoop Dogg) - The Next Episode.mp3
+bd4a178493b4d23100074666a6be0241 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\06. Ice Cube - You Know How We Do It.mp3
+c97691250f609554bb130d19957c2149 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\07. Kausion - What You Wanna Do.mp3
+53fe21b468579302ae6bbb326c25b7ec *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\08. King Tee - Played Like a Piano.mp3
+203d8d3793eb67334c2ac0208b91788a *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\09. Kurupt - C-Walk.mp3
+0c77221576db51372cb1eb9f5df1e577 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\10. Mack 10 & Tha Dogg Pound - Nothin but the Cavi Hit.mp3
+2191944516d5e6131985adf79fed857a *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\11. MC Eiht - Straight Up Menace.mp3
+ff2ddb2b5bf5034dbf55baf5b8ac65cf *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\12. N.W.A. - Appetite for Destruction.mp3
+5a943dc7b11697178b7474c073ef419d *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\13. N.W.A. - Gangsta Gangsta.mp3
+2d62b36455d83c8e46a0d64ed805a755 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\14. Snoop Dogg - Gin and Juice.mp3
+cf38f7ad18678066fcd346cd8354cc14 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\15. Tha Dogg Pound - What Would You Do.mp3
+9154b34c4ae7f5ea98c8c74140e6ee4c *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\16. The Geto Boys - My Mind Playin' Tricks On Me.mp3
+d07b9760213675e42036d789e61ebfd1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\West Coast Classics\17. Too $hort - So You Want to Be a Gangster.mp3
+c3732814ec6f2ed1abc891ed44f373f1 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\01. Candido - Thousand Finger Man.mp3
+eb061a7f73a776769b75e33db4576f0a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\02. Cashmere Cat - Mirror Maru.mp3
+3251127acf44e961ec700e04963ab782 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\03. Django Django - Waveforms.mp3
+67bf56613f617c866814d8ccfb5730cc *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\04. Donald Byrd - You and the Music.mp3
+7fc34c14c88eeedbec55a4895d17a026 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\05. Guts - Brand New Revolution.mp3
+a927b3440b3cee33b87ce2f15b75f530 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\06. Hackman - Forgotten Notes.mp3
+ec7eac499d9e44cc038983639a50d000 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\07. inc. - Cold Air.mp3
+5fcc159d0b8249c333d91261c5d395f5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\08. Kiko Navarro & Tuccillo, Amor - Lovery (Slow Cuban Vibe).mp3
+a708cdd11dff413058c2a8fd3af45fb7 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\09. Kyodai - Breaking.mp3
+c5e1cb4fb44e88275a2424d2404f6c8d *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\10. Mala - Ghost.mp3
+ad63a02c0abf32e7c768414573b43479 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\11. Owiny Sigoma Band - Harpoon Land.mp3
+636d09cf2baae94e82fbddaa8a47baf4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\12. Swindle - Forest Funk.mp3
+da62ffbb410776b9be74f3a4caaed619 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\13. The Gaslamp Killer - Nissim.mp3
+ffb092d98b3b7e80e73e01cabcfe9dd5 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\14. Tom Browne - Throw Down.mp3
+c6dd0fb3f37220e67a4ec94757e3ef21 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\15. Toro Y Moi - Harm in Change.mp3
+4a6442f9184c31ae399c31487e91d43a *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\16. Trickski - Beginnings.mp3
+c93341e43876e2d66aa3c02ec38386d4 *..\Grand Theft Auto V Soundtrack (Radio Stations)\Worldwide FM\17. Yuna - Live Your Life (MeLo-X Motherland GOD MIX).mp3
+75bb9d948f07f8938364e7ff2a5a2dab *..\Satellite Map\Map.jpg
+00de66efde605aacff34e83e1b8eddf7 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\01-Oh No - Welcome To Los Santos.mp3
+842124b846f07d52c0cfbbea31088c9c *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\02-BJ The Chicago Kid Feat. Freddie Gibbs & Problem - Smokin' And Ridin'.mp3
+00a7ad7b59c60a4f2756ce8d9190187d *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\03-Twin Shadow - Old Love - New Love.mp3
+85080608ba2112ebdb4735c6e9100aa9 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\04-Neon Indian - Change Of Coast.mp3
+d94741abcb3ef2c9a837078b38675178 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\05-Wavves - Nine Is God.mp3
+7a09eed24f1a22474c57f51a4d7dab22 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\06-Gangrene - Bassheads.mp3
+495debea18ceeddfbeebfdaeeb279c13 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\07-Flying Lotus - Stonecutters.mp3
+994ce84051adeb4cc1a6aee42c97153d *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\08-HEALTH - High Pressure Dave.mp3
+b9544232aad12ca6a03e0a216dfddd64 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\09-Off! - What's Next.mp3
+fab8be4b7e9c64205336b4463f7b68eb *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\10-Tyler, The Creator - Garbage.mp3
+ed079c2a9f9d87758f386139115392e5 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\11-Nite Jewel - Nowhere To Go.mp3
+756fcc762520c387b692547c329e5b78 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\12-ASAP Rocky Feat. Aston Matthews & Joey Fatts - R-Cali.mp3
+bb9d79620333bd38252ffab951a7f023 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\13-Age Of Consent - Colours.mp3
+d96f50f81bb4e7d517c0ab0dca5072e4 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\14-Marion Bands Feat. Nipsey Hussle - Hold Up.mp3
+5017cde5dceb2b723e0bfae88ad72758 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\15-The 100's - Life Of A Mack.mp3
+1c7243e802dc6026b45a525a12cd1c69 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\16-Favored Nations - The Set Up.mp3
+95694595b4832fc8d91824c0d64b378a *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\17-Yeasayer - Don't Come Close.mp3
+22afcd6c6558a9acbf0cacda101e1fcf *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\18-The Chain Gang Of 1974 - Sleepwalking.mp3
+16dd9df73cdeceb4f5f1a6b71728eff2 *..\The Music Of Grand Theft Auto V\Volume 1 - Original Music [CD1]\Volume 1 - Original Music.jpg
+7005c0f5582b2f7a3aa6796dfa3bd6bc *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\01-We Were Set Up.mp3
+db868e303c190be331d55066b22d7bae *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\02-A Legitimate Business Man.mp3
+056d1c89bd3a1b09b4973ec407423c0b *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\03-A Haze Of Patriotic Fervor.mp3
+796079a1aae419e510b870b422f2fd79 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\04-Los Santos At Night.mp3
+6014aa9568c9478d8fb36bd77ff7ebe5 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\05-North Yankton Memories.mp3
+13df6c3de7f74c50d34b74c17533e1ff *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\06-The Grip.mp3
+e531558e8236b04ba99046f49ac1919d *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\07-Mr. Trevor Philips.mp3
+c0da109cd8d8da41c616ff3aaa851885 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\08-A Bit Of An Awkward Situation.mp3
+bfd4ad3a3df829313bee5113f29bd2fb *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\09-No Happy Endings.mp3
+208ddb77033ce53632a8c7b09beb832f *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\10-His Mentor.mp3
+8453e933482314d72e667ab0ad5b5370 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\11-(Sounds Kind Of) Fruity.mp3
+88dc7910542706e7741854cd5c73fdb5 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\12-Minor Turbulence.mp3
+a47eb36d45ddb73644c08991dccba925 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\13-Chop The Dog.mp3
+0fc8dcaddc0c80b80b36489ed81b6680 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\14-A Lonely Man.mp3
+b0a54bdf6783569c49b305a150e0c0c0 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\15-You Forget A Thousand Things.mp3
+7a7c931943bd1303a254f72cf62d7312 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\16-Impotent Rage - Am I Being Clear Now.mp3
+7aa9b31ba7babd1a4ccdec209fb76f42 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\17-Fresh Meat.mp3
+a9d7e40a7acaa1d84dc71daab98316a0 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\18-Therapy And Other Hobbies.mp3
+a95603650e431d7c0c39094529dabcbc *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\19-Rich Man’s Plaything.mp3
+637f6360cccea209ce20b1a013d5f06e *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\20-The Agency Heist.mp3
+3dfb71975a125fef7215290ba0fe6caf *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\21-Hillbilly Crank Dealers’ Blues.mp3
+1d777a58cae8258bd95e0a78a3321d2f *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\22-Welcome To Los Santos [Outro].mp3
+b3dd22b4de7b07f2c28e9453ffc826f1 *..\The Music Of Grand Theft Auto V\Volume 2 - The Score [CD2]\Volume 2 - The Score.jpg
+8f7740a7f99d714595418658d2627636 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\01-Flying Lotus Feat. Niki Randa - The Kill.mp3
+e801027234493ceed059049d525b3eb6 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\02-Lee ''Scratch'' Perry & The Upsetters - I Am A Madman.mp3
+28f780448a4c58cf31c4d265864ea9a9 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\03-Jai Paul - Jasmine.mp3
+bb96bdef1cdaf1ad4ecbc88a717373a9 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\04-George McCrae - I Get Lifted.mp3
+887c1dac2bbd00bf01b7e628f9e07023 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\05-Kausion - What You Wanna Do.mp3
+f34fb5bc7276f83c342ba31c878b0a3e *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\06-Charlie Feathers - Can't Hardly Stand It.mp3
+b1d9c92b85d52571fc15953d243b5795 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\07-The Weirdos - Life Of Crime.mp3
+1c5e113349c27451eb6ad4fc3b138bf5 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\08-Mexican Institute Of Sound - Es Toy.mp3
+4e6ad237335a695cc4769d738269726e *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\09-Joe Goddard Feat. Valentina - Gabriel [Soulwax Remix].mp3
+768eaf00f7b47c64c514de37fa4c21e4 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\10-Bootsy Collins - I'd Rather Be With You.mp3
+dd70831a416a82434448f8a3400730c2 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\11-Bob Seger & The Silver Bullet Band - Hollywood Nights.mp3
+f5ba45f8a0f5841196d17885dc4ce66d *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\12-Dan Croll - From Nowhere [Baardsen Remix].mp3
+694096a2aad169e22d6028735f080002 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\13-Problem Feat. Glasses Malone - Say That Then.mp3
+2cfd4ca42a5c78e16fad1c7334f3fda2 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\14-Waylon Jennings - I Ain't Living Long Like This.mp3
+20b35e0f56be22e897370f4db43759d9 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\15-Yellowman - Nobody Move, Nobody Gets Hurt.mp3
+be91ea74dd407bcf357182499476a594 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\16-Simple Minds - All The Things She Said.mp3
+9ef65063aa4759aff20feee2ef52c725 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\17-Toro y Moi - Harm In Change.mp3
+5da125893d5169148e97609e2c31496c *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\18-Hot Snakes - This Mystic Decade.mp3
+a9edff0914c4d48628d8fcb974ba1357 *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\19-Cashmere Cat - Mirror Maru.mp3
+0d25734c845d4b90af5a40176087136b *..\The Music Of Grand Theft Auto V\Volume 3 - The Soundtrack [CD3]\Volume 3 - The Soundtrack.jpg
+7fb2f1629b5677b20f136ba9c1d99eae *..\The Music Of Grand Theft Auto V\The Music Of Grand Theft Auto V.jpg
+bdc6a9eed36fb249ab36005692b59313 *..\Wallpapers\Grand Theft Auto V Wallpaper (1).jpg
+5ccbca7f87947f5f171ff47337b08c2e *..\Wallpapers\Grand Theft Auto V Wallpaper (10).jpg
+52938d82d2ebf5e29b57596eeb91fe33 *..\Wallpapers\Grand Theft Auto V Wallpaper (11).jpg
+ceb6e819dc14b11e88a9fd514a1d63e5 *..\Wallpapers\Grand Theft Auto V Wallpaper (12).jpg
+460ef27d9e2e8a3cdf60a1cc35dc9d36 *..\Wallpapers\Grand Theft Auto V Wallpaper (13).jpg
+1e672a1fa7e30fd7a828b862b5ae4e0d *..\Wallpapers\Grand Theft Auto V Wallpaper (14).jpg
+b1ae573f913204c0f8819e4762f946b4 *..\Wallpapers\Grand Theft Auto V Wallpaper (15).jpg
+1f6bb65ff731800a6e8438a521f9349b *..\Wallpapers\Grand Theft Auto V Wallpaper (16).jpg
+ba8e284c73a8bdf4e50dd2ca07902fe9 *..\Wallpapers\Grand Theft Auto V Wallpaper (17).jpg
+b7f272f20d48ece48d4100f130433c89 *..\Wallpapers\Grand Theft Auto V Wallpaper (18).jpg
+80dad861713da7e95f76fb034536890d *..\Wallpapers\Grand Theft Auto V Wallpaper (19).jpg
+c5e381a62a41b64348b2a9b20eba76f6 *..\Wallpapers\Grand Theft Auto V Wallpaper (2).jpg
+95c89d44f79fce80aea2bdb69316414e *..\Wallpapers\Grand Theft Auto V Wallpaper (20).jpg
+3b194f23fe8a999aa975dfb60561f67e *..\Wallpapers\Grand Theft Auto V Wallpaper (21).jpg
+78bfc8c7f3cf2b25fc66f520054a169e *..\Wallpapers\Grand Theft Auto V Wallpaper (22).jpg
+1b867d3cf83e6649d628090e0ac112ab *..\Wallpapers\Grand Theft Auto V Wallpaper (23).jpg
+b90d326c381ddfa34b408b96288f8333 *..\Wallpapers\Grand Theft Auto V Wallpaper (3).jpg
+550e6762dd7d975f527c94d2ac8d5103 *..\Wallpapers\Grand Theft Auto V Wallpaper (4).jpg
+5f1faa3854a0afb9835d4525a1904291 *..\Wallpapers\Grand Theft Auto V Wallpaper (5).jpg
+aa2127ff71a2bb67eba1450a3e4ca73b *..\Wallpapers\Grand Theft Auto V Wallpaper (6).jpg
+c58a65ca3fbb3370cee055956b0b88cb *..\Wallpapers\Grand Theft Auto V Wallpaper (7).jpg
+0fbed5ef6eb64f62821f9c6f6f8f99c7 *..\Wallpapers\Grand Theft Auto V Wallpaper (8).jpg
+c0af8a557b0f86c18622d5304ae6d82a *..\Wallpapers\Grand Theft Auto V Wallpaper (9).jpg

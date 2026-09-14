@@ -1,0 +1,15 @@
+Al fine di prevenire e rilevare l'uso di software di cheat con l'obiettivo di garantire un ambiente di gioco equo, BattlEye può elaborare le seguenti informazioni dell'utente:
+
+- Indirizzo IP
+- Identificatori di gioco (ad es. nome del gioco, ID account, ecc.)
+- Informazioni e identificatori del dispositivo hardware (ad es. numeri di serie)
+- Informazioni sul sistema operativo in uso
+- Informazioni su file e memoria relativi al gioco e al sistema operativo
+- Informazioni sui processi in esecuzione, sui driver e su altro codice eseguibile
+- Nomi di file inclusi in altre informazioni qui elencate, che potrebbero contenere anche il nome utente del sistema operativo
+
+BattlEye segue una politica di minimizzazione dei dati che assicura che i dati vengano memorizzati solo quando necessario, cioè quando BattlEye trova informazioni che possono potenzialmente indicare l'uso di software cheat. Di conseguenza, BattlEye generalmente non memorizza alcuna informazione sulla maggior parte degli utenti.
+
+BattlEye può conservare le informazioni per tutta la durata della fornitura dei suoi servizi per il gioco.
+
+L'utente può contattare Rockstar Games in qualsiasi momento per esercitare i propri diritti in relazione a questo trattamento dei dati. Per ulteriori informazioni, consultare l'Informativa sulla privacy di BattlEye, https://www.battleye.com/privacy-policy/, e l'Informativa sulla privacy di Rockstar Games, https://www.rockstargames.com/privacy.

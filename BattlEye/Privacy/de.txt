@@ -1,0 +1,15 @@
+Um die Verwendung von Cheat-Software zu verhindern und zu erkennen und damit eine faire Spielumgebung zu gewährleisten, kann BattlEye die folgenden Informationen von Ihnen verarbeiten:
+
+- IP-Adresse
+- Spiel-Identifikatoren (z.B. Spielname, Account-ID, etc.)
+- Hardware-Informationen und -Kennungen (z. B. Seriennummern)
+- Informationen über das laufende Betriebssystem
+- Informationen über spielbezogene und betriebssystembezogene Dateien und Speicher
+- Informationen über laufende Prozesse, Treiber und anderen ausführbaren Code
+- Dateinamen, die in anderen hier aufgelisteten Informationen enthalten sind, die auch den Benutzernamen Ihres Betriebssystems enthalten können
+
+BattlEye verfolgt eine Politik der Datenminimierung, die sicherstellt, dass Daten nur dann gespeichert werden, wenn dies notwendig ist, d.h. wenn BattlEye Informationen findet, die möglicherweise auf die Verwendung von Cheat-Software hinweisen. Aus diesem Grund speichert BattlEye in der Regel keine Informationen über die meisten Nutzer.
+
+BattlEye kann die Informationen für die gesamte Dauer der Bereitstellung seiner Dienste für das Spiel speichern.
+
+Sie können sich jederzeit an Rockstar Games wenden, um Ihre Rechte in Bezug auf diese Datenverarbeitung auszuüben. Weitere Informationen finden Sie in der Datenschutzrichtlinie von BattlEye, https://www.battleye.com/privacy-policy/, und in der Datenschutzerklärung von Rockstar Games, https://www.rockstargames.com/privacy.

@@ -1,0 +1,15 @@
+Om het gebruik van cheatsoftware te voorkomen en op te sporen met als doel een eerlijke spelomgeving te garanderen, kan BattlEye de volgende informatie van je verwerken:
+
+- IP-adres
+- Game-id's (bijv. in-game naam, account-id, etc.)
+- Hardware apparaat informatie en identificaties (bijv. serienummers)
+- Informatie over het actieve besturingssysteem
+- Informatie over spelgerelateerde en besturingssysteemgerelateerde bestanden en geheugen
+- Informatie over lopende processen, stuurprogramma's en andere uitvoerbare code
+- Bestandsnamen in andere hier vermelde informatie, die ook de gebruikersnaam van je besturingssysteem kunnen bevatten
+
+BattlEye volgt een gegevensminimalisatiebeleid dat ervoor zorgt dat gegevens alleen worden opgeslagen wanneer dat nodig is, d.w.z. wanneer BattlEye informatie vindt die mogelijk kan wijzen op het gebruik van valsspeelsoftware. Als gevolg daarvan zal BattlEye over het algemeen geen informatie over de meeste gebruikers opslaan.
+
+BattlEye kan de informatie opslaan voor de volledige duur van de levering van zijn diensten voor het spel.
+
+Je kunt te allen tijde contact opnemen met Rockstar Games om je rechten met betrekking tot deze gegevensverwerking uit te oefenen. Zie het privacybeleid van BattlEye, https://www.battleye.com/privacy-policy/, en het privacybeleid van Rockstar Games, https://www.rockstargames.com/privacy, voor meer informatie.

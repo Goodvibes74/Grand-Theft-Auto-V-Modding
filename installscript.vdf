@@ -1,0 +1,25 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Rockstar Games\\Grand Theft Auto V\\"
+		{
+			"string"
+			{
+				"InstallFolderSteam"		"%INSTALLDIR%\\"
+			}
+		}
+	}
+	"Run Process On Uninstall"
+	{
+		"BattlEye_Uninstall"
+		{
+			"Process 1"		"GTA5_BE.exe"
+			"Command 1"		"4 0"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"2e65e457e6666d4a95543e6a3d69fa8e58c88d5cf28d5eb06db16e71639286d815506500f7b6d641b3c03011e6b016cd5717d04d28be6182dfc15065a35c18f76f9cfd942a357f0ce4c283dd620be0e1f253194258735566d0ce9597f72c085e81985a66c7d154fced898cf6c9fd7d9ff8af92efa13cede54b976f1c928308cd"
+}

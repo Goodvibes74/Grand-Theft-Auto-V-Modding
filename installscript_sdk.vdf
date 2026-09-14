@@ -1,0 +1,28 @@
+"InstallScript"
+{
+	"Run Process"
+	{
+		"240146"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Rockstar Games\\Steam\\SDK"
+			"process 1"		"%INSTALLDIR%\\Redistributables\\Social-Club-Setup.exe"
+			"command 1"		"/silent"
+			"NoCleanUp"		"0"
+		}
+		"101052733"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Rockstar Games\\Steam\\Launcher"
+			"process 1"		"%INSTALLDIR%\\Redistributables\\Rockstar-Games-Launcher.exe"
+			"command 1"		"/s /t"
+			"NoCleanUp"		"0"
+			"Requirement_OS"
+			{
+				"Is64BitWindows"		"1"
+			}
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"821d274dec8249e967aba6799d545c1aa248a0111a48447ad070bc11b1105cc250cdcc0c36c661143c91b093940ee91c88f49a413f84e5c3f4510fea2e023803d0e1139a04418aa0cb66f348115bfe5c3be66e9ffc29da21eeaa62405d5017a27f1d9ec642edcf668c52b2639233e00886ca46c1f86db5cd251b904a8861afbc"
+}

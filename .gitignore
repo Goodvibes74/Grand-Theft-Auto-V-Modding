@@ -1,0 +1,87 @@
+# ==========================================
+# GTA V Base Game Files (Ignore Large Binaries)
+# ==========================================
+*.rpf
+*.exe
+*.dll
+*.idx
+*.dat
+*.bin
+common.rpf
+x64*.rpf
+
+# Ignore main game folders
+/update/
+/x64/
+/ReadMe/
+/Redistributables/
+
+# ==========================================
+# Common Modding Frameworks & Engines
+# ==========================================
+# Script Hook V & Community Script Hook V .NET
+ScriptHookV.dll
+ScriptHookVDotNet.dll
+ScriptHookVDotNet.ini
+ScriptHookVDotNet.log
+ScriptHookVDotNet2.dll
+ScriptHookVDotNet3.dll
+dinput8.dll
+
+# OpenIV & LML (Lennart's Mod Loader)
+/mods/
+/lml/
+vfs.log
+OpenIV.log
+
+# FiveM / Alt:V Cache & Server Binaries (If applicable)
+# Uncomment these if you are developing for multiplayer platforms
+# /cache/
+# /alpine/
+# *.chk
+
+# ==========================================
+# RAGE Engine Assets (3D Models, Textures, Audio)
+# ==========================================
+# Only untrack these if you aren't using Git LFS
+*.ytd
+*.ydr
+*.yft
+*.ymt
+*.ypt
+*.ycd
+*.awc
+#New additions
+*.reg
+*.mp3
+*.jpg
+*.pdf
+
+# ==========================================
+# System, IDE, and Log Files
+# ==========================================
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# IDE specific (Visual Studio, VS Code, JetBrains)
+/.vs/
+/.vscode/
+/*.suo
+/*.user
+/*.sln
+bin/
+obj/
+
+# ==========================================
+# Whitelist (Files we ALWAYS want to track)
+# ==========================================
+!*.ini
+!*.lua
+!*.cs
+!*.json
+!*.xml
+!*.txt
+!*.md

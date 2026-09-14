@@ -1,0 +1,15 @@
+Para cumplir su propósito de prevenir y detectar el uso de software de trampas con el objetivo de garantizar un entorno de juego justo, BattlEye puede procesar la siguiente información sobre usted:
+
+- Dirección IP
+- Identificadores del juego (por ejemplo, nombre en el juego, ID de cuenta, etc.)
+- Información e identificadores del dispositivo de hardware (por ejemplo, números de serie)
+- Información sobre el sistema operativo en ejecución
+- Información sobre archivos y memoria relacionados con el juego y con el sistema operativo
+- Información sobre procesos en ejecución, controladores y otros códigos ejecutables
+- Nombres de archivos incluidos en otra información enumerada aquí, que también pueden contener el nombre de usuario de tu sistema operativo.
+
+BattlEye sigue una política de minimización de datos que garantiza que los datos sólo se almacenan cuando es necesario, es decir, cuando BattlEye encuentra información que podría indicar el uso de software trampa. Como resultado, BattlEye generalmente no almacenará ninguna información sobre la mayoría de los usuarios.
+
+BattlEye podrá almacenar la información durante todo el tiempo que dure la prestación de sus servicios para el juego.
+
+Puede ponerse en contacto con Rockstar Games en cualquier momento para ejercer sus derechos en relación con este tratamiento de datos. Para más información, consulte la Política de privacidad de BattlEye, https://www.battleye.com/privacy-policy/, y la Política de privacidad de Rockstar Games, https://www.rockstargames.com/privacy.

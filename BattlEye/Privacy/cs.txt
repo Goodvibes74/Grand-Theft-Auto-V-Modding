@@ -1,0 +1,15 @@
+Za účelem prevence a odhalování používání podvodného softwaru s cílem zajistit férové herní prostředí může společnost BattlEye zpracovávat následující informace:
+
+- IP adresu.
+- herní identifikátory (např. herní jméno, ID účtu atd.).
+- Informace o hardwarovém zařízení a jeho identifikátory (např. sériová čísla).
+- Informace o spuštěném operačním systému
+- Informace o souborech a paměti souvisejících s hrou a operačním systémem.
+- Informace o spuštěných procesech, ovladačích a dalším spustitelném kódu
+- Názvy souborů obsažené v dalších zde uvedených informacích, které mohou obsahovat také uživatelské jméno operačního systému
+
+Společnost BattlEye se řídí zásadou minimalizace dat, která zajišťuje, že data jsou ukládána pouze v nezbytných případech, tj. když společnost BattlEye zjistí informace, které mohou potenciálně naznačovat použití podvodného softwaru. V důsledku toho společnost BattlEye obecně neukládá žádné informace o většině uživatelů.
+
+Společnost BattlEye může ukládat informace po celou dobu poskytování svých služeb pro hru.
+
+V souvislosti s tímto zpracováním údajů můžete kdykoli kontaktovat společnost Rockstar Games a uplatnit svá práva. Další informace naleznete v Zásadách ochrany osobních údajů společnosti BattlEye, https://www.battleye.com/privacy-policy/, a v Zásadách ochrany osobních údajů společnosti Rockstar Games, https://www.rockstargames.com/privacy.
