@@ -5,6 +5,27 @@ GUI.loaded = false
 GUI.selection = 0
 GUI.time = 0
 GUI.hidden = false
+GUI.controller = {
+	Up = 187,
+	Down = 188,
+	Accept = 201,
+	Back = 202
+}
+
+function GUI.isKeyboardPressed(key)
+	if get_key_pressed ~= nil then
+		return get_key_pressed(key)
+	end
+	return false
+end
+
+function GUI.isControllerPressed(control)
+	if PAD ~= nil and type(PAD.IS_CONTROL_JUST_PRESSED) == "function" then
+		return PAD.IS_CONTROL_JUST_PRESSED(0, control)
+	end
+	return false
+end
+
 function GUI.addButton(name, func,args, xmin, xmax, ymin, ymax)
 	print("Added Button"..name )
 	GUI.GUI[GUI.buttonCount +1] = {}
@@ -40,17 +61,17 @@ function GUI.tick()
 end
 
 function GUI.updateSelection() 
-	if(get_key_pressed(Keys.NumPad2)) then 
+	if(GUI.isKeyboardPressed(Keys.NumPad2) or GUI.isControllerPressed(GUI.controller.Down)) then 
 		if(GUI.selection < GUI.buttonCount -1  )then
 			GUI.selection = GUI.selection +1
 			GUI.time = 0
 		end
-	elseif (get_key_pressed(Keys.NumPad8) )then
+	elseif (GUI.isKeyboardPressed(Keys.NumPad8) or GUI.isControllerPressed(GUI.controller.Up))then
 		if(GUI.selection > 0)then
 			GUI.selection = GUI.selection -1
 			GUI.time = 0
 		end
-	elseif (get_key_pressed(Keys.Space)) then
+	elseif (GUI.isKeyboardPressed(Keys.Space) or GUI.isControllerPressed(GUI.controller.Accept)) then
 		if(type(GUI.GUI[GUI.selection +1]["func"]) == "function") then
 			GUI.GUI[GUI.selection +1]["func"](GUI.GUI[GUI.selection +1]["args"])
 		else
