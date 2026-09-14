@@ -29,13 +29,16 @@ These are checked with the helper function `get_key_pressed()`.
 
 Controller support is also enabled in `scripts/libs/GUI.lua` using `PAD.IS_CONTROL_JUST_PRESSED(...)`.
 
-The menu supports the usual dual-stick / D-pad style controls for Xbox and PlayStation controllers:
+The menu now supports a custom combo-based toggle so it does not override the game’s normal key mapping:
 
-- D-pad Up / Left stick Up = move selection up
-- D-pad Down / Left stick Down = move selection down
-- A / Cross = activate the selected button
+- Open menu: `A + RB + RL`
+- Close menu: `B + LB + LT`
+- While the menu is open:
+  - D-pad Up / Left stick Up = move selection up
+  - D-pad Down / Left stick Down = move selection down
+  - A / Cross = activate the selected button
 
-The controller mapping is defined in the `GUI.controller` table and can be adjusted if needed.
+The combo mapping is defined in the `GUI.controller` and `GUI.openCombo` / `GUI.closeCombo` tables. If your game build uses slightly different raw control IDs, adjust those values in `scripts/libs/GUI.lua`.
 
 ## Files involved
 

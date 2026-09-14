@@ -5,12 +5,21 @@ GUI.loaded = false
 GUI.selection = 0
 GUI.time = 0
 GUI.hidden = false
+GUI.menuOpen = false
 GUI.controller = {
 	Up = 187,
 	Down = 188,
 	Accept = 201,
-	Back = 202
+	Back = 202,
+	A = 201,
+	B = 202,
+	RB = 107,
+	LB = 106,
+	RL = 205,
+	LT = 206
 }
+GUI.openCombo = { "A", "RB", "RL" }
+GUI.closeCombo = { "B", "LB", "LT" }
 
 function GUI.isKeyboardPressed(key)
 	if get_key_pressed ~= nil then
@@ -24,6 +33,22 @@ function GUI.isControllerPressed(control)
 		return PAD.IS_CONTROL_JUST_PRESSED(0, control)
 	end
 	return false
+end
+
+function GUI.isComboPressed(combo)
+	if type(combo) ~= "table" then
+		return false
+	end
+	for _, controlName in ipairs(combo) do
+		local controlId = GUI.controller[controlName]
+		if controlId == nil then
+			return false
+		end
+		if not GUI.isControllerPressed(controlId) then
+			return false
+		end
+	end
+	return true
 end
 
 function GUI.addButton(name, func,args, xmin, xmax, ymin, ymax)
@@ -46,6 +71,16 @@ function GUI.init()
 	GUI.loaded = true
 end
 function GUI.tick()
+	if GUI.isComboPressed(GUI.openCombo) then
+		GUI.hidden = false
+		GUI.menuOpen = true
+		GUI.time = 0
+	elseif GUI.isComboPressed(GUI.closeCombo) then
+		GUI.hidden = true
+		GUI.menuOpen = false
+		GUI.time = 0
+	end
+
 	if(not GUI.hidden)then
 		if( GUI.time == 0) then
 			GUI.time = GAMEPLAY.GET_GAME_TIMER()
