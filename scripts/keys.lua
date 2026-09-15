@@ -1,4 +1,8 @@
+-- Keyboard virtual-key mappings used by get_key_pressed().
+-- Controller mappings are defined separately in scripts/libs/GUI.lua.
 Keys = {}
+
+-- General and editing keys
 Keys.None = 0
 Keys.LButton = 1
 Keys.RButton = 2
@@ -41,6 +45,8 @@ Keys.PrintScreen = 44
 Keys.Insert = 45
 Keys.Delete = 46
 Keys.Help = 47
+
+-- Number-row keys: 0-9
 Keys.D0 = 48
 Keys.D1 = 49
 Keys.D2 = 50
@@ -51,6 +57,8 @@ Keys.D6 = 54
 Keys.D7 = 55
 Keys.D8 = 56
 Keys.D9 = 57
+
+-- Letter keys: A-Z
 Keys.A = 65
 Keys.B = 66
 Keys.C = 67
@@ -77,10 +85,14 @@ Keys.W = 87
 Keys.X = 88
 Keys.Y = 89
 Keys.Z = 90
+
+-- Windows and application keys
 Keys.LWin = 91
 Keys.RWin = 92
 Keys.Apps = 93
 Keys.Sleep = 95
+
+-- Numeric keypad and arithmetic keys
 Keys.NumPad0 = 96
 Keys.NumPad1 = 97
 Keys.NumPad2 = 98
@@ -97,6 +109,8 @@ Keys.Separator = 108
 Keys.Subtract = 109
 Keys.Decimal = 110
 Keys.Divide = 111
+
+-- Function keys
 Keys.F1 = 112
 Keys.F2 = 113
 Keys.F3 = 114
@@ -121,6 +135,8 @@ Keys.F21 = 132
 Keys.F22 = 133
 Keys.F23 = 134
 Keys.F24 = 135
+
+-- Lock keys and right-side modifiers
 Keys.NumLock = 144
 Keys.Scroll = 145
 Keys.LShiftKey = 160
@@ -129,6 +145,8 @@ Keys.LControlKey = 162
 Keys.RControlKey = 163
 Keys.LMenu = 164
 Keys.RMenu = 165
+
+-- Browser, volume, and media keys
 Keys.BrowserBack = 166
 Keys.BrowserForward = 167
 Keys.BrowserRefresh = 168
@@ -145,6 +163,8 @@ Keys.MediaStop = 178
 Keys.MediaPlayPause = 179
 Keys.LaunchMail = 180
 Keys.SelectMedia = 181
+
+-- OEM punctuation and IME keys
 Keys.LaunchApplication1 = 182
 Keys.LaunchApplication2 = 183
 Keys.Oem1 = 186

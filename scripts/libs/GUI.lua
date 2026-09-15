@@ -6,18 +6,23 @@ GUI.selection = 0
 GUI.time = 0
 GUI.hidden = false
 GUI.menuOpen = false
+
+-- Controller mappings: Xbox name first, PlayStation equivalent in parentheses.
+-- These are GTA V control IDs, not keyboard key codes from scripts/keys.lua.
 GUI.controller = {
-	Up = 187,
-	Down = 188,
-	Accept = 201,
-	Back = 202,
-	A = 201,
-	B = 202,
-	RB = 107,
-	LB = 106,
-	RL = 205,
-	LT = 206
+	Up = 187,       -- D-pad Up / D-pad Up
+	Down = 188,     -- D-pad Down / D-pad Down
+	Accept = 201,   -- A / Cross
+	Back = 202,     -- B / Circle
+	A = 201,        -- A / Cross
+	B = 202,        -- B / Circle
+	RB = 107,       -- Right Bumper / R1
+	LB = 106,       -- Left Bumper / L1
+	RL = 205,       -- Right Stick click / R3
+	LT = 206        -- Left Trigger / L2
 }
+
+-- Menu toggle combos. Hold all three buttons together.
 GUI.openCombo = { "A", "RB", "RL" }
 GUI.closeCombo = { "B", "LB", "LT" }
 
