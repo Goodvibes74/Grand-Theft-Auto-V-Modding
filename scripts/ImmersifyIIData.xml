@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImmersifyData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Metadata>
+    <LastGameTime>485629</LastGameTime>
+    <LastUCUnitSpawnedAt>16474</LastUCUnitSpawnedAt>
+  </Metadata>
+  <EventDataHashSet>
+    <EncounterId>DriveBy-1</EncounterId>
+    <LastExecutionTime>2026-10-08T23:09:08.4966717+03:00</LastExecutionTime>
+    <GameTimeAtLastExecution>354148</GameTimeAtLastExecution>
+    <TimeSpentInGame />
+  </EventDataHashSet>
+</ImmersifyData>
