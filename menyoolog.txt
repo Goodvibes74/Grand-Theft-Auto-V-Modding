@@ -1,0 +1,54 @@
+Menyoo Version: 2.4.4
+Game Version: Legacy b3717
+Date: 08/10/2026
+[23:27:41] INFO - Logging level 2 active. Edit loglevel in menyooconfig.ini to change.
+[23:27:41] INFO - Config loaded from D:\Games\Grand Theft Auto V Legacy\menyooStuff\menyooConfig.ini.
+[23:27:41] INFO - MODULEINFO: lpBaseofDll=00007FF7CE370000, SizeOfImage=67120640, EntryPoint=00007FF7CFBE8FD8
+[23:27:41] INFO - Found InitVehicleArchetype at 140702299916838
+[23:27:41] INIT - GTAMemory Init Done
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_orange.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_orange.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_red.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_red.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink2.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_face.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handh.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handm.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_face.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handh.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handm.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxKeyboard.png
+[23:28:30] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxGamepad.png
+[23:28:31] INFO - Loaded cutscene names from D:\Games\Grand Theft Auto V Legacy\menyooStuff\CutsceneLabels.txt
+[23:28:31] INFO - Setting Global Variable 4520961 to true
+[23:28:46] WARNING - Gen9 Content found in dlcpacks, this can cause instability when attempted to be loaded by Menyoo.
+			You can find these in your dlclist.xml by searching for "g9" and removing these lines or using a comment.
+				    		For example: <!--<Item>dlcpacks:/mpg9ec/</Item>-->
+
+				    Current known Gen9 Packs:
+				    		patchdayg9ecng
+				    		mpsum2_g9ec
+				   	 	patchday27g9ecng
+				   	 	mpchristmas3_g9ec
+				   	 	patchday28g9ecng
+				   	 	mp2023_01_g9ec
+				   	 	mp2023_02_g9ec
+				   	 	patch2024_01_g9ec
+				   	 	mp2024_01_g9ec
+				  	  	mp2024_02_g9ec
+
+				    Note: mp2024_02 also contains bugged content. If you continue to experience issues, removing this may help
+
+
+
