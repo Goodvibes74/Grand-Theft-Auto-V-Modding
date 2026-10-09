@@ -15,6 +15,7 @@ Installing, updating and removing mods is covered in the main [`README.md`](../.
 | Doc | What's in it |
 | --- | --- |
 | [`MODS.md`](MODS.md) | Every installed mod, how to activate it, and its keyboard, Xbox and PlayStation controls. Also covers TrainerV's direct hotkeys and the add-on vehicles, maps and saved Menyoo items. |
+| [`SETTINGS.md`](SETTINGS.md) | How to edit every mod's settings: which file, its format, what the main options do, and what to avoid. |
 | [`HOTKEYS.md`](HOTKEYS.md) | Key clashes between mods (fixed and still open), Xbox to PlayStation button names, and the rules for giving a mod a new key. |
 | [`KEYCODES.md`](KEYCODES.md) | The numbers behind the keys: Windows virtual-key codes and GTA control IDs, for editing `trainerv.ini` and other configs. |
 | [`LUA_MENU.md`](LUA_MENU.md) | The custom Lua GUI menu: how to turn it on, and its controls. |
