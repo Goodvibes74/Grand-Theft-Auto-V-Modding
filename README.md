@@ -7,6 +7,7 @@ This is the main guide to the modded GTA V Legacy install in this folder. It cov
 | `README.md` (this file) | How to manage and update mods. |
 | [`MOD_TRACKING.md`](MOD_TRACKING.md) | What git tracks and doesn't track, plus a checklist for each modding session. |
 | [`KEYCODES.md`](KEYCODES.md) | Keyboard and controller codes for `trainerv.ini` and other configs. |
+| [`docs/MODS.md`](docs/MODS.md) | Every mod, how to activate it, and all hotkey conflicts. |
 | [`docs/LUA_MENU.md`](docs/LUA_MENU.md) | The custom Lua GUI menu: how to turn it on, and its controls. |
 | [`CLAUDE.md`](CLAUDE.md) | Instructions for Claude Code when it works in this folder. |
 | [`Mods/MANIFEST.md`](Mods/MANIFEST.md) | Generated size and hash list of every RPF in `Mods/`. |
@@ -113,7 +114,7 @@ GTA5.exe
 | SHVDN console | F4 | none | `ScriptHookVDotNet.ini` |
 | Stance menu | J | none | `Stance.ini` |
 | TrainerV teleport | F10 | none | `trainerv.ini` `TeleportKey` |
-| TrainerV god mode | Right Ctrl + F1 / F5 | none | `trainerv.ini` `GodKey*` |
+| TrainerV god mode | Right Ctrl + F5 | none | `trainerv.ini` `GodKey*` |
 | Lua GUI | Numpad 8 / 2, Space | A + RB + RL / B + LB + LT | `scripts/libs/GUI.lua` |
 
 ### Known conflicts
@@ -121,6 +122,8 @@ GTA5.exe
 - **F3 (fixed 2026-10-09):** the TrainerV menu and Menyoo FreeCam both used F3. FreeCam moved to F6 (`FreeCamButton = 117`). F10 was not an option because TrainerV uses it for teleport.
 - **Numpad 8 / 2:** TrainerV and the Lua GUI both use these to navigate. They only clash if both menus are open at the same time.
 - **RB:** TrainerV, Menyoo and the Spooner all start their controller combos with RB. The second button tells them apart, so keep the second buttons different.
+
+More clashes (F7, J, X + LS and others) are listed in [`docs/MODS.md`](docs/MODS.md#3-hotkey-conflicts).
 
 **Rule:** before you give a new mod a key, check this table and update it afterwards. `KEYCODES.md` lists the numeric codes.
 

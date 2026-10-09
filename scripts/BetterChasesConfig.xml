@@ -224,5 +224,7 @@
     <GradientOffsetY>0</GradientOffsetY>
   </ArrestWarrants>
   <MenuKey>F7</MenuKey>
+  <SurrenderKey>E</SurrenderKey>
+  <SurrenderButton>Cover</SurrenderButton>
   <DisplayHints>true</DisplayHints>
 </BetterChasesPlus>
