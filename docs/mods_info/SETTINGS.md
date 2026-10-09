@@ -13,6 +13,7 @@ For keybinds see [`MODS.md`](MODS.md) and [`HOTKEYS.md`](HOTKEYS.md). For key co
 5. [Stance](#5-stance)
 6. [iFruitAddon2](#6-ifruitaddon2)
 7. [FoSAShelter](#7-fosashelter)
+   - 7a. [HomeInvasion](#7a-homeinvasion)
 8. [TrainerV](#8-trainerv)
 9. [Menyoo](#9-menyoo)
 10. [Lua mod and GUI menu](#10-lua-mod-and-gui-menu)
@@ -237,6 +238,31 @@ Change only the numbers. If the script has a syntax error, SHVDN won't compile i
 
 ---
 
+## 7a. HomeInvasion
+
+**File:** `scripts/HomeInvasion.xml` · **Format:** XML · **Source:** `ModDevelopment/MyMods/HomeInvasion/`
+
+| Block | What it does |
+| --- | --- |
+| `<Settings>` | `DrawMarkers`, `AlertMessages`, `PlayerMasks`: each `value="true"` or `"false"`. |
+| `<EntryPoint>` | One per house: `X`, `Y`, `Z` and `HomeType` (which interior it opens). 76 are set. |
+| `<Cops>` | Police behaviour (below). Every entry is optional. |
+
+`<Cops>` entries (the defaults are the original mod's behaviour):
+
+| Entry | Default | What it does |
+| --- | --- | --- |
+| `WantedLevel` | `2` | Stars set when a witness calls the police or you leave with a witness alive (0 to 5). |
+| `DispatchDelayMinMs`, `DispatchDelayMaxMs` | `5000`, `20000` | Delay between the call and the units arriving inside the home. |
+| `SpawnInteriorUnits` | `true` | `false`: the mod spawns no cops or SWAT of its own and RDE handles the response. Use this if units appear twice. |
+| `SwatChancePercent`, `SwatCount`, `SwatArmor`, `SwatWeapon` | `25`, `2`, `100`, `SMG` | SWAT team odds, size, armor and weapon. |
+| `SecondCopChancePercent`, `CopWeapon`, `SecondCopWeapon` | `50`, `PumpShotgun`, `Pistol` | Police units. |
+| `CallPolicePercent` | `17` | Chance a startled witness phones the police, once per home. |
+
+Weapon values are `WeaponHash` names such as `SMG`, `CarbineRifle` or `Pistol`. A bad value falls back to the default. The mod reads the file when the game starts, so close the game before editing. The untouched 2019 files are in `ModDevelopment/MyMods/HomeInvasion/original/`.
+
+---
+
 ## 8. TrainerV
 
 **File:** `trainerv.ini` (game root, about 6,000 lines) · **Format:** INI, comments start with `//` after a tab · **In-game menu:** F3
@@ -392,6 +418,7 @@ To add an add-on model, append a line with its model name and hash. The hash is 
 | Stance | `scripts/Stance.ini` | INI (`;`) | No |
 | iFruitAddon2 | `scripts/iFruitAddon2/config.ini` | INI | No |
 | FoSAShelter | `scripts/FoSAShelter.3.cs` | C# | No |
+| HomeInvasion | `scripts/HomeInvasion.xml` | XML | No |
 | TrainerV | `trainerv.ini` | INI (`//`) | Partly, F3 |
 | Menyoo | `menyooStuff/menyooConfig.ini` and `menyooStuff/*.xml` | INI (`;`), XML | Yes, F8 |
 | Lua GUI | `scripts/libs/GUI.lua`, `scripts/addins/*.lua` | Lua | No |

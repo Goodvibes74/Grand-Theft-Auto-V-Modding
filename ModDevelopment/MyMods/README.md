@@ -9,6 +9,7 @@ New C# mods are created here by `New-ModScript.ps1`. For a new C++ mod, copy `He
 | Mod | What it does | Use case | Language and dependencies | Installed? | Tested in game? |
 | --- | --- | --- | --- | --- | --- |
 | [ModGuide](ModGuide/README.md) | In-game menu that lists every installed mod: what it does, how to activate it, and its keyboard, Xbox and PlayStation controls. | You forget which key opens which mod, or want to check controller buttons without leaving the game. Also the reference example of a real LemonUI menu mod in this repo. | C#, SHVDN v3, LemonUI | Yes: `scripts/ModGuide.dll`, with `scripts/ModGuide.ini` and `scripts/ModGuide.xml` | Not yet |
+| [HomeInvasion](HomeInvasion/README.md) | Rob houses around the map. Our build of the 2019 mod with configurable police behaviour (wanted level, dispatch delay, SWAT and cop weapons). | Tune how hard the police respond to a house robbery, or hand the response to RDE. | C#, SHVDN v2, NativeUI | Yes: `scripts/HomeInvasion.dll` and `scripts/HomeInvasion.xml` | Not yet |
 | [HelloAsi](HelloAsi/) | Shows a notification when the game finishes loading. With a toggle key set, draws the player's coordinates on screen. | Starting point for a C++ `.asi` mod. Proves the C++ toolchain (headers, import library, build settings) works. Copy it to start your own. | C++, ScriptHookV (through `../cpp/ShvSdk`) | No: build output stays in `HelloAsi/bin/`. Copy the `.asi` to the game folder to try it | Not yet |
 
 ### ModGuide

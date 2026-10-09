@@ -107,6 +107,13 @@
     <Config>scripts/FoSAShelter.3.cs (no settings file)</Config>
   </Mod>
 
+  <Mod name="HomeInvasion">
+    <Description>Rob houses around the map. Residents may flee, fight or phone the police, and cops or SWAT then arrive inside.</Description>
+    <Activate>Walk to a red marker (red house blips on the map) with no wanted level and press E. Inside, E takes loot, intimidates a targeted resident, or leaves at the door.</Activate>
+    <Config>scripts/HomeInvasion.xml (the Cops block sets wanted level, delay, SWAT and weapons)</Config>
+    <Control action="Enter / loot / intimidate / exit" keyboard="E" xbox="A" playstation="Cross" note="On-foot context button, near a marker or inside a robbed home." />
+  </Mod>
+
   <Mod name="iFruitAddon2">
     <Description>Adds extra contacts from other mods to your phone.</Description>
     <Activate>Open the phone and go to Contacts.</Activate>

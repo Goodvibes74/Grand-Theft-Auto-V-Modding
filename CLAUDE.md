@@ -53,7 +53,7 @@ GTA5.exe
 
 ### Installed SHVDN mods (scripts/)
 
-Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), RDE's SixStarResponse (police dispatch, toggle Ctrl+F10), LiveryChanger and SSRPlus (E&E fixes), ModGuide (built from `ModDevelopment/MyMods/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
+Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), HomeInvasion (our build, source in `ModDevelopment/MyMods/HomeInvasion/`), RDE's SixStarResponse (police dispatch, toggle Ctrl+F10), LiveryChanger and SSRPlus (E&E fixes), ModGuide (built from `ModDevelopment/MyMods/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 

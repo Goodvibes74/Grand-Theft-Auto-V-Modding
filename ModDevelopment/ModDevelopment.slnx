@@ -8,5 +8,6 @@
     <File Path="docs/README.md" />
   </Folder>
   <Project Path="MyMods/ModGuide/ModGuide.csproj" />
+  <Project Path="MyMods/HomeInvasion/HomeInvasion.csproj" />
   <Project Path="Samples/Samples.csproj" />
 </Solution>

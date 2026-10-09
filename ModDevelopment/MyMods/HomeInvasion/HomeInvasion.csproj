@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Home Invasion (decompiled from the original 2019 build, then edited).
+    It was written for ScriptHookVDotNet v2, so unlike the other projects here it must NOT use
+    the shared SHVDN v3 / LemonUI references from ..\..\Directory.Build.props. They are removed
+    and the v2 assembly is referenced instead. Target framework, output copy into scripts\ and
+    the rest still come from the shared props and targets.
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>HomeInvasion</AssemblyName>
+    <RootNamespace>HomeInvasion</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+    <!-- Every v2 type is marked obsolete by SHVDN. That is expected for this mod. -->
+    <NoWarn>$(NoWarn);CS0618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Remove="ScriptHookVDotNet3" />
+    <Reference Remove="LemonUI.SHVDN3" />
+    <Reference Include="ScriptHookVDotNet2">
+      <HintPath>$(GameDir)ScriptHookVDotNet2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NativeUI">
+      <HintPath>$(GameScriptsDir)NativeUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+</Project>
