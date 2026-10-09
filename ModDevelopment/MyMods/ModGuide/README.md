@@ -10,8 +10,8 @@ Most updates are edits to one XML file and don't need a rebuild. You only rebuil
 | --- | --- | --- |
 | `scripts/ModGuide.xml` | The menu content: every mod, its description and its controls. | No |
 | `scripts/ModGuide.ini` | The open key, the controller combo, and whether controller names show as Xbox or PlayStation. | No |
-| `ModDevelopment/ModGuide/ModGuideScript.cs` | The script: reads the two files above and builds the LemonUI menu. | Yes |
-| `ModDevelopment/ModGuide/ModGuide.csproj` | Project file. Shared settings (.NET Framework 4.8, SHVDN and LemonUI references, the copy into `scripts/`) come from `ModDevelopment/Directory.Build.props` and `.targets`. | Yes |
+| `ModDevelopment/MyMods/ModGuide/ModGuideScript.cs` | The script: reads the two files above and builds the LemonUI menu. | Yes |
+| `ModDevelopment/MyMods/ModGuide/ModGuide.csproj` | Project file. Shared settings (.NET Framework 4.8, SHVDN and LemonUI references, the copy into `scripts/`) come from `ModDevelopment/Directory.Build.props` and `.targets`. | Yes |
 | `scripts/ModGuide.dll`, `scripts/ModGuide.pdb` | Build output, loaded by ScriptHookVDotNet. Never edit these. | n/a |
 
 The source has to stay in `ModDevelopment/`. SHVDN compiles every `.cs` file it finds in `scripts/`, so a copy of `ModGuideScript.cs` there would load a second copy of the menu.
@@ -87,7 +87,7 @@ A misspelled name is ignored and the default is used. Every function key from F2
 Run from the game folder:
 
 ```bash
-dotnet build -c Release ModDevelopment/ModGuide/ModGuide.csproj
+dotnet build -c Release ModDevelopment/MyMods/ModGuide/ModGuide.csproj
 ```
 
 The build compiles against `ScriptHookVDotNet3.dll` (game root) and `scripts/LemonUI.SHVDN3.dll`, and then copies `ModGuide.dll` and `ModGuide.pdb` into `scripts/`. Close the game before building, because Windows locks a DLL that is in use and the copy fails.
@@ -140,4 +140,4 @@ There's no automatic test. After building:
 
 ## Committing
 
-Commit the source (`ModDevelopment/ModGuide/*.cs`, `*.csproj`, this README), `scripts/ModGuide.xml`, `scripts/ModGuide.ini`, and the built `scripts/ModGuide.dll` and `.pdb`, so the game works straight from a checkout. `bin/` and `obj/` are gitignored.
+Commit the source (`ModDevelopment/MyMods/ModGuide/*.cs`, `*.csproj`, this README), `scripts/ModGuide.xml`, `scripts/ModGuide.ini`, and the built `scripts/ModGuide.dll` and `.pdb`, so the game works straight from a checkout. `bin/` and `obj/` are gitignored.

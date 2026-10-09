@@ -400,4 +400,4 @@ To add an add-on model, append a line with its model name and hash. The hash is 
 | Heap / Packfile / Weapon limits | `HeapAdjuster.ini`, `PackfileLimitAdjuster.ini`, `WeaponLimitsAdjuster.ini` | INI | No |
 | Decal and streamer limits | `fwBoxStreamerVariable_DecalsLimit-Patch.toml` | TOML | No |
 | Model lists | `scripts/VehicleList.ini`, `PedList.ini`, `ObjectList.ini` | INI | No |
-| Mod Guide | `scripts/ModGuide.ini` (keys), `scripts/ModGuide.xml` (the mod list: one `<Mod>` per entry, one `<Control>` per key) | INI (`;`), XML | No. Edit with the game closed or use `Reload()` in the F4 console. Source in `ModDevelopment/ModGuide/`. |
+| Mod Guide | `scripts/ModGuide.ini` (keys), `scripts/ModGuide.xml` (the mod list: one `<Mod>` per entry, one `<Control>` per key) | INI (`;`), XML | No. Edit with the game closed or use `Reload()` in the F4 console. Source in `ModDevelopment/MyMods/ModGuide/`. |

@@ -8,6 +8,7 @@ Status checked on 2026-10-09.
 
 | # | Step | Needed for | Status |
 | --- | --- | --- | --- |
+| 0 | Check this PC has the Windows runtimes (DirectX, Visual C++, .NET) | Playing, mods and modding | Run `tools\check-system.ps1 -Dev`; all OK on 2026-10-09 |
 | 1 | Install the C++ workload in Visual Studio Community | Editing C++ `.asi` mods in the IDE | **To do** |
 | 2 | Check the .NET workload in Visual Studio Community | C# scripts in the IDE | Done (installed) |
 | 3 | Test the starter mods in game | Confirming the toolchain works end to end | **To do** |
@@ -47,8 +48,8 @@ None of these have been run in the game yet: only built.
 **C++ (HelloAsi):**
 
 1. Close the game.
-2. Build: `MSBuild ModDevelopment\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64` (full command in [guide 04](04-ScriptHookV-CPP.md#building)).
-3. Copy `ModDevelopment\HelloAsi\bin\Release\HelloAsi.asi` into the game folder.
+2. Build: `MSBuild ModDevelopment\MyMods\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64` (full command in [guide 04](04-ScriptHookV-CPP.md#building)).
+3. Copy `ModDevelopment\MyMods\HelloAsi\bin\Release\HelloAsi.asi` into the game folder.
 4. Launch. After the loading screen, a "HelloAsi loaded" notification should appear.
 5. Check `asiloader.log` (lists `HelloAsi.asi`) and `ScriptHookV.log`.
 6. Delete `HelloAsi.asi` from the game folder afterwards, so it doesn't load every time.

@@ -20,6 +20,9 @@ Installing, updating and removing mods is covered in the main [`README.md`](../.
 | [`KEYCODES.md`](KEYCODES.md) | The numbers behind the keys: Windows virtual-key codes and GTA control IDs, for editing `trainerv.ini` and other configs. |
 | [`LUA_MENU.md`](LUA_MENU.md) | The custom Lua GUI menu: how to turn it on, and its controls. |
 | [`RPF_TOOLS.md`](RPF_TOOLS.md) | Looking inside `.rpf` archives: the read-only `tools/rpf.ps1` script, and a step-by-step CodeWalker guide for encrypted vanilla files. |
+| [`SYSTEM_REQUIREMENTS.md`](SYSTEM_REQUIREMENTS.md) | What Windows needs installed outside the game folder (DirectX June 2010, Visual C++ runtimes, .NET Framework, Media Foundation), for playing, running mods, and modding. Check a PC with `tools/check-system.ps1`. |
+| [`DOWNLOADS.md`](DOWNLOADS.md) | Where to get every runtime, script hook, library, mod and tool, from their official sources. |
+| [`LINUX.md`](LINUX.md) | Playing with mods under Proton/Wine, and developing mods on Linux: what works, what each part needs in the Wine prefix. |
 
 ## Most used keys
 

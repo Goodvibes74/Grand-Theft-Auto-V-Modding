@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   HelloAsi: starter C++ ScriptHookV mod. Builds HelloAsi.asi.
-  Shared settings come from ..\cpp\ShvSdk\ShvSdk.props. The .asi is NOT copied into the game unless
+  Shared settings come from ..\..\cpp\ShvSdk\ShvSdk.props. The .asi is NOT copied into the game unless
   CopyAsiToGame is true, so this template doesn't load in game by accident.
-  Build: msbuild ModDevelopment\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64
+  Build: msbuild ModDevelopment\MyMods\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64
 -->
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
@@ -35,7 +35,7 @@
   </PropertyGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <Import Project="..\cpp\ShvSdk\ShvSdk.props" />
+  <Import Project="..\..\cpp\ShvSdk\ShvSdk.props" />
 
   <PropertyGroup>
     <OutDir>$(ProjectDir)bin\$(Configuration)\</OutDir>

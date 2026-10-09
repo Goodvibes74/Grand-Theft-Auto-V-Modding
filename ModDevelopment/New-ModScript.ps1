@@ -3,13 +3,14 @@
     Creates a new ScriptHookVDotNet v3 script project in ModDevelopment and adds it to the solution.
 
 .DESCRIPTION
-    Creates ModDevelopment\<Name>\ with a project file, a starter script (a LemonUI menu opened by a key
+    Creates ModDevelopment\MyMods\<Name>\ with a project file, a starter script (a LemonUI menu opened by a key
     from scripts\<Name>.ini), a Visual Studio launch profile that starts the game with BattlEye off,
     and a README. Also creates scripts\<Name>.ini with no key assigned, so the new script can't clash
     with another mod until you pick a key (see docs\mods_info\HOTKEYS.md).
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File ModDevelopment\New-ModScript.ps1 -Name SpeedCamera
+    pwsh ModDevelopment/New-ModScript.ps1 -Name SpeedCamera     # Linux or macOS, with PowerShell 7
 #>
 param(
     [Parameter(Mandatory = $true)]
@@ -21,11 +22,11 @@ $ErrorActionPreference = 'Stop'
 
 $devDir = $PSScriptRoot
 $gameDir = Split-Path $devDir -Parent
-$projectDir = Join-Path $devDir $Name
-$iniPath = Join-Path $gameDir "scripts\$Name.ini"
+$projectDir = Join-Path $devDir "MyMods/$Name"
+$iniPath = Join-Path $gameDir "scripts/$Name.ini"
 
-if (Test-Path $projectDir) { throw "ModDevelopment\$Name already exists." }
-if (Test-Path (Join-Path $gameDir "scripts\$Name.dll")) { throw "scripts\$Name.dll already exists. Pick another name." }
+if (Test-Path $projectDir) { throw "ModDevelopment\MyMods\$Name already exists." }
+if (Test-Path (Join-Path $gameDir "scripts/$Name.dll")) { throw "scripts\$Name.dll already exists. Pick another name." }
 
 New-Item -ItemType Directory -Path (Join-Path $projectDir 'Properties') | Out-Null
 $utf8 = New-Object System.Text.UTF8Encoding($false)
@@ -104,7 +105,7 @@ $launch = [ordered]@{
         }
     }
 }
-Write-ProjectFile (Join-Path $projectDir 'Properties\launchSettings.json') ($launch | ConvertTo-Json -Depth 5)
+Write-ProjectFile (Join-Path $projectDir 'Properties/launchSettings.json') ($launch | ConvertTo-Json -Depth 5)
 
 Write-ProjectFile (Join-Path $projectDir 'README.md') @"
 # $Name
@@ -115,7 +116,7 @@ What this script does, and how to use it in game.
 
 | File | What it is |
 | --- | --- |
-| ``ModDevelopment/$Name/${Name}Script.cs`` | The script. |
+| ``ModDevelopment/MyMods/$Name/${Name}Script.cs`` | The script. |
 | ``scripts/$Name.ini`` | Settings. ``MenuKey`` opens the menu (no key by default). |
 | ``scripts/$Name.dll``, ``scripts/$Name.pdb`` | Build output, copied there on every build. |
 
@@ -128,11 +129,11 @@ What this script does, and how to use it in game.
 ## Build
 
 Open ``ModDevelopment/ModDevelopment.slnx`` in Visual Studio and build, or run
-``dotnet build -c Release ModDevelopment/$Name/$Name.csproj`` from the game folder.
+``dotnet build -c Release ModDevelopment/MyMods/$Name/$Name.csproj`` from the game folder.
 
 ## When it's ready
 
-Add it to ``scripts/ModGuide.xml``, ``docs/mods_info/MODS.md`` and ``docs/mods_info/HOTKEYS.md``.
+Add it to ``ModDevelopment/MyMods/README.md``, ``scripts/ModGuide.xml``, ``docs/mods_info/MODS.md`` and ``docs/mods_info/HOTKEYS.md``.
 "@
 
 if (-not (Test-Path $iniPath)) {
@@ -150,6 +151,6 @@ MenuKey=None
 if ($LASTEXITCODE -ne 0) { throw 'Adding the project to ModDevelopment.slnx failed.' }
 
 Write-Host ""
-Write-Host "Created ModDevelopment\$Name and scripts\$Name.ini."
+Write-Host "Created ModDevelopment\MyMods\$Name and scripts\$Name.ini."
 Write-Host "Next: set MenuKey in scripts\$Name.ini, then build with:"
-Write-Host "  dotnet build -c Release ModDevelopment\$Name\$Name.csproj"
+Write-Host "  dotnet build -c Release ModDevelopment\MyMods\$Name\$Name.csproj"

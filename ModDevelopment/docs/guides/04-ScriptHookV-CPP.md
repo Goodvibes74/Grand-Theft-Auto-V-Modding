@@ -16,7 +16,7 @@ Use C++ when you need speed or low-level access. For everything else, C# is easi
 | `cpp/ShvSdk/include/natives.hpp` | All 6,701 natives as named functions (`PLAYER::PLAYER_PED_ID()`), generated from NativeDB |
 | `cpp/ShvSdk/ScriptHookV.def` | The list of ScriptHookV's exports. The build turns it into `ScriptHookV.lib` |
 | `cpp/ShvSdk/ShvSdk.props` | Shared build settings: include path, the `.lib`, `.asi` output, static runtime, C++20 |
-| `HelloAsi/` | A starter mod that builds and links |
+| `MyMods/HelloAsi/` | A starter mod that builds and links |
 | `ModDevelopment.Cpp.slnx` | The C++ solution for Visual Studio |
 
 These replace the official ScriptHookV SDK, so you don't have to download it. They were written from the DLL's own export table (`dumpbin /exports ScriptHookV.dll`), so they match the installed ScriptHookV exactly. Code written for the official SDK compiles against them. If you'd rather use the official SDK, see [guide 08](08-Manual-Steps.md#5-optional-the-official-scripthookv-sdk).
@@ -79,7 +79,7 @@ void ScriptMain()
 }
 ```
 
-The full working version, with notifications and on-screen text, is in [`HelloAsi/script.cpp`](../../HelloAsi/script.cpp).
+The full working version, with notifications and on-screen text, is in [`MyMods/HelloAsi/script.cpp`](../../MyMods/HelloAsi/script.cpp).
 
 ### Rules
 
@@ -97,10 +97,10 @@ The full working version, with notifications and on-screen text, is in [`HelloAs
 
 ```powershell
 & "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\MSBuild.exe" `
-  ModDevelopment\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64
+  ModDevelopment\MyMods\HelloAsi\HelloAsi.vcxproj -p:Configuration=Release -p:Platform=x64
 ```
 
-The output is `ModDevelopment\HelloAsi\bin\Release\HelloAsi.asi`. Before linking, the build runs `lib.exe` to make `ScriptHookV.lib` from `ScriptHookV.def`.
+The output is `ModDevelopment\MyMods\HelloAsi\bin\Release\HelloAsi.asi`. Before linking, the build runs `lib.exe` to make `ScriptHookV.lib` from `ScriptHookV.def`.
 
 ### In Visual Studio
 
@@ -133,9 +133,9 @@ All set by `ShvSdk.props` and the `.vcxproj`:
 
 ## Making your own C++ mod
 
-1. Copy the `HelloAsi` folder to `ModDevelopment\<YourMod>\` and rename `HelloAsi.vcxproj` to `<YourMod>.vcxproj`.
+1. Copy the `HelloAsi` folder to `ModDevelopment\MyMods\<YourMod>\` and rename `HelloAsi.vcxproj` to `<YourMod>.vcxproj`.
 2. In the `.vcxproj`, change `<RootNamespace>` and generate a new `<ProjectGuid>` (PowerShell: `[guid]::NewGuid()`).
-3. Add it to `ModDevelopment.Cpp.slnx`: in Visual Studio, right-click the solution > Add > Existing Project. Or add a `<Project Path="<YourMod>/<YourMod>.vcxproj" />` line to the file.
+3. Add it to `ModDevelopment.Cpp.slnx`: in Visual Studio, right-click the solution > Add > Existing Project. Or add a `<Project Path="MyMods/<YourMod>/<YourMod>.vcxproj" />` line to the file.
 4. Write your loop in `script.cpp`. Look natives up in [`../reference/natives/`](../reference/natives/README.md).
 5. Add it to `scripts/ModGuide.xml` and `docs/mods_info/MODS.md` when it works, and track the `.asi` in git like the other mods.
 

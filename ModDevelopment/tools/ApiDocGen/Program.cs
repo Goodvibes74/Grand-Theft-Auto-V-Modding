@@ -138,6 +138,20 @@ string Provenance(string path)
 
 string Rel(string path) => Path.GetRelativePath(gameDir, path).Replace('\\', '/');
 
+// .NET Framework 4.8 reference assemblies: the Windows targeting pack if installed, otherwise the copy from the
+// Microsoft.NETFramework.ReferenceAssemblies.net48 NuGet package (Linux, macOS). APIDOCGEN_NUGET_REFS=1 forces the package.
+static string FrameworkReferenceDir()
+{
+	string windows = @"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8";
+	if (Environment.GetEnvironmentVariable("APIDOCGEN_NUGET_REFS") != "1" && Directory.Exists(windows))
+		return windows;
+	string package = typeof(Library).Assembly.GetCustomAttributes<AssemblyMetadataAttribute>()
+		.First(a => a.Key == "Net48ReferencePath").Value!;
+	if (!Directory.Exists(package))
+		throw new DirectoryNotFoundException($".NET Framework 4.8 reference assemblies not found in {windows} or {package}");
+	return package;
+}
+
 static string FindGameDir()
 {
 	for (var dir = new DirectoryInfo(Directory.GetCurrentDirectory()); dir != null; dir = dir.Parent)
@@ -152,7 +166,7 @@ void WriteLibrary(Library lib)
 {
 	Console.WriteLine($"Reading {lib.Title}");
 
-	string frameworkDir = @"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8";
+	string frameworkDir = FrameworkReferenceDir();
 	var paths = Directory.GetFiles(frameworkDir, "*.dll")
 		.Concat(Directory.GetFiles(Path.Combine(frameworkDir, "Facades"), "*.dll"))
 		.Concat(new[] { Path.Combine(gameDir, "ScriptHookVDotNet2.dll"), Path.Combine(gameDir, "ScriptHookVDotNet3.dll"), runtimeCopy })
@@ -767,7 +781,7 @@ void WriteInventory()
 		["scripts/NativeUI.dll"] = "Menu library for SHVDN v2 (legacy). **Reference**: [NativeUI](NativeUI/README.md)",
 		["scripts/iFruitAddon2.dll"] = "Phone contacts library. **Reference**: [iFruitAddon2](iFruitAddon2/README.md)",
 		["scripts/ClearScript.dll"] = "Microsoft ClearScript (JavaScript engine for .NET). Needed by MapEditor. Not useful for game modding",
-		["scripts/ModGuide.dll"] = "Our in-game mod guide. Source: `ModDevelopment/ModGuide/`",
+		["scripts/ModGuide.dll"] = "Our in-game mod guide. Source: `ModDevelopment/MyMods/ModGuide/`",
 		["scripts/Better Chases+.dll"] = "Police chase mod. No API",
 		["scripts/Cop_Arrest.dll"] = "Arrest mod. No API",
 		["scripts/Disarm.dll"] = "Disarm mod. No API",

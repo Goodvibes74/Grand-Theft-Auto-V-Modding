@@ -4,7 +4,7 @@ Menus are built with **LemonUI** (`scripts/LemonUI.SHVDN3.dll`, version 2.2.0). 
 
 > **Sources:** LemonUI members from the metadata and shipped XML docs of `scripts/LemonUI.SHVDN3.dll` 2.2.0. Notifications from `ScriptHookVDotNet3.dll` 3.7.0.189. iFruitAddon2 from the metadata of `scripts/iFruitAddon2.dll` 3.1.1. Every member named here was compile-checked (`ModDevelopment/Samples/`). Details: [Where everything comes from](../README.md#where-everything-comes-from).
 
-Full reference: [`../reference/LemonUI/README.md`](../reference/LemonUI/README.md). Complete example: [`Samples/04_LemonMenu.cs`](../../Samples/04_LemonMenu.cs). A real installed example: `ModDevelopment/ModGuide/`.
+Full reference: [`../reference/LemonUI/README.md`](../reference/LemonUI/README.md). Complete example: [`Samples/04_LemonMenu.cs`](../../Samples/04_LemonMenu.cs). A real installed example: `ModDevelopment/MyMods/ModGuide/`.
 
 ## Building a menu with LemonUI
 

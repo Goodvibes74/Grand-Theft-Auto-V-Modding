@@ -23,6 +23,15 @@
     <CopyToGameScripts Condition="'$(CopyToGameScripts)' == ''">true</CopyToGameScripts>
   </PropertyGroup>
 
+  <!--
+    On Linux and macOS there is no .NET Framework 4.8 targeting pack, so the reference assemblies come from
+    NuGet instead (needs internet for the first restore). On Windows the installed targeting pack is used.
+    Set UseNetFrameworkReferencePackage=true to use the NuGet package on Windows too.
+  -->
+  <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.csproj' and ('$(OS)' != 'Windows_NT' or '$(UseNetFrameworkReferencePackage)' == 'true')">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
     <!-- Supplied by the game install at runtime, so never copied to the output. -->
     <Reference Include="ScriptHookVDotNet3">

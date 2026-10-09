@@ -15,6 +15,15 @@
 
   <ItemGroup>
     <PackageReference Include="System.Reflection.MetadataLoadContext" Version="10.0.0" />
+    <!-- .NET Framework 4.8 reference assemblies, used when the Windows targeting pack isn't installed (Linux, macOS). -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" GeneratePathProperty="true" ExcludeAssets="all" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>Net48ReferencePath</_Parameter1>
+      <_Parameter2>$(PkgMicrosoft_NETFramework_ReferenceAssemblies_net48)/build/.NETFramework/v4.8</_Parameter2>
+    </AssemblyAttribute>
   </ItemGroup>
 
 </Project>

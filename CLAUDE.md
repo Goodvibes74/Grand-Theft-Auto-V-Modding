@@ -11,6 +11,7 @@ This directory is a modded **GTA V Legacy** (Enhanced is a different build) inst
 - Game version: `GTA5.exe` 1.0.3725.0 (ScriptHookV reports `VER_1_0_3717_0`). Check `ScriptHookV.log` after any game update. A version mismatch is the usual reason every script stops loading.
 - Launch: `PlayGTAV.bat` runs `PlayGTAV.exe -nobattleye`. BattlEye must stay disabled, because modded single player does not work with it.
 - Platform: Windows 11. Paths contain spaces, so always quote `"D:\Games\Grand Theft Auto V Legacy"`.
+- Outside the game folder, Windows needs the DirectX June 2010 runtime, Visual C++ 2013 and 2015-2022 x64 runtimes, .NET Framework 4.8 and Media Foundation (`docs/mods_info/SYSTEM_REQUIREMENTS.md`). `tools/check-system.ps1` checks them (read-only; `-Dev` adds the modding tools). Download sources: `docs/mods_info/DOWNLOADS.md`. Linux (Proton/Wine) setup and Linux mod development: `docs/mods_info/LINUX.md`.
 - Claude cannot run the game or see it. To test a change, the user launches the game and reports back, or Claude reads the logs written by the last session (see "Logs" below).
 
 ## How mods load
@@ -36,9 +37,10 @@ GTA5.exe
 | `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`, plus add-on packs in `update/x64/dlcpacks/`. **Edit RPFs here, never the originals in root or `update/`.** |
 | `Mods/MANIFEST.md` | Size and SHA-256 of every file in `Mods/`. This is how RPF changes get tracked, since the RPFs themselves stay out of git. |
 | `tools/update-mods-manifest.sh` | Regenerates `Mods/MANIFEST.md` (`bash tools/update-mods-manifest.sh`, about 20 seconds). |
-| `ModDevelopment/` | Source for our own mods: SHVDN C# scripts (solution `ModDevelopment.slnx`) and C++ `.asi` mods (solution `ModDevelopment.Cpp.slnx`, headers in `cpp/ShvSdk/`). See `ModDevelopment/README.md`. |
+| `ModDevelopment/` | Source for our own mods (in `MyMods/`, one folder each): SHVDN C# scripts (solution `ModDevelopment.slnx`) and C++ `.asi` mods (solution `ModDevelopment.Cpp.slnx`, headers in `cpp/ShvSdk/`). See `ModDevelopment/README.md`. |
 | `ModDevelopment/docs/` | Modding guides (C#, C++, Lua, natives) and a generated reference of every callable API: SHVDN v2/v3, LemonUI, NativeUI, iFruitAddon2, all natives, Lua natives. Check it before using an API member or native. Regenerate with `dotnet run -c Release --project ModDevelopment/tools/ApiDocGen` after updating any library. |
 | `tools/rpf.ps1` | Read-only RPF viewer: `list` and `extract` for unencrypted archives and files (add-on packs, files replaced in `Mods/`). See `docs/mods_info/RPF_TOOLS.md`. |
+| `tools/check-system.ps1` | Read-only check that Windows has what the game, mods and modding need (DirectX June 2010, Visual C++ runtimes, .NET Framework 4.8, Media Foundation; `-Dev` adds the build tools). See `docs/mods_info/SYSTEM_REQUIREMENTS.md`. |
 | `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |
 | `scripts/` | SHVDN mods (`*.dll` plus their `.ini`/`.xml` configs, loose `.cs` scripts such as `FoSAShelter.3.cs`) and the Lua mod (`main.lua`, `keys.lua`, `utils.lua`, `libs/`, `addins/`). |
 | `scripts/addins/` | Lua addins that `main.lua` auto-loads. `exampleGUI.lua` is the GUI template (disabled by default, see docs/mods_info/LUA_MENU.md). |
@@ -50,7 +52,7 @@ GTA5.exe
 
 ### Installed SHVDN mods (scripts/)
 
-Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), ModGuide (built from `ModDevelopment/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
+Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), ModGuide (built from `ModDevelopment/MyMods/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 
@@ -94,7 +96,7 @@ Logs are gitignored. Their timestamps show when the game last ran.
 - Game updates usually break ScriptHookV until a matching release comes out. If the log shows a version error, tell the user to update ScriptHookV rather than trying to patch around it.
 - Lua mod: `scripts/main.lua` does `dofile` on `keys.lua` and `utils.lua`, loads `libs/`, then runs addins. New features go in as a new file in `scripts/addins/`, following `basemodule.lua`.
 - C# scripts: a loose `.cs` file in `scripts/` gets compiled by SHVDN at load time. Target SHVDN v3 (`using GTA;`, class extends `Script`). Use LemonUI for menus.
-- Compiled C# scripts live in `ModDevelopment/<Name>/` (Visual Studio 2026 solution `ModDevelopment/ModDevelopment.slnx`). `Directory.Build.props` there sets `net48` and references `ScriptHookVDotNet3.dll` and `scripts/LemonUI.SHVDN3.dll` (not copied); `Directory.Build.targets` copies the DLL and PDB into `scripts/` after each build. Create a new script with `powershell -ExecutionPolicy Bypass -File ModDevelopment/New-ModScript.ps1 -Name <Name>`, and build with `dotnet build -c Release ModDevelopment/ModDevelopment.slnx` (game must be closed). Full workflow: `ModDevelopment/README.md`. Never put project sources under `scripts/`, because SHVDN would try to compile the `.cs` files.
+- Our own mods live in `ModDevelopment/MyMods/<Name>/` (one folder per mod, listed in `ModDevelopment/MyMods/README.md`). Compiled C# scripts are built from there (Visual Studio 2026 solution `ModDevelopment/ModDevelopment.slnx`). `Directory.Build.props` there sets `net48` and references `ScriptHookVDotNet3.dll` and `scripts/LemonUI.SHVDN3.dll` (not copied); `Directory.Build.targets` copies the DLL and PDB into `scripts/` after each build. Create a new script with `powershell -ExecutionPolicy Bypass -File ModDevelopment/New-ModScript.ps1 -Name <Name>`, and build with `dotnet build -c Release ModDevelopment/ModDevelopment.slnx` (game must be closed). Full workflow: `ModDevelopment/README.md`. Never put project sources under `scripts/`, because SHVDN would try to compile the `.cs` files.
 - Native function names follow the NativeDB naming (`PAD.IS_CONTROL_JUST_PRESSED`, `ENTITY.*`, `VEHICLE.*`). Check the native exists for this game build before using it.
 - Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one. Every function key F2 to F12 is taken (MapEditor moved to F2 and the Mod Guide took F12 on 2026-10-09). The Mod Guide (`scripts/ModGuide.xml`) lists every mod and its controls in game: update it whenever a mod or keybind changes. F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it.
 - `docs/mods_info/` holds every doc about using the mods: `MODS.md` (each mod, how to activate it, keyboard and Xbox/PlayStation binds), `SETTINGS.md` (how to edit each mod's config), `HOTKEYS.md` (conflicts and keybind rules), `KEYCODES.md` and `LUA_MENU.md`. Update `SETTINGS.md` when a mod's config file or options change. Put new usage docs there, and record keybind changes in `MODS.md` and `HOTKEYS.md`.

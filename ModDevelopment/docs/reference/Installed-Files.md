@@ -31,7 +31,7 @@
 | `scripts/ImmersifyII.dll` | .NET | 2.5.0.0 | 0 | unreadable: nonstandard (likely obfuscated) metadata | 3.7.0 | World and NPC behaviour mod. No API |
 | `scripts/LemonUI.SHVDN3.dll` | .NET | 2.2.0.0 | 0 | ScriptHookVDotNet3 3.6.0.0 |  | Menu library for SHVDN v3. **Reference**: [LemonUI](LemonUI/README.md) |
 | `scripts/MapEditor.dll` | .NET | 1.0.0.0 | 0 | ScriptHookVDotNet 0.0.0.0, ClearScript 5.3.11.0, NativeUI 1.0.0.0 | 2.11.6 | Map editor. No API |
-| `scripts/ModGuide.dll` | .NET | 1.0.0.0 | 0 | ScriptHookVDotNet3 3.7.0.189, LemonUI.SHVDN3 2.2.0.0 |  | Our in-game mod guide. Source: `ModDevelopment/ModGuide/` |
+| `scripts/ModGuide.dll` | .NET | 1.0.0.0 | 0 | ScriptHookVDotNet3 3.7.0.189, LemonUI.SHVDN3 2.2.0.0 |  | Our in-game mod guide. Source: `ModDevelopment/MyMods/ModGuide/` |
 | `scripts/NativeUI.dll` | .NET | 1.9.0.0 | 0 | ScriptHookVDotNet2 2.10.9.0 | 2.11.6 | Menu library for SHVDN v2 (legacy). **Reference**: [NativeUI](NativeUI/README.md) |
 | `scripts/Stance.dll` | .NET | 1.0.0.0 | 0 | ScriptHookVDotNet 0.0.0.0 | 2.11.6 | Stance mod. No API |
 

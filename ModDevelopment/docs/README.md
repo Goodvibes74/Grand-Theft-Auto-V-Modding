@@ -2,7 +2,11 @@
 
 Everything you can call when writing your own GTA V mods in this install: what each library is, every function it offers, and how to use it. Start with the guides, and look things up in the reference.
 
+The mods we wrote ourselves are in [`../MyMods/`](../MyMods/README.md), each with its use case.
+
 ## Which library do I use?
+
+For what each dependency gives you, what it costs, and which installed mods use it, read [00 What each dependency is for](guides/00-Dependencies.md).
 
 | You want to... | Use | Language | Guide |
 | --- | --- | --- | --- |
@@ -19,6 +23,7 @@ All of them end up calling **native functions**: the 6,700 functions the game's 
 
 | Guide | What it covers |
 | --- | --- |
+| [00 What each dependency is for](guides/00-Dependencies.md) | Every library and plugin: what you need it for, what you get out of it, its limits, and who uses it. Start here. |
 | [01 Getting started](guides/01-Getting-Started.md) | How mods load, the languages to learn, Visual Studio setup, and the steps you have to do yourself. |
 | [02 SHVDN v3 scripting](guides/02-SHVDN3-Scripting.md) | Script lifecycle, events, the player, peds, vehicles, the world, settings files, drawing text, debugging. |
 | [03 Menus and UI](guides/03-Menus-and-UI.md) | Building menus with LemonUI, notifications, help text, phone contacts. |
@@ -27,6 +32,8 @@ All of them end up calling **native functions**: the 6,700 functions the game's 
 | [06 Lua plugin](guides/06-Lua.md) | What `LUA.asi` offers, how `main.lua` and addins work, writing an addin. |
 | [07 Legacy: SHVDN v2 and NativeUI](guides/07-Legacy-SHVDN2-NativeUI.md) | How the old API differs, so you can read older mods. |
 | [08 Manual steps](guides/08-Manual-Steps.md) | Checklist of everything that needs you: installs, downloads, testing in game. |
+| [Downloads](../../docs/mods_info/DOWNLOADS.md) | Where to get every dependency, library, mod and tool. |
+| [Linux](../../docs/mods_info/LINUX.md) | Playing with mods and developing mods on Linux (Proton/Wine). |
 
 ## Reference (every function)
 
@@ -62,6 +69,7 @@ Every generated page starts with a **Source** block naming the exact file it was
 | Lua plugin natives and functions | `LUA.asi` 1.0.0.1 | Printable strings in the binary | Names and namespaces exact. How arguments are passed is inferred from `scripts/libs/GUI.lua`, not confirmed |
 | Lua GUI library | `scripts/libs/GUI.lua`, `scripts/addins/exampleGUI.lua` | Read in full | Exact |
 | Which SHVDN API each mod runs on | `ScriptHookVDotNet.log` from the last game session | Parsed | Exact for that session |
+| Which plugins depend on ScriptHookV, and LUA.asi needing `MSVCR120.dll` | Import table of each `.asi` | `dumpbin /dependents` | Exact |
 | What each installed file is | File version fields, exports, references, plus hand-written notes in the generator | Scan | Facts exact; notes are our description |
 | C# examples in the guides | `ModDevelopment/Samples/` | Compiled against the installed DLLs | Compile, with no warnings. Not yet tested in game |
 
@@ -99,9 +107,10 @@ ModDevelopment/
 │  ├─ guides/            how-to guides, numbered
 │  └─ reference/         generated API reference (don't edit by hand)
 ├─ cpp/ShvSdk/           C++ headers and import library definition for ScriptHookV
-├─ HelloAsi/             C++ starter mod (.asi)
+├─ MyMods/               our own mods, one folder each (see MyMods/README.md)
+│  ├─ ModGuide/          the in-game mod guide (installed)
+│  └─ HelloAsi/          C++ starter mod (.asi)
 ├─ Samples/              C# examples used in the guides (compile-checked, not installed)
-├─ ModGuide/             the in-game mod guide (a real installed script)
 └─ tools/ApiDocGen/      generator for docs/reference and cpp/ShvSdk/include/natives.hpp
 ```
 

@@ -2,14 +2,15 @@
 
 Source code for the mods we write ourselves, and the documentation for writing them. C# scripts are ScriptHookVDotNet v3 projects (.NET Framework 4.8): building one copies its DLL into the game's `scripts/` folder, where SHVDN loads it. C++ mods build into `.asi` files.
 
-**New to modding? Start with [`docs/README.md`](docs/README.md):** guides for C#, C++ and Lua, and a reference of every function you can call.
+**New to modding? Start with [`docs/README.md`](docs/README.md):** guides for C#, C++ and Lua, what each dependency is for, and a reference of every function you can call.
 
-| Project | What it is | Docs |
+| Folder | What's in it | Docs |
 | --- | --- | --- |
-| `ModGuide` | In-game list of every installed mod and its controls (F12, or RB + D-pad Down). Installed. | [`ModGuide/README.md`](ModGuide/README.md) |
-| `Samples` | The C# examples from the guides. Built to check they compile, never installed. | [`docs/guides/`](docs/guides/) |
-| `HelloAsi` | C++ starter `.asi` mod. Not installed unless you copy it. | [`docs/guides/04-ScriptHookV-CPP.md`](docs/guides/04-ScriptHookV-CPP.md) |
-| `tools/ApiDocGen` | Generates `docs/reference/` and `cpp/ShvSdk/include/natives.hpp` from the installed libraries. | [`docs/README.md`](docs/README.md#updating-the-reference) |
+| `MyMods/` | **Our own mods**, one folder each: `ModGuide` (in-game mod list, installed) and `HelloAsi` (C++ starter). New mods go here | [`MyMods/README.md`](MyMods/README.md) |
+| `Samples/` | The C# examples from the guides. Built to check they compile, never installed | [`MyMods/README.md`](MyMods/README.md#examples-not-mods) |
+| `docs/` | Guides and the generated API reference | [`docs/README.md`](docs/README.md) |
+| `cpp/ShvSdk/` | ScriptHookV headers and build settings for C++ mods | [`docs/guides/04-ScriptHookV-CPP.md`](docs/guides/04-ScriptHookV-CPP.md) |
+| `tools/ApiDocGen/` | Generates `docs/reference/` and `cpp/ShvSdk/include/natives.hpp` from the installed libraries | [`docs/README.md`](docs/README.md#updating-the-reference) |
 
 ## What's in this folder
 
@@ -65,10 +66,10 @@ powershell -ExecutionPolicy Bypass -File ModDevelopment\New-ModScript.ps1 -Name 
 
 The name must start with a capital letter and use only letters and digits. The script creates:
 
-- `ModDevelopment/SpeedCamera/SpeedCamera.csproj`, added to the solution.
-- `ModDevelopment/SpeedCamera/SpeedCameraScript.cs`, a working starter: a LemonUI menu with one item, opened by the key in its ini.
-- `ModDevelopment/SpeedCamera/Properties/launchSettings.json`, so Ctrl+F5 starts the game.
-- `ModDevelopment/SpeedCamera/README.md`, to fill in.
+- `ModDevelopment/MyMods/SpeedCamera/SpeedCamera.csproj`, added to the solution.
+- `ModDevelopment/MyMods/SpeedCamera/SpeedCameraScript.cs`, a working starter: a LemonUI menu with one item, opened by the key in its ini.
+- `ModDevelopment/MyMods/SpeedCamera/Properties/launchSettings.json`, so Ctrl+F5 starts the game.
+- `ModDevelopment/MyMods/SpeedCamera/README.md`, to fill in.
 - `scripts/SpeedCamera.ini` with `MenuKey=None`, so the new script can't clash with another mod until you choose a key.
 
 If Visual Studio is open, it notices the solution changed and offers to reload it.
@@ -77,7 +78,7 @@ Then:
 
 1. Choose a key. Check `docs/mods_info/HOTKEYS.md` first: F2 to F12 are taken, and RB already starts five controller combos. Set it in `scripts/SpeedCamera.ini`.
 2. Write the script, build, and test in game.
-3. When it works, add it to `scripts/ModGuide.xml` (so it shows in the in-game guide), `docs/mods_info/MODS.md` and `docs/mods_info/HOTKEYS.md`, and fill in its README.
+3. When it works, add it to `MyMods/README.md`, `scripts/ModGuide.xml` (so it shows in the in-game guide), `docs/mods_info/MODS.md` and `docs/mods_info/HOTKEYS.md`, and fill in its README.
 
 ## Rules
 

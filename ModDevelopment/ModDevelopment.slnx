@@ -7,6 +7,6 @@
     <File Path="README.md" />
     <File Path="docs/README.md" />
   </Folder>
-  <Project Path="ModGuide/ModGuide.csproj" />
+  <Project Path="MyMods/ModGuide/ModGuide.csproj" />
   <Project Path="Samples/Samples.csproj" />
 </Solution>
