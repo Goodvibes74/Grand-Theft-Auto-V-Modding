@@ -1,38 +1,38 @@
 Menyoo Version: 2.4.4
 Game Version: Legacy b3717
 Date: 09/10/2026
-[14:11:13] INFO - Logging level 2 active. Edit loglevel in menyooconfig.ini to change.
-[14:11:13] INFO - Config loaded from D:\Games\Grand Theft Auto V Legacy\menyooStuff\menyooConfig.ini.
-[14:11:13] INFO - MODULEINFO: lpBaseofDll=00007FF6C3690000, SizeOfImage=67120640, EntryPoint=00007FF6C4F08FD8
-[14:11:13] INFO - Found InitVehicleArchetype at 140697823676966
-[14:11:14] INIT - GTAMemory Init Done
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_orange.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_orange.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_red.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_red.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink2.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_face.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handh.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handm.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_face.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handh.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handm.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxKeyboard.png
-[14:12:13] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxGamepad.png
-[14:12:13] INFO - Loaded cutscene names from D:\Games\Grand Theft Auto V Legacy\menyooStuff\CutsceneLabels.txt
-[14:12:13] INFO - Setting Global Variable 4520961 to true
-[14:12:52] WARNING - Gen9 Content found in dlcpacks, this can cause instability when attempted to be loaded by Menyoo.
+[16:49:54] INFO - Logging level 2 active. Edit loglevel in menyooconfig.ini to change.
+[16:49:54] INFO - Config loaded from D:\Games\Grand Theft Auto V Legacy\menyooStuff\menyooConfig.ini.
+[16:49:54] INFO - MODULEINFO: lpBaseofDll=00007FF7355B0000, SizeOfImage=67120640, EntryPoint=00007FF736E28FD8
+[16:49:54] INFO - Found InitVehicleArchetype at 140699735362086
+[16:49:55] INIT - GTAMemory Init Done
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_orange.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_orange.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\needle_red.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\night_needle_red.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink2.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_cyan.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_green.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_yellow.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_orange.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_purple.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Speedo\bg_pink.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_face.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handh.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Default_handm.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_face.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handh.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\Clock\Frameless_handm.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxKeyboard.png
+[16:50:56] INFO - [DX-HOOK] Loading texture: D:\Games\Grand Theft Auto V Legacy\menyooStuff\Graphics\teleportToWaypointBoxGamepad.png
+[16:50:57] INFO - Loaded cutscene names from D:\Games\Grand Theft Auto V Legacy\menyooStuff\CutsceneLabels.txt
+[16:50:57] INFO - Setting Global Variable 4520961 to true
+[16:51:24] WARNING - Gen9 Content found in dlcpacks, this can cause instability when attempted to be loaded by Menyoo.
 			You can find these in your dlclist.xml by searching for "g9" and removing these lines or using a comment.
 				    		For example: <!--<Item>dlcpacks:/mpg9ec/</Item>-->
 
