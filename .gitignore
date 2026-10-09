@@ -67,10 +67,10 @@ OpenIV.log
 Thumbs.db
 
 # IDE specific (Visual Studio, VS Code, JetBrains)
-/.vs/
+.vs/
 /.vscode/
 /*.suo
-/*.user
+*.user
 /*.sln
 bin/
 obj/

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Content of the in-game Mod Guide (scripts/ModGuide.dll). Edit freely, the script reads this file at startup.
+  Each <Mod> becomes one entry in the menu:
+    <Description>  what the mod does
+    <Activate>     how to turn it on or open it (optional)
+    <Config>       its settings file (optional)
+    <Control>      one line per key or button; any attribute left out shows as "none"; note is optional
+  Keep this in sync with docs/mods_info/MODS.md. Don't use the ~ character: GTA reads it as a formatting code.
+-->
+<ModGuide>
+
+  <Mod name="Mod Guide">
+    <Description>This menu. Lists every installed mod, what it does and how to use it.</Description>
+    <Activate>Press the key below. Choose a mod, then move over each line to read it.</Activate>
+    <Config>scripts/ModGuide.ini (keys), scripts/ModGuide.xml (this list)</Config>
+    <Control action="Open or close" keyboard="F12" xbox="RB + D-pad Down" playstation="R1 + D-pad Down" note="Controller: hold the first button, then press the second." />
+    <Control action="Back" keyboard="Backspace" xbox="B" playstation="Circle" />
+  </Mod>
+
+  <Mod name="TrainerV">
+    <Description>Trainer with player, vehicle, weapon, world and teleport options, and spawning.</Description>
+    <Activate>On from game start. Open the menu with the key below.</Activate>
+    <Config>trainerv.ini</Config>
+    <Control action="Open menu" keyboard="F3" xbox="RB + X" playstation="R1 + Square" />
+    <Control action="Move up / down" keyboard="Numpad 8 / 2" xbox="D-pad Up / Down" playstation="D-pad Up / Down" />
+    <Control action="Change value" keyboard="Numpad 4 / 6" xbox="D-pad Left / Right" playstation="D-pad Left / Right" />
+    <Control action="Select" keyboard="Numpad 5" xbox="A" playstation="Cross" />
+    <Control action="Back" keyboard="Numpad 0" xbox="B" playstation="Circle" />
+    <Control action="Close" keyboard="Backspace" xbox="B" playstation="Circle" />
+    <Control action="Air break (fly)" keyboard="G + 6" xbox="RB + LS click" playstation="R1 + L3" note="Keyboard: then W / S up and down, Numpad 8 / 2 / 4 / 6 to move." />
+  </Mod>
+
+  <Mod name="TrainerV hotkeys">
+    <Description>Shortcuts that work without opening TrainerV. Keyboard only. Two keys: hold the first, press the second.</Description>
+    <Config>trainerv.ini [KeyBindings]</Config>
+    <Control action="Teleport to waypoint" keyboard="F10 or Delete" />
+    <Control action="Teleport to marker" keyboard="=" />
+    <Control action="God mode on" keyboard="Right Ctrl + F5" />
+    <Control action="Fix, flip, wash car" keyboard="Right Ctrl" />
+    <Control action="Clear wanted level" keyboard="Insert" />
+    <Control action="Spawn saved car 1 to 12" keyboard="Left Alt + letter" note="Letters: A B C D E F G M N T U X. Left Alt + R spawns a random car." />
+    <Control action="Cruise control" keyboard="G + 7" />
+    <Control action="Vehicle god mode" keyboard="G + 9" />
+    <Control action="Speed up / stop" keyboard="Numpad 9 / 3" />
+    <Control action="Indicators left / right" keyboard="K / L" />
+    <Control action="Hazard lights" keyboard="J + Numpad 7" />
+    <Control action="Wanted level up / down" keyboard="J + Numpad 8 / 9" />
+    <Control action="Next song" keyboard="N" />
+    <Control action="Open car doors" keyboard="I" />
+    <Control action="Walk through door" keyboard="'" />
+    <Control action="Sit" keyboard="L + Numpad 0" />
+  </Mod>
+
+  <Mod name="Menyoo">
+    <Description>Large trainer: spawn vehicles and peds, outfits, animations, weather, time, and the object spooner.</Description>
+    <Activate>Always loaded. Open the menu with the key below.</Activate>
+    <Config>menyooStuff/menyooConfig.ini</Config>
+    <Control action="Open menu" keyboard="F8" xbox="RB + D-pad Left" playstation="R1 + D-pad Left" />
+    <Control action="Spooner (place objects)" keyboard="F9" xbox="RB + D-pad Right" playstation="R1 + D-pad Right" />
+    <Control action="Free camera" keyboard="F6" xbox="X + LS click" playstation="Square + L3" />
+    <Control action="Stop animation" keyboard="Home" />
+    <Control action="Manual respawn" keyboard="C" xbox="RS click" playstation="R3" note="Only when manual respawn is turned on in Menyoo." />
+  </Mod>
+
+  <Mod name="Better Chases+">
+    <Description>Realistic police chases: chases escalate in phases, police need permission to PIT or shoot, and escaping leaves an arrest warrant.</Description>
+    <Activate>Works on its own when police chase you. The key below opens its settings.</Activate>
+    <Config>scripts/BetterChasesConfig.xml</Config>
+    <Control action="Settings menu" keyboard="F7" />
+    <Control action="Surrender" keyboard="E" xbox="RB (cover)" playstation="R1 (cover)" note="Only during a chase." />
+  </Mod>
+
+  <Mod name="MapEditor">
+    <Description>Place and save props, peds and vehicles to build your own maps.</Description>
+    <Activate>Press the key below. Controller buttons are shown on screen while it's open.</Activate>
+    <Config>scripts/MapEditor.xml</Config>
+    <Control action="Open editor" keyboard="F2" xbox="see on-screen hints" playstation="see on-screen hints" />
+  </Mod>
+
+  <Mod name="Stance">
+    <Description>Switches your character into a combat stance.</Description>
+    <Activate>Press the key below on foot.</Activate>
+    <Config>scripts/Stance.ini</Config>
+    <Control action="Toggle stance" keyboard="Y" xbox="LS click (stealth)" playstation="L3 (stealth)" note="Controller button not yet checked in game." />
+  </Mod>
+
+  <Mod name="ImmersifyII">
+    <Description>Living world: gangs with territories, dynamic events (robberies, gang wars, chases), smarter enemies with morale, security cameras and police scenarios.</Description>
+    <Activate>Always on. Interaction prompts and their buttons appear on screen near NPCs.</Activate>
+    <Config>scripts/ImmersifyII.ini</Config>
+  </Mod>
+
+  <Mod name="Cop_Arrest">
+    <Description>Lets you arrest people as police.</Description>
+    <Activate>Its key is fixed inside the mod and isn't known. Check the mod's original readme or try it in game.</Activate>
+  </Mod>
+
+  <Mod name="Disarm">
+    <Description>Lets you disarm armed NPCs.</Description>
+    <Activate>Its key is fixed inside the mod and isn't known.</Activate>
+  </Mod>
+
+  <Mod name="FoSAShelter">
+    <Description>Makes the shelter enterable: walk in and you're teleported inside.</Description>
+    <Activate>Walk on foot into the shelter entrance near -489.7, 2233.7, 149.5. Walk into the exit zone inside to leave.</Activate>
+    <Config>scripts/FoSAShelter.3.cs (no settings file)</Config>
+  </Mod>
+
+  <Mod name="iFruitAddon2">
+    <Description>Adds extra contacts from other mods to your phone.</Description>
+    <Activate>Open the phone and go to Contacts.</Activate>
+    <Config>scripts/iFruitAddon2/config.ini</Config>
+    <Control action="Open phone" keyboard="Up arrow" xbox="D-pad Up" playstation="D-pad Up" />
+  </Mod>
+
+  <Mod name="SHVDN console">
+    <Description>ScriptHookVDotNet console. Shows script errors and runs commands such as Reload().</Description>
+    <Activate>Press the key below. Type Reload() to reload all .NET scripts after editing their settings.</Activate>
+    <Config>ScriptHookVDotNet.ini</Config>
+    <Control action="Open console" keyboard="F4" />
+  </Mod>
+
+  <Mod name="NoEditorRestrictions">
+    <Description>Removes Rockstar Editor limits: the free camera goes through walls and moves anywhere.</Description>
+    <Activate>Works on its own inside the Rockstar Editor.</Activate>
+    <Config>NoEditorRestrictions.ini</Config>
+    <Control action="Streaming focus on camera" keyboard="F9" note="Only inside the Rockstar Editor." />
+  </Mod>
+
+  <Mod name="Lua GUI menu">
+    <Description>Small custom Lua menu (example addin).</Description>
+    <Activate>Off by default. To turn it on, see docs/mods_info/LUA_MENU.md.</Activate>
+    <Config>scripts/libs/GUI.lua, scripts/addins/exampleGUI.lua</Config>
+    <Control action="Open" keyboard="Enter + E + Left Ctrl" xbox="A + RB + RS click" playstation="Cross + R1 + R3" />
+    <Control action="Close" keyboard="Backspace + Q + Page Down" xbox="B + LB + LT" playstation="Circle + L1 + L2" />
+    <Control action="Move up / down" keyboard="Numpad 8 / 2" xbox="D-pad Up / Down" playstation="D-pad Up / Down" />
+    <Control action="Select" keyboard="Space" xbox="A" playstation="Cross" />
+  </Mod>
+
+  <Mod name="openCameraV">
+    <Description>Camera mod.</Description>
+    <Activate>No keybind or settings file found. Log: openCameraV.log.</Activate>
+  </Mod>
+
+  <Mod name="Add-on vehicles">
+    <Description>Gxetron (gxetron) and Lamborghini Urus (urus2018).</Description>
+    <Activate>Menyoo, Vehicle Spawner, Added Models. Or spawn by model name in TrainerV.</Activate>
+    <Config>menyooStuff/AddedVehicleModels.xml</Config>
+  </Mod>
+
+  <Mod name="Saved Menyoo items">
+    <Description>Ghost Rider bike (three versions), Lamborghini Urus, and the Ghost Rider outfit.</Description>
+    <Activate>Vehicles: Menyoo, Vehicle Spawner, Saved Files. Outfit: Menyoo wardrobe, saved outfits.</Activate>
+    <Config>menyooStuff/Vehicle/, menyooStuff/Outfit/</Config>
+  </Mod>
+
+  <Mod name="Map and graphics packs">
+    <Description>forest_n and forest_s add forests to the map. vremastered improves world visuals.</Description>
+    <Activate>Always on.</Activate>
+  </Mod>
+
+  <Mod name="Background mods">
+    <Description>OpenIV.asi (loads the Mods folder), HeapAdjuster, PackfileLimitAdjuster, WeaponLimitsAdjuster, DecalsLimit-Patch (raise game limits), and the LemonUI, NativeUI and ClearScript libraries.</Description>
+    <Activate>Always on. Nothing to press.</Activate>
+    <Config>See docs/mods_info/SETTINGS.md, sections 13 and 15.</Config>
+  </Mod>
+
+</ModGuide>

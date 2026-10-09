@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Mod Guide: in-game menu listing every installed mod, what it does and how to
+    activate it on keyboard, Xbox and PlayStation.
+    Shared settings (target framework, SHVDN and LemonUI references, copy into scripts\)
+    come from ..\Directory.Build.props and ..\Directory.Build.targets.
+  -->
+
+  <ItemGroup>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+
+</Project>

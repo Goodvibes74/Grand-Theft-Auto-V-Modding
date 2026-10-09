@@ -36,6 +36,7 @@ GTA5.exe
 | `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`, plus add-on packs in `update/x64/dlcpacks/`. **Edit RPFs here, never the originals in root or `update/`.** |
 | `Mods/MANIFEST.md` | Size and SHA-256 of every file in `Mods/`. This is how RPF changes get tracked, since the RPFs themselves stay out of git. |
 | `tools/update-mods-manifest.sh` | Regenerates `Mods/MANIFEST.md` (`bash tools/update-mods-manifest.sh`, about 20 seconds). |
+| `ModDevelopment/` | Source for our own SHVDN C# scripts (one project per folder, Visual Studio 2026 solution `ModDevelopment.slnx`). See `ModDevelopment/README.md`. |
 | `tools/rpf.ps1` | Read-only RPF viewer: `list` and `extract` for unencrypted archives and files (add-on packs, files replaced in `Mods/`). See `docs/mods_info/RPF_TOOLS.md`. |
 | `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |
 | `scripts/` | SHVDN mods (`*.dll` plus their `.ini`/`.xml` configs, loose `.cs` scripts such as `FoSAShelter.3.cs`) and the Lua mod (`main.lua`, `keys.lua`, `utils.lua`, `libs/`, `addins/`). |
@@ -48,7 +49,7 @@ GTA5.exe
 
 ### Installed SHVDN mods (scripts/)
 
-Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
+Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), ModGuide (built from `ModDevelopment/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 
@@ -90,7 +91,8 @@ Logs are gitignored. Their timestamps show when the game last ran.
 - Game updates usually break ScriptHookV until a matching release comes out. If the log shows a version error, tell the user to update ScriptHookV rather than trying to patch around it.
 - Lua mod: `scripts/main.lua` does `dofile` on `keys.lua` and `utils.lua`, loads `libs/`, then runs addins. New features go in as a new file in `scripts/addins/`, following `basemodule.lua`.
 - C# scripts: a loose `.cs` file in `scripts/` gets compiled by SHVDN at load time. Target SHVDN v3 (`using GTA;`, class extends `Script`). Use LemonUI for menus.
+- Compiled C# scripts live in `ModDevelopment/<Name>/` (Visual Studio 2026 solution `ModDevelopment/ModDevelopment.slnx`). `Directory.Build.props` there sets `net48` and references `ScriptHookVDotNet3.dll` and `scripts/LemonUI.SHVDN3.dll` (not copied); `Directory.Build.targets` copies the DLL and PDB into `scripts/` after each build. Create a new script with `powershell -ExecutionPolicy Bypass -File ModDevelopment/New-ModScript.ps1 -Name <Name>`, and build with `dotnet build -c Release ModDevelopment/ModDevelopment.slnx` (game must be closed). Full workflow: `ModDevelopment/README.md`. Never put project sources under `scripts/`, because SHVDN would try to compile the `.cs` files.
 - Native function names follow the NativeDB naming (`PAD.IS_CONTROL_JUST_PRESSED`, `ENTITY.*`, `VEHICLE.*`). Check the native exists for this game build before using it.
-- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one. Every function key F2 to F11 is taken (MapEditor moved to F2 on 2026-10-09). F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it.
+- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one. Every function key F2 to F12 is taken (MapEditor moved to F2 and the Mod Guide took F12 on 2026-10-09). The Mod Guide (`scripts/ModGuide.xml`) lists every mod and its controls in game: update it whenever a mod or keybind changes. F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it.
 - `docs/mods_info/` holds every doc about using the mods: `MODS.md` (each mod, how to activate it, keyboard and Xbox/PlayStation binds), `SETTINGS.md` (how to edit each mod's config), `HOTKEYS.md` (conflicts and keybind rules), `KEYCODES.md` and `LUA_MENU.md`. Update `SETTINGS.md` when a mod's config file or options change. Put new usage docs there, and record keybind changes in `MODS.md` and `HOTKEYS.md`.
 - Single player only. Never suggest using mods in GTA Online, because doing so gets the account banned.

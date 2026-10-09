@@ -180,7 +180,7 @@ Text after `//` on a line is a comment, so `PROCESSED_NPC_LIMIT=15   // ...` is 
 
 | Tag | Current | What it does |
 | --- | --- | --- |
-| `<ActivationKey>` | `F2` | Opens the editor. Every key F2 to F11 is taken, so check `HOTKEYS.md` before changing it. |
+| `<ActivationKey>` | `F2` | Opens the editor. Every key F2 to F12 is taken, so check `HOTKEYS.md` before changing it. |
 | `<Translation>` | `Auto` | Menu language. Matches a file in `scripts/MapEditor/` (`French`, `German`, ...) or `Auto`. |
 | `<Gamepad>` | `true` | Controller support. |
 | `<CrosshairType>` | `Crosshair` | Cursor style. |
@@ -400,3 +400,4 @@ To add an add-on model, append a line with its model name and hash. The hash is 
 | Heap / Packfile / Weapon limits | `HeapAdjuster.ini`, `PackfileLimitAdjuster.ini`, `WeaponLimitsAdjuster.ini` | INI | No |
 | Decal and streamer limits | `fwBoxStreamerVariable_DecalsLimit-Patch.toml` | TOML | No |
 | Model lists | `scripts/VehicleList.ini`, `PedList.ini`, `ObjectList.ini` | INI | No |
+| Mod Guide | `scripts/ModGuide.ini` (keys), `scripts/ModGuide.xml` (the mod list: one `<Mod>` per entry, one `<Control>` per key) | INI (`;`), XML | No. Edit with the game closed or use `Reload()` in the F4 console. Source in `ModDevelopment/ModGuide/`. |

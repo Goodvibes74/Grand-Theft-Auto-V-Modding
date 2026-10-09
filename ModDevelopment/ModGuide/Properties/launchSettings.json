@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GTA V (BattlEye off)": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Games\\Grand Theft Auto V Legacy\\PlayGTAV.exe",
+      "commandLineArgs": "-nobattleye",
+      "workingDirectory": "D:\\Games\\Grand Theft Auto V Legacy"
+    }
+  }
+}

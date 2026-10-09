@@ -24,6 +24,7 @@ Every installed mod and how to turn it on or open it in game, with keyboard, Xbo
 | MapEditor | Open the map editor. Gamepad support is on. | F2 | see in-game hints | see in-game hints | `scripts/MapEditor.xml` `<ActivationKey>` |
 | Stance | Toggle the stance pose. `overrideStealthButton=true` also puts it on the stealth button. | Y | LS click (stealth) | L3 (stealth) | `scripts/Stance.ini` `stanceKey` |
 | SHVDN console | Open the .NET script console for live errors. | F4 | none | none | `ScriptHookVDotNet.ini` `ConsoleKeyBinding` |
+| Mod Guide | In-game list of every mod, what it does and its keyboard, Xbox and PlayStation controls. Choose a mod, then move over each line to read it. | F12 | RB + D-pad Down | R1 + D-pad Down | `scripts/ModGuide.ini` (keys), `scripts/ModGuide.xml` (content) |
 | Lua GUI (`exampleGUI.lua`) | **Disabled by default.** Enable it as described in [`LUA_MENU.md`](LUA_MENU.md). | Numpad 8 / 2 to move, Space to select | A + RB + RS to open, B + LB + LT to close | Cross + R1 + R3 to open, Circle + L1 + L2 to close | `scripts/libs/GUI.lua` |
 | NoEditorRestrictions | Works on its own in the Rockstar Editor. The key toggles "streaming focus on camera". | F9 | none | none | `NoEditorRestrictions.ini` |
 

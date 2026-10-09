@@ -1,0 +1,39 @@
+<Project>
+
+  <!--
+    Shared settings for every script project in ModDevelopment/.
+    MSBuild and Visual Studio import this file automatically, so each project's .csproj
+    only needs what is special about that project.
+  -->
+
+  <PropertyGroup>
+    <!-- ScriptHookVDotNet v3 loads .NET Framework 4.8 assemblies. -->
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <DebugType>portable</DebugType>
+
+    <!-- Game root (one level up), and the folder SHVDN loads scripts from. -->
+    <GameDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))</GameDir>
+    <GameScriptsDir>$(GameDir)scripts\</GameScriptsDir>
+
+    <!-- Set to false in a project that shouldn't be copied into scripts\ (a shared library, a test). -->
+    <CopyToGameScripts Condition="'$(CopyToGameScripts)' == ''">true</CopyToGameScripts>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Supplied by the game install at runtime, so never copied to the output. -->
+    <Reference Include="ScriptHookVDotNet3">
+      <HintPath>$(GameDir)ScriptHookVDotNet3.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LemonUI.SHVDN3">
+      <HintPath>$(GameScriptsDir)LemonUI.SHVDN3.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+</Project>

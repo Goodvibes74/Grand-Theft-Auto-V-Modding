@@ -5,7 +5,7 @@ Which keys clash between mods, what was fixed, and the rules for giving a mod a 
 ## Rules for a new keybind
 
 1. Check [`MODS.md`](MODS.md) section 1 and the open conflicts below before you pick a key.
-2. Every function key from F2 to F11 is taken. F2, Y and Home were the last free picks (2026-10-09).
+2. Every function key from F2 to F12 is taken. F2, Y and Home were picked on 2026-10-09, and F12 went to the Mod Guide the same day.
 3. On controller, TrainerV, Menyoo and the Spooner all start with RB / R1. Give a new combo a different second button.
 4. After the change, update [`MODS.md`](MODS.md) and this file.
 
@@ -49,11 +49,11 @@ These are mostly TrainerV clashing with itself. They're left as they are because
 | Low | F9 | Menyoo Spooner and NoEditorRestrictions | Only inside the Rockstar Editor. |
 | Low | E | Better Chases+ surrender and the game's E | Intended: E surrenders only during a chase. |
 | Low | Numpad 8 / 2, Space | Lua GUI, TrainerV menu and airbreak, the game's Space | Only if the Lua GUI is enabled (off by default) and open along with TrainerV. |
-| Low | RB / R1 combos | TrainerV (+ X / Square), TrainerV airbreak (+ LS / L3), Menyoo (+ D-pad Left), Spooner (+ D-pad Right) | Fine while the second buttons differ. TrainerV menu navigation uses the D-pad, so holding RB while moving in TrainerV can open Menyoo. |
+| Low | RB / R1 combos | TrainerV (+ X / Square), TrainerV airbreak (+ LS / L3), Menyoo (+ D-pad Left), Spooner (+ D-pad Right), Mod Guide (+ D-pad Down) | Fine while the second buttons differ. TrainerV menu navigation uses the D-pad, so holding RB while moving in TrainerV can open Menyoo. |
 
 ### Check in game
 
-- **New keys:** F2, Y and Home aren't used by any other mod. Check that they don't collide with your own GTA key settings (Settings, Keyboard / Mouse, Key Bindings). This matters most if you've bound Rockstar Editor actions to F2.
+- **New keys:** F2, Y, Home and F12 aren't used by any other mod. Check that they don't collide with your own GTA key settings (Settings, Keyboard / Mouse, Key Bindings). This matters most if you've bound Rockstar Editor actions to F2. Also check that F12 doesn't take a Steam screenshot or open an overlay.
 - **Lua GUI controller IDs (fixed 2026-10-09):** `scripts/libs/GUI.lua` had wrong control IDs (Up and Down swapped, R3 was really LB, LT was really RB), required all three combo buttons to go down in the same frame, and only looked for the `PAD` native namespace while LUA.asi uses `CONTROLS`. All three are fixed. The combos now use the `INPUT_FRONTEND_*` IDs, so on keyboard Enter + E + Left Ctrl also opens the menu and Backspace + Q + Page Down closes it.
 - **F4:** SHVDN console. TrainerV's `HideMenuKey=115` (F4) is commented out in `trainerv.ini`. Leave it commented out.
 

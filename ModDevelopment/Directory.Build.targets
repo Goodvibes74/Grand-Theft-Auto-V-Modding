@@ -1,0 +1,12 @@
+<Project>
+
+  <!--
+    After every build, copy the script and its .pdb into the game's scripts\ folder so SHVDN loads it.
+    The copy fails while the game is running, because Windows locks a loaded DLL. Close the game first.
+  -->
+  <Target Name="CopyToGameScripts" AfterTargets="Build" Condition="'$(CopyToGameScripts)' == 'true'">
+    <Copy SourceFiles="$(TargetPath);$(TargetDir)$(TargetName).pdb" DestinationFolder="$(GameScriptsDir)" />
+    <Message Importance="high" Text="$(TargetName) copied to $(GameScriptsDir)" />
+  </Target>
+
+</Project>

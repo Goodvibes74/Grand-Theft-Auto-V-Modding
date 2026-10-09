@@ -33,5 +33,6 @@ Installing, updating and removing mods is covered in the main [`README.md`](../.
 | Better Chases+ menu | F7 | none | none |
 | Stance | Y | none | none |
 | SHVDN console | F4 | none | none |
+| Mod Guide (in-game list of all this) | F12 | RB + D-pad Down | R1 + D-pad Down |
 
 The full list is in [`MODS.md`](MODS.md).
