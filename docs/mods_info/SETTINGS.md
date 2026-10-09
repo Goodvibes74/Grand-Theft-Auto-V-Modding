@@ -86,13 +86,13 @@ Changes how police chases escalate, how many units respond, and what counts as a
 | Tag | Current | What it does |
 | --- | --- | --- |
 | `<Enabled>` | `true` | Master switch for the chase features. |
-| `<WantedLevelControl>` | `Full` | How much the mod takes over the wanted level from the game. |
+| `<WantedLevelControl>` | `Passive` | How much the mod takes over the wanted level from the game. `Passive` leaves the stars to RDE's SixStarResponse, which needs to raise them past 5. `Full` makes Better Chases+ set them itself. |
 | `<CopsManageTraffic>` | `true` | Police clear traffic during chases. |
 | `<WreckedCopsStopChasing>` | `true` | Units with a wrecked car drop out. |
 | `<DisallowCopCommandeering>` | `true` | Cops can't steal civilian cars to keep chasing. |
 | `<RequirePITAuthorization>` | `true` | Cops only PIT you once a phase or crime authorises it. |
 | `<RequireLethalForceAuthorization>` | `true` | Cops only shoot once a phase or crime authorises it. |
-| `<AllowBustOpportunity>` | `true` | Gives you a chance to be arrested instead of killed. |
+| `<AllowBustOpportunity>` | `false` | Gives you a chance to be arrested instead of killed. Off because RDE handles busts (`EnableCopArrestsAboveOneStar` in `combat_tweaks.ini`); turning both on gives double bust prompts. |
 | `<ShowHUD>`, `<ShowNotifications>`, `<ShowBigMessages>` | `true` | On-screen feedback. |
 | `<IconOffsetX>`, `<IconOffsetY>` | `0` | Move the HUD icon if it overlaps another mod's HUD. |
 
@@ -100,13 +100,13 @@ Changes how police chases escalate, how many units respond, and what counts as a
 
 - `Enabled`: use this phase.
 - `Length`: how long the phase lasts before escalating (30 for all four).
-- `WantedLevel`: stars set when the phase starts (`0` keeps the current level; `PhaseFour` sets 3).
+- `WantedLevel`: stars set when the phase starts (`0` keeps the current level). All four phases use `0` so they never override RDE's stars.
 - `PITAuthorized`, `LethalForceAuthorized`: unlocks PIT manoeuvres or shooting in this phase.
 - `RequestBackup`: more units get called.
 
 To make chases calmer, raise `Length` or set `PhaseFour` `PITAuthorized` to `false`. To make them harsher, authorise force in earlier phases.
 
-**`<CopDispatch>`**: units per wanted level (`OneStar` to `FiveStar`).
+**`<CopDispatch>`**: units per wanted level (`OneStar` to `FiveStar`). **Disabled** (`<Enabled>false</Enabled>` at the end of the block) because RDE's SixStarResponse spawns all police units; with both on, cops spawn twice and despawn each other. Leave it off while RDE is installed.
 
 - `GroundMin` / `GroundMax`: range of ground units.
 - `AirMin`: minimum helicopters.

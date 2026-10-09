@@ -29,7 +29,7 @@
       <PhaseFour>
         <Enabled>true</Enabled>
         <Length>30</Length>
-        <WantedLevel>3</WantedLevel>
+        <WantedLevel>0</WantedLevel>
         <PITAuthorized>true</PITAuthorized>
         <LethalForceAuthorized>false</LethalForceAuthorized>
         <RequestBackup>false</RequestBackup>
@@ -72,7 +72,7 @@
         <PITAuthorized>true</PITAuthorized>
         <LethalForceAuthorized>true</LethalForceAuthorized>
       </FiveStar>
-      <Enabled>true</Enabled>
+      <Enabled>false</Enabled>
     </CopDispatch>
     <Crimes>
       <GTA>
@@ -187,13 +187,13 @@
       </PoliceMurder>
     </Crimes>
     <Enabled>true</Enabled>
-    <WantedLevelControl>Full</WantedLevelControl>
+    <WantedLevelControl>Passive</WantedLevelControl>
     <CopsManageTraffic>true</CopsManageTraffic>
     <WreckedCopsStopChasing>true</WreckedCopsStopChasing>
     <DisallowCopCommandeering>true</DisallowCopCommandeering>
     <RequirePITAuthorization>true</RequirePITAuthorization>
     <RequireLethalForceAuthorization>true</RequireLethalForceAuthorization>
-    <AllowBustOpportunity>true</AllowBustOpportunity>
+    <AllowBustOpportunity>false</AllowBustOpportunity>
     <ShowHUD>true</ShowHUD>
     <ShowNotifications>true</ShowNotifications>
     <ShowBigMessages>true</ShowBigMessages>
