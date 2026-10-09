@@ -95,7 +95,7 @@ GTA5.exe
 | --- | --- |
 | `menyooStuff/Vehicle/` | Saved Menyoo vehicles: Ghost Rider (three variants) and the Lamborghini Urus. |
 | `menyooStuff/Outfit/GhostRider.xml` | Ghost Rider outfit. |
-| `xinput1_4.dll` | Not a vanilla file. Probably a controller mod. **Still unidentified.** |
+| `xinput1_4.dll` | ASI loader for GTA V **Enhanced** (its version info says "GTA V ENHANCED Asi loader"). Inactive in this Legacy install: `asiloader.log` only shows `dinput8.dll` loading. A harmless leftover. |
 
 ---
 

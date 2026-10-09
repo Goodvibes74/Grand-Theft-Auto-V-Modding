@@ -1,0 +1,1095 @@
+# GTA.Math (ScriptHookVDotNet v3)
+
+[Back to the ScriptHookVDotNet v3 index](README.md)
+
+> **Source:** `ScriptHookVDotNet3.dll` (file version 3.7.0.189, assembly version 3.7.0.189, 1,435,136 bytes, modified 2026-08-05, SHA-256 `0f2b8d30ebe79edd74cf364df3943afb7e6305d7453bc687503dcc7411ed5648`)  
+> **Method:** public and protected types and members read from the assembly's .NET metadata with `System.Reflection.MetadataLoadContext` (the code is not run or decompiled), by `ModDevelopment/tools/ApiDocGen`.  
+> **Descriptions:** `ScriptHookVDotNet3.xml` from the NuGet package `scripthookvdotnet3` 3.6.0 (nuget.org). The installed DLL is 3.7.0.189, so members added after 3.6.0 have no description.
+
+## Matrix
+
+struct `GTA.Math.Matrix` : `IEquatable<Matrix>`, `IFormattable`
+
+Defines a 4x4 matrix.
+
+### Constructors
+
+- `public Matrix(Vector4 col0, Vector4 col1, Vector4 col2, Vector4 col3)`
+  - Initializes a new instance of the `Matrix` structure.
+  - `values`: The values to assign to the components of the matrix. This must be an array with sixteen elements.
+- `public Matrix(float[] values)`
+  - Initializes a new instance of the `Matrix` structure.
+  - `values`: The values to assign to the components of the matrix. This must be an array with sixteen elements.
+
+### Properties
+
+- `public bool HasInverse { get; }`
+  - Gets a value indicating whether this instance has an inverse matrix.
+- `public bool IsIdentity { get; }`
+  - Gets a value indicating whether this instance is an identity matrix.
+- `public float this[int row, int column] { get; set; }`
+  - Gets or sets the component at the specified index.
+  - `row`: The row of the matrix to access.
+  - `column`: The column of the matrix to access.
+  - Returns: The value of the component at the specified index.
+- `public float this[int index] { get; set; }`
+  - Gets or sets the component at the specified index.
+  - `index`: The zero-based index of the component to access.
+  - Returns: The value of the component at the specified index.
+- `public static Matrix Identity { get; }`
+  - The identity `Matrix`.
+- `public static Matrix Zero { get; }`
+  - A `Matrix` with all of its components set to zero.
+
+### Methods
+
+- `public Matrix ApplyScale(Vector3 scale)`
+- `public Matrix ApplyScale(float scale)`
+- `public float Determinant()`
+  - Calculates the determinant of the matrix.
+  - Returns: The determinant of the matrix.
+- `public bool Equals(Matrix other)`
+  - Returns a value that indicates whether the current instance is equal to the specified object.
+  - `other`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual bool Equals(object obj)`
+  - Returns a value that indicates whether the current instance is equal to a specified object.
+  - `obj`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public Matrix FastInverse()`
+- `public void FastInvert()`
+- `public virtual int GetHashCode()`
+  - Returns the hash code for this instance.
+  - Returns: A 32-bit signed integer hash code.
+- `public Matrix GetMatrixWithoutScale()`
+- `public Matrix GetMatrixWithoutScale(float tolerance)`
+- `public Vector3 GetOrigin()`
+- `public Vector3 GetScaleVector()`
+- `public Vector3 GetScaleVector(float tolerance)`
+- `public Matrix Inverse()`
+- `public Vector3 InverseTransformDirection(Vector3 direction)`
+- `public Vector3 InverseTransformPoint(Vector3 point)`
+  - Calculates the position of a point before this transformation matrix gets applied
+  - `point`: The transformed vertex location
+  - Returns: The original vertex location before being transformed by the given `Matrix`
+- `public Vector3 InverseTransformVector(Vector3 vector)`
+- `public void Invert()`
+  - Inverts the matrix.
+- `public void RemoveScaling()`
+- `public void RemoveScaling(float tolerance)`
+- `public Matrix RemoveTranslation()`
+- `public void SetOrigin(Vector3 newOrigin)`
+- `public float[] ToArray()`
+  - Converts the matrix to an array of floats.
+- `public virtual string ToString()`
+  - Converts the value of the object to its equivalent string representation.
+  - Returns: The string representation of the value of this instance.
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+  - Converts the value of the object to its equivalent string representation.
+  - `format`: The format.
+  - Returns: The string representation of the value of this instance.
+- `public Vector3 TransformDirection(Vector3 direction)`
+- `public Vector3 TransformPoint(Vector3 point)`
+  - Apply the transformation matrix to a point in world space
+  - `point`: The original vertex location
+  - Returns: The vertex location transformed by the given `Matrix`
+- `public Vector3 TransformVector(Vector3 vector)`
+- `public static Matrix Add(Matrix left, Matrix right)`
+  - Determines the sum of two matrices.
+  - `left`: The first matrix to add.
+  - `right`: The second matrix to add.
+  - Returns: The sum of the two matrices.
+- `public static Matrix Divide(Matrix left, Matrix right)`
+  - Determines the quotient of two matrices.
+  - `left`: The first matrix to divide.
+  - `right`: The second matrix to divide.
+  - Returns: The quotient of the two matrices.
+- `public static Matrix Divide(Matrix left, float right)`
+  - Scales a matrix by the given value.
+  - `left`: The matrix to scale.
+  - `right`: The amount by which to scale.
+  - Returns: The scaled matrix.
+- `public static Matrix Invert(Matrix matrix)`
+  - Calculates the inverse of a matrix if it exists.
+  - Returns: The inverse of the matrix.
+- `public static Matrix Lerp(Matrix start, Matrix end, float amount)`
+  - Performs a linear interpolation between two matrices.
+  - `start`: Start matrix.
+  - `end`: End matrix.
+  - `amount`: Value between 0 and 1 indicating the weight of `end`.
+  - Returns: The linear interpolation of the two matrices.
+- `public static Matrix Multiply(Matrix left, Matrix right)`
+  - Determines the product of two matrices.
+  - `left`: The first matrix to multiply.
+  - `right`: The second matrix to multiply.
+  - Returns: The product of the two matrices.
+- `public static Matrix Multiply(Matrix left, float right)`
+  - Scales a matrix by the given value.
+  - `left`: The matrix to scale.
+  - `right`: The amount by which to scale.
+  - Returns: The scaled matrix.
+- `public static Matrix Negate(Matrix matrix)`
+  - Negates a matrix.
+  - `matrix`: The matrix to be negated.
+  - Returns: The negated matrix.
+- `public static Matrix op_Addition(Matrix left, Matrix right)`
+  - Adds two matrices.
+  - `left`: The first matrix to add.
+  - `right`: The second matrix to add.
+  - Returns: The sum of the two matrices.
+- `public static Matrix op_Division(Matrix left, Matrix right)`
+  - Divides two matrices.
+  - `left`: The first matrix to divide.
+  - `right`: The second matrix to divide.
+  - Returns: The quotient of the two matrices.
+- `public static Matrix op_Division(Matrix left, float right)`
+  - Scales a matrix by a given value.
+  - `left`: The matrix to scale.
+  - `right`: The amount by which to scale.
+  - Returns: The scaled matrix.
+- `public static bool op_Equality(Matrix left, Matrix right)`
+  - Tests for equality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has the same value as `right`; otherwise, `false`.
+- `public static bool op_Inequality(Matrix left, Matrix right)`
+  - Tests for inequality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has a different value than `right`; otherwise, `false`.
+- `public static Matrix op_Multiply(Matrix left, Matrix right)`
+  - Multiplies two matrices.
+  - `left`: The first matrix to multiply.
+  - `right`: The second matrix to multiply.
+  - Returns: The product of the two matrices.
+- `public static Matrix op_Multiply(Matrix left, float right)`
+  - Scales a matrix by a given value.
+  - `left`: The matrix to scale.
+  - `right`: The amount by which to scale.
+  - Returns: The scaled matrix.
+- `public static Matrix op_Multiply(float left, Matrix right)`
+  - Scales a matrix by a given value.
+  - `right`: The matrix to scale.
+  - `left`: The amount by which to scale.
+  - Returns: The scaled matrix.
+- `public static Matrix op_Subtraction(Matrix left, Matrix right)`
+  - Subtracts two matrices.
+  - `left`: The first matrix to subtract.
+  - `right`: The second matrix to subtract.
+  - Returns: The difference between the two matrices.
+- `public static Matrix op_UnaryNegation(Matrix matrix)`
+  - Negates a matrix.
+  - `matrix`: The matrix to negate.
+  - Returns: The negated matrix.
+- `public static Matrix RotationAxis(Vector3 axis, float angle)`
+  - Creates a matrix that rotates around an arbitrary axis.
+  - `axis`: The axis around which to rotate.
+  - `angle`: Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.
+  - Returns: The created rotation matrix.
+- `public static Matrix RotationQuaternion(Quaternion rotation)`
+  - Creates a rotation matrix from a rotation.
+  - `rotation`: The quaternion to use to build the matrix.
+  - Returns: The created rotation matrix.
+- `public static Matrix RotationX(float angle)`
+  - Creates a matrix that rotates around the x-axis.
+  - `angle`: Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.
+  - Returns: The created rotation matrix.
+- `public static Matrix RotationY(float angle)`
+  - Creates a matrix that rotates around the y-axis.
+  - `angle`: Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.
+  - Returns: The created rotation matrix.
+- `public static Matrix RotationYawPitchRoll(float yaw, float pitch, float roll)`
+  - Creates a rotation matrix with a specified yaw, pitch, and roll.
+  - `yaw`: Yaw around the y-axis, in radians.
+  - `pitch`: Pitch around the x-axis, in radians.
+  - `roll`: Roll around the z-axis, in radians.
+  - Returns: The created rotation matrix.
+- `public static Matrix RotationZ(float angle)`
+  - Creates a matrix that rotates around the z-axis.
+  - `angle`: Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.
+  - Returns: The created rotation matrix.
+- `public static Matrix Scaling(Vector3 scale)`
+  - Creates a matrix that scales along the x-axis, y-axis, and y-axis.
+  - `scale`: Scaling factor for all three axes.
+  - Returns: The created scaling matrix.
+- `public static Matrix Scaling(float x, float y, float z)`
+  - Creates a matrix that scales along the x-axis, y-axis, and y-axis.
+  - `x`: Scaling factor that is applied along the x-axis.
+  - `y`: Scaling factor that is applied along the y-axis.
+  - `z`: Scaling factor that is applied along the z-axis.
+  - Returns: The created scaling matrix.
+- `public static Matrix Subtract(Matrix left, Matrix right)`
+  - Determines the difference between two matrices.
+  - `left`: The first matrix to subtract.
+  - `right`: The second matrix to subtract.
+  - Returns: The difference between the two matrices.
+- `public static Matrix Translation(Vector3 amount)`
+  - Creates a translation matrix using the specified offsets.
+  - `amount`: The offset for all three coordinate planes.
+  - Returns: The created translation matrix.
+- `public static Matrix Translation(float x, float y, float z)`
+  - Creates a translation matrix using the specified offsets.
+  - `x`: X-coordinate offset.
+  - `y`: Y-coordinate offset.
+  - `z`: Z-coordinate offset.
+  - Returns: The created translation matrix.
+- `public static Matrix Transpose(Matrix matrix)`
+  - Calculates the transpose of the specified matrix.
+  - `matrix`: The matrix whose transpose is to be calculated.
+  - Returns: The transpose of the specified matrix.
+
+### Fields
+
+- `public float M11`
+  - Gets or sets the element of the matrix that exists in the first row and first column.
+- `public float M12`
+  - Gets or sets the element of the matrix that exists in the first row and second column.
+- `public float M13`
+  - Gets or sets the element of the matrix that exists in the first row and third column.
+- `public float M14`
+  - Gets or sets the element of the matrix that exists in the first row and fourth column.
+- `public float M21`
+  - Gets or sets the element of the matrix that exists in the second row and first column.
+- `public float M22`
+  - Gets or sets the element of the matrix that exists in the second row and second column.
+- `public float M23`
+  - Gets or sets the element of the matrix that exists in the second row and third column.
+- `public float M24`
+  - Gets or sets the element of the matrix that exists in the second row and fourth column.
+- `public float M31`
+  - Gets or sets the element of the matrix that exists in the third row and first column.
+- `public float M32`
+  - Gets or sets the element of the matrix that exists in the third row and second column.
+- `public float M33`
+  - Gets or sets the element of the matrix that exists in the third row and third column.
+- `public float M34`
+  - Gets or sets the element of the matrix that exists in the third row and fourth column.
+- `public float M41`
+  - Gets or sets the element of the matrix that exists in the fourth row and first column.
+- `public float M42`
+  - Gets or sets the element of the matrix that exists in the fourth row and second column.
+- `public float M43`
+  - Gets or sets the element of the matrix that exists in the fourth row and third column.
+- `public float M44`
+  - Gets or sets the element of the matrix that exists in the fourth row and fourth column.
+
+## Plane
+
+struct `GTA.Math.Plane` : `IEquatable<Plane>`, `IFormattable`
+
+### Constructors
+
+- `public Plane(Vector3 a, Vector3 b, Vector3 c)`
+- `public Plane(Vector3 normal, Vector3 point)`
+- `public Plane(Vector3 normal, float d)`
+
+### Properties
+
+- `public Plane Normalized { get; }`
+
+### Methods
+
+- `public float DistanceTo(Vector3 point)`
+- `public bool Equals(Plane value)`
+- `public virtual bool Equals(object obj)`
+- `public virtual int GetHashCode()`
+- `public bool IntersectsRay(Vector3 from, Vector3 dir, out Vector3 dest)`
+- `public void Normalize()`
+- `public Vector3 ProjectPoint(Vector3 point)`
+- `public virtual string ToString()`
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+- `public static bool Intersect3(ref Plane a, ref Plane b, ref Plane c, out Vector3 dest)`
+- `public static Plane Normalize(Plane plane)`
+- `public static bool op_Equality(Plane left, Plane right)`
+- `public static Vector4 op_Explicit(Plane plane)`
+- `public static Plane op_Explicit(Vector4 vector)`
+- `public static bool op_Inequality(Plane left, Plane right)`
+
+### Fields
+
+- `public float D`
+- `public Vector3 Normal`
+
+## Quaternion
+
+struct `GTA.Math.Quaternion` : `IEquatable<Quaternion>`, `IFormattable`
+
+### Constructors
+
+- `public Quaternion(Vector3 axis, float angle)`
+  - Initializes a new instance of the `Quaternion` structure.
+  - `axis`: The axis of rotation.
+  - `angle`: The angle of rotation in radians.
+- `public Quaternion(float x, float y, float z, float w)`
+  - Initializes a new instance of the `Quaternion` structure.
+  - `x`: The X component of the quaternion.
+  - `y`: The Y component of the quaternion.
+  - `z`: The Z component of the quaternion.
+  - `w`: The W component of the quaternion.
+
+### Properties
+
+- `public float Angle { get; }`
+  - Gets the angle of the quaternion.
+- `public Vector3 Axis { get; }`
+  - Gets the axis components of the quaternion.
+- `public static Quaternion Identity { get; }`
+  - The identity `Quaternion` (0, 0, 0, 1).
+- `public static Quaternion One { get; }`
+  - A `Quaternion` with all of its components set to one.
+- `public static Quaternion Zero { get; }`
+  - A `Quaternion` with all of its components set to zero.
+
+### Methods
+
+- `public void Conjugate()`
+  - Conjugates the quaternion.
+- `public bool Equals(Quaternion other)`
+  - Returns a value that indicates whether the current instance is equal to the specified object.
+  - `other`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual bool Equals(object obj)`
+  - Returns a value that indicates whether the current instance is equal to a specified object.
+  - `obj`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual int GetHashCode()`
+  - Returns the hash code for this instance.
+  - Returns: A 32-bit signed integer hash code.
+- `public void Invert()`
+  - Conjugates and renormalizes the quaternion.
+- `public float Length()`
+  - Calculates the length of the quaternion.
+  - Returns: The length of the quaternion.
+- `public float LengthSquared()`
+  - Calculates the squared length of the quaternion.
+  - Returns: The squared length of the quaternion.
+- `public void Normalize()`
+  - Converts the quaternion into a unit quaternion.
+- `public Vector3 RotateTransform(Vector3 point, Vector3 center)`
+  - Rotates the point with rotation.
+  - `point`: The vector to be rotated.
+  - `center`: The vector representing the origin of the new coordinate system.
+  - Returns: The vector after rotation in the original coordinate system.
+- `public Vector3 RotateTransform(Vector3 point)`
+  - Rotates the point with rotation.
+  - `point`: The vector to be rotated.
+  - Returns: The vector after rotation.
+- `public Vector3 ToEuler(EulerRotationOrder rotationOrder = 2)`
+- `public virtual string ToString()`
+  - Converts the value of the object to its equivalent string representation.
+  - Returns: The string representation of the value of this instance.
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+  - Converts the value of the object to its equivalent string representation.
+  - `format`: The format.
+  - Returns: The string representation of the value of this instance.
+- `public static Quaternion Add(Quaternion left, Quaternion right)`
+  - Adds two quaternions.
+  - `left`: The first quaternion to add.
+  - `right`: The second quaternion to add.
+  - Returns: The sum of the two quaternions.
+- `public static float AngleBetween(Quaternion a, Quaternion b)`
+  - Returns the angle in degrees between two rotations a and b.
+  - `a`: The first quaternion to calculate angle.
+  - `b`: The second quaternion to calculate angle.
+  - Returns: The angle in degrees between two rotations a and b.
+- `public static Quaternion Conjugate(Quaternion value)`
+  - Creates the conjugate of a specified Quaternion.
+  - `value`: The Quaternion of which to return the conjugate.
+  - Returns: A new Quaternion that is the conjugate of the specified one.
+- `public static Quaternion DirectionVectors(Vector3 rightVector, Vector3 forwardVector, Vector3 upVector)`
+  - Creates a Quaternion from the given relative x, y, z axis
+  - `rightVector`: Relative X axis
+  - `forwardVector`: Relative Y axis
+  - `upVector`: Relative Z axis
+  - Returns: The newly created quaternion.
+- `public static Quaternion Divide(Quaternion left, Quaternion right)`
+  - Divides a quaternion by another.
+  - `left`: The first quaternion to divide.
+  - `right`: The second quaternion to divide.
+  - Returns: The divided quaternion.
+- `public static float Dot(Quaternion left, Quaternion right)`
+  - Calculates the dot product of two quaternions.
+  - `left`: First source quaternion.
+  - `right`: Second source quaternion.
+  - Returns: The dot product of the two quaternions.
+- `public static Quaternion Euler(Vector3 euler, EulerRotationOrder rotationOrder)`
+- `public static Quaternion Euler(Vector3 euler)`
+  - Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).
+  - `euler`: Euler angles in degrees. euler.X = around X axis, euler.Y = around Y axis, euler.Z = around Z axis
+- `public static Quaternion Euler(float z, float x, float y, EulerRotationOrder rotationOrder)`
+- `public static Quaternion Euler(float zaxis, float xaxis, float yaxis)`
+  - Returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis (in that order).
+  - `zaxis`: Z degrees.
+  - `xaxis`: X degrees.
+  - `yaxis`: Y degrees.
+- `public static Quaternion FromToRotation(Vector3 fromDirection, Vector3 toDirection)`
+  - Creates a rotation which rotates from fromDirection to toDirection.
+- `public static void GetDirectionVectors(Quaternion quaternion, out Vector3 rightVector, out Vector3 forwardVector, out Vector3 upVector)`
+  - Get direction vectors from the given quaternion
+  - `quaternion`: The quaternion
+  - `rightVector`: RightVector = relative x axis
+  - `forwardVector`: ForwardVector = relative y axis
+  - `upVector`: UpVector = relative z axis
+- `public static Quaternion Invert(Quaternion quaternion)`
+  - Conjugates and renormalizes the quaternion.
+  - `quaternion`: The quaternion to conjugate and re-normalize.
+  - Returns: The conjugated and renormalized quaternion.
+- `public static Quaternion Lerp(Quaternion start, Quaternion end, float amount)`
+  - Performs a linear interpolation between two quaternion.
+  - `start`: Start quaternion.
+  - `end`: End quaternion.
+  - `amount`: Value between 0 and 1 indicating the weight of `end`.
+  - Returns: The linear interpolation of the two quaternions.
+- `public static Quaternion LookRotation(Vector3 forward, Vector3 up)`
+  - Creates a rotation with the specified `forward` and `up` directions.
+- `public static Quaternion LookRotation(Vector3 forward)`
+  - Creates a rotation with the specified `forward` and `WorldUp` directions.
+- `public static Quaternion Multiply(Quaternion left, Quaternion right)`
+  - Multiplies two Quaternions together.
+  - `left`: The Quaternion on the left side of the multiplication.
+  - `right`: The Quaternion on the right side of the multiplication.
+  - Returns: The result of the multiplication.
+- `public static Quaternion Multiply(Quaternion quaternion, float scale)`
+  - Scales a quaternion by the given value.
+  - `quaternion`: The quaternion to scale.
+  - `scale`: The amount by which to scale the quaternion.
+  - Returns: The scaled quaternion.
+- `public static Quaternion Negate(Quaternion quaternion)`
+  - Reverses the direction of a given quaternion.
+  - `quaternion`: The quaternion to negate.
+  - Returns: A quaternion facing in the opposite direction.
+- `public static Quaternion Normalize(Quaternion quaternion)`
+  - Converts the quaternion into a unit quaternion.
+  - `quaternion`: The quaternion to normalize.
+  - Returns: The normalized quaternion.
+- `public static Quaternion op_Addition(Quaternion left, Quaternion right)`
+  - Adds two quaternions.
+  - `left`: The first quaternion to add.
+  - `right`: The second quaternion to add.
+  - Returns: The sum of the two quaternions.
+- `public static Quaternion op_Division(Quaternion left, Quaternion right)`
+  - Divides a Quaternion by another Quaternion.
+  - `left`: The source Quaternion.
+  - `right`: The divisor.
+  - Returns: The result of the division.
+- `public static bool op_Equality(Quaternion left, Quaternion right)`
+  - Tests for equality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has the same value as `right`; otherwise, `false`.
+- `public static bool op_Inequality(Quaternion left, Quaternion right)`
+  - Tests for inequality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has a different value than `right`; otherwise, `false`.
+- `public static Quaternion op_Multiply(Quaternion left, Quaternion right)`
+  - Multiplies a quaternion by another.
+  - `left`: The first quaternion to multiply.
+  - `right`: The second quaternion to multiply.
+  - Returns: The multiplied quaternion.
+- `public static Vector3 op_Multiply(Quaternion rotation, Vector3 point)`
+  - Rotates the point with rotation.
+  - `rotation`: The quaternion to rotate the vector.
+  - `point`: The vector to be rotated.
+  - Returns: The vector after rotation.
+- `public static Quaternion op_Multiply(Quaternion quaternion, float scale)`
+  - Scales a quaternion by the given value.
+  - `quaternion`: The quaternion to scale.
+  - `scale`: The amount by which to scale the quaternion.
+  - Returns: The scaled quaternion.
+- `public static Quaternion op_Multiply(float scale, Quaternion quaternion)`
+  - Scales a quaternion by the given value.
+  - `quaternion`: The quaternion to scale.
+  - `scale`: The amount by which to scale the quaternion.
+  - Returns: The scaled quaternion.
+- `public static Quaternion op_Subtraction(Quaternion left, Quaternion right)`
+  - Subtracts two quaternions.
+  - `left`: The first quaternion to subtract.
+  - `right`: The second quaternion to subtract.
+  - Returns: The difference of the two quaternions.
+- `public static Quaternion op_UnaryNegation(Quaternion quaternion)`
+  - Reverses the direction of a given quaternion.
+  - `quaternion`: The quaternion to negate.
+  - Returns: A quaternion facing in the opposite direction.
+- `public static Quaternion RotateTowards(Quaternion from, Quaternion to, float maxDegreesDelta)`
+  - Rotates a rotation from towards to.
+  - `from`: From Quaternion.
+  - `to`: To Quaternion.
+- `public static Vector3 RotateTransform(Quaternion rotation, Vector3 point, Vector3 center)`
+  - Rotates the point with rotation.
+  - `rotation`: The quaternion to rotate the vector.
+  - `point`: The vector to be rotated.
+  - `center`: The vector representing the origin of the new coordinate system.
+  - Returns: The vector after rotation in the original coordinate system.
+- `public static Vector3 RotateTransform(Quaternion rotation, Vector3 point)`
+  - Rotates the point with rotation.
+  - `rotation`: The quaternion to rotate the vector.
+  - `point`: The vector to be rotated.
+  - Returns: The vector after rotation.
+- `public static Quaternion RotationAxis(Vector3 axis, float angle)`
+  - Creates a quaternion given a rotation and an axis.
+  - `axis`: The axis of rotation.
+  - `angle`: The angle of rotation in radians.
+  - Returns: The newly created quaternion.
+- `public static Quaternion RotationMatrix(Matrix matrix)`
+  - Creates a quaternion given a rotation matrix.
+  - `matrix`: The rotation matrix.
+  - Returns: The newly created quaternion.
+- `public static Quaternion RotationYawPitchRoll(float yaw, float pitch, float roll)`
+  - Creates a Quaternion from the given yaw, pitch, and roll, in radians.
+  - `yaw`: The yaw angle, in radians, around the Z-axis.
+  - `pitch`: The pitch angle, in radians, around the X-axis.
+  - `roll`: The roll angle, in radians, around the Y-axis.
+  - Returns: The newly created quaternion.
+- `public static Quaternion Slerp(Quaternion start, Quaternion end, float amount)`
+  - Interpolates between two quaternions, using spherical linear interpolation..
+  - `start`: Start quaternion.
+  - `end`: End quaternion.
+  - `amount`: Value between 0 and 1 indicating the weight of `end`.
+  - Returns: The spherical linear interpolation of the two quaternions.
+- `public static Quaternion SlerpUnclamped(Quaternion a, Quaternion b, float t)`
+  - Interpolates between two quaternions, using spherical linear interpolation. The parameter /t/ is not clamped.
+- `public static Quaternion Subtract(Quaternion left, Quaternion right)`
+  - Subtracts two quaternions.
+  - `left`: The first quaternion to subtract.
+  - `right`: The second quaternion to subtract.
+  - Returns: The difference of the two quaternions.
+
+### Fields
+
+- `public float W`
+  - Gets or sets the W component of the quaternion.
+- `public float X`
+  - Gets or sets the X component of the quaternion.
+- `public float Y`
+  - Gets or sets the Y component of the quaternion.
+- `public float Z`
+  - Gets or sets the Z component of the quaternion.
+
+## Vector2
+
+struct `GTA.Math.Vector2` : `IEquatable<Vector2>`, `IFormattable`
+
+### Constructors
+
+- `public Vector2(float x, float y)`
+  - Initializes a new instance of the `Vector2` class.
+  - `x`: Initial value for the X component of the vector.
+  - `y`: Initial value for the Y component of the vector.
+
+### Properties
+
+- `public float this[int index] { get; set; }`
+  - Gets or sets the component at the specified index.
+  - `index`: The index of the component to access. Use 0 for the X component and 1 for the Y component.
+  - Returns: The value of the component at the specified index.
+- `public Vector2 Normalized { get; }`
+  - Returns this vector with a magnitude of 1.
+- `public static Vector2 Down { get; }`
+  - Returns the down vector. (0,-1)
+- `public static Vector2 Left { get; }`
+  - Returns the left vector. (-1,0)
+- `public static Vector2 One { get; }`
+- `public static Vector2 Right { get; }`
+  - Returns the right vector. (1,0)
+- `public static Vector2 UnitX { get; }`
+  - The X unit `Vector2` (1, 0).
+- `public static Vector2 UnitY { get; }`
+  - The Y unit `Vector2` (0, 1).
+- `public static Vector2 Up { get; }`
+  - Returns the up vector. (0,1)
+- `public static Vector2 Zero { get; }`
+  - Returns a null vector. (0,0)
+
+### Methods
+
+- `public float DistanceTo(Vector2 position)`
+  - Calculates the distance between two vectors.
+  - `position`: The second vector to calculate the distance to.
+  - Returns: The distance to the other vector.
+- `public float DistanceToSquared(Vector2 position)`
+  - Calculates the squared distance between two vectors.
+  - `position`: The second vector to calculate the squared distance to.
+  - Returns: The squared distance to the other vector.
+- `public bool Equals(Vector2 other)`
+  - Returns a value that indicates whether the current instance is equal to the specified object.
+  - `other`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual bool Equals(object obj)`
+  - Returns a value that indicates whether the current instance is equal to a specified object.
+  - `obj`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; otherwise, `false`.
+- `public virtual int GetHashCode()`
+  - Returns the hash code for this instance.
+  - Returns: A 32-bit signed integer hash code.
+- `public float Length()`
+  - Calculates the length of the vector.
+  - Returns: The length of the vector.
+- `public float LengthSquared()`
+  - Calculates the squared length of the vector.
+  - Returns: The squared length of the vector.
+- `public void Normalize()`
+  - Converts the vector into a unit vector.
+- `public float ToHeading()`
+  - Converts a vector to a heading.
+- `public virtual string ToString()`
+  - Converts the value of the object to its equivalent string representation.
+  - Returns: The string representation of the value of this instance.
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+  - Converts the value of the object to its equivalent string representation.
+  - `format`: The format.
+  - Returns: The string representation of the value of this instance.
+- `public static Vector2 Add(Vector2 left, Vector2 right)`
+  - Adds two vectors.
+  - `left`: The first vector to add.
+  - `right`: The second vector to add.
+  - Returns: The sum of the two vectors.
+- `public static float Angle(Vector2 from, Vector2 to)`
+  - Returns the angle in degrees between from and to. The angle returned is always the acute angle between the two vectors.
+- `public static Vector2 Clamp(Vector2 value, Vector2 min, Vector2 max)`
+  - Restricts a value to be within a specified range.
+  - `value`: The value to clamp.
+  - `min`: The minimum value.
+  - `max`: The maximum value.
+  - Returns: The clamped value.
+- `public static float Distance(Vector2 position1, Vector2 position2)`
+  - Calculates the distance between two vectors.
+  - `position1`: The first vector to calculate the distance to the second vector.
+  - `position2`: The second vector to calculate the distance to the first vector.
+  - Returns: The distance between the two vectors.
+- `public static float DistanceSquared(Vector2 position1, Vector2 position2)`
+  - Calculates the squared distance between two vectors.
+  - `position1`: The first vector to calculate the squared distance to the second vector.
+  - `position2`: The second vector to calculate the squared distance to the first vector.
+  - Returns: The squared distance between the two vectors.
+- `public static Vector2 Divide(Vector2 value, float scale)`
+  - Scales a vector by the given value.
+  - `value`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static float Dot(Vector2 left, Vector2 right)`
+  - Calculates the dot product of two vectors.
+  - `left`: First source vector.
+  - `right`: Second source vector.
+  - Returns: The dot product of the two vectors.
+- `public static Vector2 Lerp(Vector2 start, Vector2 end, float amount)`
+  - Performs a linear interpolation between two vectors.
+  - `start`: Start vector.
+  - `end`: End vector.
+  - `amount`: Value between 0 and 1 indicating the weight of `end`.
+  - Returns: The linear interpolation of the two vectors.
+- `public static Vector2 Maximize(Vector2 left, Vector2 right)`
+  - Returns a vector containing the largest components of the specified vectors.
+  - `left`: The first source vector.
+  - `right`: The second source vector.
+  - Returns: A vector containing the largest components of the source vectors.
+- `public static Vector2 Minimize(Vector2 left, Vector2 right)`
+  - Returns a vector containing the smallest components of the specified vectors.
+  - `left`: The first source vector.
+  - `right`: The second source vector.
+  - Returns: A vector containing the smallest components of the source vectors.
+- `public static Vector2 Multiply(Vector2 left, Vector2 right)`
+  - Multiplies a vector with another by performing component-wise multiplication.
+  - `left`: The first vector to multiply.
+  - `right`: The second vector to multiply.
+  - Returns: The multiplied vector.
+- `public static Vector2 Multiply(Vector2 value, float scale)`
+  - Scales a vector by the given value.
+  - `value`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector2 Negate(Vector2 value)`
+  - Reverses the direction of a given vector.
+  - `value`: The vector to negate.
+  - Returns: A vector facing in the opposite direction.
+- `public static Vector2 Normalize(Vector2 vector)`
+  - Converts the vector into a unit vector.
+  - `vector`: The vector to normalize.
+  - Returns: The normalized vector.
+- `public static Vector2 op_Addition(Vector2 left, Vector2 right)`
+  - Adds two vectors.
+  - `left`: The first vector to add.
+  - `right`: The second vector to add.
+  - Returns: The sum of the two vectors.
+- `public static Vector2 op_Division(Vector2 vector, float scale)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static bool op_Equality(Vector2 left, Vector2 right)`
+  - Tests for equality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has the same value as `right`; otherwise, `false`.
+- `public static Vector3 op_Implicit(Vector2 vector)`
+  - Converts a Vector2 to a Vector3 implicitly.
+- `public static bool op_Inequality(Vector2 left, Vector2 right)`
+  - Tests for inequality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has a different value than `right`; otherwise, `false`.
+- `public static Vector2 op_Multiply(Vector2 vector, float scale)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector2 op_Multiply(float scale, Vector2 vector)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector2 op_Subtraction(Vector2 left, Vector2 right)`
+  - Subtracts two vectors.
+  - `left`: The first vector to subtract.
+  - `right`: The second vector to subtract.
+  - Returns: The difference of the two vectors.
+- `public static Vector2 op_UnaryNegation(Vector2 value)`
+  - Reverses the direction of a given vector.
+  - `value`: The vector to negate.
+  - Returns: A vector facing in the opposite direction.
+- `public static Vector2 RandomXY()`
+  - Returns a new normalized vector with random X and Y components.
+- `public static Vector2 Reflect(Vector2 vector, Vector2 normal)`
+  - Returns the reflection of a vector off a surface that has the specified normal.
+  - `vector`: The source vector.
+  - `normal`: Normal of the surface.
+  - Returns: The reflected vector.
+- `public static float SignedAngle(Vector2 from, Vector2 to)`
+  - Returns the signed angle in degrees between from and to.
+- `public static Vector2 Subtract(Vector2 left, Vector2 right)`
+  - Subtracts two vectors.
+  - `left`: The first vector to subtract.
+  - `right`: The second vector to subtract.
+  - Returns: The difference of the two vectors.
+
+### Fields
+
+- `public float X`
+  - Gets or sets the X component of the vector.
+- `public float Y`
+  - Gets or sets the Y component of the vector.
+
+## Vector3
+
+struct `GTA.Math.Vector3` : `IEquatable<Vector3>`, `IFormattable`
+
+### Constructors
+
+- `public Vector3(float x, float y, float z)`
+  - Initializes a new instance of the `Vector3` class.
+  - `x`: Initial value for the X component of the vector.
+  - `y`: Initial value for the Y component of the vector.
+  - `z`: Initial value for the Z component of the vector.
+
+### Properties
+
+- `public float this[int index] { get; set; }`
+  - Gets or sets the component at the specified index.
+  - `index`: The index of the component to access. Use 0 for the X component, 1 for the Y component and 2 for the Z component.
+  - Returns: The value of the component at the specified index.
+- `public Vector3 Normalized { get; }`
+  - Returns this vector with a magnitude of 1.
+- `public static Vector3 One { get; }`
+- `public static Vector3 RelativeBack { get; }`
+  - Returns the relative Back vector. (0,-1,0)
+- `public static Vector3 RelativeBottom { get; }`
+  - Returns the relative Bottom vector as used. (0,0,-1)
+- `public static Vector3 RelativeFront { get; }`
+  - Returns the relative Front vector. (0,1,0)
+- `public static Vector3 RelativeLeft { get; }`
+  - Returns the relative Left vector. (-1,0,0)
+- `public static Vector3 RelativeRight { get; }`
+  - Returns the relative Right vector. (1,0,0)
+- `public static Vector3 RelativeTop { get; }`
+  - Returns the relative Top vector. (0,0,1)
+- `public static Vector3 UnitX { get; }`
+  - The X unit `Vector3` (1, 0, 0).
+- `public static Vector3 UnitY { get; }`
+  - The Y unit `Vector3` (0, 1, 0).
+- `public static Vector3 UnitZ { get; }`
+  - The Z unit `Vector3` (0, 0, 1).
+- `public static Vector3 WorldDown { get; }`
+  - Returns the world Down vector. (0,0,-1)
+- `public static Vector3 WorldEast { get; }`
+  - Returns the world East vector. (1,0,0)
+- `public static Vector3 WorldNorth { get; }`
+  - Returns the world North vector. (0,1,0)
+- `public static Vector3 WorldSouth { get; }`
+  - Returns the world South vector. (0,-1,0)
+- `public static Vector3 WorldUp { get; }`
+  - Returns the world Up vector. (0,0,1)
+- `public static Vector3 WorldWest { get; }`
+  - Returns the world West vector. (-1,0,0)
+- `public static Vector3 Zero { get; }`
+  - Returns a null vector. (0,0,0)
+
+### Methods
+
+- `public Vector3 Around(float distance)`
+  - Creates a random vector inside the circle around this position.
+- `public float DistanceTo(Vector3 position)`
+  - Calculates the distance between two vectors.
+  - `position`: The second vector to calculate the distance to.
+  - Returns: The distance to the other vector.
+- `public float DistanceTo2D(Vector3 position)`
+  - Calculates the distance between two vectors, ignoring the Z-component.
+  - `position`: The second vector to calculate the distance to.
+  - Returns: The distance to the other vector.
+- `public float DistanceToSquared(Vector3 position)`
+  - Calculates the squared distance between two vectors.
+  - `position`: The second vector to calculate the distance to.
+  - Returns: The distance to the other vector.
+- `public float DistanceToSquared2D(Vector3 position)`
+  - Calculates the squared distance between two vectors, ignoring the Z-component.
+  - `position`: The second vector to calculate the squared distance to.
+  - Returns: The distance to the other vector.
+- `public bool Equals(Vector3 other)`
+  - Returns a value that indicates whether the current instance is equal to the specified object.
+  - `other`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual bool Equals(object obj)`
+  - Returns a value that indicates whether the current instance is equal to a specified object.
+  - `obj`: Object to make the comparison with.
+  - Returns: `true` if the current instance is equal to the specified object; `false` otherwise.
+- `public virtual int GetHashCode()`
+  - Returns the hash code for this instance.
+  - Returns: A 32-bit signed integer hash code.
+- `public float Length()`
+  - Calculates the length of the vector.
+  - Returns: The length of the vector.
+- `public float LengthSquared()`
+  - Calculates the squared length of the vector.
+  - Returns: The squared length of the vector.
+- `public void Normalize()`
+  - Converts the vector into a unit vector.
+- `public Vector3 Round(int decimalPlaces = 2)`
+  - Rounds each float inside the vector to a select amount of decimal places (2 by default).
+  - `decimalPlaces`: Number of decimal places to round to
+  - Returns: The vector containing rounded values
+- `public float[] ToArray()`
+  - Converts the matrix to an array of floats.
+- `public float ToHeading()`
+  - Converts a vector to a heading.
+- `public virtual string ToString()`
+  - Converts the value of the object to its equivalent string representation.
+  - Returns: The string representation of the value of this instance.
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+  - Converts the value of the object to its equivalent string representation.
+  - `format`: The number format.
+  - Returns: The string representation of the value of this instance.
+- `public static Vector3 Add(Vector3 left, Vector3 right)`
+  - Adds two vectors.
+  - `left`: The first vector to add.
+  - `right`: The second vector to add.
+  - Returns: The sum of the two vectors.
+- `public static float Angle(Vector3 from, Vector3 to)`
+  - Returns the angle in degrees between from and to. The angle returned is always the acute angle between the two vectors.
+- `public static Vector3 Clamp(Vector3 value, Vector3 min, Vector3 max)`
+  - Restricts a value to be within a specified range.
+  - `value`: The value to clamp.
+  - `min`: The minimum value.
+  - `max`: The maximum value.
+  - Returns: The clamped value.
+- `public static Vector3 Cross(Vector3 left, Vector3 right)`
+  - Calculates the cross product of two vectors.
+  - `left`: First source vector.
+  - `right`: Second source vector.
+  - Returns: The cross product of the two vectors.
+- `public static float Distance(Vector3 position1, Vector3 position2)`
+  - Calculates the distance between two vectors.
+  - `position1`: The first vector to calculate the distance to the second vector.
+  - `position2`: The second vector to calculate the distance to the first vector.
+  - Returns: The distance between the two vectors.
+- `public static float Distance2D(Vector3 position1, Vector3 position2)`
+  - Calculates the distance between two vectors, ignoring the Z-component.
+  - `position1`: The first vector to calculate the distance to the second vector.
+  - `position2`: The second vector to calculate the distance to the first vector.
+  - Returns: The distance between the two vectors.
+- `public static float DistanceSquared(Vector3 position1, Vector3 position2)`
+  - Calculates the squared distance between two vectors.
+  - `position1`: The first vector to calculate the squared distance to the second vector.
+  - `position2`: The second vector to calculate the squared distance to the first vector.
+  - Returns: The squared distance between the two vectors.
+- `public static float DistanceSquared2D(Vector3 position1, Vector3 position2)`
+  - Calculates the squared distance between two vectors, ignoring the Z-component.
+  - `position1`: The first vector to calculate the squared distance to the second vector.
+  - `position2`: The second vector to calculate the squared distance to the first vector.
+  - Returns: The squared distance between the two vectors.
+- `public static Vector3 Divide(Vector3 value, float scale)`
+  - Scales a vector by the given value.
+  - `value`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static float Dot(Vector3 left, Vector3 right)`
+  - Calculates the dot product of two vectors.
+  - `left`: First source vector.
+  - `right`: Second source vector.
+  - Returns: The dot product of the two vectors.
+- `public static Vector3 Lerp(Vector3 start, Vector3 end, float amount)`
+  - Performs a linear interpolation between two vectors.
+  - `start`: Start vector.
+  - `end`: End vector.
+  - `amount`: Value between 0 and 1 indicating the weight of `end`.
+  - Returns: The linear interpolation of the two vectors.
+- `public static Vector3 Maximize(Vector3 left, Vector3 right)`
+  - Returns a vector containing the largest components of the specified vectors.
+  - `left`: The first source vector.
+  - `right`: The second source vector.
+  - Returns: A vector containing the largest components of the source vectors.
+- `public static Vector3 Minimize(Vector3 left, Vector3 right)`
+  - Returns a vector containing the smallest components of the specified vectors.
+  - `left`: The first source vector.
+  - `right`: The second source vector.
+  - Returns: A vector containing the smallest components of the source vectors.
+- `public static Vector3 Multiply(Vector3 left, Vector3 right)`
+  - Multiply a vector with another by performing component-wise multiplication.
+  - `left`: The first vector to multiply.
+  - `right`: The second vector to multiply.
+  - Returns: The multiplied vector.
+- `public static Vector3 Multiply(Vector3 value, float scale)`
+  - Scales a vector by the given value.
+  - `value`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector3 Negate(Vector3 value)`
+  - Reverses the direction of a given vector.
+  - `value`: The vector to negate.
+  - Returns: A vector facing in the opposite direction.
+- `public static Vector3 Normalize(Vector3 vector)`
+  - Converts the vector into a unit vector.
+  - `vector`: The vector to normalize.
+  - Returns: The normalized vector.
+- `public static Vector3 op_Addition(Vector3 left, Vector3 right)`
+  - Adds two vectors.
+  - `left`: The first vector to add.
+  - `right`: The second vector to add.
+  - Returns: The sum of the two vectors.
+- `public static Vector3 op_Division(Vector3 vector, float scale)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static bool op_Equality(Vector3 left, Vector3 right)`
+  - Tests for equality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has the same value as `right`; otherwise, `false`.
+- `public static Vector2 op_Implicit(Vector3 vector)`
+  - Converts a Vector3 to a Vector2 implicitly.
+- `public static bool op_Inequality(Vector3 left, Vector3 right)`
+  - Tests for inequality between two objects.
+  - `left`: The first value to compare.
+  - `right`: The second value to compare.
+  - Returns: `true` if `left` has a different value than `right`; otherwise, `false`.
+- `public static Vector3 op_Multiply(Vector3 vector, float scale)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector3 op_Multiply(float scale, Vector3 vector)`
+  - Scales a vector by the given value.
+  - `vector`: The vector to scale.
+  - `scale`: The amount by which to scale the vector.
+  - Returns: The scaled vector.
+- `public static Vector3 op_Subtraction(Vector3 left, Vector3 right)`
+  - Subtracts two vectors.
+  - `left`: The first vector to subtract.
+  - `right`: The second vector to subtract.
+  - Returns: The difference of the two vectors.
+- `public static Vector3 op_UnaryNegation(Vector3 vector)`
+  - Reverses the direction of a given vector.
+  - `vector`: The vector to negate.
+  - Returns: A vector facing in the opposite direction.
+- `public static Vector3 Project(Vector3 vector, Vector3 onNormal)`
+  - Projects a vector onto another vector.
+  - `vector`: The vector to project.
+  - `onNormal`: Vector to project onto, does not assume it is normalized.
+  - Returns: The projected vector.
+- `public static Vector3 ProjectOnPlane(Vector3 vector, Vector3 planeNormal)`
+  - Projects a vector onto a plane defined by a normal orthogonal to the plane.
+  - `vector`: The vector to project.
+  - `planeNormal`: Normal of the plane, does not assume it is normalized.
+  - Returns: The Projection of vector onto plane.
+- `public static Vector3 RandomXY()`
+  - Returns a new normalized vector with random X and Y components.
+- `public static Vector3 RandomXYZ()`
+  - Returns a new normalized vector with random X, Y and Z components.
+- `public static Vector3 Reflect(Vector3 vector, Vector3 normal)`
+  - Returns the reflection of a vector off a surface that has the specified normal.
+  - `vector`: The vector to project onto the plane.
+  - `normal`: Normal of the surface.
+  - Returns: The reflected vector.
+- `public static float SignedAngle(Vector3 from, Vector3 to, Vector3 planeNormal)`
+  - Returns the signed angle in degrees between from and to.
+- `public static Vector3 Subtract(Vector3 left, Vector3 right)`
+  - Subtracts two vectors.
+  - `left`: The first vector to subtract.
+  - `right`: The second vector to subtract.
+  - Returns: The difference of the two vectors.
+
+### Fields
+
+- `public float X`
+  - Gets or sets the X component of the vector.
+- `public float Y`
+  - Gets or sets the Y component of the vector.
+- `public float Z`
+  - Gets or sets the Z component of the vector.
+
+## Vector4
+
+struct `GTA.Math.Vector4` : `IEquatable<Vector4>`, `IFormattable`
+
+### Constructors
+
+- `public Vector4(float x, float y, float z, float w)`
+
+### Properties
+
+- `public float this[int index] { get; set; }`
+- `public Vector4 Normalized { get; }`
+- `public static Vector4 One { get; }`
+- `public static Vector4 Zero { get; }`
+
+### Methods
+
+- `public bool Equals(Vector4 other)`
+- `public virtual bool Equals(object obj)`
+- `public virtual int GetHashCode()`
+- `public float Length()`
+- `public float LengthSquared()`
+- `public void Normalize()`
+- `public virtual string ToString()`
+- `public string ToString(string format, IFormatProvider formatProvider)`
+- `public string ToString(string format)`
+- `public static Vector4 Clamp(Vector4 value, Vector4 min, Vector4 max)`
+- `public static float Dot(Vector4 left, Vector4 right)`
+- `public static Vector4 Lerp(Vector4 start, Vector4 end, float amount)`
+- `public static Vector4 Max(Vector4 left, Vector4 right)`
+- `public static Vector4 Min(Vector4 left, Vector4 right)`
+- `public static Vector4 Normalize(Vector4 vector)`
+- `public static Vector4 op_Addition(Vector4 left, Vector4 right)`
+- `public static Vector4 op_Division(Vector4 vector, float scale)`
+- `public static bool op_Equality(Vector4 left, Vector4 right)`
+- `public static Vector4 op_Explicit(Vector2 vector)`
+- `public static Vector4 op_Explicit(Vector3 vector)`
+- `public static Vector2 op_Explicit(Vector4 vector)`
+- `public static Vector3 op_Explicit(Vector4 vector)`
+- `public static bool op_Inequality(Vector4 left, Vector4 right)`
+- `public static Vector4 op_Multiply(Vector4 vector, float scale)`
+- `public static Vector4 op_Multiply(float scale, Vector4 vector)`
+- `public static Vector4 op_Subtraction(Vector4 left, Vector4 right)`
+- `public static Vector4 op_UnaryNegation(Vector4 value)`
+
+### Fields
+
+- `public float W`
+- `public float X`
+- `public float Y`
+- `public float Z`
+

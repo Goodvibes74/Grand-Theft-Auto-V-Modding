@@ -48,7 +48,7 @@ ScriptHookV.dll            # Alexander Blade, must match the game build
 ScriptHookVDotNet2.dll     # SHVDN v2 runtime
 ScriptHookVDotNet3.dll     # SHVDN v3 runtime
 dinput8.dll                # ASI loader that loads every .asi
-xinput1_4.dll              # non-vanilla (dated 2025-03-22), probably a controller mod. Confirm what it is.
+xinput1_4.dll              # ASI loader for GTA V Enhanced, inactive in this Legacy install (see CLAUDE.md)
 ```
 
 ### c) The OpenIV `Mods/` folder (2.7 GB, 9 RPF files)

@@ -36,7 +36,8 @@ GTA5.exe
 | `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`, plus add-on packs in `update/x64/dlcpacks/`. **Edit RPFs here, never the originals in root or `update/`.** |
 | `Mods/MANIFEST.md` | Size and SHA-256 of every file in `Mods/`. This is how RPF changes get tracked, since the RPFs themselves stay out of git. |
 | `tools/update-mods-manifest.sh` | Regenerates `Mods/MANIFEST.md` (`bash tools/update-mods-manifest.sh`, about 20 seconds). |
-| `ModDevelopment/` | Source for our own SHVDN C# scripts (one project per folder, Visual Studio 2026 solution `ModDevelopment.slnx`). See `ModDevelopment/README.md`. |
+| `ModDevelopment/` | Source for our own mods: SHVDN C# scripts (solution `ModDevelopment.slnx`) and C++ `.asi` mods (solution `ModDevelopment.Cpp.slnx`, headers in `cpp/ShvSdk/`). See `ModDevelopment/README.md`. |
+| `ModDevelopment/docs/` | Modding guides (C#, C++, Lua, natives) and a generated reference of every callable API: SHVDN v2/v3, LemonUI, NativeUI, iFruitAddon2, all natives, Lua natives. Check it before using an API member or native. Regenerate with `dotnet run -c Release --project ModDevelopment/tools/ApiDocGen` after updating any library. |
 | `tools/rpf.ps1` | Read-only RPF viewer: `list` and `extract` for unencrypted archives and files (add-on packs, files replaced in `Mods/`). See `docs/mods_info/RPF_TOOLS.md`. |
 | `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |
 | `scripts/` | SHVDN mods (`*.dll` plus their `.ini`/`.xml` configs, loose `.cs` scripts such as `FoSAShelter.3.cs`) and the Lua mod (`main.lua`, `keys.lua`, `utils.lua`, `libs/`, `addins/`). |
@@ -55,9 +56,11 @@ Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance
 
 `forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (map and world visuals, no vehicles inside). Add-on vehicle model names: `gxetron`, `urus2018`.
 
-### Unidentified files
+### Identified non-vanilla files
 
-`xinput1_4.dll` in the root is not a vanilla file. It is probably a controller mod, but that hasn't been confirmed.
+`xinput1_4.dll` in the root is the "GTA V ENHANCED Asi loader" (from its version info; its strings name `GTA5_Enhanced.exe`). It's built for the Enhanced edition and is inactive here: `asiloader.log` only shows the Legacy loader (`dinput8.dll`). It's a leftover and harmless, but don't delete it without asking. Every binary in the install is listed in `ModDevelopment/docs/reference/Installed-Files.md`.
+
+Four SHVDN mods (Cop_Arrest, Disarm, MapEditor, Stance) reference the pre-2.10 API name `ScriptHookVDotNet` 0.0.0.0. SHVDN redirects them to the deprecated v2 API (see `ScriptHookVDotNet.log`). If a future SHVDN update drops v2, these four break first.
 
 ## Logs (check these first when debugging)
 

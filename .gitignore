@@ -99,3 +99,6 @@ obj/
 !/xinput1_4.dll
 # Small mod assets
 !menyooStuff/*.mp3
+
+# ApiDocGen downloads (NuGet packages, natives.json)
+ModDevelopment/tools/ApiDocGen/cache/

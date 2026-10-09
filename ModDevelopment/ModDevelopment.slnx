@@ -5,6 +5,8 @@
     <File Path="Directory.Build.targets" />
     <File Path="New-ModScript.ps1" />
     <File Path="README.md" />
+    <File Path="docs/README.md" />
   </Folder>
   <Project Path="ModGuide/ModGuide.csproj" />
+  <Project Path="Samples/Samples.csproj" />
 </Solution>

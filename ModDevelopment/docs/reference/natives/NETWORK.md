@@ -1,0 +1,7632 @@
+# NETWORK natives
+
+[Back to the natives index](README.md)
+
+> **Source:** `natives.json` from [alloc8or/gta5-nativedb-data](https://github.com/alloc8or/gta5-nativedb-data), commit `424fb51b0890` (2026-09-15), downloaded 2026-10-09. It is the data behind https://nativedb.dotindustries.dev.  
+> **Method:** downloaded by `ModDevelopment/tools/ApiDocGen` and converted to Markdown. Names, parameters and descriptions are community research, not from Rockstar or from the game files. The hashes are what the game uses to identify each native.
+
+## _0x0292BD7F3766CEBC
+
+```c
+BOOL _0x0292BD7F3766CEBC()  // 0x0292BD7F3766CEBC
+```
+
+build 3095
+
+> Hardcoded to return 0.
+
+## _NETWORK_ALLOW_DEAD_PED_NETWORK_BLENDING
+
+```c
+void _NETWORK_ALLOW_DEAD_PED_NETWORK_BLENDING(int netId, BOOL allow)  // 0xE8BA82390622BA13
+```
+
+build 3889
+
+## _NETWORK_CAN_TEXT_FROM_GAMER_BE_VIEWED
+
+```c
+BOOL _NETWORK_CAN_TEXT_FROM_GAMER_BE_VIEWED(Any* gamerHandle)  // 0x9F633448E4C73207
+```
+
+build 3258
+
+> NETWORK_CAN_*
+
+## _NETWORK_CLEAR_CLOCK_SYNC_TIME_OVERRIDE
+
+```c
+void _NETWORK_CLEAR_CLOCK_SYNC_TIME_OVERRIDE(BOOL startGlobalTransition, int transitionTime)  // 0x0C1BF187985B15C8
+```
+
+build 3717
+
+## _NETWORK_CLEAR_TUNABLES_REGISTRATION_CONTEXTS
+
+```c
+void _NETWORK_CLEAR_TUNABLES_REGISTRATION_CONTEXTS()  // 0x0C87C83C8950432B
+```
+
+build 3258
+
+> Clears tunable contexts that were set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS
+
+## _NETWORK_CONFIRM_GAME_RESTART
+
+```c
+void _NETWORK_CONFIRM_GAME_RESTART()  // 0x0A141818CA2311AD
+```
+
+build 3323
+
+> If the restart reason is 4 (BE_RESTART_EF_DISABLED_WITH_BE), will cause the game to exit with exit code 622011. Otherwise exits with code 622010. Has no effect when a restart hasn't been requested (reason == 0 or reason > 6).
+> 
+> Note that this 'confirmation' itself does not restart the game, a call to QUIT_GAME or similar is required afterwards.
+
+## _NETWORK_DOES_COMMUNICATION_GROUP_HAVE_PERMISSION
+
+```c
+BOOL _NETWORK_DOES_COMMUNICATION_GROUP_HAVE_PERMISSION(int communicationType)  // 0xDBDF80673BBA3D65
+```
+
+build 3095 · old names: `_NETWORK_DOES_COMMUNICATION_GROUP_EXIST`
+
+> communicationType: 0 = VOICE; 1 = TEXT_CHAT; 2 = TEXT_MESSAGE; 3 = EMAIL; 4 = USER_CONTENT; 5 = USER_TEXT
+
+## _NETWORK_DOES_COMMUNICATION_GROUP_HAVE_SETTINGS_ENABLED
+
+```c
+BOOL _NETWORK_DOES_COMMUNICATION_GROUP_HAVE_SETTINGS_ENABLED(int communicationType)  // 0x20C12650830A64EC
+```
+
+build 3570
+
+## _NETWORK_GET_ACCESS_CODE_LABEL_BODY
+
+```c
+const char* _NETWORK_GET_ACCESS_CODE_LABEL_BODY(int accessCode)  // 0x214CA1730793EBA8
+```
+
+build 3570
+
+## _NETWORK_GET_ACCESS_CODE_LABEL_HEADING
+
+```c
+const char* _NETWORK_GET_ACCESS_CODE_LABEL_HEADING(int accessCode)  // 0x967E6FB554E1B6DE
+```
+
+build 3570
+
+## _NETWORK_GET_BATTLEYE_ERROR_MESSAGE_LABEL
+
+```c
+const char* _NETWORK_GET_BATTLEYE_ERROR_MESSAGE_LABEL(int errorCode)  // 0xCBA50F371E45B90D
+```
+
+build 3323
+
+> 0x20211000 = HUD_BE_ERROR_FAILED_UNKNOWN
+> 0x20212000 = HUD_BE_ERROR_FAILED_CLIENT_INIT
+> 0x20213000 = HUD_BE_ERROR_FAILED_SERVER_INIT
+> 0x20214000 = HUD_BE_ERROR_FAILED_AUTH_ATTEMPTS
+> 0x20215000 = HUD_BE_ERROR_UNTRUSTED_HOST
+> 0x20216000 = HUD_BE_ERROR_KICKED
+> 0x20217000 = HUD_BE_ERROR_BANNED
+> 0x50140000 = HUD_BE_BLOCK_BANNED
+> 
+> Note: an invalid error code returns a null pointer!
+
+## _NETWORK_GET_BROADCAST_DATA_HOST_UPDATE_SIZE
+
+```c
+int _NETWORK_GET_BROADCAST_DATA_HOST_UPDATE_SIZE(Hash scriptNameHash, int instance, Hash positionHash, int handlerNum)  // 0xE448693B3EA3B92C
+```
+
+build 3586
+
+## _NETWORK_GET_BROADCAST_DATA_PLAYER_UPDATE_SIZE
+
+```c
+int _NETWORK_GET_BROADCAST_DATA_PLAYER_UPDATE_SIZE(Hash scriptNameHash, int instance, Hash positionHash, int handlerNum)  // 0xAC3F722321800755
+```
+
+build 3586
+
+## _NETWORK_GET_COMMUNICATION_GROUP_DEFAULT_FLAGS
+
+```c
+int _NETWORK_GET_COMMUNICATION_GROUP_DEFAULT_FLAGS(int communicationType)  // 0x97F35B898D2D067F
+```
+
+build 3570
+
+## _NETWORK_GET_COMMUNICATION_GROUP_FLAGS
+
+```c
+int _NETWORK_GET_COMMUNICATION_GROUP_FLAGS(int communicationType)  // 0x40DF02F371F40883
+```
+
+build 3095
+
+> Returns communicationGroupFlag
+> communicationType: see 0xDBDF80673BBA3D65
+> 
+> enum eCommunicationGroupFlag
+> {
+> 	COMMUNICATION_GROUP_LOCAL_PLAYER = 1 << 0,
+> 	COMMUNICATION_GROUP_FRIENDS = 1 << 1,
+> 	COMMUNICATION_GROUP_SMALL_CREW = 1 << 2,
+> 	COMMUNICATION_GROUP_LARGE_CREW = 1 << 3,
+> 	COMMUNICATION_GROUP_RECENT_PLAYER = 1 << 4,
+> 	COMMUNICATION_GROUP_SAME_SESSION = 1 << 5,
+> 	COMMUNICATION_GROUP_SAME_TEAM = 1 << 6,
+> 	COMMUNICATION_GROUP_INVALID = 1 << 7,
+> };
+
+## _NETWORK_GET_COMMUNICATION_GROUP_VALUE
+
+```c
+int _NETWORK_GET_COMMUNICATION_GROUP_VALUE(int communicationType)  // 0xBF66ACD9AE81A99F
+```
+
+build 3570
+
+## _NETWORK_GET_DUMP_OF_ASSET_VERIFIER
+
+```c
+void _NETWORK_GET_DUMP_OF_ASSET_VERIFIER(Any* p0)  // 0x69D05E1EAD74B9DD
+```
+
+build 3717
+
+## _NETWORK_GET_GAME_RESTART_REASON
+
+```c
+int _NETWORK_GET_GAME_RESTART_REASON()  // 0x7F7E8401F81CB65B
+```
+
+build 3323
+
+> enum eNetworkGameRestartReason
+> {
+> 	BE_RESTART_SERVICE_NOT_RUNNING = 1, 	// BattlEye service not running
+> 	BE_RESTART_SERVICE_NEEDS_UPDATE, 		// BattlEye service needs an update
+> 	BE_RESTART_UNKNOWN_REASON,				// Unknown BattlEye reason
+> 	BE_RESTART_EF_DISABLED_WITH_BE,			// BattlEye Enforcement Flag is disabled, but BattlEye is active
+> 	BE_RESTART_EF_ENABLED_NO_BE,			// BattlEye Enforcement Flag is enabled, but BattlEye is not active
+> 	BE_RESTART_BE_MODULES_FAILED_TO_LOAD,	// BattlEye modules failed to load
+> 	NUM_NETWORK_GAME_RESTART_REASONS
+> };
+
+## _NETWORK_GET_GAME_RESTART_REASON_MESSAGE_LABEL
+
+```c
+const char* _NETWORK_GET_GAME_RESTART_REASON_MESSAGE_LABEL()  // 0x47B11D51FC50A259
+```
+
+build 3323
+
+> Returns the restart reason as a string, see _NETWORK_GET_GAME_RESTART_REASON. Returns a null pointer when a restart hasn't been requested (reason == 0 or reason > 6).
+
+## _NETWORK_GET_HOST_BROADCAST_DATA_SIZE_UNSYNCED
+
+```c
+int _NETWORK_GET_HOST_BROADCAST_DATA_SIZE_UNSYNCED(Hash scriptNameHash, int instance, Hash positionHash, int handlerNum)  // 0x72C8588ABE22C972
+```
+
+build 3586
+
+## _NETWORK_GET_PLAYER_BROADCAST_DATA_SIZE_UNSYNCED
+
+```c
+int _NETWORK_GET_PLAYER_BROADCAST_DATA_SIZE_UNSYNCED(Hash scriptNameHash, int instance, Hash positionHash, int handlerNum)  // 0xB99CD664FD4720A1
+```
+
+build 3586
+
+## _NETWORK_GET_RANDOM_FLOAT_RANGED
+
+```c
+float _NETWORK_GET_RANDOM_FLOAT_RANGED(float rangeStart, float rangeEnd)  // 0x04BD27B5ACB67067
+```
+
+build 2802
+
+## _NETWORK_GET_TUNABLES_REGISTRATION_BOOL
+
+```c
+BOOL _NETWORK_GET_TUNABLES_REGISTRATION_BOOL(Hash tunableName, BOOL defaultValue)  // 0xB327CF1B8C2C0EA3
+```
+
+build 3258
+
+> Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.
+> Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
+
+## _NETWORK_GET_TUNABLES_REGISTRATION_FLOAT
+
+```c
+float _NETWORK_GET_TUNABLES_REGISTRATION_FLOAT(Hash tunableName, float defaultValue)  // 0x367E5E33E7F0DD1A
+```
+
+build 3258
+
+> Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.
+> Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
+
+## _NETWORK_GET_TUNABLES_REGISTRATION_INT
+
+```c
+int _NETWORK_GET_TUNABLES_REGISTRATION_INT(Hash tunableName, int defaultValue)  // 0x0D94071E55F4C9CE
+```
+
+build 3258
+
+> Checks if the given tunable exists and returns its value. Otherwise returns defaultValue.
+> Possible tunable contexts must first be set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS.
+
+## _NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE
+
+```c
+BOOL _NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE(int checkType, Any* gamerHandle)  // 0x62E29CDA11F9C230
+```
+
+build 3258
+
+> _NETWORK_HAS_P*
+> checkType 3 is similar as using 0x9F633448E4C73207
+
+## _NETWORK_HAS_ROS_PRIVILEGE_MP_TEXT_COMMUNICATION
+
+```c
+BOOL _NETWORK_HAS_ROS_PRIVILEGE_MP_TEXT_COMMUNICATION()  // 0xD9719341663C385F
+```
+
+build 3095
+
+> Checks for privilege 29
+
+## _NETWORK_HAS_ROS_PRIVILEGE_MP_VOICE_COMMUNICATION
+
+```c
+BOOL _NETWORK_HAS_ROS_PRIVILEGE_MP_VOICE_COMMUNICATION()  // 0x8956A309BE90057C
+```
+
+build 3095
+
+> Checks for privilege 30
+
+## _NETWORK_HAS_ROS_PRIVILEGE_REPORTING
+
+```c
+BOOL _NETWORK_HAS_ROS_PRIVILEGE_REPORTING()  // 0x9BA54B3CFB82ADDD
+```
+
+build 3258
+
+> Checks for privilege 31
+
+## _NETWORK_HAVE_PLATFORM_COMMUNICATION_PRIVILEGES
+
+```c
+BOOL _NETWORK_HAVE_PLATFORM_COMMUNICATION_PRIVILEGES()  // 0xE1E02509169C124E
+```
+
+build 3095
+
+> Appears to be PlayStation-specific. Always returns true on other platforms if signed in with the primary user profile
+
+## _NETWORK_HIDE_ENTITY_IN_TUTORIAL_SESSION
+
+```c
+void _NETWORK_HIDE_ENTITY_IN_TUTORIAL_SESSION(int netHandle, BOOL hide)  // 0xCFE359CCCFE359CC
+```
+
+build 3258
+
+## _NETWORK_INVITE_CLEAR_JOIN_FAIL_REASON
+
+```c
+void _NETWORK_INVITE_CLEAR_JOIN_FAIL_REASON()  // 0x8EF5F5811A940F82
+```
+
+build 3179
+
+> Clears the failed invite join alert reason
+
+## _NETWORK_INVITE_GET_JOIN_FAIL_REASON
+
+```c
+const char* _NETWORK_INVITE_GET_JOIN_FAIL_REASON()  // 0x7B335F84501145BB
+```
+
+build 3179
+
+> Retrieves the failed invite join alert reason
+
+## _NETWORK_IS_SPECIAL_TUTORIAL_SESSION
+
+```c
+BOOL _NETWORK_IS_SPECIAL_TUTORIAL_SESSION()  // 0x4666CD7431DE98E2
+```
+
+build 3717
+
+## _NETWORK_LOAD_GAMER_DISPLAY_NAME
+
+```c
+const char* _NETWORK_LOAD_GAMER_DISPLAY_NAME(Any* gamerHandle)  // 0x338ECE3637937BC2
+```
+
+build 3258
+
+> Returns the name from given friend gamer handle.
+
+## _NETWORK_MULTIPLAYER_CROSSPLAY_NOT_ALLOWED
+
+```c
+BOOL _NETWORK_MULTIPLAYER_CROSSPLAY_NOT_ALLOWED()  // 0xA6BC0D9BCF9662FA
+```
+
+build 3504
+
+> For the XboxPC version this returns true if XPRIVILEGE_MULTIPLAYER_SESSIONS is granted but XPRIVILEGE_CROSS_PLAY is NOT granted.
+> For more information, see https://learn.microsoft.com/en-us/gaming/gdk/_content/gc/live/features/identity/privileges/concepts/live-user-privileges-client#privilege-ids-to-check
+> 
+> Always returns false for non-XboxPC versions.
+
+## _NETWORK_SESSION_LEAVE_INCLUDING_REASON
+
+```c
+BOOL _NETWORK_SESSION_LEAVE_INCLUDING_REASON(int leaveFlags, int leaveReason)  // 0xE0128328CF1FD9F4
+```
+
+build 3095
+
+## _NETWORK_SET_COMMUNICATION_GROUP_FLAGS
+
+```c
+void _NETWORK_SET_COMMUNICATION_GROUP_FLAGS(int communicationType, int communicationGroupFlag)  // 0xE549F846DE7D32D5
+```
+
+build 3095
+
+> communicationType: see 0xDBDF80673BBA3D65
+> communicationGroupFlag: see 0x40DF02F371F40883
+
+## _NETWORK_SET_IGNORE_VEHICLE_RAMMED_BY_NON_VEHICLE
+
+```c
+void _NETWORK_SET_IGNORE_VEHICLE_RAMMED_BY_NON_VEHICLE(BOOL toggle)  // 0x67F7C81C1395672A
+```
+
+build 3717
+
+## _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS
+
+```c
+void _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS(Any* tunableContextData)  // 0x014A73449675121D
+```
+
+build 3258
+
+> Sets up tunable contexts for _NETWORK_GET_TUNABLES_REGISTRATION_{BOOL|INT|FLOAT}
+
+## _NETWORK_SET_TUTORIAL_SPECIAL_SESSION
+
+```c
+void _NETWORK_SET_TUTORIAL_SPECIAL_SESSION(BOOL toggle)  // 0x35AEB4AC7C73C6E1
+```
+
+build 3717
+
+## _NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_PED_DAMAGE
+
+```c
+void _NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_PED_DAMAGE(Entity entity, BOOL trigger)  // 0xE9D0244ACBEE1BC4
+```
+
+build 3258
+
+## _SET_FREEMODE_REPORT_DATA
+
+```c
+void _SET_FREEMODE_REPORT_DATA(Any* gamerHandle, Any* reportData)  // 0x527803286A8B6C81
+```
+
+build 3258
+
+> reportData includes mc, ceo, yacht and licenceplate names
+
+## _UGC_CLEAR_NOMINATED_JOB
+
+```c
+BOOL _UGC_CLEAR_NOMINATED_JOB(const char* contentTypeName)  // 0x24B3A7EB827EEDCF
+```
+
+build 3889
+
+## _UGC_GET_NOMINATED_CONTENT
+
+```c
+BOOL _UGC_GET_NOMINATED_CONTENT(int offset, int maxCount, const char* contentTypeName, Any* p3)  // 0xB1556B9C1425B727
+```
+
+build 3889
+
+## _UGC_SET_NOMINATED_JOB
+
+```c
+BOOL _UGC_SET_NOMINATED_JOB(const char* contentId, BOOL nominated, const char* contentTypeName)  // 0xEA92F1225A53BE3F
+```
+
+build 3889
+
+## ACTIVATE_DAMAGE_TRACKER_ON_NETWORK_ID
+
+```c
+void ACTIVATE_DAMAGE_TRACKER_ON_NETWORK_ID(int netID, BOOL toggle)  // 0xD45B1FFCCD52FF19
+```
+
+build 323
+
+## ACTIVATE_DAMAGE_TRACKER_ON_PLAYER
+
+```c
+void ACTIVATE_DAMAGE_TRACKER_ON_PLAYER(Player player, BOOL toggle)  // 0xBEC0816FF5ACBCDA
+```
+
+build 757 · old names: `_ACTIVATE_DAMAGE_TRACKER_ON_PLAYER`
+
+## ARE_CUTSCENE_ENTITIES_NETWORKED
+
+```c
+BOOL ARE_CUTSCENE_ENTITIES_NETWORKED()  // 0x66D6A5E9C511214A
+```
+
+build 2699 · old names: `_NETWORK_ARE_CUTSCENE_ENTITIES`
+
+> Getter for SET_NETWORK_CUTSCENE_ENTITIES.
+
+## BAD_SPORT_PLAYER_LEFT_DETECTED
+
+```c
+BOOL BAD_SPORT_PLAYER_LEFT_DETECTED(Any* gamerHandle, int event, int amountReceived)  // 0xEC5E3AF5289DCA81
+```
+
+build 323
+
+## CAN_REGISTER_MISSION_DOORS
+
+```c
+BOOL CAN_REGISTER_MISSION_DOORS(Any p0)  // 0xE16AA70CE9BEEDC3
+```
+
+build 877
+
+## CAN_REGISTER_MISSION_ENTITIES
+
+```c
+BOOL CAN_REGISTER_MISSION_ENTITIES(int ped_amt, int vehicle_amt, int object_amt, int pickup_amt)  // 0x69778E7564BADE6D
+```
+
+build 323
+
+## CAN_REGISTER_MISSION_OBJECTS
+
+```c
+BOOL CAN_REGISTER_MISSION_OBJECTS(int amount)  // 0x800DD4721A8B008B
+```
+
+build 323
+
+## CAN_REGISTER_MISSION_PEDS
+
+```c
+BOOL CAN_REGISTER_MISSION_PEDS(int amount)  // 0xBCBF4FEF9FA5D781
+```
+
+build 323
+
+## CAN_REGISTER_MISSION_PICKUPS
+
+```c
+BOOL CAN_REGISTER_MISSION_PICKUPS(int amount)  // 0x0A49D1CB6E34AF72
+```
+
+build 757 · old names: `_CAN_REGISTER_MISSION_PICKUPS`
+
+## CAN_REGISTER_MISSION_VEHICLES
+
+```c
+BOOL CAN_REGISTER_MISSION_VEHICLES(int amount)  // 0x7277F1F2E085EE74
+```
+
+build 323
+
+## CLEAR_SERVICE_EVENT_ARGUMENTS
+
+```c
+void CLEAR_SERVICE_EVENT_ARGUMENTS()  // 0x966DD84FB6A46017
+```
+
+build 323 · old names: `_CLEAR_LAUNCH_PARAMS`
+
+> This native does absolutely nothing, just a nullsub
+
+## CLOUD_CHECK_AVAILABILITY
+
+```c
+void CLOUD_CHECK_AVAILABILITY()  // 0x4F18196C8D38768D
+```
+
+build 323 · old names: `_DOWNLOAD_CHECK`
+
+> Downloads prod.cloud.rockstargames.com/titles/gta5/[platform]/check.json
+
+## CLOUD_DELETE_MEMBER_FILE
+
+```c
+int CLOUD_DELETE_MEMBER_FILE(const char* p0)  // 0xC64DED7EF0D2FE37
+```
+
+build 323
+
+## CLOUD_DID_REQUEST_SUCCEED
+
+```c
+BOOL CLOUD_DID_REQUEST_SUCCEED(int requestId)  // 0x3A3D5568AF297CD5
+```
+
+build 323
+
+## CLOUD_GET_AVAILABILITY_CHECK_RESULT
+
+```c
+BOOL CLOUD_GET_AVAILABILITY_CHECK_RESULT()  // 0x0B0CC10720653F3B
+```
+
+build 323 · old names: `NETWORK_ENABLE_MOTION_DRUGGED`
+
+## CLOUD_HAS_REQUEST_COMPLETED
+
+```c
+BOOL CLOUD_HAS_REQUEST_COMPLETED(int requestId)  // 0x4C61B39930D045DA
+```
+
+build 323
+
+## CLOUD_IS_CHECKING_AVAILABILITY
+
+```c
+BOOL CLOUD_IS_CHECKING_AVAILABILITY()  // 0xC7ABAC5DE675EE3B
+```
+
+build 323
+
+## CONVERT_POSIX_TIME
+
+```c
+void CONVERT_POSIX_TIME(int posixTime, Any* timeStructure)  // 0xAC97AF97FA68E5D5
+```
+
+build 323 · old names: `_GET_DATE_AND_TIME_FROM_UNIX_EPOCH`
+
+> Takes the specified time and writes it to the structure specified in the second argument.
+> 
+> struct date_time
+> {
+>     int year;
+>     int PADDING1;
+>     int month;
+>     int PADDING2;
+>     int day;
+>     int PADDING3;
+>     int hour;
+>     int PADDING4;
+>     int minute;
+>     int PADDING5;
+>     int second;
+>     int PADDING6;
+> };
+
+## DELAY_MP_STORE_OPEN
+
+```c
+void DELAY_MP_STORE_OPEN()  // 0x265635150FB0D82E
+```
+
+build 323
+
+## FACEBOOK_CAN_POST_TO_FACEBOOK
+
+```c
+BOOL FACEBOOK_CAN_POST_TO_FACEBOOK()  // 0x43865688AE10F0D7
+```
+
+build 323 · old names: `_FACEBOOK_IS_AVAILABLE`
+
+## FACEBOOK_DID_POST_SUCCEED
+
+```c
+BOOL FACEBOOK_DID_POST_SUCCEED()  // 0xA75E2B6733DA5142
+```
+
+build 323 · old names: `_FACEBOOK_DO_UNK_CHECK`
+
+## FACEBOOK_HAS_POST_COMPLETED
+
+```c
+BOOL FACEBOOK_HAS_POST_COMPLETED()  // 0x62B9FEC9A11F10EF
+```
+
+build 323 · old names: `_FACEBOOK_IS_SENDING_DATA`
+
+## FACEBOOK_POST_COMPLETED_HEIST
+
+```c
+BOOL FACEBOOK_POST_COMPLETED_HEIST(const char* heistName, int cashEarned, int xpEarned)  // 0x098AB65B9ED9A9EC
+```
+
+build 323 · old names: `_FACEBOOK_SET_HEIST_COMPLETE`
+
+## FACEBOOK_POST_COMPLETED_MILESTONE
+
+```c
+BOOL FACEBOOK_POST_COMPLETED_MILESTONE(int milestoneId)  // 0x0AE1F1653B554AB9
+```
+
+build 323 · old names: `_FACEBOOK_SET_MILESTONE_COMPLETE`
+
+## FACEBOOK_POST_CREATE_CHARACTER
+
+```c
+BOOL FACEBOOK_POST_CREATE_CHARACTER()  // 0xDC48473142545431
+```
+
+build 323 · old names: `_FACEBOOK_SET_CREATE_CHARACTER_COMPLETE`
+
+## FADE_OUT_LOCAL_PLAYER
+
+```c
+void FADE_OUT_LOCAL_PLAYER(BOOL p0)  // 0x416DBD4CD6ED8DD2
+```
+
+build 323
+
+> Hardcoded to not work in SP.
+
+## FILLOUT_PM_PLAYER_LIST
+
+```c
+BOOL FILLOUT_PM_PLAYER_LIST(Any* gamerHandle, Any p1, Any p2)  // 0xCBBD7C4991B64809
+```
+
+build 323
+
+## FILLOUT_PM_PLAYER_LIST_WITH_NAMES
+
+```c
+BOOL FILLOUT_PM_PLAYER_LIST_WITH_NAMES(Any* p0, Any* p1, Any p2, Any p3)  // 0x716B6DB9D1886106
+```
+
+build 323
+
+## GET_CLOUD_TIME_AS_INT
+
+```c
+int GET_CLOUD_TIME_AS_INT()  // 0x9A73240B49945C76
+```
+
+build 323
+
+> Returns POSIX timestamp, an int representing the cloud time.
+
+## GET_CLOUD_TIME_AS_STRING
+
+```c
+const char* GET_CLOUD_TIME_AS_STRING()  // 0xF12E6CD06C73D69E
+```
+
+build 1103 · old names: `_GET_CLOUD_TIME_AS_STRING`
+
+> Same as GET_CLOUD_TIME_AS_INT but returns the value as a hex string (%I64X).
+
+## GET_COMMERCE_ITEM_CAT
+
+```c
+const char* GET_COMMERCE_ITEM_CAT(int index, int index2)  // 0x6F44CBF56D79FAC0
+```
+
+build 323
+
+> index2 is unused
+
+## GET_COMMERCE_ITEM_ID
+
+```c
+const char* GET_COMMERCE_ITEM_ID(int index)  // 0x662635855957C411
+```
+
+build 323
+
+## GET_COMMERCE_ITEM_NAME
+
+```c
+const char* GET_COMMERCE_ITEM_NAME(int index)  // 0xB4271092CA7EDF48
+```
+
+build 323
+
+## GET_COMMERCE_ITEM_NUM_CATS
+
+```c
+int GET_COMMERCE_ITEM_NUM_CATS(int index)  // 0x2A7776C709904AB0
+```
+
+build 323
+
+## GET_COMMERCE_ITEM_TEXTURENAME
+
+```c
+const char* GET_COMMERCE_ITEM_TEXTURENAME(int index)  // 0x722F5D28B61C5EA8
+```
+
+build 323
+
+## GET_COMMERCE_PRODUCT_PRICE
+
+```c
+const char* GET_COMMERCE_PRODUCT_PRICE(int index)  // 0xCA94551B50B4932C
+```
+
+build 323
+
+## GET_CONTENT_TO_LOAD_TYPE
+
+```c
+int GET_CONTENT_TO_LOAD_TYPE()  // 0x8B0C2964BA471961
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## GET_IS_LAUNCH_FROM_LIVE_AREA
+
+```c
+BOOL GET_IS_LAUNCH_FROM_LIVE_AREA()  // 0x88B588B41FF7868E
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT
+
+```c
+BOOL GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT()  // 0x67FC09BC554A75E5
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## GET_MAX_NUM_NETWORK_OBJECTS
+
+```c
+int GET_MAX_NUM_NETWORK_OBJECTS()  // 0xC7BE335216B5EC7C
+```
+
+build 323
+
+## GET_MAX_NUM_NETWORK_PEDS
+
+```c
+int GET_MAX_NUM_NETWORK_PEDS()  // 0x0C1F7D49C39D2289
+```
+
+build 323
+
+## GET_MAX_NUM_NETWORK_PICKUPS
+
+```c
+int GET_MAX_NUM_NETWORK_PICKUPS()  // 0xA72835064DD63E4C
+```
+
+build 323
+
+## GET_MAX_NUM_NETWORK_VEHICLES
+
+```c
+int GET_MAX_NUM_NETWORK_VEHICLES()  // 0x0AFCE529F69B21FF
+```
+
+build 323
+
+## GET_NETWORK_TIME
+
+```c
+int GET_NETWORK_TIME()  // 0x7A5487FE9FAA6B48
+```
+
+build 323
+
+## GET_NETWORK_TIME_ACCURATE
+
+```c
+int GET_NETWORK_TIME_ACCURATE()  // 0x89023FBBF9200E9F
+```
+
+build 323
+
+> Returns the same value as GET_NETWORK_TIME in freemode, but as opposed to `GET_NETWORK_TIME` it always gets the most recent time, instead of once per tick.
+> Could be used for benchmarking since it can return times in ticks.
+
+## GET_NUM_COMMERCE_ITEMS
+
+```c
+int GET_NUM_COMMERCE_ITEMS()  // 0xF2EAC213D5EA0623
+```
+
+build 323
+
+## GET_NUM_CREATED_MISSION_OBJECTS
+
+```c
+int GET_NUM_CREATED_MISSION_OBJECTS(BOOL p0)  // 0x12B6281B6C6706C0
+```
+
+build 323
+
+## GET_NUM_CREATED_MISSION_PEDS
+
+```c
+int GET_NUM_CREATED_MISSION_PEDS(BOOL p0)  // 0xCB215C4B56A7FAE7
+```
+
+build 323
+
+## GET_NUM_CREATED_MISSION_VEHICLES
+
+```c
+int GET_NUM_CREATED_MISSION_VEHICLES(BOOL p0)  // 0x0CD9AB83489430EA
+```
+
+build 323
+
+## GET_NUM_RESERVED_MISSION_OBJECTS
+
+```c
+int GET_NUM_RESERVED_MISSION_OBJECTS(BOOL p0, Any p1)  // 0xAA81B5F10BC43AC2
+```
+
+build 323
+
+> p0 appears to be for MP
+
+## GET_NUM_RESERVED_MISSION_PEDS
+
+```c
+int GET_NUM_RESERVED_MISSION_PEDS(BOOL p0, Any p1)  // 0x1F13D5AE5CB17E17
+```
+
+build 323
+
+> p0 appears to be for MP
+
+## GET_NUM_RESERVED_MISSION_VEHICLES
+
+```c
+int GET_NUM_RESERVED_MISSION_VEHICLES(BOOL p0, Any p1)  // 0xCF3A965906452031
+```
+
+build 323
+
+> p0 appears to be for MP
+
+## GET_ONLINE_VERSION
+
+```c
+const char* GET_ONLINE_VERSION()  // 0xFCA9373EF340AC0A
+```
+
+build 323 · old names: `_GET_GAME_VERSION`, `_GET_ONLINE_VERSION`
+
+> Online version is defined here: update\update.rpf\common\data\version.txt
+> 
+> Example:
+> 
+> [ONLINE_VERSION_NUMBER]
+> 1.33
+> 
+> GET_ONLINE_VERSION() will return "1.33"
+
+## GET_RESERVED_MISSION_ENTITIES_IN_AREA
+
+```c
+void GET_RESERVED_MISSION_ENTITIES_IN_AREA(float x, float y, float z, Any p3, Any* out1, Any* out2, Any* out3)  // 0xE42D626EEC94E5D9
+```
+
+build 1290 · old names: `_GET_RESERVATIONS_FOR_SLOT_WORLD_POSITION`
+
+## GET_STATUS_OF_TEXTURE_DOWNLOAD
+
+```c
+int GET_STATUS_OF_TEXTURE_DOWNLOAD(int p0)  // 0x8BD6C6DEA20E82C6
+```
+
+build 323 · old names: `_GET_STATUS_OF_TEXTURE_DOWNLOAD`
+
+> 0 = succeeded
+> 1 = pending
+> 2 = failed
+
+## GET_TIME_AS_STRING
+
+```c
+const char* GET_TIME_AS_STRING(int time)  // 0x9E23B1777A927DAD
+```
+
+build 323 · old names: `_FORMAT_TIME`
+
+## GET_TIME_DIFFERENCE
+
+```c
+int GET_TIME_DIFFERENCE(int timeA, int timeB)  // 0xA2C6FC031D46FFF0
+```
+
+build 323
+
+> Subtracts the second argument from the first.
+
+## GET_TIME_OFFSET
+
+```c
+int GET_TIME_OFFSET(int timeA, int timeB)  // 0x017008CCDAD48503
+```
+
+build 323
+
+> Adds the first argument to the second.
+
+## GET_USER_PREMIUM_ACCESS
+
+```c
+int GET_USER_PREMIUM_ACCESS()  // 0x754615490A029508
+```
+
+build 1290
+
+> Checks some commerce stuff
+
+## GET_USER_STARTER_ACCESS
+
+```c
+int GET_USER_STARTER_ACCESS()  // 0x155467ACA0F55705
+```
+
+build 1290
+
+> Checks some commerce stuff
+
+## HAS_NETWORK_TIME_STARTED
+
+```c
+BOOL HAS_NETWORK_TIME_STARTED()  // 0x46718ACEEDEAFC84
+```
+
+build 323
+
+## IS_COMMERCE_DATA_FETCH_IN_PROGRESS
+
+```c
+BOOL IS_COMMERCE_DATA_FETCH_IN_PROGRESS()  // 0x1D4DC17C38FEAFF0
+```
+
+build 323
+
+## IS_COMMERCE_DATA_VALID
+
+```c
+BOOL IS_COMMERCE_DATA_VALID()  // 0xEA14EEF5B7CD2C30
+```
+
+build 323
+
+## IS_COMMERCE_STORE_OPEN
+
+```c
+BOOL IS_COMMERCE_STORE_OPEN()  // 0x2EAC52B4019E2782
+```
+
+build 323
+
+## IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID
+
+```c
+BOOL IS_DAMAGE_TRACKER_ACTIVE_ON_NETWORK_ID(int netID)  // 0x6E192E33AD436366
+```
+
+build 323
+
+## IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER
+
+```c
+BOOL IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER(Player player)  // 0xB2092A1EAA7FD45F
+```
+
+build 757 · old names: `_IS_DAMAGE_TRACKER_ACTIVE_ON_PLAYER`
+
+## IS_ENTITY_A_GHOST
+
+```c
+BOOL IS_ENTITY_A_GHOST(Entity entity)  // 0x21D04D7BC538C146
+```
+
+build 323 · old names: `_IS_ENTITY_A_GHOST`, `_IS_ENTITY_GHOSTED_TO_LOCAL_PLAYER`
+
+## IS_ENTITY_IN_GHOST_COLLISION
+
+```c
+BOOL IS_ENTITY_IN_GHOST_COLLISION(Entity entity)  // 0x7EF7649B64D7FF10
+```
+
+build 944
+
+## IS_NETWORK_ID_OWNED_BY_PARTICIPANT
+
+```c
+BOOL IS_NETWORK_ID_OWNED_BY_PARTICIPANT(int netId)  // 0xA1607996431332DF
+```
+
+build 323 · old names: `_NETWORK_CAN_NETWORK_ID_BE_SEEN`
+
+## IS_NETWORK_VEHICLE_RUNNING_RESPOT_TIMER
+
+```c
+BOOL IS_NETWORK_VEHICLE_RUNNING_RESPOT_TIMER(int networkID)  // 0xDD7CEF5B3A4DA8A6
+```
+
+build 2802
+
+## IS_OBJECT_REASSIGNMENT_IN_PROGRESS
+
+```c
+BOOL IS_OBJECT_REASSIGNMENT_IN_PROGRESS()  // 0x28123C8B056CC8AA
+```
+
+build 3274
+
+## IS_PLAYER_IN_CUTSCENE
+
+```c
+BOOL IS_PLAYER_IN_CUTSCENE(Player player)  // 0xE73092F4157CD126
+```
+
+build 323
+
+## IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE
+
+```c
+BOOL IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE(float p0, float p1, float p2, float p3)  // 0xD82CF8E64C8729D8
+```
+
+build 323
+
+## IS_SPHERE_VISIBLE_TO_PLAYER
+
+```c
+BOOL IS_SPHERE_VISIBLE_TO_PLAYER(Any p0, float p1, float p2, float p3, float p4)  // 0xDC3A310219E5DA62
+```
+
+build 323
+
+## IS_STORE_AVAILABLE_TO_USER
+
+```c
+BOOL IS_STORE_AVAILABLE_TO_USER()  // 0x883D79C4071E18B3
+```
+
+build 323
+
+## IS_TIME_EQUAL_TO
+
+```c
+BOOL IS_TIME_EQUAL_TO(int timeA, int timeB)  // 0xF5BC95857BD6D512
+```
+
+build 323 · old names: `_ARE_INTEGERS_EQUAL`
+
+> Returns true if the two times are equal; otherwise returns false.
+
+## IS_TIME_LESS_THAN
+
+```c
+BOOL IS_TIME_LESS_THAN(int timeA, int timeB)  // 0xCB2CF5148012C8D0
+```
+
+build 323 · old names: `_SUBTRACT_B_FROM_A_AND_CHECK_IF_NEGATIVE`
+
+> Subtracts the second argument from the first, then returns whether the result is negative.
+
+## IS_TIME_MORE_THAN
+
+```c
+BOOL IS_TIME_MORE_THAN(int timeA, int timeB)  // 0xDE350F8651E4346C
+```
+
+build 323 · old names: `_SUBTRACT_A_FROM_B_AND_CHECK_IF_NEGATIVE`
+
+> Subtracts the first argument from the second, then returns whether the result is negative.
+
+## IS_USER_OLD_ENOUGH_TO_ACCESS_STORE
+
+```c
+BOOL IS_USER_OLD_ENOUGH_TO_ACCESS_STORE()  // 0x59328EB08C5CEB2B
+```
+
+build 323
+
+## NET_TO_ENT
+
+```c
+Entity NET_TO_ENT(int netHandle)  // 0xBFFEAB45A9A9094A
+```
+
+build 323
+
+> gets the entity id of a network id
+
+## NET_TO_OBJ
+
+```c
+Object NET_TO_OBJ(int netHandle)  // 0xD8515F5FEA14CB3F
+```
+
+build 323
+
+> gets the object id of a network id
+
+## NET_TO_PED
+
+```c
+Ped NET_TO_PED(int netHandle)  // 0xBDCD95FC216A8B3E
+```
+
+build 323
+
+> gets the ped id of a network id
+
+## NET_TO_VEH
+
+```c
+Vehicle NET_TO_VEH(int netHandle)  // 0x367B936610BA360C
+```
+
+build 323
+
+## NETWORK_ACCEPT_PRESENCE_INVITE
+
+```c
+BOOL NETWORK_ACCEPT_PRESENCE_INVITE(int p0)  // 0xFA91550DF9318B22
+```
+
+build 323
+
+## NETWORK_ACCESS_TUNABLE_BOOL
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_BOOL(const char* tunableContext, const char* tunableName)  // 0xAA6A47A573ABB75A
+```
+
+build 323
+
+## NETWORK_ACCESS_TUNABLE_BOOL_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_BOOL_HASH(Hash tunableContext, Hash tunableName)  // 0xEA16B69D93D71A45
+```
+
+build 323 · old names: `_NETWORK_ACCESS_TUNABLE_BOOL_HASH`
+
+## NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_BOOL_MODIFICATION_DETECTION_REGISTRATION_HASH(Hash contextHash, Hash nameHash, BOOL* value)  // 0x697F508861875B42
+```
+
+build 393 · old names: `_NETWORK_REGISTER_TUNABLE_BOOL_HASH`
+
+## NETWORK_ACCESS_TUNABLE_FLOAT
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_FLOAT(const char* tunableContext, const char* tunableName, float* value)  // 0xE5608CA7BC163A5F
+```
+
+build 323
+
+## NETWORK_ACCESS_TUNABLE_FLOAT_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_FLOAT_HASH(Hash tunableContext, Hash tunableName, float* value)  // 0x972BC203BBC4C4D5
+```
+
+build 323 · old names: `_NETWORK_ACCESS_TUNABLE_FLOAT_HASH`
+
+## NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_FLOAT_MODIFICATION_DETECTION_REGISTRATION_HASH(Hash contextHash, Hash nameHash, float* value)  // 0x1950DAE9848A4739
+```
+
+build 393 · old names: `_NETWORK_REGISTER_TUNABLE_FLOAT_HASH`
+
+## NETWORK_ACCESS_TUNABLE_INT
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_INT(const char* tunableContext, const char* tunableName, int* value)  // 0x8BE1146DFD5D4468
+```
+
+build 323
+
+## NETWORK_ACCESS_TUNABLE_INT_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_INT_HASH(Hash tunableContext, Hash tunableName, int* value)  // 0x40FCE03E50E8DBE8
+```
+
+build 323 · old names: `_NETWORK_ACCESS_TUNABLE_INT_HASH`
+
+## NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_INT_MODIFICATION_DETECTION_REGISTRATION_HASH(Hash contextHash, Hash nameHash, int* value)  // 0x3A8B55FDA4C8DDEF
+```
+
+build 393 · old names: `_NETWORK_REGISTER_TUNABLE_INT_HASH`
+
+## NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR
+
+```c
+BOOL NETWORK_ACCESS_TUNABLE_MODIFICATION_DETECTION_CLEAR()  // 0xFAFC23AEE23868DB
+```
+
+build 393
+
+## NETWORK_ACTION_FOLLOW_INVITE
+
+```c
+BOOL NETWORK_ACTION_FOLLOW_INVITE()  // 0xC88156EBB786F8D5
+```
+
+build 323
+
+## NETWORK_ADD_CLIENT_ENTITY_ANGLED_AREA
+
+```c
+int NETWORK_ADD_CLIENT_ENTITY_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float radius)  // 0x2B1C623823DB0D9D
+```
+
+build 1103
+
+## NETWORK_ADD_CLIENT_ENTITY_AREA
+
+```c
+int NETWORK_ADD_CLIENT_ENTITY_AREA(float x1, float y1, float z1, float x2, float y2, float z2)  // 0x25B99872D588A101
+```
+
+build 323 · old names: `NETWORK_ADD_ENTITY_DISPLAYED_BOUNDARIES`
+
+## NETWORK_ADD_ENTITY_ANGLED_AREA
+
+```c
+int NETWORK_ADD_ENTITY_ANGLED_AREA(float x1, float y1, float z1, float x2, float y2, float z2, float width)  // 0x376C6375BA60293A
+```
+
+build 323 · old names: `_NETWORK_ADD_ENTITY_ANGLED_AREA`
+
+> To remove, see: NETWORK_REMOVE_ENTITY_AREA
+> See IS_POINT_IN_ANGLED_AREA for the definition of an angled area.
+
+## NETWORK_ADD_ENTITY_AREA
+
+```c
+int NETWORK_ADD_ENTITY_AREA(float x1, float y1, float z1, float x2, float y2, float z2)  // 0x494C8FB299290269
+```
+
+build 323
+
+## NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE
+
+```c
+void NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE(Entity entity, int netScene, const char* animDict, const char* animName, float speed, float speedMulitiplier, int flag)  // 0xF2404D68CBC855FA
+```
+
+build 323
+
+## NETWORK_ADD_FOLLOWERS
+
+```c
+void NETWORK_ADD_FOLLOWERS(int* p0, int p1)  // 0x236406F60CF216D6
+```
+
+build 323
+
+> ..
+
+## NETWORK_ADD_FRIEND
+
+```c
+BOOL NETWORK_ADD_FRIEND(Any* gamerHandle, const char* message)  // 0x8E02D73914064223
+```
+
+build 323
+
+## NETWORK_ADD_INVALID_OBJECT_MODEL
+
+```c
+void NETWORK_ADD_INVALID_OBJECT_MODEL(Hash modelHash, Any p1)  // 0x7F562DBC212E81F9
+```
+
+build 2545 · old names: `_NETWORK_ADD_INVALID_MODEL`
+
+## NETWORK_ADD_MAP_ENTITY_TO_SYNCHRONISED_SCENE
+
+```c
+void NETWORK_ADD_MAP_ENTITY_TO_SYNCHRONISED_SCENE(int netScene, Hash modelHash, float x, float y, float z, float p5, const char* p6, float p7, float p8, int flags)  // 0x45F35C0EDC33B03B
+```
+
+build 1734
+
+> Similar structure as NETWORK_ADD_ENTITY_TO_SYNCHRONISED_SCENE but it includes this time a hash.
+> In casino_slots it is used one time in a synced scene involving a ped and the slot machine?
+
+## NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE
+
+```c
+void NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(Ped ped, int netScene, const char* animDict, const char* animnName, float speed, float speedMultiplier, int duration, int flag, float playbackRate, Any p9)  // 0x742A637471BCECD9
+```
+
+build 323
+
+## NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE_WITH_IK
+
+```c
+void NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE_WITH_IK(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6, Any p7, Any p8, Any p9)  // 0xA5EAFE473E45C442
+```
+
+build 1290
+
+## NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA
+
+```c
+void NETWORK_ADD_SYNCHRONISED_SCENE_CAMERA(int netScene, const char* animDict, const char* animName)  // 0xCF8BD3B0BD6D42D7
+```
+
+build 323
+
+## NETWORK_ALLOW_CLONING_WHILE_IN_TUTORIAL
+
+```c
+void NETWORK_ALLOW_CLONING_WHILE_IN_TUTORIAL(Any p0, Any p1)  // 0x0F1A4B45B7693B95
+```
+
+build 2189
+
+## NETWORK_ALLOW_GANG_TO_JOIN_TUTORIAL_SESSION
+
+```c
+void NETWORK_ALLOW_GANG_TO_JOIN_TUTORIAL_SESSION(int teamId, int instanceId)  // 0xFB680D403909DC70
+```
+
+build 323
+
+> teamId must be < 3, instanceId must be < 64
+
+## NETWORK_ALLOW_INVITE_PROCESS_IN_PLAYER_SWITCH
+
+```c
+void NETWORK_ALLOW_INVITE_PROCESS_IN_PLAYER_SWITCH(BOOL p0)  // 0x6B07B9CE4D390375
+```
+
+build 323 · old names: `_NETWORK_BLOCK_KICKED_PLAYERS`
+
+## NETWORK_ALLOW_REMOTE_ATTACHMENT_MODIFICATION
+
+```c
+void NETWORK_ALLOW_REMOTE_ATTACHMENT_MODIFICATION(Entity entity, BOOL toggle)  // 0x267C78C60E806B9A
+```
+
+build 323 · old names: `_NETWORK_ALLOW_LOCAL_ENTITY_ATTACHMENT`
+
+## NETWORK_ALLOW_REMOTE_SYNCED_SCENE_LOCAL_PLAYER_REQUESTS
+
+```c
+void NETWORK_ALLOW_REMOTE_SYNCED_SCENE_LOCAL_PLAYER_REQUESTS(Any p0)  // 0x144DA052257AE7D8
+```
+
+build 1103
+
+## NETWORK_AM_I_BLOCKED_BY_GAMER
+
+```c
+BOOL NETWORK_AM_I_BLOCKED_BY_GAMER(Any* gamerHandle)  // 0x15337C7C268A27B2
+```
+
+build 323
+
+## NETWORK_AM_I_BLOCKED_BY_PLAYER
+
+```c
+BOOL NETWORK_AM_I_BLOCKED_BY_PLAYER(Player player)  // 0x87F395D957D4353D
+```
+
+build 323
+
+## NETWORK_AM_I_MUTED_BY_GAMER
+
+```c
+BOOL NETWORK_AM_I_MUTED_BY_GAMER(Any* gamerHandle)  // 0xDF02A2C93F1F26DA
+```
+
+build 323
+
+## NETWORK_AM_I_MUTED_BY_PLAYER
+
+```c
+BOOL NETWORK_AM_I_MUTED_BY_PLAYER(Player player)  // 0x9D6981DFC91A8604
+```
+
+build 323
+
+## NETWORK_APPLY_CACHED_PLAYER_HEAD_BLEND_DATA
+
+```c
+BOOL NETWORK_APPLY_CACHED_PLAYER_HEAD_BLEND_DATA(Ped ped, Player player)  // 0x99B72C7ABDE5C910
+```
+
+build 323 · old names: `_NETWORK_COPY_PED_BLEND_DATA`
+
+## NETWORK_APPLY_PED_SCAR_DATA
+
+```c
+void NETWORK_APPLY_PED_SCAR_DATA(Ped ped, int p1)  // 0xE66C690248F11150
+```
+
+build 323
+
+## NETWORK_APPLY_TRANSITION_PARAMETER
+
+```c
+void NETWORK_APPLY_TRANSITION_PARAMETER(int p0, int p1)  // 0x521638ADA1BA0D18
+```
+
+build 323
+
+## NETWORK_APPLY_TRANSITION_PARAMETER_STRING
+
+```c
+void NETWORK_APPLY_TRANSITION_PARAMETER_STRING(int p0, const char* string, BOOL p2)  // 0xEBEFC2E77084F599
+```
+
+build 323
+
+## NETWORK_APPLY_VOICE_PROXIMITY_OVERRIDE
+
+```c
+void NETWORK_APPLY_VOICE_PROXIMITY_OVERRIDE(float x, float y, float z)  // 0xDBD2056652689917
+```
+
+build 323 · old names: `IS_NETWORK_VEHICLE_BEEN_DAMAGED_BY_ANY_OBJECT`
+
+## NETWORK_ARE_HANDLES_THE_SAME
+
+```c
+BOOL NETWORK_ARE_HANDLES_THE_SAME(Any* gamerHandle1, Any* gamerHandle2)  // 0x57DBA049E110F217
+```
+
+build 323
+
+## NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION
+
+```c
+BOOL NETWORK_ARE_PLAYERS_IN_SAME_TUTORIAL_SESSION(Player player, int index)  // 0x9DE986FC9A87C474
+```
+
+build 323 · old names: `_NETWORK_IS_PLAYER_EQUAL_TO_INDEX`
+
+## NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT
+
+```c
+BOOL NETWORK_ARE_SOCIAL_CLUB_POLICIES_CURRENT()  // 0xBA9775570DB788CF
+```
+
+build 323
+
+## NETWORK_ARE_TRANSITION_DETAILS_VALID
+
+```c
+BOOL NETWORK_ARE_TRANSITION_DETAILS_VALID(Any p0)  // 0x2615AA2A695930C1
+```
+
+build 323
+
+## NETWORK_ATTACH_SYNCHRONISED_SCENE_TO_ENTITY
+
+```c
+void NETWORK_ATTACH_SYNCHRONISED_SCENE_TO_ENTITY(int netScene, Entity entity, int bone)  // 0x478DCBD2A98B705A
+```
+
+build 323
+
+## NETWORK_BAIL
+
+```c
+void NETWORK_BAIL(int p0, int p1, int p2)  // 0x95914459A87EBA28
+```
+
+build 323
+
+## NETWORK_BAIL_TRANSITION
+
+```c
+void NETWORK_BAIL_TRANSITION(int p0, int p1, int p2)  // 0xEAA572036990CD1B
+```
+
+build 323
+
+## NETWORK_BLOCK_INVITES
+
+```c
+void NETWORK_BLOCK_INVITES(BOOL toggle)  // 0x34F9E9049454A7A0
+```
+
+build 323
+
+## NETWORK_BLOCK_JOIN_QUEUE_INVITES
+
+```c
+void NETWORK_BLOCK_JOIN_QUEUE_INVITES(BOOL toggle)  // 0xCFEB8AF24FC1D0BB
+```
+
+build 323 · old names: `_NETWORK_BLOCK_INVITES_2`
+
+## NETWORK_BLOCK_PROXY_MIGRATION_BETWEEN_TUTORIAL_SESSIONS
+
+```c
+void NETWORK_BLOCK_PROXY_MIGRATION_BETWEEN_TUTORIAL_SESSIONS(Any p0)  // 0xFEA7A352DDB34D52
+```
+
+build 2545
+
+## NETWORK_CACHE_LOCAL_PLAYER_HEAD_BLEND_DATA
+
+```c
+void NETWORK_CACHE_LOCAL_PLAYER_HEAD_BLEND_DATA()  // 0xBD0BE0BFC927EAC1
+```
+
+build 323
+
+## NETWORK_CAN_ACCESS_MULTIPLAYER
+
+```c
+BOOL NETWORK_CAN_ACCESS_MULTIPLAYER(int* loadingState)  // 0xAF50DA1A3F8B1BA4
+```
+
+build 323
+
+> 11 - Need to download tunables.
+> 12 - Need to download background script.
+> 
+> Returns 1 if the multiplayer is loaded, otherwhise 0.
+
+## NETWORK_CAN_BAIL
+
+```c
+BOOL NETWORK_CAN_BAIL()  // 0x580CE4438479CC61
+```
+
+build 323
+
+## NETWORK_CAN_COMMUNICATE_WITH_GAMER
+
+```c
+BOOL NETWORK_CAN_COMMUNICATE_WITH_GAMER(Any* gamerHandle)  // 0xA150A4F065806B1F
+```
+
+build 323
+
+## NETWORK_CAN_ENTER_MULTIPLAYER
+
+```c
+BOOL NETWORK_CAN_ENTER_MULTIPLAYER()  // 0x7E782A910C362C25
+```
+
+build 323
+
+## NETWORK_CAN_GAMER_PLAY_MULTIPLAYER_WITH_ME
+
+```c
+BOOL NETWORK_CAN_GAMER_PLAY_MULTIPLAYER_WITH_ME(Any* gamerHandle)  // 0x135F9B7B7ADD2185
+```
+
+build 323
+
+## NETWORK_CAN_PLAY_MULTIPLAYER_WITH_GAMER
+
+```c
+BOOL NETWORK_CAN_PLAY_MULTIPLAYER_WITH_GAMER(Any* gamerHandle)  // 0x07DD29D5E22763F1
+```
+
+build 323
+
+## NETWORK_CAN_QUEUE_FOR_PREVIOUS_SESSION_JOIN
+
+```c
+BOOL NETWORK_CAN_QUEUE_FOR_PREVIOUS_SESSION_JOIN()  // 0x2BF66D2E7414F686
+```
+
+build 323
+
+## NETWORK_CAN_RECEIVE_LOCAL_INVITE
+
+```c
+BOOL NETWORK_CAN_RECEIVE_LOCAL_INVITE(Any* gamerHandle)  // 0x421E34C55F125964
+```
+
+build 2612
+
+## NETWORK_CAN_SEND_LOCAL_INVITE
+
+```c
+BOOL NETWORK_CAN_SEND_LOCAL_INVITE(Any* gamerHandle)  // 0x021ABCBD98EC4320
+```
+
+build 2612
+
+## NETWORK_CAN_SESSION_END
+
+```c
+BOOL NETWORK_CAN_SESSION_END()  // 0x4EEBC3694E49C572
+```
+
+build 323
+
+## NETWORK_CAN_SET_WAYPOINT
+
+```c
+BOOL NETWORK_CAN_SET_WAYPOINT()  // 0xC927EC229934AF60
+```
+
+build 323
+
+## NETWORK_CAN_TEXT_CHAT_WITH_GAMER
+
+```c
+BOOL NETWORK_CAN_TEXT_CHAT_WITH_GAMER(Any* gamerHandle)  // 0xEEC02C7C0666D990
+```
+
+build 944 · old names: `_NETWORK_CAN_COMMUNICATE_WITH_GAMER_2`
+
+## NETWORK_CAN_VIEW_GAMER_USER_CONTENT
+
+```c
+BOOL NETWORK_CAN_VIEW_GAMER_USER_CONTENT(Any* gamerHandle)  // 0xB57A49545BA53CE7
+```
+
+build 323
+
+## NETWORK_CANCEL_RESPAWN_SEARCH
+
+```c
+void NETWORK_CANCEL_RESPAWN_SEARCH()  // 0xFB8F2A6F3DF08CBE
+```
+
+build 323
+
+## NETWORK_CANCEL_TRANSITION_MATCHMAKING
+
+```c
+void NETWORK_CANCEL_TRANSITION_MATCHMAKING()  // 0x023782EFC70585EE
+```
+
+build 2699 · old names: `_NETWORK_BAIL_TRANSITION_QUICKMATCH`
+
+## NETWORK_CHANGE_TRANSITION_SLOTS
+
+```c
+void NETWORK_CHANGE_TRANSITION_SLOTS(Any p0, BOOL p1)  // 0xEEEDA5E6D7080987
+```
+
+build 323
+
+## NETWORK_CHECK_CAN_ACCESS_AND_ALERT
+
+```c
+BOOL NETWORK_CHECK_CAN_ACCESS_AND_ALERT()  // 0x6FA9825D0B5A721B
+```
+
+build 3570
+
+## NETWORK_CHECK_COMMUNICATION_PRIVILEGES
+
+```c
+BOOL NETWORK_CHECK_COMMUNICATION_PRIVILEGES(int p0, int p1, BOOL p2)  // 0x83F28CE49FBBFFBA
+```
+
+build 323
+
+## NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE
+
+```c
+BOOL NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE(Any p0, Any* gamerHandle)  // 0x4AD490AE1536933B
+```
+
+build 372
+
+## NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE
+
+```c
+BOOL NETWORK_CHECK_DATA_MANAGER_SUCCEEDED_FOR_HANDLE(int p0, Any* gamerHandle)  // 0x44B37CDCAE765AAE
+```
+
+build 323
+
+## NETWORK_CHECK_ONLINE_PRIVILEGES
+
+```c
+BOOL NETWORK_CHECK_ONLINE_PRIVILEGES(Any p0, BOOL p1)  // 0x78321BEA235FD8CD
+```
+
+build 323
+
+## NETWORK_CHECK_PRIVILEGES
+
+```c
+BOOL NETWORK_CHECK_PRIVILEGES(Any p0, Any p1, Any p2)  // 0x0CF6CC51AA18F0F8
+```
+
+build 1180
+
+## NETWORK_CHECK_ROS_LINK_WENTDOWN_NOT_NET
+
+```c
+BOOL NETWORK_CHECK_ROS_LINK_WENTDOWN_NOT_NET()  // 0x60EDD13EB3AC1FF3
+```
+
+build 323
+
+> Returns true if profile setting 901 is set to true and sets it to false.
+
+## NETWORK_CHECK_TEXT_COMMUNICATION_PRIVILEGES
+
+```c
+BOOL NETWORK_CHECK_TEXT_COMMUNICATION_PRIVILEGES(Any p0, Any p1, Any p2)  // 0x07EAB372C8841D99
+```
+
+build 1011
+
+## NETWORK_CHECK_USER_CONTENT_PRIVILEGES
+
+```c
+BOOL NETWORK_CHECK_USER_CONTENT_PRIVILEGES(int p0, int p1, BOOL p2)  // 0x595F028698072DD9
+```
+
+build 323
+
+## NETWORK_CLAN_ANY_DOWNLOAD_MEMBERSHIP_PENDING
+
+```c
+BOOL NETWORK_CLAN_ANY_DOWNLOAD_MEMBERSHIP_PENDING()  // 0xB3F64A6A91432477
+```
+
+build 323 · old names: `_NETWORK_IS_CLAN_MEMBERSHIP_FINISHED_DOWNLOADING`
+
+## NETWORK_CLAN_CREWINFO_GET_CREWRANKTITLE
+
+```c
+BOOL NETWORK_CLAN_CREWINFO_GET_CREWRANKTITLE(int p0, const char* p1)  // 0x2B51EDBEFC301339
+```
+
+build 323
+
+## NETWORK_CLAN_CREWINFO_GET_STRING_VALUE
+
+```c
+BOOL NETWORK_CLAN_CREWINFO_GET_STRING_VALUE(const char* animDict, const char* animName)  // 0x729E3401F0430686
+```
+
+build 323 · old names: `_NETWORK_CLAN_ANIMATION`
+
+> Only documented...
+> 
+> Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
+
+## NETWORK_CLAN_DOWNLOAD_MEMBERSHIP
+
+```c
+BOOL NETWORK_CLAN_DOWNLOAD_MEMBERSHIP(Any* gamerHandle)  // 0xA989044E70010ABE
+```
+
+build 323
+
+## NETWORK_CLAN_DOWNLOAD_MEMBERSHIP_PENDING
+
+```c
+BOOL NETWORK_CLAN_DOWNLOAD_MEMBERSHIP_PENDING(Any* p0)  // 0x5B9E023DC6EBEDC0
+```
+
+build 323
+
+## NETWORK_CLAN_GET_EMBLEM_TXD_NAME
+
+```c
+BOOL NETWORK_CLAN_GET_EMBLEM_TXD_NAME(Any* netHandle, char* txdName)  // 0x5835D9CD92E83184
+```
+
+build 323 · old names: `_NETWORK_GET_PLAYER_CREW_EMBLEM_TXD_NAME`
+
+## NETWORK_CLAN_GET_LOCAL_MEMBERSHIPS_COUNT
+
+```c
+int NETWORK_CLAN_GET_LOCAL_MEMBERSHIPS_COUNT()  // 0x1F471B79ACC90BEF
+```
+
+build 323 · old names: `_GET_NUM_MEMBERSHIP_DESC`, `_NETWORK_CLAN_GET_NUM_MEMBERSHIP_DESC`
+
+## NETWORK_CLAN_GET_MEMBERSHIP
+
+```c
+BOOL NETWORK_CLAN_GET_MEMBERSHIP(int* p0, Any* clanMembership, int p2)  // 0xC8BC2011F67B3411
+```
+
+build 323
+
+## NETWORK_CLAN_GET_MEMBERSHIP_COUNT
+
+```c
+int NETWORK_CLAN_GET_MEMBERSHIP_COUNT(int* p0)  // 0xAAB11F6C4ADBC2C1
+```
+
+build 323
+
+## NETWORK_CLAN_GET_MEMBERSHIP_DESC
+
+```c
+BOOL NETWORK_CLAN_GET_MEMBERSHIP_DESC(Any* memberDesc, int p1)  // 0x48DE78AF2C8885B8
+```
+
+build 323
+
+## NETWORK_CLAN_GET_MEMBERSHIP_VALID
+
+```c
+BOOL NETWORK_CLAN_GET_MEMBERSHIP_VALID(int* p0, Any p1)  // 0x48A59CF88D43DF0E
+```
+
+build 323
+
+## NETWORK_CLAN_GET_UI_FORMATTED_TAG
+
+```c
+void NETWORK_CLAN_GET_UI_FORMATTED_TAG(Any* clanDesc, int bufferSize, char* formattedTag)  // 0xF45352426FF3A4F0
+```
+
+build 323
+
+> bufferSize is 35 in the scripts.
+
+## NETWORK_CLAN_HAS_CREWINFO_METADATA_BEEN_RECEIVED
+
+```c
+BOOL NETWORK_CLAN_HAS_CREWINFO_METADATA_BEEN_RECEIVED()  // 0xC32EA7A2F6CA7557
+```
+
+build 323
+
+## NETWORK_CLAN_IS_EMBLEM_READY
+
+```c
+BOOL NETWORK_CLAN_IS_EMBLEM_READY(Any p0, Any* p1)  // 0xA134777FF7F33331
+```
+
+build 323
+
+## NETWORK_CLAN_IS_ROCKSTAR_CLAN
+
+```c
+BOOL NETWORK_CLAN_IS_ROCKSTAR_CLAN(Any* clanDesc, int bufferSize)  // 0x7543BB439F63792B
+```
+
+build 323
+
+> bufferSize is 35 in the scripts.
+
+## NETWORK_CLAN_JOIN
+
+```c
+BOOL NETWORK_CLAN_JOIN(int clanDesc)  // 0x9FAAA4F4FC71F87F
+```
+
+build 323
+
+## NETWORK_CLAN_PLAYER_GET_DESC
+
+```c
+BOOL NETWORK_CLAN_PLAYER_GET_DESC(Any* clanDesc, int bufferSize, Any* gamerHandle)  // 0xEEE6EACBE8874FBA
+```
+
+build 323
+
+> bufferSize is 35 in the scripts.
+> 
+> bufferSize is the elementCount of p0(desc), sizeof(p0) == 280 == p1*8 == 35 * 8, p2(netHandle) is obtained from NETWORK::NETWORK_HANDLE_FROM_PLAYER.
+> 
+> https://pastebin.com/cSZniHak
+
+## NETWORK_CLAN_PLAYER_IS_ACTIVE
+
+```c
+BOOL NETWORK_CLAN_PLAYER_IS_ACTIVE(Any* gamerHandle)  // 0xB124B57F571D8F18
+```
+
+build 323
+
+## NETWORK_CLAN_RELEASE_EMBLEM
+
+```c
+void NETWORK_CLAN_RELEASE_EMBLEM(Any p0)  // 0x113E6E3E50E286B0
+```
+
+build 323
+
+## NETWORK_CLAN_REMOTE_MEMBERSHIPS_ARE_IN_CACHE
+
+```c
+BOOL NETWORK_CLAN_REMOTE_MEMBERSHIPS_ARE_IN_CACHE(int* p0)  // 0xBB6E6FEE99D866B2
+```
+
+build 323
+
+## NETWORK_CLAN_REQUEST_EMBLEM
+
+```c
+BOOL NETWORK_CLAN_REQUEST_EMBLEM(Any p0)  // 0x13518FF1C6B28938
+```
+
+build 323
+
+## NETWORK_CLAN_SERVICE_IS_VALID
+
+```c
+BOOL NETWORK_CLAN_SERVICE_IS_VALID()  // 0x579CCED0265D4896
+```
+
+build 323 · old names: `_NETWORK_PLAYER_IS_IN_CLAN`
+
+## NETWORK_CLEAR_CLOCK_TIME_OVERRIDE
+
+```c
+void NETWORK_CLEAR_CLOCK_TIME_OVERRIDE()  // 0xD972DF67326F966E
+```
+
+build 323
+
+## NETWORK_CLEAR_FOLLOW_INVITE
+
+```c
+BOOL NETWORK_CLEAR_FOLLOW_INVITE()  // 0x439BFDE3CD0610F6
+```
+
+build 323
+
+## NETWORK_CLEAR_FOLLOWERS
+
+```c
+void NETWORK_CLEAR_FOLLOWERS()  // 0x058F43EC59A8631A
+```
+
+build 323
+
+## NETWORK_CLEAR_FOUND_GAMERS
+
+```c
+void NETWORK_CLEAR_FOUND_GAMERS()  // 0x6D14CCEE1B40381A
+```
+
+build 323
+
+## NETWORK_CLEAR_GET_GAMER_STATUS
+
+```c
+void NETWORK_CLEAR_GET_GAMER_STATUS()  // 0x86E0660E4F5C956D
+```
+
+build 323
+
+## NETWORK_CLEAR_GROUP_ACTIVITY
+
+```c
+void NETWORK_CLEAR_GROUP_ACTIVITY()  // 0x1888694923EF4591
+```
+
+build 393
+
+## NETWORK_CLEAR_INVALID_OBJECT_MODELS
+
+```c
+void NETWORK_CLEAR_INVALID_OBJECT_MODELS()  // 0x03B2F03A53D85E41
+```
+
+build 2545 · old names: `_NETWORK_CLEAR_INVALID_MODELS`
+
+## NETWORK_CLEAR_OFFLINE_INVITE_PENDING
+
+```c
+void NETWORK_CLEAR_OFFLINE_INVITE_PENDING()  // 0x140E6A44870A11CE
+```
+
+build 323
+
+## NETWORK_CLEAR_QUEUED_JOIN_REQUEST
+
+```c
+void NETWORK_CLEAR_QUEUED_JOIN_REQUEST()  // 0x6CE50E47F5543D0C
+```
+
+build 573
+
+## NETWORK_CLEAR_TRANSITION_CREATOR_HANDLE
+
+```c
+void NETWORK_CLEAR_TRANSITION_CREATOR_HANDLE()  // 0xFB3272229A82C759
+```
+
+build 323
+
+## NETWORK_CLEAR_VOICE_CHANNEL
+
+```c
+void NETWORK_CLEAR_VOICE_CHANNEL()  // 0xE036A705F989E049
+```
+
+build 323
+
+## NETWORK_CLEAR_VOICE_PROXIMITY_OVERRIDE
+
+```c
+void NETWORK_CLEAR_VOICE_PROXIMITY_OVERRIDE()  // 0xF03755696450470C
+```
+
+build 323
+
+## NETWORK_CLOSE_TRANSITION_MATCHMAKING
+
+```c
+void NETWORK_CLOSE_TRANSITION_MATCHMAKING()  // 0x43F4DBA69710E01E
+```
+
+build 323
+
+## NETWORK_CONCEAL_ENTITY
+
+```c
+void NETWORK_CONCEAL_ENTITY(Entity entity, BOOL toggle)  // 0x1632BE0AC1E62876
+```
+
+build 877 · old names: `_NETWORK_CONCEAL_ENTITY`
+
+## NETWORK_CONCEAL_PLAYER
+
+```c
+void NETWORK_CONCEAL_PLAYER(Player player, BOOL toggle, BOOL p2)  // 0xBBDF066252829606
+```
+
+build 323
+
+## NETWORK_CREATE_SYNCHRONISED_SCENE
+
+```c
+int NETWORK_CREATE_SYNCHRONISED_SCENE(float x, float y, float z, float xRot, float yRot, float zRot, int rotationOrder, BOOL useOcclusionPortal, BOOL looped, float p9, float animTime, float p11)  // 0x7CD6BC4C2BBDD526
+```
+
+build 323
+
+## NETWORK_DID_FIND_GAMERS_SUCCEED
+
+```c
+BOOL NETWORK_DID_FIND_GAMERS_SUCCEED()  // 0xF9B83B77929D8863
+```
+
+build 323
+
+## NETWORK_DID_GET_GAMER_STATUS_SUCCEED
+
+```c
+BOOL NETWORK_DID_GET_GAMER_STATUS_SUCCEED()  // 0x5AE17C6B0134B7F1
+```
+
+build 323
+
+## NETWORK_DISABLE_INVINCIBLE_FLASHING
+
+```c
+void NETWORK_DISABLE_INVINCIBLE_FLASHING(Player player, BOOL toggle)  // 0x9DD368BF06983221
+```
+
+build 323
+
+## NETWORK_DISABLE_LEAVE_REMOTE_PED_BEHIND
+
+```c
+void NETWORK_DISABLE_LEAVE_REMOTE_PED_BEHIND(BOOL toggle)  // 0xC505036A35AFD01B
+```
+
+build 323
+
+## NETWORK_DISABLE_PROXIMITY_MIGRATION
+
+```c
+void NETWORK_DISABLE_PROXIMITY_MIGRATION(int netID)  // 0x407091CF6037118E
+```
+
+build 323
+
+## NETWORK_DISABLE_REALTIME_MULTIPLAYER
+
+```c
+void NETWORK_DISABLE_REALTIME_MULTIPLAYER()  // 0x236905C700FDB54D
+```
+
+build 2612
+
+## NETWORK_DISABLE_VOICE_BANDWIDTH_RESTRICTION
+
+```c
+void NETWORK_DISABLE_VOICE_BANDWIDTH_RESTRICTION(Player player)  // 0xCA575C391FEA25CC
+```
+
+build 323
+
+## NETWORK_DISPLAYNAMES_FROM_HANDLES_START
+
+```c
+int NETWORK_DISPLAYNAMES_FROM_HANDLES_START(Any* p0, Any p1)  // 0xD66C9E72B3CC4982
+```
+
+build 323
+
+> Hardcoded to return -1.
+
+## NETWORK_DO_TRANSITION_QUICKMATCH
+
+```c
+BOOL NETWORK_DO_TRANSITION_QUICKMATCH(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5)  // 0x71FB0EBCD4915D56
+```
+
+build 323
+
+## NETWORK_DO_TRANSITION_QUICKMATCH_ASYNC
+
+```c
+BOOL NETWORK_DO_TRANSITION_QUICKMATCH_ASYNC(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5)  // 0xA091A5E44F0072E5
+```
+
+build 323
+
+## NETWORK_DO_TRANSITION_QUICKMATCH_WITH_GROUP
+
+```c
+BOOL NETWORK_DO_TRANSITION_QUICKMATCH_WITH_GROUP(Any p0, Any p1, Any p2, Any p3, Any* p4, Any p5, Any p6, Any p7)  // 0x9C4AB58491FDC98A
+```
+
+build 323
+
+## NETWORK_DO_TRANSITION_TO_FREEMODE
+
+```c
+BOOL NETWORK_DO_TRANSITION_TO_FREEMODE(Any* p0, Any p1, BOOL p2, int players, BOOL p4)  // 0x3AAD8B2FCA1E289F
+```
+
+build 323
+
+> p2 is true 3/4 of the occurrences I found.
+> 'players' is the number of players for a session. On PS3/360 it's always 18. On PC it's 32.
+
+## NETWORK_DO_TRANSITION_TO_GAME
+
+```c
+BOOL NETWORK_DO_TRANSITION_TO_GAME(BOOL p0, int maxPlayers)  // 0x3E9BB38102A589B0
+```
+
+build 323
+
+## NETWORK_DO_TRANSITION_TO_NEW_FREEMODE
+
+```c
+BOOL NETWORK_DO_TRANSITION_TO_NEW_FREEMODE(Any* p0, Any p1, int players, BOOL p3, BOOL p4, BOOL p5)  // 0x9E80A5BA8109F974
+```
+
+build 323
+
+## NETWORK_DO_TRANSITION_TO_NEW_GAME
+
+```c
+BOOL NETWORK_DO_TRANSITION_TO_NEW_GAME(BOOL p0, int maxPlayers, BOOL p2)  // 0x4665F51EFED00034
+```
+
+build 323
+
+## NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID
+
+```c
+BOOL NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(int netId)  // 0x18A47D074708FD68
+```
+
+build 323
+
+## NETWORK_DOES_NETWORK_ID_EXIST
+
+```c
+BOOL NETWORK_DOES_NETWORK_ID_EXIST(int netId)  // 0x38CE16C96BD11344
+```
+
+build 323
+
+## NETWORK_DOES_TUNABLE_EXIST
+
+```c
+BOOL NETWORK_DOES_TUNABLE_EXIST(const char* tunableContext, const char* tunableName)  // 0x85E5F8B9B898B20A
+```
+
+build 323
+
+## NETWORK_DOES_TUNABLE_EXIST_HASH
+
+```c
+BOOL NETWORK_DOES_TUNABLE_EXIST_HASH(Hash tunableContext, Hash tunableName)  // 0xE4E53E1419D81127
+```
+
+build 323 · old names: `_NETWORK_DOES_TUNABLE_EXIST_HASH`
+
+## NETWORK_DUMP_NET_IF_CONFIG
+
+```c
+void NETWORK_DUMP_NET_IF_CONFIG()  // 0xAEDF1BC1C133D6E3
+```
+
+build 323
+
+> Does nothing (it's a nullsub).
+
+## NETWORK_ENABLE_EXTRA_VEHICLE_ORIENTATION_BLEND_CHECKS
+
+```c
+void NETWORK_ENABLE_EXTRA_VEHICLE_ORIENTATION_BLEND_CHECKS(int netId, BOOL toggle)  // 0xE6717E652B8C8D8A
+```
+
+build 617
+
+## NETWORK_ENABLE_VOICE_BANDWIDTH_RESTRICTION
+
+```c
+void NETWORK_ENABLE_VOICE_BANDWIDTH_RESTRICTION(Player player)  // 0x5E3AA4CA2B6FB0EE
+```
+
+build 323
+
+## NETWORK_END_TUTORIAL_SESSION
+
+```c
+void NETWORK_END_TUTORIAL_SESSION()  // 0xD0AFAFF5A51D72F7
+```
+
+build 323
+
+## NETWORK_ENTITY_AREA_DOES_EXIST
+
+```c
+BOOL NETWORK_ENTITY_AREA_DOES_EXIST(int areaHandle)  // 0xE64A3CA08DFA37A9
+```
+
+build 323
+
+## NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED
+
+```c
+BOOL NETWORK_ENTITY_AREA_HAVE_ALL_REPLIED(int areaHandle)  // 0x4DF7CFFF471A7FB1
+```
+
+build 323
+
+## NETWORK_ENTITY_AREA_IS_OCCUPIED
+
+```c
+BOOL NETWORK_ENTITY_AREA_IS_OCCUPIED(int areaHandle)  // 0x4A2D4E8BF4265B0F
+```
+
+build 323
+
+## NETWORK_ENTITY_GET_OBJECT_ID
+
+```c
+int NETWORK_ENTITY_GET_OBJECT_ID(Entity entity)  // 0x815F18AD865F057F
+```
+
+build 463 · old names: `_NETWORK_GET_ENTITY_NET_SCRIPT_ID`
+
+## NETWORK_ENTITY_USE_HIGH_PRECISION_ROTATION
+
+```c
+void NETWORK_ENTITY_USE_HIGH_PRECISION_ROTATION(int netId, BOOL toggle)  // 0x95BAF97C82464629
+```
+
+build 1604
+
+## NETWORK_EXPLODE_HELI
+
+```c
+void NETWORK_EXPLODE_HELI(Vehicle vehicle, BOOL isAudible, BOOL isInvisible, int netId)  // 0x2A5E0621DD815A9A
+```
+
+build 463
+
+## NETWORK_EXPLODE_VEHICLE
+
+```c
+BOOL NETWORK_EXPLODE_VEHICLE(Vehicle vehicle, BOOL isAudible, BOOL isInvisible, int netId)  // 0x301A42153C9AD707
+```
+
+build 323
+
+> In the console script dumps, this is only referenced once. 
+> NETWORK::NETWORK_EXPLODE_VEHICLE(vehicle, 1, 0, 0);
+> 
+> ^^^^^ That must be PC script dumps? In X360 Script Dumps it is reference a few times with 2 differences in the parameters.
+> Which as you see below is 1, 0, 0 + 1, 1, 0 + 1, 0, and a *param?
+> 
+> am_plane_takedown.c 
+> network_explode_vehicle(net_to_veh(Local_40.imm_2), 1, 1, 0);
+> 
+> armenian2.c 
+> network_explode_vehicle(Local_80[6 <2>], 1, 0, 0);
+> 
+> fm_horde_controler.c
+> network_explode_vehicle(net_to_veh(*uParam0), 1, 0, *uParam0);
+> 
+> fm_mission_controller.c, has 6 hits so not going to list them.
+> 
+> Side note, setting the first parameter to 0 seems to mute sound or so?
+> 
+> Seems it's like ADD_EXPLOSION, etc. the first 2 params. The 3rd atm no need to worry since it always seems to be 0.
+> 
+
+## NETWORK_FADE_IN_ENTITY
+
+```c
+void NETWORK_FADE_IN_ENTITY(Entity entity, BOOL state, Any p2)  // 0x1F4ED342ACEFE62D
+```
+
+build 323
+
+> state - 0 does 5 fades
+> state - 1 does 6 fades
+> 
+> p3: setting to 1 made vehicle fade in slower, probably "slow" as per NETWORK_FADE_OUT_ENTITY
+
+## NETWORK_FADE_OUT_ENTITY
+
+```c
+void NETWORK_FADE_OUT_ENTITY(Entity entity, BOOL normal, BOOL slow)  // 0xDE564951F95E09ED
+```
+
+build 323
+
+> normal - transition like when your coming out of LSC
+> slow - transition like when you walk into a mission
+>  
+
+## NETWORK_FIND_GAMERS_IN_CREW
+
+```c
+BOOL NETWORK_FIND_GAMERS_IN_CREW(int crewId)  // 0xE532D6811B3A4D2A
+```
+
+build 323 · old names: `NETWORK_X_AFFECTS_GAMERS`
+
+## NETWORK_FIND_LARGEST_BUNCH_OF_PLAYERS
+
+```c
+BOOL NETWORK_FIND_LARGEST_BUNCH_OF_PLAYERS(int p0, Any p1)  // 0xFB1F9381E80FA13F
+```
+
+build 323
+
+> p0 is always 0. p1 is pointing to a global.
+
+## NETWORK_FIND_MATCHED_GAMERS
+
+```c
+BOOL NETWORK_FIND_MATCHED_GAMERS(int attribute, float fallbackLimit, float lowerLimit, float upperLimit)  // 0xF7B2CFDE5C9F700D
+```
+
+build 323
+
+> Uses attributes to find players with similar stats. Upper/Lower limit must be above zero or the fallback limit +/-0.1 is used.
+> There can be up to 15 attributes, they are as follows:
+> 
+> 0 = Races
+> 1 = Parachuting
+> 2 = Horde
+> 3 = Darts
+> 4 = Arm Wrestling
+> 5 = Tennis
+> 6 = Golf
+> 7 = Shooting Range
+> 8 = Deathmatch
+> 9 = MPPLY_MCMWIN/MPPLY_CRMISSION
+
+## NETWORK_FINISH_BROADCASTING_DATA
+
+```c
+void NETWORK_FINISH_BROADCASTING_DATA()  // 0x64F62AFB081E260D
+```
+
+build 323
+
+## NETWORK_FORCE_LOCAL_PLAYER_SCAR_SYNC
+
+```c
+void NETWORK_FORCE_LOCAL_PLAYER_SCAR_SYNC()  // 0xB7C7F6AD6424304B
+```
+
+build 323 · old names: `_NETWORK_UPDATE_PLAYER_SCARS`
+
+> NETWORK_F[I-O]
+
+## NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA
+
+```c
+void NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA(int netScene)  // 0xC9B43A33D09CADA7
+```
+
+build 323 · old names: `_NETWORK_FORCE_LOCAL_USE_OF_SYNCED_SCENE_CAMERA`
+
+## NETWORK_GAMER_HAS_HEADSET
+
+```c
+BOOL NETWORK_GAMER_HAS_HEADSET(Any* gamerHandle)  // 0xF2FD55CB574BCC55
+```
+
+build 323
+
+## NETWORK_GAMERTAG_FROM_HANDLE_PENDING
+
+```c
+BOOL NETWORK_GAMERTAG_FROM_HANDLE_PENDING()  // 0xB071E27958EF4CF0
+```
+
+build 323
+
+## NETWORK_GAMERTAG_FROM_HANDLE_START
+
+```c
+BOOL NETWORK_GAMERTAG_FROM_HANDLE_START(Any* gamerHandle)  // 0x9F0C0A981D73FA56
+```
+
+build 323
+
+## NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED
+
+```c
+BOOL NETWORK_GAMERTAG_FROM_HANDLE_SUCCEEDED()  // 0xFD00798DBA7523DD
+```
+
+build 323
+
+## NETWORK_GET_ACTIVITY_PLAYER_NUM
+
+```c
+int NETWORK_GET_ACTIVITY_PLAYER_NUM(BOOL p0)  // 0x73E2B500410DA5A2
+```
+
+build 323
+
+## NETWORK_GET_AGE_GROUP
+
+```c
+int NETWORK_GET_AGE_GROUP()  // 0x9614B71F8ADB982B
+```
+
+build 323
+
+## NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY
+
+```c
+BOOL NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY(Player player, Entity entity, int* p2)  // 0x4CACA84440FA26F6
+```
+
+build 323 · old names: `_NETWORK_GET_DESROYER_OF_ENTITY`, `_NETWORK_GET_DESTROYER_OF_ENTITY`
+
+## NETWORK_GET_ASSISTED_KILL_OF_ENTITY
+
+```c
+BOOL NETWORK_GET_ASSISTED_KILL_OF_ENTITY(Player player, Entity entity, int* p2)  // 0x83660B734994124D
+```
+
+build 463 · old names: `_NETWORK_GET_ASSISTED_DAMAGE_OF_DEAD_ENTITY`
+
+> NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY that ensures the entity is dead (IS_ENTITY_DEAD)
+
+## NETWORK_GET_AVERAGE_LATENCY
+
+```c
+float NETWORK_GET_AVERAGE_LATENCY(Player player)  // 0xD414BE129BB81B32
+```
+
+build 323 · old names: `_NETWORK_GET_AVERAGE_LATENCY_FOR_PLAYER`
+
+## NETWORK_GET_AVERAGE_PACKET_LOSS
+
+```c
+float NETWORK_GET_AVERAGE_PACKET_LOSS(Player player)  // 0x350C23949E43686C
+```
+
+build 323 · old names: `_NETWORK_GET_AVERAGE_PACKET_LOSS_FOR_PLAYER`
+
+## NETWORK_GET_AVERAGE_PING
+
+```c
+float NETWORK_GET_AVERAGE_PING(Player player)  // 0x0E3A041ED6AC2B45
+```
+
+build 323 · old names: `_NETWORK_GET_AVERAGE_LATENCY_FOR_PLAYER_2`
+
+> Same as NETWORK_GET_AVERAGE_LATENCY
+
+## NETWORK_GET_BONE_ID_OF_FATAL_HIT
+
+```c
+int NETWORK_GET_BONE_ID_OF_FATAL_HIT()  // 0x7DB53B37A2F211A0
+```
+
+build 323
+
+## NETWORK_GET_CONTENT_MODIFIER_LIST_ID
+
+```c
+int NETWORK_GET_CONTENT_MODIFIER_LIST_ID(Hash contentHash)  // 0x187382F8A3E0A6C3
+```
+
+build 323 · old names: `_GET_TUNABLES_CONTENT_MODIFIER_ID`
+
+> Return the content modifier id (the tunables context if you want) of a specific content.
+> 
+> It takes the content hash (which is the mission id hash), and return the content modifier id, used as the tunables context.
+> 
+> The mission id can be found on the Social club, for example, 'socialclub.rockstargames.com/games/gtav/jobs/job/A8M6Bz8MLEC5xngvDCzGwA'
+> 
+> 'A8M6Bz8MLEC5xngvDCzGwA' is the mission id, so the game hash this and use it as the parameter for this native.
+> 
+
+## NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU
+
+```c
+BOOL NETWORK_GET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(Any* p0)  // 0x74881E6BCAE2327C
+```
+
+build 323
+
+## NETWORK_GET_DESTROYER_OF_ENTITY
+
+```c
+Player NETWORK_GET_DESTROYER_OF_ENTITY(Entity entity, Hash* weaponHash)  // 0xC434133D9BA52777
+```
+
+build 463 · old names: `_NETWORK_GET_DESTROYER_OF_ENTITY`
+
+## NETWORK_GET_DESTROYER_OF_NETWORK_ID
+
+```c
+Player NETWORK_GET_DESTROYER_OF_NETWORK_ID(int netId, Hash* weaponHash)  // 0x7A1ADEEF01740A24
+```
+
+build 323
+
+## NETWORK_GET_DISPLAYNAMES_FROM_HANDLES
+
+```c
+int NETWORK_GET_DISPLAYNAMES_FROM_HANDLES(Any p0, Any p1, Any p2)  // 0x58CC181719256197
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## NETWORK_GET_ENTITY_FROM_NETWORK_ID
+
+```c
+Entity NETWORK_GET_ENTITY_FROM_NETWORK_ID(int netId)  // 0xCE4E5D9B0A4FF560
+```
+
+build 323
+
+## NETWORK_GET_ENTITY_FROM_OBJECT_ID
+
+```c
+Entity NETWORK_GET_ENTITY_FROM_OBJECT_ID(Any p0)  // 0x37D5F739FD494675
+```
+
+build 505
+
+> I've had this return the player's ped handle sometimes, but also other random entities.
+> Whatever p0 is, it's at least not synced to other players.
+> At least not all the time, some p0 values actually output the same entity, (different handle of course, but same entity).
+> But another p0 value may return an entity for player x, but not for player y (it'll just return -1 even if the entity exists on both clients).
+> 
+> Returns an entity handle or -1, value changes based on p0's value.
+
+## NETWORK_GET_ENTITY_IS_LOCAL
+
+```c
+BOOL NETWORK_GET_ENTITY_IS_LOCAL(Entity entity)  // 0x0991549DE4D64762
+```
+
+build 323
+
+## NETWORK_GET_ENTITY_IS_NETWORKED
+
+```c
+BOOL NETWORK_GET_ENTITY_IS_NETWORKED(Entity entity)  // 0xC7827959479DCC78
+```
+
+build 323
+
+## NETWORK_GET_ENTITY_KILLER_OF_PLAYER
+
+```c
+Entity NETWORK_GET_ENTITY_KILLER_OF_PLAYER(Player player, Hash* weaponHash)  // 0x42B2DAA6B596F5F8
+```
+
+build 323
+
+## NETWORK_GET_FOUND_GAMER
+
+```c
+BOOL NETWORK_GET_FOUND_GAMER(Any* p0, Any p1)  // 0x9DCFF2AFB68B3476
+```
+
+build 323
+
+## NETWORK_GET_FRIEND_COUNT
+
+```c
+int NETWORK_GET_FRIEND_COUNT()  // 0x203F1CFD823B27A4
+```
+
+build 323
+
+## NETWORK_GET_FRIEND_DISPLAY_NAME
+
+```c
+const char* NETWORK_GET_FRIEND_DISPLAY_NAME(int friendIndex)  // 0x4164F227D052E293
+```
+
+build 323 · old names: `_NETWORK_GET_FRIEND_NAME`, `_NETWORK_GET_FRIEND_NAME_FROM_INDEX`
+
+## NETWORK_GET_FRIEND_NAME
+
+```c
+const char* NETWORK_GET_FRIEND_NAME(int friendIndex)  // 0xE11EBBB2A783FE8B
+```
+
+build 323
+
+## NETWORK_GET_GAME_MODE
+
+```c
+int NETWORK_GET_GAME_MODE()  // 0x4C9034162368E206
+```
+
+build 2060
+
+## NETWORK_GET_GAMER_STATUS_FROM_QUEUE
+
+```c
+BOOL NETWORK_GET_GAMER_STATUS_FROM_QUEUE()  // 0x2CC848A861D01493
+```
+
+build 323
+
+## NETWORK_GET_GAMER_STATUS_RESULT
+
+```c
+BOOL NETWORK_GET_GAMER_STATUS_RESULT(Any* p0, Any p1)  // 0x02A8BEC6FD9AF660
+```
+
+build 323
+
+## NETWORK_GET_GAMERTAG_FROM_HANDLE
+
+```c
+const char* NETWORK_GET_GAMERTAG_FROM_HANDLE(Any* gamerHandle)  // 0x426141162EBE5CDB
+```
+
+build 323
+
+## NETWORK_GET_GLOBAL_MULTIPLAYER_CLOCK
+
+```c
+void NETWORK_GET_GLOBAL_MULTIPLAYER_CLOCK(int* hours, int* minutes, int* seconds)  // 0x6D03BFBD643B2A02
+```
+
+build 323 · old names: `_NETWORK_GET_SERVER_TIME`
+
+## NETWORK_GET_HIGHEST_RELIABLE_RESEND_COUNT
+
+```c
+int NETWORK_GET_HIGHEST_RELIABLE_RESEND_COUNT(Player player)  // 0x52C1EADAF7B10302
+```
+
+build 323 · old names: `_NETWORK_GET_OLDEST_RESEND_COUNT_FOR_PLAYER`
+
+## NETWORK_GET_HOST_OF_SCRIPT
+
+```c
+Player NETWORK_GET_HOST_OF_SCRIPT(const char* scriptName, int instance_id, int position_hash)  // 0x1D6A14F1F9A736FC
+```
+
+build 323
+
+> scriptName examples:
+> "freemode", "AM_CR_SecurityVan", ...
+> 
+> Most of the time, these values are used:
+> instance_id = -1
+> position_hash = 0
+
+## NETWORK_GET_HOST_OF_THIS_SCRIPT
+
+```c
+Player NETWORK_GET_HOST_OF_THIS_SCRIPT()  // 0xC7B4D79B01FA7A5C
+```
+
+build 323
+
+## NETWORK_GET_HOST_OF_THREAD
+
+```c
+Player NETWORK_GET_HOST_OF_THREAD(int threadId)  // 0xD3DEBE2991FE8098
+```
+
+build 3717
+
+## NETWORK_GET_HOST_PLAYER_INDEX
+
+```c
+Player NETWORK_GET_HOST_PLAYER_INDEX()  // 0x8251FB94DC4FDFC8
+```
+
+build 2612 · old names: `_NETWORK_GET_HOST`
+
+## NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT
+
+```c
+int NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT()  // 0x638A3A81733086DB
+```
+
+build 323
+
+## NETWORK_GET_INVITE_REPLY_STATUS
+
+```c
+int NETWORK_GET_INVITE_REPLY_STATUS(Any p0)  // 0x3855FB5EB2C5E8B2
+```
+
+build 505
+
+## NETWORK_GET_KILLER_OF_PLAYER
+
+```c
+Player NETWORK_GET_KILLER_OF_PLAYER(Player player, Hash* weaponHash)  // 0x2DA41ED6E1FCD7A5
+```
+
+build 463 · old names: `_NETWORK_GET_PLAYER_KILLER_OF_PLAYER`
+
+## NETWORK_GET_LAST_ENTITY_POS_RECEIVED_OVER_NETWORK
+
+```c
+Vector3 NETWORK_GET_LAST_ENTITY_POS_RECEIVED_OVER_NETWORK(Entity entity)  // 0x64D779659BC37B19
+```
+
+build 393
+
+## NETWORK_GET_LAST_PLAYER_POS_RECEIVED_OVER_NETWORK
+
+```c
+Vector3 NETWORK_GET_LAST_PLAYER_POS_RECEIVED_OVER_NETWORK(Player player)  // 0x125E6D638B8605D4
+```
+
+build 393 · old names: `_NETWORK_GET_PLAYER_COORDS`
+
+> Returns the coordinates of another player.
+> Does not work if you enter your own player id as p0 (will return `(0.0, 0.0, 0.0)` in that case).
+
+## NETWORK_GET_LAST_VEL_RECEIVED_OVER_NETWORK
+
+```c
+Vector3 NETWORK_GET_LAST_VEL_RECEIVED_OVER_NETWORK(Entity entity)  // 0x33DE49EDF4DDE77A
+```
+
+build 1103 · old names: `_NETWORK_GET_LAST_VELOCITY_RECEIVED`
+
+> Used by NetBlender
+
+## NETWORK_GET_LOCAL_HANDLE
+
+```c
+void NETWORK_GET_LOCAL_HANDLE(Any* gamerHandle, int gamerHandleSize)  // 0xE86051786B66CD8E
+```
+
+build 323
+
+## NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID
+
+```c
+int NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(int netId)  // 0x02C40BF885C567B6
+```
+
+build 323 · old names: `_NETWORK_UNLINK_NETWORKED_SYNCHRONISED_SCENE`, `_NETWORK_CONVERT_SYNCHRONISED_SCENE_TO_SYNCHRONIZED_SCENE`
+
+## NETWORK_GET_MAX_FRIENDS
+
+```c
+int NETWORK_GET_MAX_FRIENDS()  // 0xAFEBB0D5D8F687D2
+```
+
+build 323
+
+## NETWORK_GET_MAX_NUM_PARTICIPANTS
+
+```c
+int NETWORK_GET_MAX_NUM_PARTICIPANTS()  // 0xA6C90FBC38E395EE
+```
+
+build 323 · old names: `_NETWORK_GET_NUM_PARTICIPANTS_HOST`
+
+## NETWORK_GET_MUTE_COUNT_FOR_PLAYER
+
+```c
+void NETWORK_GET_MUTE_COUNT_FOR_PLAYER(Player p0, float* p1, float* p2)  // 0xADB57E5B663CCA8B
+```
+
+build 323
+
+## NETWORK_GET_NET_STATISTICS_INFO
+
+```c
+void NETWORK_GET_NET_STATISTICS_INFO(Any* p0)  // 0x6FD992C4A1C1B986
+```
+
+build 323
+
+> Does nothing (it's a nullsub).
+
+## NETWORK_GET_NETWORK_ID_FROM_ENTITY
+
+```c
+int NETWORK_GET_NETWORK_ID_FROM_ENTITY(Entity entity)  // 0xA11700682F3AD45C
+```
+
+build 323
+
+## NETWORK_GET_NP_UNAVAILABLE_REASON
+
+```c
+int NETWORK_GET_NP_UNAVAILABLE_REASON()  // 0x74FB3E29E6D10FA9
+```
+
+build 323
+
+> Hardcoded to return zero.
+> 
+> ==== PS4 specific info ====
+> 
+> Returns some sort of unavailable reason:
+> -1 = REASON_INVALID
+>  0 = REASON_OTHER
+>  1 = REASON_SYSTEM_UPDATE
+>  2 = REASON_GAME_UPDATE
+>  3 = REASON_SIGNED_OUT
+>  4 = REASON_AGE
+>  5 = REASON_CONNECTION
+> 
+> =================================
+
+## NETWORK_GET_NUM_CONNECTED_PLAYERS
+
+```c
+int NETWORK_GET_NUM_CONNECTED_PLAYERS()  // 0xA4A79DD2D9600654
+```
+
+build 323
+
+> Returns the amount of players connected in the current session. Only works when connected to a session/server.
+
+## NETWORK_GET_NUM_FOUND_GAMERS
+
+```c
+int NETWORK_GET_NUM_FOUND_GAMERS()  // 0xA1B043EE79A916FB
+```
+
+build 323
+
+## NETWORK_GET_NUM_PARTICIPANTS
+
+```c
+int NETWORK_GET_NUM_PARTICIPANTS()  // 0x18D0456E86604654
+```
+
+build 323
+
+## NETWORK_GET_NUM_PRESENCE_INVITES
+
+```c
+int NETWORK_GET_NUM_PRESENCE_INVITES()  // 0xCEFA968912D0F78D
+```
+
+build 323
+
+## NETWORK_GET_NUM_SCRIPT_PARTICIPANTS
+
+```c
+int NETWORK_GET_NUM_SCRIPT_PARTICIPANTS(const char* scriptName, int instance_id, int position_hash)  // 0x3658E8CD94FC121A
+```
+
+build 323
+
+## NETWORK_GET_NUM_TRANSITION_NON_ASYNC_GAMERS
+
+```c
+int NETWORK_GET_NUM_TRANSITION_NON_ASYNC_GAMERS()  // 0x617F49C2668E6155
+```
+
+build 757
+
+## NETWORK_GET_NUM_UNACKED_RELIABLES
+
+```c
+int NETWORK_GET_NUM_UNACKED_RELIABLES(Player player)  // 0xFF8FCF9FFC458A1C
+```
+
+build 323 · old names: `_NETWORK_GET_NUM_UNACKED_FOR_PLAYER`
+
+## NETWORK_GET_NUMBER_BODY_TRACKER_HITS
+
+```c
+int NETWORK_GET_NUMBER_BODY_TRACKER_HITS()  // 0xD38C4A6D047C019D
+```
+
+build 323 · old names: `_NETWORK_GET_NUM_BODY_TRACKERS`
+
+## NETWORK_GET_PARTICIPANT_INDEX
+
+```c
+int NETWORK_GET_PARTICIPANT_INDEX(int index)  // 0x1B84DF6AF2A46938
+```
+
+build 323
+
+## NETWORK_GET_PLATFORM_PARTY_MEMBER_COUNT
+
+```c
+int NETWORK_GET_PLATFORM_PARTY_MEMBER_COUNT()  // 0x01ABCE5E7CBDA196
+```
+
+build 323 · old names: `_NETWORK_GET_PLATFORM_PARTY_UNK`
+
+## NETWORK_GET_PLATFORM_PARTY_MEMBERS
+
+```c
+int NETWORK_GET_PLATFORM_PARTY_MEMBERS(Any* data, int dataSize)  // 0x120364DE2845DAF8
+```
+
+build 323
+
+## NETWORK_GET_PLAYER_ACCOUNT_ID
+
+```c
+int NETWORK_GET_PLAYER_ACCOUNT_ID(Player player)  // 0xDB663CC9FF3407A9
+```
+
+build 1734
+
+## NETWORK_GET_PLAYER_FROM_GAMER_HANDLE
+
+```c
+Player NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(Any* gamerHandle)  // 0xCE5F689CF5A0A49D
+```
+
+build 323
+
+## NETWORK_GET_PLAYER_INDEX
+
+```c
+Player NETWORK_GET_PLAYER_INDEX(Player player)  // 0x24FB80D107371267
+```
+
+build 323
+
+## NETWORK_GET_PLAYER_INDEX_FROM_PED
+
+```c
+Player NETWORK_GET_PLAYER_INDEX_FROM_PED(Ped ped)  // 0x6C0E2E0125610278
+```
+
+build 323
+
+> Returns the Player associated to a given Ped when in an online session.
+
+## NETWORK_GET_PLAYER_LOUDNESS
+
+```c
+float NETWORK_GET_PLAYER_LOUDNESS(Player player)  // 0x21A1684A25C2867F
+```
+
+build 323
+
+## NETWORK_GET_PLAYER_OWNS_WAYPOINT
+
+```c
+BOOL NETWORK_GET_PLAYER_OWNS_WAYPOINT(Player player)  // 0x82377B65E943F72D
+```
+
+build 323
+
+## NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE
+
+```c
+int NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(Player player)  // 0x3B39236746714134
+```
+
+build 323
+
+## NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT
+
+```c
+Hash NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT()  // 0x257ED0FADF750BCF
+```
+
+build 2372 · old names: `_NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT`
+
+## NETWORK_GET_PREDICTED_VELOCITY
+
+```c
+Vector3 NETWORK_GET_PREDICTED_VELOCITY(Entity entity, float maxSpeedToPredict)  // 0xAA5FAFCD2C5F5E47
+```
+
+build 1103
+
+## NETWORK_GET_PRESENCE_INVITE_CONTENT_ID
+
+```c
+const char* NETWORK_GET_PRESENCE_INVITE_CONTENT_ID(int p0)  // 0x24409FC4C55CB22D
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_FROM_ADMIN
+
+```c
+BOOL NETWORK_GET_PRESENCE_INVITE_FROM_ADMIN(int p0)  // 0x3DBF2DF0AEB7D289
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_HANDLE
+
+```c
+BOOL NETWORK_GET_PRESENCE_INVITE_HANDLE(Any p0, Any* p1)  // 0x38D5B0FEBB086F75
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_ID
+
+```c
+int NETWORK_GET_PRESENCE_INVITE_ID(int p0)  // 0xDFF09646E12EC386
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_INDEX_BY_ID
+
+```c
+int NETWORK_GET_PRESENCE_INVITE_INDEX_BY_ID(int p0)  // 0x742B58F723233ED9
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_INVITER
+
+```c
+const char* NETWORK_GET_PRESENCE_INVITE_INVITER(int p0)  // 0x4962CC4AA2F345B7
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_IS_TOURNAMENT
+
+```c
+BOOL NETWORK_GET_PRESENCE_INVITE_IS_TOURNAMENT(Any p0)  // 0x8806CEBFABD3CE05
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_PLAYLIST_CURRENT
+
+```c
+int NETWORK_GET_PRESENCE_INVITE_PLAYLIST_CURRENT(int p0)  // 0x728C4CC7920CD102
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_PLAYLIST_LENGTH
+
+```c
+int NETWORK_GET_PRESENCE_INVITE_PLAYLIST_LENGTH(int p0)  // 0xD39B3FFF8FFDD5BF
+```
+
+build 323
+
+## NETWORK_GET_PRESENCE_INVITE_SESSION_ID
+
+```c
+int NETWORK_GET_PRESENCE_INVITE_SESSION_ID(Any p0)  // 0x26E1CD96B0903D60
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_CANCEL
+
+```c
+void NETWORK_GET_PRIMARY_CLAN_DATA_CANCEL()  // 0x042E4B70B93E6054
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_CLEAR
+
+```c
+BOOL NETWORK_GET_PRIMARY_CLAN_DATA_CLEAR()  // 0x9AA46BADAD0E27ED
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_NEW
+
+```c
+BOOL NETWORK_GET_PRIMARY_CLAN_DATA_NEW(Any* p0, Any* p1)  // 0xC080FF658B2E41DA
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_PENDING
+
+```c
+BOOL NETWORK_GET_PRIMARY_CLAN_DATA_PENDING()  // 0xB5074DB804E28CE7
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_START
+
+```c
+BOOL NETWORK_GET_PRIMARY_CLAN_DATA_START(Any* p0, Any p1)  // 0xCE86D8191B762107
+```
+
+build 323
+
+## NETWORK_GET_PRIMARY_CLAN_DATA_SUCCESS
+
+```c
+BOOL NETWORK_GET_PRIMARY_CLAN_DATA_SUCCESS()  // 0x5B4F04F19376A0BA
+```
+
+build 323
+
+## NETWORK_GET_RANDOM_INT
+
+```c
+int NETWORK_GET_RANDOM_INT()  // 0x599E4FA1F87EB5FF
+```
+
+build 323
+
+## NETWORK_GET_RANDOM_INT_RANGED
+
+```c
+int NETWORK_GET_RANDOM_INT_RANGED(int rangeStart, int rangeEnd)  // 0xE30CF56F1EFA5F43
+```
+
+build 323 · old names: `_NETWORK_GET_RANDOM_INT_IN_RANGE`
+
+> Same as GET_RANDOM_INT_IN_RANGE
+
+## NETWORK_GET_RESPAWN_RESULT
+
+```c
+void NETWORK_GET_RESPAWN_RESULT(int randomInt, Vector3* coordinates, float* heading)  // 0x371EA43692861CF1
+```
+
+build 323
+
+> Based on scripts such as in freemode.c how they call their vars vVar and fVar the 2nd and 3rd param it a Vector3 and Float, but the first is based on get_random_int_in_range..
+
+## NETWORK_GET_RESPAWN_RESULT_FLAGS
+
+```c
+int NETWORK_GET_RESPAWN_RESULT_FLAGS(int p0)  // 0x6C34F1208B8923FD
+```
+
+build 323
+
+## NETWORK_GET_SCRIPT_STATUS
+
+```c
+int NETWORK_GET_SCRIPT_STATUS()  // 0x57D158647A6BFABF
+```
+
+build 323
+
+## NETWORK_GET_SIGNALLING_INFO
+
+```c
+void NETWORK_GET_SIGNALLING_INFO(Any* p0)  // 0x2555CF7DA5473794
+```
+
+build 323
+
+> Does nothing (it's a nullsub).
+
+## NETWORK_GET_TALKER_PROXIMITY
+
+```c
+float NETWORK_GET_TALKER_PROXIMITY()  // 0x84F0F13120B4E098
+```
+
+build 323
+
+## NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT
+
+```c
+BOOL NETWORK_GET_THIS_SCRIPT_IS_NETWORK_SCRIPT()  // 0x2910669969E9535E
+```
+
+build 323
+
+## NETWORK_GET_TIMEOUT_TIME
+
+```c
+int NETWORK_GET_TIMEOUT_TIME()  // 0x5ED0356A0CE3A34F
+```
+
+build 323
+
+## NETWORK_GET_TOTAL_NUM_PLAYERS
+
+```c
+int NETWORK_GET_TOTAL_NUM_PLAYERS()  // 0xCF61D4B4702EE9EB
+```
+
+build 323
+
+## NETWORK_GET_TRANSITION_HOST
+
+```c
+BOOL NETWORK_GET_TRANSITION_HOST(Any* gamerHandle)  // 0x65042B9774C4435E
+```
+
+build 323
+
+## NETWORK_GET_TRANSITION_MEMBERS
+
+```c
+int NETWORK_GET_TRANSITION_MEMBERS(Any* data, int dataCount)  // 0x73B000F7FBC55829
+```
+
+build 323
+
+> Returns count.
+
+## NETWORK_GET_TUNABLE_CLOUD_CRC
+
+```c
+int NETWORK_GET_TUNABLE_CLOUD_CRC()  // 0x10BD227A753B0D84
+```
+
+build 323 · old names: `_NETWORK_GET_TUNABLES_VERSION`
+
+## NETWORK_GET_UNRELIABLE_RESEND_COUNT
+
+```c
+int NETWORK_GET_UNRELIABLE_RESEND_COUNT(Player player)  // 0x3765C3A3E8192E10
+```
+
+build 323 · old names: `_NETWORK_GET_UNRELIABLE_RESEND_COUNT_FOR_PLAYER`
+
+## NETWORK_HANDLE_FROM_FRIEND
+
+```c
+void NETWORK_HANDLE_FROM_FRIEND(int friendIndex, Any* gamerHandle, int gamerHandleSize)  // 0xD45CB817D7E177D2
+```
+
+build 323
+
+## NETWORK_HANDLE_FROM_MEMBER_ID
+
+```c
+void NETWORK_HANDLE_FROM_MEMBER_ID(const char* memberId, Any* gamerHandle, int gamerHandleSize)  // 0xA0FD21BED61E5C4C
+```
+
+build 323
+
+## NETWORK_HANDLE_FROM_PLAYER
+
+```c
+void NETWORK_HANDLE_FROM_PLAYER(Player player, Any* gamerHandle, int gamerHandleSize)  // 0x388EB2B86C73B6B3
+```
+
+build 323
+
+## NETWORK_HANDLE_FROM_USER_ID
+
+```c
+void NETWORK_HANDLE_FROM_USER_ID(const char* userId, Any* gamerHandle, int gamerHandleSize)  // 0xDCD51DD8F87AEC5C
+```
+
+build 323
+
+## NETWORK_HAS_AGE_RESTRICTIONS
+
+```c
+BOOL NETWORK_HAS_AGE_RESTRICTIONS()  // 0x1353F87E89946207
+```
+
+build 323 · old names: `_NETWORK_HAS_AGE_RESTRICTED_PROFILE`
+
+## NETWORK_HAS_AUTOMUTE_OVERRIDE
+
+```c
+BOOL NETWORK_HAS_AUTOMUTE_OVERRIDE()  // 0x26F07DD83A5F7F98
+```
+
+build 323
+
+## NETWORK_HAS_BONE_BEEN_HIT_BY_KILLER
+
+```c
+BOOL NETWORK_HAS_BONE_BEEN_HIT_BY_KILLER(int boneIndex)  // 0x2E0BF682CC778D49
+```
+
+build 323
+
+## NETWORK_HAS_CACHED_PLAYER_HEAD_BLEND_DATA
+
+```c
+BOOL NETWORK_HAS_CACHED_PLAYER_HEAD_BLEND_DATA(Player player)  // 0x237D5336A9A54108
+```
+
+build 323
+
+## NETWORK_HAS_CONFIRMED_INVITE
+
+```c
+BOOL NETWORK_HAS_CONFIRMED_INVITE()  // 0xC42DD763159F3461
+```
+
+build 323
+
+## NETWORK_HAS_CONTROL_OF_DOOR
+
+```c
+BOOL NETWORK_HAS_CONTROL_OF_DOOR(Hash doorHash)  // 0xCB3C68ADB06195DF
+```
+
+build 323
+
+## NETWORK_HAS_CONTROL_OF_ENTITY
+
+```c
+BOOL NETWORK_HAS_CONTROL_OF_ENTITY(Entity entity)  // 0x01BF60A500E28887
+```
+
+build 323
+
+## NETWORK_HAS_CONTROL_OF_NETWORK_ID
+
+```c
+BOOL NETWORK_HAS_CONTROL_OF_NETWORK_ID(int netId)  // 0x4D36070FE0215186
+```
+
+build 323
+
+## NETWORK_HAS_CONTROL_OF_PICKUP
+
+```c
+BOOL NETWORK_HAS_CONTROL_OF_PICKUP(Pickup pickup)  // 0x5BC9495F0B3B6FA6
+```
+
+build 323
+
+## NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD
+
+```c
+BOOL NETWORK_HAS_ENTITY_BEEN_REGISTERED_WITH_THIS_THREAD(Entity entity)  // 0xB07D3185E11657A5
+```
+
+build 323
+
+## NETWORK_HAS_FOLLOW_INVITE
+
+```c
+BOOL NETWORK_HAS_FOLLOW_INVITE()  // 0x76D9B976C4C09FDE
+```
+
+build 323
+
+## NETWORK_HAS_HEADSET
+
+```c
+BOOL NETWORK_HAS_HEADSET()  // 0xE870F9F1F7B4F1FA
+```
+
+build 323
+
+## NETWORK_HAS_INVITED_GAMER
+
+```c
+BOOL NETWORK_HAS_INVITED_GAMER(Any* p0)  // 0x4D86CD31E8976ECE
+```
+
+build 323
+
+## NETWORK_HAS_INVITED_GAMER_TO_TRANSITION
+
+```c
+BOOL NETWORK_HAS_INVITED_GAMER_TO_TRANSITION(Any* p0)  // 0x7284A47B3540E6CF
+```
+
+build 323
+
+## NETWORK_HAS_MADE_INVITE_DECISION
+
+```c
+BOOL NETWORK_HAS_MADE_INVITE_DECISION(Any* gamerHandle)  // 0x71DC455F5CD1C2B1
+```
+
+build 505 · old names: `NETWORK_HAS_INVITE_BEEN_ACKED`
+
+## NETWORK_HAS_PENDING_INVITE
+
+```c
+BOOL NETWORK_HAS_PENDING_INVITE()  // 0xAC8C7B9B88C4A668
+```
+
+build 323
+
+## NETWORK_HAS_PLAYER_STARTED_TRANSITION
+
+```c
+BOOL NETWORK_HAS_PLAYER_STARTED_TRANSITION(Player player)  // 0x9AC9CCBFA8C29795
+```
+
+build 323
+
+## NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA
+
+```c
+BOOL NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA()  // 0x5D10B3795F3FC886
+```
+
+build 323
+
+## NETWORK_HAS_ROS_PRIVILEGE
+
+```c
+BOOL NETWORK_HAS_ROS_PRIVILEGE(int index)  // 0xA699957E60D80214
+```
+
+build 323
+
+> index is always 18 in scripts
+
+## NETWORK_HAS_ROS_PRIVILEGE_END_DATE
+
+```c
+BOOL NETWORK_HAS_ROS_PRIVILEGE_END_DATE(int privilege, int* banType, Any* timeData)  // 0xC22912B1D85F26B1
+```
+
+build 323 · old names: `_NETWORK_GET_BAN_DATA`
+
+## NETWORK_HAS_ROS_PRIVILEGE_PLAYED_LAST_GEN
+
+```c
+BOOL NETWORK_HAS_ROS_PRIVILEGE_PLAYED_LAST_GEN()  // 0x593570C289A77688
+```
+
+build 323 · old names: `_NETWORK_GET_ROS_PRIVILEGE_24`
+
+## NETWORK_HAS_ROS_PRIVILEGE_SPECIAL_EDITION_CONTENT
+
+```c
+BOOL NETWORK_HAS_ROS_PRIVILEGE_SPECIAL_EDITION_CONTENT()  // 0x91B87C55093DE351
+```
+
+build 323 · old names: `_NETWORK_GET_ROS_PRIVILEGE_25`
+
+## NETWORK_HAS_SC_MEMBERSHIP
+
+```c
+BOOL NETWORK_HAS_SC_MEMBERSHIP()  // 0xAB286B2192A71E32
+```
+
+build 3717
+
+## NETWORK_HAS_SOCIAL_CLUB_ACCOUNT
+
+```c
+BOOL NETWORK_HAS_SOCIAL_CLUB_ACCOUNT()  // 0x67A5589628E0CFF6
+```
+
+build 323
+
+## NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV
+
+```c
+BOOL NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV()  // 0x76BF03FADBF154F5
+```
+
+build 323
+
+## NETWORK_HAS_TRANSITION_INVITE_BEEN_ACKED
+
+```c
+BOOL NETWORK_HAS_TRANSITION_INVITE_BEEN_ACKED(Any* p0)  // 0x3F9990BF5F22759C
+```
+
+build 323
+
+## NETWORK_HAS_VALID_ROS_CREDENTIALS
+
+```c
+BOOL NETWORK_HAS_VALID_ROS_CREDENTIALS()  // 0x85443FF4C328F53B
+```
+
+build 323 · old names: `_NETWORK_ARE_ROS_AVAILABLE`, `NETWORK_HAVE_JUST_UPLOAD_LATER`
+
+> Returns whether the signed-in user has valid Rockstar Online Services (ROS) credentials.
+
+## NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT
+
+```c
+BOOL NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT(Any* gamerHandle)  // 0xCCA4318E1AB03F1F
+```
+
+build 323
+
+## NETWORK_HASH_FROM_GAMER_HANDLE
+
+```c
+Hash NETWORK_HASH_FROM_GAMER_HANDLE(Any* gamerHandle)  // 0x58575AC3CF2CA8EC
+```
+
+build 323 · old names: `_NETWORK_HASH_FROM_GAMER_HANDLE`
+
+## NETWORK_HASH_FROM_PLAYER_HANDLE
+
+```c
+Hash NETWORK_HASH_FROM_PLAYER_HANDLE(Player player)  // 0xBC1D768F2F5D6C05
+```
+
+build 323 · old names: `_NETWORK_HASH_FROM_PLAYER_HANDLE`
+
+## NETWORK_HAVE_COMMUNICATION_PRIVILEGES
+
+```c
+BOOL NETWORK_HAVE_COMMUNICATION_PRIVILEGES(int p0, Player player)  // 0xAEEF48CDF5B6CE7C
+```
+
+build 323
+
+## NETWORK_HAVE_ONLINE_PRIVILEGES
+
+```c
+BOOL NETWORK_HAVE_ONLINE_PRIVILEGES()  // 0x25CB5A9F37BFD063
+```
+
+build 323
+
+## NETWORK_HAVE_PLATFORM_SUBSCRIPTION
+
+```c
+BOOL NETWORK_HAVE_PLATFORM_SUBSCRIPTION()  // 0x5EA784D197556507
+```
+
+build 323 · old names: `_NETWORK_HAVE_ONLINE_PRIVILEGE_2`
+
+## NETWORK_HAVE_ROS_BANNED_PRIV
+
+```c
+BOOL NETWORK_HAVE_ROS_BANNED_PRIV()  // 0x8020A73847E0CA7D
+```
+
+build 323 · old names: `_IS_ROCKSTAR_BANNED`, `_NETWORK_HAS_PLAYER_BEEN_BANNED`
+
+## NETWORK_HAVE_ROS_CREATE_TICKET_PRIV
+
+```c
+BOOL NETWORK_HAVE_ROS_CREATE_TICKET_PRIV()  // 0xA0AD7E2AF5349F61
+```
+
+build 323 · old names: `_IS_SOCIALCLUB_BANNED`, `_NETWORK_HAVE_SOCIAL_CLUB_PRIVILEGE`
+
+## NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV
+
+```c
+BOOL NETWORK_HAVE_ROS_LEADERBOARD_WRITE_PRIV()  // 0x422D396F80A96547
+```
+
+build 323 · old names: `_NETWORK_GET_ROS_PRIVILEGE_4`
+
+## NETWORK_HAVE_ROS_MULTIPLAYER_PRIV
+
+```c
+BOOL NETWORK_HAVE_ROS_MULTIPLAYER_PRIV()  // 0x5F91D5D0B36AA310
+```
+
+build 323 · old names: `_IS_PLAYER_BANNED`, `_CAN_PLAY_ONLINE`, `_NETWORK_GET_ROS_PRIVILEGE_3`
+
+## NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV
+
+```c
+BOOL NETWORK_HAVE_ROS_SOCIAL_CLUB_PRIV()  // 0x606E4D3E3CCCF3EB
+```
+
+build 323 · old names: `_NETWORK_GET_ROS_PRIVILEGE_10`
+
+## NETWORK_HAVE_SCS_PRIVATE_MSG_PRIV
+
+```c
+BOOL NETWORK_HAVE_SCS_PRIVATE_MSG_PRIV()  // 0x66B59CFFD78467AF
+```
+
+build 323 · old names: `_NETWORK_GET_ROS_PRIVILEGE_9`
+
+## NETWORK_HAVE_USER_CONTENT_PRIVILEGES
+
+```c
+BOOL NETWORK_HAVE_USER_CONTENT_PRIVILEGES(int p0)  // 0x72D918C99BCACC54
+```
+
+build 323
+
+## NETWORK_HIDE_PROJECTILE_IN_CUTSCENE
+
+```c
+void NETWORK_HIDE_PROJECTILE_IN_CUTSCENE()  // 0xFAC18E7356BD3210
+```
+
+build 1180
+
+## NETWORK_HOST_TRANSITION
+
+```c
+BOOL NETWORK_HOST_TRANSITION(int p0, int p1, int p2, int p3, Any p4, BOOL p5, BOOL p6, int p7, Any p8, int p9)  // 0xA60BB5CE242BB254
+```
+
+build 323
+
+> p0: Unknown int
+> p1: Unknown int
+> p2: Unknown int
+> p3: Unknown int
+> p4: Unknown always 0 in decompiled scripts
+> p5: BOOL purpose unknown, both 0 and 1 are used in decompiled scripts.
+> p6: BOOL purpose unknown, both 0 and 1 are used in decompiled scripts.
+> p7: Unknown int, it's an int according to decompiled scripts, however the value is always 0 or 1.
+> p8: Unknown int, it's an int according to decompiled scripts, however the value is always 0 or 1.
+> p9: Unknown int, sometimes 0, but also 32768 or 16384 appear in decompiled scripst, maybe a flag of some sort?
+> 
+> From what I can tell it looks like it does the following:
+> Creates/hosts a new transition to another online session, using this in FiveM will result in other players being disconencted from the server/preventing them from joining. This is most likely because I entered the wrong session parameters since they're pretty much all unknown right now.
+> You also need to use `NetworkJoinTransition(Player player)` and `NetworkLaunchTransition()`.
+
+## NETWORK_IGNORE_REMOTE_WAYPOINTS
+
+```c
+void NETWORK_IGNORE_REMOTE_WAYPOINTS()  // 0x4C2A9FDC22377075
+```
+
+build 372
+
+## NETWORK_INVITE_GAMERS
+
+```c
+BOOL NETWORK_INVITE_GAMERS(Any* p0, Any p1, Any* p2, Any p3)  // 0x9D80CD1D0E6327DE
+```
+
+build 323
+
+## NETWORK_INVITE_GAMERS_TO_TRANSITION
+
+```c
+BOOL NETWORK_INVITE_GAMERS_TO_TRANSITION(Any* p0, Any p1)  // 0x4A595C32F77DFF76
+```
+
+build 323
+
+## NETWORK_IS_ACTIVITY_SESSION
+
+```c
+BOOL NETWORK_IS_ACTIVITY_SESSION()  // 0x05095437424397FA
+```
+
+build 323
+
+## NETWORK_IS_ACTIVITY_SPECTATOR
+
+```c
+BOOL NETWORK_IS_ACTIVITY_SPECTATOR()  // 0x12103B9E0C9F92FB
+```
+
+build 323
+
+## NETWORK_IS_ACTIVITY_SPECTATOR_FROM_HANDLE
+
+```c
+BOOL NETWORK_IS_ACTIVITY_SPECTATOR_FROM_HANDLE(Any* gamerHandle)  // 0x2763BBAA72A7BCB9
+```
+
+build 323
+
+## NETWORK_IS_ADDING_FRIEND
+
+```c
+BOOL NETWORK_IS_ADDING_FRIEND()  // 0x6EA101606F6E4D81
+```
+
+build 323
+
+## NETWORK_IS_ANY_PLAYER_NEAR
+
+```c
+BOOL NETWORK_IS_ANY_PLAYER_NEAR(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6)  // 0x2E4C123D1C8A710E
+```
+
+build 505
+
+## NETWORK_IS_CABLE_CONNECTED
+
+```c
+BOOL NETWORK_IS_CABLE_CONNECTED()  // 0xEFFB25453D8600F9
+```
+
+build 323
+
+## NETWORK_IS_CHATTING_IN_PLATFORM_PARTY
+
+```c
+BOOL NETWORK_IS_CHATTING_IN_PLATFORM_PARTY(Any* gamerHandle)  // 0x8DE9945BCC9AEC52
+```
+
+build 323
+
+> This would be nice to see if someone is in party chat, but 2 sad notes.
+> 1) It only becomes true if said person is speaking in that party at the time.
+> 2) It will never, become true unless you are in that party with said person.
+
+## NETWORK_IS_CLOCK_TIME_OVERRIDDEN
+
+```c
+BOOL NETWORK_IS_CLOCK_TIME_OVERRIDDEN()  // 0xD7C95D322FF57522
+```
+
+build 323
+
+## NETWORK_IS_CLOUD_AVAILABLE
+
+```c
+BOOL NETWORK_IS_CLOUD_AVAILABLE()  // 0x9A4CF4F48AD77302
+```
+
+build 323
+
+## NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING
+
+```c
+BOOL NETWORK_IS_CLOUD_BACKGROUND_SCRIPT_REQUEST_PENDING()  // 0x8132C0EB8B2B3293
+```
+
+build 323 · old names: `_HAS_BG_SCRIPT_BEEN_DOWNLOADED`, `_NETWORK_IS_CLOUD_BACKGROUND_SCRIPTS_REQUEST_PENDING`
+
+## NETWORK_IS_CONNECTED_VIA_RELAY
+
+```c
+BOOL NETWORK_IS_CONNECTED_VIA_RELAY(Player player)  // 0x16D3D49902F697BB
+```
+
+build 323 · old names: `_NETWORK_IS_CONNECTION_ENDPOINT_RELAY_SERVER`
+
+## NETWORK_IS_CONNETED_TO_NP_PRESENCE
+
+```c
+BOOL NETWORK_IS_CONNETED_TO_NP_PRESENCE()  // 0x7808619F31FF22DB
+```
+
+build 323
+
+> This function is hard-coded to always return 1.
+
+## NETWORK_IS_DOOR_NETWORKED
+
+```c
+BOOL NETWORK_IS_DOOR_NETWORKED(Hash doorHash)  // 0xC01E93FAC20C3346
+```
+
+build 323 · old names: `_NETWORK_HAS_CONTROL_OF_PAVEMENT_STATS`
+
+## NETWORK_IS_ENTITY_CONCEALED
+
+```c
+BOOL NETWORK_IS_ENTITY_CONCEALED(Entity entity)  // 0x71302EC70689052A
+```
+
+build 877 · old names: `_NETWORK_IS_ENTITY_CONCEALED`
+
+> Note: This only works for vehicles, which appears to be a bug (since the setter _does_ work for every entity type and the name is 99% correct).
+
+## NETWORK_IS_ENTITY_FADING
+
+```c
+BOOL NETWORK_IS_ENTITY_FADING(Entity entity)  // 0x422F32CC7E56ABAD
+```
+
+build 323
+
+## NETWORK_IS_FINDING_GAMERS
+
+```c
+BOOL NETWORK_IS_FINDING_GAMERS()  // 0xDDDF64C91BFCF0AA
+```
+
+build 323
+
+## NETWORK_IS_FRIEND
+
+```c
+BOOL NETWORK_IS_FRIEND(Any* gamerHandle)  // 0x1A24A179F9B31654
+```
+
+build 323
+
+## NETWORK_IS_FRIEND_HANDLE_ONLINE
+
+```c
+BOOL NETWORK_IS_FRIEND_HANDLE_ONLINE(Any* gamerHandle)  // 0x87EB7A3FFCB314DB
+```
+
+build 323 · old names: `_NETWORK_IS_FRIEND_ONLINE_2`
+
+## NETWORK_IS_FRIEND_IN_MULTIPLAYER
+
+```c
+BOOL NETWORK_IS_FRIEND_IN_MULTIPLAYER(const char* friendName)  // 0x57005C18827F3A28
+```
+
+build 323
+
+## NETWORK_IS_FRIEND_IN_SAME_TITLE
+
+```c
+BOOL NETWORK_IS_FRIEND_IN_SAME_TITLE(const char* friendName)  // 0x2EA9A3BEDF3F17B8
+```
+
+build 323
+
+> In scripts R* calls 'NETWORK_GET_FRIEND_NAME' in this param.
+
+## NETWORK_IS_FRIEND_INDEX_ONLINE
+
+```c
+BOOL NETWORK_IS_FRIEND_INDEX_ONLINE(int friendIndex)  // 0xBAD8F2A42B844821
+```
+
+build 323
+
+## NETWORK_IS_FRIEND_ONLINE
+
+```c
+BOOL NETWORK_IS_FRIEND_ONLINE(const char* name)  // 0x425A44533437B64D
+```
+
+build 323
+
+## NETWORK_IS_GAME_IN_PROGRESS
+
+```c
+BOOL NETWORK_IS_GAME_IN_PROGRESS()  // 0x10FAB35428CCC9D7
+```
+
+build 323
+
+## NETWORK_IS_GAMER_BLOCKED_BY_ME
+
+```c
+BOOL NETWORK_IS_GAMER_BLOCKED_BY_ME(Any* gamerHandle)  // 0xE944C4F5AF1B5883
+```
+
+build 323
+
+## NETWORK_IS_GAMER_IN_MY_SESSION
+
+```c
+BOOL NETWORK_IS_GAMER_IN_MY_SESSION(Any* gamerHandle)  // 0x0F10B05DDF8D16E9
+```
+
+build 323
+
+## NETWORK_IS_GAMER_MUTED_BY_ME
+
+```c
+BOOL NETWORK_IS_GAMER_MUTED_BY_ME(Any* gamerHandle)  // 0xCE60DE011B6C7978
+```
+
+build 323
+
+## NETWORK_IS_GAMER_TALKING
+
+```c
+BOOL NETWORK_IS_GAMER_TALKING(Any* gamerHandle)  // 0x71C33B22606CD88A
+```
+
+build 323
+
+## NETWORK_IS_GETTING_GAMER_STATUS
+
+```c
+BOOL NETWORK_IS_GETTING_GAMER_STATUS()  // 0x94A8394D150B013A
+```
+
+build 323
+
+## NETWORK_IS_HANDLE_VALID
+
+```c
+BOOL NETWORK_IS_HANDLE_VALID(Any* gamerHandle, int gamerHandleSize)  // 0x6F79B93B0A8E4133
+```
+
+build 323
+
+## NETWORK_IS_HOST
+
+```c
+BOOL NETWORK_IS_HOST()  // 0x8DB296B814EDDA07
+```
+
+build 323
+
+> If you are host, returns true else returns false.
+
+## NETWORK_IS_HOST_OF_THIS_SCRIPT
+
+```c
+BOOL NETWORK_IS_HOST_OF_THIS_SCRIPT()  // 0x83CD99A1E6061AB5
+```
+
+build 323
+
+## NETWORK_IS_IN_MP_CUTSCENE
+
+```c
+BOOL NETWORK_IS_IN_MP_CUTSCENE()  // 0x6CC27C9FA2040220
+```
+
+build 323
+
+## NETWORK_IS_IN_PLATFORM_PARTY
+
+```c
+BOOL NETWORK_IS_IN_PLATFORM_PARTY()  // 0x2FC5650B0271CB57
+```
+
+build 323
+
+> Hardcoded to return false.
+
+## NETWORK_IS_IN_PLATFORM_PARTY_CHAT
+
+```c
+BOOL NETWORK_IS_IN_PLATFORM_PARTY_CHAT()  // 0xFD8B834A8BA05048
+```
+
+build 323
+
+> Hardcoded to return false.
+
+## NETWORK_IS_IN_SESSION
+
+```c
+BOOL NETWORK_IS_IN_SESSION()  // 0xCA97246103B63917
+```
+
+build 323
+
+## NETWORK_IS_IN_SPECTATOR_MODE
+
+```c
+BOOL NETWORK_IS_IN_SPECTATOR_MODE()  // 0x048746E388762E11
+```
+
+build 323
+
+## NETWORK_IS_IN_TRANSITION
+
+```c
+BOOL NETWORK_IS_IN_TRANSITION()  // 0x68049AEFF83D8F0A
+```
+
+build 323
+
+## NETWORK_IS_IN_TUTORIAL_SESSION
+
+```c
+BOOL NETWORK_IS_IN_TUTORIAL_SESSION()  // 0xADA24309FE08DACF
+```
+
+build 323
+
+## NETWORK_IS_INACTIVE_PROFILE
+
+```c
+BOOL NETWORK_IS_INACTIVE_PROFILE(Any* p0)  // 0x7E58745504313A2E
+```
+
+build 323
+
+## NETWORK_IS_LOCAL_PLAYER_INVINCIBLE
+
+```c
+BOOL NETWORK_IS_LOCAL_PLAYER_INVINCIBLE()  // 0x8A8694B48715B000
+```
+
+build 323
+
+## NETWORK_IS_LOGGED_IN_TO_PSN
+
+```c
+BOOL NETWORK_IS_LOGGED_IN_TO_PSN()  // 0xA0FA4EC6A05DA44E
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## NETWORK_IS_MULTIPLAYER_DISABLED
+
+```c
+BOOL NETWORK_IS_MULTIPLAYER_DISABLED()  // 0x9747292807126EDA
+```
+
+build 323
+
+## NETWORK_IS_NETWORK_ID_REMOTELY_CONTROLLED
+
+```c
+BOOL NETWORK_IS_NETWORK_ID_REMOTELY_CONTROLLED(int netId)  // 0x7242F8B741CE1086
+```
+
+build 678 · old names: `_NETWORK_IS_NETWORK_ID_A_CLONE`
+
+> Returns true if the specified network id is controlled by someone else.
+
+## NETWORK_IS_NP_AVAILABLE
+
+```c
+BOOL NETWORK_IS_NP_AVAILABLE()  // 0xBD545D44CCE70597
+```
+
+build 323
+
+> This function is hard-coded to always return 1.
+
+## NETWORK_IS_NP_PENDING
+
+```c
+BOOL NETWORK_IS_NP_PENDING()  // 0xEBCAB9E5048434F4
+```
+
+build 323
+
+> This function is hard-coded to always return 1.
+
+## NETWORK_IS_OFFLINE_INVITE_PENDING
+
+```c
+BOOL NETWORK_IS_OFFLINE_INVITE_PENDING()  // 0x74698374C45701D2
+```
+
+build 323
+
+## NETWORK_IS_PARTICIPANT_ACTIVE
+
+```c
+BOOL NETWORK_IS_PARTICIPANT_ACTIVE(int p0)  // 0x6FF8FF40B6357D45
+```
+
+build 323
+
+## NETWORK_IS_PENDING_FRIEND
+
+```c
+BOOL NETWORK_IS_PENDING_FRIEND(Any p0)  // 0x0BE73DA6984A6E33
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## NETWORK_IS_PLATFORM_SUBSCRIPTION_CHECK_PENDING
+
+```c
+BOOL NETWORK_IS_PLATFORM_SUBSCRIPTION_CHECK_PENDING()  // 0xA8ACB6459542A8C8
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_A_PARTICIPANT
+
+```c
+BOOL NETWORK_IS_PLAYER_A_PARTICIPANT(Player player)  // 0x3CA58F6CB7CBD784
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT
+
+```c
+BOOL NETWORK_IS_PLAYER_A_PARTICIPANT_ON_SCRIPT(Player player, const char* script, int instance_id)  // 0x1AD5B71586B94820
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_ACTIVE
+
+```c
+BOOL NETWORK_IS_PLAYER_ACTIVE(Player player)  // 0xB8DFD30D6973E135
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_BLOCKED_BY_ME
+
+```c
+BOOL NETWORK_IS_PLAYER_BLOCKED_BY_ME(Player player)  // 0x57AF1F8E27483721
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_CONCEALED
+
+```c
+BOOL NETWORK_IS_PLAYER_CONCEALED(Player player)  // 0x919B3C98ED8292F9
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_CONNECTED
+
+```c
+BOOL NETWORK_IS_PLAYER_CONNECTED(Player player)  // 0x93DC1BE4E1ABE9D1
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_FADING
+
+```c
+BOOL NETWORK_IS_PLAYER_FADING(Player player)  // 0x631DC5DFF4B110E3
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_IN_MP_CUTSCENE
+
+```c
+BOOL NETWORK_IS_PLAYER_IN_MP_CUTSCENE(Player player)  // 0x63F9EE203C3619F2
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_MUTED_BY_ME
+
+```c
+BOOL NETWORK_IS_PLAYER_MUTED_BY_ME(Player player)  // 0x8C71288AE68EDE39
+```
+
+build 323
+
+## NETWORK_IS_PLAYER_ON_BLOCKLIST
+
+```c
+BOOL NETWORK_IS_PLAYER_ON_BLOCKLIST(Any* gamerHandle)  // 0xAD4326FCA30D62F8
+```
+
+build 2802
+
+## NETWORK_IS_PLAYER_TALKING
+
+```c
+BOOL NETWORK_IS_PLAYER_TALKING(Player player)  // 0x031E11F3D447647E
+```
+
+build 323
+
+> returns true if someone is screaming or talking in a microphone
+
+## NETWORK_IS_PRIVILEGE_CHECK_IN_PROGRESS
+
+```c
+BOOL NETWORK_IS_PRIVILEGE_CHECK_IN_PROGRESS()  // 0x64E5C4CC82847B73
+```
+
+build 1734
+
+> Hardcoded to return false.
+
+## NETWORK_IS_PUSH_TO_TALK_ACTIVE
+
+```c
+BOOL NETWORK_IS_PUSH_TO_TALK_ACTIVE()  // 0xC0D2AF00BCC234CA
+```
+
+build 323 · old names: `NETWORK_IS_LOCAL_TALKING`
+
+## NETWORK_IS_QUEUING_FOR_SESSION_JOIN
+
+```c
+BOOL NETWORK_IS_QUEUING_FOR_SESSION_JOIN()  // 0x14922ED3E38761F0
+```
+
+build 323
+
+## NETWORK_IS_REFRESHING_ROS_CREDENTIALS
+
+```c
+BOOL NETWORK_IS_REFRESHING_ROS_CREDENTIALS()  // 0x8D11E61A4ABF49CC
+```
+
+build 323
+
+## NETWORK_IS_SCRIPT_ACTIVE
+
+```c
+BOOL NETWORK_IS_SCRIPT_ACTIVE(const char* scriptName, int instance_id, BOOL p2, int position_hash)  // 0x9D40DF90FAD26098
+```
+
+build 323
+
+## NETWORK_IS_SCRIPT_ACTIVE_BY_HASH
+
+```c
+BOOL NETWORK_IS_SCRIPT_ACTIVE_BY_HASH(Hash scriptHash, int p1, BOOL p2, int p3)  // 0xDA7DE67F5FE5EE13
+```
+
+build 2245
+
+## NETWORK_IS_SESSION_ACTIVE
+
+```c
+BOOL NETWORK_IS_SESSION_ACTIVE()  // 0xD83C2B94E7508980
+```
+
+build 323
+
+## NETWORK_IS_SESSION_BUSY
+
+```c
+BOOL NETWORK_IS_SESSION_BUSY()  // 0xF4435D66A8E2905E
+```
+
+build 323
+
+## NETWORK_IS_SESSION_STARTED
+
+```c
+BOOL NETWORK_IS_SESSION_STARTED()  // 0x9DE624D2FC4B603F
+```
+
+build 323
+
+> This checks if player is playing on gta online or not.
+
+## NETWORK_IS_SHOWING_SYSTEM_UI_OR_RECENTLY_REQUESTED_UPSELL
+
+```c
+BOOL NETWORK_IS_SHOWING_SYSTEM_UI_OR_RECENTLY_REQUESTED_UPSELL()  // 0x7788DFE15016A182
+```
+
+build 2612
+
+## NETWORK_IS_SIGNED_IN
+
+```c
+BOOL NETWORK_IS_SIGNED_IN()  // 0x054354A99211EB96
+```
+
+build 323
+
+> Returns whether the player is signed into Social Club.
+
+## NETWORK_IS_SIGNED_ONLINE
+
+```c
+BOOL NETWORK_IS_SIGNED_ONLINE()  // 0x1077788E268557C2
+```
+
+build 323
+
+> Returns whether the game is not in offline mode.
+> 
+> seemed not to work for some ppl
+
+## NETWORK_IS_THREAD_A_NETWORK_SCRIPT
+
+```c
+BOOL NETWORK_IS_THREAD_A_NETWORK_SCRIPT(int threadId)  // 0x560B423D73015E77
+```
+
+build 1604 · old names: `_NETWORK_IS_THREAD_ACTIVE`
+
+## NETWORK_IS_TITLE_UPDATE_REQUIRED
+
+```c
+BOOL NETWORK_IS_TITLE_UPDATE_REQUIRED()  // 0x6FB7BB3607D27FA2
+```
+
+build 323
+
+> This function is hard-coded to always return 0.
+
+## NETWORK_IS_TRANSITION_BUSY
+
+```c
+BOOL NETWORK_IS_TRANSITION_BUSY()  // 0x520F3282A53D26B7
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_CLOSED_CREW
+
+```c
+BOOL NETWORK_IS_TRANSITION_CLOSED_CREW()  // 0x0DBD5D7E3C5BEC3B
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_CLOSED_FRIENDS
+
+```c
+BOOL NETWORK_IS_TRANSITION_CLOSED_FRIENDS()  // 0x6512765E3BE78C50
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_HOST
+
+```c
+BOOL NETWORK_IS_TRANSITION_HOST()  // 0x0B824797C9BF2159
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_HOST_FROM_HANDLE
+
+```c
+BOOL NETWORK_IS_TRANSITION_HOST_FROM_HANDLE(Any* gamerHandle)  // 0x6B5C83BA3EFE6A10
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_LEAVE_POSTPONED
+
+```c
+BOOL NETWORK_IS_TRANSITION_LEAVE_POSTPONED()  // 0xC571D0E77D8BBC29
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_MATCHMAKING
+
+```c
+BOOL NETWORK_IS_TRANSITION_MATCHMAKING()  // 0x292564C735375EDF
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_OPEN_TO_MATCHMAKING
+
+```c
+BOOL NETWORK_IS_TRANSITION_OPEN_TO_MATCHMAKING()  // 0x37A4494483B9F5C9
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_PRIVATE
+
+```c
+BOOL NETWORK_IS_TRANSITION_PRIVATE()  // 0x5A6AA44FF8E931E6
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_SOLO
+
+```c
+BOOL NETWORK_IS_TRANSITION_SOLO()  // 0x5DC577201723960A
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_STARTED
+
+```c
+BOOL NETWORK_IS_TRANSITION_STARTED()  // 0x53FA83401D9C07FE
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_TO_GAME
+
+```c
+BOOL NETWORK_IS_TRANSITION_TO_GAME()  // 0x9D7696D8F4FA6CB7
+```
+
+build 323
+
+## NETWORK_IS_TRANSITION_VISIBILITY_LOCKED
+
+```c
+BOOL NETWORK_IS_TRANSITION_VISIBILITY_LOCKED()  // 0xD0A484CB2F829FBE
+```
+
+build 323
+
+## NETWORK_IS_TUNABLE_CLOUD_REQUEST_PENDING
+
+```c
+BOOL NETWORK_IS_TUNABLE_CLOUD_REQUEST_PENDING()  // 0x0467C11ED88B7D28
+```
+
+build 323 · old names: `_HAS_TUNABLES_BEEN_DOWNLOADED`
+
+## NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING
+
+```c
+BOOL NETWORK_IS_TUTORIAL_SESSION_CHANGE_PENDING()  // 0x35F0B98A8387274D
+```
+
+build 323
+
+## NETWORK_IS_USING_ONLINE_PROMOTION
+
+```c
+BOOL NETWORK_IS_USING_ONLINE_PROMOTION()  // 0x906CA41A4B74ECA4
+```
+
+build 1493
+
+## NETWORK_JOIN_GROUP_ACTIVITY
+
+```c
+BOOL NETWORK_JOIN_GROUP_ACTIVITY()  // 0xA06509A691D12BE4
+```
+
+build 323
+
+## NETWORK_JOIN_PREVIOUSLY_FAILED_SESSION
+
+```c
+BOOL NETWORK_JOIN_PREVIOUSLY_FAILED_SESSION()  // 0x59DF79317F85A7E0
+```
+
+build 323
+
+## NETWORK_JOIN_PREVIOUSLY_FAILED_TRANSITION
+
+```c
+BOOL NETWORK_JOIN_PREVIOUSLY_FAILED_TRANSITION()  // 0xFFE1E5B792D92B34
+```
+
+build 323
+
+## NETWORK_JOIN_TRANSITION
+
+```c
+BOOL NETWORK_JOIN_TRANSITION(Player player)  // 0x9D060B08CD63321A
+```
+
+build 323
+
+> int handle[76];
+>           NETWORK_HANDLE_FROM_FRIEND(iSelectedPlayer, &handle[0], 13);
+>           Player uVar2 = NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(&handle[0]);
+>           NETWORK_JOIN_TRANSITION(uVar2);
+> nothing doin.
+
+## NETWORK_KEEP_ENTITY_COLLISION_DISABLED_AFTER_ANIM_SCENE
+
+```c
+void NETWORK_KEEP_ENTITY_COLLISION_DISABLED_AFTER_ANIM_SCENE(Any p0, Any p1)  // 0x17C9E241111A674D
+```
+
+build 2060
+
+## NETWORK_LAUNCH_TRANSITION
+
+```c
+BOOL NETWORK_LAUNCH_TRANSITION()  // 0x2DCF46CB1A4F0884
+```
+
+build 323
+
+## NETWORK_LEAVE_PED_BEHIND_BEFORE_CUTSCENE
+
+```c
+void NETWORK_LEAVE_PED_BEHIND_BEFORE_CUTSCENE(Player player, BOOL p1)  // 0xBF22E0F32968E967
+```
+
+build 323
+
+## NETWORK_LEAVE_PED_BEHIND_BEFORE_WARP
+
+```c
+void NETWORK_LEAVE_PED_BEHIND_BEFORE_WARP(Player player, float x, float y, float z, BOOL p4, BOOL p5)  // 0x9769F811D1785B03
+```
+
+build 323 · old names: `_NETWORK_RESPAWN_COORDS`
+
+> p4 and p5 are always 0 in scripts
+
+## NETWORK_LEAVE_TRANSITION
+
+```c
+BOOL NETWORK_LEAVE_TRANSITION()  // 0xD23A1A815D21DB19
+```
+
+build 323
+
+## NETWORK_MARK_AS_PREFERRED_ACTIVITY
+
+```c
+void NETWORK_MARK_AS_PREFERRED_ACTIVITY(BOOL p0)  // 0x261E97AD7BCF3D40
+```
+
+build 323
+
+## NETWORK_MARK_AS_WAITING_ASYNC
+
+```c
+void NETWORK_MARK_AS_WAITING_ASYNC(BOOL p0)  // 0x39917E1B4CB0F911
+```
+
+build 323
+
+## NETWORK_MARK_TRANSITION_GAMER_AS_FULLY_JOINED
+
+```c
+BOOL NETWORK_MARK_TRANSITION_GAMER_AS_FULLY_JOINED(Any* p0)  // 0x5728BB6D63E3FF1D
+```
+
+build 323
+
+## NETWORK_MEMBER_ID_FROM_GAMER_HANDLE
+
+```c
+const char* NETWORK_MEMBER_ID_FROM_GAMER_HANDLE(Any* gamerHandle)  // 0xC82630132081BB6F
+```
+
+build 323
+
+## NETWORK_NEED_TO_START_NEW_GAME_BUT_BLOCKED
+
+```c
+BOOL NETWORK_NEED_TO_START_NEW_GAME_BUT_BLOCKED()  // 0x53C10C8BD774F2C9
+```
+
+build 1011
+
+## NETWORK_ON_RETURN_TO_SINGLE_PLAYER
+
+```c
+void NETWORK_ON_RETURN_TO_SINGLE_PLAYER()  // 0x283B6062A2C01E9B
+```
+
+build 323
+
+## NETWORK_OPEN_TRANSITION_MATCHMAKING
+
+```c
+void NETWORK_OPEN_TRANSITION_MATCHMAKING()  // 0x2B3A8F7CA3A38FDE
+```
+
+build 323
+
+## NETWORK_OVERRIDE_CHAT_RESTRICTIONS
+
+```c
+void NETWORK_OVERRIDE_CHAT_RESTRICTIONS(Player player, BOOL toggle)  // 0x3039AE5AD2C9C0C4
+```
+
+build 323
+
+> Could possibly bypass being muted or automatically muted
+
+## NETWORK_OVERRIDE_CLOCK_RATE
+
+```c
+void NETWORK_OVERRIDE_CLOCK_RATE(int ms)  // 0x42BF1D2E723B6D7E
+```
+
+build 2189 · old names: `_NETWORK_OVERRIDE_CLOCK_MILLISECONDS_PER_GAME_MINUTE`
+
+## NETWORK_OVERRIDE_CLOCK_TIME
+
+```c
+void NETWORK_OVERRIDE_CLOCK_TIME(int hours, int minutes, int seconds)  // 0xE679E3E06E363892
+```
+
+build 323
+
+> Works in Singleplayer too.
+> Passing wrong data (e.g. hours above 23) will cause the game to crash.
+
+## NETWORK_OVERRIDE_COORDS_AND_HEADING
+
+```c
+void NETWORK_OVERRIDE_COORDS_AND_HEADING(Entity entity, float x, float y, float z, float heading)  // 0xA7E30DE9272B6D49
+```
+
+build 323
+
+## NETWORK_OVERRIDE_RECEIVE_RESTRICTIONS
+
+```c
+void NETWORK_OVERRIDE_RECEIVE_RESTRICTIONS(Player player, BOOL toggle)  // 0xDDF73E2B1FEC5AB4
+```
+
+build 323
+
+> R* uses this to hear all player when spectating. 
+> It allows you to hear other online players when their chat is on none, crew and or friends
+
+## NETWORK_OVERRIDE_RECEIVE_RESTRICTIONS_ALL
+
+```c
+void NETWORK_OVERRIDE_RECEIVE_RESTRICTIONS_ALL(BOOL toggle)  // 0x0FF2862B61A58AF9
+```
+
+build 323
+
+> p0 is always false in scripts.
+
+## NETWORK_OVERRIDE_SEND_RESTRICTIONS
+
+```c
+void NETWORK_OVERRIDE_SEND_RESTRICTIONS(Player player, BOOL toggle)  // 0x97DD4C5944CC2E6A
+```
+
+build 323 · old names: `_NETWORK_OVERRIDE_SEND_RESTRICTIONS`
+
+> This is used alongside the native,
+> 'NETWORK_OVERRIDE_RECEIVE_RESTRICTIONS'. Read its description for more info.
+
+## NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL
+
+```c
+void NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL(BOOL toggle)  // 0x57B192B4D4AD23D5
+```
+
+build 323 · old names: `_NETWORK_CHAT_MUTE`
+
+## NETWORK_OVERRIDE_TEAM_RESTRICTIONS
+
+```c
+void NETWORK_OVERRIDE_TEAM_RESTRICTIONS(int team, BOOL toggle)  // 0x6F697A66CE78674E
+```
+
+build 323
+
+## NETWORK_OVERRIDE_TRANSITION_CHAT
+
+```c
+void NETWORK_OVERRIDE_TRANSITION_CHAT(BOOL p0)  // 0xAF66059A131AA269
+```
+
+build 323
+
+## NETWORK_PATCH_POST_CUTSCENE_HS4F_TUN_ENT
+
+```c
+void NETWORK_PATCH_POST_CUTSCENE_HS4F_TUN_ENT(Ped ped)  // 0xF0BC9BCD24A511D5
+```
+
+build 2372 · old names: `_NETWORK_PED_FORCE_GAME_STATE_UPDATE`
+
+## NETWORK_PERMISSIONS_HAS_GAMER_RECORD
+
+```c
+BOOL NETWORK_PERMISSIONS_HAS_GAMER_RECORD(Any* gamerHandle)  // 0x559EBF901A8C68E0
+```
+
+build 2699
+
+## NETWORK_PLAYER_GET_CHEATER_REASON
+
+```c
+int NETWORK_PLAYER_GET_CHEATER_REASON()  // 0x172F75B6EE2233BA
+```
+
+build 323 · old names: `_NETWORK_PLAYER_IS_UNK`
+
+## NETWORK_PLAYER_GET_NAME
+
+```c
+const char* NETWORK_PLAYER_GET_NAME(Player player)  // 0x7718D2E2060837D2
+```
+
+build 323
+
+> Returns the name of a given player. Returns "**Invalid**" if rlGamerInfo of the given player cannot be retrieved or the player doesn't exist.
+
+## NETWORK_PLAYER_GET_USERID
+
+```c
+const char* NETWORK_PLAYER_GET_USERID(Player player, int* userID)  // 0x4927FC39CD0869A0
+```
+
+build 323 · old names: `_NETWORK_PLAYER_GET_USER_ID`
+
+> Returns a string of the player's Rockstar Id. 
+> Takes a 24 char buffer. Returns the buffer or "**Invalid**" if rlGamerInfo of the given player cannot be retrieved or the player doesn't exist.
+
+## NETWORK_PLAYER_HAS_HEADSET
+
+```c
+BOOL NETWORK_PLAYER_HAS_HEADSET(Player player)  // 0x3FB99A8B08D18FD6
+```
+
+build 323
+
+## NETWORK_PLAYER_INDEX_IS_CHEATER
+
+```c
+BOOL NETWORK_PLAYER_INDEX_IS_CHEATER(Player player)  // 0x565E430DB3B05BEC
+```
+
+build 323 · old names: `_NETWORK_PLAYER_SOMETHING`
+
+## NETWORK_PLAYER_IS_BADSPORT
+
+```c
+BOOL NETWORK_PLAYER_IS_BADSPORT()  // 0x19D8DA0E5A68045A
+```
+
+build 323
+
+## NETWORK_PLAYER_IS_CHEATER
+
+```c
+BOOL NETWORK_PLAYER_IS_CHEATER()  // 0x655B91F1495A9090
+```
+
+build 323
+
+## NETWORK_PLAYER_IS_ROCKSTAR_DEV
+
+```c
+BOOL NETWORK_PLAYER_IS_ROCKSTAR_DEV(Player player)  // 0x544ABDDA3B409B6D
+```
+
+build 323
+
+> Checks if a specific value (BYTE) in CNetGamePlayer is nonzero.
+> Returns always false in Singleplayer.
+> 
+> No longer used for dev checks since first mods were released on PS3 & 360.
+> R* now checks with the IS_DLC_PRESENT native for the dlc hash 2532323046,
+> if that is present it will unlock dev stuff.
+
+## NETWORK_PREVENT_SCRIPT_HOST_MIGRATION
+
+```c
+void NETWORK_PREVENT_SCRIPT_HOST_MIGRATION()  // 0x2302C0264EA58D31
+```
+
+build 323
+
+## NETWORK_QUERY_RESPAWN_RESULTS
+
+```c
+int NETWORK_QUERY_RESPAWN_RESULTS(Any* p0)  // 0x3C891A251567DFCE
+```
+
+build 323
+
+## NETWORK_QUEUE_GAMER_FOR_STATUS
+
+```c
+BOOL NETWORK_QUEUE_GAMER_FOR_STATUS(Any* p0)  // 0x85A0EF54A500882C
+```
+
+build 323 · old names: `_NETWORK_GET_GAMER_STATUS`
+
+## NETWORK_QUIT_MP_TO_DESKTOP
+
+```c
+void NETWORK_QUIT_MP_TO_DESKTOP()  // 0x45A83257ED02D9BC
+```
+
+build 323
+
+## NETWORK_REGISTER_ENTITY_AS_NETWORKED
+
+```c
+void NETWORK_REGISTER_ENTITY_AS_NETWORKED(Entity entity)  // 0x06FAACD625D80CAA
+```
+
+build 323
+
+## NETWORK_REGISTER_HIGH_FREQUENCY_HOST_BROADCAST_VARIABLES
+
+```c
+void NETWORK_REGISTER_HIGH_FREQUENCY_HOST_BROADCAST_VARIABLES(Any p0, Any p1, Any p2)  // 0xEA8C0DDB10E2822A
+```
+
+build 1868
+
+## NETWORK_REGISTER_HIGH_FREQUENCY_PLAYER_BROADCAST_VARIABLES
+
+```c
+void NETWORK_REGISTER_HIGH_FREQUENCY_PLAYER_BROADCAST_VARIABLES(Any p0, Any p1, Any p2)  // 0xD6D7478CA62B8D41
+```
+
+build 1868
+
+## NETWORK_REGISTER_HOST_BROADCAST_VARIABLES
+
+```c
+void NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(int* vars, int numVars, const char* debugName)  // 0x3E9B2F01C50DF595
+```
+
+build 323
+
+## NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES
+
+```c
+void NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(int* vars, int numVars, const char* debugName)  // 0x3364AA97340CA215
+```
+
+build 323
+
+## NETWORK_REMAIN_IN_GAME_CHAT
+
+```c
+void NETWORK_REMAIN_IN_GAME_CHAT(BOOL p0)  // 0xCFEB46DCD7D8D5EB
+```
+
+build 323
+
+## NETWORK_REMOVE_ALL_QUEUED_JOIN_REQUESTS
+
+```c
+void NETWORK_REMOVE_ALL_QUEUED_JOIN_REQUESTS()  // 0x25D990F8E0E3F13C
+```
+
+build 323
+
+## NETWORK_REMOVE_ALL_TRANSITION_INVITE
+
+```c
+void NETWORK_REMOVE_ALL_TRANSITION_INVITE()  // 0x726E0375C7A26368
+```
+
+build 323
+
+## NETWORK_REMOVE_AND_CANCEL_ALL_INVITES
+
+```c
+void NETWORK_REMOVE_AND_CANCEL_ALL_INVITES()  // 0xEBF8284D8CADEB53
+```
+
+build 323
+
+## NETWORK_REMOVE_AND_CANCEL_ALL_TRANSITION_INVITES
+
+```c
+void NETWORK_REMOVE_AND_CANCEL_ALL_TRANSITION_INVITES()  // 0xF083835B70BA9BFE
+```
+
+build 323
+
+## NETWORK_REMOVE_ENTITY_AREA
+
+```c
+BOOL NETWORK_REMOVE_ENTITY_AREA(int areaHandle)  // 0x93CF869BAA0C4874
+```
+
+build 323
+
+## NETWORK_REMOVE_INVALID_OBJECT_MODEL
+
+```c
+void NETWORK_REMOVE_INVALID_OBJECT_MODEL(Hash modelHash)  // 0x791EDB5803B2F468
+```
+
+build 2545 · old names: `_NETWORK_REMOVE_INVALID_MODEL`
+
+## NETWORK_REMOVE_PRESENCE_INVITE
+
+```c
+BOOL NETWORK_REMOVE_PRESENCE_INVITE(int p0)  // 0xF0210268DB0974B1
+```
+
+build 323
+
+## NETWORK_REMOVE_TRANSITION_INVITE
+
+```c
+void NETWORK_REMOVE_TRANSITION_INVITE(Any* p0)  // 0x7524B431B2E6F7EE
+```
+
+build 323
+
+## NETWORK_REPORT_CODE_TAMPER
+
+```c
+void NETWORK_REPORT_CODE_TAMPER()  // 0x5626D9D6810730D5
+```
+
+build 350 · old names: `_NETWORK_REPORT_MYSELF`
+
+## NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS
+
+```c
+BOOL NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS()  // 0x924426BFFD82E915
+```
+
+build 323 · old names: `_NETWORK_REQUEST_CLOUD_BACKGROUND_SCRIPTS`
+
+## NETWORK_REQUEST_CLOUD_TUNABLES
+
+```c
+void NETWORK_REQUEST_CLOUD_TUNABLES()  // 0x42FB3B532D526E6C
+```
+
+build 323
+
+## NETWORK_REQUEST_CONTROL_OF_DOOR
+
+```c
+BOOL NETWORK_REQUEST_CONTROL_OF_DOOR(int doorID)  // 0x870DDFD5A4A796E4
+```
+
+build 323
+
+## NETWORK_REQUEST_CONTROL_OF_ENTITY
+
+```c
+BOOL NETWORK_REQUEST_CONTROL_OF_ENTITY(Entity entity)  // 0xB69317BF5E782347
+```
+
+build 323
+
+## NETWORK_REQUEST_CONTROL_OF_NETWORK_ID
+
+```c
+BOOL NETWORK_REQUEST_CONTROL_OF_NETWORK_ID(int netId)  // 0xA670B3662FAFFBD0
+```
+
+build 323
+
+## NETWORK_REQUEST_INVITE_CONFIRMED_EVENT
+
+```c
+BOOL NETWORK_REQUEST_INVITE_CONFIRMED_EVENT()  // 0x62A0296C1BB1CEB3
+```
+
+build 323 · old names: `_NETWORK_ACCEPT_INVITE`
+
+> Triggers a CEventNetworkInviteConfirmed event
+
+## NETWORK_REQUEST_TO_BE_HOST_OF_THIS_SCRIPT
+
+```c
+void NETWORK_REQUEST_TO_BE_HOST_OF_THIS_SCRIPT()  // 0x741A3D8380319A81
+```
+
+build 323
+
+## NETWORK_RESET_BODY_TRACKER
+
+```c
+void NETWORK_RESET_BODY_TRACKER()  // 0x72433699B4E6DD64
+```
+
+build 323
+
+## NETWORK_RESOLVE_PRIVILEGE_USER_CONTENT
+
+```c
+BOOL NETWORK_RESOLVE_PRIVILEGE_USER_CONTENT()  // 0xDE9225854F37BF72
+```
+
+build 2612
+
+> Hardcoded to return true.
+
+## NETWORK_RESURRECT_LOCAL_PLAYER
+
+```c
+void NETWORK_RESURRECT_LOCAL_PLAYER(float x, float y, float z, float heading, BOOL p4, BOOL changetime, BOOL p6, int p7, int p8)  // 0xEA23C49EAA83ACFB
+```
+
+build 323
+
+## NETWORK_RETAIN_ACTIVITY_GROUP
+
+```c
+void NETWORK_RETAIN_ACTIVITY_GROUP()  // 0xB13E88E655E5A3BC
+```
+
+build 323
+
+## NETWORK_SEED_RANDOM_NUMBER_GENERATOR
+
+```c
+void NETWORK_SEED_RANDOM_NUMBER_GENERATOR(int seed)  // 0xF1B84178F8674195
+```
+
+build 323
+
+## NETWORK_SEND_IMPORTANT_TRANSITION_INVITE_VIA_PRESENCE
+
+```c
+BOOL NETWORK_SEND_IMPORTANT_TRANSITION_INVITE_VIA_PRESENCE(Any* gamerHandle, const char* p1, int dataCount, int p3)  // 0x1171A97A3D3981B6
+```
+
+build 323 · old names: `_NETWORK_SEND_PRESENCE_TRANSITION_INVITE`
+
+## NETWORK_SEND_INVITE_VIA_PRESENCE
+
+```c
+BOOL NETWORK_SEND_INVITE_VIA_PRESENCE(Any* gamerHandle, const char* p1, int dataCount, int p3)  // 0xC3C7A6AFDB244624
+```
+
+build 323 · old names: `_NETWORK_SEND_PRESENCE_INVITE`
+
+## NETWORK_SEND_QUEUED_JOIN_REQUEST
+
+```c
+void NETWORK_SEND_QUEUED_JOIN_REQUEST()  // 0xFA2888E3833C8E96
+```
+
+build 323
+
+## NETWORK_SEND_TEXT_MESSAGE
+
+```c
+BOOL NETWORK_SEND_TEXT_MESSAGE(const char* message, Any* gamerHandle)  // 0x3A214F2EC889B100
+```
+
+build 323
+
+> Message is limited to 64 characters.
+
+## NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION
+
+```c
+BOOL NETWORK_SEND_TRANSITION_GAMER_INSTRUCTION(Any* gamerHandle, const char* p1, int p2, int p3, BOOL p4)  // 0x31D1D2B858D25E6B
+```
+
+build 323
+
+## NETWORK_SEND_TRANSITION_INVITE_VIA_PRESENCE
+
+```c
+BOOL NETWORK_SEND_TRANSITION_INVITE_VIA_PRESENCE(Any* gamerHandle, const char* p1, int dataCount, int p3)  // 0xC116FF9B4D488291
+```
+
+build 323 · old names: `_NETWORK_SEND_PRESENCE_TRANSITION_INVITE`
+
+## NETWORK_SESSION_ADD_ACTIVE_MATCHMAKING_GROUP
+
+```c
+void NETWORK_SESSION_ADD_ACTIVE_MATCHMAKING_GROUP(int groupId)  // 0xCAE55F48D3D7875C
+```
+
+build 323
+
+> groupId range: [0, 4]
+
+## NETWORK_SESSION_BLOCK_JOIN_REQUESTS
+
+```c
+void NETWORK_SESSION_BLOCK_JOIN_REQUESTS(BOOL toggle)  // 0xA73667484D7037C3
+```
+
+build 323
+
+## NETWORK_SESSION_CANCEL_INVITE
+
+```c
+void NETWORK_SESSION_CANCEL_INVITE()  // 0x2FBF47B1B36D36F9
+```
+
+build 323
+
+## NETWORK_SESSION_CHANGE_SLOTS
+
+```c
+void NETWORK_SESSION_CHANGE_SLOTS(int slots, BOOL p1)  // 0xB4AB419E0D86ACAE
+```
+
+build 323
+
+## NETWORK_SESSION_DO_ACTIVITY_QUICKMATCH
+
+```c
+BOOL NETWORK_SESSION_DO_ACTIVITY_QUICKMATCH(Any p0, Any p1, Any p2, Any p3, Any p4)  // 0xBE3E347A87ACEB82
+```
+
+build 323 · old names: `NETWORK_SESSION_ACTIVITY_QUICKMATCH`
+
+## NETWORK_SESSION_DO_CREW_MATCHMAKING
+
+```c
+BOOL NETWORK_SESSION_DO_CREW_MATCHMAKING(int crewId, int p1, int p2, int maxPlayers)  // 0x94BC51E9449D917F
+```
+
+build 323 · old names: `NETWORK_SESSION_CREW_MATCHMAKING`
+
+> p4 seems to be unused in 1.60/build 2628
+
+## NETWORK_SESSION_DO_FREEROAM_QUICKMATCH
+
+```c
+BOOL NETWORK_SESSION_DO_FREEROAM_QUICKMATCH(Any p0, Any p1, Any p2)  // 0x330ED4D05491934F
+```
+
+build 323
+
+## NETWORK_SESSION_DO_FRIEND_MATCHMAKING
+
+```c
+BOOL NETWORK_SESSION_DO_FRIEND_MATCHMAKING(int p0, int p1, int p2)  // 0x2CFC76E0D087C994
+```
+
+build 323 · old names: `NETWORK_SESSION_FRIEND_MATCHMAKING`
+
+## NETWORK_SESSION_FORCE_CANCEL_INVITE
+
+```c
+void NETWORK_SESSION_FORCE_CANCEL_INVITE()  // 0xA29177F7703B5644
+```
+
+build 323
+
+## NETWORK_SESSION_GET_HOST_AIM_PREFERENCE
+
+```c
+int NETWORK_SESSION_GET_HOST_AIM_PREFERENCE()  // 0xDFFA5BE8381C3314
+```
+
+build 463 · old names: `_NETWORK_GET_TARGETING_MODE`
+
+## NETWORK_SESSION_GET_INVITER
+
+```c
+void NETWORK_SESSION_GET_INVITER(Any* gamerHandle)  // 0xE57397B4A3429DD0
+```
+
+build 323
+
+## NETWORK_SESSION_GET_KICK_VOTE
+
+```c
+BOOL NETWORK_SESSION_GET_KICK_VOTE(Player player)  // 0xD6D09A6F32F49EF1
+```
+
+build 323 · old names: `_NETWORK_SESSION_ARE_PLAYERS_VOTING_TO_KICK`, `_NETWORK_SESSION_IS_PLAYER_VOTED_TO_KICK`
+
+## NETWORK_SESSION_GET_MATCHMAKING_GROUP_FREE
+
+```c
+int NETWORK_SESSION_GET_MATCHMAKING_GROUP_FREE(int p0)  // 0x56CE820830EF040B
+```
+
+build 323 · old names: `_NETWORK_SESSION_GET_UNK`
+
+## NETWORK_SESSION_GET_PRIVATE_SLOTS
+
+```c
+int NETWORK_SESSION_GET_PRIVATE_SLOTS()  // 0x53AFD64C6758F2F9
+```
+
+build 323
+
+## NETWORK_SESSION_GET_UNIQUE_CREW_LIMIT
+
+```c
+int NETWORK_SESSION_GET_UNIQUE_CREW_LIMIT()  // 0xCDC936BF35EDCB73
+```
+
+build 3095
+
+## NETWORK_SESSION_HOST
+
+```c
+BOOL NETWORK_SESSION_HOST(int p0, int maxPlayers, BOOL p2)  // 0x6F3D4ED9BEE4E61D
+```
+
+build 323
+
+> Does nothing in online but in offline it will cause the screen to fade to black. Nothing happens past then, the screen will sit at black until you restart GTA. Other stuff must be needed to actually host a session.
+
+## NETWORK_SESSION_HOST_CLOSED
+
+```c
+BOOL NETWORK_SESSION_HOST_CLOSED(int p0, int maxPlayers)  // 0xED34C0C02C098BB7
+```
+
+build 323
+
+## NETWORK_SESSION_HOST_FRIENDS_ONLY
+
+```c
+BOOL NETWORK_SESSION_HOST_FRIENDS_ONLY(int p0, int maxPlayers)  // 0xB9CFD27A5D578D83
+```
+
+build 323
+
+> Does nothing in online but in offline it will cause the screen to fade to black. Nothing happens past then, the screen will sit at black until you restart GTA. Other stuff must be needed to actually host a session.
+
+## NETWORK_SESSION_HOST_SINGLE_PLAYER
+
+```c
+void NETWORK_SESSION_HOST_SINGLE_PLAYER(int p0)  // 0xC74C33FCA52856D5
+```
+
+build 323
+
+> Loads up the map that is loaded when beeing in mission creator
+> Player gets placed in a mix between online/offline mode
+> p0 is always 2 in R* scripts.
+> 
+> Appears to be patched in gtav b757 (game gets terminated) alonside with most other network natives to prevent online modding ~ghost30812
+
+## NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE
+
+```c
+BOOL NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE()  // 0xD313DE83394AF134
+```
+
+build 323
+
+> Seems to be true while "Getting GTA Online session details" shows up.
+
+## NETWORK_SESSION_IS_CLOSED_CREW
+
+```c
+BOOL NETWORK_SESSION_IS_CLOSED_CREW()  // 0x74732C6CA90DA2B4
+```
+
+build 323
+
+## NETWORK_SESSION_IS_CLOSED_FRIENDS
+
+```c
+BOOL NETWORK_SESSION_IS_CLOSED_FRIENDS()  // 0xFBCFA2EA2E206890
+```
+
+build 323
+
+## NETWORK_SESSION_IS_DISPLAYING_INVITE_CONFIRMATION
+
+```c
+BOOL NETWORK_SESSION_IS_DISPLAYING_INVITE_CONFIRMATION()  // 0xBDB6F89C729CF388
+```
+
+build 323
+
+## NETWORK_SESSION_IS_IN_VOICE_SESSION
+
+```c
+BOOL NETWORK_SESSION_IS_IN_VOICE_SESSION()  // 0x855BC38818F6F684
+```
+
+build 323
+
+## NETWORK_SESSION_IS_PRIVATE
+
+```c
+BOOL NETWORK_SESSION_IS_PRIVATE()  // 0xCEF70AA5B3F89BA1
+```
+
+build 323
+
+## NETWORK_SESSION_IS_SOLO
+
+```c
+BOOL NETWORK_SESSION_IS_SOLO()  // 0xF3929C2379B60CCE
+```
+
+build 323
+
+## NETWORK_SESSION_IS_VISIBLE
+
+```c
+BOOL NETWORK_SESSION_IS_VISIBLE()  // 0xBA416D68C631496A
+```
+
+build 323
+
+## NETWORK_SESSION_IS_VOICE_SESSION_ACTIVE
+
+```c
+BOOL NETWORK_SESSION_IS_VOICE_SESSION_ACTIVE()  // 0xB5D3453C98456528
+```
+
+build 323
+
+## NETWORK_SESSION_IS_VOICE_SESSION_BUSY
+
+```c
+BOOL NETWORK_SESSION_IS_VOICE_SESSION_BUSY()  // 0xEF0912DDF7C4CB4B
+```
+
+build 323
+
+## NETWORK_SESSION_JOIN_INVITE
+
+```c
+void NETWORK_SESSION_JOIN_INVITE()  // 0xC6F8AB8A4189CF3A
+```
+
+build 323 · old names: `NETWORK_IS_PLAYER_ANIMATION_DRAWING_SYNCHRONIZED`
+
+## NETWORK_SESSION_KICK_PLAYER
+
+```c
+void NETWORK_SESSION_KICK_PLAYER(Player player)  // 0xFA8904DC5F304220
+```
+
+build 323
+
+> Only works as host.
+
+## NETWORK_SESSION_LEAVE
+
+```c
+BOOL NETWORK_SESSION_LEAVE(Any p0)  // 0xB9351A07A0D458B1
+```
+
+build 2060
+
+## NETWORK_SESSION_LEAVE_SINGLE_PLAYER
+
+```c
+void NETWORK_SESSION_LEAVE_SINGLE_PLAYER()  // 0x3442775428FD2DAA
+```
+
+build 323
+
+## NETWORK_SESSION_MARK_VISIBLE
+
+```c
+void NETWORK_SESSION_MARK_VISIBLE(BOOL toggle)  // 0x271CC6AB59EBF9A5
+```
+
+build 323
+
+## NETWORK_SESSION_RESERVE_SLOTS_TRANSITION
+
+```c
+BOOL NETWORK_SESSION_RESERVE_SLOTS_TRANSITION(Any p0, Any p1, Any p2)  // 0x041C7F2A6C9894E6
+```
+
+build 463
+
+## NETWORK_SESSION_SET_CREW_LIMIT_MAX_MEMBERS_TRANSITION
+
+```c
+void NETWORK_SESSION_SET_CREW_LIMIT_MAX_MEMBERS_TRANSITION(Any p0)  // 0x702BC4D605522539
+```
+
+build 323
+
+## NETWORK_SESSION_SET_GAMEMODE
+
+```c
+void NETWORK_SESSION_SET_GAMEMODE(Any p0)  // 0x600F8CB31C7AAB6E
+```
+
+build 323
+
+## NETWORK_SESSION_SET_MATCHMAKING_GROUP
+
+```c
+void NETWORK_SESSION_SET_MATCHMAKING_GROUP(int matchmakingGroup)  // 0x49EC8030F5015F8B
+```
+
+build 323 · old names: `_NETWORK_SCTV_SLOTS`
+
+## NETWORK_SESSION_SET_MATCHMAKING_GROUP_MAX
+
+```c
+void NETWORK_SESSION_SET_MATCHMAKING_GROUP_MAX(int playerType, int playerCount)  // 0x8B6A4DD0AF9CE215
+```
+
+build 323 · old names: `_NETWORK_SESSION_SET_MAX_PLAYERS`
+
+> playerType is an unsigned int from 0 to 4
+> 0 = regular joiner
+> 4 = spectator
+
+## NETWORK_SESSION_SET_MATCHMAKING_MENTAL_STATE
+
+```c
+void NETWORK_SESSION_SET_MATCHMAKING_MENTAL_STATE(int p0)  // 0xF1EEA2DDA9FFA69D
+```
+
+build 323
+
+> p0 in the decompiled scripts is always the stat mesh_texblend * 0.07 to int
+
+## NETWORK_SESSION_SET_MATCHMAKING_PROPERTY_ID
+
+```c
+void NETWORK_SESSION_SET_MATCHMAKING_PROPERTY_ID(BOOL p0)  // 0x3F52E880AAF6C8CA
+```
+
+build 323
+
+## NETWORK_SESSION_SET_NUM_BOSSES
+
+```c
+void NETWORK_SESSION_SET_NUM_BOSSES(int num)  // 0x59D421683D31835A
+```
+
+build 573
+
+## NETWORK_SESSION_SET_SCRIPT_VALIDATE_JOIN
+
+```c
+void NETWORK_SESSION_SET_SCRIPT_VALIDATE_JOIN()  // 0x1153FA02A659051C
+```
+
+build 323
+
+## NETWORK_SESSION_SET_UNIQUE_CREW_LIMIT
+
+```c
+void NETWORK_SESSION_SET_UNIQUE_CREW_LIMIT(Any p0)  // 0xF49ABC20D8552257
+```
+
+build 323
+
+## NETWORK_SESSION_SET_UNIQUE_CREW_LIMIT_TRANSITION
+
+```c
+void NETWORK_SESSION_SET_UNIQUE_CREW_LIMIT_TRANSITION(Any p0)  // 0x4811BBAC21C5FCD5
+```
+
+build 323
+
+## NETWORK_SESSION_SET_UNIQUE_CREW_ONLY_CREWS_TRANSITION
+
+```c
+void NETWORK_SESSION_SET_UNIQUE_CREW_ONLY_CREWS_TRANSITION(BOOL p0)  // 0x5539C3EBF104A53A
+```
+
+build 323
+
+## NETWORK_SESSION_VALIDATE_JOIN
+
+```c
+void NETWORK_SESSION_VALIDATE_JOIN(BOOL p0)  // 0xC19F6C8E7865A6FF
+```
+
+build 323 · old names: `_NETWORK_SESSION_HOSTED`
+
+## NETWORK_SESSION_VOICE_CONNECT_TO_PLAYER
+
+```c
+void NETWORK_SESSION_VOICE_CONNECT_TO_PLAYER(Any* gamerHandle)  // 0xABD5E88B8A2D3DB2
+```
+
+build 323 · old names: `_NETWORK_VOICE_CONNECT_TO_PLAYER`
+
+## NETWORK_SESSION_VOICE_HOST
+
+```c
+BOOL NETWORK_SESSION_VOICE_HOST()  // 0x9C1556705F864230
+```
+
+build 323
+
+## NETWORK_SESSION_VOICE_LEAVE
+
+```c
+BOOL NETWORK_SESSION_VOICE_LEAVE()  // 0x6793E42BE02B575D
+```
+
+build 323
+
+## NETWORK_SESSION_VOICE_RESPOND_TO_REQUEST
+
+```c
+void NETWORK_SESSION_VOICE_RESPOND_TO_REQUEST(BOOL p0, int p1)  // 0x7F8413B7FC2AA6B9
+```
+
+build 323 · old names: `NETWORK_SET_KEEP_FOCUSPOINT`
+
+## NETWORK_SESSION_VOICE_SET_TIMEOUT
+
+```c
+void NETWORK_SESSION_VOICE_SET_TIMEOUT(int timeout)  // 0x5B8ED3DB018927B1
+```
+
+build 323
+
+## NETWORK_SESSION_WAS_INVITED
+
+```c
+BOOL NETWORK_SESSION_WAS_INVITED()  // 0x23DFB504655D0CE4
+```
+
+build 323
+
+## NETWORK_SET_ACTIVITY_PLAYER_MAX
+
+```c
+void NETWORK_SET_ACTIVITY_PLAYER_MAX(Any p0)  // 0x0E4F77F7B9D74D84
+```
+
+build 573
+
+## NETWORK_SET_ACTIVITY_SPECTATOR
+
+```c
+void NETWORK_SET_ACTIVITY_SPECTATOR(BOOL toggle)  // 0x75138790B4359A74
+```
+
+build 323
+
+## NETWORK_SET_ACTIVITY_SPECTATOR_MAX
+
+```c
+void NETWORK_SET_ACTIVITY_SPECTATOR_MAX(int maxSpectators)  // 0x9D277B76D1D12222
+```
+
+build 323
+
+## NETWORK_SET_ANTAGONISTIC_TO_PLAYER
+
+```c
+void NETWORK_SET_ANTAGONISTIC_TO_PLAYER(BOOL toggle, Player player)  // 0x5C707A667DF8B9FA
+```
+
+build 323 · old names: `NETWORK_SET_CHOICE_MIGRATE_OPTIONS`
+
+## NETWORK_SET_ATTRIBUTE_DAMAGE_TO_PLAYER
+
+```c
+BOOL NETWORK_SET_ATTRIBUTE_DAMAGE_TO_PLAYER(Ped ped, Player player)  // 0x0EDE326D47CD0F3E
+```
+
+build 323
+
+## NETWORK_SET_CAN_RECEIVE_RS_INVITES
+
+```c
+void NETWORK_SET_CAN_RECEIVE_RS_INVITES(BOOL p0)  // 0x68980414688F7F9D
+```
+
+build 2612
+
+## NETWORK_SET_CURRENT_CHAT_OPTION
+
+```c
+void NETWORK_SET_CURRENT_CHAT_OPTION(int newChatOption)  // 0x3DAD00265FBF356B
+```
+
+build 2802
+
+## NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE
+
+```c
+BOOL NETWORK_SET_CURRENT_DATA_MANAGER_HANDLE(Any* p0)  // 0x796A87B3B68D1F3D
+```
+
+build 323 · old names: `_NETWORK_CHECK_DATA_MANAGER_FOR_HANDLE`
+
+## NETWORK_SET_CURRENT_PUBLIC_CONTENT_ID
+
+```c
+void NETWORK_SET_CURRENT_PUBLIC_CONTENT_ID(const char* missionId)  // 0x2C863ACDCD12B3DB
+```
+
+build 2699 · old names: `_NETWORK_SET_CURRENT_MISSION_ID`
+
+## NETWORK_SET_CURRENT_SPAWN_LOCATION_OPTION
+
+```c
+void NETWORK_SET_CURRENT_SPAWN_LOCATION_OPTION(Hash mpSettingSpawn)  // 0xAA6D5451DC3448B6
+```
+
+build 2699 · old names: `_NETWORK_SET_CURRENT_SPAWN_SETTING`
+
+> Enumeration for reference (mpSettingSpawn must be the hash of one of these):
+> 
+> enum eMpSettingSpawn
+> {
+> 	MP_SETTING_SPAWN_NULL,
+> 	MP_SETTING_SPAWN_PROPERTY,
+> 	MP_SETTING_SPAWN_LAST_POSITION,
+> 	MP_SETTING_SPAWN_GARAGE,
+> 	MP_SETTING_SPAWN_RANDOM,
+> 	MP_SETTING_SPAWN_PRIVATE_YACHT,
+> 	MP_SETTING_SPAWN_OFFICE,
+> 	MP_SETTING_SPAWN_CLUBHOUSE,
+> 	MP_SETTING_SPAWN_IE_WAREHOUSE,
+> 	MP_SETTING_SPAWN_BUNKER,
+> 	MP_SETTING_SPAWN_HANGAR,
+> 	MP_SETTING_SPAWN_DEFUNCT_BASE,
+> 	MP_SETTING_SPAWN_NIGHTCLUB,
+> 	MP_SETTING_SPAWN_ARENA_GARAGE,
+> 	MP_SETTING_SPAWN_CASINO_APARTMENT,
+> 	MP_SETTING_SPAWN_ARCADE,
+> 	MP_SETTING_SPAWN_SUBMARINE,
+> 	MP_SETTING_SPAWN_CAR_MEET,
+> 	MP_SETTING_SPAWN_AUTO_SHOP,
+> 	MP_SETTING_SPAWN_FIXER_HQ,
+> 	MP_SETTING_SPAWN_MAX,
+> };
+
+## NETWORK_SET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU
+
+```c
+BOOL NETWORK_SET_CURRENTLY_SELECTED_GAMER_HANDLE_FROM_INVITE_MENU(Any* p0)  // 0x7206F674F2A3B1BB
+```
+
+build 323
+
+## NETWORK_SET_CUSTOM_ARENA_BALL_PARAMS
+
+```c
+void NETWORK_SET_CUSTOM_ARENA_BALL_PARAMS(int netId)  // 0xA6FCECCF4721D679
+```
+
+build 1604
+
+## NETWORK_SET_DO_NOT_LAUNCH_FROM_JOIN_AS_MIGRATED_HOST
+
+```c
+void NETWORK_SET_DO_NOT_LAUNCH_FROM_JOIN_AS_MIGRATED_HOST(BOOL toggle)  // 0xA2E9C1AB8A92E8CD
+```
+
+build 323
+
+> Appears to set whether a transition should be started when the session is migrating.
+
+## NETWORK_SET_ENTITY_CAN_BLEND
+
+```c
+void NETWORK_SET_ENTITY_CAN_BLEND(Entity entity, BOOL toggle)  // 0xD830567D88A1E873
+```
+
+build 323
+
+## NETWORK_SET_ENTITY_ONLY_EXISTS_FOR_PARTICIPANTS
+
+```c
+void NETWORK_SET_ENTITY_ONLY_EXISTS_FOR_PARTICIPANTS(Entity entity, BOOL toggle)  // 0xF1CA12B18AEF5298
+```
+
+build 323 · old names: `_NETWORK_SET_ENTITY_VISIBLE_TO_NETWORK`, `_NETWORK_SET_ENTITY_INVISIBLE_TO_NETWORK`
+
+> if set to true other network players can't see it
+> if set to false other network player can see it
+> =========================================
+> ^^ I attempted this by grabbing an object with GET_ENTITY_PLAYER_IS_FREE_AIMING_AT and setting this naive no matter the toggle he could still see it.
+> 
+> pc or last gen?
+> 
+> ^^ last-gen
+
+## NETWORK_SET_FRIENDLY_FIRE_OPTION
+
+```c
+void NETWORK_SET_FRIENDLY_FIRE_OPTION(BOOL toggle)  // 0xF808475FA571D823
+```
+
+build 323
+
+## NETWORK_SET_GAMER_INVITED_TO_TRANSITION
+
+```c
+void NETWORK_SET_GAMER_INVITED_TO_TRANSITION(Any* gamerHandle)  // 0xCA2C8073411ECDB6
+```
+
+build 323
+
+## NETWORK_SET_IGNORE_SPECTATOR_CHAT_LIMITS_SAME_TEAM
+
+```c
+void NETWORK_SET_IGNORE_SPECTATOR_CHAT_LIMITS_SAME_TEAM(BOOL toggle)  // 0x6A5D89D7769A40D8
+```
+
+build 323
+
+## NETWORK_SET_IN_FREE_CAM_MODE
+
+```c
+void NETWORK_SET_IN_FREE_CAM_MODE(BOOL toggle)  // 0xFC18DB55AE19E046
+```
+
+build 323
+
+## NETWORK_SET_IN_MP_CUTSCENE
+
+```c
+void NETWORK_SET_IN_MP_CUTSCENE(BOOL p0, BOOL p1)  // 0x9CA5DE655269FEC4
+```
+
+build 323
+
+## NETWORK_SET_IN_PROGRESS_FINISH_TIME
+
+```c
+void NETWORK_SET_IN_PROGRESS_FINISH_TIME(Any p0)  // 0x2CE9D95E4051AECD
+```
+
+build 678
+
+## NETWORK_SET_IN_SPECTATOR_MODE
+
+```c
+void NETWORK_SET_IN_SPECTATOR_MODE(BOOL toggle, Ped playerPed)  // 0x423DE3854BB50894
+```
+
+build 323
+
+## NETWORK_SET_IN_SPECTATOR_MODE_EXTENDED
+
+```c
+void NETWORK_SET_IN_SPECTATOR_MODE_EXTENDED(BOOL toggle, Ped playerPed, BOOL p2)  // 0x419594E137637120
+```
+
+build 323
+
+## NETWORK_SET_INVITE_FAILED_MESSAGE_FOR_INVITE_MENU
+
+```c
+void NETWORK_SET_INVITE_FAILED_MESSAGE_FOR_INVITE_MENU(Any* p0, Any* p1)  // 0x0D77A82DC2D0DA59
+```
+
+build 323
+
+## NETWORK_SET_INVITE_ON_CALL_FOR_INVITE_MENU
+
+```c
+void NETWORK_SET_INVITE_ON_CALL_FOR_INVITE_MENU(Any* p0)  // 0x66F010A4B031A331
+```
+
+build 323
+
+## NETWORK_SET_LOCAL_PLAYER_INVINCIBLE_TIME
+
+```c
+void NETWORK_SET_LOCAL_PLAYER_INVINCIBLE_TIME(int time)  // 0x2D95C7E2D7E07307
+```
+
+build 323
+
+## NETWORK_SET_LOCAL_PLAYER_SYNC_LOOK_AT
+
+```c
+void NETWORK_SET_LOCAL_PLAYER_SYNC_LOOK_AT(BOOL toggle)  // 0x524FF0AEFF9C3973
+```
+
+build 323
+
+## NETWORK_SET_LOOK_AT_TALKERS
+
+```c
+void NETWORK_SET_LOOK_AT_TALKERS(BOOL p0)  // 0x7D395EA61622E116
+```
+
+build 323
+
+## NETWORK_SET_MINIMUM_RANK_FOR_MISSION
+
+```c
+void NETWORK_SET_MINIMUM_RANK_FOR_MISSION(BOOL p0)  // 0x94538037EE44F5CF
+```
+
+build 323
+
+## NETWORK_SET_MISSION_FINISHED
+
+```c
+void NETWORK_SET_MISSION_FINISHED()  // 0x3B3D11CD9FFCDFC9
+```
+
+build 323
+
+## NETWORK_SET_NO_LONGER_NEEDED
+
+```c
+void NETWORK_SET_NO_LONGER_NEEDED(Entity entity, BOOL toggle)  // 0x3FC795691834481D
+```
+
+build 1868
+
+## NETWORK_SET_NO_SPECTATOR_CHAT
+
+```c
+void NETWORK_SET_NO_SPECTATOR_CHAT(BOOL toggle)  // 0xF46A1E03E8755980
+```
+
+build 323
+
+## NETWORK_SET_OBJECT_CAN_BLEND_WHEN_FIXED
+
+```c
+void NETWORK_SET_OBJECT_CAN_BLEND_WHEN_FIXED(Object object, BOOL toggle)  // 0x0379DAF89BA09AA5
+```
+
+build 944 · old names: `_NETWORK_SET_OBJECT_FORCE_STATIC_BLEND`
+
+## NETWORK_SET_OBJECT_SCOPE_DISTANCE
+
+```c
+void NETWORK_SET_OBJECT_SCOPE_DISTANCE(Object object, float range)  // 0xBA7F0B77D80A4EB7
+```
+
+build 372 · old names: `_NETWORK_SET_OBJECT_INTEREST_RANGE`
+
+## NETWORK_SET_OVERRIDE_SPECTATOR_MODE
+
+```c
+void NETWORK_SET_OVERRIDE_SPECTATOR_MODE(BOOL toggle)  // 0x70DA3BF8DACD3210
+```
+
+build 323
+
+## NETWORK_SET_OVERRIDE_TUTORIAL_SESSION_CHAT
+
+```c
+void NETWORK_SET_OVERRIDE_TUTORIAL_SESSION_CHAT(BOOL toggle)  // 0x3C5C1E2C2FF814B1
+```
+
+build 323
+
+## NETWORK_SET_PLAYER_IS_PASSIVE
+
+```c
+void NETWORK_SET_PLAYER_IS_PASSIVE(BOOL toggle)  // 0x1B857666604B1A74
+```
+
+build 323
+
+## NETWORK_SET_PLAYER_MENTAL_STATE
+
+```c
+void NETWORK_SET_PLAYER_MENTAL_STATE(int p0)  // 0x367EF5E2F439B4C6
+```
+
+build 323
+
+> p0 in the decompiled scripts is always the stat mesh_texblend * 0.07 to int
+
+## NETWORK_SET_PRESENCE_SESSION_INVITES_BLOCKED
+
+```c
+void NETWORK_SET_PRESENCE_SESSION_INVITES_BLOCKED(BOOL toggle)  // 0x4A9FDE3A5A6D0437
+```
+
+build 323
+
+> Does nothing. It's just a nullsub.
+
+## NETWORK_SET_PRIVILEGE_CHECK_RESULT_NOT_NEEDED
+
+```c
+void NETWORK_SET_PRIVILEGE_CHECK_RESULT_NOT_NEEDED()  // 0x1F7BC3539F9E0224
+```
+
+build 1180
+
+## NETWORK_SET_PROXIMITY_AFFECTS_TEAM
+
+```c
+void NETWORK_SET_PROXIMITY_AFFECTS_TEAM(BOOL toggle)  // 0x9D7AFCBF21C51712
+```
+
+build 323
+
+## NETWORK_SET_RICH_PRESENCE
+
+```c
+void NETWORK_SET_RICH_PRESENCE(int p0, int p1, Any p2, Any p3)  // 0x1DCCACDCFC569362
+```
+
+build 323
+
+> This native does absolutely nothing, just a nullsub
+
+## NETWORK_SET_RICH_PRESENCE_STRING
+
+```c
+void NETWORK_SET_RICH_PRESENCE_STRING(int p0, const char* textLabel)  // 0x3E200C2BCF4164EB
+```
+
+build 323 · old names: `_NETWORK_SET_RICH_PRESENCE_2`
+
+> This native does absolutely nothing, just a nullsub
+
+## NETWORK_SET_SAME_TEAM_AS_LOCAL_PLAYER
+
+```c
+BOOL NETWORK_SET_SAME_TEAM_AS_LOCAL_PLAYER(Any p0, Any p1)  // 0x4348BFDA56023A2F
+```
+
+build 573
+
+## NETWORK_SET_SCRIPT_AUTOMUTED
+
+```c
+BOOL NETWORK_SET_SCRIPT_AUTOMUTED(Any p0)  // 0xB309EBEA797E001F
+```
+
+build 323
+
+## NETWORK_SET_SCRIPT_CONTROLLING_TEAMS
+
+```c
+void NETWORK_SET_SCRIPT_CONTROLLING_TEAMS(Any p0)  // 0x265559DA40B3F327
+```
+
+build 573
+
+## NETWORK_SET_SCRIPT_READY_FOR_EVENTS
+
+```c
+void NETWORK_SET_SCRIPT_READY_FOR_EVENTS(BOOL toggle)  // 0x7AC752103856FB20
+```
+
+build 323
+
+## NETWORK_SET_SPECTATOR_TO_NON_SPECTATOR_TEXT_CHAT
+
+```c
+void NETWORK_SET_SPECTATOR_TO_NON_SPECTATOR_TEXT_CHAT(BOOL toggle)  // 0x8EF52ACAECC51D9C
+```
+
+build 1734
+
+## NETWORK_SET_TALKER_PROXIMITY
+
+```c
+void NETWORK_SET_TALKER_PROXIMITY(float value)  // 0xCBF12D65F95AD686
+```
+
+build 323
+
+## NETWORK_SET_TASK_CUTSCENE_INSCOPE_MULTIPLER
+
+```c
+void NETWORK_SET_TASK_CUTSCENE_INSCOPE_MULTIPLER(float multiplier)  // 0xC6FCEE21C6FCEE21
+```
+
+build 2545
+
+> A value between 1.0 and 5.0
+
+## NETWORK_SET_TEAM_ONLY_CHAT
+
+```c
+void NETWORK_SET_TEAM_ONLY_CHAT(BOOL toggle)  // 0xD5B4883AC32F24C3
+```
+
+build 323
+
+## NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT
+
+```c
+void NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(int maxNumMissionParticipants, BOOL p1, int instanceId)  // 0x1CA59E306ECB80A5
+```
+
+build 323
+
+## NETWORK_SET_TRANSITION_ACTIVITY_ID
+
+```c
+void NETWORK_SET_TRANSITION_ACTIVITY_ID(Any p0)  // 0x30DE938B516F0AD2
+```
+
+build 323
+
+## NETWORK_SET_TRANSITION_CREATOR_HANDLE
+
+```c
+void NETWORK_SET_TRANSITION_CREATOR_HANDLE(Any* p0)  // 0xEF26739BCD9907D5
+```
+
+build 323
+
+## NETWORK_SET_TRANSITION_VISIBILITY_LOCK
+
+```c
+void NETWORK_SET_TRANSITION_VISIBILITY_LOCK(BOOL p0, BOOL p1)  // 0x0C978FDA19692C2C
+```
+
+build 323
+
+## NETWORK_SET_VEHICLE_DRIVEN_IN_TEST_DRIVE
+
+```c
+void NETWORK_SET_VEHICLE_DRIVEN_IN_TEST_DRIVE(BOOL toggle)  // 0x8C70252FC40F320B
+```
+
+build 2699 · old names: `_NETWORK_SET_VEHICLE_TEST_DRIVE`
+
+> Used by MetricVEHICLE_DIST_DRIVEN
+
+## NETWORK_SET_VEHICLE_DRIVEN_LOCATION
+
+```c
+void NETWORK_SET_VEHICLE_DRIVEN_LOCATION(Hash location)  // 0xA0CE91E47531D3BB
+```
+
+build 2944
+
+> Sets 'loc' variable used in MetricVEHICLE_DIST_DRIVEN
+
+## NETWORK_SET_VOICE_ACTIVE
+
+```c
+void NETWORK_SET_VOICE_ACTIVE(BOOL toggle)  // 0xBABEC9E69A91C57B
+```
+
+build 323
+
+## NETWORK_SET_VOICE_CHANNEL
+
+```c
+void NETWORK_SET_VOICE_CHANNEL(int channel)  // 0xEF6212C2EFEF1A23
+```
+
+build 323
+
+## NETWORK_SHOULD_SHOW_PROMOTION_ALERT_SCREEN
+
+```c
+BOOL NETWORK_SHOULD_SHOW_PROMOTION_ALERT_SCREEN()  // 0x023ACAB2DC9DC4A4
+```
+
+build 1493
+
+## NETWORK_SHOULD_SHOW_STRICT_NAT_WARNING
+
+```c
+BOOL NETWORK_SHOULD_SHOW_STRICT_NAT_WARNING()  // 0x82A2B386716608F1
+```
+
+build 393 · old names: `_NETWORK_SHOULD_SHOW_CONNECTIVITY_TROUBLESHOOTING`
+
+> Returns true if the NAT type is Strict (3) and a certain number of connections have failed.
+
+## NETWORK_SHOW_ACCOUNT_UPGRADE_UI
+
+```c
+void NETWORK_SHOW_ACCOUNT_UPGRADE_UI()  // 0x83FE8D7229593017
+```
+
+build 323
+
+## NETWORK_SHOW_CHAT_RESTRICTION_MSC
+
+```c
+void NETWORK_SHOW_CHAT_RESTRICTION_MSC(Player player)  // 0x6BFF5F84102DF80A
+```
+
+build 323
+
+> Does nothing (it's a nullsub).
+
+## NETWORK_SHOW_PROFILE_UI
+
+```c
+void NETWORK_SHOW_PROFILE_UI(Any* gamerHandle)  // 0x859ED1CEA343FCA8
+```
+
+build 323
+
+## NETWORK_SHOW_PSN_UGC_RESTRICTION
+
+```c
+void NETWORK_SHOW_PSN_UGC_RESTRICTION()  // 0x5C497525F803486B
+```
+
+build 323
+
+> This native does absolutely nothing, just a nullsub
+
+## NETWORK_SKIP_RADIO_RESET_NEXT_CLOSE
+
+```c
+void NETWORK_SKIP_RADIO_RESET_NEXT_CLOSE()  // 0x9465E683B12D3F6B
+```
+
+build 323
+
+## NETWORK_SKIP_RADIO_RESET_NEXT_OPEN
+
+```c
+void NETWORK_SKIP_RADIO_RESET_NEXT_OPEN()  // 0xCA59CCAE5D01E4CE
+```
+
+build 1734
+
+## NETWORK_SKIP_RADIO_WARNING
+
+```c
+BOOL NETWORK_SKIP_RADIO_WARNING()  // 0x659CF2EF7F550C4F
+```
+
+build 1011 · old names: `_NETWORK_HAS_GAME_BEEN_ALTERED`
+
+> Returns true if dinput8.dll is present in the game directory.
+> You will get following error message if that is true: "You are attempting to access GTA Online servers with an altered version of the game."
+
+## NETWORK_START_RESPAWN_SEARCH_FOR_PLAYER
+
+```c
+BOOL NETWORK_START_RESPAWN_SEARCH_FOR_PLAYER(Player player, float x, float y, float z, float radius, float p5, float p6, float p7, int flags)  // 0x5A6FFA2433E2F14C
+```
+
+build 323
+
+> One of the first things it does is get the players ped.
+> Then it calls a function that is used in some tasks and ped based functions.
+> p5, p6, p7 is another coordinate (or zero), often related to `GET_BLIP_COORDS, in the decompiled scripts.
+
+## NETWORK_START_RESPAWN_SEARCH_IN_ANGLED_AREA_FOR_PLAYER
+
+```c
+BOOL NETWORK_START_RESPAWN_SEARCH_IN_ANGLED_AREA_FOR_PLAYER(Player player, float x1, float y1, float z1, float x2, float y2, float z2, float width, float p8, float p9, float p10, int flags)  // 0x4BA92A18502BCA61
+```
+
+build 323
+
+> p8, p9, p10 is another coordinate, or zero, often related to `GET_BLIP_COORDS in the decompiled scripts.
+
+## NETWORK_START_SOLO_TUTORIAL_SESSION
+
+```c
+void NETWORK_START_SOLO_TUTORIAL_SESSION()  // 0x17E0198B3882C2CB
+```
+
+build 323
+
+## NETWORK_START_SYNCHRONISED_SCENE
+
+```c
+void NETWORK_START_SYNCHRONISED_SCENE(int netScene)  // 0x9A1B3FCDB36C8697
+```
+
+build 323
+
+## NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK
+
+```c
+int NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK(Any* netHandle)  // 0xDEB2B99A1AF1A2A6
+```
+
+build 323
+
+> Always returns -1. Seems to be XB1 specific.
+
+## NETWORK_STOP_SYNCHRONISED_SCENE
+
+```c
+void NETWORK_STOP_SYNCHRONISED_SCENE(int netScene)  // 0xC254481A4574CB2F
+```
+
+build 323
+
+## NETWORK_STORE_INVITE_THROUGH_RESTART
+
+```c
+void NETWORK_STORE_INVITE_THROUGH_RESTART()  // 0xF814FEC6A19FD6E0
+```
+
+build 323
+
+## NETWORK_SUPPRESS_INVITE
+
+```c
+void NETWORK_SUPPRESS_INVITE(BOOL toggle)  // 0xA0682D67EF1FBA3D
+```
+
+build 323
+
+## NETWORK_SYNC_CLOCK_TIME_OVERRIDE
+
+```c
+void NETWORK_SYNC_CLOCK_TIME_OVERRIDE()  // 0xCBD02360C5E16871
+```
+
+build 3570
+
+> Does nothing in final builds.
+
+## NETWORK_TEXT_CHAT_IS_TYPING
+
+```c
+BOOL NETWORK_TEXT_CHAT_IS_TYPING()  // 0x5FCF4D7069B09026
+```
+
+build 323 · old names: `_NETWORK_IS_TEXT_CHAT_ACTIVE`
+
+> Same as IS_MP_TEXT_CHAT_TYPING, except it does not check if the text chat HUD component is initialized, and therefore may crash.
+
+## NETWORK_TRANSITION_ADD_STAGE
+
+```c
+BOOL NETWORK_TRANSITION_ADD_STAGE(Hash hash, int p1, int p2, int state, int p4)  // 0xC3BFED92026A2AAD
+```
+
+build 617 · old names: `_NETWORK_TRANSITION_TRACK`
+
+## NETWORK_TRANSITION_BLOCK_JOIN_REQUESTS
+
+```c
+void NETWORK_TRANSITION_BLOCK_JOIN_REQUESTS(BOOL p0)  // 0x973D76AA760A6CB6
+```
+
+build 323
+
+## NETWORK_TRANSITION_FINISH
+
+```c
+BOOL NETWORK_TRANSITION_FINISH(Any p0, Any p1, Any p2)  // 0x04918A41BC9B8157
+```
+
+build 617
+
+## NETWORK_TRANSITION_SET_ACTIVITY_ISLAND
+
+```c
+void NETWORK_TRANSITION_SET_ACTIVITY_ISLAND(Any p0)  // 0xF6F4383B7C92F11A
+```
+
+build 573
+
+## NETWORK_TRANSITION_SET_CONTENT_CREATOR
+
+```c
+void NETWORK_TRANSITION_SET_CONTENT_CREATOR(Any p0)  // 0x1F8E00FB18239600
+```
+
+build 573
+
+## NETWORK_TRANSITION_SET_IN_PROGRESS
+
+```c
+void NETWORK_TRANSITION_SET_IN_PROGRESS(Any p0)  // 0x1398582B7F72B3ED
+```
+
+build 505
+
+## NETWORK_TRANSITION_START
+
+```c
+BOOL NETWORK_TRANSITION_START(int p0, Any p1, Any p2, Any p3)  // 0x8B4FFC790CA131EF
+```
+
+build 617
+
+## NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_DAMAGE
+
+```c
+void NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_DAMAGE(Entity entity, BOOL toggle)  // 0x890E2C5ABED7236D
+```
+
+build 1365 · old names: `_NETWORK_SET_VEHICLE_WHEELS_DESTRUCTIBLE`
+
+> Allows vehicle wheels to be destructible even when the vehicle entity is invincible.
+
+## NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_WEAPON_HASH
+
+```c
+void NETWORK_TRIGGER_DAMAGE_EVENT_FOR_ZERO_WEAPON_HASH(Entity entity, BOOL toggle)  // 0x38B7C51AB1EDC7D8
+```
+
+build 1734
+
+## NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH
+
+```c
+BOOL NETWORK_TRY_ACCESS_TUNABLE_BOOL_HASH(Hash tunableContext, Hash tunableName, BOOL defaultValue)  // 0xC7420099936CE286
+```
+
+build 323 · old names: `_NETWORK_ACCESS_TUNABLE_BOOL_HASH_FAIL_VAL`
+
+> Returns defaultValue if the tunable doesn't exist.
+
+## NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT
+
+```c
+BOOL NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(Any p0, BOOL p1, Any p2)  // 0xD1110739EEADB592
+```
+
+build 323 · old names: `_NETWORK_SET_THIS_SCRIPT_MARKED`, `_NETWORK_IS_THIS_SCRIPT_MARKED`
+
+## NETWORK_UGC_NAV
+
+```c
+void NETWORK_UGC_NAV(Any p0, Any p1)  // 0xC1447451DDB512F0
+```
+
+build 2372 · old names: `_NETWORK_UGC_NAV`
+
+## NETWORK_UNREGISTER_NETWORKED_ENTITY
+
+```c
+void NETWORK_UNREGISTER_NETWORKED_ENTITY(Entity entity)  // 0x7368E683BB9038D6
+```
+
+build 323
+
+## NETWORK_USE_HIGH_PRECISION_BLENDING
+
+```c
+void NETWORK_USE_HIGH_PRECISION_BLENDING(int netID, BOOL toggle)  // 0x2B1813ABA29016C5
+```
+
+build 323 · old names: `_NETWORK_SET_NETWORK_ID_DYNAMIC`
+
+## NETWORK_USE_LOGARITHMIC_BLENDING_THIS_FRAME
+
+```c
+void NETWORK_USE_LOGARITHMIC_BLENDING_THIS_FRAME(Entity entity)  // 0xCD71A4ECAB22709E
+```
+
+build 323
+
+## NETWORK_WAITING_POP_CLEAR_TUTORIAL_SESSION
+
+```c
+BOOL NETWORK_WAITING_POP_CLEAR_TUTORIAL_SESSION()  // 0xB37E4E6A2388CA7B
+```
+
+build 323
+
+## NETWORK_WAS_GAME_SUSPENDED
+
+```c
+BOOL NETWORK_WAS_GAME_SUSPENDED()  // 0x4237E822315D8BA9
+```
+
+build 323
+
+## OBJ_TO_NET
+
+```c
+int OBJ_TO_NET(Object object)  // 0x99BFDC94A603E541
+```
+
+build 323
+
+> Lets objects spawn online simply do it like this:
+> 
+> int createdObject = OBJ_TO_NET(CREATE_OBJECT_NO_OFFSET(oball, pCoords.x, pCoords.y, pCoords.z, 1, 0, 0));
+
+## OPEN_COMMERCE_STORE
+
+```c
+void OPEN_COMMERCE_STORE(const char* p0, const char* p1, int p2)  // 0x58C21165F6545892
+```
+
+build 323
+
+## PARTICIPANT_ID
+
+```c
+Player PARTICIPANT_ID()  // 0x90986E8876CE0A83
+```
+
+build 323
+
+> Return the local Participant ID
+
+## PARTICIPANT_ID_TO_INT
+
+```c
+int PARTICIPANT_ID_TO_INT()  // 0x57A3BDDAD8E5AA0A
+```
+
+build 323
+
+> Return the local Participant ID.
+> 
+> This native is exactly the same as 'PARTICIPANT_ID' native.
+
+## PED_TO_NET
+
+```c
+int PED_TO_NET(Ped ped)  // 0x0EDEC3C276198689
+```
+
+build 323
+
+> gets the network id of a ped
+
+## REFRESH_PLAYER_LIST_STATS
+
+```c
+BOOL REFRESH_PLAYER_LIST_STATS(int p0)  // 0xE26CCFF8094D8C74
+```
+
+build 323 · old names: `USING_NETWORK_WEAPONTYPE`
+
+## RELEASE_ALL_COMMERCE_ITEM_IMAGES
+
+```c
+void RELEASE_ALL_COMMERCE_ITEM_IMAGES()  // 0x72D0706CD6CCDB58
+```
+
+build 323
+
+## REMOTE_CHEATER_PLAYER_DETECTED
+
+```c
+BOOL REMOTE_CHEATER_PLAYER_DETECTED(Player player, int a, int b)  // 0x472841A026D26D8B
+```
+
+build 1103 · old names: `_REMOTE_CHEAT_DETECTED`
+
+## REMOVE_ALL_STICKY_BOMBS_FROM_ENTITY
+
+```c
+void REMOVE_ALL_STICKY_BOMBS_FROM_ENTITY(Entity entity, Ped ped)  // 0x715135F4B82AC90D
+```
+
+build 323
+
+> entity must be a valid entity; ped can be NULL
+
+## REQUEST_COMMERCE_ITEM_IMAGE
+
+```c
+BOOL REQUEST_COMMERCE_ITEM_IMAGE(int index)  // 0xA2F952104FC6DD4B
+```
+
+build 323
+
+## RESERVE_LOCAL_NETWORK_MISSION_OBJECTS
+
+```c
+void RESERVE_LOCAL_NETWORK_MISSION_OBJECTS(int amount)  // 0x797F9C5E661D920E
+```
+
+build 1290 · old names: `_RESERVE_NETWORK_LOCAL_OBJECTS`
+
+## RESERVE_LOCAL_NETWORK_MISSION_PEDS
+
+```c
+void RESERVE_LOCAL_NETWORK_MISSION_PEDS(int amount)  // 0x2C8DF5D129595281
+```
+
+build 1493 · old names: `_RESERVE_NETWORK_LOCAL_PEDS`
+
+## RESERVE_LOCAL_NETWORK_MISSION_VEHICLES
+
+```c
+void RESERVE_LOCAL_NETWORK_MISSION_VEHICLES(int amount)  // 0x42613035157E4208
+```
+
+build 1103 · old names: `_RESERVE_NETWORK_LOCAL_VEHICLES`
+
+## RESERVE_NETWORK_MISSION_OBJECTS
+
+```c
+void RESERVE_NETWORK_MISSION_OBJECTS(int amount)  // 0x4E5C93BD0C32FBF8
+```
+
+build 323
+
+## RESERVE_NETWORK_MISSION_PEDS
+
+```c
+void RESERVE_NETWORK_MISSION_PEDS(int amount)  // 0xB60FEBA45333D36F
+```
+
+build 323
+
+## RESERVE_NETWORK_MISSION_VEHICLES
+
+```c
+void RESERVE_NETWORK_MISSION_VEHICLES(int amount)  // 0x76B02E21ED27A469
+```
+
+build 323
+
+## RESET_GHOST_ALPHA
+
+```c
+void RESET_GHOST_ALPHA()  // 0x17330EBF2F2124A8
+```
+
+build 791 · old names: `_RESET_GHOSTED_ENTITY_ALPHA`
+
+> Resets the entity ghost alpha to the default value (128)
+
+## RESET_STORE_NETWORK_GAME_TRACKING
+
+```c
+void RESET_STORE_NETWORK_GAME_TRACKING()  // 0x444C4525ECE0A4B9
+```
+
+build 323
+
+## SET_ENTITY_GHOSTED_FOR_GHOST_PLAYERS
+
+```c
+void SET_ENTITY_GHOSTED_FOR_GHOST_PLAYERS(Entity entity, BOOL toggle)  // 0x4BA166079D658ED4
+```
+
+build 944 · old names: `_NETWORK_SET_ENTITY_GHOSTED_WITH_OWNER`
+
+## SET_ENTITY_LOCALLY_INVISIBLE
+
+```c
+void SET_ENTITY_LOCALLY_INVISIBLE(Entity entity)  // 0xE135A9FF3F5D05D8
+```
+
+build 323
+
+> Makes the provided entity visible for yourself for the current frame.
+
+## SET_ENTITY_LOCALLY_VISIBLE
+
+```c
+void SET_ENTITY_LOCALLY_VISIBLE(Entity entity)  // 0x241E289B5C059EDC
+```
+
+build 323
+
+## SET_ENTITY_VISIBLE_IN_CUTSCENE
+
+```c
+void SET_ENTITY_VISIBLE_IN_CUTSCENE(Any p0, BOOL p1, BOOL p2)  // 0xE0031D3C8F36AB82
+```
+
+build 323
+
+## SET_GHOST_ALPHA
+
+```c
+void SET_GHOST_ALPHA(int alpha)  // 0x658500AE6D723A7E
+```
+
+build 791 · old names: `_SET_GHOSTED_ENTITY_ALPHA`
+
+> Must be a value between 1 and 254
+
+## SET_INVERT_GHOSTING
+
+```c
+void SET_INVERT_GHOSTING(BOOL p0)  // 0xD7B6C73CAD419BCF
+```
+
+build 944
+
+## SET_LAST_VIEWED_SHOP_ITEM
+
+```c
+void SET_LAST_VIEWED_SHOP_ITEM(Hash p0, int p1, Hash p2)  // 0xFAE628F1E9ADB239
+```
+
+build 323
+
+## SET_LOCAL_PLAYER_AS_GHOST
+
+```c
+void SET_LOCAL_PLAYER_AS_GHOST(BOOL toggle, BOOL p1)  // 0x5FFE9B4144F9712F
+```
+
+build 323 · old names: `_SET_LOCAL_PLAYER_AS_GHOST`
+
+## SET_LOCAL_PLAYER_INVISIBLE_LOCALLY
+
+```c
+void SET_LOCAL_PLAYER_INVISIBLE_LOCALLY(BOOL bIncludePlayersVehicle)  // 0xE5F773C1A1D9D168
+```
+
+build 323
+
+## SET_LOCAL_PLAYER_VISIBLE_IN_CUTSCENE
+
+```c
+void SET_LOCAL_PLAYER_VISIBLE_IN_CUTSCENE(BOOL p0, BOOL p1)  // 0xD1065D68947E7B6E
+```
+
+build 323
+
+## SET_LOCAL_PLAYER_VISIBLE_LOCALLY
+
+```c
+void SET_LOCAL_PLAYER_VISIBLE_LOCALLY(BOOL bIncludePlayersVehicle)  // 0x7619364C82D3BF14
+```
+
+build 323
+
+## SET_NETWORK_CUTSCENE_ENTITIES
+
+```c
+void SET_NETWORK_CUTSCENE_ENTITIES(BOOL toggle)  // 0xAAA553E7DD28A457
+```
+
+build 323
+
+## SET_NETWORK_ENABLE_HIGH_SPEED_EDGE_FALL_DETECTION
+
+```c
+void SET_NETWORK_ENABLE_HIGH_SPEED_EDGE_FALL_DETECTION(Vehicle vehicle, BOOL toggle)  // 0x838DA0936A24ED4D
+```
+
+build 944 · old names: `_SET_NETWORK_ENABLE_VEHICLE_POSITION_CORRECTION`
+
+> Enables a periodic ShapeTest within the NetBlender and invokes rage::netBlenderLinInterp::GoStraightToTarget (or some functional wrapper).
+
+## SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER
+
+```c
+void SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(int netId, Player player, BOOL toggle)  // 0xA8A024587329F36A
+```
+
+build 323 · old names: `_SET_NETWORK_ID_SYNC_TO_PLAYER`
+
+## SET_NETWORK_ID_CAN_BE_REASSIGNED
+
+```c
+void SET_NETWORK_ID_CAN_BE_REASSIGNED(int netId, BOOL toggle)  // 0x9D724B400A7E8FFC
+```
+
+build 2189 · old names: `_SET_NETWORK_ID_CAN_BE_REASSIGNED`
+
+> "No Reassign" in CPhysicalScriptGameStateDataNode
+
+## SET_NETWORK_ID_CAN_MIGRATE
+
+```c
+void SET_NETWORK_ID_CAN_MIGRATE(int netId, BOOL toggle)  // 0x299EEB23175895FC
+```
+
+build 323
+
+> Whether or not another player is allowed to take control of the entity
+
+## SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES
+
+```c
+void SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(int netId, BOOL toggle)  // 0xE05E81A888FA63C8
+```
+
+build 323
+
+## SET_NETWORK_ID_PASS_CONTROL_IN_TUTORIAL
+
+```c
+void SET_NETWORK_ID_PASS_CONTROL_IN_TUTORIAL(int netId, BOOL state)  // 0x3FA36981311FA4FF
+```
+
+build 323
+
+## SET_NETWORK_ID_VISIBLE_IN_CUTSCENE
+
+```c
+void SET_NETWORK_ID_VISIBLE_IN_CUTSCENE(int netId, BOOL p1, BOOL p2)  // 0xA6928482543022B4
+```
+
+build 323
+
+## SET_NETWORK_ID_VISIBLE_IN_CUTSCENE_HACK
+
+```c
+void SET_NETWORK_ID_VISIBLE_IN_CUTSCENE_HACK(int netId, BOOL p1, BOOL p2)  // 0x32EBD154CB6B8B99
+```
+
+build 505 · old names: `_SET_NETWORK_ID_VISIBLE_IN_CUTSCENE_NO_COLLISION`
+
+## SET_NETWORK_ID_VISIBLE_IN_CUTSCENE_REMAIN_HACK
+
+```c
+void SET_NETWORK_ID_VISIBLE_IN_CUTSCENE_REMAIN_HACK(Any p0, Any p1, Any p2)  // 0x76B3F29D3F967692
+```
+
+build 2189
+
+## SET_NETWORK_VEHICLE_AS_GHOST
+
+```c
+void SET_NETWORK_VEHICLE_AS_GHOST(Vehicle vehicle, BOOL toggle)  // 0x6274C4712850841E
+```
+
+build 323 · old names: `_SET_NETWORK_OBJECT_NON_CONTACT`
+
+## SET_NETWORK_VEHICLE_MAX_POSITION_DELTA_MULTIPLIER
+
+```c
+void SET_NETWORK_VEHICLE_MAX_POSITION_DELTA_MULTIPLIER(Vehicle vehicle, float multiplier)  // 0xA2A707979FE754DC
+```
+
+build 877 · old names: `_SET_NETWORK_VEHICLE_POSITION_UPDATE_MULTIPLIER`
+
+> rage::netBlenderLinInterp::GetPositionMaxForUpdateLevel
+
+## SET_NETWORK_VEHICLE_RESPOT_TIMER
+
+```c
+void SET_NETWORK_VEHICLE_RESPOT_TIMER(int netId, int time, Any p2, Any p3)  // 0xEC51713AB6EC36E8
+```
+
+build 323
+
+## SET_NON_PARTICIPANTS_OF_THIS_SCRIPT_AS_GHOSTS
+
+```c
+void SET_NON_PARTICIPANTS_OF_THIS_SCRIPT_AS_GHOSTS(BOOL p0)  // 0x13F1FCB111B820B0
+```
+
+build 877
+
+## SET_PLAYER_INVISIBLE_LOCALLY
+
+```c
+void SET_PLAYER_INVISIBLE_LOCALLY(Player player, BOOL bIncludePlayersVehicle)  // 0x12B37D54667DB0B8
+```
+
+build 323
+
+## SET_PLAYER_VISIBLE_LOCALLY
+
+```c
+void SET_PLAYER_VISIBLE_LOCALLY(Player player, BOOL bIncludePlayersVehicle)  // 0xFAA10F1FAFB11AF2
+```
+
+build 323
+
+## SET_REMOTE_PLAYER_AS_GHOST
+
+```c
+void SET_REMOTE_PLAYER_AS_GHOST(Player player, BOOL p1)  // 0xA7C511FA1C5BDA38
+```
+
+build 463 · old names: `_SET_RELATIONSHIP_TO_PLAYER`
+
+> Enables ghosting between specific players
+
+## SET_REMOTE_PLAYER_VISIBLE_IN_CUTSCENE
+
+```c
+void SET_REMOTE_PLAYER_VISIBLE_IN_CUTSCENE(Player player, BOOL locallyVisible)  // 0x96320E6549DAE7B4
+```
+
+build 2802
+
+## SET_STORE_ENABLED
+
+```c
+void SET_STORE_ENABLED(BOOL toggle)  // 0x9641A9FF718E9C5E
+```
+
+build 323
+
+> Access to the store for shark cards etc...
+
+## SHUTDOWN_AND_LAUNCH_SINGLE_PLAYER_GAME
+
+```c
+void SHUTDOWN_AND_LAUNCH_SINGLE_PLAYER_GAME()  // 0x593850C16A36B692
+```
+
+build 323
+
+> Starts a new singleplayer game (at the prologue).
+
+## SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE
+
+```c
+BOOL SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE()  // 0x9ECA15ADFE141431
+```
+
+build 505 · old names: `_SHUTDOWN_AND_LOAD_MOST_RECENT_SAVE`
+
+> In singleplayer this will re-load your game.
+> 
+> In FiveM / GTA:Online this disconnects you from the session, and starts loading single player, however you still remain connected to the server (only if you're the host, if you're not then you also (most likely) get disconnected from the server) and other players will not be able to join until you exit the game.
+> 
+> You might need to DoScreenFadeIn and ShutdownLoadingScreen otherwise you probably won't end up loading into SP at all.
+> 
+> Somewhat related note: opening the pause menu after loading into this 'singleplayer' mode crashes the game.
+
+## TEXTURE_DOWNLOAD_GET_NAME
+
+```c
+const char* TEXTURE_DOWNLOAD_GET_NAME(int p0)  // 0x3448505B6E35262D
+```
+
+build 323
+
+## TEXTURE_DOWNLOAD_HAS_FAILED
+
+```c
+BOOL TEXTURE_DOWNLOAD_HAS_FAILED(int p0)  // 0x5776ED562C134687
+```
+
+build 323
+
+## TEXTURE_DOWNLOAD_RELEASE
+
+```c
+void TEXTURE_DOWNLOAD_RELEASE(int p0)  // 0x487EB90B98E9FB19
+```
+
+build 323
+
+## TEXTURE_DOWNLOAD_REQUEST
+
+```c
+int TEXTURE_DOWNLOAD_REQUEST(Any* gamerHandle, const char* filePath, const char* name, BOOL p3)  // 0x16160DA74A8E74A2
+```
+
+build 323
+
+## TITLE_TEXTURE_DOWNLOAD_REQUEST
+
+```c
+int TITLE_TEXTURE_DOWNLOAD_REQUEST(const char* filePath, const char* name, BOOL p2)  // 0x0B203B4AFDE53A4F
+```
+
+build 323
+
+## TRIGGER_COMMERCE_DATA_FETCH
+
+```c
+void TRIGGER_COMMERCE_DATA_FETCH(Any p0)  // 0xB606E6CC59664972
+```
+
+build 323
+
+> Does nothing (it's a nullsub).
+
+## UGC_CANCEL_QUERY
+
+```c
+void UGC_CANCEL_QUERY()  // 0xE9B99B6853181409
+```
+
+build 323
+
+## UGC_CLEAR_CREATE_RESULT
+
+```c
+void UGC_CLEAR_CREATE_RESULT()  // 0x17440AA15D1D3739
+```
+
+build 323
+
+## UGC_CLEAR_MODIFY_RESULT
+
+```c
+void UGC_CLEAR_MODIFY_RESULT()  // 0xA1E5E0204A6FCC70
+```
+
+build 323
+
+## UGC_CLEAR_OFFLINE_QUERY
+
+```c
+void UGC_CLEAR_OFFLINE_QUERY()  // 0x61A885D3F7CFEE9A
+```
+
+build 323
+
+## UGC_CLEAR_QUERY_RESULTS
+
+```c
+void UGC_CLEAR_QUERY_RESULTS()  // 0xBA96394A0EECFA65
+```
+
+build 323
+
+## UGC_COPY_CONTENT
+
+```c
+BOOL UGC_COPY_CONTENT(Any* p0, Any* p1)  // 0x152D90E4C1B4738A
+```
+
+build 323
+
+## UGC_DID_CREATE_SUCCEED
+
+```c
+BOOL UGC_DID_CREATE_SUCCEED()  // 0x24E4E51FC16305F9
+```
+
+build 323
+
+## UGC_DID_DESCRIPTION_REQUEST_SUCCEED
+
+```c
+BOOL UGC_DID_DESCRIPTION_REQUEST_SUCCEED(Any p0)  // 0x162C23CA83ED0A62
+```
+
+build 323
+
+## UGC_DID_GET_SUCCEED
+
+```c
+BOOL UGC_DID_GET_SUCCEED()  // 0x941E5306BCD7C2C7
+```
+
+build 323
+
+## UGC_DID_MODIFY_SUCCEED
+
+```c
+BOOL UGC_DID_MODIFY_SUCCEED()  // 0x793FF272D5B365F4
+```
+
+build 323
+
+## UGC_DID_QUERY_CREATORS_SUCCEED
+
+```c
+BOOL UGC_DID_QUERY_CREATORS_SUCCEED()  // 0x4D02279C83BE69FE
+```
+
+build 323
+
+## UGC_GET_BOOKMARKED_CONTENT
+
+```c
+BOOL UGC_GET_BOOKMARKED_CONTENT(Any p0, Any p1, const char* p2, Any* p3)  // 0xD5A4B59980401588
+```
+
+build 323
+
+## UGC_GET_CACHED_DESCRIPTION
+
+```c
+const char* UGC_GET_CACHED_DESCRIPTION(Any p0, Any p1)  // 0x40F7E66472DF3E5C
+```
+
+build 323
+
+## UGC_GET_CONTENT_CATEGORY
+
+```c
+int UGC_GET_CONTENT_CATEGORY(int p0)  // 0xA7BAB11E7C9C6C5A
+```
+
+build 323 · old names: `_GET_CONTENT_CATEGORY`
+
+## UGC_GET_CONTENT_CREATED_BY_LOCAL_PLAYER
+
+```c
+BOOL UGC_GET_CONTENT_CREATED_BY_LOCAL_PLAYER(Any p0)  // 0x8C8D2739BA44AF0F
+```
+
+build 323
+
+## UGC_GET_CONTENT_CREATOR_GAMER_HANDLE
+
+```c
+BOOL UGC_GET_CONTENT_CREATOR_GAMER_HANDLE(int p0, Any* p1)  // 0x584770794D758C18
+```
+
+build 323
+
+## UGC_GET_CONTENT_DESCRIPTION
+
+```c
+const char* UGC_GET_CONTENT_DESCRIPTION(int index)  // 0x4A56710BAB5C4DB4
+```
+
+build 3407
+
+## UGC_GET_CONTENT_DESCRIPTION_HASH
+
+```c
+int UGC_GET_CONTENT_DESCRIPTION_HASH(Any p0)  // 0x7CF0448787B23758
+```
+
+build 323 · old names: `_GET_CONTENT_DESCRIPTION_HASH`
+
+## UGC_GET_CONTENT_FILE_VERSION
+
+```c
+int UGC_GET_CONTENT_FILE_VERSION(Any p0, Any p1)  // 0x37025B27D9B658B1
+```
+
+build 323 · old names: `_GET_CONTENT_FILE_VERSION`
+
+## UGC_GET_CONTENT_HAS_HI_RES_PHOTO
+
+```c
+BOOL UGC_GET_CONTENT_HAS_HI_RES_PHOTO(int p0)  // 0x7FCC39C46C3C03BD
+```
+
+build 323
+
+## UGC_GET_CONTENT_HAS_LO_RES_PHOTO
+
+```c
+BOOL UGC_GET_CONTENT_HAS_LO_RES_PHOTO(int p0)  // 0x1D610EB0FEA716D9
+```
+
+build 323
+
+## UGC_GET_CONTENT_HAS_PLAYER_BOOKMARKED
+
+```c
+BOOL UGC_GET_CONTENT_HAS_PLAYER_BOOKMARKED(Any p0)  // 0x993CBE59D350D225
+```
+
+build 323
+
+## UGC_GET_CONTENT_HAS_PLAYER_RECORD
+
+```c
+BOOL UGC_GET_CONTENT_HAS_PLAYER_RECORD(Any p0)  // 0x70EA8DA57840F9BE
+```
+
+build 323
+
+## UGC_GET_CONTENT_HASH
+
+```c
+Hash UGC_GET_CONTENT_HASH()  // 0x3A17A27D75C74887
+```
+
+build 323
+
+## UGC_GET_CONTENT_ID
+
+```c
+const char* UGC_GET_CONTENT_ID(int p0)  // 0x55AA95F481D694D2
+```
+
+build 323 · old names: `_GET_CONTENT_ID`
+
+> Return the mission id of a job.
+
+## UGC_GET_CONTENT_IS_PUBLISHED
+
+```c
+BOOL UGC_GET_CONTENT_IS_PUBLISHED(Any p0)  // 0x3054F114121C21EA
+```
+
+build 323
+
+## UGC_GET_CONTENT_IS_USING_SC_NICKNAME
+
+```c
+BOOL UGC_GET_CONTENT_IS_USING_SC_NICKNAME(Any p0)  // 0xAEAB987727C5A8A4
+```
+
+build 323
+
+## UGC_GET_CONTENT_IS_VERIFIED
+
+```c
+BOOL UGC_GET_CONTENT_IS_VERIFIED(Any p0)  // 0xA9240A96C74CCA13
+```
+
+build 323
+
+## UGC_GET_CONTENT_LANGUAGE
+
+```c
+int UGC_GET_CONTENT_LANGUAGE(Any p0)  // 0x32DD916F3F7C9672
+```
+
+build 323
+
+## UGC_GET_CONTENT_NAME
+
+```c
+const char* UGC_GET_CONTENT_NAME(Any p0)  // 0xBF09786A7FCAB582
+```
+
+build 323
+
+## UGC_GET_CONTENT_NUM
+
+```c
+int UGC_GET_CONTENT_NUM()  // 0xE0A6138401BCB837
+```
+
+build 323
+
+## UGC_GET_CONTENT_PATH
+
+```c
+const char* UGC_GET_CONTENT_PATH(int p0, int p1)  // 0xBAF6BABF9E7CCC13
+```
+
+build 323 · old names: `_UGC_GET_CLOUD_PATH`
+
+## UGC_GET_CONTENT_RATING
+
+```c
+float UGC_GET_CONTENT_RATING(Any p0, Any p1)  // 0x1ACCFBA3D8DAB2EE
+```
+
+build 323
+
+## UGC_GET_CONTENT_RATING_COUNT
+
+```c
+int UGC_GET_CONTENT_RATING_COUNT(Any p0, Any p1)  // 0x759299C5BB31D2A9
+```
+
+build 323
+
+## UGC_GET_CONTENT_RATING_NEGATIVE_COUNT
+
+```c
+int UGC_GET_CONTENT_RATING_NEGATIVE_COUNT(Any p0, Any p1)  // 0x4E548C0D7AE39FF9
+```
+
+build 323
+
+## UGC_GET_CONTENT_RATING_POSITIVE_COUNT
+
+```c
+int UGC_GET_CONTENT_RATING_POSITIVE_COUNT(Any p0, Any p1)  // 0x87E5C46C187FE0AE
+```
+
+build 323
+
+## UGC_GET_CONTENT_TOTAL
+
+```c
+int UGC_GET_CONTENT_TOTAL()  // 0x769951E2455E2EB5
+```
+
+build 323
+
+## UGC_GET_CONTENT_UPDATED_DATE
+
+```c
+void UGC_GET_CONTENT_UPDATED_DATE(Any p0, Any* p1)  // 0xCFD115B373C0DF63
+```
+
+build 323
+
+## UGC_GET_CONTENT_USER_ID
+
+```c
+const char* UGC_GET_CONTENT_USER_ID(int p0)  // 0xCD67AD041A394C9C
+```
+
+build 323 · old names: `_GET_CONTENT_USER_ID`, `GET_PLAYER_ADVANCED_MODIFIER_PRIVILEGES`
+
+## UGC_GET_CONTENT_USER_NAME
+
+```c
+const char* UGC_GET_CONTENT_USER_NAME(Any p0)  // 0x703F12425ECA8BF5
+```
+
+build 323
+
+## UGC_GET_CREATE_CONTENT_ID
+
+```c
+const char* UGC_GET_CREATE_CONTENT_ID()  // 0xC55A0B40FFB1ED23
+```
+
+build 323
+
+## UGC_GET_CREATE_RESULT
+
+```c
+int UGC_GET_CREATE_RESULT()  // 0xFBC5E768C7A77A6A
+```
+
+build 323
+
+## UGC_GET_CREATOR_NUM
+
+```c
+int UGC_GET_CREATOR_NUM()  // 0x597F8DBA9B206FC7
+```
+
+build 323
+
+## UGC_GET_CREATORS_BY_USER_ID
+
+```c
+BOOL UGC_GET_CREATORS_BY_USER_ID(Any* p0, Any* p1)  // 0xB746D20B17F2A229
+```
+
+build 323
+
+## UGC_GET_CREW_CONTENT
+
+```c
+BOOL UGC_GET_CREW_CONTENT(Any p0, Any p1, Any p2, const char* p3, Any* p4)  // 0x9F6E2821885CAEE2
+```
+
+build 323
+
+## UGC_GET_FRIEND_CONTENT
+
+```c
+BOOL UGC_GET_FRIEND_CONTENT(Any p0, Any p1, const char* p2, Any* p3)  // 0xF9E1CCAE8BA4C281
+```
+
+build 323
+
+## UGC_GET_GET_BY_CATEGORY
+
+```c
+BOOL UGC_GET_GET_BY_CATEGORY(Any p0, Any p1, Any p2, const char* p3, Any* p4)  // 0x678BB03C1A3BD51E
+```
+
+build 323
+
+## UGC_GET_GET_BY_CONTENT_ID
+
+```c
+BOOL UGC_GET_GET_BY_CONTENT_ID(const char* contentId, const char* contentTypeName)  // 0x815E5E3073DA1D67
+```
+
+build 323 · old names: `SET_BALANCE_ADD_MACHINE`
+
+## UGC_GET_GET_BY_CONTENT_IDS
+
+```c
+BOOL UGC_GET_GET_BY_CONTENT_IDS(Any* data, int dataCount, const char* contentTypeName)  // 0xB8322EEB38BE7C26
+```
+
+build 323 · old names: `SET_BALANCE_ADD_MACHINES`
+
+## UGC_GET_MODIFY_RESULT
+
+```c
+int UGC_GET_MODIFY_RESULT()  // 0x5A0A3D1A186A5508
+```
+
+build 323
+
+## UGC_GET_MOST_RECENTLY_CREATED_CONTENT
+
+```c
+BOOL UGC_GET_MOST_RECENTLY_CREATED_CONTENT(Any p0, Any p1, Any* p2, Any* p3)  // 0xA7862BC5ED1DFD7E
+```
+
+build 323
+
+## UGC_GET_MOST_RECENTLY_PLAYED_CONTENT
+
+```c
+BOOL UGC_GET_MOST_RECENTLY_PLAYED_CONTENT(Any p0, Any p1, Any* p2, Any* p3)  // 0x97A770BEEF227E2B
+```
+
+build 323
+
+## UGC_GET_MY_CONTENT
+
+```c
+BOOL UGC_GET_MY_CONTENT(Any p0, Any p1, const char* p2, Any* p3)  // 0x3195F8DD0D531052
+```
+
+build 323
+
+## UGC_GET_QUERY_RESULT
+
+```c
+int UGC_GET_QUERY_RESULT()  // 0xEDF7F927136C224B
+```
+
+build 323
+
+## UGC_GET_ROOT_CONTENT_ID
+
+```c
+const char* UGC_GET_ROOT_CONTENT_ID(int p0)  // 0xC0173D6BFF4E0348
+```
+
+build 323 · old names: `_GET_ROOT_CONTENT_ID`
+
+> Return the root content id of a job.
+
+## UGC_GET_TOP_RATED_CONTENT
+
+```c
+BOOL UGC_GET_TOP_RATED_CONTENT(Any p0, Any p1, Any* p2, Any* p3)  // 0x5324A0E3E4CE3570
+```
+
+build 323
+
+## UGC_HAS_CREATE_FINISHED
+
+```c
+BOOL UGC_HAS_CREATE_FINISHED()  // 0x5E24341A7F92A74B
+```
+
+build 323
+
+## UGC_HAS_DESCRIPTION_REQUEST_FINISHED
+
+```c
+BOOL UGC_HAS_DESCRIPTION_REQUEST_FINISHED(Any p0)  // 0xEBFA8D50ADDC54C4
+```
+
+build 323
+
+## UGC_HAS_GET_FINISHED
+
+```c
+BOOL UGC_HAS_GET_FINISHED()  // 0x02ADA21EA2F6918F
+```
+
+build 323
+
+## UGC_HAS_MODIFY_FINISHED
+
+```c
+BOOL UGC_HAS_MODIFY_FINISHED()  // 0x299EF3C576773506
+```
+
+build 323
+
+## UGC_HAS_PERMISSION_TO_WRITE
+
+```c
+BOOL UGC_HAS_PERMISSION_TO_WRITE()  // 0xC33E7CBC06EC1A8D
+```
+
+build 3095
+
+## UGC_HAS_QUERY_CREATORS_FINISHED
+
+```c
+BOOL UGC_HAS_QUERY_CREATORS_FINISHED()  // 0x63B406D7884BFA95
+```
+
+build 323
+
+## UGC_IS_CREATING
+
+```c
+BOOL UGC_IS_CREATING()  // 0x9FEDF86898F100E9
+```
+
+build 323
+
+## UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS
+
+```c
+BOOL UGC_IS_DESCRIPTION_REQUEST_IN_PROGRESS(Any p0)  // 0x2D5DC831176D0114
+```
+
+build 323
+
+## UGC_IS_GETTING
+
+```c
+BOOL UGC_IS_GETTING()  // 0xD53ACDBEF24A46E8
+```
+
+build 323
+
+## UGC_IS_LANGUAGE_SUPPORTED
+
+```c
+BOOL UGC_IS_LANGUAGE_SUPPORTED(Any p0)  // 0xF53E48461B71EECB
+```
+
+build 323
+
+## UGC_IS_MODIFYING
+
+```c
+BOOL UGC_IS_MODIFYING()  // 0x45E816772E93A9DB
+```
+
+build 323
+
+## UGC_LOAD_OFFLINE_QUERY
+
+```c
+BOOL UGC_LOAD_OFFLINE_QUERY(Any p0)  // 0x5CAE833B0EE0C500
+```
+
+build 323 · old names: `UGC_POLICIES_MAKE_PRIVATE`
+
+## UGC_PUBLISH
+
+```c
+BOOL UGC_PUBLISH(const char* contentId, const char* baseContentId, const char* contentTypeName)  // 0x1DE0F5F50D723CAA
+```
+
+build 323
+
+## UGC_QUERY_BY_CATEGORY
+
+```c
+BOOL UGC_QUERY_BY_CATEGORY(Any p0, Any p1, Any p2, const char* p3, Any p4, BOOL p5)  // 0x692D58DF40657E8C
+```
+
+build 323
+
+## UGC_QUERY_BY_CONTENT_ID
+
+```c
+BOOL UGC_QUERY_BY_CONTENT_ID(const char* contentId, BOOL latestVersion, const char* contentTypeName)  // 0x158EC424F35EC469
+```
+
+build 323
+
+## UGC_QUERY_BY_CONTENT_IDS
+
+```c
+BOOL UGC_QUERY_BY_CONTENT_IDS(Any* data, int count, BOOL latestVersion, const char* contentTypeName)  // 0xC7397A83F7A2A462
+```
+
+build 323
+
+## UGC_QUERY_MOST_RECENTLY_CREATED_CONTENT
+
+```c
+BOOL UGC_QUERY_MOST_RECENTLY_CREATED_CONTENT(int offset, int count, const char* contentTypeName, int p3)  // 0x6D4CB481FAC835E8
+```
+
+build 323 · old names: `_UGC_QUERY_RECENTLY_CREATED_CONTENT`
+
+## UGC_QUERY_MY_CONTENT
+
+```c
+BOOL UGC_QUERY_MY_CONTENT(Any p0, Any p1, Any* p2, Any p3, Any p4, Any p5)  // 0x9BF438815F5D96EA
+```
+
+build 323
+
+## UGC_RELEASE_ALL_CACHED_DESCRIPTIONS
+
+```c
+void UGC_RELEASE_ALL_CACHED_DESCRIPTIONS()  // 0x68103E2247887242
+```
+
+build 323
+
+## UGC_RELEASE_CACHED_DESCRIPTION
+
+```c
+BOOL UGC_RELEASE_CACHED_DESCRIPTION(Any p0)  // 0x5A34CD9C3C5BEC44
+```
+
+build 323
+
+## UGC_REQUEST_CACHED_DESCRIPTION
+
+```c
+int UGC_REQUEST_CACHED_DESCRIPTION(int p0)  // 0x5E0165278F6339EE
+```
+
+build 323
+
+## UGC_REQUEST_CONTENT_DATA_FROM_INDEX
+
+```c
+int UGC_REQUEST_CONTENT_DATA_FROM_INDEX(int p0, int p1)  // 0x171DF6A0C07FB3DC
+```
+
+build 323
+
+## UGC_REQUEST_CONTENT_DATA_FROM_PARAMS
+
+```c
+int UGC_REQUEST_CONTENT_DATA_FROM_PARAMS(const char* contentTypeName, const char* contentId, int p2, int p3, int p4)  // 0x7FD2990AF016795E
+```
+
+build 323
+
+## UGC_SET_BOOKMARKED
+
+```c
+BOOL UGC_SET_BOOKMARKED(const char* contentId, BOOL bookmarked, const char* contentTypeName)  // 0x274A1519DFC1094F
+```
+
+build 323
+
+## UGC_SET_DELETED
+
+```c
+BOOL UGC_SET_DELETED(Any* p0, BOOL p1, const char* p2)  // 0xD05D1A6C74DA3498
+```
+
+build 323
+
+## UGC_SET_QUERY_DATA_FROM_OFFLINE
+
+```c
+void UGC_SET_QUERY_DATA_FROM_OFFLINE(BOOL p0)  // 0xF98DDE0A8ED09323
+```
+
+build 323
+
+## UGC_SET_USING_OFFLINE_CONTENT
+
+```c
+void UGC_SET_USING_OFFLINE_CONTENT(BOOL p0)  // 0xFD75DABC0957BF33
+```
+
+build 323
+
+## UGC_TEXTURE_DOWNLOAD_REQUEST
+
+```c
+int UGC_TEXTURE_DOWNLOAD_REQUEST(const char* p0, int p1, int p2, int p3, const char* p4, BOOL p5)  // 0x308F96458B7087CC
+```
+
+build 323
+
+## UGC_WAS_QUERY_FORCE_CANCELLED
+
+```c
+BOOL UGC_WAS_QUERY_FORCE_CANCELLED()  // 0xC87E740D9F3872CC
+```
+
+build 323
+
+## USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR
+
+```c
+void USE_PLAYER_COLOUR_INSTEAD_OF_TEAM_COLOUR(BOOL toggle)  // 0x77758139EC9B66C7
+```
+
+build 323
+
+## VEH_TO_NET
+
+```c
+int VEH_TO_NET(Vehicle vehicle)  // 0xB4C94523F023419C
+```
+
+build 323
+
+> calls from vehicle to net.
+> 
+

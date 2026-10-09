@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="cpp/ShvSdk/ShvSdk.props" />
+    <File Path="cpp/ShvSdk/ScriptHookV.def" />
+    <File Path="docs/guides/04-ScriptHookV-CPP.md" />
+  </Folder>
+  <Project Path="HelloAsi/HelloAsi.vcxproj" Id="6e1b3c52-8a4f-4d7e-9b2a-3f5c7d9e1a20" />
+</Solution>

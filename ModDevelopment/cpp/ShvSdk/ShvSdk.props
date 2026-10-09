@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Shared settings for C++ ScriptHookV (.asi) projects. Import it in a .vcxproj after Microsoft.Cpp.props:
+    <Import Project="..\cpp\ShvSdk\ShvSdk.props" />
+  It adds the include folder, builds ScriptHookV.lib from ScriptHookV.def, links it, names the output .asi,
+  and optionally copies the .asi into the game folder (set CopyAsiToGame to true in the project).
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <ShvSdkDir>$(MSBuildThisFileDirectory)</ShvSdkDir>
+    <GameDir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\'))</GameDir>
+    <TargetExt>.asi</TargetExt>
+    <CopyAsiToGame Condition="'$(CopyAsiToGame)' == ''">false</CopyAsiToGame>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ShvSdkDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!-- Static runtime, so players don't need the Visual C++ redistributable installed. -->
+      <RuntimeLibrary Condition="'$(Configuration)' == 'Debug'">MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)' != 'Debug'">MultiThreaded</RuntimeLibrary>
+      <!-- natives.hpp has thousands of functions in a few namespaces. -->
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(IntDir)ScriptHookV.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- Build the import library from the .def file with lib.exe (part of the C++ build tools). -->
+  <Target Name="ShvBuildImportLib" BeforeTargets="Link" Inputs="$(ShvSdkDir)ScriptHookV.def" Outputs="$(IntDir)ScriptHookV.lib">
+    <MakeDir Directories="$(IntDir)" />
+    <Exec Command="lib.exe /nologo /machine:x64 /def:&quot;$(ShvSdkDir)ScriptHookV.def&quot; /out:&quot;$(IntDir)ScriptHookV.lib&quot;" />
+  </Target>
+
+  <Target Name="ShvCopyAsiToGame" AfterTargets="Build" Condition="'$(CopyAsiToGame)' == 'true'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameDir)" />
+    <Message Importance="high" Text="$(TargetFileName) copied to $(GameDir)" />
+  </Target>
+
+</Project>

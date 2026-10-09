@@ -1,16 +1,24 @@
 # ModDevelopment
 
-Source code for the scripts we write ourselves. Each folder here is one ScriptHookVDotNet v3 script (C#, .NET Framework 4.8). Building a project copies its DLL into the game's `scripts/` folder, where SHVDN loads it.
+Source code for the mods we write ourselves, and the documentation for writing them. C# scripts are ScriptHookVDotNet v3 projects (.NET Framework 4.8): building one copies its DLL into the game's `scripts/` folder, where SHVDN loads it. C++ mods build into `.asi` files.
+
+**New to modding? Start with [`docs/README.md`](docs/README.md):** guides for C#, C++ and Lua, and a reference of every function you can call.
 
 | Project | What it is | Docs |
 | --- | --- | --- |
-| `ModGuide` | In-game list of every installed mod and its controls (F12, or RB + D-pad Down). | [`ModGuide/README.md`](ModGuide/README.md) |
+| `ModGuide` | In-game list of every installed mod and its controls (F12, or RB + D-pad Down). Installed. | [`ModGuide/README.md`](ModGuide/README.md) |
+| `Samples` | The C# examples from the guides. Built to check they compile, never installed. | [`docs/guides/`](docs/guides/) |
+| `HelloAsi` | C++ starter `.asi` mod. Not installed unless you copy it. | [`docs/guides/04-ScriptHookV-CPP.md`](docs/guides/04-ScriptHookV-CPP.md) |
+| `tools/ApiDocGen` | Generates `docs/reference/` and `cpp/ShvSdk/include/natives.hpp` from the installed libraries. | [`docs/README.md`](docs/README.md#updating-the-reference) |
 
 ## What's in this folder
 
 | File | What it does |
 | --- | --- |
-| `ModDevelopment.slnx` | The Visual Studio 2026 solution. Open this. |
+| `ModDevelopment.slnx` | The Visual Studio 2026 solution for C# scripts. Open this. |
+| `ModDevelopment.Cpp.slnx` | The solution for C++ `.asi` mods (needs the C++ workload, see [`docs/guides/08-Manual-Steps.md`](docs/guides/08-Manual-Steps.md)). |
+| `cpp/ShvSdk/` | ScriptHookV headers, import library definition and shared C++ build settings. Replaces the official SDK. |
+| `docs/` | Guides and the generated API reference. |
 | `Directory.Build.props` | Settings every project shares: .NET Framework 4.8, latest C#, and references to `ScriptHookVDotNet3.dll` and `LemonUI.SHVDN3.dll` from the game folder. Visual Studio applies it to every project automatically. |
 | `Directory.Build.targets` | Copies each project's `.dll` and `.pdb` into `scripts/` after every build. |
 | `.editorconfig` | Code style: tabs in C#, braces on their own line. Visual Studio formats to it. |

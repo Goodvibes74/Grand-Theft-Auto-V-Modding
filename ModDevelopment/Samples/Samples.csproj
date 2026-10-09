@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Code samples for the guides in ModDevelopment/docs/guides/. Building this project checks that every
+    sample still compiles against the installed SHVDN, LemonUI and iFruitAddon2.
+    It is NOT copied into scripts\: copy one sample into your own project (New-ModScript.ps1) to use it.
+  -->
+
+  <PropertyGroup>
+    <CopyToGameScripts>false</CopyToGameScripts>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="iFruitAddon2">
+      <HintPath>$(GameScriptsDir)iFruitAddon2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
