@@ -18,7 +18,7 @@ These are already in git through the whitelist in `.gitignore` (`*.ini`, `*.lua`
 | Script source | `scripts/*.lua`, `scripts/libs/`, `scripts/addins/`, `scripts/*.cs` | Your own code. |
 | Menyoo data | `menyooStuff/` (`menyooConfig.ini`, `AddedVehicleModels.xml`, `Vehicle/*.xml`, `Outfit/*.xml`, `PedList.xml`, `MapMods.xml`) | Saved vehicles, outfits, spooner maps, and the list of add-on models. |
 | ASI plugins | `*.asi` in root | Which plugins are installed, and their versions. |
-| Docs | `README.md`, `CLAUDE.md`, this file | |
+| Docs | `README.md` (main mod management guide), `docs/LUA_MENU.md`, `CLAUDE.md`, this file | |
 
 ---
 

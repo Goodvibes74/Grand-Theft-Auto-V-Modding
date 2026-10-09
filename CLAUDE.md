@@ -15,7 +15,7 @@ This directory is a modded **GTA V Legacy** (Enhanced is a different build) inst
 
 ## How mods load
 
-```
+```text
 GTA5.exe
  └─ dinput8.dll (ASI loader, Alexander Blade 2015)  -> loads every *.asi in root
      ├─ ScriptHookV.dll             native-call hook that all scripts depend on
@@ -32,10 +32,13 @@ GTA5.exe
 ### Key locations
 
 | Path | What it is |
-|---|---|
-| `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`. **Edit RPFs here, never the originals in root or `update/`.** |
+| --- | --- |
+| `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`, plus add-on packs in `update/x64/dlcpacks/`. **Edit RPFs here, never the originals in root or `update/`.** |
+| `Mods/MANIFEST.md` | Size and SHA-256 of every file in `Mods/`. This is how RPF changes get tracked, since the RPFs themselves stay out of git. |
+| `tools/update-mods-manifest.sh` | Regenerates `Mods/MANIFEST.md` (`bash tools/update-mods-manifest.sh`, about 20 seconds). |
+| `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |
 | `scripts/` | SHVDN mods (`*.dll` plus their `.ini`/`.xml` configs, loose `.cs` scripts such as `FoSAShelter.3.cs`) and the Lua mod (`main.lua`, `keys.lua`, `utils.lua`, `libs/`, `addins/`). |
-| `scripts/addins/` | Lua addins that `main.lua` auto-loads. `exampleGUI.lua` is the GUI template (disabled by default, see README.md). |
+| `scripts/addins/` | Lua addins that `main.lua` auto-loads. `exampleGUI.lua` is the GUI template (disabled by default, see docs/LUA_MENU.md). |
 | `scripts/libs/GUI.lua` | Lua menu rendering and keyboard/controller input. |
 | `menyooStuff/` | Menyoo data: `Vehicle/*.xml`, `Outfit/*.xml`, `PedList.xml`, `AddedVehicleModels.xml`, `MapMods.xml`, `menyooConfig.ini`. |
 | `trainerv.ini` + `KEYCODES.md` | TrainerV keybinds. KEYCODES.md maps virtual-key codes and GTA control IDs. |
@@ -45,6 +48,14 @@ GTA5.exe
 ### Installed SHVDN mods (scripts/)
 
 Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
+
+### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
+
+`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (graphics and vehicle pack).
+
+### Unidentified files
+
+`xinput1_4.dll` in the root is not a vanilla file. It is probably a controller mod, but that hasn't been confirmed.
 
 ## Logs (check these first when debugging)
 
@@ -59,8 +70,12 @@ Logs are gitignored. Their timestamps show when the game last ran.
 
 ## Git
 
-- Only text configs and scripts are tracked. `.gitignore` excludes `*.rpf`, `*.exe`, `*.dll`, RAGE assets (`*.ytd`, `*.ydr`, `*.yft`, `*.ymt`, ...), logs, and `/mods/`. It then whitelists `*.ini`, `*.lua`, `*.cs`, `*.json`, `*.xml`, `*.txt`, `*.md`.
-- Some `.asi`/`.pdb` files are tracked (the binary patterns don't cover them). Don't add more large binaries.
+- `MOD_TRACKING.md` is the source of truth for what gets tracked. Keep it up to date when the mod setup changes.
+- `.gitignore` excludes `*.rpf`, `*.exe`, `*.dll`, RAGE assets (`*.ytd`, `*.ydr`, `*.yft`, `*.ymt`, ...) and logs, then whitelists `*.ini`, `*.lua`, `*.cs`, `*.json`, `*.xml`, `*.txt`, `*.md`.
+- Mod binaries are tracked through explicit `!` entries at the bottom of `.gitignore`: `scripts/*.dll`, `ScriptHookV.dll`, `ScriptHookVDotNet2.dll`, `ScriptHookVDotNet3.dll`, `dinput8.dll`, `xinput1_4.dll` and `menyooStuff/*.mp3`. When a new mod adds a binary somewhere else, add a `!` line for it there. `.asi` and `.pdb` files are tracked because no ignore pattern covers them.
+- Never commit RPFs or game files. After any change in `Mods/`, run `bash tools/update-mods-manifest.sh` and commit the updated `Mods/MANIFEST.md`.
+- `.gitattributes` keeps `*.sh` files on LF line endings and marks `dll`/`asi`/`mp3`/`png` as binary.
+- Python is not installed. Use bash or PowerShell for scripts.
 - Commit messages follow the existing style: a short imperative summary such as "Add Ghost Rider vehicle and configuration files".
 - Commit only when the user asks.
 
@@ -70,10 +85,10 @@ Logs are gitignored. Their timestamps show when the game last ran.
 - **Never modify vanilla RPFs** in the root or `update/`. All archive edits go through `Mods/`.
 - Don't touch the files that make the install run (`steam_api64.dll`, `steam_settings/`, `socialclub.dll`, `orig_socialclub.dll`, `launc.dll`, `PlayGTAV.exe`) unless the user explicitly asks.
 - Claude can't open RPF archives directly. Binary RAGE formats (`.ytd`, `.yft`, `.ymt`, and so on) need OpenIV or CodeWalker on the user's side. Claude can still write or edit the XML/meta that goes into them (`vehicles.meta`, `carvariations.meta`, `handling.meta`, `dlclist.xml`, `content.xml`, `setup2.xml`).
-- Add-on vehicle and ped workflow: the user installs the DLC pack into `Mods/update/x64/dlcpacks/<name>/` with OpenIV, adds `dlcpacks:/<name>/` to `dlclist.xml` inside `Mods/update/update.rpf`, then adds the model to `menyooStuff/AddedVehicleModels.xml` (and to `scripts/VehicleList.ini` / `PedList.ini` where relevant).
+- Add-on vehicle and ped workflow: the user installs the DLC pack into `Mods/update/x64/dlcpacks/<name>/` with OpenIV, adds `dlcpacks:/<name>/` to `dlclist.xml` inside `Mods/update/update.rpf`, then adds the model to `menyooStuff/AddedVehicleModels.xml` (and to `scripts/VehicleList.ini` / `PedList.ini` where relevant). Finish by regenerating the manifest and updating the DLC pack list above.
 - Game updates usually break ScriptHookV until a matching release comes out. If the log shows a version error, tell the user to update ScriptHookV rather than trying to patch around it.
 - Lua mod: `scripts/main.lua` does `dofile` on `keys.lua` and `utils.lua`, loads `libs/`, then runs addins. New features go in as a new file in `scripts/addins/`, following `basemodule.lua`.
 - C# scripts: a loose `.cs` file in `scripts/` gets compiled by SHVDN at load time. Target SHVDN v3 (`using GTA;`, class extends `Script`). Use LemonUI for menus.
 - Native function names follow the NativeDB naming (`PAD.IS_CONTROL_JUST_PRESSED`, `ENTITY.*`, `VEHICLE.*`). Check the native exists for this game build before using it.
-- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one, and record changes in KEYCODES.md or README.md.
+- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one, and record changes in the keybind table in README.md (section 3). F2 is the only function key no mod uses (checked 2026-10-09). F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it.
 - Single player only. Never suggest using mods in GTA Online, because doing so gets the account banned.
