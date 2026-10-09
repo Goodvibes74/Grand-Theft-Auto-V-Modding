@@ -216,7 +216,7 @@
     <ShowHUD>true</ShowHUD>
     <ShowNotifications>true</ShowNotifications>
     <ShowBigMessages>true</ShowBigMessages>
-    <IconOffsetX>0</IconOffsetX>
+    <IconOffsetX>-100</IconOffsetX>
     <IconOffsetY>0</IconOffsetY>
     <TextOffsetX>0</TextOffsetX>
     <TextOffsetY>0</TextOffsetY>
