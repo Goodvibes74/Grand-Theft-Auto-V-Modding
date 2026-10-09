@@ -144,15 +144,22 @@
   </Mod>
 
   <Mod name="Add-on vehicles">
-    <Description>Gxetron (gxetron) and Lamborghini Urus (urus2018).</Description>
+    <Description>Gxetron (gxetron), Lamborghini Urus (urus2018) and BMW i8 (rmodmi8).</Description>
     <Activate>Menyoo, Vehicle Spawner, Added Models. Or spawn by model name in TrainerV.</Activate>
     <Config>menyooStuff/AddedVehicleModels.xml</Config>
   </Mod>
 
   <Mod name="Saved Menyoo items">
-    <Description>Ghost Rider bike (three versions), Lamborghini Urus, and the Ghost Rider outfit.</Description>
+    <Description>Ghost Rider bike (three versions), Lamborghini Urus, TheOne, and the Ghost Rider outfit.</Description>
     <Activate>Vehicles: Menyoo, Vehicle Spawner, Saved Files. Outfit: Menyoo wardrobe, saved outfits.</Activate>
     <Config>menyooStuff/Vehicle/, menyooStuff/Outfit/</Config>
+  </Mod>
+
+  <Mod name="RDE police overhaul">
+    <Description>Replaces police dispatch (RDE with Expanded &amp; Enhanced, SixStarResponse): a sixth wanted star, roadblocks and tougher units. Works with Better Chases+, which leaves dispatch to it.</Description>
+    <Activate>Always on. Ctrl+F10 turns it off and on.</Activate>
+    <Config>scripts/SixStarResponse/SixStarResponse.ini, scripts/SSRPlus.ini</Config>
+    <Control action="Toggle SixStarResponse" keyboard="Ctrl + F10" />
   </Mod>
 
   <Mod name="Map and graphics packs">

@@ -57,7 +57,7 @@ Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 
-`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (map and world visuals, no vehicles inside), `rde` and `wov_expansion` (RDE 4.1.5 police overhaul) plus `rdeplus` (RDE Expanded & Enhanced 1.2.0, built for RDE 4.1.4), all installed 2026-10-09; `Mods/update/update.rpf.bak` is the pre-RDE backup. Add-on vehicle model names: `gxetron`, `urus2018`.
+`forest_n` and `forest_s` (map), `gxetron`, `urus2018` and `rmodmi8` (vehicles), `vremastered` (map and world visuals, no vehicles inside), `rde` and `wov_expansion` (RDE 4.1.5 police overhaul) plus `rdeplus` (RDE Expanded & Enhanced 1.2.0, built for RDE 4.1.4), all installed 2026-10-09; `Mods/update/update.rpf.bak` is the pre-RDE backup. Add-on vehicle model names: `gxetron`, `urus2018`, `rmodmi8` (rmodmi8 added 2026-10-10).
 
 ### Identified non-vanilla files
 

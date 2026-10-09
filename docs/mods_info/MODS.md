@@ -83,6 +83,7 @@ No hotkey is needed. If they don't work, check `ScriptHookVDotNet.log` or the lo
 | FoSAShelter | Loose C# script. Walk **on foot** into the shelter entrance near `-489.7, 2233.7, 149.5` and you get teleported inside. The exit zone is near `-485.4, 2232.4, 142.9`. Works the same on any input device. |
 | iFruitAddon2 | Library that adds contacts to the phone. Open the phone (Up arrow, or D-pad Up on Xbox and PlayStation) to see them. Log: `iFruitAddon2.log`. |
 | openCameraV | Camera mod. No config and no keybind found. Log: `openCameraV.log`. |
+| RDE police overhaul (`rde`, `wov_expansion`, `rdeplus`, SixStarResponse, LiveryChanger, SSRPlus) | Replaces police dispatch, with a sixth wanted star and roadblocks. Always on. **Ctrl+F10** turns SixStarResponse off and on (off lets story missions run unchanged). Better Chases+ must leave dispatch to it (see `SETTINGS.md`). Configs: `scripts/SixStarResponse/SixStarResponse.ini` and `scripts/SSRPlus.ini`. |
 | OpenIV.asi | Loads everything in `Mods/`. Always on. |
 | HeapAdjuster, PackfileLimitAdjuster, WeaponLimitsAdjuster, DecalsLimit-Patch | Raise engine limits. Always on. |
 | LemonUI, NativeUI, ClearScript | Libraries that other mods need. |
@@ -92,8 +93,8 @@ No hotkey is needed. If they don't work, check `ScriptHookVDotNet.log` or the lo
 | Content | How to use it |
 | --- | --- |
 | `forest_n`, `forest_s` map packs | Load automatically when listed in `dlclist.xml`. |
-| `gxetron`, `urus2018` vehicles | Model names `gxetron` and `urus2018`. In Menyoo they are under Vehicle Spawner, "Added Models" (listed by hash in `menyooStuff/AddedVehicleModels.xml`). If they don't show there, use "Add New Vehicle Model" in that menu and type the model name. You can also spawn them by name in TrainerV. |
+| `gxetron`, `urus2018`, `rmodmi8` vehicles | Model names `gxetron`, `urus2018` and `rmodmi8` (a BMW i8 with body-kit parts such as grills, bumpers, wings and a rollcage). In Menyoo they are under Vehicle Spawner, "Added Models" (listed by hash in `menyooStuff/AddedVehicleModels.xml`). If they don't show there, use "Add New Vehicle Model" in that menu and type the model name. You can also spawn them by name in TrainerV. |
 | `vremastered` | Map and world visuals (no vehicles inside), always on. |
-| Saved Menyoo vehicles | Menyoo, Vehicle Spawner, Saved Files: Ghost Rider (three variants) and the Lamborghini Urus. |
+| Saved Menyoo vehicles | Menyoo, Vehicle Spawner, Saved Files: Ghost Rider (three variants), the Lamborghini Urus and `TheOne`. |
 | Saved Menyoo outfit | Menyoo wardrobe, saved outfits: `GhostRider`. |
 

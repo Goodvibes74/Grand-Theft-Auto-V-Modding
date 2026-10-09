@@ -282,7 +282,7 @@ The file explains itself in its own text, but it's long. Find a section with you
 | File | What it is | How to edit |
 | --- | --- | --- |
 | `menyooStuff/AddedVehicleModels.xml` | Add-on cars in Vehicle Spawner, Added Models. One line per car: `<VehModel hash="0x87D9502C" /> <!-- gxetron -->`. | Easiest: in game use Vehicle Spawner, "Add New Vehicle Model", and type the model name. Menyoo writes the hash for you. Keep the `<!-- name -->` comment so you can tell entries apart. |
-| `menyooStuff/Vehicle/*.xml` | Saved vehicles (Ghost Rider x3, Lamborghini Urus). | Save and load from Vehicle Spawner, Saved Files. Hand edits are possible (colours, mods, attached props) but the in-game editor is safer. |
+| `menyooStuff/Vehicle/*.xml` | Saved vehicles (Ghost Rider x3, Lamborghini Urus, TheOne). | Save and load from Vehicle Spawner, Saved Files. Hand edits are possible (colours, mods, attached props) but the in-game editor is safer. |
 | `menyooStuff/Outfit/*.xml` | Saved outfits (`GhostRider`). | Save from the wardrobe menu. |
 | `menyooStuff/MapMods.xml` | Built-in map mods (object lists with positions). | Add a new `<MapMod>` block in the same shape as the existing ones, or build it with the Spooner and save it from there. |
 | `menyooStuff/PedList.xml` | Ped models in the model changer. | Add an entry in the same shape as the others. |

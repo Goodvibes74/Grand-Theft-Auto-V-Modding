@@ -74,6 +74,7 @@ Mods/update/x64/dlcpacks/rdeplus/dlc.rpf     # RDE Expanded & Enhanced
 Mods/x64/audio/sfx/SS_FF.rpf                 # RDE E&E sounds
 Mods/x64/audio/sfx/SS_GM.rpf                 # RDE E&E sounds
 Mods/update/x64/dlcpacks/urus2018/dlc.rpf    # add-on vehicle (Lamborghini Urus)
+Mods/update/x64/dlcpacks/rmodmi8/dlc.rpf     # add-on vehicle (BMW i8)
 Mods/update/x64/dlcpacks/vremastered/dlc.rpf # graphics/vehicle pack
 ```
 
