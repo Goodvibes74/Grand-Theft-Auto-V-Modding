@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<AddedVehicleModels />
+<AddedVehicleModels>
+	<VehModel hash="0x87D9502C" /> <!-- gxetron -->
+	<VehModel hash="0x413C75FC" /> <!-- urus2018 -->
+</AddedVehicleModels>

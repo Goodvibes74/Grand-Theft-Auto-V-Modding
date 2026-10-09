@@ -23,7 +23,7 @@ GTA5.exe
      ├─ LUA.asi                     Lua runtime that runs scripts/main.lua
      ├─ OpenIV.asi                  redirects RPF reads to Mods/ (OpenIV "mods folder")
      ├─ Menyoo.asi                  trainer/spooner, data in menyooStuff/
-     ├─ TrainerV.asi                trainer, configured by trainerv.ini (see KEYCODES.md)
+     ├─ TrainerV.asi                trainer, configured by trainerv.ini (see docs/mods_info/KEYCODES.md)
      ├─ openCameraV.asi, NoEditorRestrictions.asi
      └─ limit adjusters: HeapAdjuster, PackfileLimitAdjuster, WeaponLimitsAdjuster,
         fwBoxStreamerVariable_DecalsLimit-Patch
@@ -36,12 +36,13 @@ GTA5.exe
 | `Mods/` | OpenIV mods folder holding modified copies of `common.rpf`, `x64a.rpf`, `update/update.rpf`, `update/update2.rpf`, plus add-on packs in `update/x64/dlcpacks/`. **Edit RPFs here, never the originals in root or `update/`.** |
 | `Mods/MANIFEST.md` | Size and SHA-256 of every file in `Mods/`. This is how RPF changes get tracked, since the RPFs themselves stay out of git. |
 | `tools/update-mods-manifest.sh` | Regenerates `Mods/MANIFEST.md` (`bash tools/update-mods-manifest.sh`, about 20 seconds). |
+| `tools/rpf.ps1` | Read-only RPF viewer: `list` and `extract` for unencrypted archives and files (add-on packs, files replaced in `Mods/`). See `docs/mods_info/RPF_TOOLS.md`. |
 | `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |
 | `scripts/` | SHVDN mods (`*.dll` plus their `.ini`/`.xml` configs, loose `.cs` scripts such as `FoSAShelter.3.cs`) and the Lua mod (`main.lua`, `keys.lua`, `utils.lua`, `libs/`, `addins/`). |
-| `scripts/addins/` | Lua addins that `main.lua` auto-loads. `exampleGUI.lua` is the GUI template (disabled by default, see docs/LUA_MENU.md). |
+| `scripts/addins/` | Lua addins that `main.lua` auto-loads. `exampleGUI.lua` is the GUI template (disabled by default, see docs/mods_info/LUA_MENU.md). |
 | `scripts/libs/GUI.lua` | Lua menu rendering and keyboard/controller input. |
 | `menyooStuff/` | Menyoo data: `Vehicle/*.xml`, `Outfit/*.xml`, `PedList.xml`, `AddedVehicleModels.xml`, `MapMods.xml`, `menyooConfig.ini`. |
-| `trainerv.ini` + `KEYCODES.md` | TrainerV keybinds. KEYCODES.md maps virtual-key codes and GTA control IDs. |
+| `trainerv.ini` + `docs/mods_info/KEYCODES.md` | TrainerV keybinds. KEYCODES.md maps virtual-key codes and GTA control IDs. |
 | `scripts/BetterChasesConfig.xml`, `ImmersifyII.ini`, `Stance.ini`, `iFruitAddon2/config.ini` | Per-mod gameplay configs. |
 | `x64*.rpf`, `common.rpf`, `update/` | Vanilla game archives (about 40 GB). Read-only for our purposes. |
 
@@ -51,7 +52,7 @@ Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 
-`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (graphics and vehicle pack).
+`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (map and world visuals, no vehicles inside). Add-on vehicle model names: `gxetron`, `urus2018`.
 
 ### Unidentified files
 
@@ -84,11 +85,12 @@ Logs are gitignored. Their timestamps show when the game last ran.
 - **Back up before editing anything that isn't in git** (RPFs, DLLs, untracked files). Copy it to `<name>.bak`, or confirm it's tracked first. The `.orig` files (`bink2w64.dll.orig`, `steam_api64.dll.orig`, `PlayGTAV.exe.orig`) are originals. Never overwrite or delete them.
 - **Never modify vanilla RPFs** in the root or `update/`. All archive edits go through `Mods/`.
 - Don't touch the files that make the install run (`steam_api64.dll`, `steam_settings/`, `socialclub.dll`, `orig_socialclub.dll`, `launc.dll`, `PlayGTAV.exe`) unless the user explicitly asks.
-- Claude can't open RPF archives directly. Binary RAGE formats (`.ytd`, `.yft`, `.ymt`, and so on) need OpenIV or CodeWalker on the user's side. Claude can still write or edit the XML/meta that goes into them (`vehicles.meta`, `carvariations.meta`, `handling.meta`, `dlclist.xml`, `content.xml`, `setup2.xml`).
+- Read RPF contents with `powershell -NoProfile -ExecutionPolicy Bypass -File tools/rpf.ps1 list|extract <archive> [pattern] -Out <scratchpad dir>`. It reads add-on packs and files replaced in `Mods/`. Rockstar's own files are encrypted one by one, so for vanilla files ask the user to export them with CodeWalker (`docs/mods_info/RPF_TOOLS.md`). The tool never writes archives. Binary RAGE formats (`.ytd`, `.yft`, `.ymt`, and so on) need OpenIV or CodeWalker on the user's side. Claude can still write or edit the XML/meta that goes into them (`vehicles.meta`, `carvariations.meta`, `handling.meta`, `dlclist.xml`, `content.xml`, `setup2.xml`).
 - Add-on vehicle and ped workflow: the user installs the DLC pack into `Mods/update/x64/dlcpacks/<name>/` with OpenIV, adds `dlcpacks:/<name>/` to `dlclist.xml` inside `Mods/update/update.rpf`, then adds the model to `menyooStuff/AddedVehicleModels.xml` (and to `scripts/VehicleList.ini` / `PedList.ini` where relevant). Finish by regenerating the manifest and updating the DLC pack list above.
 - Game updates usually break ScriptHookV until a matching release comes out. If the log shows a version error, tell the user to update ScriptHookV rather than trying to patch around it.
 - Lua mod: `scripts/main.lua` does `dofile` on `keys.lua` and `utils.lua`, loads `libs/`, then runs addins. New features go in as a new file in `scripts/addins/`, following `basemodule.lua`.
 - C# scripts: a loose `.cs` file in `scripts/` gets compiled by SHVDN at load time. Target SHVDN v3 (`using GTA;`, class extends `Script`). Use LemonUI for menus.
 - Native function names follow the NativeDB naming (`PAD.IS_CONTROL_JUST_PRESSED`, `ENTITY.*`, `VEHICLE.*`). Check the native exists for this game build before using it.
-- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one, and record changes in the keybind table in README.md (section 3). Every function key F2 to F11 is now taken (MapEditor moved to F2 on 2026-10-09), so pick a free key from `docs/MODS.md` instead. F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it. `docs/MODS.md` lists every mod, its keyboard and Xbox/PlayStation binds, and the remaining conflicts.
+- Keep keybinds from colliding across mods (TrainerV, Menyoo, Lua GUI, and each SHVDN mod's ini). Check the existing binds before assigning a new one. Every function key F2 to F11 is taken (MapEditor moved to F2 on 2026-10-09). F3 is the TrainerV menu; Menyoo FreeCam was moved to F6 to avoid clashing with it.
+- `docs/mods_info/` holds every doc about using the mods: `MODS.md` (each mod, how to activate it, keyboard and Xbox/PlayStation binds), `HOTKEYS.md` (conflicts and keybind rules), `KEYCODES.md` and `LUA_MENU.md`. Put new usage docs there, and record keybind changes in `MODS.md` and `HOTKEYS.md`.
 - Single player only. Never suggest using mods in GTA Online, because doing so gets the account banned.

@@ -6,9 +6,7 @@ This is the main guide to the modded GTA V Legacy install in this folder. It cov
 | --- | --- |
 | `README.md` (this file) | How to manage and update mods. |
 | [`MOD_TRACKING.md`](MOD_TRACKING.md) | What git tracks and doesn't track, plus a checklist for each modding session. |
-| [`KEYCODES.md`](KEYCODES.md) | Keyboard and controller codes for `trainerv.ini` and other configs. |
-| [`docs/MODS.md`](docs/MODS.md) | Every mod, how to activate it, and all hotkey conflicts. |
-| [`docs/LUA_MENU.md`](docs/LUA_MENU.md) | The custom Lua GUI menu: how to turn it on, and its controls. |
+| [`docs/mods_info/`](docs/mods_info/README.md) | **Using the mods in game:** what each mod does, how to activate it, keyboard and Xbox/PlayStation controls, hotkey conflicts, key codes and the Lua menu. |
 | [`CLAUDE.md`](CLAUDE.md) | Instructions for Claude Code when it works in this folder. |
 | [`Mods/MANIFEST.md`](Mods/MANIFEST.md) | Generated size and hash list of every RPF in `Mods/`. |
 
@@ -58,7 +56,7 @@ GTA5.exe
 | Mod | Config | Notes |
 | --- | --- | --- |
 | Menyoo | `menyooStuff/menyooConfig.ini` | Trainer and object spooner (for placing and editing objects). Saved vehicles, outfits and maps go in `menyooStuff/`. |
-| TrainerV | `trainerv.ini` | Trainer. Codes are listed in `KEYCODES.md`. |
+| TrainerV | `trainerv.ini` | Trainer. Codes are listed in [`docs/mods_info/KEYCODES.md`](docs/mods_info/KEYCODES.md). |
 | LUA.asi | `scripts/main.lua` | Runs the custom Lua scripts in `scripts/`. |
 | OpenIV.asi | none | Required for anything in `Mods/`. |
 | openCameraV | none | Camera mod. |
@@ -89,7 +87,7 @@ GTA5.exe
 | `forest_n`, `forest_s` | Map add-on |
 | `gxetron` | Vehicle |
 | `urus2018` | Vehicle (Lamborghini Urus) |
-| `vremastered` | Graphics and vehicle pack |
+| `vremastered` | Map and world visuals (no vehicles inside) |
 
 **Other files**
 
@@ -103,36 +101,13 @@ GTA5.exe
 
 ## 3. Keybinds
 
-| Action | Keyboard | Xbox | PlayStation | Set in |
-| --- | --- | --- | --- | --- |
-| TrainerV menu | F3 | RB + X | R1 + Square | `trainerv.ini` `[KeyBindings]` |
-| TrainerV airbreak | G + 6 | RB + LS | R1 + L3 | `trainerv.ini` `AirBreakKey*`, `ControllerAirbreak*` |
-| Menyoo menu | F8 | RB + D-pad Left | R1 + D-pad Left | `menyooConfig.ini` `open_key` |
-| Menyoo Spooner | F9 | RB + D-pad Right | R1 + D-pad Right | `menyooConfig.ini` `SpoonerModeHotkey` |
-| Menyoo FreeCam | F6 (code 117) | X + LS | Square + L3 | `menyooConfig.ini` `FreeCamButton` |
-| Menyoo stop animation | Home (code 36) | none | none | `menyooConfig.ini` `stop_animation_key` |
-| Menyoo clone protection | F11 | none | none | `menyooConfig.ini` |
-| Better Chases+ menu | F7 | none | none | `BetterChasesConfig.xml` `<MenuKey>` |
-| Better Chases+ surrender | E | RB (cover) | R1 (cover) | `BetterChasesConfig.xml` `<SurrenderKey>` |
-| MapEditor | F2 | see in-game hints | see in-game hints | `scripts/MapEditor.xml` `<ActivationKey>` |
-| SHVDN console | F4 | none | none | `ScriptHookVDotNet.ini` |
-| Stance | Y | none | none | `Stance.ini` `stanceKey` |
-| TrainerV teleport | F10 | none | none | `trainerv.ini` `TeleportKey` |
-| TrainerV god mode | Right Ctrl + F5 | none | none | `trainerv.ini` `GodKey*` |
-| Lua GUI | Numpad 8 / 2, Space | A + RB + RS to open, B + LB + LT to close | Cross + R1 + R3 to open, Circle + L1 + L2 to close | `scripts/libs/GUI.lua` |
+All keybinds, their Xbox and PlayStation equivalents, and the hotkey conflicts live in [`docs/mods_info/`](docs/mods_info/README.md):
 
-### Known conflicts
+- [`MODS.md`](docs/mods_info/MODS.md) lists every mod's keys and how to activate it.
+- [`HOTKEYS.md`](docs/mods_info/HOTKEYS.md) lists conflicts (fixed and still open) and the rules for a new keybind.
+- [`KEYCODES.md`](docs/mods_info/KEYCODES.md) lists the numeric codes used in the configs.
 
-- **F3 (fixed 2026-10-09):** the TrainerV menu and Menyoo FreeCam both used F3. FreeCam moved to F6 (`FreeCamButton = 117`). F10 was not an option because TrainerV uses it for teleport.
-- **F7 (fixed 2026-10-09):** Better Chases+ and MapEditor both opened on F7. MapEditor moved to F2.
-- **J (fixed 2026-10-09):** Stance, Menyoo stop animation and the TrainerV `J + Numpad` combos all used J. Stance moved to Y and Menyoo stop animation moved to Home. J now belongs to TrainerV only.
-- **X + LS on controller (fixed 2026-10-09):** Menyoo FreeCam and TrainerV airbreak both used it. TrainerV airbreak moved to RB + LS (R1 + L3).
-- **Numpad 8 / 2:** TrainerV and the Lua GUI both use these to navigate. They only clash if both menus are open at the same time.
-- **RB:** TrainerV, Menyoo, the Spooner and TrainerV airbreak all start their controller combos with RB. The second button tells them apart, so keep the second buttons different.
-
-Remaining smaller clashes, mostly inside TrainerV, are listed in [`docs/MODS.md`](docs/MODS.md#3-hotkey-conflicts).
-
-**Rule:** before you give a new mod a key, check this table and update it afterwards. `KEYCODES.md` lists the numeric codes.
+**Rule:** before you give a new mod a key, check those docs and update them afterwards.
 
 ---
 
@@ -148,7 +123,7 @@ git status          # should print nothing
 
 1. Copy `ModName.asi` and its `.ini` into the **game root**.
 2. Launch the game, then check `asiloader.log` for `ASI: Loading "...ModName.asi"`.
-3. If the mod has binds, add them to the keybind table (section 3).
+3. If the mod has binds, add them to [`docs/mods_info/MODS.md`](docs/mods_info/MODS.md) and check [`HOTKEYS.md`](docs/mods_info/HOTKEYS.md) for clashes.
 4. Commit: `git add ModName.asi ModName.ini && git commit -m "Add ModName vX.Y"`.
 
 ### 4b. ScriptHookVDotNet mod (`*.dll` / `*.cs`)
@@ -274,7 +249,7 @@ Every launch rewrites them in the game root.
 | Crash on the loading screen | Bad RPF edit, a limit was exceeded, or a broken `dlclist.xml` | Undo the last change (see below). Raise the packfile or heap limit. |
 | Add-on vehicle won't spawn | Missing `dlclist.xml` entry, or a wrong model name | Check `dlclist.xml` and the model name in `vehicles.meta`. |
 | Textures pop in or go missing | Heap or streaming limits | Raise `HEAP_SIZE` in `HeapAdjuster.ini`. |
-| A key does nothing | Keybind conflict | Check section 3. |
+| A key does nothing | Keybind conflict | Check [`docs/mods_info/HOTKEYS.md`](docs/mods_info/HOTKEYS.md). |
 | Script lag or a "script timeout" | A slow SHVDN script | Check `ScriptTimeoutThreshold` in `ScriptHookVDotNet.ini`, and the log. |
 
 ### Rolling back

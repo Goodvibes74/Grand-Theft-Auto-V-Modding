@@ -1,25 +1,10 @@
-# Mods: what each one does and how to activate it
+# Mods and how to activate them
 
-This lists every installed mod, how to turn it on or open it in game (keyboard, Xbox and PlayStation), and the hotkey conflicts found across the configs. Keybinds were read from the config files and the conflict fixes were applied on 2026-10-09. Keybind values are virtual-key codes for keyboard and GTA control IDs for controller (see [`KEYCODES.md`](../KEYCODES.md)).
+Every installed mod and how to turn it on or open it in game, with keyboard, Xbox and PlayStation controls. Keybinds were read from the config files on 2026-10-09. For clashes between keys see [`HOTKEYS.md`](HOTKEYS.md). For key code numbers see [`KEYCODES.md`](KEYCODES.md).
 
 - Launch with `PlayGTAV.bat`. BattlEye blocks every mod.
 - Single player only. Never go online with these mods installed.
-
-## Controller button names
-
-| Xbox | PlayStation 4 / 5 |
-| --- | --- |
-| A | Cross |
-| B | Circle |
-| X | Square |
-| Y | Triangle |
-| RB / LB | R1 / L1 |
-| RT / LT | R2 / L2 |
-| LS click / RS click | L3 / R3 |
-| D-pad | D-pad |
-| View / Menu | Touchpad / Options |
-
----
+- PlayStation names for the Xbox buttons are in [`HOTKEYS.md`](HOTKEYS.md#controller-button-names).
 
 ## 1. Mods with a menu or a hotkey
 
@@ -106,44 +91,8 @@ No hotkey is needed. If they don't work, check `ScriptHookVDotNet.log` or the lo
 | Content | How to use it |
 | --- | --- |
 | `forest_n`, `forest_s` map packs | Load automatically when listed in `dlclist.xml`. |
-| `gxetron`, `urus2018` vehicles | Spawn by model name in Menyoo (Vehicle Spawner, input model) or TrainerV. **`menyooStuff/AddedVehicleModels.xml` is empty**, so they don't appear in Menyoo's "Added" list yet. |
-| `vremastered` | Graphics and vehicle pack, always on. |
+| `gxetron`, `urus2018` vehicles | Model names `gxetron` and `urus2018`. In Menyoo they are under Vehicle Spawner, "Added Models" (listed by hash in `menyooStuff/AddedVehicleModels.xml`). If they don't show there, use "Add New Vehicle Model" in that menu and type the model name. You can also spawn them by name in TrainerV. |
+| `vremastered` | Map and world visuals (no vehicles inside), always on. |
 | Saved Menyoo vehicles | Menyoo, Vehicle Spawner, Saved Files: Ghost Rider (three variants) and the Lamborghini Urus. |
 | Saved Menyoo outfit | Menyoo wardrobe, saved outfits: `GhostRider`. |
 
----
-
-## 3. Hotkey conflicts
-
-### Fixed on 2026-10-09
-
-| Key | Was used by | Fix |
-| --- | --- | --- |
-| F7 | Better Chases+ menu and MapEditor | MapEditor moved to **F2** (`scripts/MapEditor.xml`). The old file is saved as `scripts/MapEditor.xml.bak`. |
-| J | Stance, Menyoo stop animation and the TrainerV `J + Numpad` combos | Stance moved to **Y** (`Stance.ini`). Menyoo stop animation moved to **Home**, code 36 (`menyooConfig.ini`). J now belongs to TrainerV only. |
-| X + LS / Square + L3 | Menyoo FreeCam (fixed in Menyoo) and TrainerV airbreak | TrainerV airbreak moved to **RB + LS / R1 + L3** (`ControllerAirbreak1=206`). |
-| `CruiseControl1` typo | `trainerv.ini` set `CruiseControl1` twice, so the second key was never read | Second line renamed to `CruiseControl2=55`, so cruise control is G + 7. |
-
-### Still open (minor)
-
-These are mostly TrainerV clashing with itself. They're left as they are because they're TrainerV's own defaults.
-
-| Severity | Key | Who uses it | Effect |
-| --- | --- | --- | --- |
-| Medium | K | TrainerV left indicator and every `K + Numpad` combo | Using a K combo in a car also flips the left indicator. |
-| Medium | L | TrainerV right indicator and sit (L + Numpad 0) | Same as K. |
-| Medium | Numpad 9 / 3 | TrainerV speed up / stop and the J/K combos ending in Numpad 9 or 3 | J + Numpad 9 (wanted down) also boosts speed. K + Numpad 3 (cycle seat) also stops the car. |
-| Medium | Right Ctrl | TrainerV car fix/color, god mode (RCtrl + F5), clone object (RCtrl + C) | Using either combo also fixes and recolors your car. |
-| Low | N | TrainerV next song and spawn slot 9 (Left Alt + N) | Spawning slot 9 also skips the song. |
-| Low | F9 | Menyoo Spooner and NoEditorRestrictions | Only inside the Rockstar Editor. |
-| Low | E | Better Chases+ surrender and the game's E | Intended: E surrenders only during a chase. |
-| Low | Numpad 8 / 2, Space | Lua GUI, TrainerV menu and airbreak, the game's Space | Only if the Lua GUI is enabled (off by default) and open along with TrainerV. |
-| Low | RB / R1 combos | TrainerV (+ X / Square), TrainerV airbreak (+ LS / L3), Menyoo (+ D-pad Left), Spooner (+ D-pad Right) | Fine while the second buttons differ. TrainerV menu navigation uses the D-pad, so holding RB while moving in TrainerV can open Menyoo. |
-
-### Check in game
-
-- **New keys:** F2, Y and Home aren't used by any other mod. Check that they don't collide with your own GTA key settings (Settings, Keyboard / Mouse, Key Bindings). This matters most if you've bound Rockstar Editor actions to F2.
-- **Lua GUI controller IDs (fixed 2026-10-09):** `scripts/libs/GUI.lua` had wrong control IDs (Up and Down swapped, R3 was really LB, LT was really RB), required all three combo buttons to go down in the same frame, and only looked for the `PAD` native namespace while LUA.asi uses `CONTROLS`. All three are fixed. The combos now use the `INPUT_FRONTEND_*` IDs, so on keyboard Enter + E + Left Ctrl also opens the menu and Backspace + Q + Page Down closes it.
-- **F4:** SHVDN console. TrainerV's `HideMenuKey=115` (F4) is commented out in `trainerv.ini`. Leave it commented out.
-
-After any rebind, update the keybind table in [`README.md`](../README.md) section 3 and this file.

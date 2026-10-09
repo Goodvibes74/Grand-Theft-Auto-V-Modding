@@ -13,12 +13,12 @@ These are already in git through the whitelist in `.gitignore` (`*.ini`, `*.lua`
 | What | Where | Why it matters |
 | --- | --- | --- |
 | Mod configs | `*.ini`, `*.toml` in root (`HeapAdjuster.ini`, `PackfileLimitAdjuster.ini`, `WeaponLimitsAdjuster.ini`, `NoEditorRestrictions.ini`, `ScriptHookVDotNet.ini`, `fwBoxStreamerVariable_DecalsLimit-Patch.toml`) | Limits and behaviour tweaks. A bad value here causes crashes. |
-| Trainer keybinds | `trainerv.ini`, `KEYCODES.md` | Keybind changes and conflicts between mods. |
+| Trainer keybinds | `trainerv.ini`, `docs/mods_info/KEYCODES.md` | Keybind changes and conflicts between mods. |
 | SHVDN mod configs | `scripts/*.ini`, `scripts/*.xml` (`BetterChasesConfig.xml`, `ImmersifyII.ini`, `ImmersifyIIData.xml`, `Stance.ini`, `VehicleList.ini`, `PedList.ini`, `ObjectList.ini`, `iFruitAddon2/config.ini`, `MapEditor/*.xml`) | Gameplay tuning. |
 | Script source | `scripts/*.lua`, `scripts/libs/`, `scripts/addins/`, `scripts/*.cs` | Your own code. |
 | Menyoo data | `menyooStuff/` (`menyooConfig.ini`, `AddedVehicleModels.xml`, `Vehicle/*.xml`, `Outfit/*.xml`, `PedList.xml`, `MapMods.xml`) | Saved vehicles, outfits, spooner maps, and the list of add-on models. |
 | ASI plugins | `*.asi` in root | Which plugins are installed, and their versions. |
-| Docs | `README.md` (main mod management guide), `docs/LUA_MENU.md`, `CLAUDE.md`, this file | |
+| Docs | `README.md` (main mod management guide), `docs/mods_info/` (how to use the mods), `CLAUDE.md`, this file | |
 
 ---
 
