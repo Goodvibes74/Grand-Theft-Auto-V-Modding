@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SixStarResponse>
+
+
+<!-- EXAMPLES
+	Vehicle Model Specific Example: Using no models uses the same vehicles in the roadblock
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_INSURGENTGUNNER</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">InsurgentGunner</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<VehicleHeading>XSide</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">InsurgentGunner</Model>
+			</TypeModels>                   
+			<RandomModelOnly>True</RandomModelOnly>  			
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>
+			<NightOnly>False</NightOnly>
+			<VehicleHeading>XSide</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+-->
+
+<!-- Ped Model Specific Example Example: Using no models uses the same peds in the roadblock
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_BCSOVEST_PEDS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels>
+				<Model Multi="3">BCSO_Male_Vest</Model>
+				<Model Multi="1">BCSO_Female_Vest</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2</PedSeparation>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels>
+				<Model Multi="3">BCSO_Male_Vest</Model>
+				<Model Multi="1">BCSO_Female_Vest</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>    
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2</PedSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+-->
+
+    <BarrierTypeSet>
+	  <Tag>None</Tag> <!-- DO NOT EDIT THIS TAG! HARDCODED TAG VALUE -->
+	  	<Models />
+    </BarrierTypeSet>
+    <BarrierTypeSet>
+	  <Tag>Spikes</Tag> <!-- DO NOT EDIT THIS TAG! HARDCODED TAG VALUE -->
+	  	<Models>
+			<Model Multi="1">SPIKES_1</Model>
+		</Models>  
+    </BarrierTypeSet>
+    <BarrierTypeSet>
+	  <Tag>SoftBarrier</Tag>
+	  	<Models>
+			<Model Multi="1">WATER_BARRIER_1</Model>
+			<Model Multi="1">WATER_BARRIER_2</Model>
+		</Models>  
+    </BarrierTypeSet>
+	<BarrierTypeSet>
+	  <Tag>HardBarrier</Tag>
+	  	<Models>
+			<Model Multi="1">CONCRETE_BARRIER_1</Model>
+			<Model Multi="1">SANDBAG_BARRIER</Model>
+		</Models>  
+    </BarrierTypeSet>
+
+	<Roadblock>
+	  <Tag>ROADBLOCK_BASIC</Tag>            
+		<FrontBlock />
+		<FrontBlock2 /> 
+		<BackBlock />
+		<BackBlock2 /> 
+    </Roadblock>
+	
+    <Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">LIGHTS_1</Model>
+				<Model Multi="1">LIGHTS_2</Model>
+				<Model Multi="1">LIGHTS_3</Model>
+				<Model Multi="1">LIGHTS_4</Model>
+			</TypeModels>                   
+			<RandomModelOnly>True</RandomModelOnly>  			
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>
+			<NightOnly>True</NightOnly>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2>
+			<Chance>0.5</Chance>
+			<BlockSpacing>2</BlockSpacing> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">TrailerVMS</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>YForward</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock2>
+		<BackBlock>
+			<Chance>0.5</Chance>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">LIGHTS_1</Model>
+				<Model Multi="1">LIGHTS_2</Model>
+				<Model Multi="1">LIGHTS_3</Model>
+				<Model Multi="1">LIGHTS_4</Model>
+			</TypeModels>                   
+			<RandomModelOnly>True</RandomModelOnly>  			
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>
+			<NightOnly>True</NightOnly>
+		</BackBlock>
+		<BackBlock2>
+			<Chance>0.5</Chance>
+			<BlockSpacing>2</BlockSpacing> 
+			<Type>NewsCrew</Type>
+			<TypeModels>
+				<Model Type="Vehicle" Multi="1">rumpo</Model>
+				<Model Type="Reporter" Multi="1">reporter</Model>
+				<Model Type="Cameraman" Multi="1">cameraman</Model>
+				<Camera>prop_v_cam_01</Camera>
+				<Microphone>p_ing_microphonel_01</Microphone>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>YForward</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</BackBlock2>
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2>
+			<Chance>0.5</Chance>
+			<BlockSpacing>2</BlockSpacing> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">TrailerVMS</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>YForward</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock2>
+		<BackBlock>
+			<Chance>0.5</Chance>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">LIGHTS_1</Model>
+				<Model Multi="1">LIGHTS_2</Model>
+				<Model Multi="1">LIGHTS_3</Model>
+				<Model Multi="1">LIGHTS_4</Model>
+			</TypeModels>                   
+			<RandomModelOnly>True</RandomModelOnly>  			
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>
+			<NightOnly>True</NightOnly>
+		</BackBlock>
+		<BackBlock2>
+			<Chance>0.5</Chance>
+			<BlockSpacing>2</BlockSpacing> 
+			<Type>NewsCrew</Type>
+			<TypeModels>
+				<Model Type="Vehicle" Multi="1">rumpo</Model>
+				<Model Type="Reporter" Multi="1">reporter_vest</Model>
+				<Model Type="Cameraman" Multi="1">cameraman_vest</Model>
+				<Camera>prop_v_cam_01</Camera>
+				<Microphone>p_ing_microphonel_01</Microphone>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>YForward</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</BackBlock2>
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2>
+			<Chance>0.5</Chance>
+			<BlockSpacing>1</BlockSpacing> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">TrailerVMS</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>YForward</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock2>
+		<BackBlock>
+			<Chance>0.5</Chance>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">LIGHTS_1</Model>
+				<Model Multi="1">LIGHTS_2</Model>
+				<Model Multi="1">LIGHTS_3</Model>
+				<Model Multi="1">LIGHTS_4</Model>
+			</TypeModels>                   
+			<RandomModelOnly>True</RandomModelOnly>  			
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>
+			<NightOnly>True</NightOnly>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>ROADBLOCK_WITH_EXTRA_VEHICLES</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Vehicle</Type>
+			<TypeModels />
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>True</RightSideOnly>       
+			<VehicleHeading>XSide</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock />
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>ROADBLOCK_WITH_SQUADDIEARMED</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Vehicle</Type>
+			<TypeModels>
+				<Model Multi="1">SquaddieArmed</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<VehicleHeading>XSide</VehicleHeading>
+			<VehicleMeasure>Length</VehicleMeasure>
+			<VehicleSeparation>0.5</VehicleSeparation>
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock />
+		<BackBlock2 /> 
+    </Roadblock>
+
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels />   
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>    
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2</PedSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_NOOSE_JUGGS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels>
+				<Model Multi="3">Noose_Juggernaut_Regular</Model>
+				<Model Multi="1">Noose_Juggernaut_CQC</Model>
+			</TypeModels>      
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>    
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2.5</PedSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_WITH_MILITARY_JUGGS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels>
+				<Model Multi="1">Military_Juggernaut_Regular</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>    
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2.5</PedSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<Roadblock>
+	  <Tag>RANDOMIZED_ROADBLOCK_MW_JUGGS</Tag>            
+		<FrontBlock>
+			<BlockSpacing /> 
+			<Type>Prop</Type>
+			<TypeModels>
+				<Model Multi="1">CONE_1</Model>
+				<Model Multi="1">CONE_2</Model>
+				<Model Multi="1">CONE_3</Model>
+				<Model Multi="1">WOOD_HORSE_1</Model>
+				<Model Multi="1">WOOD_HORSE_2</Model>
+				<Model Multi="1">FENCE_1</Model>
+				<Model Multi="1">WATER_BARRIER_1</Model>
+				<Model Multi="1">WATER_BARRIER_2</Model>
+			</TypeModels>                              
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>       
+			<NightOnly>False</NightOnly>
+		</FrontBlock>
+		<FrontBlock2 /> 
+		<BackBlock>
+			<BlockSpacing /> 
+			<Type>Ped</Type>
+			<TypeModels>
+				<Model Multi="1">Merryweather_Juggernaut_Regular</Model>
+			</TypeModels>    
+			<RandomModelOnly>True</RandomModelOnly>  
+			<BothSidesOnly>False</BothSidesOnly>                    
+			<RightSideOnly>False</RightSideOnly>    
+			<NightOnly>False</NightOnly>
+			<PedHeading>XForward</PedHeading>
+			<PedMeasure>Length</PedMeasure>
+			<PedSeparation>2.5</PedSeparation>
+		</BackBlock>
+		<BackBlock2 /> 
+    </Roadblock>
+	
+	<VMSInfo>
+      <SurrenderTaunts>1,2,4,6,20,21</SurrenderTaunts>
+      <Taunts>7,8,9,14,15,17,22</Taunts>
+      <TrevorTaunts SpecificAgency="BCSO">19</TrevorTaunts>
+      <FranklinTaunts SpecificAgency="LSPD">18</FranklinTaunts>
+      <MichaelTaunts SpecificAgency="FIB">16</MichaelTaunts>
+	  <CheaterTaunts>23,24</CheaterTaunts>
+      <PublicWarnings>3,5,25,30,32,33</PublicWarnings>
+      <MilitaryWarnings SpecificAgency="ARMY">10,13,26,31,36</MilitaryWarnings>
+      <LeaveAreaWarning>11,12,27,28,29,34,35</LeaveAreaWarning>
+    </VMSInfo>
+	
+	
+	
+</SixStarResponse>

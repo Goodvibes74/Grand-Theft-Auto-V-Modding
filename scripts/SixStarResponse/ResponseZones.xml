@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- RDE | LAST MODIFIED 29/11/2020 -->
+<!--
+This XML file will designate the various zones used by ResponseLocations.xml. For now, do not edit the zone Name's, but you can add Areas to those zones. Areas are case insensitive and must be zones
+as returned by the native: (GET_NAME_OF_ZONE), unless specified as a different type as noted in the comments below.
+-->
+<SixStarResponse>
+  <ResponseZones>
+    <Zone Name="City" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>ALTA</Area>
+        <Area>BURTON</Area>
+        <Area>DELBE</Area>
+        <Area>DELPE</Area>
+        <Area>DOWNT</Area>
+        <Area>EAST_V</Area>
+        <Area>KOREAT</Area>
+        <Area>LEGSQU</Area>
+        <Area>LOSPUER</Area>
+        <Area>MIRR</Area>
+        <Area>MORN</Area>
+        <Area>MOVIE</Area>
+        <Area>SKID</Area>
+		<Area>RICHM</Area>
+		<Area>ROCKF</Area>
+		<Area>DTVINE</Area>
+        <Area>VCANA</Area>
+        <Area>VESP</Area>
+        <Area>VINE</Area>
+        <Area>TEXTI</Area>
+        <Area>MURRI</Area>
+        <Area>HAWICK</Area>
+        <Area>BEACH</Area>
+		<Area>LMesa</Area>
+		<Area>STRAW</Area>
+		<Area>ChamH</Area>
+		<Area>Stad</Area>
+		<Area>DelSol</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="BlaineCounty" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>BRADP</Area>
+        <Area>BRADT</Area>
+        <Area>CALAFB</Area>
+        <Area>ELGORL</Area>
+        <Area>GALFISH</Area>
+        <Area>GRAPES</Area>
+        <Area>HARMO</Area>
+        <Area>SANDY</Area>
+        <Area>SLAB</Area>
+        <Area>ALAMO</Area>
+        <Area>LAGO</Area>
+        <Area>ZANCUDO</Area>
+		<Area>ProcoB</Area>
+		<Area>PalCov</Area>
+		<Area>Paleto</Area>
+		<Area>NCHU</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="Highway" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas> <!-- These must be street hashes for Highway to work properly, do not put zone names in here-->
+        <Area>422479126</Area> <!-- Olympic Fwy -->
+		<Area>3866397152</Area> <!-- Olympic Fwy -->
+        <Area>302348953</Area> <!-- Del Perro Fwy -->
+		<Area>3362327680</Area> <!-- Del Perro Fwy -->
+        <Area>2600585507</Area> <!-- Senora Fwy -->
+        <Area>3885181515</Area> <!-- Great Ocean Hwy -->
+		<Area>1308375563</Area> <!-- La Puerta Fwy -->
+        <Area>2896128334</Area> <!-- Los Santos Freeway -->
+        <Area>776581733</Area> <!-- Elysian Fields Fwy -->
+        <Area>4124992785</Area> <!-- Palomino Fwy -->
+		<Area>127506487</Area> <!-- Route 68 -->
+		<Area>3837538295</Area> <!-- Miriam Turner Overpass -->
+      </Areas>
+    </Zone>
+    <Zone Name="NorthernWilderness" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Areas>
+		<Area>ccreak</Area>
+        <Area>Palfor</Area>
+        <Area>Cmsw</Area>
+        <Area>Canny</Area>
+        <Area>MtJose</Area>
+        <Area>mtgordo</Area>
+        <Area>Sanchia</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="SouthernWilderness" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Areas>
+        <Area>Palhigh</Area>
+        <Area>Tatamo</Area>
+		<Area>Desrt</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="LSCounty" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+		<Area>Hors</Area>
+	    <Area>golf</Area>
+        <Area>wvine</Area>
+        <Area>davis</Area>
+        <Area>rancho</Area>
+        <Area>cypre</Area>
+        <Area>Eburo</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="LSCounty_Rural" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+		<Area>baytre</Area>
+		<Area>galli</Area>
+		<Area>RTRAK</Area>
+		<Area>LAct</Area>
+		<Area>LDam</Area>
+		<Area>zQ_UAR</Area>
+		<Area>observ</Area>
+		<Area>Windf</Area>
+		<Area>Palmpow</Area>
+		<Area>greatc</Area>
+		<Area>Chil</Area>
+		<Area>TongvaV</Area>
+		<Area>Tongvah</Area>
+		<Area>rglen</Area>
+		<Area>bhamca</Area>
+        <Area>banhamc</Area>
+        <Area>banhamca</Area>
+		<Area>chu</Area>
+		<Area>PBluff</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="PortAuthority" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>Termina</Area>
+        <Area>zp_ort</Area>
+        <Area>banning</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="PillboxHill" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>Pbox</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="Ocean" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Areas>
+        <Area>Oceana</Area>
+        <Area>Sanand</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Merryweather" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+		<Area>Elysian</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Prison" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>JAIL</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="HumaneLabs" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>HumLab</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="NooseHQ" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>NOOSE</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Airport" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>AIRP</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="FortZancudo" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>ARMYB</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Mt_Chiliad" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Areas>
+        <Area>MTCHIL</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="NorthYankton" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Areas>
+        <Area>Prol</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="CayoPerico" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>IsHeistZone</Area>
+        <Area>IsHeist</Area>
+      </Areas>
+    </Zone>
+    <Zone Name="Null" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Areas>
+        <Area>null</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="LibertyCity" MinSpawnDelay="5" MaxSpawnDelay="20">
+      <Areas>
+        <Area>STEIN</Area>
+		<Area>NORMY</Area>
+		<Area>STHBO</Area>
+		<Area>BOULE</Area>
+		<Area>CASGC</Area>
+		<Area>CHISL</Area>
+		<Area>MIDPW</Area>
+		<Area>VASIH</Area>
+		<Area>MIDPA</Area>
+		<Area>NOHOL</Area>
+		<Area>EAHOL</Area>
+		<Area>NORWO</Area>
+		<Area>TMEQU</Area>
+		<Area>WESMI</Area>
+		<Area>PUGAT</Area>
+		<Area>EASON</Area>
+		<Area>THPRES</Area>
+		<Area>HATGA</Area>
+		<Area>LANCE</Area>
+		<Area>SUFFO</Area>
+		<Area>LITAL</Area>
+		<Area>CITH</Area>
+		<Area>CHITO</Area>
+		<Area>LOWEA</Area>
+		<Area>FISSN</Area>
+		<Area>FISSO</Area>
+		<Area>THXCH</Area>
+		<Area>COISL</Area>
+		<Area>MIDPE</Area>
+		<Area>LEFWO</Area>
+		<Area>ESHOO</Area>
+		<Area>BOAB</Area>
+		<Area>LTBAY</Area>
+		<Area>INSTI</Area>
+		<Area>HAPIN</Area>
+		<Area>LANCA</Area>
+		<Area>ALDCI</Area>
+		<Area>ACTRR</Area>
+		<Area>PORTU</Area>
+		<Area>TUDOR</Area>
+		<Area>ACTIP</Area>
+		<Area>THTRI</Area>
+		<Area>ROTTH</Area>
+		<Area>WESDY</Area>
+		<Area>DOWTW</Area>
+		<Area>FIREP</Area>
+		<Area>OUTL</Area>
+		<Area>HOBEH</Area>
+		<Area>EISLC</Area>
+		<Area>MEADP</Area>
+		<Area>CERHE</Area>
+		<Area>SCHOL</Area>
+		<Area>BEECW</Area>
+		<Area>FRANI</Area>
+		<Area>SUTHS</Area>
+		<Area>NRTGA</Area>
+		<Area>CHAPO</Area>
+		<Area>MEADH</Area>
+		<Area>FIISL</Area>
+		<Area>BERCH</Area>
+		<Area>WILLI</Area>
+		<Area>BEGGA</Area>
+		<Area>BRBRO</Area>
+		<Area>BRALG</Area>
+		<Area>BREBB</Area>
+		<Area>BRDBB</Area>
+		<Area>NOWOB</Area>
+		<Area>HIBRG</Area>
+		<Area>STARJ</Area>
+		<Area>BOTU</Area>
+		<Area>ALSCF</Area>
+		<Area>LEAPE</Area>
+		<Area>CASGR</Area>
+		<Area>LIBRTY</Area>
+      </Areas>
+    </Zone>
+	<!--
+	<Zone Name="Custom_Zone_1" MinSpawnDelay="0" MaxSpawnDelay="0">
+      <Areas>
+        <Area>TBD</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Custom_Zone_2" MinSpawnDelay="0" MaxSpawnDelay="0">
+      <Areas>
+        <Area>TBD</Area>
+      </Areas>
+    </Zone>
+	<Zone Name="Custom_Zone_3" MinSpawnDelay="0" MaxSpawnDelay="0">
+      <Areas>
+        <Area>TBD</Area>
+      </Areas>
+    </Zone>
+	...
+	-->
+    <!-- Lake Vinewood -->
+	<CustomSeaZone Name="LSCounty_Rural" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Bounds x1="-400" x2="300" y1="570" y2="1100" />
+    </CustomSeaZone>
+    <!-- Land Act Reservoir -->
+    <CustomSeaZone Name="LSCounty_Rural" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Bounds x1="1500" y1="-200" x2="2200" y2="900" />
+    </CustomSeaZone>
+    <CustomSeaZone Name="Alamo" MinSpawnDelay="15" MaxSpawnDelay="30">
+      <Bounds x1="-400" y1="3400" x2="2500" y2="4700" />
+    </CustomSeaZone>
+    <CustomSeaZone Name="PortAuthority_Water" MinSpawnDelay="10" MaxSpawnDelay="25">
+      <Bounds x1="-484" y1="-2191" x2="1514" y2="-3410" />
+    </CustomSeaZone>
+  </ResponseZones>
+  <LocationForNearestCarNodeOverrides>
+	<!-- From dispatchtuning.ymt -->
+	<AngledArea width="150.0">
+		<Start x="-400.4" y="-1904.8" z="47.4"/>
+		<End x="-248.2" y="-2032.5" z="90.0" />
+		<Override x="-252.0" y="-1824.0" z="28.0"/>
+	</AngledArea>
+	<AngledArea width="75.0">
+		<Start x="-3432.5" y="967.6" z="1.2"/>
+		<End x="-3238.0" y="967.6" z="14.6"/>
+		<Override x="-3229.3" y="967.6" z="12.2"/>
+	</AngledArea>
+	<AngledArea width="185.0">
+		<Start x="529.2" y="-3397.0" z="0.0"/>
+		<End x="526.7" y="-3021.1" z="56.0"/>
+		<Override x="556.7" y="-3014.3" z="5.2"/>
+	</AngledArea>
+	<AngledArea width="150.0">
+		<Start x="-110.0" y="-615.5" z="35.4"/>
+		<End x="-135.7" y="-606.6" z="61.6"/>
+		<Override x="-85.3" y="-613.8" z="35.4"/>
+	</AngledArea>
+	<AngledArea width="95.0">
+		<Start x="-204.4" y="-571.7" z="33.7"/>
+		<End x="-133.0" y="-598.2" z="61.8"/>
+		<Override x="-229.8" y="-580.5" z="33.6"/>
+	</AngledArea>
+	<AngledArea width="85.0">
+		<Start x="-191.4" y="-664.5" z="33.2"/>
+		<End x="-179.6" y="-632.0" z="62.0"/>
+		<Override x="-200.0" y="-671.3" z="33.0"/>
+	</AngledArea>
+	<AngledArea width="160.0">
+		<Start x="-163.7" y="-93.7" z="116.0"/>
+		<End x="-256.9" y="-380.0" z="65.1"/>
+		<Override x="-221.5" y="-212.2" z="48.3"/>
+	</AngledArea>
+	<AngledArea width="87.0">
+		<Start x="-807.0" y="138.0" z="58.3"/>
+		<End x="-805.0" y="196.0" z="87.2"/>
+		<Override x="-862.8" y="160.1" z="64.7"/>
+	</AngledArea>
+	<AngledArea width="135.0">
+		<Start x="-1588.3" y="-967.0" z="12.3"/>
+		<End x="-1730.3" y="-1142.9" z="55.0"/>
+		<Override x="-1634.2" y="-995.7" z="12.2"/>
+	</AngledArea>
+	<AngledArea width="135.0">
+		<Start x="-1730.3" y="-1142.9" z="12.3"/>
+		<End x="-1835.0" y="-1267.0" z="55.0"/>
+		<Override x="-1738.3" y="-1117.8" z="12.5"/>
+	</AngledArea>
+	<AngledArea width="10.0">
+		<Start x="488.4" y="-2120.3" z="5.9"/>
+		<End x="481.1" y="-2128.8" z="54.4"/>
+		<Override x="472.0" y="-2116.3" z="16.7"/>
+	</AngledArea>
+	<!-- Custom overrides -->
+	<BoxArea>
+		<Start x="-970.681" y="-2689.634" z="26.0"/>
+		<End x="-880.188" y="-2621.037" z="120.0"/>
+		<Override x="-913.58" y="-2658.72" z="14.12"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="-957.107" y="-2695.732" z="10.0"/>
+		<End x="-892.254" y="-2642.378" z="120.0"/>
+		<Override x="-913.58" y="-2658.72" z="14.12"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="-993.304" y="-2654.573" z="26.0"/>
+		<End x="-942.025" y="-2627.134" z="120.0"/>
+		<Override x="-945.07" y="-2571.38" z="13.83"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="-1050.615" y="-2643.902" z="26.0"/>
+		<End x="-961.631" y="-2579.878" z="120.0"/>
+		<Override x="-1036.36" y="-2587.29" z="14.12"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3369.932" y="3633.537" z="10.0"/>
+		<End x="3644.426" y="3828.659" z="120.0"/>
+		<Override x="3419.52" y="3757.74" z="30.57"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3486.32" y="-4839.75" z="100.0"/>
+		<End x="3569.47" y="-4544.64" z="220.0"/>
+		<Override x="3517.73" y="-4872.21" z="111.76"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3197.17" y="-4702.09" z="100.0"/>
+		<End x="3270.66" y="-4498.2" z="220.0"/>
+		<Override x="3223.3" y="-4704.42" z="112.86"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3270.66" y="-4702.09" z="100.0"/>
+		<End x="3486.32" y="-4544.64" z="220.0"/>
+		<Override x="3408.07" y="-4852.82" z="111.81"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3228.06" y="-5232.61" z="100.0"/>
+		<End x="3354.92" y="-4834.5" z="220.0"/>
+		<Override x="3408.07" y="-4852.82" z="111.81"/>
+	</BoxArea>
+	<BoxArea>
+		<Start x="3196.28" y="-5227.06" z="100.0"/>
+		<End x="3228.06" y="-4834.54" z="220.0"/>
+		<Override x="3200.54" y="-4833.90" z="111.82"/>
+	</BoxArea>
+  </LocationForNearestCarNodeOverrides>
+</SixStarResponse>

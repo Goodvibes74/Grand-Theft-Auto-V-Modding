@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- RDE | LAST MODIFIED 07/30/2017 -->
+<SixStarResponse>
+  <HeavyVehicleClasses>
+    <Class Name="Plane">
+      <!-- Place all plane vehicle names here that you consider "heavy" (Getting a harsher police response)-->
+      <Model>avenger</Model>
+      <Model>bombushka</Model>
+      <Model>hydra</Model>
+      <Model>lazer</Model>
+      <Model>mogul</Model>
+      <Model>molotok</Model>
+      <Model>nokota</Model>
+      <Model>pyro</Model>
+      <Model>rogue</Model>
+      <Model>seabreeze</Model>
+      <Model>starling</Model>
+      <Model>strikeforce</Model>
+      <Model>tula</Model>
+      <Model>volatol</Model>
+    </Class>
+    <Class Name="Chopper">
+      <!-- Place all Chopper vehicle names here that you consider "heavy" (Getting a harsher police response)-->
+      <Model>akula</Model>
+      <Model>annihilator</Model>
+      <Model>armyAnnihilator2</Model>
+      <Model>buzzard</Model>
+      <Model>hunter</Model>
+      <Model>savage</Model>
+      <Model>seasparrow</Model>
+      <Model>thruster</Model>
+      <Model>valkyrie</Model>
+    </Class>
+    <Class Name="Ground">
+      <!-- Place all ground vehicle names here that you consider "heavy" (Getting a harsher police response)-->
+      <Model>barracks2</Model>
+      <Model>barracks3</Model>
+      <Model>barracks</Model>
+      <Model>barrage</Model>
+      <Model>blazer5</Model>
+      <Model>boxville5</Model>
+      <Model>bruiser2</Model>
+      <Model>bruiser3</Model>
+      <Model>bruiser</Model>
+      <Model>brutus2</Model>
+      <Model>brutus3</Model>
+      <Model>brutus</Model>
+      <Model>caracara</Model>
+      <Model>cerberus2</Model>
+      <Model>cerberus3</Model>
+      <Model>cerberus</Model>
+      <Model>chernobog</Model>
+      <Model>squaddie2</Model>
+      <Model>squaddie3</Model>
+      <Model>deathbike2</Model>
+      <Model>deathbike3</Model>
+      <Model>deathbike</Model>
+      <Model>dominator4</Model>
+      <Model>dominator5</Model>
+      <Model>dominator6</Model>
+      <Model>dukes2</Model>
+      <Model>dump</Model>
+      <Model>dune3</Model>
+      <Model>dune4</Model>
+      <Model>dune5</Model>
+      <Model>fbicenturion</Model>
+      <Model>halftrack</Model>
+      <Model>hwaycenturion</Model>
+      <Model>impaler2</Model>
+      <Model>impaler3</Model>
+      <Model>impaler4</Model>
+      <Model>imperator2</Model>
+      <Model>imperator3</Model>
+      <Model>imperator</Model>
+      <Model>insurgent2</Model>
+      <Model>insurgent3</Model>
+      <Model>insurgent</Model>
+      <Model>issi4</Model>
+      <Model>issi5</Model>
+      <Model>issi6</Model>
+      <Model>kuruma2</Model>
+      <Model>limo2</Model>
+      <Model>lssheriffcenturion</Model>
+      <Model>marshall</Model>
+      <Model>menacer</Model>
+      <Model>monster3</Model>
+      <Model>monster4</Model>
+      <Model>monster5</Model>
+      <Model>monster</Model>
+      <Model>mule4</Model>
+      <Model>nightshark</Model>
+      <Model>noosecenturion</Model>
+      <Model>nooseinsurgent</Model>
+      <Model>nooseRiot</Model>
+      <Model>phantom2</Model>
+      <Model>phantom2</Model>
+      <Model>policecenturion</Model>
+      <Model>pounder2</Model>
+      <Model>riot2</Model>
+      <Model>riot</Model>
+      <Model>ruiner2</Model>
+      <Model>scarab2</Model>
+      <Model>scarab3</Model>
+      <Model>scarab</Model>
+      <Model>scramjet</Model>
+      <Model>sheriffstockade</Model>
+      <Model>slamvan4</Model>
+      <Model>slamvan5</Model>
+      <Model>slamvan6</Model>
+      <Model>speedo4</Model>
+      <Model>stockade</Model>
+      <Model>tampa3</Model>
+      <Model>technical3</Model>
+      <Model>technical</Model>
+      <Model>terbyte</Model>
+      <Model>trailersmall2</Model>
+      <Model>vigilante</Model>
+      <Model>wastelander</Model>
+      <Model>zr3802</Model>
+      <Model>zr3803</Model>
+      <Model>zr380</Model>
+    </Class>
+    <Class Name="Tank">
+      <!-- Place all Tank type vehicle names here (Getting an even harsher police response than ground heavy)-->
+      <Model>khanjali</Model>
+      <Model>rhino</Model>
+      <Model>rhino2</Model>
+    </Class>
+    <Class Name="Submarine">
+      <!-- The games sub detection doesn't work so place all submarine models here-->
+      <Model>cgsub</Model>
+      <Model>submersible</Model>
+      <Model>submersible2</Model>
+    </Class>
+    <Class Name="Boat">
+      <!-- Some Boats do not return in game as a boat. if you have boats spawning on land, add the boat model name here-->
+      <Model>cgpredator</Model>
+    </Class>
+    <Class Name="Amphibious">
+      <!-- Place all Amphibious vehicle names here (will get Ground response)-->
+      <Model>blazer5</Model>
+      <Model>technical2</Model>
+    </Class>
+    <Class Name="AmphibiousTank">
+      <!-- Place all Amphibious Tank type vehicle names here (will get Tank response)-->
+      <Model>apc</Model>
+    </Class>
+    <Class Name="FlyingAutomobile">
+      <!-- Place all vehicles that are both cars/bikes etc and planes names here-->
+      <Model>deluxo</Model>
+      <Model>oppressor</Model>
+      <Model>oppressor2</Model>
+    </Class>
+	<Class Name="SubCar">
+      <!-- Place all vehicles that are both sub and cars names here-->
+      <Model>stromberg</Model>
+    </Class>
+	<Class Name="ArmedSub">
+      <!-- Place all vehicles that are armed submarines names here-->
+      <Model>cgsub2</Model>
+	</Class>
+	<Class Name="ArmedBoat">
+      <!-- Place all vehicles that are armed boats here-->
+      <Model>patrolboat</Model>
+    </Class>
+  </HeavyVehicleClasses>
+</SixStarResponse>

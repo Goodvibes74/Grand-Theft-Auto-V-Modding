@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+    <!-- RDE BALANCED MODE, JAX765 EDITS | LAST MODIFIED 19/09/2017 -->
+  <!--
+  This file will designate which group of vehicles (defined in VehicleGroups.xml) will spawn at a specific location and at a specific star level.
+ <Location>
+      <Name>Bolingbroke_Penitentiary</Name>                 #Name of the Response Location (Don't edit these or you will break the script)
+      <VehicleGroups>
+         <OneStar>                                          #Star Level
+          <Group Tag="PIA_COP">                           #This Tag should match a tag that exists in VehicleGroups.xml (<Group><Tag>)
+            <SpawnInfo>                                     #Details on how this group should spawn at this star level
+              <MinQueue>3</MinQueue>                        #Minimum number of response vehicles to be in queue or spawned in at a time
+              <MaxQueue>3</MaxQueue>                        #Maximum number of response vehicles to be in queue or spawned in at a time
+              <MinSpawn>15</MinSpawn>                       #Minimum time before a queued vehicle (initial wave) is spawned (in seconds)
+              <MaxSpawn>30</MaxSpawn>                       #Maximum time before a queued vehicle (initial wave) is spawned (in seconds)
+              <MinRespawn>20</MinRespawn>                   #Minimum time before a queued vehicle (Respawns after first wave) is spawned
+              <MaxRespawn>40</MaxRespawn>                   #Maximum time before a queued vehicle (Respawns after first wave) is spawned
+              <MinDistance>150</MinDistance>                #Minimum distance this vehicle can spawn to the player
+              <MaxDistance>250</MaxDistance>                #Maximum distance this vehicle can spawn to the player
+            </SpawnInfo>
+          </Group>
+        </OneStar>                                       You can put as many groups in one wanted level as you want, just be careful - too many spawns can make your game crash.        
+  -->
+
+
+<SixStarResponse>
+	<SpawnInfos>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_1</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_2</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_3</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_4</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_5</Tag>
+			<MinQueue>5</MinQueue>
+			<MaxQueue>5</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_6</Tag>
+			<MinQueue>6</MinQueue>
+			<MaxQueue>6</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_7</Tag>
+			<MinQueue>7</MinQueue>
+			<MaxQueue>7</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_8</Tag>
+			<MinQueue>8</MinQueue>
+			<MaxQueue>8</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_9</Tag>
+			<MinQueue>9</MinQueue>
+			<MaxQueue>9</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>150</MinDistance>
+			<MaxDistance>250</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_1_Closer</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>100</MinDistance>
+			<MaxDistance>200</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_2_Closer</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>100</MinDistance>
+			<MaxDistance>200</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_3_Closer</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>100</MinDistance>
+			<MaxDistance>200</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_4_Closer</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>100</MinDistance>
+			<MaxDistance>200</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Patrol_2_Far</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>5</MinSpawn>
+			<MaxSpawn>5</MaxSpawn>
+			<MinRespawn>2</MinRespawn>
+			<MaxRespawn>2</MaxRespawn>
+			<MinDistance>500</MinDistance>
+			<MaxDistance>1000</MaxDistance>
+        </SpawnInfo>
+	</SpawnInfos>
+</SixStarResponse>

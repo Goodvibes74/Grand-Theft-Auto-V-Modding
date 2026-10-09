@@ -12,9 +12,9 @@ These are already in git through the whitelist in `.gitignore` (`*.ini`, `*.lua`
 
 | What | Where | Why it matters |
 | --- | --- | --- |
-| Mod configs | `*.ini`, `*.toml` in root (`HeapAdjuster.ini`, `PackfileLimitAdjuster.ini`, `WeaponLimitsAdjuster.ini`, `NoEditorRestrictions.ini`, `ScriptHookVDotNet.ini`, `fwBoxStreamerVariable_DecalsLimit-Patch.toml`) | Limits and behaviour tweaks. A bad value here causes crashes. |
+| Mod configs | `*.ini`, `*.toml` in root (`HeapAdjuster.ini`, `PackfileLimitAdjuster.ini`, `WeaponLimitsAdjuster.ini`, `NoEditorRestrictions.ini`, `ScriptHookVDotNet.ini`, `fwBoxStreamerVariable_DecalsLimit-Patch.toml`, RDE's `PoolManager.ini` and `combat_tweaks.ini`) | Limits and behaviour tweaks. A bad value here causes crashes. |
 | Trainer keybinds | `trainerv.ini`, `docs/mods_info/KEYCODES.md` | Keybind changes and conflicts between mods. |
-| SHVDN mod configs | `scripts/*.ini`, `scripts/*.xml` (`BetterChasesConfig.xml`, `ImmersifyII.ini`, `ImmersifyIIData.xml`, `Stance.ini`, `VehicleList.ini`, `PedList.ini`, `ObjectList.ini`, `iFruitAddon2/config.ini`, `MapEditor/*.xml`) | Gameplay tuning. |
+| SHVDN mod configs | `scripts/*.ini`, `scripts/*.xml` (`BetterChasesConfig.xml`, `ImmersifyII.ini`, `ImmersifyIIData.xml`, `Stance.ini`, `VehicleList.ini`, `PedList.ini`, `ObjectList.ini`, `iFruitAddon2/config.ini`, `MapEditor/*.xml`, RDE's `SixStarResponse/*`, `LiveryChanger/*.xml`, `ArrestWarrant/*.xml`) | Gameplay tuning. |
 | Script source | `scripts/*.lua`, `scripts/libs/`, `scripts/addins/`, `scripts/*.cs` | Your own code. |
 | Our compiled scripts | `ModDevelopment/` (projects, solution, shared build files) plus their built `scripts/<Name>.dll` and `.pdb` | Source for the scripts we write. Rebuild with `dotnet build -c Release ModDevelopment/ModDevelopment.slnx`. |
 | Menyoo data | `menyooStuff/` (`menyooConfig.ini`, `AddedVehicleModels.xml`, `Vehicle/*.xml`, `Outfit/*.xml`, `PedList.xml`, `MapMods.xml`) | Saved vehicles, outfits, spooner maps, and the list of add-on models. |
@@ -37,6 +37,8 @@ scripts/ClearScript.dll         scripts/MapEditor.dll
 scripts/Cop_Arrest.dll          scripts/NativeUI.dll
 scripts/Disarm.dll              scripts/Stance.dll
 scripts/iFruitAddon2.dll        scripts/ImmersifyII.dll
+scripts/SixStarResponse.dll     scripts/LiveryChanger.dll      (RDE)
+scripts/EasyHook.dll            (RDE)
 ```
 
 ### b) The script hook layer in the root (about 4 MB)
@@ -49,9 +51,11 @@ ScriptHookVDotNet2.dll     # SHVDN v2 runtime
 ScriptHookVDotNet3.dll     # SHVDN v3 runtime
 dinput8.dll                # ASI loader that loads every .asi
 xinput1_4.dll              # ASI loader for GTA V Enhanced, inactive in this Legacy install (see CLAUDE.md)
+EasyHook64.dll             # RDE hook library
+EasyHookPatch.dll          # RDE hook library
 ```
 
-### c) The OpenIV `Mods/` folder (2.7 GB, 9 RPF files)
+### c) The OpenIV `Mods/` folder (about 4 GB, 11 RPF files)
 
 **Do not commit these to git.** They are too big, and every edit rewrites the whole archive. Track the **manifest** instead: `Mods/MANIFEST.md` lists each RPF with its size and SHA-256 hash, so any change shows up as a diff. Regenerate it with `bash tools/update-mods-manifest.sh` (about 20 seconds).
 
@@ -63,6 +67,8 @@ Mods/update/update2.rpf
 Mods/update/x64/dlcpacks/forest_n/dlc.rpf    # add-on map
 Mods/update/x64/dlcpacks/forest_s/dlc.rpf    # add-on map
 Mods/update/x64/dlcpacks/gxetron/dlc.rpf     # add-on vehicle
+Mods/update/x64/dlcpacks/rde/dlc.rpf         # RDE (Rebalanced Dispatch Enhanced) police overhaul
+Mods/update/x64/dlcpacks/wov_expansion/dlc.rpf # installed by RDE
 Mods/update/x64/dlcpacks/urus2018/dlc.rpf    # add-on vehicle (Lamborghini Urus)
 Mods/update/x64/dlcpacks/vremastered/dlc.rpf # graphics/vehicle pack
 ```

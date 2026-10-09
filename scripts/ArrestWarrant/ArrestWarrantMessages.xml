@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ valid <Agency> tags:
+ <Name> from ArrestWarrantAgencies.xml OR LocationBased
+ 
+ valid <SuppressIfResponseType> tags:
+ All from SixStarResponse/ResponseZones
+ 
+ color tags:
+ ~y~TEXT~w~ - yellow
+ ~r~TEXT~w~ - red
+ 
+  <BigMessageShard sound="true">
+    <Text></Text>
+    <ColorA></ColorA>
+    <ColorB></ColorB>
+  </BigMessageShard> 
+-->
+
+<BetterChasesMessages>
+  <!-- RDE BALANCED NO ARMY MODE | LAST MODIFIED 12/04/2016 -->
+  <!-- do not touch anything aside from Agency, Message and ShortMessage in hardcoded Items!-->
+  <Item hardcoded="true">
+    <HardcodedType>PlaneGeneral</HardcodedType>
+    <Agency>US Air Force</Agency>
+    <Message>Dangerous suspect has been spotted piloting an ~y~air vehicle~w~, ~r~Air Force~w~ has been called.</Message>
+    <ShortMessage>AIR FORCE RESPONDING</ShortMessage>
+    <BigMessageShard />
+  </Item>  
+  <Item hardcoded="true">
+    <HardcodedType>PlaneHeavy</HardcodedType>
+    <Agency>US Air Force</Agency>
+      <Message>Suspect is piloting an ~y~armed air vehicle~w~, ~r~Air Force~w~ has been called.</Message>
+    <ShortMessage>MILITARY AIR VEHICLE</ShortMessage>
+    <BigMessageShard sound="true">
+      <Text>DEADLY FORCE AUTHORIZED</Text>
+      <ColorA>HUD_COLOUR_BLACK</ColorA>
+      <ColorB>HUD_COLOUR_RED</ColorB>
+    </BigMessageShard>
+  </Item>  
+  <Item hardcoded="true">
+    <HardcodedType>MilitaryVehicle</HardcodedType>
+    <Agency>SA National Guard</Agency>
+    <Message>Suspect is driving an ~y~armored vehicle~w~, ~r~National Guard~w~ has been called.</Message>
+    <ShortMessage>MILITARY VEHICLE</ShortMessage>
+    <BigMessageShard sound="true">
+      <Text>DEADLY FORCE AUTHORIZED</Text>
+      <ColorA>HUD_COLOUR_BLACK</ColorA>
+      <ColorB>HUD_COLOUR_RED</ColorB>
+    </BigMessageShard>
+  </Item>
+  <Item hardcoded="true">
+    <HardcodedType>Tank</HardcodedType>
+    <Agency>SA National Guard</Agency>
+    <Message>Suspect is driving a ~y~heavily armed military vehicle~w~, ~r~National Guard~w~ has been called.</Message>
+    <ShortMessage>HEAVY MILITARY VEHICLE</ShortMessage>
+    <BigMessageShard sound="true">
+      <Text>DEADLY FORCE AUTHORIZED</Text>
+      <ColorA>HUD_COLOUR_BLACK</ColorA>
+      <ColorB>HUD_COLOUR_RED</ColorB>
+    </BigMessageShard>
+  </Item>
+  <!-- do not touch anything aside from Agency, Message and ShortMessage in hardcoded Items!-->
+  <Item>
+    <WantedLevel>3</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>Plane_General</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Chopper_General</ResponseType>
+      <ResponseType>Chopper_Heavy</ResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+      <ResponseType>Army_Base</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>LocationBased</Agency>
+    <Message>Attention all units, ~r~roadblocks~w~ have been authorized.</Message>
+    <ShortMessage>ROADBLOCKS AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>3</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>Plane_General</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Chopper_General</ResponseType>
+      <ResponseType>Chopper_Heavy</ResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+      <ResponseType>Army_Base</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>LocationBased</Agency>
+    <Message>Attention all units, ~r~air support~w~ is en-route.</Message>
+    <ShortMessage>AIR SUPPORT AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>4</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>Tank</ResponseType>
+      <ResponseType>Ground_Heavy</ResponseType>
+      <ResponseType>Plane_General</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Chopper_General</ResponseType>
+      <ResponseType>Chopper_Heavy</ResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+      <ResponseType>Army_Base</ResponseType>
+      <ResponseType>Humane_Labs</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>LocationBased</Agency>
+    <Message>Attention all units, ~r~tactical units~w~ have been dispatched.</Message>
+    <ShortMessage>TACTICAL UNITS AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>6</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>Tank</ResponseType>
+      <ResponseType>Ground_Heavy</ResponseType>
+      <ResponseType>Plane_General</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Chopper_General</ResponseType>
+      <ResponseType>Chopper_Heavy</ResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+      <ResponseType>Army_Base</ResponseType>
+      <ResponseType>PillboxHill</ResponseType>
+      <ResponseType>LS_Airport</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>NOOSE</Agency>
+    <Message>Attention all units, State has called for ~r~federal support~w~.</Message>
+    <ShortMessage>FEDERAL SUPPORT AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>6</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>Tank</ResponseType>
+      <ResponseType>Ground_Heavy</ResponseType>
+      <ResponseType>Plane_General</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Chopper_General</ResponseType>
+      <ResponseType>Chopper_Heavy</ResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+      <ResponseType>Army_Base</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>NOOSE</Agency>
+    <Message>Attention all units, ~r~armored heavy responders~w~ have been dispatched.</Message>
+    <ShortMessage>JUGGERNAUTS AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>6</WantedLevel>
+    <SuppressIfResponseType>
+      <ResponseType>None</ResponseType>
+      <ResponseType>Noose_HeadQuarters</ResponseType>
+      <ResponseType>Bolingbroke_Penitentiary</ResponseType>
+      <ResponseType>Humane_Labs</ResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+      <ResponseType>Mt_Chiliad</ResponseType>
+      <ResponseType>Ocean</ResponseType>
+      <ResponseType>Alamo</ResponseType>
+      <ResponseType>Hwy</ResponseType>
+      <ResponseType>Northern_Wilderness</ResponseType>
+      <ResponseType>Southern_Wilderness</ResponseType>
+      <ResponseType>Countryside</ResponseType>
+      <ResponseType>PortAuthority</ResponseType>
+      <ResponseType>PillboxHill</ResponseType>
+      <ResponseType>LS_Airport</ResponseType>
+      <ResponseType>City</ResponseType>
+      <ResponseType>Sheriff</ResponseType>
+    </SuppressIfResponseType>
+    <ForceIfResponseType />
+    <SuppressIfHardcodedMessageShown />
+    <Agency>SA National Guard</Agency>
+    <Message>Attention all units, ~r~armored heavy responders~w~ have been dispatched.</Message>
+    <ShortMessage>JUGGERNAUTS AUTHORIZED</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>4</WantedLevel>
+    <SuppressIfResponseType />
+    <ForceIfResponseType>
+      <ResponseType>Ground_Heavy</ResponseType>
+    </ForceIfResponseType> 
+    <SuppressIfHardcodedMessageShown>MilitaryVehicle</SuppressIfHardcodedMessageShown>
+    <Agency>SA National Guard</Agency>
+    <Message>Suspect is driving an ~y~armored vehicle~w~, ~r~National Guard~w~ has been called.</Message>
+    <ShortMessage>MILITARY VEHICLE</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>5</WantedLevel>
+    <SuppressIfResponseType />
+    <ForceIfResponseType>
+      <ResponseType>Tank</ResponseType>
+    </ForceIfResponseType>  
+    <SuppressIfHardcodedMessageShown>Tank</SuppressIfHardcodedMessageShown>
+    <Agency>SA National Guard</Agency>
+    <Message>Suspect is driving a ~y~heavily armed military vehicle~w~, ~r~National Guard~w~ has been called.</Message>
+    <ShortMessage>HEAVY MILITARY VEHICLE</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>5</WantedLevel>
+    <SuppressIfResponseType />
+    <ForceIfResponseType>
+      <ResponseType>Plane_General</ResponseType>
+    </ForceIfResponseType>
+    <SuppressIfHardcodedMessageShown>PlaneGeneral</SuppressIfHardcodedMessageShown>
+    <Agency>US Air Force</Agency>
+    <Message>Dangerous suspect has been spotted piloting an ~y~air vehicle~w~, ~r~Air Force~w~ has been called.</Message>
+    <ShortMessage>AIR FORCE RESPONDING</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>5</WantedLevel>
+    <SuppressIfResponseType />
+    <ForceIfResponseType>
+      <ResponseType>Plane_Heavy</ResponseType>
+    </ForceIfResponseType>
+    <SuppressIfHardcodedMessageShown>PlaneHeavy</SuppressIfHardcodedMessageShown>
+    <Agency>US Air Force</Agency>
+    <Message>Suspect is piloting an ~y~armed air vehicle~w~, ~r~Air Force~w~ has been called.</Message>
+    <ShortMessage>MILITARY AIR VEHICLE</ShortMessage>
+    <BigMessageShard />
+  </Item>
+  <Item>
+    <WantedLevel>4</WantedLevel>
+    <SuppressIfResponseType />
+    <ForceIfResponseType>
+      <ResponseType>Water_Submersible</ResponseType>
+    </ForceIfResponseType> 
+    <SuppressIfHardcodedMessageShown />
+    <Agency>US Coast Guard</Agency>
+    <Message>Suspect is piloting a ~y~submarine~w~, ~r~USCG interceptor submarines~w~ have been dispatched.</Message>
+    <ShortMessage>SUBMARINE</ShortMessage>
+    <BigMessageShard />
+  </Item>
+</BetterChasesMessages>

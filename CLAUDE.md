@@ -26,6 +26,7 @@ GTA5.exe
      ├─ Menyoo.asi                  trainer/spooner, data in menyooStuff/
      ├─ TrainerV.asi                trainer, configured by trainerv.ini (see docs/mods_info/KEYCODES.md)
      ├─ openCameraV.asi, NoEditorRestrictions.asi
+     ├─ RDE plugins: RDE_Auxiliary, combat_tweaks, LaserSights, PoolManager (need EasyHook64.dll)
      └─ limit adjusters: HeapAdjuster, PackfileLimitAdjuster, WeaponLimitsAdjuster,
         fwBoxStreamerVariable_DecalsLimit-Patch
 ```
@@ -52,11 +53,11 @@ GTA5.exe
 
 ### Installed SHVDN mods (scripts/)
 
-Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), ModGuide (built from `ModDevelopment/MyMods/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
+Better Chases+, Cop_Arrest, Disarm, iFruitAddon2, ImmersifyII, MapEditor, Stance, FoSAShelter (.cs), RDE's SixStarResponse (police dispatch, toggle Ctrl+F10) and LiveryChanger, ModGuide (built from `ModDevelopment/MyMods/ModGuide/`), plus the libraries LemonUI.SHVDN3, NativeUI and ClearScript.
 
 ### Installed add-on DLC packs (Mods/update/x64/dlcpacks/)
 
-`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (map and world visuals, no vehicles inside). Add-on vehicle model names: `gxetron`, `urus2018`.
+`forest_n` and `forest_s` (map), `gxetron` and `urus2018` (vehicles), `vremastered` (map and world visuals, no vehicles inside), `rde` and `wov_expansion` (RDE 4.1.5 police overhaul, installed 2026-10-09; `Mods/update/update.rpf.bak` is the pre-RDE backup). Add-on vehicle model names: `gxetron`, `urus2018`.
 
 ### Identified non-vanilla files
 

@@ -97,6 +97,9 @@ obj/
 !/ScriptHookVDotNet3.dll
 !/dinput8.dll
 !/xinput1_4.dll
+# RDE hook libraries (loaded by RDE's ASI plugins)
+!/EasyHook64.dll
+!/EasyHookPatch.dll
 # Small mod assets
 !menyooStuff/*.mp3
 

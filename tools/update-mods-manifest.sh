@@ -13,7 +13,7 @@ out="Mods/MANIFEST.md"
   echo
   echo "| File | Size (bytes) | SHA-256 |"
   echo "|---|---:|---|"
-  find Mods -type f ! -name MANIFEST.md -print0 | sort -z | while IFS= read -r -d '' f; do
+  find Mods -type f ! -name MANIFEST.md ! -name '*.bak' -print0 | sort -z | while IFS= read -r -d '' f; do
     size=$(stat -c %s "$f")
     hash=$(sha256sum "$f" | cut -d' ' -f1)
     echo "| \`${f}\` | ${size} | \`${hash}\` |"

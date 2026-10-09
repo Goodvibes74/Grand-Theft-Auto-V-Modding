@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 
+    <Prop>
+      <Tag>CONCRETE_BARIER_1</Tag>                     		The Tag of the Prop for use in ResponseRoadblocks.xml
+      <PropModel>prop_barier_conc_01a</PropModel>       	Prop model name
+      <Heading>XForward</Heading>							Options are XForward, XSide, YForward, YSide
+      <Measure>Width</Measure>								Options are Width and Length and is used for roadblock measurement system
+	  <Separation>0.5</Separation>							Width/Length of model plus this separation amount
+    </Prop>
+-->
+<SixStarResponse>
+<Props>
+	<!-- Spikes -->
+    <Prop>
+      <Tag>SPIKES_1</Tag>                     			
+      <PropModel>p_ld_stinger_s</PropModel>       	
+      <Heading>YSide</Heading>				
+      <Measure>Length</Measure>			
+	  <Separation>0</Separation>
+	  <IsDynamic>false</IsDynamic>
+	  <IsSpike>true</IsSpike>
+    </Prop>
+	<!-- Barriers -->
+	<Prop>
+      <Tag>SANDBAG_BARRIER</Tag>
+      <PropModel>sandbag1_model</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>0</Separation>
+	  <IsDynamic>false</IsDynamic>
+    </Prop>
+    <Prop>
+      <Tag>CONCRETE_BARRIER_1</Tag>                     			
+      <PropModel>prop_barier_conc_01a</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>0.5</Separation>	
+    </Prop>
+	<Prop>
+      <Tag>WATER_BARRIER_1</Tag>                     			
+      <PropModel>prop_barrier_wat_03a</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>0.50</Separation>		  
+    </Prop>
+	<Prop>
+      <Tag>WATER_BARRIER_2</Tag>                     			
+      <PropModel>prop_barrier_wat_03b</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>1</Separation>		  
+    </Prop>
+	<!-- Fences -->
+    <Prop>
+      <Tag>FENCE_1</Tag>                     			
+      <PropModel>prop_fncsec_04a</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>0.5</Separation>		  
+    </Prop>
+	<!-- Cones -->
+    <Prop>
+      <Tag>CONE_1</Tag>                     			
+      <PropModel>prop_roadcone01a</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>1</Separation>		  
+    </Prop>
+    <Prop>
+      <Tag>CONE_2</Tag>                     			
+      <PropModel>prop_roadcone02a</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>1</Separation>		  
+    </Prop>
+	<Prop>
+      <Tag>CONE_3</Tag>                     			
+      <PropModel>prop_roadcone01b</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>1</Separation>		  
+    </Prop>
+	<!-- Wood horses -->
+    <Prop>
+      <Tag>WOOD_HORSE_1</Tag>                     			
+      <PropModel>prop_barrier_work05</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>					
+	  <Separation>0.5</Separation>	
+    </Prop>
+	<Prop>
+      <Tag>WOOD_HORSE_2</Tag>                     			
+      <PropModel>prop_barrier_work06a</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>				
+	  <Separation>0.5</Separation>		  
+    </Prop>
+	<!-- Lights -->
+	<Prop>
+      <Tag>LIGHTS_1</Tag>                     			
+      <PropModel>prop_generator_03b</PropModel>       	
+      <Heading>XForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>2</Separation>		  
+    </Prop>
+    <Prop>
+      <Tag>LIGHTS_2</Tag>                     			
+      <PropModel>prop_worklight_01a</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>			
+	  <Separation>2</Separation>  
+    </Prop>
+    <Prop>
+      <Tag>LIGHTS_3</Tag>                     			
+      <PropModel>prop_worklight_02a</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>		
+	  <Separation>2</Separation>	  
+    </Prop>
+    <Prop>
+      <Tag>LIGHTS_4</Tag>                     			
+      <PropModel>prop_worklight_03a</PropModel>       	
+      <Heading>YForward</Heading>				
+      <Measure>Width</Measure>		
+	  <Separation>2</Separation>	  
+    </Prop>
+</Props>
+</SixStarResponse>

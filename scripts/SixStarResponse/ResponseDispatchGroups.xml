@@ -1,0 +1,1761 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SixStarResponse>
+    <DispatchVehicleSets>
+    <!-- Roadblock Starts here -->
+	<!-- LCPD -->
+        <DispatchVehicleSet>
+          <Tag>LCPD_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LCPD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">lcpd</Vehicle>
+            <Vehicle Multi="1">lcpd2</Vehicle>
+            <Vehicle Multi="1">lcpd3</Vehicle>
+			<Vehicle Multi="1">lcpd4</Vehicle>
+            <Vehicle Multi="1">lcpd5</Vehicle>
+			<Vehicle Multi="1">lcpdrumpo</Vehicle>
+            <Vehicle Multi="1">lcpdboxville</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LCPD_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LCPD_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>LCPD</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">lcpd</Vehicle>
+            <Vehicle Multi="1">lcpd2</Vehicle>
+            <Vehicle Multi="1">lcpd3</Vehicle>
+			<Vehicle Multi="1">lcpd4</Vehicle>
+            <Vehicle Multi="1">lcpd5</Vehicle>
+			<Vehicle Multi="1">lcpdrumpo</Vehicle>
+            <Vehicle Multi="1">lcpdboxville</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LCPD_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- LSPD -->
+        <DispatchVehicleSet>
+          <Tag>LSPD_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LSPD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">police</Vehicle>
+            <Vehicle Multi="1">police2</Vehicle>
+            <Vehicle Multi="1">police3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSPD_Male_Vest</Ped>
+            <Ped Multi="1">LSPD_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSPD_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>LSPD</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policescout</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSPD_Male_Vest</Ped>
+            <Ped Multi="1">LSPD_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSPD_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LSPD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policesl</Vehicle>
+            <Vehicle Multi="1">policeexecutioner</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSPD_SWAT</Ped>
+            <Ped Multi="1">LSPD_SWAT_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSPD_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>LSPD</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">riot</Vehicle>
+            <Vehicle Multi="1">policecenturion</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSPD_SWAT</Ped>
+            <Ped Multi="1">LSPD_SWAT_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- LSSD -->
+        <DispatchVehicleSet>
+          <Tag>LSSD_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LSSD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">LSSheriff</Vehicle>
+            <Vehicle Multi="1">LSSheriff2</Vehicle>
+            <Vehicle Multi="1">LSSheriff3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSSD_Male_Vest</Ped>
+            <Ped Multi="1">LSSD_Old_Vest</Ped>
+            <Ped Multi="1">LSSD_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSSD_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>LSSD</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">LSSheriff</Vehicle>
+            <Vehicle Multi="1">LSSheriff2</Vehicle>
+            <Vehicle Multi="1">LSSheriff3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSSD_Male_Vest</Ped>
+            <Ped Multi="1">LSSD_Old_Vest</Ped>
+            <Ped Multi="1">LSSD_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSSD_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LSSD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffcenturion</Vehicle>
+            <Vehicle Multi="1">lssheriff4b</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSSD_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>LSSD</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffcenturion</Vehicle>
+            <Vehicle Multi="1">lssheriff4b</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- BCSO -->
+        <DispatchVehicleSet>
+          <Tag>BCSO_ROAD_BLOCK_CARS</Tag>
+		  <Agency>BCSO</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriff</Vehicle>
+            <Vehicle Multi="1">sheriff2</Vehicle>
+            <Vehicle Multi="1">sheriff5</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">BCSO_Male_Vest</Ped>
+            <Ped Multi="1">BCSO_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>BCSO_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>BCSO</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriff</Vehicle>
+            <Vehicle Multi="1">sheriff2</Vehicle>
+            <Vehicle Multi="1">sheriff5</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">BCSO_Male_Vest</Ped>
+            <Ped Multi="1">BCSO_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>BCSO_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>BCSO</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">SheriffStockade</Vehicle>
+            <Vehicle Multi="1">Sheriff3</Vehicle>
+            <Vehicle Multi="1">Sheriff4b</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>BCSO_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>BCSO</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">SheriffStockade</Vehicle>
+            <Vehicle Multi="1">Sheriff3</Vehicle>
+            <Vehicle Multi="1">Sheriff4b</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SAHP -->
+        <DispatchVehicleSet>
+          <Tag>SAHP_ROAD_BLOCK_CARS</Tag>
+		  <Agency>SAHP</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaypolice</Vehicle>
+            <Vehicle Multi="1">hwaypolice2</Vehicle>
+            <Vehicle Multi="1">hwaypolice3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SAHP_MALE_VEST</Ped>
+            <Ped Multi="1">SAHP_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SAHP_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>SAHP</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaypolice</Vehicle>
+            <Vehicle Multi="1">hwaypolice2</Vehicle>
+            <Vehicle Multi="1">hwaypolice3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SAHP_MALE_VEST</Ped>
+            <Ped Multi="1">SAHP_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SAHP_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>SAHP</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaypolice4</Vehicle>
+            <Vehicle Multi="1">hwaycenturion</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SAHP_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>SAHP</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaypolice4</Vehicle>
+            <Vehicle Multi="1">hwaycenturion</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SASPR -->
+        <DispatchVehicleSet>
+          <Tag>SASPR_ROAD_BLOCK_CARS</Tag>
+		  <Agency>SASPR</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">Pranger</Vehicle>
+            <Vehicle Multi="1">Pranger2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SASPR_Male_Vest</Ped>
+            <Ped Multi="1">SASPR_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SASPR_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>SASPR</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">Pranger</Vehicle>
+            <Vehicle Multi="1">Pranger2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SASPR_Male_Vest</Ped>
+            <Ped Multi="1">SASPR_Female_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MARSHAL_ROAD_BLOCK_CARS</Tag>
+		  <Agency>SASPR</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">usms</Vehicle>
+            <Vehicle Multi="1">usms2</Vehicle>
+            <Vehicle Multi="1">fbit</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_Marshal</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MARSHAL_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>SASPR</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">usms</Vehicle>
+            <Vehicle Multi="1">usms2</Vehicle>
+            <Vehicle Multi="1">fbit</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_Marshal</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SADCR -->
+        <DispatchVehicleSet>
+          <Tag>SADCR_ROAD_BLOCK_CARS</Tag>
+		  <Agency>SADCR</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">pcar</Vehicle>
+            <Vehicle Multi="1">pcar2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SADCR_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SADCR_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>SADCR</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">pcar</Vehicle>
+            <Vehicle Multi="1">pcar2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SADCR_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- NOOSE -->
+        <DispatchVehicleSet>
+          <Tag>PIA_ROAD_BLOCK_CARS</Tag>
+		  <Agency>PIA</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">noose</Vehicle>
+            <Vehicle Multi="1">noose2</Vehicle>
+            <Vehicle Multi="1">noose4</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_PIA_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>PIA_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>PIA</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">noose</Vehicle>
+            <Vehicle Multi="1">noose5</Vehicle>
+            <Vehicle Multi="1">noose3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_PIA_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_ROAD_BLOCK_CARS</Tag>
+		  <Agency>NOOSE</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">noosecenturion</Vehicle>
+            <Vehicle Multi="1">nooseinsurgent</Vehicle>
+            <Vehicle Multi="1">nooseriot</Vehicle>
+            <Vehicle Multi="1">nooset2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>NOOSE</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">noosecenturion</Vehicle>
+            <Vehicle Multi="1">nooseinsurgent</Vehicle>
+            <Vehicle Multi="1">nooseriot</Vehicle>
+            <Vehicle Multi="1">nooset2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- PAP -->
+        <DispatchVehicleSet>
+          <Tag>PAP_ROAD_BLOCK_CARS</Tag>
+		  <Agency>PAP</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">PortPolice</Vehicle>
+            <Vehicle Multi="1">PortPolice2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">PAP_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>PAP_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>PAP</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">PortPolice</Vehicle>
+            <Vehicle Multi="1">PortPolice2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">PAP_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- USCG -->
+        <DispatchVehicleSet>
+          <Tag>USCG_ROAD_BLOCK_CARS</Tag>
+		  <Agency>USCG</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">cgexecutioner</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>USCG</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">cgexecutioner</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>USCG</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">cgsandking</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>USCG</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">cgsandking</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- FIB -->
+        <DispatchVehicleSet>
+          <Tag>FIB_ROAD_BLOCK_CARS</Tag>
+		  <Agency>FIB</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">fbi</Vehicle>
+            <Vehicle Multi="1">fbi2</Vehicle>
+            <Vehicle Multi="1">fbi3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">FIB_Agent</Ped>
+            <Ped Multi="1">FIB_Agent_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>FIB_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>FIB</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">fbi</Vehicle>
+            <Vehicle Multi="1">fbi2</Vehicle>
+            <Vehicle Multi="1">fbi3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">FIB_Agent</Ped>
+            <Ped Multi="1">FIB_Agent_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>FIB_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>FIB</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">fbicenturion</Vehicle>
+            <Vehicle Multi="1">FBI2Old</Vehicle>
+            <Vehicle Multi="1">fbit2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">FIB_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>FIB_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>FIB</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">fbicenturion</Vehicle>
+            <Vehicle Multi="1">FBI2Old</Vehicle>
+            <Vehicle Multi="1">fbit2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">FIB_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SA NATIONAL GUARD -->
+        <DispatchVehicleSet>
+          <Tag>ARMY_ROAD_BLOCK_CARS</Tag>
+		  <Agency>ARMY</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+			<Vehicle Multi="1">SquaddieArmed</Vehicle>
+            <Vehicle Multi="1">squaddie3</Vehicle>
+            <Vehicle Multi="1">barracks3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Marine</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>ARMY_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>ARMY</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>HardBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS_VEST</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+			<Vehicle Multi="1">SquaddieArmed</Vehicle>
+            <Vehicle Multi="1">squaddie3</Vehicle>
+            <Vehicle Multi="1">barracks3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Marine</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USAF_ROAD_BLOCK_CARS</Tag>
+		  <Agency>ARMY</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+			<Vehicle Multi="1">SquaddieArmed</Vehicle>
+            <Vehicle Multi="1">squaddie3</Vehicle>
+            <Vehicle Multi="1">usafmerit</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USAFSF_Heavy</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USAF_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>ARMY</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>HardBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+			<Vehicle Multi="1">SquaddieArmed</Vehicle>
+            <Vehicle Multi="1">squaddie3</Vehicle>
+            <Vehicle Multi="1">usafmerit</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USAFSF_Heavy</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- MERRYWEATHER -->
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_ROAD_BLOCK_CARS</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">security</Vehicle>
+            <Vehicle Multi="1">security2</Vehicle>
+            <Vehicle Multi="1">security3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Security</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">security</Vehicle>
+            <Vehicle Multi="1">security2</Vehicle>
+            <Vehicle Multi="1">security3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Security</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">security4</Vehicle>
+            <Vehicle Multi="1">securitynightshark</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Response</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">security4</Vehicle>
+            <Vehicle Multi="1">securitynightshark</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Response</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_ELITE_ROAD_BLOCK_CARS</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">contender</Vehicle>
+            <Vehicle Multi="1">mesa3</Vehicle>
+            <Vehicle Multi="1">rumpo3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Elite</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MERRYWEATHER_ELITE_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>MERRYWEATHER</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>HardBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">contender</Vehicle>
+            <Vehicle Multi="1">mesa3</Vehicle>
+            <Vehicle Multi="1">rumpo3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Elite</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- NYSP -->
+        <DispatchVehicleSet>
+          <Tag>NYSP_ROAD_BLOCK_CARS</Tag>
+		  <Agency>NYSP</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policeold1</Vehicle>
+            <Vehicle Multi="1">policeold2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NYSP_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>NYSP</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policeold1</Vehicle>
+            <Vehicle Multi="1">policeold2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_Male_Vest</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NYSP_SWAT_ROAD_BLOCK_CARS</Tag>
+		  <Agency>NYSP</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policeold1</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NYSP_SWAT_ROAD_BLOCK_SPIKES</Tag>
+		  <Agency>NYSP</Agency>
+		  <BarrierTypeSets><Type>Spikes</Type><Type>SoftBarrier</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">policeold1</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_SWAT</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- MISC -->
+        <DispatchVehicleSet>
+          <Tag>NULLERS_ROAD_BLOCK_CARS</Tag>
+		  <Agency>LSPD</Agency>
+		  <BarrierTypeSets><Type>None</Type></BarrierTypeSets>
+		  <RoadblockTags>
+            <Tag Multi="1">ROADBLOCK_BASIC</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_AND_VMS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_LIGHTS_VMS_AND_NEWS</Tag>
+            <Tag Multi="1">RANDOMIZED_ROADBLOCK_WITH_EXTRA_PEDS</Tag>
+          </RoadblockTags>
+          <VehicleModels>
+            <Vehicle Multi="1">speedo2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NULLMAN</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+      <!-- Roadblock Ends here -->
+	  
+	  <!-- Policeheli Starts here -->
+	<!-- LSPD -->
+	    <DispatchVehicleSet>
+          <Tag>LSPD_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">polmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSPD_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>LSPD_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSPD_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">polmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSPD_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>LSPD_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- LSSD -->
+        <DispatchVehicleSet>
+          <Tag>LSSD_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>LSSD_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSSD_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>LSSD_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- BCSO -->
+        <DispatchVehicleSet>
+          <Tag>BCSO_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>BCSO_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>BCSO_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>BCSO_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SAHP -->
+        <DispatchVehicleSet>
+          <Tag>SAHP_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaymav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SAHP_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaymav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SASPR -->
+        <DispatchVehicleSet>
+          <Tag>SASPR_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">prangervalkyrie</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_MALE_VEST</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>Marshal_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">usmsvalkyrie</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_MARSHAL_HELI</Ped>
+          </Peds>
+          <Pilot>SASPR_MARSHAL_PILOT</Pilot>
+        </DispatchVehicleSet>
+    <!-- SADCR -->
+        <DispatchVehicleSet>
+          <Tag>SADCR_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaymav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SADCR_Vest</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot</Pilot>
+        </DispatchVehicleSet>
+    <!-- NOOSE -->
+        <DispatchVehicleSet>
+          <Tag>NOOSE_Gunner_Heli_Light</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">noosemav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- USCG -->
+        <DispatchVehicleSet>
+          <Tag>USCG_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">cgswift</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="2">USCG_Heli_Carbine</Ped>
+            <Ped Multi="1">USCG_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>USCG_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">cgswift</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>USCG_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_Gunner_Heli_Vest_Heavy</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">cgswift</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_Heli_MG_Vest</Ped>
+          </Peds>
+          <Pilot>USCG_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- FIB -->
+        <DispatchVehicleSet>
+          <Tag>FIB_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fbifrogger</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">FIB_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>FIB_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>FIB_Gunner_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fbifrogger</Vehicle>
+          </VehicleModels>
+          <Peds>
+             <Ped Multi="1">FIB_Heli_Carbine_Vest</Ped>
+          </Peds>
+          <Pilot>FIB_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SA NATIONAL GUARD -->
+        <DispatchVehicleSet>
+          <Tag>Army_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">armyannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Army_Heli_MG</Ped>
+          </Peds>
+          <Pilot>Army_Pilot</Pilot>
+        </DispatchVehicleSet>
+    <!-- MERRYWEATHER -->
+        <DispatchVehicleSet>
+          <Tag>MW_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">securityvalkyrie2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Heli_Carbine</Ped>
+          </Peds>
+          <Pilot>Merryweather_Response_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>MW_Elite_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">buzzard2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Elite_Sniper</Ped>
+          </Peds>
+          <Pilot>MERRYWEATHER_ELITE_PILOT</Pilot>
+        </DispatchVehicleSet>
+    <!-- NYSP -->
+	    <DispatchVehicleSet>
+          <Tag>NYSP_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">snowmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>NYSP_SWAT_Heli</Pilot>
+        </DispatchVehicleSet>
+    <!-- MISC -->
+	    <DispatchVehicleSet>
+          <Tag>NULLERS_Gunner_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">polmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NULLMAN</Ped>
+          </Peds>
+          <Pilot>NULLMAN</Pilot>
+        </DispatchVehicleSet>
+	  <!-- Policeheli Ends here -->
+	  
+	  <!-- Swatheli Starts here -->
+	<!-- LSPD -->
+	    <DispatchVehicleSet>
+          <Tag>LSPD_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">polmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSPD_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>LSPD_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSPD_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">polmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSPD_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>LSPD_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- LSSD -->
+        <DispatchVehicleSet>
+          <Tag>LSSD_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>LSSD_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>LSSD_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">lssheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LSSD_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>LSSD_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- BCSO -->
+        <DispatchVehicleSet>
+          <Tag>BCSO_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>BCSO_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>BCSO_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriffmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">BCSO_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>BCSO_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SAHP -->
+        <DispatchVehicleSet>
+          <Tag>SAHP_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaymav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>SAHP_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaymav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SAHP_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SASPR -->
+        <DispatchVehicleSet>
+          <Tag>SASPR_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">prangervalkyrie</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_MALE_VEST</Ped>
+          </Peds>
+          <Pilot>SAHP_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>Marshal_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">usmsvalkyrie</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SASPR_MARSHAL_HELI_RAPPEL</Ped>
+          </Peds>
+          <Pilot>SASPR_MARSHAL_PILOT</Pilot>
+        </DispatchVehicleSet>
+    <!-- NOOSE -->
+        <DispatchVehicleSet>
+          <Tag>NOOSE_SWAT_Heli_Light</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">noosemav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Noose_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Noose_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>NOOSE_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Noose_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>NOOSE_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- USCG -->
+        <DispatchVehicleSet>
+          <Tag>USCG_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>USCG_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>USCG_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">nooseannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>USCG_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- FIB -->
+        <DispatchVehicleSet>
+          <Tag>FIB_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fbifrogger</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">FIB_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>FIB_Pilot</Pilot>
+        </DispatchVehicleSet>
+        <DispatchVehicleSet>
+          <Tag>FIB_SWAT_Heli_Vest</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fbifrogger</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">FIB_SWAT_Heli_Rappel</Ped>
+          </Peds>
+          <Pilot>FIB_Pilot_Vest</Pilot>
+        </DispatchVehicleSet>
+    <!-- SA NATIONAL GUARD -->
+        <DispatchVehicleSet>
+          <Tag>Army_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">armyannihilator</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Marine</Ped>
+          </Peds>
+          <Pilot>Army_Pilot</Pilot>
+        </DispatchVehicleSet>
+    <!-- MERRYWEATHER -->
+        <DispatchVehicleSet>
+          <Tag>MW_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">securityvalkyrie2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Heli_Rappel</Ped>
+            <Ped Multi="1">Merryweather_Covert</Ped>
+          </Peds>
+          <Pilot>Merryweather_Response_Pilot</Pilot>
+        </DispatchVehicleSet>
+    <!-- NYSP -->
+	    <DispatchVehicleSet>
+          <Tag>NYSP_SWAT_Heli</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">snowmav</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_SWAT_Heli</Ped>
+          </Peds>
+          <Pilot>NYSP_SWAT_Heli</Pilot>
+        </DispatchVehicleSet>
+	  <!-- Swatheli Ends here -->
+	  
+	  <!-- (911 Emergency) Police Starts here -->
+	<!-- LCPD -->
+	    <DispatchVehicleSet>
+          <Tag>LCPD_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">lcpd</Vehicle>
+            <Vehicle Multi="1">lcpd2</Vehicle>
+            <Vehicle Multi="1">lcpd3</Vehicle>
+			<Vehicle Multi="1">lcpd4</Vehicle>
+            <Vehicle Multi="1">lcpd5</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">LCPD_Male</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- LSPD -->
+	    <DispatchVehicleSet>
+          <Tag>LSPD_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">police</Vehicle>
+            <Vehicle Multi="1">police2</Vehicle>
+            <Vehicle Multi="1">police3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSPD_Male</Ped>
+            <Ped Multi="1">LSPD_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- LSSD -->
+        <DispatchVehicleSet>
+          <Tag>LSSD_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">LSSheriff</Vehicle>
+            <Vehicle Multi="1">LSSheriff2</Vehicle>
+            <Vehicle Multi="1">LSSheriff3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">LSSD_Male</Ped>
+            <Ped Multi="1">LSSD_Old</Ped>
+            <Ped Multi="1">LSSD_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- BCSO -->
+        <DispatchVehicleSet>
+          <Tag>BCSO_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">sheriff</Vehicle>
+            <Vehicle Multi="1">sheriff2</Vehicle>
+            <Vehicle Multi="1">sheriff5</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">BCSO_Male</Ped>
+            <Ped Multi="1">BCSO_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SAHP -->
+        <DispatchVehicleSet>
+          <Tag>SAHP_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">hwaypolice</Vehicle>
+            <Vehicle Multi="1">hwaypolice2</Vehicle>
+            <Vehicle Multi="1">hwaypolice3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SAHP_MALE</Ped>
+            <Ped Multi="1">SAHP_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SASPR -->
+        <DispatchVehicleSet>
+          <Tag>SASPR_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">Pranger</Vehicle>
+            <Vehicle Multi="1">Pranger2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">SASPR_Male</Ped>
+            <Ped Multi="1">SASPR_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SADCR -->
+        <DispatchVehicleSet>
+          <Tag>SADCR_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">pcar</Vehicle>
+            <Vehicle Multi="1">pcar2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">SADCR</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- NOOSE -->
+        <DispatchVehicleSet>
+          <Tag>PIA_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">noose</Vehicle>
+            <Vehicle Multi="1">noose2</Vehicle>
+            <Vehicle Multi="1">noose3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NOOSE_PIA</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- PAP -->
+        <DispatchVehicleSet>
+          <Tag>PAP_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">PortPolice</Vehicle>
+            <Vehicle Multi="1">PortPolice2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">PAP_MALE</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- USCG -->
+        <DispatchVehicleSet>
+          <Tag>USCG_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">cgexecutioner</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">USCG</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- FIB -->
+        <DispatchVehicleSet>
+          <Tag>FIB_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fbi</Vehicle>
+            <Vehicle Multi="1">fbi2</Vehicle>
+            <Vehicle Multi="1">fbi3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="3">FIB_Agent</Ped>
+            <Ped Multi="1">FIB_Agent_Female</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- SA NATIONAL GUARD -->
+        <DispatchVehicleSet>
+          <Tag>USAF_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">squaddie3</Vehicle>
+            <Vehicle Multi="1">barracks3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Marine</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- MERRYWEATHER -->
+        <DispatchVehicleSet>
+          <Tag>MW_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">security</Vehicle>
+            <Vehicle Multi="1">security2</Vehicle>
+            <Vehicle Multi="1">security3</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Merryweather_Security</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- NYSP -->
+        <DispatchVehicleSet>
+          <Tag>NYSP_COP</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">policeold1</Vehicle>
+            <Vehicle Multi="1">policeold2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NYSP_MALE</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+    <!-- MISC -->
+		<DispatchVehicleSet>
+          <Tag>NULLERS</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">speedo2</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">NULLMAN</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+	  <!-- (911 Emergency) Police Ends here -->
+	  
+	  <!-- (911 Emergency) Firetruck Starts here -->
+        <DispatchVehicleSet>
+          <Tag>FIRETRUCK</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">firetruk</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Firefighter</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+		<DispatchVehicleSet>
+          <Tag>LCFIRETRUCK</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fdlctruck</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Firefighter</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+	  <!-- (911 Emergency) Firetruck Ends here -->
+	  
+	  <!-- (911 Emergency) Ambulance Starts here -->
+	    <DispatchVehicleSet>
+          <Tag>AMBULANCE</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">ambulance</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Paramedic</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+		<DispatchVehicleSet>
+          <Tag>LCAMBULANCE</Tag>
+          <VehicleModels>
+            <Vehicle Multi="1">fdlcamb</Vehicle>
+          </VehicleModels>
+          <Peds>
+            <Ped Multi="1">Paramedic</Ped>
+          </Peds>
+        </DispatchVehicleSet>
+	  <!-- (911 Emergency) Ambulance Ends here -->
+    </DispatchVehicleSets>
+</SixStarResponse>

@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SixStarResponse>
+  <!--  
+  The section below allows you to change the rate at which the Ai types are checked (Script interval speed in milliseconds)
+     <AI Type="Hydra">                                              #Name of the AI type (See below for options)
+      <CheckInterval>1000</CheckInterval>                           #Time in milliseconds
+    </AI>
+    
+	The section below allows you to add or edit the AI behaviour of enemey heavy vehicles.
+   <AI Type="Jet">                                                  #Type of AI to use (See options below)
+      <Model>Hydra</Model>                                          #Model name of the vehicle
+      <CheckInterval>1000</CheckInterval>                           #How often to check the AI of this vehicle type (lower = faster checks) in milliseconds
+      <CooldownRate>1000</CooldownRate>                             #How much time (milliseconds) between each shooting phase of this vehicle (higher = longer)
+      <PilotGunner>true</PilotGunner>                               #Is The Gunner always the pilot
+      <SecondaryGunner>false</SecondaryGunner>
+      <TargetRange>                                                 #This is used to determine the AI's "Cone of vision" when targetting the player for shooting
+        <Left>50</Left>                                             #How far to the left of the Enemey the player can be
+        <Right>50</Right>                                           #How far to the Right of the Enemey the player can be
+        <InFront>1500</InFront>                                     #How far in front of the Enemey the player can be
+        <Behind>10</Behind>                                         #How far behind the Enemey the player can be
+        <Above>50</Above>                                           #How far above the Enemey the player can be
+        <Below>50</Below>                                           #How far below the Enemey the player can be
+      <TargetRange>                                             
+     
+		PrimaryWeaponSetup
+		SecondaryWeaponSetup
+		TertiaryWeaponSetup
+		QuaternaryWeaponSetup
+		QuinaryWeaponSetup
+		SenaryWeaponSetup
+	 
+	  <FleesWhenPlayerNotInCorrectVehicle>false</FleesWhenPlayerNotInCorrectVehicle>                      #Not sure what i'm doing with this yet
+      <PrimaryWeaponSetup>                                          #Main weapon for the vehicle
+        <Weapon>VEHICLE_WEAPON_NOSE_TURRET_VALKYRIE</Weapon>        #Hash String for the vehicle weapon to use
+        <Rate>1000</Rate>                                           #The Rate this weapon shoots
+        <Accuracy>90</Accuracy>                                     #The Ped Accuracy
+        <CombatAttributes>                                          #Option for Combat Attributes (See below for options)
+          <CombatAttribute Enable="true">BF_CanDoDriveBys</CombatAttribute>   #Use Enable="true" or Enable="false" to toggle that attribute
+          <CombatAttribute Enable="false">BF_CanFightArmedPedsWhenNotArmed</CombatAttribute>
+        </CombatAttributes>        
+        <SeeingRange>100</SeeingRange>                              #How far the ped can see the player
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>  #Option for firing Pattern (See below for options)
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>                                        #Secondary Weapon for the vehicle
+        <Weapon>VEHICLE_WEAPON_NOSE_TURRET_VALKYRIE</Weapon>
+        <Rate>1000</Rate>
+        <Accuracy>90</Accuracy>
+        <CombatAttributes><CombatAttribute Enable="true">BF_CanDoDriveBys</CombatAttribute></CombatAttributes>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    
+    options:
+    
+    AI Types:
+    
+        Hydra
+        Lazer
+        Buzzard
+        Valkyrie
+        Tank
+        Lewd
+        Lewdad
+        Sub
+        Jet
+        Chopper
+        Ground
+        None    
+    
+    CombatAttribute:
+    
+        BF_CanUseCover
+        BF_CanUseVehicles
+        BF_CanDoDrivebys
+        BF_CanLeaveVehicle
+        BF_CanFightArmedPedsWhenNotArmed
+        BF_CanTauntInVehicle
+        BF_AlwaysFight
+        BF_IgnoreTrafficWhenDriving
+        
+        
+   Firing Pattern:   
+   
+        FIRING_PATTERN_BURST_FIRE
+        FIRING_PATTERN_BURST_FIRE_IN_COVER
+        FIRING_PATTERN_BURST_FIRE_DRIVEBY
+        FIRING_PATTERN_FROM_GROUND
+        FIRING_PATTERN_DELAY_FIRE_BY_ONE_SEC
+        FIRING_PATTERN_FULL_AUTO
+        FIRING_PATTERN_SINGLE_SHOT
+        FIRING_PATTERN_BURST_FIRE_PISTOL
+        FIRING_PATTERN_BURST_FIRE_SMG
+        FIRING_PATTERN_BURST_FIRE_RIFLE
+        FIRING_PATTERN_BURST_FIRE_MG
+        FIRING_PATTERN_BURST_FIRE_PUMPSHOTGUN
+        FIRING_PATTERN_BURST_FIRE_HELI
+        FIRING_PATTERN_BURST_FIRE_MICRO
+        FIRING_PATTERN_SHORT_BURSTS
+        FIRING_PATTERN_SLOW_FIRE_TANK
+    
+    details for firing patterns: http://pastebin.com/Px036isB
+	-->
+  <Types>
+    <!-- You cannot change the Types or phase numbers in this section or you'll break everything! only modify the interval numbers (in milliseconds) to make them shoot more/less (higher = slower)-->
+    <AI Type="Hydra">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Lazer">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Buzzard">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Valkyrie">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Tank">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>17</Phases>
+    </AI>
+    <AI Type="APC">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>7</Phases>
+    </AI>
+    <AI Type="Sub">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="SubArmed">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+	<AI Type="Boat">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="BoatArmed">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Jet">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Chopper">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+    <AI Type="Ground">
+      <CheckInterval>1000</CheckInterval>
+      <Phases>5</Phases>
+    </AI>
+  </Types>
+
+
+  <VehicleAI>
+    <AI Type="Hydra">
+      <Model>Hydra</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>9</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLANE_ROCKET</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>85</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLAYER_LAZER</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>50</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Lazer">
+      <Model>Lazer</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>9</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLANE_ROCKET</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>85</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLAYER_LAZER</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>50</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Lazer">
+      <Model>Strikeforce</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>9</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_STRIKEFORCE_BARRAGE</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>4</WeaponIndex>
+        <Rate>100</Rate>
+        <Accuracy>0</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>7</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>400</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_BURST_FIRE_HELI</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_STRIKEFORCE_CANNON</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>50</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Valkyrie">
+      <Model>Valkyrie</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+    <AI Type="Valkyrie">
+      <Model>armyannihilator2</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+    <AI Type="Valkyrie">
+      <Model>securityvalkyrie</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>	
+	<AI Type="Paratrooper">
+      <Model>cargobob</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+	  <RefuelTimer>120</RefuelTimer>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+	<AI Type="Paratrooper">
+      <Model>securityvalkyrie2</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+	  <RefuelTimer>120</RefuelTimer>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+    <AI Type="Buzzard">
+      <Model>Buzzard</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLAYER_BUZZARD</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>100</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_SPACE_ROCKET</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>50</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Savage">
+      <Model>Savage</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_SPACE_ROCKET</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>85</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_PLAYER_SAVAGE</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>50</Rate>
+        <Accuracy>50</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_BURST_FIRE</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Hunter">
+      <Model>Hunter</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>250</SearchRadius>
+	  <Countermeasures>1</Countermeasures>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>true</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_HUNTER_MISSILE</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>40</Rate>
+        <Accuracy>40</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <CombatAttributes>
+          <CombatAttribute Enable="false">BF_CanDoDriveBys</CombatAttribute>
+        </CombatAttributes>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_BURST_FIRE_PISTOL</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_HUNTER_MG</Weapon>
+		<WeaponOwner>SecondaryGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>200</Rate>
+        <Accuracy>60</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Tank">
+      <Model>Rhino</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_TANK</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>30</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SLOW_FIRE_TANK</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup />
+    </AI>
+    <AI Type="Tank">
+      <Model>Rhino2</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_TANK</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>1</WeaponIndex>
+        <Rate>30</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SLOW_FIRE_TANK</FiringPattern>
+      </PrimaryWeaponSetup>
+	  <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_RHINO_MG</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>800</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>true</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </SecondaryWeaponSetup>
+	  <!-- <TertiaryWeaponSetup> -->
+        <!-- <Weapon>VEHICLE_WEAPON_RHINO_GL</Weapon> -->
+		<!-- <WeaponOwner>PilotGunner</WeaponOwner> -->
+		<!-- <WeaponIndex>2</WeaponIndex> -->
+        <!-- <Rate>25</Rate> -->
+        <!-- <Accuracy>70</Accuracy> -->
+		<!-- <Restrictions> -->
+          <!-- <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget> -->
+		  <!-- <DisallowShootOnVehicleTarget>true</DisallowShootOnVehicleTarget> -->
+          <!-- <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower> -->
+          <!-- <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance> -->
+        <!-- </Restrictions> -->
+        <!-- <SeeingRange>100</SeeingRange> -->
+        <!-- <FiringPattern>FIRING_PATTERN_SINGLE_SHOT</FiringPattern> -->
+      <!-- </TertiaryWeaponSetup> -->
+    </AI>
+    <AI Type="APC">
+      <Model>apc</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_APC_CANNON</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>25</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup />
+	  <ModkitWeaponOverride>
+		<Modkit ModType="10" Mod="0"/>
+		<PrimaryWeaponSetup>
+			<Weapon>VEHICLE_WEAPON_APC_MISSILE</Weapon>
+			<WeaponOwner>PilotGunner</WeaponOwner>
+			<WeaponIndex>1</WeaponIndex>
+			<Rate>20</Rate>
+			<Accuracy>70</Accuracy>	
+			<Restrictions>
+				<DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+				<DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+				<DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+				<EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+			</Restrictions>
+			<SeeingRange>200</SeeingRange>
+			<FiringPattern>FIRING_PATTERN_SHORT_BURSTS</FiringPattern>
+		</PrimaryWeaponSetup>
+	  </ModkitWeaponOverride>
+    </AI>
+    <AI Type="Tank">
+      <Model>Khanjali</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_KHANJALI_CANNON</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>30</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SLOW_FIRE_TANK</FiringPattern>
+      </PrimaryWeaponSetup>
+	  <SecondaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_KHANJALI_MG</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>2</WeaponIndex>
+        <Rate>800</Rate>
+        <Accuracy>70</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>false</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>true</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>false</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_FULL_AUTO</FiringPattern>
+      </SecondaryWeaponSetup>
+    </AI>
+    <AI Type="Sub">
+      <Model>cgsub</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+    <AI Type="SubArmed">
+      <Model>cgsub2</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>10000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>2</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>6</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup>
+        <Weapon>VEHICLE_WEAPON_CGSUB_TORPEDO</Weapon>
+		<WeaponOwner>PilotGunner</WeaponOwner>
+		<WeaponIndex>0</WeaponIndex>
+        <Rate>20</Rate>
+        <Accuracy>75</Accuracy>
+		<Restrictions>
+          <DisallowShootOnFootTarget>true</DisallowShootOnFootTarget>
+		  <DisallowShootOnVehicleTarget>false</DisallowShootOnVehicleTarget>
+          <DisallowShootAtThisWantedLevelAndLower>3</DisallowShootAtThisWantedLevelAndLower>
+          <EnhancedFriendlyFireAvoidance>true</EnhancedFriendlyFireAvoidance>
+        </Restrictions>
+        <SeeingRange>100</SeeingRange>
+        <FiringPattern>FIRING_PATTERN_SINGLE_SHOT</FiringPattern>
+      </PrimaryWeaponSetup>
+      <SecondaryWeaponSetup />
+    </AI>
+	<AI Type="Boat">
+      <Model>patrolboat</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+	<AI Type="Boat">
+      <Model>predator</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+	<AI Type="Boat">
+      <Model>cgpredator</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+	<AI Type="Boat">
+      <Model>sheriffpredator</Model>
+      <CooldownRate>1000</CooldownRate>
+      <ShootRate>1000</ShootRate>
+	  <SearchRadius>150</SearchRadius>
+      <PilotGunner>true</PilotGunner>
+      <SecondaryGunner>false</SecondaryGunner>
+	  <FleesAtThisWantedLevelAndLower>0</FleesAtThisWantedLevelAndLower>
+	  <DontFleeAtThisWantedLevelAndHigher>1</DontFleeAtThisWantedLevelAndHigher>
+	  <DontFleeInResponseZones />
+      <PrimaryWeaponSetup />
+      <SecondaryWeaponSetup />
+    </AI>
+  </VehicleAI>
+</SixStarResponse>

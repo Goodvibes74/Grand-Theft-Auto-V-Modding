@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SixStarResponse>
+  <ResponseDispatchLocations>
+		<Location>
+			<Name>City</Name>
+			<Variables>
+				<Var Name="$LocalCop" Value="LSPD_COP" />
+				<Var Name="$LocalFire" Value="FIRETRUCK" />
+				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
+				<Var Name="$LocalCarRoadblock" Value="LSPD_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="LSPD_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedAgentCarRoadblock" Value="FIB_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentSpikeRoadblock" Value="FIB_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="NOOSE_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="NOOSE_ROAD_BLOCK_SPIKES" />
+				<Var Name="$ArmyCarRoadblock" Value="ARMY_ROAD_BLOCK_CARS" />
+				<Var Name="$ArmySpikeRoadblock" Value="ARMY_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="LSPD_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="LSPD_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="LSPD_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
+				<Var Name="$FibGunHeli" Value="FIB_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="FIB_Gunner_Heli_Vest" />
+				<Var Name="$NooseGunHeli" Value="NOOSE_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="NOOSE_Gunner_Heli_Vest" />
+				<Var Name="$FibSwatHeli" Value="FIB_Swat_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="FIB_Swat_Heli_Vest" />
+				<Var Name="$NooseSwatHeli" Value="NOOSE_Swat_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="NOOSE_Swat_Heli_Vest" />
+				<Var Name="$ArmyGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$ArmySwatHeli" Value="Army_Swat_Heli" />
+			</Variables>
+			<Emergency>
+				<Police>
+					<Group Multi="1">$LocalCop</Group>
+				</Police>
+				<Firetruck>
+					<Group Multi="1">$LocalFire</Group>
+				</Firetruck>
+				<Ambulance>
+					<Group Multi="1">$LocalAmbulance</Group>
+				</Ambulance>
+			</Emergency>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$LocalCarRoadblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$LocalCarRoadblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$LocalCarRoadblock</Group>
+						<Group>$LocalSpikeRoadblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$LocalCarRoadblock</Group>
+						<Group>$LocalSpikeRoadblock</Group>
+						<Group>$LocalSwatCarRoadblock</Group>
+						<Group>$LocalSwatSpikeRoadblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$LocalSwatCarRoadblock</Group>
+						<Group>$LocalSwatSpikeRoadblock</Group>
+						<Group>$FedAgentCarRoadblock</Group>
+						<Group>$FedAgentSpikeRoadblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FedAgentCarRoadblock</Group>
+						<Group>$FedAgentSpikeRoadblock</Group>
+						<Group>$FedSwatCarRoadblock</Group>
+						<Group>$FedSwatSpikeRoadblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FedSwatCarRoadblock</Group>
+						<Group>$FedSwatSpikeRoadblock</Group>
+						<Group>$ArmyCarRoadblock</Group>
+						<Group>$ArmySpikeRoadblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyCarRoadblock</Group>
+						<Group>$ArmySpikeRoadblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyCarRoadblock</Group>
+						<Group>$ArmySpikeRoadblock</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyCarRoadblock</Group>
+						<Group>$ArmySpikeRoadblock</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$LocalGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$LocalGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$LocalGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$LocalGunHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$LocalGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+			<RappelHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$LocalSwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$LocalSwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$LocalSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$LocalSwatHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</RappelHeli>
+		</Location>
+        <Location>
+            <Name>LSCounty</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="LSSD_COP" />
+				<Var Name="$LocalCarRoadblock" Value="LSSD_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="LSSD_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="LSSD_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="LSSD_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="FIB_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="FIB_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="LSSD_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="LSSD_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="LSSD_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="LSSD_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>LSCounty_Rural</Name>
+            <Parent>LSCounty</Parent>
+        </Location>
+        <Location>
+            <Name>BlaineCounty</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="BCSO_COP" />
+				<Var Name="$LocalCarRoadblock" Value="BCSO_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="BCSO_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="BCSO_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="BCSO_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="BCSO_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="BCSO_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="BCSO_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="BCSO_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>PortAuthority</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="PAP_COP" />
+				<Var Name="$LocalCarRoadblock" Value="PAP_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="PAP_ROAD_BLOCK_SPIKES" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Prison</Name>
+            <Parent>Highway</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="SADCR_COP" />
+				<Var Name="$LocalCarRoadblock" Value="SADCR_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="SADCR_ROAD_BLOCK_SPIKES" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Airport</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="PIA_COP" />
+				<Var Name="$LocalCarRoadblock" Value="PIA_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="PIA_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="NOOSE_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="NOOSE_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="NOOSE_Gunner_Heli_Light" />
+				<Var Name="$LocalGunHeliVest" Value="NOOSE_Gunner_Heli_Light" />
+				<Var Name="$LocalSwatHeli" Value="NOOSE_SWAT_Heli_Light" />
+				<Var Name="$LocalSwatHeliVest" Value="NOOSE_SWAT_Heli_Light" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>NooseHQ</Name>
+            <Parent>Airport</Parent>
+        </Location>
+        <Location>
+            <Name>PillboxHill</Name>
+            <Parent>Airport</Parent>
+            <Variables>
+				<Var Name="$LocalSwatCarRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="FIB_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="FIB_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="LSPD_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="LSPD_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="LSPD_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Highway</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="SAHP_Cop" />
+				<Var Name="$LocalCarRoadblock" Value="SAHP_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="SAHP_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="SAHP_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="SAHP_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="SAHP_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="SAHP_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="SAHP_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="SAHP_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>FortZancudo</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="USAF_COP" />
+				<Var Name="$LocalCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedAgentCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="Army_Gunner_Heli" />
+				<Var Name="$LocalSwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="Army_SWAT_Heli" />
+				<Var Name="$FibGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="Army_Gunner_Heli" />
+				<Var Name="$NooseGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="Army_Gunner_Heli" />
+				<Var Name="$FibSwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="Army_SWAT_Heli" />
+				<Var Name="$NooseSwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="Army_SWAT_Heli" />
+				<Var Name="$ArmyGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$ArmySwatHeli" Value="Army_SWAT_Heli" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>NorthernWilderness</Name>
+            <Parent>BlaineCounty</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="SASPR_COP" />
+				<Var Name="$LocalCarRoadblock" Value="SASPR_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="SASPR_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="MARSHAL_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="MARSHAL_ROAD_BLOCK_SPIKES" />
+				<Var Name="$NooseGunHeli" Value="Marshal_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="Marshal_Gunner_Heli" />
+				<Var Name="$NooseSwatHeli" Value="Marshal_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="Marshal_SWAT_Heli" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>SouthernWilderness</Name>
+            <Parent>Highway</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="SASPR_COP" />
+				<Var Name="$LocalCarRoadblock" Value="SASPR_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="SASPR_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="MARSHAL_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="MARSHAL_ROAD_BLOCK_SPIKES" />
+				<Var Name="$NooseGunHeli" Value="Marshal_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="Marshal_Gunner_Heli" />
+				<Var Name="$NooseSwatHeli" Value="Marshal_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="Marshal_SWAT_Heli" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Mt_Chiliad</Name>
+            <Parent>NorthernWilderness</Parent>
+        </Location>
+        <Location>
+            <Name>Merryweather</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="MW_COP" />
+				<Var Name="$LocalCarRoadblock" Value="MERRYWEATHER_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="MERRYWEATHER_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedAgentCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$ArmyCarRoadblock" Value="MERRYWEATHER_ELITE_ROAD_BLOCK_CARS" />
+				<Var Name="$ArmySpikeRoadblock" Value="MERRYWEATHER_ELITE_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="MW_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="MW_Gunner_Heli" />
+				<Var Name="$LocalSwatHeli" Value="MW_SWAT_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="MW_SWAT_Heli" />
+				<Var Name="$FibGunHeli" Value="MW_Elite_Heli" />
+				<Var Name="$FibGunHeliVest" Value="MW_Elite_Heli" />
+				<Var Name="$NooseGunHeli" Value="MW_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="MW_Gunner_Heli" />
+				<Var Name="$FibSwatHeli" Value="MW_SWAT_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="MW_SWAT_Heli" />
+				<Var Name="$NooseSwatHeli" Value="MW_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="MW_SWAT_Heli" />
+				<Var Name="$ArmyGunHeli" Value="MW_Elite_Heli" />
+				<Var Name="$ArmySwatHeli" Value="MW_SWAT_Heli" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>HumaneLabs</Name>
+            <Parent>Merryweather</Parent>
+        </Location>
+		<Location>
+			<Name>Ocean</Name>
+			<Variables>
+				<Var Name="$LocalCop" Value="USCG_COP" />
+				<Var Name="$LocalFire" Value="FIRETRUCK" />
+				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
+				<Var Name="$LocalGunHeli" Value="USCG_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="USCG_Gunner_Heli_Vest" />
+				<Var Name="$LocalGunHeliVestHeavy" Value="USCG_Gunner_Heli_Vest_Heavy" />
+				<Var Name="$LocalSwatHeli" Value="USCG_SWAT_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="USCG_SWAT_Heli_Vest" />
+			</Variables>
+			<Emergency>
+				<Police>
+					<Group Multi="1">$LocalCop</Group>
+				</Police>
+				<Firetruck>
+					<Group Multi="1">$LocalFire</Group>
+				</Firetruck>
+				<Ambulance>
+					<Group Multi="1">$LocalAmbulance</Group>
+				</Ambulance>
+			</Emergency>
+			<Roadblock />
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$LocalGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$LocalGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$LocalGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$LocalGunHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$LocalGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$LocalGunHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$LocalGunHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$LocalGunHeliVestHeavy</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$LocalGunHeliVestHeavy</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$LocalGunHeliVestHeavy</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+			<RappelHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$LocalSwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$LocalSwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$LocalSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$LocalSwatHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$LocalSwatHeliVest</Group>
+					</TenStar>
+				</ResponseClass>
+			</RappelHeli>
+		</Location>
+        <Location>
+            <Name>Alamo</Name>
+            <Parent>BlaineCounty</Parent>
+        </Location>
+        <Location>
+            <Name>PortAuthority_Water</Name>
+            <Parent>City</Parent>
+        </Location>
+        <Location>
+            <Name>NorthYankton</Name>
+            <Parent>BlaineCounty</Parent>
+            <Variables>
+				<Var Name="$LocalCop" Value="NYSP_COP" />
+				<Var Name="$LocalCarRoadblock" Value="NYSP_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="NYSP_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedAgentCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$FedSwatCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="NYSP_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="NYSP_Gunner_Heli" />
+				<Var Name="$LocalSwatHeli" Value="NYSP_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="NYSP_Swat_Heli" />
+				<Var Name="$FibGunHeli" Value="NYSP_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="NYSP_Gunner_Heli" />
+				<Var Name="$NooseGunHeli" Value="NYSP_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="NYSP_Gunner_Heli" />
+				<Var Name="$FibSwatHeli" Value="NYSP_Swat_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="NYSP_Swat_Heli" />
+				<Var Name="$NooseSwatHeli" Value="NYSP_Swat_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="NYSP_Swat_Heli" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>CayoPerico</Name>
+            <Parent>Merryweather</Parent>
+        </Location>
+        <Location>
+            <Name>Null</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="NULLERS" />
+				<Var Name="$LocalFire" Value="FIRETRUCK" />
+				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
+				<Var Name="$LocalCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$FedAgentSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$FedSwatSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$ArmyCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$ArmySpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalGunHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$LocalSwatHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$FibGunHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$NooseGunHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$FibSwatHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$NooseSwatHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$ArmyGunHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$ArmySwatHeli" Value="NULLERS_Gunner_Heli" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>LibertyCity</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="LCPD_COP" />
+				<Var Name="$LocalFire" Value="LCFIRETRUCK" />
+				<Var Name="$LocalAmbulance" Value="LCAMBULANCE" />
+				<Var Name="$LocalCarRoadblock" Value="LCPD_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSpikeRoadblock" Value="LCPD_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalSwatCarRoadblock" Value="FIB_ROAD_BLOCK_CARS" />
+				<Var Name="$LocalSwatSpikeRoadblock" Value="FIB_ROAD_BLOCK_SPIKES" />
+				<Var Name="$LocalGunHeli" Value="FIB_Gunner_Heli" />
+				<Var Name="$LocalGunHeliVest" Value="FIB_Gunner_Heli_Vest" />
+				<Var Name="$LocalSwatHeli" Value="FIB_Swat_Heli" />
+				<Var Name="$LocalSwatHeliVest" Value="FIB_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+  </ResponseDispatchLocations>
+  </SixStarResponse>

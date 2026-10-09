@@ -1,0 +1,3920 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- RDE | LAST MODIFIED 07/30/2017 -->
+<!--
+This is the Response Vehicles XML file. You may edit this at your own risk to add or modify existing response vehicles.
+<Vehicle MonitorAmbient="false"> 				Hide if empty will remove any blips on the vehicle if there are no passengers. MonitorAmbient will increase the spawned in passengers of ambient vehicle spawns
+      <Tag>Name of the vehicle for INI use</Tag>					
+      <Model>Model Name of the vehicle</Model>					
+	  <ForceSirenHash>policevehsirens</ForceSirenHash> 				Force sirens onto vehicle, used for boats to allow sirens but can be used on any vehicle to change siren type or add custom siren.
+	  <RandomColorVariation>true</RandomColorVariation>    			Apply a random color variation (from carvariations.meta) upon spawning this vehicle. By default all vehicles have this set to true.
+	  <ColorVariations>												Apply a color variation (from carvariations.meta) randomly chosen between the indexes defined here.
+		<Variation>0</Variation>					
+		<Variation>...</Variation>					
+	  </ColorVariations>					
+	  <VehicleColorSets>											Apply a vehicle color set randomly chosen between the ones defined here. 
+		<ColorSet>													
+		  <PrimaryColorIndex>0</PrimaryColorIndex>					Use any color index found here https://pastebin.com/WFxktRG5
+		  <SecondaryColorIndex />									Secondary color will copy the primary color if no color is defined
+		  <PearlescentColorIndex />									Only works on metallic colors
+		  <TrimColorIndex />					
+		  <RimColorIndex />					
+		</ColorSet>					
+		<ColorSet>...</ColorSet>					
+	  </VehicleColorSets>					
+	  <CustomColorSets>												Apply a custom ARGB color set randomly chosen between the ones defined here.
+		<ColorSet>
+		  <PrimaryARGBColor>255,163,140,108</PrimaryARGBColor>		
+		  <SecondaryARGBColor />									Secondary color will copy the primary color if no color is defined
+		</ColorSet>
+		<ColorSet>...</ColorSet>
+	  </CustomColorSets>					
+	  <RandomLivery>true</RandomLivery>								Apply a random livery upon spawning this vehicle. By default all vehicles have this set to true.
+	  <VehicleLiveries>												Apply a livery randomly chosen between the ones defined here.
+		<Livery>0</Livery>											
+		<Livery Variation="0">1</Livery>							Apply this livery only if the vehicle is using the color variation index specified.
+		<Livery>...</Livery>					
+	  </VehicleLiveries>					
+	  <LicensePlateIndex />					
+	  <Type>														Set this to match the type of vehicle (choose from Ground, Air, or Water)</Type>
+      <BlipInfo>					
+        <Sprite>PoliceCarDot</Sprite> 								Blip icon to use. Available icons listed below.
+		<Color>Red</Color> 											Color of the Blip. Available colors listed below.
+		<Color2>Blue</Color2>										Secondary color of the Blip (used when flash is set to true). Available colors listed below.
+		<Flash>true</Flash>											Set whether this blip should flash using the two colors specified above.
+		<Rotate>false</Rotate>										Set rotate to true to have the blip rotate while it's being driven (to face the direction of the vehicle itself).
+        <Text>Police</Text> 										Text to show on the Map Legend (Show on legend must be set to true for you to see it).
+		<Size>0.4</Size>											Set the size of the blip.
+		<Alpha>255</Alpha>											Set the transparency of the blip (255 = fully visible, 0 = fully invisible).
+		<ShowOnLegend>true</ShowOnLegend>							Set whether this blip should show in the Map Legend.
+      </BlipInfo>					
+	  <Extras>														Use this to enable extras for the vehicle
+		<Extra>0</Extra>					
+		<Extra>...</Extra>					
+	  </Extras>					
+	  <Modkits>														Use this to set ModTypes and Mods. https://pastebin.com/qRLiBDn1
+		<Modkit ModType="" Mod="" />					
+		<Modkit ... />					
+	  </Modkits>					
+	  <ModkitColorSets>												Apply a modkit color randomly chosen between the ones defined here.
+		<ColorSet>			
+		  <PrimaryColor PaintType="" ColorIndex="" PearlescentIndex="" />	
+		  <SecondaryColor PaintType="" ColorIndex="" />			
+		</ColorSet>			
+		<ColorSet>...</ColorSet>			
+	  </ModkitColorSets>			
+      <Passengers />												How many passengers to spawn in this vehicle (includes driver)</Passengers>
+      <GunnerSeats>													Use this to set the parameters of vehicle mounted gunners.
+		<GunnerSeat>5</GunnerSeat>
+        <GunnerSeat>6</GunnerSeat>
+		<GunnerSeat>...</GunnerSeat>
+        <GunnerAccuracy />											This will only affect mounted gunners spawned in roadblocks. (0 - 100)
+        <GunnerShootRate />											This will only affect mounted gunners spawned in roadblocks. (0 - 1000)
+        <GunnerFiringPattern />										http://pastebin.com/Px036isB
+	  </GunnerSeats>
+      <Peds>								
+        <Ped Multi="1"  Seat="">Marine</Ped> 						This is where you define the peds that should spawn in this vehicle. Set the Seat Variable to force this ped to spawn on a specific seat (-1 is driver seat). Multi increase the chance this ped is used.
+      </Peds> 														You can put as many peds as you want. (more than the vehicle can handle will just stop spawning after the car is full)
+	  <DespawnDistance />											How far the vehicle can get before being despawned
+      <InitialSpeed />												How fast the vehicle is moving when spawned
+      <PopEdit>false</PopEdit>                						Set this to true if you want naturally spawned versions of these vehicles (popcycle) to add more peds to the vehicle
+ </Vehicle>
+ -->
+<SixStarResponse>
+  <VehicleInfo>
+    <!-- SA National Guard -->
+	<Vehicle MonitorAmbient="false">
+      <Tag>MilitaryParatroopers</Tag>
+      <Model>cargobob</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Paratroopers</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Army_Pilot</Ped>
+      </Peds>
+	  <ParatrooperPeds>
+        <Ped Multi="1">MarineParatrooper</Ped>
+      </ParatrooperPeds>
+	  <ParatrooperAmount>6</ParatrooperAmount>
+	  <ParachuteTintIndex>6</ParachuteTintIndex>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Annihilator</Tag>
+      <Model>annihilator</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>false</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text /></BlipInfo>
+      <Passengers>6</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Army_Pilot</Ped>
+		<Ped Multi="1"  Seat="0">Army_Pilot</Ped>	
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>    
+    <Vehicle MonitorAmbient="true">
+      <Tag>ArmyAnnihilator</Tag>
+      <Model>armyannihilator</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>false</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text /></BlipInfo>
+      <Passengers>6</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Army_Pilot</Ped>
+		<Ped Multi="1"  Seat="0">Army_Pilot</Ped>	
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>    
+    <Vehicle MonitorAmbient="true">
+      <Tag>ArmyAnnihilator2</Tag>
+      <Model>armyannihilator2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Armed Annihilator</Text></BlipInfo>
+      <Passengers>6</Passengers>
+      <GunnerSeats>
+        <GunnerSeat>5</GunnerSeat>
+        <GunnerSeat>6</GunnerSeat>
+        <GunnerAccuracy>10</GunnerAccuracy>
+        <GunnerShootRate>2000</GunnerShootRate>
+        <GunnerFiringPattern>FIRING_PATTERN_FULL_AUTO</GunnerFiringPattern>
+      </GunnerSeats>
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Army_Pilot</Ped>
+		<Ped Multi="1"  Seat="0">Army_Pilot</Ped>
+        <Ped Multi="1"  Seat="5">Army_Pilot</Ped>
+		<Ped Multi="1"  Seat="6">Army_Pilot</Ped>		
+		<Ped Multi="1"  Seat="1">MarineCarbine</Ped>
+		<Ped Multi="1"  Seat="2">MarineCarbine</Ped>		
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USAFSquaddieUnarmed</Tag>
+      <Model>squaddie3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USAFSF_Heavy</Ped>		  	  
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>	
+    <Vehicle MonitorAmbient="true">
+      <Tag>USAFSquaddieArmed</Tag>
+      <Model>squaddie2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <GunnerBlipInfo><ShowOnLegend>true</ShowOnLegend><Rotate>true</Rotate><Sprite>GunCar</Sprite><Text>Armed Squaddie</Text></GunnerBlipInfo>
+      <Passengers>5</Passengers>
+      <GunnerSeats>
+        <GunnerSeat>3</GunnerSeat>
+        <GunnerAccuracy>90</GunnerAccuracy>
+        <GunnerShootRate>800</GunnerShootRate>
+        <GunnerFiringPattern>FIRING_PATTERN_FULL_AUTO</GunnerFiringPattern>
+      </GunnerSeats>
+      <Peds> 	  
+        <Ped Multi="1"  Seat="">USAFSF_Heavy</Ped>		  	
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>	
+    <Vehicle MonitorAmbient="true">
+      <Tag>SquaddieUnarmed</Tag>
+      <Model>squaddie3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="0">MarineTeamLeader</Ped>
+        <Ped Multi="1"  Seat="1">MarineSquadLeader</Ped>	  
+        <Ped Multi="1"  Seat="2">MarineMG</Ped>	  		  	  
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>SquaddieArmed</Tag>
+      <Model>squaddie2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <GunnerBlipInfo><ShowOnLegend>true</ShowOnLegend><Rotate>true</Rotate><Sprite>GunCar</Sprite><Text>Armed Squaddie</Text></GunnerBlipInfo>
+      <Passengers>5</Passengers>
+      <GunnerSeats>
+        <GunnerSeat>3</GunnerSeat>
+        <GunnerAccuracy>90</GunnerAccuracy>
+        <GunnerShootRate>800</GunnerShootRate>
+        <GunnerFiringPattern>FIRING_PATTERN_FULL_AUTO</GunnerFiringPattern>
+      </GunnerSeats>
+      <Peds> 	  
+        <Ped Multi="1"  Seat="-1">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="0">MarineTeamLeader</Ped>
+        <Ped Multi="1"  Seat="1">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="2">MarineMG</Ped>	
+        <Ped Multi="1"  Seat="3">MarineCarbine</Ped>	  	
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SquaddieJuggernaut</Tag>
+      <Model>squaddie3</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Text>Juggernaut</Text></BlipInfo>
+      <Extras />      
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">MarineCarbine</Ped>
+        <Ped Multi="1"  Seat="0">MarineSquadLeader</Ped>
+        <Ped Multi="1"  Seat="1">Military_Juggernaut_Regular</Ped>
+        <Ped Multi="1"  Seat="2">Military_Juggernaut_Regular</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Lazer</Tag>
+      <Model>Lazer</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Jet</Sprite><Text>Lazer</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FighterPilot</Ped>
+      </Peds>
+      <DespawnDistance>1000</DespawnDistance>
+      <InitialSpeed>80</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Hydra</Tag>
+      <Model>Hydra</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Jet</Sprite><Text>Hydra</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FighterPilot</Ped>
+      </Peds>
+      <DespawnDistance>1000</DespawnDistance>
+      <InitialSpeed>80</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Strikeforce</Tag>
+      <Model>Strikeforce</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Air</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Jet</Sprite><Text>Strikeforce</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FighterPilot</Ped>
+      </Peds>
+      <DespawnDistance>1000</DespawnDistance>
+      <InitialSpeed>80</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Rhino</Tag>
+      <Model>Rhino2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Tank</Sprite><Text>Rhino</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Marine</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>RhinoVanilla</Tag>
+      <Model>Rhino</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Tank</Sprite><Text>Rhino</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Marine</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>APC</Tag>
+      <Model>apc</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Ground</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>APC</Sprite><Text>APC</Text></BlipInfo>
+	  <Modkits />
+	  <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Marine</Ped>
+        <Ped Multi="1"  Seat="1">Marine</Ped>
+        <Ped Multi="1"  Seat="2">Marine</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>APC2</Tag>
+      <Model>apc</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Ground</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>APC</Sprite><Text>AA APC</Text></BlipInfo>
+	  <Modkits>
+		<Modkit ModType="10" Mod="0"/>
+	  </Modkits>
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Marine</Ped>
+        <Ped Multi="1"  Seat="1">Marine</Ped>
+        <Ped Multi="1"  Seat="2">Marine</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Savage</Tag>
+      <Model>Savage</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Savage</Text></BlipInfo>
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Army_Pilot</Ped>
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Buzzard</Tag>
+      <Model>Buzzard</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Buzzard</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Army_Pilot</Ped>
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Valkyrie</Tag>
+      <Model>Valkyrie</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Valkyrie</Text></BlipInfo>
+      <Passengers>8</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Army_Pilot</Ped>
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Hunter</Tag>
+      <Model>Hunter</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Hunter</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Army_Pilot</Ped>
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Barracks3</Tag>
+      <Model>Barracks3</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>750</Sprite><Text>Barracks</Text></BlipInfo>
+      <Passengers>10</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="0">MarineSquadLeader</Ped>
+        <Ped Multi="1"  Seat="1">MarineTeamLeader</Ped>	
+		<Ped Multi="1"  Seat="2">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="3">MarineMG</Ped>	
+        <Ped Multi="1"  Seat="4">MarineCarbine</Ped>
+        <Ped Multi="1"  Seat="5">MarineTeamLeader</Ped>	
+		<Ped Multi="1"  Seat="6">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="7">MarineMG</Ped>	
+        <Ped Multi="1"  Seat="8">MarineCarbine</Ped>	  	
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USAFCar</Tag>
+      <Model>usafmerit</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USAFSF</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USAFCar_3star</Tag>
+      <Model>usafmerit</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USAFSF_Heavy</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Crusader</Tag>
+      <Model>crusader</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">MarineCarbine</Ped>	  
+        <Ped Multi="1"  Seat="0">MarineTeamLeader</Ped>
+        <Ped Multi="1"  Seat="1">MarineSquadLeader</Ped>	  
+        <Ped Multi="1"  Seat="2">MarineMG</Ped>	  		  	  
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- Merryweather-->
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCar</Tag>
+      <Model>security</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+       <Ped Multi="1"  Seat="">MERRYWEATHER_SECURITY</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCar2</Tag>
+      <Model>security2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+	  <VehicleLiveries>
+		<Livery Variation="0">0</Livery>
+		<Livery Variation="1">1</Livery>
+	  </VehicleLiveries>
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+       <Ped Multi="1"  Seat="">MERRYWEATHER_SECURITY</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCar3</Tag>
+      <Model>security3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+       <Ped Multi="1"  Seat="">MERRYWEATHER_SECURITY</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarResponse</Tag>
+      <Model>security4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+	  <VehicleLiveries>
+		<Livery Variation="0">0</Livery>
+		<Livery Variation="1">1</Livery>
+		<Livery Variation="2">2</Livery>
+		<Livery Variation="3">3</Livery>
+	  </VehicleLiveries>
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_RESPONSE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarResponse2</Tag>
+      <Model>securitynightshark</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_RESPONSE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite</Tag>
+      <Model>contender</Model>
+      <CustomColorSets />
+	  <VehicleColorSets>
+		<ColorSet>
+		  <PrimaryColorIndex>12</PrimaryColorIndex>
+		</ColorSet>
+	  </VehicleColorSets>
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite2</Tag>
+      <Model>mesa3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite3</Tag>
+      <Model>rumpo3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite4</Tag>
+      <Model>dune3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite5</Tag>
+      <Model>enduro</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE_BIKER</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE_BIKER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherCarElite6</Tag>
+      <Model>caracara</Model>
+      <CustomColorSets />
+      <VehicleColorSets>
+		<ColorSet>
+		  <PrimaryColorIndex>12</PrimaryColorIndex>
+		</ColorSet>
+	  </VehicleColorSets>
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Ground</Type>
+      <GunnerBlipInfo><ShowOnLegend>true</ShowOnLegend><Rotate>true</Rotate><Sprite>Barrage</Sprite><Text>Caracara</Text></GunnerBlipInfo>
+	  <Modkits>
+		<Modkit ModType="10" Mod="0"/>
+	  </Modkits>
+      <Passengers>5</Passengers>
+      <GunnerSeats>
+        <GunnerSeat>3</GunnerSeat>
+        <GunnerAccuracy>90</GunnerAccuracy>
+        <GunnerShootRate>800</GunnerShootRate>
+        <GunnerFiringPattern>FIRING_PATTERN_FULL_AUTO</GunnerFiringPattern>
+      </GunnerSeats>
+      <Peds>
+        <Ped Multi="3"  Seat="">MERRYWEATHER_ELITE</Ped>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>MerryweatherJuggernaut</Tag>
+      <Model>securitynightshark</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Text>Juggernaut</Text></BlipInfo>
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">MERRYWEATHER_RESPONSE</Ped>
+        <Ped Multi="1" Seat="0">MERRYWEATHER_RESPONSE</Ped>
+        <Ped Multi="1" Seat="1">Merryweather_Juggernaut_Regular</Ped>
+        <Ped Multi="1" Seat="2">Merryweather_Juggernaut_Regular</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SecurityParatroopers</Tag>
+      <Model>securityvalkyrie2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><Sprite>HelicopterAnimated</Sprite><Text>Paratroopers</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Merryweather_Response_Pilot</Ped>
+      </Peds>
+	  <ParatrooperPeds>
+        <Ped Multi="1">MERRYWEATHER_COVERT</Ped>
+      </ParatrooperPeds>
+	  <ParatrooperAmount>6</ParatrooperAmount>
+	  <ParachuteTintIndex>3</ParachuteTintIndex>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>MerryweatherValkyrie</Tag>
+      <Model>securityvalkyrie</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Armed Valkyrie</Text></BlipInfo>
+      <Passengers>3</Passengers>
+      <GunnerSeats>
+        <GunnerSeat>1</GunnerSeat>
+        <GunnerSeat>2</GunnerSeat>
+        <GunnerAccuracy>10</GunnerAccuracy>
+        <GunnerShootRate>2000</GunnerShootRate>
+        <GunnerFiringPattern>FIRING_PATTERN_FULL_AUTO</GunnerFiringPattern>
+      </GunnerSeats>
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Merryweather_Response_Pilot</Ped>
+        <Ped Multi="1"  Seat="1">Merryweather_Heli_Carbine</Ped>
+		<Ped Multi="1"  Seat="2">Merryweather_Heli_Carbine</Ped>				
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>Khanjali</Tag>
+      <Model>Khanjali</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+	  <RandomLivery>false</RandomLivery>
+      <Type>Ground</Type>
+      <BlipInfo><Rotate>true</Rotate><ShowOnLegend>true</ShowOnLegend><Sprite>Tank</Sprite><Text>Khanjali</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>MerryweatherBuzzard</Tag>
+      <Model>Buzzard</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Air</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Sprite>HelicopterAnimated</Sprite><Text>Buzzard</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">MERRYWEATHER_ELITE_PILOT</Ped>
+      </Peds>
+      <DespawnDistance>500</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- NOOSE -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar</Tag>
+      <Model>Noose</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar2</Tag>
+      <Model>Noose2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar3</Tag>
+      <Model>Noose3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar4</Tag>
+      <Model>Noose4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar5</Tag>
+      <Model>Noose5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar_3star</Tag>
+      <Model>Noose</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar2_3star</Tag>
+      <Model>Noose2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar3_3star</Tag>
+      <Model>Noose3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar4_3star</Tag>
+      <Model>Noose4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIACar5_3star</Tag>
+      <Model>Noose5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIADetectiveCar</Tag>
+      <Model>fbi</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_DETECTIVE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIADetectiveCar2</Tag>
+      <Model>fbi2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_DETECTIVE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIADetectiveCar_3star</Tag>
+      <Model>fbi</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_DETECTIVE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PIADetectiveCar2_3star</Tag>
+      <Model>fbi2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NOOSE_PIA_DETECTIVE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseCenturion</Tag>
+      <Model>noosecenturion</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseInsurgent</Tag>
+      <Model>NooseInsurgent</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseRiot</Tag>
+      <Model>nooseriot</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseRiotJuggernaut</Tag>
+      <Model>nooseriot</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Text>Juggernaut</Text></BlipInfo>
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose_Heavy</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseRiotJuggernautHeavy</Tag>
+      <Model>nooseriot</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Text>Juggernaut</Text></BlipInfo>
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Noose</Ped>
+        <Ped Multi="1" Seat="0">Noose</Ped>
+        <Ped Multi="1" Seat="1">Noose_Juggernaut_Regular</Ped>
+        <Ped Multi="1" Seat="2">Noose_Juggernaut_CQC</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseUnmarked</Tag>
+      <Model>nooset2</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NooseUnmarked2</Tag>
+      <Model>nooset</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>NooseMarine</Tag>
+      <Model>noosepredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens4</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">Noose</Ped>
+		<Ped Multi="1"  Seat="1">Noose</Ped>
+		<Ped Multi="1"  Seat="2">Noose</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- FIB -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBCenturion</Tag>
+      <Model>fbicenturion</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBUnmarked</Tag>
+      <Model>FBI2Old</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SWAT</Ped>
+        <Ped Multi="1"  Seat="3">FIB_SWAT</Ped>
+        <Ped Multi="1"  Seat="4">FIB_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBUnmarked2</Tag>
+      <Model>fbit2</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SWAT</Ped>
+        <Ped Multi="1"  Seat="3">FIB_SWAT</Ped>
+        <Ped Multi="1"  Seat="4">FIB_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBCar</Tag>
+      <Model>fbi</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBCar2</Tag>
+      <Model>FBI2</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBCar3</Tag>
+      <Model>fbi3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SUIT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBClassic</Tag>
+      <Model>fbiold</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SUIT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBClassic2</Tag>
+      <Model>fbiold2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SUIT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBScum</Tag>
+      <Model>fbir</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBLux</Tag>
+      <Model>fbir2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SUIT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBUtility</Tag>
+      <Model>fbir3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBUtilityArmor</Tag>
+      <Model>fbir3a</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBScumUltra</Tag>
+      <Model>fbira</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">FIB_AGENT</Ped>
+        <Ped Multi="1"  Seat="">FIB_AGENT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>FIBLuxArmor</Tag>
+      <Model>fbir2a</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">FIB_SUIT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- LSPD -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar</Tag>
+      <Model>Police</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar2</Tag>
+      <Model>Police2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>	
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar3</Tag>
+      <Model>Police3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar4</Tag>
+      <Model>PoliceScout</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar_3star</Tag>
+      <Model>Police</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar2_3star</Tag>
+      <Model>Police2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+       <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar3_3star</Tag>
+      <Model>Police3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar4_3star</Tag>
+      <Model>PoliceScout</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCar_Pursuit</Tag>
+      <Model>PolicePursuit</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDVan</Tag>
+      <Model>Policet</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDDetectiveCar</Tag>
+      <Model>Police4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">LSPD_DETECTIVE</Ped>
+        <Ped Multi="2"  Seat="">LSPD_DETECTIVE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_DETECTIVE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDDetectiveCar2</Tag>
+      <Model>Police4b</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">LSPD_DETECTIVE</Ped>
+        <Ped Multi="2"  Seat="">LSPD_DETECTIVE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_DETECTIVE_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDSlicktop</Tag>
+      <Model>Policesl</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="4"  Seat="">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="">LSPD_SWAT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDExecutioner</Tag>
+      <Model>Policeexecutioner</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="4"  Seat="">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="">LSPD_SWAT_FEMALE</Ped>
+        <Ped Multi="4"  Seat="3">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="3">LSPD_SWAT_FEMALE</Ped>
+        <Ped Multi="4"  Seat="4">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="4">LSPD_SWAT_FEMALE</Ped>
+        <Ped Multi="4"  Seat="5">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="5">LSPD_SWAT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDRiot</Tag>
+      <Model>Riot</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="4"  Seat="">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="">LSPD_SWAT_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDCenturion</Tag>
+      <Model>policecenturion</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="4"  Seat="">LSPD_SWAT</Ped>
+        <Ped Multi="1"  Seat="">LSPD_SWAT_FEMALE</Ped>	
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDBike</Tag>
+      <Model>policesovereign</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_BIKER</Ped>
+        <Ped Multi="1"  Seat="">LSPD_BIKER_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSPDBike_3star</Tag>
+      <Model>policesovereign</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSPD_BIKER_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSPD_BIKER_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>LSPDK9Car</Tag>
+      <Model>policek9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@std_car</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSPD_K9HANDLER</Ped>
+        <Ped Multi="1"  Seat="2">LSPD_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>LSPDK9Car_3star</Tag>
+      <Model>policek9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@std_car</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSPD_K9HANDLER_VEST</Ped>
+        <Ped Multi="1"  Seat="2">LSPD_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- LSSD -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar</Tag>
+      <Model>LSSheriff</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar2</Tag>
+      <Model>LSSheriff2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar3</Tag>
+      <Model>LSSheriff3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar4</Tag>
+      <Model>LSSheriff5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar_3star</Tag>
+      <Model>LSSheriff</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar2_3star</Tag>
+      <Model>LSSheriff2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar3_3star</Tag>
+      <Model>LSSheriff3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar4_3star</Tag>
+      <Model>LSSheriff5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCar_Pursuit</Tag>
+      <Model>lssheriffpursuit</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDSlicktop_3star</Tag>
+      <Model>lssheriffsl</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDOffroad</Tag>
+      <Model>bpatrol</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_MALE_OFFROAD</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDOffroad2</Tag>
+      <Model>bpatrol2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_MALE_OFFROAD</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDDetectiveCar</Tag>
+      <Model>lssheriff4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_DETECTIVE_VEST_SHIRT_WHITE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_DETECTIVE_VEST_SHIRT_BLACK</Ped>
+        <Ped Multi="1"  Seat="">LSSD_DETECTIVE_VEST_SHIRT_ASIAN</Ped>
+        <Ped Multi="1"  Seat="">LSSD_DETECTIVE_VEST_DENIM</Ped>
+        <Ped Multi="1"  Seat="">LSSD_DETECTIVE_VEST_LEATHER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDCenturion</Tag>
+      <Model>lssheriffcenturion</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDSUV</Tag>
+      <Model>lssheriff4b</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDBike</Tag>
+      <Model>lssheriffb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_BIKER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LSSDBike_3star</Tag>
+      <Model>lssheriffb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSSD_BIKER_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>LSSDK9Car</Tag>
+      <Model>lssheriffk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE</Ped>
+        <Ped Multi="1"  Seat="2">LSSD_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>LSSDK9Car_3star</Tag>
+      <Model>lssheriffk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">LSSD_FEMALE_VEST</Ped>
+        <Ped Multi="1"  Seat="2">LSSD_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>LSSDMarine</Tag>
+      <Model>sheriffpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="-1">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="-1">LSSD_FEMALE_VEST</Ped>
+		<Ped Multi="3"  Seat="1">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="1">LSSD_FEMALE_VEST</Ped>
+		<Ped Multi="3"  Seat="2">LSSD_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="2">LSSD_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- BCSO -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSODetectiveCar</Tag>
+      <Model>sheriff4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_DETECTIVE</Ped>
+        <Ped Multi="1"  Seat="">BCSO_DETECTIVE_JACKET</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOBike</Tag>
+      <Model>Sheriffb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_BIKER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOBike_3star</Tag>
+      <Model>Sheriffb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_BIKER_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar</Tag>
+      <Model>Sheriff</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar2</Tag>
+      <Model>Sheriff2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar3</Tag>
+      <Model>Sheriff5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>   
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar_3star</Tag>
+      <Model>Sheriff</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar2_3star</Tag>
+      <Model>Sheriff2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar3_3star</Tag>
+      <Model>Sheriff5</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOCar_Pursuit</Tag>
+      <Model>sheriffpursuit</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOK9Car</Tag>
+      <Model>sheriffk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE</Ped>
+        <Ped Multi="1"  Seat="2">BCSO_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOK9Car_3star</Tag>
+      <Model>sheriffk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">BCSO_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_OLD_VEST</Ped>
+        <Ped Multi="1"  Seat="">BCSO_FEMALE_VEST</Ped>
+        <Ped Multi="1"  Seat="2">BCSO_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOStockade</Tag>
+      <Model>SheriffStockade</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOGranger</Tag>
+      <Model>sheriff4b</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_SWAT</Ped>
+        <Ped Multi="1"  Seat="3">BCSO_SWAT</Ped>
+        <Ped Multi="1"  Seat="4">BCSO_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>BCSOSandking</Tag>
+      <Model>sheriff3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">BCSO_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>BCSOMarine</Tag>
+      <Model>sheriffpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="-1">BCSO_MALE_WATER</Ped>
+        <Ped Multi="1"  Seat="-1">BCSO_FEMALE_WATER</Ped>
+		<Ped Multi="3"  Seat="1">BCSO_MALE_WATER</Ped>
+        <Ped Multi="1"  Seat="1">BCSO_FEMALE_WATER</Ped>
+		<Ped Multi="3"  Seat="2">BCSO_MALE_WATER</Ped>
+        <Ped Multi="1"  Seat="2">BCSO_FEMALE_WATER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>BCSOMarine_swat</Tag>
+      <Model>sheriffpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">BCSO_SWAT</Ped>
+		<Ped Multi="1"  Seat="1">BCSO_SWAT</Ped>
+		<Ped Multi="1"  Seat="2">BCSO_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- SAHP -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar</Tag>
+      <Model>hwaypolice</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar2</Tag>
+      <Model>hwaypolice2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar3</Tag>
+      <Model>hwaypolice3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar_3star</Tag>
+      <Model>hwaypolice</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar2_3star</Tag>
+      <Model>hwaypolice2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar3_3star</Tag>
+      <Model>hwaypolice3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCar_Pursuit</Tag>
+      <Model>hwaypolicepursuit</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPBike</Tag>
+      <Model>Policeb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_BIKER</Ped>
+        <Ped Multi="1"  Seat="">SAHP_BIKER_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPBike2</Tag>
+      <Model>hwaypoliceb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_BIKER</Ped>
+        <Ped Multi="1"  Seat="">SAHP_BIKER_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPBike_3star</Tag>
+      <Model>Policeb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_BIKER_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_BIKER_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPBike2_3star</Tag>
+      <Model>hwaypoliceb</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SAHP_BIKER_VEST</Ped>
+        <Ped Multi="1"  Seat="">SAHP_BIKER_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>SAHPK9Car</Tag>
+      <Model>hwaypolicek9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@std_car</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SAHP_K9HANDLER</Ped>
+        <Ped Multi="1"  Seat="2">SAHP_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>SAHPK9Car_3star</Tag>
+      <Model>hwaypolicek9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@std_car</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SAHP_K9HANDLER_VEST</Ped>
+        <Ped Multi="1"  Seat="2">SAHP_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPGranger</Tag>
+      <Model>hwaypolice4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SAHP_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SAHPCenturion</Tag>
+      <Model>hwaycenturion</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SAHP_SWAT</Ped>
+        <Ped Multi="1"  Seat="11">SAHP_SWAT</Ped>
+        <Ped Multi="1"  Seat="12">SAHP_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- SASPR -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar</Tag>
+      <Model>Pranger</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar2</Tag>
+      <Model>Pranger2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar3</Tag>
+      <Model>Pranger3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_OFFROAD</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_OFFROAD</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar_3star</Tag>
+      <Model>Pranger</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar2_3star</Tag>
+      <Model>Pranger2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRCar3_3star</Tag>
+      <Model>Pranger3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_OFFROAD_VEST</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_OFFROAD_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRMarshal</Tag>
+      <Model>usms</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SASPR_MARSHAL</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRMarshal2</Tag>
+      <Model>usms2</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SASPR_MARSHAL</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRMarshal3</Tag>
+      <Model>fbit</Model>
+      <CustomColorSets />
+	  <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SASPR_MARSHAL</Ped>
+        <Ped Multi="1"  Seat="3">SASPR_MARSHAL</Ped>
+        <Ped Multi="1"  Seat="4">SASPR_MARSHAL</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRATV</Tag>
+      <Model>PrangerATV</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_OFFROAD</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_OFFROAD</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SASPRATV_3star</Tag>
+      <Model>PrangerATV</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="2"  Seat="">SASPR_MALE_OFFROAD_VEST</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_OFFROAD_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>SASPRK9Car</Tag>
+      <Model>prangerk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SASPR_MALE</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE</Ped>
+        <Ped Multi="1"  Seat="2">SASPR_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="false">
+      <Tag>SASPRK9Car_3star</Tag>
+      <Model>prangerk9</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <K9Animation>creatures@rottweiler@in_vehicle@4x4</K9Animation>
+      <BlipInfo><Text>K9</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="3"  Seat="">SASPR_MALE_VEST</Ped>
+        <Ped Multi="1"  Seat="">SASPR_FEMALE_VEST</Ped>
+        <Ped Multi="1"  Seat="2">SASPR_K9</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- PAP -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPCar</Tag>
+      <Model>PortPolice</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">PAP_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPCar2</Tag>
+      <Model>PortPolice2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">PAP_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPCar_3star</Tag>
+      <Model>PortPolice</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">PAP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPCar2_3star</Tag>
+      <Model>PortPolice2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">PAP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPMarine</Tag>
+      <Model>Predator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">PAP_MALE_VEST</Ped>
+		<Ped Multi="1"  Seat="1">PAP_MALE_VEST</Ped>
+		<Ped Multi="1"  Seat="2">PAP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>PAPMarine2</Tag>
+      <Model>portpoliceseashark</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">PAP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- USCG -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>USCGCar</Tag>
+      <Model>cgexecutioner</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USCG</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>USCGCar_3star</Tag>
+      <Model>cgexecutioner</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USCG_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>USCGCar_Swat</Tag>
+      <Model>cgsandking</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USCG_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USCGMarine</Tag>
+      <Model>cgpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens4</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">USCG_WATER</Ped>
+		<Ped Multi="1"  Seat="1">USCG_WATER</Ped>
+		<Ped Multi="1"  Seat="2">USCG_WATER</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USCGMarine_3star</Tag>
+      <Model>cgpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens4</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">USCG_WATER_VEST</Ped>
+		<Ped Multi="1"  Seat="1">USCG_WATER_VEST</Ped>
+		<Ped Multi="1"  Seat="2">USCG_WATER_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USCGMarine_4star</Tag>
+      <Model>cgpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens4</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">USCG_SWAT</Ped>
+		<Ped Multi="1"  Seat="1">USCG_SWAT</Ped>
+		<Ped Multi="1"  Seat="2">USCG_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>USCGMarine_6star</Tag>
+      <Model>cgpredator</Model>
+      <CustomColorSets />
+	  <ForceSirenHash>policevehsirens4</ForceSirenHash>
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo />
+      <Passengers>3</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="-1">USCG_MSRT</Ped>
+		<Ped Multi="1"  Seat="1">USCG_MSRT</Ped>
+		<Ped Multi="1"  Seat="2">USCG_MSRT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="true">
+      <Tag>USCGSub</Tag>
+      <Model>cgsub</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Rotate>true</Rotate><Sprite>760</Sprite><Text>Submarine</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USCG_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>400</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+	<Vehicle MonitorAmbient="true">
+      <Tag>USCGSub2</Tag>
+      <Model>cgsub2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Water</Type>
+      <BlipInfo><ShowOnLegend>true</ShowOnLegend><Rotate>true</Rotate><Sprite>760</Sprite><Text>Armed Submarine</Text></BlipInfo>
+      <Passengers>1</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">USCG_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>400</DespawnDistance>
+      <InitialSpeed>20</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <!-- SADCR -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>SADCRCar</Tag>
+      <Model>pcar</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SADCR</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>SADCRCar_3star</Tag>
+      <Model>pcar</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">SADCR_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <!-- NYSP -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>NYSPCar</Tag>
+      <Model>policeold1</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NYSP_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NYSPCar2</Tag>
+      <Model>policeold2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NYSP_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NYSPCar_3star</Tag>
+      <Model>policeold1</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NYSP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NYSPCar2_3star</Tag>
+      <Model>policeold2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NYSP_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>NYSPSwat</Tag>
+      <Model>policeold1</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>4</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NYSP_SWAT</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+  <!-- VMS -->
+  <Vehicle MonitorAmbient="false">
+      <Tag>TrailerVMS</Tag>
+      <Model>trailersign</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers />
+      <GunnerSeats />
+      <Peds />
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>0</InitialSpeed>
+      <PopEdit>false</PopEdit>
+	  <VMS>true</VMS>
+    </Vehicle>
+  <!-- MISC -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>placeholderspeed</Tag>
+      <Model>vigilante</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Text>PlaceholderMan</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LSPD_OLD</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>nullcar</Tag>
+      <Model>speedo2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo><Text>Clown</Text></BlipInfo>
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">NULLMAN</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+	<!-- LCPD -->
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar</Tag>
+      <Model>lcpd</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar2</Tag>
+      <Model>lcpd2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>	
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar3</Tag>
+      <Model>lcpd3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar4</Tag>
+      <Model>lcpd4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>true</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar_3star</Tag>
+      <Model>lcpd</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar2_3star</Tag>
+      <Model>lcpd2</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+       <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar3_3star</Tag>
+      <Model>lcpd3</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+    <Vehicle MonitorAmbient="false">
+      <Tag>LCPDCar4_3star</Tag>
+      <Model>lcpd4</Model>
+      <CustomColorSets />
+      <VehicleColorSets />
+      <LicensePlateIndex />
+      <Type>Ground</Type>
+      <BlipInfo />
+      <Passengers>2</Passengers>
+      <GunnerSeats />
+      <Peds>
+        <Ped Multi="1"  Seat="">LCPD_MALE_VEST</Ped>
+      </Peds>
+      <DespawnDistance>300</DespawnDistance>
+      <InitialSpeed>30</InitialSpeed>
+      <PopEdit>false</PopEdit>
+    </Vehicle>
+  </VehicleInfo>
+</SixStarResponse>
+
+<!--!
+
+Vehicle Sirens:
+		policevehsirens => default/local agency siren
+		policevehsirens2 => merryweather security sirens
+		policevehsirens3 => SAHP/SADCR/SASPR sirens
+		policevehsirens4 => federal agency siren
+		
+Available Blip Colors:
+        White
+        Red
+        Green
+        Blue
+        Yellow
+
+Available Blip Sprites:
+Image of icons here:  http://i.imgur.com/F6Lcy0t.png
+
+        Standard
+        BigBlip
+        PoliceOfficer
+        PoliceArea
+        Square
+        Player
+        North
+        Waypoint
+        BigCircle
+        BigCircleOutline
+        ArrowUpOutlined
+        ArrowDownOutlined
+        ArrowUp
+        ArrowDown
+        PoliceHelicopterAnimated
+        Jet
+        Number1
+        Number2
+        Number3
+        Number4
+        Number5
+        Number6
+        Number7
+        Number8
+        Number9
+        Number10
+        GTAOCrew
+        GTAOFriendly
+        Lift
+        RaceFinish
+        Safehouse
+        PoliceOfficer2
+        PoliceCarDot
+        PoliceHelicopter
+        ChatBubble
+        Garage2
+        Drugs
+        Store
+        PoliceCar
+        PolicePlayer
+        PoliceStation
+        Hospital
+        Helicopter
+        StrangersAndFreaks
+        ArmoredTruck
+        TowTruck
+        Barber
+        LosSantosCustoms
+        Clothes
+        TattooParlor
+        Simeon
+        Lester
+        Michael
+        Trevor
+        Rampage
+        VinewoodTours
+        Lamar
+        Franklin
+        Chinese
+        Airport
+        Bar
+        BaseJump
+        CarWash
+        ComedyClub
+        Dart
+        FIB
+        DollarSign
+        Golf
+        AmmuNation
+        Exile
+        ShootingRange
+        Solomon
+        StripClub
+        Tennis
+        Triathlon
+        OffRoadRaceFinish
+        Key
+        MovieTheater
+        Music
+        Marijuana
+        Hunting
+        ArmsTraffickingGround
+        Nigel
+        AssaultRifle
+        Bat
+        Grenade
+        Health
+        Knife
+        Molotov
+        Pistol
+        RPG
+        Shotgun
+        SMG
+        Sniper
+        SonicWave
+        PointOfInterest
+        GTAOPassive
+        GTAOUsingMenu
+        Link
+        Minigun
+        GrenadeLauncher
+        Armor
+        Castle
+        Camera
+        Handcuffs
+        Yoga
+        Cab
+        Number11
+        Number12
+        Number13
+        Number14
+        Number15
+        Number16
+        Shrink
+        Epsilon
+        PersonalVehicleCar
+        PersonalVehicleBike
+        Custody
+        ArmsTraffickingAir
+        Fairground
+        PropertyManagement
+        Altruist
+        Enemy
+        Chop
+        Dead
+        Hooker
+        Friend
+        BountyHit
+        GTAOMission
+        GTAOSurvival
+        CrateDrop
+        PlaneDrop
+        Sub
+        Race
+        Deathmatch
+        ArmWrestling
+        AmmuNationShootingRange
+        RaceAir
+        RaceCar
+        RaceSea
+        GarbageTruck
+        SafehouseForSale
+        Package
+        MartinMadrazo
+        EnemyHelicopter
+        Boost
+        Devin
+        Marina
+        Garage
+        GolfFlag
+        Hangar
+        Helipad
+        JerryCan
+        Masks
+        HeistSetup
+        Incapacitated
+        PickupSpawn
+        BoilerSuit
+        Completed
+        Rockets
+        GarageForSale
+        HelipadForSale
+        MarinaForSale
+        HangarForSale
+        Business
+        BusinessForSale
+        RaceBike
+        Parachute
+        TeamDeathmatch
+        RaceFoot
+        VehicleDeathmatch
+        Barry
+        Dom
+        MaryAnn
+        Cletus
+        Josh
+        Minute
+        Omega
+        Tonya
+        Paparazzo
+        Crosshair
+        Creator
+        CreatorDirection
+        Abigail
+        Blimp
+        Repair
+        Testosterone
+        Dinghy
+        Fanatic
+        Information
+        CaptureBriefcase
+        LastTeamStanding
+        Boat
+        CaptureHouse
+        JerryCan2
+        RP
+        GTAOPlayerSafehouse
+        GTAOPlayerSafehouseDead
+        CaptureAmericanFlag
+        CaptureFlag
+        Tank
+        HelicopterAnimated
+        Plane
+        PlayerNoColor
+        GunCar
+        Speedboat
+        Heist
+        Stopwatch
+        DollarSignCircled
+        Crosshair2
+        DollarSignSquared
+
+-->
