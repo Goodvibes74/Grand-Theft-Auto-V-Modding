@@ -98,7 +98,7 @@ menyooStuff/JumpAroundMode.mp3   # Menyoo asset, ignored by *.mp3
 - [ ] Run `git status` and make sure the tree is clean, so you have a known-good point to roll back to.
 - [ ] Note the game version in `ScriptHookV.log` (currently `VER_1_0_3717_0`).
 
-### When you install a mod, record:
+### When you install a mod, record
 
 - [ ] New `.asi` files and their `.ini` files in the root.
 - [ ] New `.dll` files and their `.ini`/`.xml` configs in `scripts/`.
