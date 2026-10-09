@@ -4,23 +4,39 @@
 		<Location>
 			<Name>City</Name>
 			<Variables>
-				<Var Name="$LocalCop" Value="LSPD_COP" />
-				<Var Name="$LocalFire" Value="FIRETRUCK" />
-				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
-				<Var Name="$LocalCarRoadblock" Value="LSPD_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="LSPD_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedAgentCarRoadblock" Value="FIB_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentSpikeRoadblock" Value="FIB_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="NOOSE_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="NOOSE_ROAD_BLOCK_SPIKES" />
-				<Var Name="$ArmyCarRoadblock" Value="ARMY_ROAD_BLOCK_CARS" />
-				<Var Name="$ArmySpikeRoadblock" Value="ARMY_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="LSPD_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="LSPD_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="LSPD_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
+				<Var Name="$PoliceRequest" Value="LSPD_COP" />
+				<Var Name="$FireDeptRequest" Value="FIRETRUCK" />
+				<Var Name="$AmbulanceRequest" Value="AMBULANCE" />
+				<Var Name="$PoliceLightblock" Value="LSPD_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="LSPD_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="LSPD_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="LSPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="LSPD_SWAT_ROADBLOCK_2" />
+				<Var Name="$SwatHeavyRoadblock" Value="LSPD_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="LSPD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="LSPD_SWAT_SPIKEBLOCK" />
+				<Var Name="$FibRoadblock" Value="FIB_ROADBLOCK" />
+				<Var Name="$FibRoadblock2" Value="FIB_ROADBLOCK_2" />
+				<Var Name="$NooseRoadblock" Value="NOOSE_ROADBLOCK" />
+				<Var Name="$NooseRoadblock2" Value="NOOSE_ROADBLOCK_CENTURION" />
+				<Var Name="$NooseRoadblock3" Value="NOOSE_ROADBLOCK_RIOT" />
+				<Var Name="$NooseRoadblock4" Value="NOOSE_ROADBLOCK_INSURGENT" />
+				<Var Name="$NooseSpikeblock" Value="NOOSE_SPIKEBLOCK" />
+				<Var Name="$FibSwatRoadblock" Value="FIB_SWAT_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock2" Value="FIB_SWAT_ROADBLOCK_2" />
+				<Var Name="$FibSwatRoadblock3" Value="FIB_SWAT_ROADBLOCK_3" />
+				<Var Name="$FibSwatSpikeblock" Value="FIB_SWAT_SPIKEBLOCK" />
+				<Var Name="$ArmyRoadblock" Value="ARMY_ROADBLOCK" />
+				<Var Name="$ArmyRoadblock2" Value="ARMY_ROADBLOCK_INSURGENT" />
+				<Var Name="$ArmyRoadblockGunner" Value="ARMY_ROADBLOCK_GUNNER" />
+				<Var Name="$ArmyRoadblockGunner2" Value="ARMY_ROADBLOCK_INSURGENT_GUNNER" />
+				<Var Name="$ArmySpikeblock" Value="ARMY_SPIKEBLOCK" />
+				<Var Name="$ArmySpikeblockAPC" Value="ARMY_SPIKEBLOCK_APC" />
+				<Var Name="$ArmySpikeblockTank" Value="ARMY_SPIKEBLOCK_TANK" />
+				<Var Name="$PoliceGunHeli" Value="LSPD_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="LSPD_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="LSPD_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
 				<Var Name="$FibGunHeli" Value="FIB_Gunner_Heli" />
 				<Var Name="$FibGunHeliVest" Value="FIB_Gunner_Heli_Vest" />
 				<Var Name="$NooseGunHeli" Value="NOOSE_Gunner_Heli" />
@@ -34,81 +50,1931 @@
 			</Variables>
 			<Emergency>
 				<Police>
-					<Group Multi="1">$LocalCop</Group>
+					<Group Multi="1">$PoliceRequest</Group>
 				</Police>
 				<Firetruck>
-					<Group Multi="1">$LocalFire</Group>
+					<Group Multi="1">$FireDeptRequest</Group>
 				</Firetruck>
 				<Ambulance>
-					<Group Multi="1">$LocalAmbulance</Group>
+					<Group Multi="1">$AmbulanceRequest</Group>
 				</Ambulance>
 			</Emergency>
 			<Roadblock>
 				<ResponseClass Weight="regular" Speed="regular" Height="regular">
 					<OneStar>
-						<Group>$LocalCarRoadblock</Group>
+						<Group Multi="1">$PoliceLightblock</Group>
 					</OneStar>
 					<TwoStar>
-						<Group>$LocalCarRoadblock</Group>
+						<Group Multi="1">$PoliceLightblock</Group>
 					</TwoStar>
 					<ThreeStar>
-						<Group>$LocalCarRoadblock</Group>
-						<Group>$LocalSpikeRoadblock</Group>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
 					</ThreeStar>
 					<FourStar>
-						<Group>$LocalCarRoadblock</Group>
-						<Group>$LocalSpikeRoadblock</Group>
-						<Group>$LocalSwatCarRoadblock</Group>
-						<Group>$LocalSwatSpikeRoadblock</Group>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
 					</FourStar>
 					<FiveStar>
-						<Group>$LocalSwatCarRoadblock</Group>
-						<Group>$LocalSwatSpikeRoadblock</Group>
-						<Group>$FedAgentCarRoadblock</Group>
-						<Group>$FedAgentSpikeRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
 					</FiveStar>
 					<SixStar>
-						<Group>$FedAgentCarRoadblock</Group>
-						<Group>$FedAgentSpikeRoadblock</Group>
-						<Group>$FedSwatCarRoadblock</Group>
-						<Group>$FedSwatSpikeRoadblock</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
 					</SixStar>
 					<SevenStar>
-						<Group>$FedSwatCarRoadblock</Group>
-						<Group>$FedSwatSpikeRoadblock</Group>
-						<Group>$ArmyCarRoadblock</Group>
-						<Group>$ArmySpikeRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
 					</SevenStar>
 					<EightStar>
-						<Group>$ArmyCarRoadblock</Group>
-						<Group>$ArmySpikeRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
 					</EightStar>
 					<NineStar>
-						<Group>$ArmyCarRoadblock</Group>
-						<Group>$ArmySpikeRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
 					</NineStar>
 					<TenStar>
-						<Group>$ArmyCarRoadblock</Group>
-						<Group>$ArmySpikeRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
 					</TenStar>
 				</ResponseClass>
 			</Roadblock>
 			<GunnerHeli>
 				<ResponseClass Weight="regular" Speed="regular" Height="regular">
 					<OneStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</OneStar>
 					<TwoStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</TwoStar>
 					<ThreeStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</ThreeStar>
 					<FourStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</FourStar>
 					<FiveStar>
-						<Group>$LocalGunHeliVest</Group>
+						<Group>$PoliceGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$PoliceGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$PoliceGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$PoliceGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmyGunHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmyGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+			<RappelHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$SwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$SwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$SwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$SwatHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$SwatHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$SwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$SwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$SwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$SwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$SwatHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$SwatHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmySwatHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmySwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</RappelHeli>
+		</Location>
+        <Location>
+            <Name>LSCounty</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="LSSD_COP" />
+				<Var Name="$PoliceLightblock" Value="LSSD_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="LSSD_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="LSSD_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="LSSD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="LSSD_SWAT_ROADBLOCK_2" />
+				<Var Name="$SwatHeavyRoadblock" Value="LSSD_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="LSSD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="LSSD_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="LSSD_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="LSSD_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="LSSD_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="LSSD_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>LSCounty_Rural</Name>
+            <Parent>LSCounty</Parent>
+			<Variables>
+			    <Var Name="$PoliceRequest" Value="LSSD_COP_RURAL" />
+				<Var Name="$PoliceLightblock" Value="LSSD_LIGHTBLOCK_RURAL" />
+				<Var Name="$PoliceRoadblock" Value="LSSD_ROADBLOCK_RURAL" />
+				<Var Name="$PoliceSpikeblock" Value="LSSD_SPIKEBLOCK_RURAL" />
+                <Var Name="$FibRoadblock" Value="FIB_ROADBLOCK_RURAL" />
+				<Var Name="$FibRoadblock2" Value="FIB_ROADBLOCK_RURAL_2" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>BlaineCounty</Name>
+            <Parent>LSCounty_Rural</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="BCSO_COP" />
+				<Var Name="$PoliceLightblock" Value="BCSO_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="BCSO_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="BCSO_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="BCSO_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="BCSO_SWAT_ROADBLOCK_2" />
+				<Var Name="$SwatHeavyRoadblock" Value="BCSO_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="BCSO_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatSpikeblock" Value="BCSO_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="BCSO_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="BCSO_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="BCSO_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="BCSO_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>PaletoBay</Name>
+            <Parent>BlaineCounty</Parent>
+		</Location>
+        <Location>
+            <Name>PortAuthority</Name>
+            <Parent>Downtown</Parent>
+            <Variables>	
+				<Var Name="$PoliceRequest" Value="PIA_COP" />
+				<Var Name="$PoliceRequest2" Value="PAP_COP" />
+				<Var Name="$PoliceRequest3" Value="PAP_COP" />
+				<Var Name="$PoliceLightblock" Value="PAP_LIGHTBLOCK" />
+				<Var Name="$PoliceLightblock2" Value="PIA_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="PAP_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock2" Value="PIA_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="PAP_SPIKEBLOCK" />
+				<Var Name="$PoliceSpikeblock2" Value="PIA_SPIKEBLOCK" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>RockfordHills</Name>
+            <Parent>LSCounty</Parent>
+			<Variables>
+				<Var Name="$PoliceRequest" Value="RHPD_COP" />
+                <Var Name="$PoliceLightblock" Value="RHPD_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="RHPD_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="RHPD_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="RHPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="RHPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="RHPD_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="RHPD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="RHPD_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="RHPD_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="RHPD_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="RHPD_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="RHPD_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>DelPerro</Name>
+            <Parent>LSCounty</Parent>
+			<Variables>
+				<Var Name="$PoliceRequest" Value="DPPD_COP" />
+                <Var Name="$PoliceLightblock" Value="DPPD_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="DPPD_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="DPPD_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="DPPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="DPPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="DPPD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock2" Value="DPPD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="DPPD_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="DPPD_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="DPPD_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="DPPD_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="DPPD_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Prison</Name>
+            <Parent>NooseHQ</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="SADCR_COP" />
+				<Var Name="$PoliceLightblock" Value="SADCR_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="SADCR_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SADCR_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="SAHP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="SAHP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="SAHP_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock2" Value="SAHP_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="SAHP_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="SADCR_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="SADCR_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="SAHP_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="SAHP_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>Airport</Name>
+            <Parent>Downtown</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="LSIA_COP" />
+				<Var Name="$PoliceRequest2" Value="PIA_COP" />
+				<Var Name="$PoliceRequest3" Value="LSIA_COP" />
+				<Var Name="$PoliceLightblock" Value="LSIA_LIGHTBLOCK" />
+				<Var Name="$PoliceLightblock2" Value="PIA_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="LSIA_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock2" Value="PIA_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="LSIA_SPIKEBLOCK" />
+				<Var Name="$PoliceSpikeblock2" Value="PIA_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="LSIA_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="LSIA_SWAT_ROADBLOCK_2" />
+				<Var Name="$SwatRoadblock3" Value="NOOSE_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="LSIA_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock2" Value="NOOSE_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock3" Value="NOOSE_ROADBLOCK_INSURGENT" />
+				<Var Name="$SwatHeavyRoadblock4" Value="NOOSE_ROADBLOCK_RIOT" />
+				<Var Name="$SwatSpikeblock" Value="LSIA_SWAT_SPIKEBLOCK" />
+				<Var Name="$SwatSpikeblock2" Value="NOOSE_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="LSIA_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="LSIA_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="LSIA_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="PIA_SWAT_Heli" />
+				<Var Name="$FedSwatHeli" Value="PIA_SWAT_Heli" />
+				<Var Name="$FedSwatHeliVest" Value="LSIA_SWAT_Heli_Vest" />
+            </Variables>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="2">$SwatHeavyRoadblock</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="12">$FibRoadblock</Group>
+						<Group Multi="12">$FibRoadblock2</Group>
+						<Group Multi="2">$SwatRoadblock</Group>
+						<Group Multi="2">$SwatRoadblock2</Group>
+						<Group Multi="2">$SwatRoadblock3</Group>
+						<Group Multi="3">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock3</Group>
+						<Group Multi="1">$SwatHeavyRoadblock4</Group>
+						<Group Multi="6">$SwatSpikeblock</Group>
+						<Group Multi="6">$SwatSpikeblock2</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="3">$NooseSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="2">$SwatHeavyRoadblock</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="12">$FibRoadblock</Group>
+						<Group Multi="12">$FibRoadblock2</Group>
+						<Group Multi="2">$SwatRoadblock</Group>
+						<Group Multi="2">$SwatRoadblock2</Group>
+						<Group Multi="2">$SwatRoadblock3</Group>
+						<Group Multi="3">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock3</Group>
+						<Group Multi="1">$SwatHeavyRoadblock4</Group>
+						<Group Multi="6">$SwatSpikeblock</Group>
+						<Group Multi="6">$SwatSpikeblock2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="3">$NooseSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$FibRoadblock</Group>
+						<Group Multi="3">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="3">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+        </Location>
+        <Location>
+            <Name>NooseHQ</Name>
+            <Parent>City</Parent>
+			<Variables>
+                <Var Name="$PoliceRequest" Value="SEP_COP" />
+				<Var Name="$PoliceLightblock" Value="SEP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="SEP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SEP_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="NOOSE_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="NOOSE_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock" Value="NOOSE_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="NOOSE_ROADBLOCK_INSURGENT" />
+				<Var Name="$SwatSpikeblock" Value="NOOSE_SPIKEBLOCK" />
+				<Var Name="$FibRoadblock" Value="NOOSE_ROADBLOCK" />
+				<Var Name="$FibRoadblock2" Value="NOOSE_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock" Value="NOOSE_ROADBLOCK_CENTURION" />
+				<Var Name="$FibSwatRoadblock2" Value="NOOSE_ROADBLOCK_RIOT" />
+				<Var Name="$FibSwatRoadblock3" Value="NOOSE_ROADBLOCK_INSURGENT" />
+				<Var Name="$FibSwatSpikeblock" Value="NOOSE_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="PIA_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="PIA_Gunner_Heli" />
+				<Var Name="$SwatHeli" Value="PIA_SWAT_Heli" />
+				<Var Name="$SwatHeliVest" Value="PIA_SWAT_Heli" />
+				<Var Name="$FibGunHeli" Value="NOOSE_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="NOOSE_Gunner_Heli_Vest" />
+				<Var Name="$FibSwatHeli" Value="NOOSE_Swat_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="NOOSE_Swat_Heli_Vest" />
+            </Variables>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="2">$ArmyRoadblock2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="2">$ArmyRoadblock2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="2">$ArmyRoadblock2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="1">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="1">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="1">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="1">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="1">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+        </Location>
+		<Location>
+            <Name>Downtown</Name>
+            <Parent>City</Parent>
+            <Variables>
+				<Var Name="$PoliceRequest" Value="SEP_COP" />
+				<Var Name="$PoliceRequest2" Value="LSPD_COP" />
+				<Var Name="$PoliceRequest3" Value="LSPD_COP" />
+				<Var Name="$PoliceLightblock" Value="LSPD_LIGHTBLOCK" />
+				<Var Name="$PoliceLightblock2" Value="SEP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="LSPD_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock2" Value="SEP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="LSPD_SPIKEBLOCK" />
+				<Var Name="$PoliceSpikeblock2" Value="SEP_SPIKEBLOCK" />
+				<Var Name="$FedGunHeli" Value="PIA_Gunner_Heli" />
+				<Var Name="$FedGunHeliVest" Value="PIA_Gunner_Heli" />
+				<Var Name="$FedSwatHeli" Value="LSPD_Swat_Heli" />
+				<Var Name="$FedSwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
+            </Variables>
+			<Emergency>
+				<Police>
+					<Group Multi="1">$PoliceRequest</Group>
+					<Group Multi="2">$PoliceRequest2</Group>
+					<Group Multi="3">$PoliceRequest3</Group>
+				</Police>
+				<Firetruck>
+					<Group Multi="1">$FireDeptRequest</Group>
+				</Firetruck>
+				<Ambulance>
+					<Group Multi="1">$AmbulanceRequest</Group>
+				</Ambulance>
+			</Emergency>
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="3">$PoliceGunHeliVest</Group>
+						<Group Multi="1">$FedGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceGunHeli</Group>
+						<Group Multi="1">$FedGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$PoliceGunHeliVest</Group>
+						<Group Multi="1">$FedGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceGunHeliVest</Group>
+						<Group Multi="1">$FedGunHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceGunHeliVest</Group>
+						<Group Multi="1">$FedGunHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmyGunHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmyGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+			<RappelHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="3">$SwatHeliVest</Group>
+						<Group Multi="1">$FedSwatHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$SwatHeli</Group>
+						<Group Multi="1">$FedSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$SwatHeliVest</Group>
+						<Group Multi="1">$FedSwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$SwatHeliVest</Group>
+						<Group Multi="1">$FedSwatHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$SwatHeliVest</Group>
+						<Group Multi="1">$FedSwatHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$FibSwatHeli</Group>
+						<Group>$NooseSwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$FibSwatHeliVest</Group>
+						<Group>$NooseSwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmySwatHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmySwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</RappelHeli>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="1">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+		</Location>
+        <Location>
+            <Name>PillboxHill</Name>
+            <Parent>Downtown</Parent>
+			<Variables>
+                <Var Name="$PoliceRequest" Value="SEP_COP" />
+				<Var Name="$PoliceRequest2" Value="FIB_COP" />
+				<Var Name="$PoliceRequest3" Value="LSPD_COP" />
+				<Var Name="$PoliceLightblock" Value="LSPD_LIGHTBLOCK" />
+				<Var Name="$PoliceLightblock2" Value="FIB_COP_LIGHTBLOCK" />
+				<Var Name="$PoliceLightblock3" Value="SEP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="LSPD_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock2" Value="FIB_COP_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock3" Value="SEP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="LSPD_SPIKEBLOCK" />
+				<Var Name="$PoliceSpikeblock2" Value="FIB_COP_SPIKEBLOCK" />
+				<Var Name="$PoliceSpikeblock3" Value="SEP_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="LSPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="LSPD_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="LSPD_SWAT_ROADBLOCK_RIOT" />
+				<Var Name="$SwatHeavyRoadblock2" Value="LSPD_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="LSPD_SWAT_SPIKEBLOCK" />
+				<Var Name="$SwatHeliVest" Value="FIB_Swat_Heli" />
+            </Variables>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="2">$PoliceLightblock2</Group>
+						<Group Multi="1">$PoliceLightblock3</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="2">$PoliceLightblock2</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="2">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceRoadblock3</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="2">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock3</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="2">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceRoadblock3</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="2">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock3</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="3">$PoliceRoadblock</Group>
+						<Group Multi="2">$PoliceRoadblock2</Group>
+						<Group Multi="1">$PoliceRoadblock3</Group>
+						<Group Multi="3">$PoliceSpikeblock</Group>
+						<Group Multi="2">$PoliceSpikeblock2</Group>
+						<Group Multi="1">$PoliceSpikeblock3</Group>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="2">$FibRoadblock</Group>
+						<Group Multi="2">$FibRoadblock2</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="3">$PoliceLightblock</Group>
+						<Group Multi="1">$PoliceLightblock2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="2">$FibSwatRoadblock</Group>
+						<Group Multi="2">$FibSwatRoadblock2</Group>
+						<Group Multi="2">$FibSwatRoadblock3</Group>
+						<Group Multi="6">$FibSwatSpikeblock</Group>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$NooseRoadblock</Group>
+						<Group Multi="1">$NooseRoadblock2</Group>
+						<Group Multi="1">$NooseRoadblock3</Group>
+						<Group Multi="1">$NooseRoadblock4</Group>
+						<Group Multi="1">$FibSwatRoadblock</Group>
+						<Group Multi="1">$FibSwatRoadblock2</Group>
+						<Group Multi="1">$FibSwatRoadblock3</Group>
+						<Group Multi="4">$NooseSpikeblock</Group>
+						<Group Multi="3">$FibSwatSpikeblock</Group>
+						<Group Multi="4">$ArmyRoadblock</Group>
+						<Group Multi="3">$ArmyRoadblock2</Group>
+						<Group Multi="7">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+        </Location>
+        <Location>
+            <Name>Highway</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="SAHP_COP" />
+				<Var Name="$PoliceLightblock" Value="SAHP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="SAHP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SAHP_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="SAHP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="SAHP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="SAHP_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatHeavyRoadblock2" Value="SAHP_SWAT_ROADBLOCK_CENTURION" />
+				<Var Name="$SwatSpikeblock" Value="SAHP_SWAT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="SAHP_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="SAHP_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="SAHP_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="SAHP_Swat_Heli_Vest" />
+            </Variables>
+        </Location>
+        <Location>
+            <Name>FortZancudo</Name>
+            <Parent>Highway</Parent>
+            <Variables>
+                <Var Name="$PoliceRequest" Value="USAF_COP" />
+				<Var Name="$PoliceLightblock" Value="USAF_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="USAF_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="USAF_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="USAF_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="USAF_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="USAF_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock2" Value="USAF_ROADBLOCK" />
+				<Var Name="$SwatSpikeblock" Value="USAF_SWAT_SPIKEBLOCK" />
+				<Var Name="$FibRoadblock" Value="USAF_SWAT_ROADBLOCK" />
+				<Var Name="$FibRoadblock2" Value="USAF_SWAT_ROADBLOCK" />
+				<Var Name="$NooseRoadblock" Value="ARMY_ROADBLOCK" />
+				<Var Name="$NooseRoadblock2" Value="ARMY_ROADBLOCK" />
+				<Var Name="$NooseRoadblock3" Value="ARMY_ROADBLOCK" />
+				<Var Name="$NooseRoadblock4" Value="ARMY_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock" Value="ARMY_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock2" Value="ARMY_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock3" Value="ARMY_ROADBLOCK" />
+				<Var Name="$NooseSpikeblock" Value="ARMY_SPIKEBLOCK" />
+				<Var Name="$FibSwatSpikeblock" Value="ARMY_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="USAF_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="USAF_Gunner_Heli" />
+				<Var Name="$FibGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="Army_Gunner_Heli" />
+				<Var Name="$NooseGunHeli" Value="Army_Gunner_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="Army_Gunner_Heli" />
+				<Var Name="$SwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$SwatHeliVest" Value="Army_SWAT_Heli" />
+				<Var Name="$FibSwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="Army_SWAT_Heli" />
+				<Var Name="$NooseSwatHeli" Value="Army_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="Army_SWAT_Heli" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>NorthernWilderness</Name>
+            <Parent>BlaineCounty</Parent>
+			<Variables>
+				<Var Name="$PoliceRequest2" Value="SASPR_COP" />
+				<Var Name="$PoliceGunHeli2" Value="SASPR_Gunner_Heli" />
+				<Var Name="$PoliceLightblock" Value="SASPR_LIGHTBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SASPR_SPIKEBLOCK" />
+            </Variables>
+			<Emergency>
+				<Police>
+					<Group Multi="1">$PoliceRequest</Group>
+					<Group Multi="1">$PoliceRequest2</Group>
+				</Police>
+				<Firetruck>
+					<Group Multi="1">$FireDeptRequest</Group>
+				</Firetruck>
+				<Ambulance>
+					<Group Multi="1">$AmbulanceRequest</Group>
+				</Ambulance>
+			</Emergency>
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$PoliceGunHeliVest</Group>
 					</FiveStar>
 					<SixStar>
 						<Group>$FibGunHeli</Group>
@@ -129,396 +1995,1068 @@
 					</TenStar>
 				</ResponseClass>
 			</GunnerHeli>
-			<RappelHeli>
-				<ResponseClass Weight="regular" Speed="regular" Height="regular">
-					<OneStar>
-						<Group>$LocalSwatHeli</Group>
-					</OneStar>
-					<TwoStar>
-						<Group>$LocalSwatHeli</Group>
-					</TwoStar>
-					<ThreeStar>
-						<Group>$LocalSwatHeli</Group>
-					</ThreeStar>
-					<FourStar>
-						<Group>$LocalSwatHeli</Group>
-					</FourStar>
-					<FiveStar>
-						<Group>$LocalSwatHeliVest</Group>
-					</FiveStar>
-					<SixStar>
-						<Group>$FibSwatHeli</Group>
-						<Group>$NooseSwatHeli</Group>
-					</SixStar>
-					<SevenStar>
-						<Group>$FibSwatHeliVest</Group>
-						<Group>$NooseSwatHeliVest</Group>
-					</SevenStar>
-					<EightStar>
-						<Group>$ArmySwatHeli</Group>
-					</EightStar>
-					<NineStar>
-						<Group>$ArmySwatHeli</Group>
-					</NineStar>
-					<TenStar>
-						<Group>$ArmySwatHeli</Group>
-					</TenStar>
-				</ResponseClass>
-			</RappelHeli>
-		</Location>
-        <Location>
-            <Name>LSCounty</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="LSSD_COP" />
-				<Var Name="$LocalCarRoadblock" Value="LSSD_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="LSSD_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="LSSD_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="LSSD_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="FIB_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="FIB_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="LSSD_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="LSSD_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="LSSD_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="LSSD_Swat_Heli_Vest" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>LSCounty_Rural</Name>
-            <Parent>LSCounty</Parent>
-        </Location>
-        <Location>
-            <Name>BlaineCounty</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="BCSO_COP" />
-				<Var Name="$LocalCarRoadblock" Value="BCSO_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="BCSO_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="BCSO_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="BCSO_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="BCSO_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="BCSO_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="BCSO_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="BCSO_Swat_Heli_Vest" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>PortAuthority</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="PAP_COP" />
-				<Var Name="$LocalCarRoadblock" Value="PAP_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="PAP_ROAD_BLOCK_SPIKES" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>Prison</Name>
-            <Parent>Highway</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="SADCR_COP" />
-				<Var Name="$LocalCarRoadblock" Value="SADCR_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="SADCR_ROAD_BLOCK_SPIKES" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>Airport</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="PIA_COP" />
-				<Var Name="$LocalCarRoadblock" Value="PIA_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="PIA_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="NOOSE_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="NOOSE_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="NOOSE_Gunner_Heli_Light" />
-				<Var Name="$LocalGunHeliVest" Value="NOOSE_Gunner_Heli_Light" />
-				<Var Name="$LocalSwatHeli" Value="NOOSE_SWAT_Heli_Light" />
-				<Var Name="$LocalSwatHeliVest" Value="NOOSE_SWAT_Heli_Light" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>NooseHQ</Name>
-            <Parent>Airport</Parent>
-        </Location>
-        <Location>
-            <Name>PillboxHill</Name>
-            <Parent>Airport</Parent>
-            <Variables>
-				<Var Name="$LocalSwatCarRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="LSPD_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="FIB_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="FIB_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="LSPD_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="LSPD_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="LSPD_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="LSPD_Swat_Heli_Vest" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>Highway</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="SAHP_Cop" />
-				<Var Name="$LocalCarRoadblock" Value="SAHP_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="SAHP_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="SAHP_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="SAHP_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="SAHP_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="SAHP_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="SAHP_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="SAHP_Swat_Heli_Vest" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>FortZancudo</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="USAF_COP" />
-				<Var Name="$LocalCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedAgentCarRoadblock" Value="USAF_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="USAF_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="Army_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="Army_Gunner_Heli" />
-				<Var Name="$LocalSwatHeli" Value="Army_SWAT_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="Army_SWAT_Heli" />
-				<Var Name="$FibGunHeli" Value="Army_Gunner_Heli" />
-				<Var Name="$FibGunHeliVest" Value="Army_Gunner_Heli" />
-				<Var Name="$NooseGunHeli" Value="Army_Gunner_Heli" />
-				<Var Name="$NooseGunHeliVest" Value="Army_Gunner_Heli" />
-				<Var Name="$FibSwatHeli" Value="Army_SWAT_Heli" />
-				<Var Name="$FibSwatHeliVest" Value="Army_SWAT_Heli" />
-				<Var Name="$NooseSwatHeli" Value="Army_SWAT_Heli" />
-				<Var Name="$NooseSwatHeliVest" Value="Army_SWAT_Heli" />
-				<Var Name="$ArmyGunHeli" Value="Army_Gunner_Heli" />
-				<Var Name="$ArmySwatHeli" Value="Army_SWAT_Heli" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>NorthernWilderness</Name>
-            <Parent>BlaineCounty</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="SASPR_COP" />
-				<Var Name="$LocalCarRoadblock" Value="SASPR_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="SASPR_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="MARSHAL_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="MARSHAL_ROAD_BLOCK_SPIKES" />
-				<Var Name="$NooseGunHeli" Value="Marshal_Gunner_Heli" />
-				<Var Name="$NooseGunHeliVest" Value="Marshal_Gunner_Heli" />
-				<Var Name="$NooseSwatHeli" Value="Marshal_SWAT_Heli" />
-				<Var Name="$NooseSwatHeliVest" Value="Marshal_SWAT_Heli" />
-            </Variables>
         </Location>
         <Location>
             <Name>SouthernWilderness</Name>
+            <Parent>LSCounty_Rural</Parent>
+			<Variables>
+				<Var Name="$PoliceRequest2" Value="SASPR_COP" />
+				<Var Name="$PoliceGunHeli2" Value="SASPR_Gunner_Heli" />
+				<Var Name="$PoliceLightblock" Value="SASPR_LIGHTBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SASPR_SPIKEBLOCK" />
+            </Variables>
+			<Emergency>
+				<Police>
+					<Group Multi="1">$PoliceRequest</Group>
+					<Group Multi="1">$PoliceRequest2</Group>
+				</Police>
+				<Firetruck>
+					<Group Multi="1">$FireDeptRequest</Group>
+				</Firetruck>
+				<Ambulance>
+					<Group Multi="1">$AmbulanceRequest</Group>
+				</Ambulance>
+			</Emergency>
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$PoliceGunHeli</Group>
+						<Group Multi="1">$PoliceGunHeli2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$FibGunHeli</Group>
+						<Group>$NooseGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$FibGunHeliVest</Group>
+						<Group>$NooseGunHeliVest</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+        </Location>
+		<Location>
+            <Name>Wilderness</Name>
             <Parent>Highway</Parent>
             <Variables>
-                <Var Name="$LocalCop" Value="SASPR_COP" />
-				<Var Name="$LocalCarRoadblock" Value="SASPR_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="SASPR_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="MARSHAL_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="MARSHAL_ROAD_BLOCK_SPIKES" />
+                <Var Name="$PoliceRequest" Value="SASPR_COP" />
+				<Var Name="$PoliceLightblock" Value="SASPR_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="SASPR_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="SASPR_SPIKEBLOCK" />
+				<Var Name="$MarshalRoadblock" Value="MARSHAL_ROADBLOCK" />
+				<Var Name="$MarshalRoadblock2" Value="MARSHAL_ROADBLOCK_2" />
+				<Var Name="$MarshalRoadblock3" Value="MARSHAL_ROADBLOCK_3" />
+				<Var Name="$MarshalSpikeblock" Value="MARSHAL_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="SASPR_Gunner_Heli" />
+				<Var Name="$FibGunHeli" Value="Marshal_Gunner_Heli" />
+				<Var Name="$FibGunHeliVest" Value="Marshal_Gunner_Heli" />
 				<Var Name="$NooseGunHeli" Value="Marshal_Gunner_Heli" />
 				<Var Name="$NooseGunHeliVest" Value="Marshal_Gunner_Heli" />
+				<Var Name="$FibSwatHeli" Value="Marshal_SWAT_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="Marshal_SWAT_Heli" />
 				<Var Name="$NooseSwatHeli" Value="Marshal_SWAT_Heli" />
 				<Var Name="$NooseSwatHeliVest" Value="Marshal_SWAT_Heli" />
             </Variables>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$MarshalRoadblock</Group>
+						<Group Multi="2">$MarshalRoadblock2</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="3">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockAPC</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="4">$PoliceRoadblock</Group>
+						<Group Multi="4">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatRoadblock2</Group>
+						<Group Multi="1">$SwatHeavyRoadblock</Group>
+						<Group Multi="1">$SwatHeavyRoadblock2</Group>
+						<Group Multi="4">$SwatSpikeblock</Group>
+						<Group Multi="2">$MarshalRoadblock</Group>
+						<Group Multi="2">$MarshalRoadblock2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="3">$ArmySpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$MarshalRoadblock</Group>
+						<Group Multi="1">$MarshalRoadblock2</Group>
+						<Group Multi="1">$MarshalRoadblock3</Group>
+						<Group Multi="3">$MarshalSpikeblock</Group>
+						<Group Multi="2">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="3">$ArmySpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockAPC</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$ArmyRoadblock</Group>
+						<Group Multi="1">$ArmyRoadblock2</Group>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="4">$ArmySpikeblockTank</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$ArmyRoadblockGunner</Group>
+						<Group Multi="1">$ArmyRoadblockGunner2</Group>
+						<Group Multi="2">$ArmySpikeblockTank</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
         </Location>
         <Location>
             <Name>Mt_Chiliad</Name>
-            <Parent>NorthernWilderness</Parent>
+            <Parent>Wilderness</Parent>
         </Location>
         <Location>
             <Name>Merryweather</Name>
             <Parent>City</Parent>
             <Variables>
-                <Var Name="$LocalCop" Value="MW_COP" />
-				<Var Name="$LocalCarRoadblock" Value="MERRYWEATHER_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="MERRYWEATHER_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedAgentCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="MERRYWEATHER_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$ArmyCarRoadblock" Value="MERRYWEATHER_ELITE_ROAD_BLOCK_CARS" />
-				<Var Name="$ArmySpikeRoadblock" Value="MERRYWEATHER_ELITE_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="MW_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="MW_Gunner_Heli" />
-				<Var Name="$LocalSwatHeli" Value="MW_SWAT_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="MW_SWAT_Heli" />
-				<Var Name="$FibGunHeli" Value="MW_Elite_Heli" />
+				<Var Name="$PoliceRequest" Value="PAP_COP" />
+				<Var Name="$PoliceLightblock" Value="PAP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="PAP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="PAP_SPIKEBLOCK" />
+			    <Var Name="$PoliceGunHeli" Value="MW_Response_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="MW_Response_Heli" />
+				<Var Name="$FibGunHeli" Value="MW_Response_Heli" />
 				<Var Name="$FibGunHeliVest" Value="MW_Elite_Heli" />
-				<Var Name="$NooseGunHeli" Value="MW_Gunner_Heli" />
-				<Var Name="$NooseGunHeliVest" Value="MW_Gunner_Heli" />
-				<Var Name="$FibSwatHeli" Value="MW_SWAT_Heli" />
-				<Var Name="$FibSwatHeliVest" Value="MW_SWAT_Heli" />
-				<Var Name="$NooseSwatHeli" Value="MW_SWAT_Heli" />
-				<Var Name="$NooseSwatHeliVest" Value="MW_SWAT_Heli" />
+				<Var Name="$NooseGunHeli" Value="MW_Response_Heli" />
+				<Var Name="$NooseGunHeliVest" Value="MW_Elite_Heli" />
 				<Var Name="$ArmyGunHeli" Value="MW_Elite_Heli" />
-				<Var Name="$ArmySwatHeli" Value="MW_SWAT_Heli" />
+				<Var Name="$SwatHeli" Value="MW_Response_SWAT_Heli" />
+				<Var Name="$SwatHeliVest" Value="MW_Response_SWAT_Heli" />
+				<Var Name="$FibSwatHeli" Value="MW_Response_SWAT_Heli" />
+				<Var Name="$FibSwatHeliVest" Value="MW_Elite_SWAT_Heli" />
+				<Var Name="$NooseSwatHeli" Value="MW_Response_SWAT_Heli" />
+				<Var Name="$NooseSwatHeliVest" Value="MW_Elite_SWAT_Heli" />
+				<Var Name="$ArmySwatHeli" Value="MW_Elite_SWAT_Heli" />
             </Variables>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</OneStar>
+					<TwoStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</TwoStar>
+					<ThreeStar>
+					    <Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+						<Group Multi="1">MERRYWEATHER_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SPIKEBLOCK</Group>
+					</ThreeStar>
+					<FourStar>
+					    <Group Multi="2">$PoliceRoadblock</Group>
+						<Group Multi="2">$PoliceSpikeblock</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="3">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="3">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="6">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="6">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</OneStar>
+					<TwoStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</TwoStar>
+					<ThreeStar>
+					    <Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+						<Group Multi="1">MERRYWEATHER_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SPIKEBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+					</ThreeStar>
+					<FourStar>
+					    <Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="3">MERRYWEATHER_SWAT_ROADBLOCK</Group>
+						<Group Multi="3">MERRYWEATHER_SWAT_ROADBLOCK_2</Group>
+						<Group Multi="6">MERRYWEATHER_SWAT_SPIKEBLOCK</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="6">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_GUNNER</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_GUNNER</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</OneStar>
+					<TwoStar>
+					    <Group Multi="1">$PoliceLightblock</Group>
+						<Group Multi="1">MERRYWEATHER_LIGHTBLOCK</Group>
+					</TwoStar>
+					<ThreeStar>
+					    <Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="3">MERRYWEATHER_ELITE_SPIKEBLOCK</Group>
+					</ThreeStar>
+					<FourStar>
+					    <Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_GUNNER</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_GUNNER</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_2</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_3</Group>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="4">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">MERRYWEATHER_ELITE_ROADBLOCK_GUNNER</Group>
+						<Group Multi="2">MERRYWEATHER_ELITE_SPIKEBLOCK_TANK</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
         </Location>
         <Location>
             <Name>HumaneLabs</Name>
             <Parent>Merryweather</Parent>
+			<Variables>
+                <Var Name="$PoliceRequest" Value="MW_COP" />
+				<Var Name="$PoliceLightblock" Value="MERRYWEATHER_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="MERRYWEATHER_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="MERRYWEATHER_SPIKEBLOCK" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>NorthYankton</Name>
+            <Parent>NooseHQ</Parent>
+            <Variables>
+				<Var Name="$PoliceRequest" Value="NYSP_COP" />
+				<Var Name="$PoliceLightblock" Value="NYSP_LIGHTBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="NYSP_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="NYSP_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock2" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$SwatSpikeblock" Value="NYSP_SWAT_SPIKEBLOCK" />
+				<Var Name="$FibRoadblock" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$FibRoadblock2" Value="NYSP_SWAT_ROADBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="NYSP_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="NYSP_Gunner_Heli" />
+				<Var Name="$SwatHeli" Value="NYSP_Swat_Heli" />
+				<Var Name="$SwatHeliVest" Value="NYSP_Swat_Heli" />
+            </Variables>
         </Location>
 		<Location>
 			<Name>Ocean</Name>
 			<Variables>
-				<Var Name="$LocalCop" Value="USCG_COP" />
-				<Var Name="$LocalFire" Value="FIRETRUCK" />
-				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
-				<Var Name="$LocalGunHeli" Value="USCG_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="USCG_Gunner_Heli_Vest" />
-				<Var Name="$LocalGunHeliVestHeavy" Value="USCG_Gunner_Heli_Vest_Heavy" />
-				<Var Name="$LocalSwatHeli" Value="USCG_SWAT_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="USCG_SWAT_Heli_Vest" />
+				<Var Name="$PoliceRequest" Value="USCG_COP" />
+				<Var Name="$FireDeptRequest" Value="FIRETRUCK" />
+				<Var Name="$AmbulanceRequest" Value="AMBULANCE" />
+				<Var Name="$PoliceLightblock" Value="USCG_SPIKEBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="USCG_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="USCG_SPIKEBLOCK" />
+				<Var Name="$SwatRoadblock" Value="USCG_SWAT_ROADBLOCK" />
+				<Var Name="$SwatSpikeblock" Value="USCG_SWAT_SPIKEBLOCK" />
+				<Var Name="$MSRTRoadblock" Value="USCG_MSRT_ROADBLOCK" />
+				<Var Name="$MSRTSpikeblock" Value="USCG_MSRT_SPIKEBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="USCG_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="USCG_Gunner_Heli_Vest" />
+				<Var Name="$SwatHeli" Value="USCG_SWAT_Heli" />
+				<Var Name="$SwatHeliVest" Value="USCG_SWAT_Heli_Vest" />
+				<Var Name="$ArmyGunHeli" Value="USCG_MSRT_Gunner_Heli" />
+				<Var Name="$ArmySwatHeli" Value="USCG_MSRT_Heli" />
 			</Variables>
 			<Emergency>
 				<Police>
-					<Group Multi="1">$LocalCop</Group>
+					<Group Multi="1">$PoliceRequest</Group>
 				</Police>
 				<Firetruck>
-					<Group Multi="1">$LocalFire</Group>
+					<Group Multi="1">$FireDeptRequest</Group>
 				</Firetruck>
 				<Ambulance>
-					<Group Multi="1">$LocalAmbulance</Group>
+					<Group Multi="1">$AmbulanceRequest</Group>
 				</Ambulance>
 			</Emergency>
-			<Roadblock />
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$PoliceRoadblock</Group>
+						<Group Multi="1">$PoliceSpikeblock</Group>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</OneStar>
+					<TwoStar>
+						<Group Multi="1">$PoliceLightblock</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group Multi="1">$SwatRoadblock</Group>
+						<Group Multi="1">$SwatSpikeblock</Group>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</FourStar>
+					<FiveStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</FiveStar>
+					<SixStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</SixStar>
+					<SevenStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</SevenStar>
+					<EightStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</EightStar>
+					<NineStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</NineStar>
+					<TenStar>
+						<Group Multi="1">$MSRTRoadblock</Group>
+						<Group Multi="1">$MSRTSpikeblock</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
 			<GunnerHeli>
 				<ResponseClass Weight="regular" Speed="regular" Height="regular">
 					<OneStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</OneStar>
 					<TwoStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</TwoStar>
 					<ThreeStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</ThreeStar>
 					<FourStar>
-						<Group>$LocalGunHeli</Group>
+						<Group>$PoliceGunHeli</Group>
 					</FourStar>
 					<FiveStar>
-						<Group>$LocalGunHeliVest</Group>
+						<Group>$PoliceGunHeliVest</Group>
 					</FiveStar>
 					<SixStar>
-						<Group>$LocalGunHeliVest</Group>
+						<Group>$PoliceGunHeliVest</Group>
 					</SixStar>
 					<SevenStar>
-						<Group>$LocalGunHeliVest</Group>
+						<Group>$PoliceGunHeliVest</Group>
 					</SevenStar>
 					<EightStar>
-						<Group>$LocalGunHeliVestHeavy</Group>
+						<Group>$ArmyGunHeli</Group>
 					</EightStar>
 					<NineStar>
-						<Group>$LocalGunHeliVestHeavy</Group>
+						<Group>$ArmyGunHeli</Group>
 					</NineStar>
 					<TenStar>
-						<Group>$LocalGunHeliVestHeavy</Group>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$PoliceGunHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$PoliceGunHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$PoliceGunHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$PoliceGunHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmyGunHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmyGunHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmyGunHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmyGunHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmyGunHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmyGunHeli</Group>
 					</TenStar>
 				</ResponseClass>
 			</GunnerHeli>
 			<RappelHeli>
 				<ResponseClass Weight="regular" Speed="regular" Height="regular">
 					<OneStar>
-						<Group>$LocalSwatHeli</Group>
+						<Group>$SwatHeli</Group>
 					</OneStar>
 					<TwoStar>
-						<Group>$LocalSwatHeli</Group>
+						<Group>$SwatHeli</Group>
 					</TwoStar>
 					<ThreeStar>
-						<Group>$LocalSwatHeli</Group>
+						<Group>$SwatHeli</Group>
 					</ThreeStar>
 					<FourStar>
-						<Group>$LocalSwatHeli</Group>
+						<Group>$SwatHeli</Group>
 					</FourStar>
 					<FiveStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$SwatHeliVest</Group>
 					</FiveStar>
 					<SixStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$SwatHeliVest</Group>
 					</SixStar>
 					<SevenStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$SwatHeliVest</Group>
 					</SevenStar>
 					<EightStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$ArmySwatHeli</Group>
 					</EightStar>
 					<NineStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$ArmySwatHeli</Group>
 					</NineStar>
 					<TenStar>
-						<Group>$LocalSwatHeliVest</Group>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$SwatHeli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$SwatHeli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$SwatHeli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$SwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$SwatHeliVest</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$SwatHeliVest</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
+					</TenStar>
+				</ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>$SwatHeliVest</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>$SwatHeliVest</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>$SwatHeliVest</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>$SwatHeliVest</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>$ArmySwatHeli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>$ArmySwatHeli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>$ArmySwatHeli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>$ArmySwatHeli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>$ArmySwatHeli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>$ArmySwatHeli</Group>
 					</TenStar>
 				</ResponseClass>
 			</RappelHeli>
 		</Location>
-        <Location>
-            <Name>Alamo</Name>
-            <Parent>BlaineCounty</Parent>
-        </Location>
-        <Location>
-            <Name>PortAuthority_Water</Name>
+		<Location>
+            <Name>City_Water</Name>
             <Parent>City</Parent>
         </Location>
+		<Location>
+            <Name>Airport_Water</Name>
+            <Parent>Airport</Parent>
+        </Location>
+		<Location>
+            <Name>Highway_Water</Name>
+            <Parent>Highway</Parent>
+        </Location>
+		<Location>
+            <Name>LSCounty_Water</Name>
+            <Parent>LSCounty</Parent>
+        </Location>
         <Location>
-            <Name>NorthYankton</Name>
+            <Name>BlaineCounty_Water</Name>
             <Parent>BlaineCounty</Parent>
-            <Variables>
-				<Var Name="$LocalCop" Value="NYSP_COP" />
-				<Var Name="$LocalCarRoadblock" Value="NYSP_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="NYSP_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedAgentCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$FedSwatCarRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="NYSP_SWAT_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="NYSP_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="NYSP_Gunner_Heli" />
-				<Var Name="$LocalSwatHeli" Value="NYSP_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="NYSP_Swat_Heli" />
-				<Var Name="$FibGunHeli" Value="NYSP_Gunner_Heli" />
-				<Var Name="$FibGunHeliVest" Value="NYSP_Gunner_Heli" />
-				<Var Name="$NooseGunHeli" Value="NYSP_Gunner_Heli" />
-				<Var Name="$NooseGunHeliVest" Value="NYSP_Gunner_Heli" />
-				<Var Name="$FibSwatHeli" Value="NYSP_Swat_Heli" />
-				<Var Name="$FibSwatHeliVest" Value="NYSP_Swat_Heli" />
-				<Var Name="$NooseSwatHeli" Value="NYSP_Swat_Heli" />
-				<Var Name="$NooseSwatHeliVest" Value="NYSP_Swat_Heli" />
-            </Variables>
         </Location>
         <Location>
             <Name>CayoPerico</Name>
-            <Parent>Merryweather</Parent>
+            <Emergency>
+				<Police>
+					<Group Multi="1">Cartel_Response</Group>
+				</Police>
+			</Emergency>
+			<Roadblock>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+						<Group>CARTEL_ROADBLOCK_3</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+						<Group>CARTEL_ROADBLOCK_3</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+						<Group>CARTEL_ROADBLOCK_3</Group>
+					</EightStar>
+					<NineStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+						<Group>CARTEL_ROADBLOCK_3</Group>
+					</NineStar>
+					<TenStar>
+						<Group>CARTEL_SPIKEBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK</Group>
+						<Group>CARTEL_ROADBLOCK_2</Group>
+						<Group>CARTEL_ROADBLOCK_3</Group>
+					</TenStar>
+				</ResponseClass>
+			</Roadblock>
+			<GunnerHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>Cartel_Gunner_Heli</Group>
+					</TenStar>
+				</ResponseClass>
+			</GunnerHeli>
+			<RappelHeli>
+				<ResponseClass Weight="regular" Speed="regular" Height="regular">
+					<OneStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</OneStar>
+					<TwoStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</TwoStar>
+					<ThreeStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</ThreeStar>
+					<FourStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</FourStar>
+					<FiveStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</FiveStar>
+					<SixStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</SixStar>
+					<SevenStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</SevenStar>
+					<EightStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</EightStar>
+					<NineStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</NineStar>
+					<TenStar>
+						<Group>Cartel_SWAT_Heli</Group>
+					</TenStar>
+				</ResponseClass>
+			</RappelHeli>
         </Location>
         <Location>
             <Name>Null</Name>
             <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="NULLERS" />
-				<Var Name="$LocalFire" Value="FIRETRUCK" />
-				<Var Name="$LocalAmbulance" Value="AMBULANCE" />
-				<Var Name="$LocalCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$FedAgentSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$FedSwatSpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$ArmyCarRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$ArmySpikeRoadblock" Value="NULLERS_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalGunHeli" Value="NULLERS_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="NULLERS_Gunner_Heli" />
-				<Var Name="$LocalSwatHeli" Value="NULLERS_Gunner_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="NULLERS_Gunner_Heli" />
+            <Variables>			
+				<Var Name="$PoliceRequest" Value="NULLERS" />
+				<Var Name="$FireDeptRequest" Value="FIRETRUCK" />
+				<Var Name="$AmbulanceRequest" Value="AMBULANCE" />
+				<Var Name="$PoliceLightblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$PoliceRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$PoliceSpikeblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$SwatRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$SwatRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$SwatHeavyRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$SwatSpikeblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$NooseRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$NooseRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$NooseRoadblock3" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$NooseRoadblock4" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$NooseSpikeblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibSwatRoadblock3" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$FibSwatSpikeblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmyRoadblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmyRoadblock2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmyRoadblockGunner" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmyRoadblockGunner2" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmySpikeblock" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmySpikeblockAPC" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$ArmySpikeblockTank" Value="NULLERS_ROADBLOCK" />
+				<Var Name="$PoliceGunHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$PoliceGunHeliVest" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$SwatHeli" Value="NULLERS_Gunner_Heli" />
+				<Var Name="$SwatHeliVest" Value="NULLERS_Gunner_Heli" />
 				<Var Name="$FibGunHeli" Value="NULLERS_Gunner_Heli" />
 				<Var Name="$FibGunHeliVest" Value="NULLERS_Gunner_Heli" />
 				<Var Name="$NooseGunHeli" Value="NULLERS_Gunner_Heli" />
@@ -529,23 +3067,6 @@
 				<Var Name="$NooseSwatHeliVest" Value="NULLERS_Gunner_Heli" />
 				<Var Name="$ArmyGunHeli" Value="NULLERS_Gunner_Heli" />
 				<Var Name="$ArmySwatHeli" Value="NULLERS_Gunner_Heli" />
-            </Variables>
-        </Location>
-		<Location>
-            <Name>LibertyCity</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="LCPD_COP" />
-				<Var Name="$LocalFire" Value="LCFIRETRUCK" />
-				<Var Name="$LocalAmbulance" Value="LCAMBULANCE" />
-				<Var Name="$LocalCarRoadblock" Value="LCPD_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSpikeRoadblock" Value="LCPD_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalSwatCarRoadblock" Value="FIB_ROAD_BLOCK_CARS" />
-				<Var Name="$LocalSwatSpikeRoadblock" Value="FIB_ROAD_BLOCK_SPIKES" />
-				<Var Name="$LocalGunHeli" Value="FIB_Gunner_Heli" />
-				<Var Name="$LocalGunHeliVest" Value="FIB_Gunner_Heli_Vest" />
-				<Var Name="$LocalSwatHeli" Value="FIB_Swat_Heli" />
-				<Var Name="$LocalSwatHeliVest" Value="FIB_Swat_Heli_Vest" />
             </Variables>
         </Location>
   </ResponseDispatchLocations>

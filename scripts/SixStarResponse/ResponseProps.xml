@@ -22,34 +22,41 @@
 	  <IsSpike>true</IsSpike>
     </Prop>
 	<!-- Barriers -->
-	<Prop>
-      <Tag>SANDBAG_BARRIER</Tag>
-      <PropModel>sandbag1_model</PropModel>
-      <Heading>YForward</Heading>
-      <Measure>Width</Measure>
-	  <Separation>0</Separation>
-	  <IsDynamic>false</IsDynamic>
-    </Prop>
     <Prop>
       <Tag>CONCRETE_BARRIER_1</Tag>                     			
-      <PropModel>prop_barier_conc_01a</PropModel>       	
-      <Heading>YForward</Heading>				
-      <Measure>Width</Measure>			
-	  <Separation>0.5</Separation>	
+      <PropModel>prop_barier_conc_01a</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>1</Separation>
     </Prop>
 	<Prop>
       <Tag>WATER_BARRIER_1</Tag>                     			
       <PropModel>prop_barrier_wat_03a</PropModel>       	
       <Heading>YForward</Heading>				
       <Measure>Width</Measure>			
-	  <Separation>0.50</Separation>		  
+	  <Separation>1</Separation>		  
     </Prop>
 	<Prop>
-      <Tag>WATER_BARRIER_2</Tag>                     			
-      <PropModel>prop_barrier_wat_03b</PropModel>       	
-      <Heading>YForward</Heading>				
-      <Measure>Width</Measure>			
-	  <Separation>1</Separation>		  
+      <Tag>WATER_BARRIER_2</Tag>
+      <PropModel>prop_barrier_wat_03b</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>1</Separation>
+    </Prop>
+	<Prop>
+      <Tag>WATER_BARRIER_3</Tag>
+      <PropModel>prop_plas_barier_01a</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>0.5</Separation>
+    </Prop>
+	<Prop>
+      <Tag>SANDBAG_BARRIER</Tag>                     			
+      <PropModel>sandbag1_model</PropModel>       	
+      <Heading>YForward</Heading>			
+      <Measure>Width</Measure>		
+	  <Separation>0</Separation>
+	  <IsDynamic>false</IsDynamic>
     </Prop>
 	<!-- Fences -->
     <Prop>
@@ -57,19 +64,19 @@
       <PropModel>prop_fncsec_04a</PropModel>       	
       <Heading>XForward</Heading>				
       <Measure>Width</Measure>			
-	  <Separation>0.5</Separation>		  
+	  <Separation>2</Separation>		  
     </Prop>
 	<!-- Cones -->
     <Prop>
       <Tag>CONE_1</Tag>                     			
-      <PropModel>prop_roadcone01a</PropModel>       	
+      <PropModel>prop_roadcone02a</PropModel>       	
       <Heading>XForward</Heading>				
       <Measure>Width</Measure>			
 	  <Separation>1</Separation>		  
     </Prop>
     <Prop>
       <Tag>CONE_2</Tag>                     			
-      <PropModel>prop_roadcone02a</PropModel>       	
+      <PropModel>prop_roadcone01a</PropModel>       	
       <Heading>XForward</Heading>				
       <Measure>Width</Measure>			
 	  <Separation>1</Separation>		  
@@ -82,19 +89,33 @@
 	  <Separation>1</Separation>		  
     </Prop>
 	<!-- Wood horses -->
-    <Prop>
-      <Tag>WOOD_HORSE_1</Tag>                     			
-      <PropModel>prop_barrier_work05</PropModel>       	
-      <Heading>XForward</Heading>				
-      <Measure>Width</Measure>					
-	  <Separation>0.5</Separation>	
+	<Prop>
+      <Tag>WOOD_HORSE_1</Tag>
+      <PropModel>prop_barrier_work05a</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>1.5</Separation>
     </Prop>
 	<Prop>
-      <Tag>WOOD_HORSE_2</Tag>                     			
-      <PropModel>prop_barrier_work06a</PropModel>       	
-      <Heading>XForward</Heading>				
-      <Measure>Width</Measure>				
-	  <Separation>0.5</Separation>		  
+      <Tag>WOOD_HORSE_2</Tag>
+      <PropModel>prop_barrier_work06c</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>1.5</Separation>
+    </Prop>
+	<Prop>
+      <Tag>WOOD_HORSE_3</Tag>
+      <PropModel>prop_barrier_work04c</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>2.5</Separation>
+    </Prop>
+	<Prop>
+      <Tag>WOOD_HORSE_4</Tag>
+      <PropModel>prop_barrier_work06a</PropModel>
+      <Heading>XForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>1.5</Separation>		  
     </Prop>
 	<!-- Lights -->
 	<Prop>
@@ -102,11 +123,11 @@
       <PropModel>prop_generator_03b</PropModel>       	
       <Heading>XForward</Heading>				
       <Measure>Width</Measure>			
-	  <Separation>2</Separation>		  
+	  <Separation>4</Separation>		  
     </Prop>
     <Prop>
       <Tag>LIGHTS_2</Tag>                     			
-      <PropModel>prop_worklight_01a</PropModel>       	
+      <PropModel>prop_worklight_03a</PropModel>       	
       <Heading>YForward</Heading>				
       <Measure>Width</Measure>			
 	  <Separation>2</Separation>  
@@ -119,11 +140,19 @@
 	  <Separation>2</Separation>	  
     </Prop>
     <Prop>
-      <Tag>LIGHTS_4</Tag>                     			
-      <PropModel>prop_worklight_03a</PropModel>       	
-      <Heading>YForward</Heading>				
-      <Measure>Width</Measure>		
-	  <Separation>2</Separation>	  
+      <Tag>LIGHTS_4</Tag>
+      <PropModel>prop_worklight_01a</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>2</Separation>
+    </Prop>
+	<!-- Dirt Ramps -->
+	<Prop>
+      <Tag>RAMP_1</Tag>
+      <PropModel>prop_pile_dirt_07</PropModel>
+      <Heading>YForward</Heading>
+      <Measure>Width</Measure>
+	  <Separation>2</Separation>
     </Prop>
 </Props>
 </SixStarResponse>

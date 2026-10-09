@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <SixStarResponse>
     <ScriptReplacementSets>
 		<Set>
-			<!-- Mission Triggerer A (all missions from the start of the game to the end of mr.philips) -->
+			<!-- Mission Triggerer A -->
             <ScriptName>mission_triggerer_a</ScriptName>
 			<CreateVehicle>
                 <Replacement>
@@ -42,7 +43,7 @@
             </ModelManagement>
         </Set>
 		<Set>
-			<!-- Mission Triggerer B (trevor's second mission to the end of blitz play) -->
+			<!-- Mission Triggerer B -->
             <ScriptName>mission_triggerer_b</ScriptName>
 			<CreatePed>
                 <Replacement>
@@ -64,7 +65,7 @@
             </ModelManagement>
         </Set>
 		<Set>
-			<!-- Mission Triggerer C (i fought the law to the end of the first prep for the big score) -->
+			<!-- Mission Triggerer C -->
             <ScriptName>mission_triggerer_c</ScriptName>
 			<CreateVehicle>
                 <Replacement>
@@ -108,7 +109,7 @@
             </ModelManagement>
         </Set>
 		<Set>
-			<!-- Mission Triggerer D (the rest of the game) -->
+			<!-- Mission Triggerer D -->
             <ScriptName>mission_triggerer_d</ScriptName>
 			<CreateVehicle>
                 <Replacement>
@@ -155,7 +156,7 @@
 			<!-- Bolingbroke Penitentiary Random Events -->
             <ScriptName>re_prison</ScriptName>
             <CreateVehicle>
-                <Replacement>
+				<Replacement>
                     <From>polmav</From>
                     <To>hwaymav</To>
                 </Replacement>
@@ -170,7 +171,7 @@
                     <To>SADCR</To>
                 </Replacement>
             </CreatePed>
-            <CreatePedInsideVehicle>
+			<CreatePedInsideVehicle>
 				<Replacement Vehicle="hwaymav">
                     <From>s_m_m_prisguard_01</From>
                     <To>SAHP_PILOT</To>
@@ -185,7 +186,7 @@
                     <From>police3</From>
                     <To>pcar</To>
                 </Replacement>
-                <Replacement>
+				<Replacement>
                     <From>polmav</From>
                     <To>hwaymav</To>
                 </Replacement>
@@ -209,6 +210,10 @@
                     <To>WEAPON_PUMPSHOTGUN</To>
 					<To>WEAPON_CARBINERIFLE</To>
                 </Replacement>
+				<Replacement>
+                    <From>WEAPON_SNIPERRIFLE</From>
+                    <To>WEAPON_MARKSMANRIFLE_AI</To>
+                </Replacement>
             </GiveWeaponToPed>
             <SetCurrentPedWeapon>
 				<Replacement>
@@ -220,12 +225,16 @@
                     <To>WEAPON_PUMPSHOTGUN</To>
 					<To>WEAPON_CARBINERIFLE</To>
                 </Replacement>
+				<Replacement>
+                    <From>WEAPON_SNIPERRIFLE</From>
+                    <To>WEAPON_MARKSMANRIFLE_AI</To>
+                </Replacement>
             </SetCurrentPedWeapon>
         </Set>
         <Set>
 			<!-- Fort Zancudo Random Events -->
             <ScriptName>re_armybase</ScriptName>
-            <CreateVehicle>
+			<CreateVehicle>
                 <Replacement>
                     <From>rhino</From>
                     <To>rhino2</To>
@@ -266,13 +275,21 @@
             <GiveWeaponToPed>
                 <Replacement>
                     <From>WEAPON_ASSAULTRIFLE</From>
-                    <To>WEAPON_UNARMED</To>
+                    <To>WEAPON_CARBINERIFLE_AI</To>
+                </Replacement>
+				<Replacement>
+                    <From>WEAPON_STINGER</From>
+                    <To>WEAPON_HOMINGLAUNCHER_AI</To>
                 </Replacement>
             </GiveWeaponToPed>
             <SetCurrentPedWeapon>
                 <Replacement>
                     <From>WEAPON_ASSAULTRIFLE</From>
-                    <To>WEAPON_UNARMED</To>
+                    <To>WEAPON_CARBINERIFLE_AI</To>
+                </Replacement>
+				<Replacement>
+                    <From>WEAPON_STINGER</From>
+                    <To>WEAPON_HOMINGLAUNCHER_AI</To>
                 </Replacement>
             </SetCurrentPedWeapon>
 			<ModelManagement>
@@ -296,34 +313,65 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
-            <ScriptName>am_armybase</ScriptName>
-            <CreateVehicle>
+		<Set>
+			<!-- Random Event: Gang Intimidation -->
+            <ScriptName>re_gang_intimidation</ScriptName>
+			<CreatePed>
                 <Replacement>
-                    <From>rhino</From>
-                    <To>rhino2</To>
+                    <From>g_m_y_mexgoon_02</From>
+                    <To>MARABUNTA</To>
+					<To>MARABUNTA_2</To>
+					<To>MARABUNTA_3</To>
                 </Replacement>
-            </CreateVehicle>
+            </CreatePed>
             <ModelManagement>
                 <Replacement>
-                    <From>rhino</From>
-                    <To>rhino2</To>
+                    <From>g_m_y_mexgoon_02</From>
+                    <To>g_m_y_salvagoon_01</To>
+					<To>g_m_y_salvagoon_02</To>
+					<To>g_m_y_salvagoon_03</To>
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
+			<!-- Random Event: Hitch Lift -->
+            <ScriptName>re_hitch_lift</ScriptName>
+			<CreatePed>
+                <Replacement>
+                    <From>s_m_m_marine_01</From>
+                    <To>USAFSF</To>
+                </Replacement>
+            </CreatePed>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_m_marine_01</From>
+                    <To>s_m_y_marine_04</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
 			<!-- Random Event: Prisoner Lift -->
             <ScriptName>re_prisonerlift</ScriptName>
+			<CreateVehicle>
+                <Replacement>
+                    <From>sheriff</From>
+                    <To>lssheriff</To>
+                </Replacement>
+            </CreateVehicle>
             <CreatePedInsideVehicle>
                 <Replacement>
-                    <From>S_M_Y_Ranger_01</From>
-                    <To>BCSO_OLD</To>
+                    <From>s_m_y_ranger_01</From>
+                    <To>LSSD_MALE</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
+				<Replacement>
+                    <From>sheriff</From>
+                    <To>lssheriff</To>
+                </Replacement>
                 <Replacement>
-                    <From>S_M_Y_Ranger_01</From>
-                    <To>S_M_M_Sheriff_01</To>
+                    <From>s_m_y_ranger_01</From>
+                    <To>s_m_y_lssheriff_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -343,18 +391,40 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Optional Mission: The Good Husband -->
             <ScriptName>me_amanda1</ScriptName>
-            <CreatePed>
+			<CreateVehicle>
+                <Replacement>
+                    <From>police</From>
+                    <To>rhpolice</To>
+                </Replacement>
+            </CreateVehicle>
+			<CreatePed>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>LSPD_MALE_ME_AMANDA1</To>
+                    <To>RHPD_MALE_ME_AMANDA1</To>
                 </Replacement>
             </CreatePed>
+			<GetEntityModel>
+                <Replacement>
+                    <From>rhpolice</From>
+                    <To>police</To>
+                </Replacement>
+            </GetEntityModel>
+			<ModelManagement>
+                <Replacement>
+                    <From>police</From>
+                    <To>rhpolice</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_rhcop_01</To>
+                </Replacement>
+            </ModelManagement>
         </Set>
 		<Set>
-			<!-- Mission: Bugstars Van (The Jewel Store Job Prep) -->
+			<!-- Mission: Bugstars Van (Jewerly Store Prep) -->
             <ScriptName>jewelry_prep1a</ScriptName>
             <CreateVehicle>
                 <Replacement>
@@ -386,7 +456,7 @@
             </ModelManagement>
         </Set>
         <Set>
-			<!-- Mission: Carbine Rifles (The Jewel Store Job Prep) -->
+			<!-- Mission: Carbine Rifles (Jewerly Store Prep) -->
             <ScriptName>jewelry_prep1b</ScriptName>
             <CreateVehicle>
                 <Replacement>
@@ -401,25 +471,63 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
+			<!-- Mission: Jewerly Store Heist -->
+            <ScriptName>jewelry_heist</ScriptName>
+            <CreateVehicle>
+                <Replacement>
+                    <From>police3</From>
+                    <To>rhpolice3</To>
+                </Replacement>
+            </CreateVehicle>
+			<CreatePed>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>RHPD_MALE_VEST</To>
+                </Replacement>
+            </CreatePed>
+			<CreatePedInsideVehicle>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>RHPD_MALE_VEST</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
+			<GetEntityModel>
+                <Replacement>
+                    <From>rhpolice3</From>
+                    <To>police3</To>
+                </Replacement>
+            </GetEntityModel>
+            <ModelManagement>
+                <Replacement>
+                    <From>police3</From>
+                    <To>rhpolice3</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_rhcop_01</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
 			<!-- Mission: Trevor Philips Industries -->
             <ScriptName>chinese1</ScriptName>
             <CreatePed>
                 <Replacement>
-                    <From>G_M_Y_MexGoon_02</From>
+                    <From>g_m_y_mexgoon_02</From>
                     <To>AZTECA</To>
                 </Replacement>
             </CreatePed>
-            <CreatePedInsideVehicle>
+			<CreatePedInsideVehicle>
                 <Replacement>
-                    <From>G_M_Y_MexGoon_02</From>
+                    <From>g_m_y_mexgoon_02</From>
                     <To>AZTECA</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
                 <Replacement>
-                    <From>G_M_Y_MexGoon_02</From>
-                    <To>G_M_M_MexBoss_01</To>
+                    <From>g_m_y_mexgoon_02</From>
+                    <To>g_m_y_azteca_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -430,6 +538,10 @@
                 <Replacement>
                     <From>police3</From>
                     <To>lssheriff2</To>
+                </Replacement>
+				<Replacement>
+                    <From>polmav</From>
+                    <To>lssheriffmav</To>
                 </Replacement>
             </CreateVehicle>
             <CreatePed>
@@ -447,9 +559,9 @@
                     <From>s_m_y_cop_01</From>
                     <To>PAP_MALE_VEST</To>
                 </Replacement>
-				<Replacement Vehicle="polmav">
+				<Replacement Vehicle="lssheriffmav">
                     <From>s_m_y_swat_01</From>
-                    <To>LSPD_SWAT_Heli</To>
+                    <To>LSSD_SWAT_Sniper</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
@@ -457,10 +569,18 @@
                     <From>police3</From>
                     <To>lssheriff2</To>
                 </Replacement>
+				<Replacement>
+                    <From>polmav</From>
+                    <To>lssheriffmav</To>
+                </Replacement>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
                     <To>s_m_y_lssheriff_01</To>
 					<To>s_m_y_portcop_01</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_swat_01</From>
+                    <To>s_m_y_lsseb_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -502,41 +622,99 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
-			<!-- Mission: The Merryweather Heist (Freighter) -->
-            <ScriptName>docks_heista</ScriptName>
-            <CreatePed>
+		<Set>
+			<!-- Mission: Blitz Play -->
+            <ScriptName>fbi4</ScriptName>
+			<CreateVehicle>
                 <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
+                    <From>police3</From>
+                    <To>lssheriff2</To>
                 </Replacement>
-            </CreatePed>
-            <CreatePedInsideVehicle>
+				<Replacement>
+                    <From>polmav</From>
+                    <To>lssheriffmav</To>
+                </Replacement>
+            </CreateVehicle>
+			<CreatePedInsideVehicle>
                 <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
+                    <From>s_m_y_cop_01</From>
+                    <To>LSSD_MALE_VEST</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_swat_01</From>
+                    <To>LSSD_SWAT</To>
                 </Replacement>
             </CreatePedInsideVehicle>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>LSSD_MALE_VEST</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_swat_01</From>
+                    <To>LSSD_SWAT</To>
+                </Replacement>
+            </CreatePed>
+            <ModelManagement>
+				<Replacement>
+                    <From>police3</From>
+                    <To>lssheriff2</To>
+                </Replacement>
+				<Replacement>
+                    <From>polmav</From>
+                    <To>lssheriffmav</To>
+                </Replacement>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_lssheriff_01</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_swat_01</From>
+                    <To>s_m_y_lsseb_01</To>
+                </Replacement>
+            </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: Mr. Richards -->
             <ScriptName>solomon1</ScriptName>
             <CreatePed>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
                     <To>s_m_m_gentransport</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
+			<!-- Mission: Eye in the sky -->
+            <ScriptName>carsteal2</ScriptName>
+			<CreatePed>
+                <Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>LSIA_MALE_VEST</To>
+                </Replacement>
+            </CreatePed>
+            <CreatePedInsideVehicle>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>LSPD_Pilot_Mission</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
+			<ModelManagement>
+                <Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>s_m_y_lsiacop_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -557,7 +735,7 @@
             </ModelManagement>
         </Set>
 		<Set>
-			<!-- Mission: Minor Turbulence -->
+			<!-- Mission: Minor Turbolence -->
             <ScriptName>exile1</ScriptName>
 			<CreatePedInsideVehicle>
                 <Replacement>
@@ -572,7 +750,7 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: Paleto Score Setup -->
             <ScriptName>rural_bank_setup</ScriptName>
             <CreatePed>
@@ -634,7 +812,7 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: The Paleto Score -->
             <ScriptName>rural_bank_heist</ScriptName>
             <CreatePed>
@@ -648,7 +826,7 @@
                 </Replacement>
             </CreatePed>
             <CreateVehicle>
-                <Replacement>
+				<Replacement>
                     <From>crusader</From>
                     <To>squaddie3</To>
                 </Replacement>
@@ -676,11 +854,11 @@
                 </Replacement>
                 <Replacement Vehicle="sheriffmav">
                     <From>s_m_y_sheriff_01</From>
-                    <To>BCSO_SWAT_Heli</To>
+                    <To>BCSO_SWAT</To>
                 </Replacement>
                 <Replacement Vehicle="sheriffmav">
                     <From>s_m_y_swat_01</From>
-                    <To>BCSO_SWAT_Heli</To>
+                    <To>BCSO_SWAT</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <SetPedComponentVariation>
@@ -700,7 +878,7 @@
                 </Replacement>
             </SetPedComponentVariation>
             <ModelManagement>
-                <Replacement>
+				<Replacement>
                     <From>crusader</From>
                     <To>squaddie3</To>
                 </Replacement>
@@ -735,31 +913,7 @@
                 </Replacement>
             </GiveWeaponToPed>
         </Set>
-        <Set>
-			<!-- Mission: Derailed -->
-            <ScriptName>exile3</ScriptName>
-            <CreatePed>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
-            </CreatePed>
-            <CreatePedInsideVehicle>
-                <Replacement Vehicle="mesa3">
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
-                <Replacement Vehicle="dinghy2">
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
-                <Replacement Vehicle="buzzard">
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_PILOT_STORY</To>
-                </Replacement>
-            </CreatePedInsideVehicle>
-        </Set>
-        <Set>
+		<Set>
 			<!-- Mission: Pack Man -->
             <ScriptName>carsteal4</ScriptName>
             <CreatePedInsideVehicle>
@@ -791,21 +945,66 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
+			<!-- Mission: The Bureau Raid - Covert (Fire Crew) -->
+            <ScriptName>agency_heist3a</ScriptName>
+			<CreateVehicle>
+				<Replacement>
+                    <From>police</From>
+                    <To>fbipolice2</To>
+                </Replacement>
+            </CreateVehicle>
+            <CreatePed>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>FIB_COP</To>
+                </Replacement>
+            </CreatePed>
+            <ModelManagement>
+				<Replacement>
+                    <From>police</From>
+                    <To>fbipolice2</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_fibcop_01</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
 			<!-- Mission: The Bureau Raid - Roof Entry -->
             <ScriptName>agency_heist3b</ScriptName>
-            <CreatePed>
+			<CreateVehicle>
                 <Replacement>
+                    <From>frogger</From>
+                    <To>fbifrogger</To>
+                </Replacement>
+				<Replacement>
+                    <From>police3</From>
+                    <To Multi="3">police3</To>
+					<To Multi="1">fbipolice3</To>
+                </Replacement>
+            </CreateVehicle>
+            <CreatePed>
+				<Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>NOOSE_SEP_VEST</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_m_fiboffice_01</From>
+                    <To>FIB_SUIT</To>
+                </Replacement>
+				<Replacement>
                     <From>s_m_m_ciasec_01</From>
-                    <To>FIB_OFFICE</To>
+                    <To>FIB_AGENT</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_m_highsec_01</From>
+                    <To>FIB_COP_VEST</To>
                 </Replacement>
                 <Replacement>
                     <From>s_m_y_swat_01</From>
                     <To>FIB_SWAT</To>
-                </Replacement>
-                <Replacement>
-                    <From>s_m_m_security_01</From>
-                    <To>NOOSE_PIA</To>
                 </Replacement>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
@@ -825,29 +1024,103 @@
                     <From>s_m_m_pilot_02</From>
                     <To>FIB_Pilot_Vest</To>
                 </Replacement>
+				<Replacement Vehicle="police3">
+                    <From>s_m_y_cop_01</From>
+                    <To>LSPD_MALE_VEST</To>
+                </Replacement>
+				<Replacement Vehicle="fbipolice3">
+                    <From>s_m_y_cop_01</From>
+                    <To>FIB_COP_VEST</To>
+                </Replacement>
             </CreatePedInsideVehicle>
             <SetPedComponentVariation>
                 <Replacement Ped="s_m_y_fibswat_01">
                     <From>10,0,1</From>
                     <To>10,0,0</To>
                 </Replacement>
+				<Replacement Ped="s_m_y_fibcop_01">
+                    <From>9,2,0</From>
+                    <To>9,0,0</To>
+                </Replacement>
             </SetPedComponentVariation>
             <ModelManagement>
-                <Replacement>
-                    <From>s_m_m_security_01</From>
-                    <To>s_m_m_noose_01</To>
+				<Replacement>
+                    <From>frogger</From>
+                    <To>fbifrogger</To>
+                </Replacement>
+				<Replacement>
+                    <From>police3</From>
+                    <To>police3</To>
+					<To>fbipolice3</To>
                 </Replacement>
                 <Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>s_m_m_noose_02</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_m_fiboffice_01</From>
+                    <To>s_m_m_fiboffice_03</To>
+                </Replacement>
+				<Replacement>
                     <From>s_m_m_ciasec_01</From>
-                    <To>s_m_m_fiboffice_02</To>
+                    <To>s_m_m_fibsec_01</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_m_highsec_01</From>
+					<To>s_m_y_fibcop_01</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_swat_01</From>
+                    <To>s_m_y_fibswat_01</To>
                 </Replacement>
                 <Replacement>
                     <From>s_m_m_pilot_02</From>
                     <To>s_m_y_pilot_01</To>
                 </Replacement>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_cop_01</To>
+					<To>s_m_y_fibcop_01</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
+			<!-- Mission: Legal Trouble -->
+            <ScriptName>solomon3</ScriptName>
+			<CreateVehicle>
                 <Replacement>
-                    <From>s_m_y_swat_01</From>
-                    <To>s_m_y_fibswat_01</To>
+                    <From>police3</From>
+                    <To>lsiapolice2</To>
+                </Replacement>
+				<Replacement>
+                    <From>maverick</From>
+                    <To>newsconada</To>
+                </Replacement>
+            </CreateVehicle>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>LSIA_MALE</To>
+                </Replacement>
+            </CreatePed>
+            <CreatePedInsideVehicle>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>LSIA_MALE</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
+            <ModelManagement>
+				<Replacement>
+                    <From>police3</From>
+                    <To>lsiapolice2</To>
+                </Replacement>
+				<Replacement>
+                    <From>maverick</From>
+                    <To>newsconada</To>
+                </Replacement>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_y_lsiacop_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -859,18 +1132,7 @@
                     <From>s_m_y_swat_01</From>
                     <To>FIB_SWAT</To>
                 </Replacement>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                    <To>MERRYWEATHER_ELITE_FEMALE</To>
-                </Replacement>
             </CreatePed>
-            <CreatePedInsideVehicle>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_PILOT_STORY</To>
-                </Replacement>
-            </CreatePedInsideVehicle>
             <RegisterEntityForCutscene>
                 <Replacement>
                     <From>s_m_y_swat_01</From>
@@ -888,28 +1150,29 @@
                     <From>s_m_y_swat_01</From>
                     <To>s_m_y_fibswat_01</To>
                 </Replacement>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>s_m_y_blackops_01</To>
-                    <To>s_f_y_blackops_01</To>
-                </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: Meltdown -->
             <ScriptName>michael4</ScriptName>
             <CreatePed>
                 <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
+                    <From>s_m_y_blackops_02</From>
+                    <To>Merryweather_Elite</To>
                 </Replacement>
             </CreatePed>
-            <CreatePedInsideVehicle>
+			<CreatePedInsideVehicle>
                 <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
+                    <From>s_m_y_blackops_02</From>
+                    <To>Merryweather_Elite</To>
                 </Replacement>
             </CreatePedInsideVehicle>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_y_blackops_02</From>
+                    <To>s_m_y_blackops_04</To>
+                </Replacement>
+            </ModelManagement>
         </Set>
 		<Set>
 			<!-- Mission: The Big Score - Subtle (Police Stingers setup) -->
@@ -958,53 +1221,27 @@
         <Set>
 			<!-- Mission: The Big Score - Subtle Approach -->
             <ScriptName>finale_heist2a</ScriptName>
-            <CreateVehicle>
-                <Replacement>
-                    <From>polmav</From>
-                    <To>noosemav</To>
-                </Replacement>
-            </CreateVehicle>
             <CreatePed>
-                <Replacement>
-                    <From>s_m_y_swat_01</From>
-                    <To>Noose</To>
-                </Replacement>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
                     <To>LSPD_MALE_VEST</To>
                 </Replacement>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
-                <Replacement Vehicle="noosemav">
+                <Replacement Vehicle="polmav">
                     <From>s_m_y_cop_01</From>
-                    <To>NOOSE_Heli_Carbine_Vest</To>
+                    <To>LSPD_SWAT_Sniper</To>
                 </Replacement>
                 <Replacement Vehicle="police3">
                     <From>s_m_y_cop_01</From>
                     <To>LSPD_MALE_VEST</To>
                 </Replacement>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
                 <Replacement>
-                    <From>polmav</From>
-                    <To>noosemav</To>
-                </Replacement>
-                <Replacement>
-                    <From>s_m_y_swat_01</From>
-                    <To>s_m_y_noose_01</To>
-                </Replacement>
-                <Replacement>
                     <From>s_m_y_cop_01</From>
                     <To>s_m_y_cop_01</To>
-                    <To>s_m_y_pilot_01</To>
+                    <To>s_m_y_swat_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -1016,6 +1253,10 @@
                     <From>polmav</From>
                     <To>noosemav</To>
                 </Replacement>
+				<Replacement>
+                    <From>police3</From>
+                    <To>noosepolice3</To>
+                </Replacement>
                 <Replacement>
                     <From>fbi2</From>
                     <To>nooset2</To>
@@ -1028,10 +1269,14 @@
                 </Replacement>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>LSPD_MALE_VEST</To>
+                    <To>NOOSE_SEP_VEST</To>
                 </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>NOOSE_SEP_VEST</To>
+                </Replacement>
                 <Replacement Vehicle="frogger">
                     <From>s_m_y_swat_01</From>
                     <To>Noose</To>
@@ -1042,17 +1287,25 @@
                     <From>polmav</From>
                     <To>noosemav</To>
                 </Replacement>
+				<Replacement>
+                    <From>police3</From>
+                    <To>noosepolice3</To>
+                </Replacement>
+				<Replacement>
+                    <From>fbi2</From>
+                    <To>nooset2</To>
+                </Replacement>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_m_noose_02</To>
+                </Replacement>
                 <Replacement>
                     <From>s_m_y_swat_01</From>
                     <To>s_m_y_noose_01</To>
                 </Replacement>
-                <Replacement>
-                    <From>fbi2</From>
-                    <To>nooset2</To>
-                </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: The Third Way - Ending C Part 1 -->
             <ScriptName>finalec1</ScriptName>
             <CreatePed>
@@ -1060,23 +1313,15 @@
                     <From>s_m_y_swat_01</From>
                     <To>FIB_SWAT</To>
                 </Replacement>
-                <Replacement>
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
+				<Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>FIB_SWAT</To>
                 </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
                 <Replacement Vehicle="fbi2">
                     <From>s_m_y_swat_01</From>
                     <To>FIB_SWAT</To>
-                </Replacement>
-                <Replacement Vehicle="mesa3">
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_STORY</To>
-                </Replacement>
-                <Replacement Vehicle="buzzard">
-                    <From>s_m_y_blackops_01</From>
-                    <To>MERRYWEATHER_ELITE_PILOT_STORY</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <RegisterEntityForCutscene>
@@ -1095,6 +1340,22 @@
                 <Replacement>
                     <From>s_m_y_swat_01</From>
                     <To>s_m_y_fibswat_01</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
+			<!-- Mission: The Third Way - Ending C Part 2 -->
+            <ScriptName>finalec2</ScriptName>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>FIB_OFFICE</To>
+                </Replacement>
+            </CreatePed>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>s_m_m_fiboffice_02</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -1166,7 +1427,7 @@
                 </Replacement>
             </ModelManagement>
         </Set>
-        <Set>
+		<Set>
 			<!-- Mission: Grass Roots - Before Mission (Strangers and Freaks) -->
             <ScriptName>launcher_barry</ScriptName>
             <CreatePed>
@@ -1216,28 +1477,94 @@
             </ModelManagement>
         </Set>
 		<Set>
+			<!-- Mission: Risk Assessment (Strangers and Freaks) -->
+            <ScriptName>extreme1</ScriptName>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>CIVILIAN_PILOT</To>
+                </Replacement>
+            </CreatePed>
+            <CreatePedInsideVehicle>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>CIVILIAN_PILOT</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>s_m_m_gentransport</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
+			<!-- Mission: Liquidity Risk (Strangers and Freaks) -->
+            <ScriptName>extreme2</ScriptName>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>LSIA_MALE_VEST</To>
+                </Replacement>
+            </CreatePed>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_m_security_01</From>
+                    <To>s_m_y_lsiacop_01</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
+			<!-- Mission: Targeted Risk (Strangers and Freaks) -->
+            <ScriptName>extreme3</ScriptName>
+            <CreatePed>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>CIVILIAN_PILOT</To>
+                </Replacement>
+            </CreatePed>
+            <CreatePedInsideVehicle>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>CIVILIAN_PILOT</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
+            <ModelManagement>
+                <Replacement>
+                    <From>s_m_y_pilot_01</From>
+                    <To>s_m_m_gentransport</To>
+                </Replacement>
+            </ModelManagement>
+        </Set>
+		<Set>
 			<!-- Mission: Breach of Contract - Before Mission (Strangers and Freaks) -->
             <ScriptName>launcher_josh</ScriptName>
 			<CreateVehicle>
                 <Replacement>
                     <From>police3</From>
-                    <To>lssheriff</To>
+                    <To>rhpolice3</To>
                 </Replacement>
             </CreateVehicle>
-            <CreatePed>
+			<CreatePed>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>LSSD_MALE</To>
+                    <To>RHPD_MALE</To>
                 </Replacement>
             </CreatePed>
+			<CreatePedInsideVehicle>
+                 <Replacement>
+                    <From>s_m_y_cop_01</From>
+                    <To>RHPD_MALE_VEST</To>
+                </Replacement>
+            </CreatePedInsideVehicle>
             <ModelManagement>
 				<Replacement>
                     <From>police3</From>
-                    <To>lssheriff</To>
+                    <To>rhpolice3</To>
                 </Replacement>
 				<Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>s_m_y_lssheriff_01</To>
+                    <To>s_m_y_rhcop_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -1247,29 +1574,29 @@
 			<CreateVehicle>
                 <Replacement>
                     <From>police3</From>
-                    <To>lssheriff</To>
+                    <To>rhpolice3</To>
                 </Replacement>
             </CreateVehicle>
-            <CreatePed>
+			<CreatePed>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>LSSD_MALE</To>
+                    <To>RHPD_MALE</To>
                 </Replacement>
             </CreatePed>
-            <CreatePedInsideVehicle>
+			<CreatePedInsideVehicle>
                 <Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>LSSD_MALE</To>
+                    <To>RHPD_MALE_VEST</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
 				<Replacement>
                     <From>police3</From>
-                    <To>lssheriff</To>
+                    <To>rhpolice3</To>
                 </Replacement>
 				<Replacement>
                     <From>s_m_y_cop_01</From>
-                    <To>s_m_y_lssheriff_01</To>
+                    <To>s_m_y_rhcop_01</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -1424,7 +1751,7 @@
                 </Replacement>
             </IsVehicleModel>
         </Set>
-        <Set>
+		<Set>
 			<!-- Taxi Services -->
             <ScriptName>taxiservice</ScriptName>
             <GetEntityModel>
@@ -1490,9 +1817,9 @@
                 <Replacement>
                     <From>taxi</From>
                     <To>taxi</To>
-					<To>taxi2</To>
-					<To>taxi3</To>
-					<To>cabby</To>
+                    <To>taxi2</To>
+                    <To>taxi3</To>
+                    <To>cabby</To>
                 </Replacement>
             </ModelManagement>
         </Set>
@@ -1502,13 +1829,13 @@
             <CreatePed>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>
@@ -1524,13 +1851,13 @@
             <CreatePed>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePed>
             <CreatePedInsideVehicle>
                 <Replacement>
                     <From>s_m_y_pilot_01</From>
-                    <To>BASEJUMP_PILOT</To>
+                    <To>CIVILIAN_PILOT</To>
                 </Replacement>
             </CreatePedInsideVehicle>
             <ModelManagement>

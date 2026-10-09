@@ -22,6 +22,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 		<Model IgnorePersistent="false">
 			<Name>ambulance</Name>
 			<Zones>
+				<!-- LS City -->
 				<Zone>
 					<Name>City</Name>
 					<LiveryIndexes>
@@ -29,150 +30,312 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
+				<!-- Rockford Hills City -->
 				<Zone>
-					<Name>RANCHO</Name>
+					<Name>rockf</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>burton</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>golf</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Del Perro City -->
+				<Zone>
+					<Name>delpe</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>delbe</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- LS County -->
+				<Zone>
+					<Name>davis</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>	
 				<Zone>
-					<Name>DAVIS</Name>
+					<Name>rancho</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>	
 				<Zone>
-					<Name>OBSERV</Name>
+					<Name>cypre</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>WINDF</Name>
+					<Name>eburo</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>PALMPOW</Name>
+					<Name>chu</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>GREATC</Name>
+					<Name>rglen</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>CHIL</Name>
+					<Name>chil</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>TONGVAH</Name>
+					<Name>rtrak</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>RGLEN</Name>
+					<Name>zq_uar</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>BANHAMC</Name>
+					<Name>windf</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
 						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>BHAMCA</Name>
+					<Name>palmpow</Name>
 					<LiveryIndexes>
 						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>greatc</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>tongvah</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>tongvav</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>bhamca</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>galli</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>observ</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>baytre</Name>
+					<LiveryIndexes>
+						<Index>1</Index>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Unincorporated Areas -->
+				<Zone>
+					<Name>canny</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>mtjose</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>mtgordo</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>mtchil</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>sanchia</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>ccreak</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>lact</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>ldam</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>palhigh</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>tatamo</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>calafb</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>cmsw</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>nchu</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>zancudo</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>elgorl</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>noose</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>jail</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>humlab</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>ocean</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>sanand</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- LSIA -->
+				<Zone>
+					<Name>airp</Name>
+					<LiveryIndexes>
+						<Index>2</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Fort Zancudo -->
+				<Zone>
+					<Name>armyb</Name>
+					<LiveryIndexes>
 						<Index>4</Index>
-						<Index>5</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>CHU</Name>
+					<Name>lago</Name>
 					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
+						<Index>4</Index>
 					</LiveryIndexes>
 				</Zone>
-				<Zone>
-					<Name>CYPRE</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>EBURO</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>PBLUFF</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>PALHIGH</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>TATAMO</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>NOOSE</Name>
-					<LiveryIndexes>
-						<Index>1</Index>
-						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
+				<!-- Blaine County -->
 				<Zone>
 					<Name>Countryside</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 						<Index>5</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>AIRP</Name>
-					<LiveryIndexes>
-						<Index>2</Index>
-					</LiveryIndexes>
-				</Zone>
-				<Zone>
-					<Name>ARMYB</Name>
-					<LiveryIndexes>
-						<Index>4</Index>
 					</LiveryIndexes>
 				</Zone>
 			</Zones>
@@ -180,6 +343,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 		<Model IgnorePersistent="false">
 			<Name>firetruk</Name>
 			<Zones>
+				<!-- LS City -->
 				<Zone>
 					<Name>City</Name>
 					<LiveryIndexes>
@@ -187,124 +351,209 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 						<Index>1</Index>
 					</LiveryIndexes>
 				</Zone>
+				<!-- Rockford Hills City -->
 				<Zone>
-					<Name>OBSERV</Name>
+					<Name>rockf</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>WINDF</Name>
+					<Name>burton</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>PALMPOW</Name>
+					<Name>golf</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Del Perro City -->
+				<Zone>
+					<Name>delpe</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>GREATC</Name>
+					<Name>delbe</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- LS County -->
+				<Zone>
+					<Name>davis</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>	
+				<Zone>
+					<Name>rancho</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>	
+				<Zone>
+					<Name>cypre</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>CHIL</Name>
+					<Name>eburo</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>TONGVAH</Name>
+					<Name>chu</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>RGLEN</Name>
+					<Name>rglen</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>BANHAMC</Name>
+					<Name>chil</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>BHAMCA</Name>
+					<Name>rtrak</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>CHU</Name>
+					<Name>zq_uar</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>CYPRE</Name>
+					<Name>windf</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>EBURO</Name>
+					<Name>palmpow</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>DAVIS</Name>
+					<Name>greatc</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>PBLUFF</Name>
+					<Name>tongvah</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>PALHIGH</Name>
+					<Name>tongvav</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>TATAMO</Name>
+					<Name>bhamca</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>NOOSE</Name>
+					<Name>galli</Name>
 					<LiveryIndexes>
 						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>Countryside</Name>
+					<Name>observ</Name>
 					<LiveryIndexes>
-						<Index>4</Index>
+						<Index>3</Index>
 					</LiveryIndexes>
 				</Zone>
 				<Zone>
-					<Name>AIRP</Name>
+					<Name>baytre</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Unincorporated Areas -->
+				<Zone>
+					<Name>lact</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>ldam</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>palhigh</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>tatamo</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>noose</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>jail</Name>
+					<LiveryIndexes>
+						<Index>3</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- LSIA -->
+				<Zone>
+					<Name>airp</Name>
 					<LiveryIndexes>
 						<Index>2</Index>
 					</LiveryIndexes>
 				</Zone>
+				<!-- Fort Zancudo -->
 				<Zone>
-					<Name>ARMYB</Name>
+					<Name>armyb</Name>
 					<LiveryIndexes>
 						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<Zone>
+					<Name>lago</Name>
+					<LiveryIndexes>
+						<Index>5</Index>
+					</LiveryIndexes>
+				</Zone>
+				<!-- Blaine County -->
+				<Zone>
+					<Name>Countryside</Name>
+					<LiveryIndexes>
+						<Index>4</Index>
 					</LiveryIndexes>
 				</Zone>
 			</Zones>
@@ -481,6 +730,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 				</LiveryDependent>
 			</LiveryDependents>
 			<Zones>
+				<!-- LS City -->
 				<Zone>
 					<Name>City</Name>
 					<ComponentSets>
@@ -523,95 +773,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 							</Prop>										
 						</Components>											
 					</ComponentSets>
-				</Zone>	
+				</Zone>
+				<!-- LS County -->
 				<Zone>
-					<Name>RANCHO</Name>
-					<ComponentSets>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">0</Texture>
-								<Texture race="2">1</Texture>
-								<Texture race="1">2</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">0</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">0</Texture>
-							</Prop>						
-						</Components>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">3</Texture>
-								<Texture race="2">4</Texture>
-								<Texture race="1">5</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">3</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">3</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">3</Texture>
-							</Prop>						
-						</Components>						
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>DAVIS</Name>
-					<ComponentSets>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">0</Texture>
-								<Texture race="2">1</Texture>
-								<Texture race="1">2</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">0</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">0</Texture>
-							</Prop>						
-						</Components>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">3</Texture>
-								<Texture race="2">4</Texture>
-								<Texture race="1">5</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">3</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">3</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">3</Texture>
-							</Prop>						
-						</Components>						
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>OBSERV</Name>
+					<Name>davis</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -654,7 +819,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>WINDF</Name>
+					<Name>rancho</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -697,7 +862,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PALMPOW</Name>
+					<Name>cypre</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -740,7 +905,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>GREATC</Name>
+					<Name>eburo</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -783,7 +948,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CHIL</Name>
+					<Name>chu</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -826,7 +991,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>TONGVAH</Name>
+					<Name>rglen</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -869,7 +1034,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>RGLEN</Name>
+					<Name>chil</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -912,7 +1077,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>BANHAMC</Name>
+					<Name>rtrak</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -955,7 +1120,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>BHAMCA</Name>
+					<Name>zq_uar</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -998,7 +1163,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CHU</Name>
+					<Name>windf</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1041,7 +1206,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CYPRE</Name>
+					<Name>palmpow</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1084,7 +1249,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>EBURO</Name>
+					<Name>greatc</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1127,7 +1292,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PBLUFF</Name>
+					<Name>tongvah</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1170,7 +1335,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PALHIGH</Name>
+					<Name>tongvav</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1213,7 +1378,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>TATAMO</Name>
+					<Name>bhamca</Name>
 					<ComponentSets>
 						<Components>
 							<Component index="3" drawable="0">
@@ -1255,6 +1420,811 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 						</Components>						
 					</ComponentSets>
 				</Zone>
+				<Zone>
+					<Name>galli</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">0</Texture>
+								<Texture race="2">1</Texture>
+								<Texture race="1">2</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">0</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">0</Texture>
+							</Prop>						
+						</Components>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>observ</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">0</Texture>
+								<Texture race="2">1</Texture>
+								<Texture race="1">2</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">0</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">0</Texture>
+							</Prop>						
+						</Components>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>baytre</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">0</Texture>
+								<Texture race="2">1</Texture>
+								<Texture race="1">2</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">0</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">0</Texture>
+							</Prop>						
+						</Components>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<!-- Unincorporated Areas -->
+				<Zone>
+					<Name>rockf</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>burton</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>golf</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>delpe</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>delbe</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>canny</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>mtjose</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>mtgordo</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>mtchil</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>sanchia</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>ccreak</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>lact</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>ldam</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>palhigh</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>tatamo</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>calafb</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>cmsw</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>nchu</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>zancudo</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>elgorl</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>noose</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>jail</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>humlab</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>ocean</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>sanand</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+							</Prop>						
+						</Components>						
+					</ComponentSets>
+				</Zone>
+				<!-- LSIA -->
+				<Zone>
+					<Name>airp</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">0</Texture>
+								<Texture race="2">1</Texture>
+								<Texture race="1">2</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">1</Texture>
+							</Prop>						
+						</Components>							
+					</ComponentSets>
+				</Zone>
+				<!-- Fort Zancudo -->
+				<Zone>
+					<Name>armyb</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">4</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">4</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">4</Texture>
+							</Prop>						
+						</Components>							
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>lago</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="3" drawable="0">
+								<Texture race="4">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="1">5</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">4</Texture>
+							</Component>	
+							<Component index="10" drawable="1">
+								<Texture race="0">4</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">4</Texture>
+							</Prop>						
+						</Components>							
+					</ComponentSets>
+				</Zone>
+				<!-- Blaine County -->
 				<Zone>
 					<Name>Countryside</Name>
 					<ComponentSets>
@@ -1297,55 +2267,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 							</Prop>						
 						</Components>							
 					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>AIRP</Name>
-					<ComponentSets>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">0</Texture>
-								<Texture race="2">1</Texture>
-								<Texture race="1">2</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">1</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">1</Texture>
-							</Prop>						
-						</Components>							
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>ARMYB</Name>
-					<ComponentSets>
-						<Components>
-							<Component index="3" drawable="0">
-								<Texture race="4">3</Texture>
-								<Texture race="2">4</Texture>
-								<Texture race="1">5</Texture>
-							</Component>
-							<Component index="3" drawable="1">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Component index="10" drawable="0">
-								<Texture race="0">4</Texture>
-							</Component>	
-							<Component index="10" drawable="1">
-								<Texture race="0">4</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">4</Texture>
-							</Prop>						
-						</Components>							
-					</ComponentSets>
-				</Zone>					
+				</Zone>
 			</Zones>
 		</Ped>
 		<Ped IgnorePersistent="false">
@@ -1527,6 +2449,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 				</LiveryDependent>
 			</LiveryDependents>
 			<Zones>
+				<!-- LS City -->
 				<Zone>
 					<Name>City</Name>
 					<ComponentSets>
@@ -1558,9 +2481,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 							</Prop>									
 						</Components>					
 					</ComponentSets>
-				</Zone>	
+				</Zone>
+				<!-- LS County -->
 				<Zone>
-					<Name>RANCHO</Name>
+					<Name>rockf</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1571,10 +2495,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1582,81 +2506,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
-								<Texture race="0">5</Texture>
-							</Prop>									
-						</Components>
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>DAVIS</Name>
-					<ComponentSets>
-						<Components>	
-							<Component index="10" drawable="0">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
 								<Texture race="0">5</Texture>
 							</Prop>
-							<Prop index="0" drawable="1">
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
-								<Texture race="0">5</Texture>
-							</Prop>									
-						</Components>
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>OBSERV</Name>
-					<ComponentSets>
-						<Components>	
-							<Component index="10" drawable="0">
-								<Texture race="0">1</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
-								<Texture race="0">5</Texture>
-							</Prop>
-							<Prop index="0" drawable="1">
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
-								<Texture race="0">5</Texture>
-							</Prop>									
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>WINDF</Name>
+					<Name>burton</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1667,10 +2527,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1678,17 +2538,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PALMPOW</Name>
+					<Name>golf</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1699,10 +2559,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1710,17 +2570,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>GREATC</Name>
+					<Name>delpe</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1731,10 +2591,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1742,17 +2602,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CHIL</Name>
+					<Name>delbe</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1763,10 +2623,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1774,17 +2634,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>TONGVAH</Name>
+					<Name>davis</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1795,10 +2655,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1806,17 +2666,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>RGLEN</Name>
+					<Name>rancho</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1827,10 +2687,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1838,17 +2698,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>BANHAMC</Name>
+					<Name>cypre</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1859,10 +2719,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1870,17 +2730,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>BHAMCA</Name>
+					<Name>eburo</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1891,10 +2751,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1902,17 +2762,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CHU</Name>
+					<Name>chu</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1923,10 +2783,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1934,17 +2794,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>CYPRE</Name>
+					<Name>rglen</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1955,10 +2815,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1966,17 +2826,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>EBURO</Name>
+					<Name>chil</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -1987,10 +2847,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -1998,17 +2858,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PBLUFF</Name>
+					<Name>rtrak</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -2019,10 +2879,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -2030,17 +2890,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>PALHIGH</Name>
+					<Name>zq_uar</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -2051,10 +2911,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -2062,17 +2922,17 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
 					</ComponentSets>
 				</Zone>
 				<Zone>
-					<Name>TATAMO</Name>
+					<Name>windf</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="10" drawable="0">
@@ -2083,10 +2943,10 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
 							</Prop>
 							<Prop index="0" drawable="1">
@@ -2094,13 +2954,512 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
 								<Texture race="0">3</Texture>
-								<Texture race="0">3</Texture>									
+								<Texture race="0">3</Texture>
 								<Texture race="0">4</Texture>
 								<Texture race="0">4</Texture>
-								<Texture race="0">4</Texture>									
+								<Texture race="0">4</Texture>
 								<Texture race="0">5</Texture>
-							</Prop>									
+							</Prop>
 						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>palmpow</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>greatc</Name>
+					<ComponentSets>
+						<Components>
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>tongvah</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>tongvav</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>bhamca</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>galli</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>observ</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>baytre</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<!-- Unincorporated Areas -->
+				<Zone>
+					<Name>lact</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>ldam</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>palhigh</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>tatamo</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>noose</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>jail</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">3</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">4</Texture>
+								<Texture race="0">5</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<!-- LSIA -->
+				<Zone>
+					<Name>airp</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">0</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>									
+								<Texture race="0">1</Texture>
+								<Texture race="0">1</Texture>
+								<Texture race="0">1</Texture>									
+								<Texture race="0">2</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>
+								<Texture race="0">0</Texture>									
+								<Texture race="0">1</Texture>
+								<Texture race="0">1</Texture>
+								<Texture race="0">1</Texture>									
+								<Texture race="0">2</Texture>
+							</Prop>									
+						</Components>					
+					</ComponentSets>
+				</Zone>
+				<!-- Fort Zancudo -->
+				<Zone>
+					<Name>armyb</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="10" drawable="0">
+								<Texture race="0">3</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">8</Texture>
+							</Prop>
+							<Prop index="0" drawable="1">
+								<Texture race="0">8</Texture>
+							</Prop>									
+						</Components>					
 					</ComponentSets>
 				</Zone>
 				<Zone>
@@ -2131,54 +3490,6 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 								<Texture race="0">7</Texture>
 							</Prop>									
 						</Components>
-					</ComponentSets>
-				</Zone>	
-				<Zone>
-					<Name>AIRP</Name>
-					<ComponentSets>
-						<Components>	
-							<Component index="10" drawable="0">
-								<Texture race="0">0</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>									
-								<Texture race="0">1</Texture>
-								<Texture race="0">1</Texture>
-								<Texture race="0">1</Texture>									
-								<Texture race="0">2</Texture>
-							</Prop>
-							<Prop index="0" drawable="1">
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>
-								<Texture race="0">0</Texture>									
-								<Texture race="0">1</Texture>
-								<Texture race="0">1</Texture>
-								<Texture race="0">1</Texture>									
-								<Texture race="0">2</Texture>
-							</Prop>									
-						</Components>					
-					</ComponentSets>
-				</Zone>
-				<Zone>
-					<Name>ARMYB</Name>
-					<ComponentSets>
-						<Components>	
-							<Component index="10" drawable="0">
-								<Texture race="0">3</Texture>
-							</Component>
-							<Prop index="0" drawable="0">
-								<Texture race="0">8</Texture>
-							</Prop>
-							<Prop index="0" drawable="1">
-								<Texture race="0">8</Texture>
-							</Prop>									
-						</Components>					
 					</ComponentSets>
 				</Zone>
 			</Zones>
@@ -2228,7 +3539,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 			</LiveryDependents>
 			<Zones>
 				<Zone>
-					<Name>DESRT</Name>
+					<Name>desrt</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="8" drawable="2">
@@ -2261,7 +3572,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>	
 				<Zone>
-					<Name>SANDY</Name>
+					<Name>sandy</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="8" drawable="2">
@@ -2294,7 +3605,7 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 					</ComponentSets>
 				</Zone>	
 				<Zone>
-					<Name>GRAPES</Name>
+					<Name>grapes</Name>
 					<ComponentSets>
 						<Components>	
 							<Component index="8" drawable="2">
@@ -2325,8 +3636,234 @@ This XML is used to define the livery to be assigned to vehicles in a particular
 							</Prop>
 						</Components>					
 					</ComponentSets>
-				</Zone>	
+				</Zone>
+				<Zone>
+					<Name>alamo</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="8" drawable="2">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="1">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="4">5</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">1</Texture>
+							</Prop>
+						</Components>					
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>sanchia</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="8" drawable="2">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="1">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="4">5</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">1</Texture>
+							</Prop>
+						</Components>
+					</ComponentSets>
+				</Zone>
+				<Zone>
+					<Name>galfish</Name>
+					<ComponentSets>
+						<Components>	
+							<Component index="8" drawable="2">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="10" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="4" drawable="1">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="0">
+								<Texture race="0">1</Texture>
+							</Component>
+							<Component index="3" drawable="1">
+								<Texture race="1">3</Texture>
+								<Texture race="2">4</Texture>
+								<Texture race="4">5</Texture>
+							</Component>
+							<Prop index="0" drawable="0">
+								<Texture race="0">1</Texture>
+							</Prop>
+						</Components>					
+					</ComponentSets>
+				</Zone>
 			</Zones>
+		</Ped>
+		<Ped IgnorePersistent="true">
+			<Name>s_m_y_pilot_01</Name>
+			<HeadRaces>
+				<Drawable race="1">0</Drawable>
+				<Drawable race="2">1</Drawable>
+				<Drawable race="3">2</Drawable>
+			</HeadRaces>
+			<LiveryDependents>
+				<LiveryDependent model="polmav">
+					<Livery index="0">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">0</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">0</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+				</LiveryDependent>
+				<LiveryDependent model="lssheriffmav">
+					<Livery index="0">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">0</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">0</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+				</LiveryDependent>
+				<LiveryDependent model="hwaymav">
+					<Livery index="0">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">0</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">0</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+				</LiveryDependent>
+				<LiveryDependent model="cgswift">
+					<Livery index="0">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+					<Livery index="1">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+					<Livery index="2">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+					<Livery index="3">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+					<Livery index="4">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+					<Livery index="5">
+						<ComponentSets>
+							<Components>	
+								<Prop index="0" drawable="0">
+									<Texture race="0">1</Texture>
+								</Prop>
+								<Prop index="0" drawable="2">
+									<Texture race="0">1</Texture>
+								</Prop>	
+							</Components>
+						</ComponentSets>
+					</Livery>
+				</LiveryDependent>
+			</LiveryDependents>
+			<Zones />
 		</Ped>
 	</Peds>
 </LiveryChanger>

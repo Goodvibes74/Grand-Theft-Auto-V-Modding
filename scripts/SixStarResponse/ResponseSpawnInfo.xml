@@ -22,162 +22,414 @@
         </OneStar>                                       You can put as many groups in one wanted level as you want, just be careful - too many spawns can make your game crash.        
   -->
 
-
 <SixStarResponse>
 	<SpawnInfos>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_1</Tag>
+			<Tag>SpawnInfo_1</Tag>
 			<MinQueue>1</MinQueue>
 			<MaxQueue>1</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_2</Tag>
+			<Tag>SpawnInfo_2</Tag>
 			<MinQueue>2</MinQueue>
 			<MaxQueue>2</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_3</Tag>
+			<Tag>SpawnInfo_3</Tag>
 			<MinQueue>3</MinQueue>
 			<MaxQueue>3</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_4</Tag>
+			<Tag>SpawnInfo_4</Tag>
 			<MinQueue>4</MinQueue>
 			<MaxQueue>4</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_5</Tag>
+			<Tag>SpawnInfo_5</Tag>
 			<MinQueue>5</MinQueue>
 			<MaxQueue>5</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_6</Tag>
+			<Tag>SpawnInfo_6</Tag>
 			<MinQueue>6</MinQueue>
 			<MaxQueue>6</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_7</Tag>
+			<Tag>SpawnInfo_7</Tag>
 			<MinQueue>7</MinQueue>
 			<MaxQueue>7</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_8</Tag>
-			<MinQueue>8</MinQueue>
-			<MaxQueue>8</MaxQueue>
-			<MinSpawn>5</MinSpawn>
-			<MaxSpawn>5</MaxSpawn>
-			<MinRespawn>2</MinRespawn>
-			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<Tag>SpawnInfo_1_Heavy</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_9</Tag>
-			<MinQueue>9</MinQueue>
-			<MaxQueue>9</MaxQueue>
-			<MinSpawn>5</MinSpawn>
-			<MaxSpawn>5</MaxSpawn>
-			<MinRespawn>2</MinRespawn>
-			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>150</MinDistance>
-			<MaxDistance>250</MaxDistance>
+			<Tag>SpawnInfo_2_Heavy</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_1_Closer</Tag>
+			<Tag>SpawnInfo_3_Heavy</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_Heavy</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_SuperHeavy</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_2_SuperHeavy</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_3_SuperHeavy</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_SuperHeavy</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_Boat</Tag>
 			<MinQueue>1</MinQueue>
 			<MaxQueue>1</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>100</MinDistance>
-			<MaxDistance>200</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_2_Closer</Tag>
+			<Tag>SpawnInfo_2_Boat</Tag>
 			<MinQueue>2</MinQueue>
 			<MaxQueue>2</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>100</MinDistance>
-			<MaxDistance>200</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_3_Closer</Tag>
+			<Tag>SpawnInfo_3_Boat</Tag>
 			<MinQueue>3</MinQueue>
 			<MaxQueue>3</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>100</MinDistance>
-			<MaxDistance>200</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_4_Closer</Tag>
+			<Tag>SpawnInfo_4_Boat</Tag>
 			<MinQueue>4</MinQueue>
 			<MaxQueue>4</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>100</MinDistance>
-			<MaxDistance>200</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
         </SpawnInfo>
 		<SpawnInfo>
-			<Tag>SpawnInfo_Patrol_2_Far</Tag>
-			<MinQueue>2</MinQueue>
-			<MaxQueue>2</MaxQueue>
+			<Tag>SpawnInfo_5_Boat</Tag>
+			<MinQueue>5</MinQueue>
+			<MaxQueue>5</MaxQueue>
 			<MinSpawn>5</MinSpawn>
 			<MaxSpawn>5</MaxSpawn>
 			<MinRespawn>2</MinRespawn>
 			<MaxRespawn>2</MaxRespawn>
-			<MinDistance>500</MinDistance>
-			<MaxDistance>1000</MaxDistance>
+			<MinDistance>300</MinDistance>
+			<MaxDistance>300</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_Heli</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_2_Heli</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_3_Heli</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_Heli</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_HeliHeavy</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_2_HeliHeavy</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_3_HeliHeavy</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_HeliHeavy</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_Plane</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_2_Plane</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_3_Plane</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_Plane</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>15</MinSpawn>
+			<MaxSpawn>15</MaxSpawn>
+			<MinRespawn>7</MinRespawn>
+			<MaxRespawn>7</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_1_PlaneHeavy</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_2_PlaneHeavy</Tag>
+			<MinQueue>2</MinQueue>
+			<MaxQueue>2</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_3_PlaneHeavy</Tag>
+			<MinQueue>3</MinQueue>
+			<MaxQueue>3</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_4_PlaneHeavy</Tag>
+			<MinQueue>4</MinQueue>
+			<MaxQueue>4</MaxQueue>
+			<MinSpawn>30</MinSpawn>
+			<MaxSpawn>30</MaxSpawn>
+			<MinRespawn>15</MinRespawn>
+			<MaxRespawn>15</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
+        </SpawnInfo>
+		<SpawnInfo>
+			<Tag>SpawnInfo_Paratroopers</Tag>
+			<MinQueue>1</MinQueue>
+			<MaxQueue>1</MaxQueue>
+			<MinSpawn>60</MinSpawn>
+			<MaxSpawn>60</MaxSpawn>
+			<MinRespawn>30</MinRespawn>
+			<MaxRespawn>30</MaxRespawn>
+			<MinDistance>400</MinDistance>
+			<MaxDistance>400</MaxDistance>
         </SpawnInfo>
 	</SpawnInfos>
 </SixStarResponse>

@@ -22,16 +22,6 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
 <BulletProofTires>true</BulletProofTires> (optional)
   -->
   <VehicleGroups>
-  <!-- LCPD -->
-    <Group>
-      <Tag>LCPD_COP</Tag>
-      <VehicleModels>
-        <Model Multi="5">LCPDCar</Model>
-        <Model Multi="3">LCPDCar2</Model>
-        <Model Multi="3">LCPDCar3</Model>
-        <Model Multi="3">LCPDCar4</Model>
-      </VehicleModels>
-    </Group>
     <!-- LSPD -->
     <Group>
       <Tag>LSPD_COP</Tag>
@@ -40,18 +30,10 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="3">LSPDCar2</Model>
         <Model Multi="3">LSPDCar3</Model>
         <Model Multi="3">LSPDCar4</Model>
-        <Model Multi="1">LSPDBike</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>LSPD_COP_2star</Tag>
-      <VehicleModels>
-        <Model Multi="5">LSPDCar</Model>
-        <Model Multi="3">LSPDCar2</Model>
-        <Model Multi="3">LSPDCar3</Model>
-        <Model Multi="3">LSPDCar4</Model>
-        <Model Multi="1">LSPDBike</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car</Model>
+		<Model Multi="2">LSPDBike</Model>
+		<Model Multi="1">LSPDDetectiveCar</Model>
+        <Model Multi="1">LSPDDetectiveCar2</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
@@ -61,98 +43,214 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="3">LSPDCar2_3star</Model>
         <Model Multi="3">LSPDCar3_3star</Model>
         <Model Multi="3">LSPDCar4_3star</Model>
-        <Model Multi="1">LSPDDetectiveCar</Model>
-        <Model Multi="1">LSPDDetectiveCar2</Model>
-        <Model Multi="1">LSPDBike_3star</Model>
-        <Model Multi="3"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
+        <Model Multi="2">LSPDBike_3star</Model>
+		<Model Multi="1">LSPDDetectiveCar_3star</Model>
+        <Model Multi="1">LSPDDetectiveCar2_3star</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>LSPD_COP_HIGHSPEED_3star</Tag>
+      <Tag>LSPD_COP_HIGHSPEED</Tag>
       <VehicleModels>
         <Model Multi="1">LSPDCar_Pursuit</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>LSPD_SWAT</Tag>
       <VehicleModels>
-        <Model Multi="3">LSPDExecutioner</Model>
-        <Model Multi="2">LSPDSlicktop</Model>
+        <Model Multi="1">LSPDExecutioner</Model>
+        <Model Multi="2">LSPDSwatCar</Model>
         <Model Multi="1">LSPDCenturion</Model>
-        <Model Multi="2">LSPDRiot</Model>
+        <Model Multi="1">LSPDRiot</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="HeavyResp">LSPDCenturionHeavy</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="HeavyResp">LSPDExecutionerHeavy</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="HeavyResp">LSPDRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSPD_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">LSPDExecutioner</Model>
+        <Model Multi="1">LSPDSwatCar</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSPD_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">LSPDMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSPD_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">LSPDMaverick_5star</Model>
+      </VehicleModels>
+    </Group>
+	<!-- RHPD -->
+    <Group>
+      <Tag>RHPD_COP</Tag>
+      <VehicleModels>
+        <Model Multi="5">RHPDCar</Model>
+        <Model Multi="3">RHPDCar2</Model>
+        <Model Multi="3">RHPDCar3</Model>
+        <Model Multi="3">RHPDCar4</Model>
+		<Model Multi="2">RHPDBike</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">RHPDK9Car</Model>
+      </VehicleModels>
+    </Group>
+    <Group>
+      <Tag>RHPD_COP_3star</Tag>
+      <VehicleModels>
+        <Model Multi="5">RHPDCar_3star</Model>
+        <Model Multi="3">RHPDCar2_3star</Model>
+        <Model Multi="3">RHPDCar3_3star</Model>
+        <Model Multi="3">RHPDCar4_3star</Model>
+		<Model Multi="2">RHPDBike_3star</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">RHPDK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>RHPD_SWAT</Tag>
+      <VehicleModels>
+        <Model Multi="2">RHPDSwatCar</Model>
+        <Model Multi="1">RHPDRiot</Model>
+		<Model Multi="1">RHPDCenturion</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">RHPDCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">RHPDRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>RHPD_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">RHPDSwatCar</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>RHPD_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">RHPDMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>RHPD_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">RHPDMaverick_5star</Model>
+      </VehicleModels>
+    </Group>
+	<!-- DPPD -->
+	<Group>
+      <Tag>DPPD_COP</Tag>
+      <VehicleModels>
+        <Model Multi="4">DPPDCar</Model>
+		<Model Multi="1">DPPDCar2</Model>
+        <Model Multi="2">DPPDCar3</Model>
+		<Model Multi="1">DPPDBike</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">DPPDK9Car</Model>
+      </VehicleModels>
+    </Group>
+    <Group>
+      <Tag>DPPD_COP_3star</Tag>
+      <VehicleModels>
+        <Model Multi="6">DPPDCar_3star</Model>
+		<Model Multi="2">DPPDCar2_3star</Model>
+        <Model Multi="4">DPPDCar3_3star</Model>
+		<Model Multi="2">DPPDBike_3star</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">DPPDK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DPPD_SWAT</Tag>
+      <VehicleModels>
+        <Model Multi="1">DPPDYosemite</Model>
+		<Model Multi="1">DPPDCenturion</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">DPPDCenturionHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DPPD_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">DPPDYosemite</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DPPD_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">DPPDMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DPPD_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">DPPDMaverick_5star</Model>
       </VehicleModels>
     </Group>
     <!-- LSSD -->
     <Group>
       <Tag>LSSD_COP</Tag>
       <VehicleModels>
-        <Model Multi="4">LSSDCar</Model>
+        <Model Multi="3">LSSDCar</Model>
         <Model Multi="3">LSSDCar2</Model>
         <Model Multi="2">LSSDCar3</Model>
-        <Model Multi="1">LSSDBike</Model>
+		<Model Multi="1">LSSDBike</Model>
+		<Model Multi="1">LSSDDetectiveCar</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>LSSD_COP_2star</Tag>
+	<Group>
+      <Tag>LSSD_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="4">LSSDCar</Model>
-        <Model Multi="3">LSSDCar2</Model>
-        <Model Multi="2">LSSDCar3</Model>
-        <Model Multi="1">LSSDBike</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="K9">LSSDK9Car</Model>
+        <Model Multi="3">LSSDCar_3star</Model>
+        <Model Multi="3">LSSDCar2_3star</Model>
+        <Model Multi="2">LSSDCar3_3star</Model>
+        <Model Multi="1">LSSDBike_3star</Model>
+		<Model Multi="1">LSSDDetectiveCar_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>LSSD_COP_RURAL</Tag>
       <VehicleModels>
-        <Model Multi="4">LSSDCar2</Model>
-        <Model Multi="2">LSSDCar3</Model>
+        <Model Multi="4">LSSDCar</Model>
+        <Model Multi="2">LSSDCar2</Model>
         <Model Multi="1">LSSDCar4</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>LSSD_COP_RURAL_2star</Tag>
-      <VehicleModels>
-        <Model Multi="4">LSSDCar2</Model>
-        <Model Multi="2">LSSDCar3</Model>
-        <Model Multi="1">LSSDCar4</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="K9">LSSDK9Car</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>LSSD_COP_3star</Tag>
-      <VehicleModels>
-        <Model Multi="4">LSSDCar_3star</Model>
-        <Model Multi="3">LSSDCar2_3star</Model>
-        <Model Multi="2">LSSDCar3_3star</Model>
-        <Model Multi="1">LSSDSlicktop_3star</Model>
-        <Model Multi="1">LSSDDetectiveCar</Model>
-        <Model Multi="1">LSSDBike_3star</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">LSSDK9Car_3star</Model>
+		<Model Multi="1">LSSDOffroad</Model>
+        <Model Multi="1">LSSDOffroad2</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>LSSD_COP_RURAL_3star</Tag>
       <VehicleModels>
-        <Model Multi="4">LSSDCar2_3star</Model>
-        <Model Multi="2">LSSDCar3_3star</Model>
+        <Model Multi="4">LSSDCar_3star</Model>
+        <Model Multi="2">LSSDCar2_3star</Model>
         <Model Multi="1">LSSDCar4_3star</Model>
         <Model Multi="1">LSSDOffroad</Model>
         <Model Multi="1">LSSDOffroad2</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">LSSDK9Car_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>LSSD_COP_HIGHSPEED_3star</Tag>
+      <Tag>LSSD_COP_HIGHSPEED</Tag>
       <VehicleModels>
         <Model Multi="1">LSSDCar_Pursuit</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>LSSD_SWAT</Tag>
       <VehicleModels>
-        <Model Multi="2">LSSDSUV</Model>
+        <Model Multi="2">LSSDUnmarked</Model>
+		<Model Multi="2">LSSDSwatCar</Model>
         <Model Multi="1">LSSDCenturion</Model>
+		<Model Multi="1">LSSDRiot</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSSDCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSSDRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSSD_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">LSSDUnmarked</Model>
+		<Model Multi="1">LSSDSwatCar</Model>
       </VehicleModels>
     </Group>
     <Group>
@@ -161,24 +259,34 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">LSSDMarine</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>LSSD_Marine_4star</Tag>
+      <VehicleModels>
+        <Model Multi="1">LSSDMarine_4star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSSD_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">LSSDMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSSD_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">LSSDMaverick_5star</Model>
+      </VehicleModels>
+    </Group>
     <!-- BCSO -->
     <Group>
       <Tag>BCSO_COP</Tag>
       <VehicleModels>
-        <Model Multi="6">BCSOCar</Model>
-        <Model Multi="2">BCSOCar2</Model>
+        <Model Multi="5">BCSOCar</Model>
+        <Model Multi="3">BCSOCar2</Model>
         <Model Multi="3">BCSOCar3</Model>
-        <Model Multi="1">BCSOBike</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>BCSO_COP_2star</Tag>
-      <VehicleModels>
-        <Model Multi="6">BCSOCar</Model>
-        <Model Multi="2">BCSOCar2</Model>
-        <Model Multi="3">BCSOCar3</Model>
-        <Model Multi="1">BCSOBike</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">BCSOK9Car</Model>
+		<Model Multi="2">BCSOBike</Model>
+		<Model Multi="1">BCSODetectiveCar</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">BCSOK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
@@ -187,21 +295,30 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="5">BCSOCar_3star</Model>
         <Model Multi="3">BCSOCar2_3star</Model>
         <Model Multi="3">BCSOCar3_3star</Model>
-        <Model Multi="1">BCSODetectiveCar</Model>
-        <Model Multi="1">BCSOBike_3star</Model>
-        <Model Multi="3"  Limit="1"  GlobalGroupLimitType="K9">BCSOK9Car_3star</Model>
+        <Model Multi="2">BCSOBike_3star</Model>
+		<Model Multi="1">BCSODetectiveCar_3star</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">BCSOK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>BCSO_COP_HIGHSPEED_3star</Tag>
+      <Tag>BCSO_COP_HIGHSPEED</Tag>
       <VehicleModels>
         <Model Multi="1">BCSOCar_Pursuit</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>BCSO_SWAT</Tag>
       <VehicleModels>
-        <Model Multi="1">BCSOStockade</Model>
+        <Model Multi="2">BCSOStockade</Model>
+        <Model Multi="1">BCSOGranger</Model>
+        <Model Multi="2">BCSOSandking</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">BCSOGrangerHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">BCSOStockadeHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>BCSO_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
         <Model Multi="1">BCSOGranger</Model>
         <Model Multi="1">BCSOSandking</Model>
       </VehicleModels>
@@ -212,10 +329,22 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">BCSOMarine</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>BCSO_Marine_Swat</Tag>
+	<Group>
+      <Tag>BCSO_Marine_4star</Tag>
       <VehicleModels>
-        <Model Multi="1">BCSOMarine_swat</Model>
+        <Model Multi="1">BCSOMarine_4star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>BCSO_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">BCSOMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>BCSO_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">BCSOMaverick_5star</Model>
       </VehicleModels>
     </Group>
     <!-- SAHP -->
@@ -223,97 +352,178 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
       <Tag>SAHP_COP</Tag>
       <VehicleModels>
         <Model Multi="2">SAHPCar</Model>
-        <Model Multi="1">SAHPCar2</Model>
-        <Model Multi="4">SAHPCar3</Model>
-        <Model Multi="2">SAHPBike</Model>
-        <Model Multi="2">SAHPBike2</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>SAHP_COP_2star</Tag>
-      <VehicleModels>
-        <Model Multi="2">SAHPCar</Model>
-        <Model Multi="1">SAHPCar2</Model>
-        <Model Multi="4">SAHPCar3</Model>
-        <Model Multi="2">SAHPBike</Model>
-        <Model Multi="2">SAHPBike2</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">SAHPK9Car</Model>
+        <Model Multi="2">SAHPCar2</Model>
+        <Model Multi="2">SAHPCar3</Model>
+		<Model Multi="1">SAHPBike</Model>
+        <Model Multi="1">SAHPBike2</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SAHPK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>SAHP_COP_3star</Tag>
       <VehicleModels>
         <Model Multi="2">SAHPCar_3star</Model>
-        <Model Multi="1">SAHPCar2_3star</Model>
-        <Model Multi="3">SAHPCar3_3star</Model>
+        <Model Multi="2">SAHPCar2_3star</Model>
+        <Model Multi="2">SAHPCar3_3star</Model>
         <Model Multi="1">SAHPBike_3star</Model>
         <Model Multi="1">SAHPBike2_3star</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">SAHPK9Car_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SAHPK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>SAHP_COP_HIGHSPEED_3star</Tag>
+      <Tag>SAHP_COP_HIGHSPEED</Tag>
       <VehicleModels>
         <Model Multi="1">SAHPCar_Pursuit</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>SAHP_SWAT</Tag>
       <VehicleModels>
         <Model Multi="2">SAHPGranger</Model>
         <Model Multi="1">SAHPCenturion</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">SAHPCenturionHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SAHP_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">SAHPGranger</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SAHP_Marine</Tag>
+      <VehicleModels>
+        <Model Multi="1">SAHPMarine</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SAHP_Marine_4star</Tag>
+      <VehicleModels>
+        <Model Multi="1">SAHPMarine_4star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SAHP_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">SAHPMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SAHP_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">SAHPMaverick_5star</Model>
       </VehicleModels>
     </Group>
     <!-- NOOSE -->
     <Group>
-      <Tag>PIA_COP</Tag>
+      <Tag>NOOSE_COP</Tag>
       <VehicleModels>
-        <Model Multi="5">PIACar</Model>
+		<Model Multi="4">SEPCar</Model>
+        <Model Multi="4">SEPCar2</Model>
+		<Model Multi="3">SEPCar3</Model>
+        <Model Multi="2">SEPCar4</Model>
+        <Model Multi="1">PIACar</Model>
+		<Model Multi="1">PIACar2</Model>
         <Model Multi="1">PIACar3</Model>
+		<Model Multi="1">PIACar4</Model>
         <Model Multi="1">PIACar5</Model>
-        <Model Multi="2">PIADetectiveCar</Model>
-        <Model Multi="2">PIADetectiveCar2</Model>
+		<Model Multi="1">PIADetectiveCar</Model>
+        <Model Multi="1">PIADetectiveCar</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>PIA_COP_3star</Tag>
+      <Tag>NOOSE_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="5">PIACar_3star</Model>
+		<Model Multi="4">SEPCar_3star</Model>
+        <Model Multi="4">SEPCar2_3star</Model>
+		<Model Multi="3">SEPCar3_3star</Model>
+        <Model Multi="2">SEPCar4_3star</Model>
+        <Model Multi="1">PIACar_3star</Model>
+		<Model Multi="1">PIACar2_3star</Model>
         <Model Multi="1">PIACar3_3star</Model>
+		<Model Multi="1">PIACar4_3star</Model>
         <Model Multi="1">PIACar5_3star</Model>
-        <Model Multi="2">PIADetectiveCar_3star</Model>
-        <Model Multi="2">PIADetectiveCar2_3star</Model>
+        <Model Multi="1">PIADetectiveCar_3star</Model>
+        <Model Multi="1">PIADetectiveCar_3star</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>NOOSE_TRU</Tag>
       <VehicleModels>
         <Model Multi="1">NooseCenturion</Model>
         <Model Multi="1">NooseInsurgent</Model>
         <Model Multi="1">NooseRiot</Model>
-        <Model Multi="2">NooseUnmarked2</Model>
+        <Model Multi="3">NooseUnmarked</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseInsurgentHeavy</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
+      <Tag>NOOSE_TRU_6star</Tag>
+      <VehicleModels>
+		<Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">NooseInsurgent</Model>
+        <Model Multi="1">NooseRiot</Model>
+        <Model Multi="2">NooseUnmarked</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseInsurgentHeavy</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+		<Model Multi="2"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
+        <Model Multi="2"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseInsurgentElite</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
       <Tag>NOOSE_TRU_RURAL</Tag>
       <VehicleModels>
-        <Model Multi="1">NooseCenturion</Model>
-        <Model Multi="1">NooseInsurgent</Model>
+		<Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">NooseRiot</Model>
         <Model Multi="2">NooseUnmarked</Model>
         <Model Multi="2">NooseUnmarked2</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+        <Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionElite</Model>
+		<Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>NOOSE_JUGGERNAUT</Tag>
       <VehicleModels>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernautHeavy</Model>
+        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
+        <Model Multi="3"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseInsurgentElite</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>NOOSE_MARINE</Tag>
+	<Group>
+      <Tag>NOOSE_Marine</Tag>
       <VehicleModels>
-        <Model Multi="1">NooseMarine</Model>
+		<Model Multi="1">PAPMarine</Model>
+		<Model Multi="1">PAPSeashark</Model>
+		<Model Multi="1">PIAMarine</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>NOOSE_Marine_4star</Tag>
+      <VehicleModels>
+		<Model Multi="1">PAPMarine_4star</Model>
+		<Model Multi="1">PIAMarine_4star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>NOOSE_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">NooseMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>NOOSE_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">NooseMaverick_5star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>NOOSE_ANNIHILATOR</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">NooseAnnihilator</Model>
       </VehicleModels>
     </Group>
     <!-- FIB -->
@@ -324,7 +534,8 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">FIBCar3</Model>
         <Model Multi="1">FIBUtility</Model>
         <Model Multi="1">FIBLux</Model>
-		</VehicleModels>
+		<Model Multi="1">FIBScum</Model>
+	  </VehicleModels>
     </Group>
     <Group>
       <Tag>FIB_ARMORED</Tag>
@@ -333,7 +544,8 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">FIBCar3</Model>
         <Model Multi="1">FIBUtilityArmor</Model>
         <Model Multi="1">FIBLuxArmor</Model>
-		</VehicleModels>
+		<Model Multi="1">FIBScumUltra</Model>
+	  </VehicleModels>
     </Group>
     <Group>
       <Tag>FIB_RURAL</Tag>
@@ -341,94 +553,220 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">FIBCar2</Model>
         <Model Multi="1">FIBClassic</Model>
         <Model Multi="1">FIBClassic2</Model>
-		</VehicleModels>
-    </Group>
-    <Group>
-      <Tag>FIB_RURAL_ARMORED</Tag>
-      <VehicleModels>
-        <Model Multi="1">FIBCar2</Model>
-        <Model Multi="1">FIBClassic</Model>
-        <Model Multi="1">FIBClassic2</Model>
-		</VehicleModels>
-    </Group>
-    <Group>
-      <Tag>FIB_HIGHSPEED</Tag>
-      <VehicleModels>
-        <Model Multi="1">FIBScum</Model>
-		</VehicleModels>
-    </Group>
-    <Group>
-      <Tag>FIB_HIGHSPEED_ARMORED</Tag>
-      <VehicleModels>
-        <Model Multi="1">FIBScumUltra</Model>
-		</VehicleModels>
+	  </VehicleModels>
     </Group>
     <Group>
       <Tag>FIB_SWAT</Tag>
       <VehicleModels>
+	    <Model Multi="1">FIBCar</Model>
+        <Model Multi="1">FIBCar3</Model>
+        <Model Multi="1">FIBUtilityArmor</Model>
+        <Model Multi="1">FIBLuxArmor</Model>
+		<Model Multi="1">FIBScumUltra</Model>
         <Model Multi="1">FIBCenturion</Model>
-        <Model Multi="2">FIBUnmarked</Model>
-        <Model Multi="2">FIBUnmarked2</Model>
-        <Model Multi="1">NooseCenturion</Model>
-        <Model Multi="1">NooseInsurgent</Model>
-        <Model Multi="1">NooseRiot</Model>
-        <Model Multi="2">NooseUnmarked2</Model>
+        <Model Multi="1">FIBUnmarked</Model>
+        <Model Multi="1">FIBRiot</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBCenturionHeavy</Model>
+        <Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+        <Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBRiotHeavy</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>FIB_SWAT_RURAL</Tag>
+	<Group>
+      <Tag>FIB_SWAT_7star</Tag>
+      <VehicleModels>
+        <Model Multi="1">FIBCenturion</Model>
+        <Model Multi="1">FIBUnmarked</Model>
+        <Model Multi="1">FIBRiot</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBCenturionHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>FIB_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">FIBFrogger</Model>
+      </VehicleModels>
+    </Group>
+	
+	<Group>
+      <Tag>FED_SWAT</Tag>
       <VehicleModels>
         <Model Multi="1">FIBCenturion</Model>
         <Model Multi="2">FIBUnmarked</Model>
-        <Model Multi="2">FIBUnmarked2</Model>
-        <Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">FIBRiot</Model>
+		<Model Multi="1">NooseCenturion</Model>
         <Model Multi="1">NooseInsurgent</Model>
+        <Model Multi="1">NooseRiot</Model>
         <Model Multi="2">NooseUnmarked</Model>
-        <Model Multi="2">NooseUnmarked2</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseInsurgentHeavy</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBCenturionHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBRiotHeavy</Model>
+		<Model Multi="2"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
+        <Model Multi="3"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseInsurgentElite</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>FED_SWAT_RURAL</Tag>
+      <VehicleModels>
+        <Model Multi="1">FIBCenturion</Model>
+        <Model Multi="2">FIBUnmarked</Model>
+        <Model Multi="1">FIBRiot</Model>
+		<Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">NooseRiot</Model>
+        <Model Multi="2">NooseUnmarked</Model>
+        <Model Multi="2">NooseUnmarked2</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+        <Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBRiotHeavy</Model>
+        <Model Multi="2"  Limit="2"  GlobalGroupLimitType="HeavyResp">NooseCenturionElite</Model>
+		<Model Multi="2"  Limit="1"  GlobalGroupLimitType="Juggernaut">NooseRiotJuggernaut</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>FED_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">FIBUnmarked</Model>
+        <Model Multi="2">NooseUnmarked</Model>
+        <Model Multi="1">NooseUnmarked2</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>FED_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">FIBFrogger</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">NooseAnnihilator</Model>
+      </VehicleModels>
+    </Group>
+	
+	<!-- DOWNTOWN -->
+	<Group>
+      <Tag>DOWNT_COP</Tag>
+      <VehicleModels>
+        <Model Multi="5">LSPDCar</Model>
+        <Model Multi="3">LSPDCar2</Model>
+        <Model Multi="3">LSPDCar3</Model>
+        <Model Multi="3">LSPDCar4</Model>
+		<Model Multi="2">LSPDBike</Model>
+        <Model Multi="1">SEPCar</Model>
+        <Model Multi="1">SEPCar2</Model>
+        <Model Multi="1">SEPCar3</Model>
+		<Model Multi="1">SEPCar4</Model>
+		<Model Multi="1">LSPDDetectiveCar</Model>
+        <Model Multi="1">LSPDDetectiveCar2</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DOWNT_COP_3star</Tag>
+      <VehicleModels>
+        <Model Multi="5">LSPDCar_3star</Model>
+        <Model Multi="3">LSPDCar2_3star</Model>
+		<Model Multi="3">LSPDCar3_3star</Model>
+        <Model Multi="3">LSPDCar4_3star</Model>
+		<Model Multi="2">LSPDBike_3star</Model>
+		<Model Multi="1">SEPCar_3star</Model>
+        <Model Multi="1">SEPCar2_3star</Model>
+        <Model Multi="1">SEPCar3_3star</Model>
+		<Model Multi="1">SEPCar4_3star</Model>
+		<Model Multi="1">LSPDDetectiveCar_3star</Model>
+        <Model Multi="1">LSPDDetectiveCar2_3star</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DOWNT_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="3" Limit="1" GlobalGroupLimitType="ExtraHeli">LSPDMaverick</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">NooseMaverick</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>DOWNT_HELI_5star</Tag>
+      <VehicleModels>
+        <Model Multi="3" Limit="2" GlobalGroupLimitType="ExtraHeli">LSPDMaverick_5star</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">NooseMaverick_5star</Model>
+      </VehicleModels>
+    </Group>
+	
     <!-- PILLBOX HILL -->
     <Group>
       <Tag>PBOX_COP</Tag>
       <VehicleModels>
-        <Model Multi="1">LSPDCar</Model>
-        <Model Multi="1">LSPDCar2</Model>
-        <Model Multi="1">LSPDCar4</Model>
-        <Model Multi="1">PIACar</Model>
-        <Model Multi="1">PIACar2</Model>
-        <Model Multi="1">PIACar4</Model>
-        <Model Multi="1">PIADetectiveCar</Model>
-        <Model Multi="1">PIADetectiveCar2</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>PBOX_COP_2star</Tag>
-      <VehicleModels>
-        <Model Multi="1">LSPDCar</Model>
-        <Model Multi="1">LSPDCar2</Model>
-        <Model Multi="1">LSPDCar4</Model>
-        <Model Multi="1">PIACar</Model>
-        <Model Multi="1">PIACar2</Model>
-        <Model Multi="1">PIACar4</Model>
-        <Model Multi="1">PIADetectiveCar</Model>
-        <Model Multi="1">PIADetectiveCar2</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car</Model>
+        <Model Multi="5">LSPDCar</Model>
+        <Model Multi="3">LSPDCar2</Model>
+        <Model Multi="3">LSPDCar3</Model>
+        <Model Multi="3">LSPDCar4</Model>
+		<Model Multi="3">FIBCopCar</Model>
+        <Model Multi="3">FIBCopCar2</Model>
+        <Model Multi="3">FIBCopCar3</Model>
+        <Model Multi="2">SEPCar</Model>
+        <Model Multi="2">SEPCar2</Model>
+        <Model Multi="1">SEPCar3</Model>
+		<Model Multi="1">SEPCar4</Model>
+		<Model Multi="1">PIADetectiveCar</Model>
+		<Model Multi="1">PIADetectiveCar2</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>PBOX_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="3">LSPDCar_3star</Model>
-        <Model Multi="1">LSPDCar2_3star</Model>
-        <Model Multi="2">LSPDCar4_3star</Model>
-        <Model Multi="4">PIACar_3star</Model>
-        <Model Multi="2">PIACar2_3star</Model>
-        <Model Multi="2">PIACar4_3star</Model>
-        <Model Multi="2">PIADetectiveCar_3star</Model>
-        <Model Multi="2">PIADetectiveCar2_3star</Model>
-        <Model Multi="3"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
+        <Model Multi="5">LSPDCar_3star</Model>
+        <Model Multi="3">LSPDCar2_3star</Model>
+		<Model Multi="3">LSPDCar3_3star</Model>
+        <Model Multi="3">LSPDCar4_3star</Model>
+		<Model Multi="3">FIBCopCar_3star</Model>
+        <Model Multi="3">FIBCopCar2_3star</Model>
+        <Model Multi="3">FIBCopCar3_3star</Model>
+		<Model Multi="2">SEPCar_3star</Model>
+        <Model Multi="2">SEPCar2_3star</Model>
+        <Model Multi="1">SEPCar3_3star</Model>
+		<Model Multi="1">SEPCar4_3star</Model>
+		<Model Multi="1">PIADetectiveCar_3star</Model>
+		<Model Multi="1">PIADetectiveCar2_3star</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>PBOX_SWAT</Tag>
+      <VehicleModels>
+        <Model Multi="1">FIBCar</Model>
+        <Model Multi="1">FIBCar3</Model>
+        <Model Multi="1">FIBUtility</Model>
+        <Model Multi="1">FIBLux</Model>
+		<Model Multi="1">FIBScum</Model>
+		<Model Multi="1">LSPDExecutioner</Model>
+        <Model Multi="1">LSPDCenturion</Model>
+        <Model Multi="1">LSPDRiot</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDExecutionerHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>PBOX_SWAT_5star</Tag>
+      <VehicleModels>
+        <Model Multi="2">FIBCenturion</Model>
+        <Model Multi="3">FIBUnmarked</Model>
+        <Model Multi="2">FIBRiot</Model>
+		<Model Multi="1">LSPDExecutioner</Model>
+        <Model Multi="1">LSPDCenturion</Model>
+        <Model Multi="1">LSPDRiot</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDExecutionerHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSPDRiotHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBCenturionHeavy</Model>
+        <Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBUnmarkedHeavy</Model>
+        <Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">FIBRiotHeavy</Model>
+      </VehicleModels>
+    </Group>
+	
     <!-- USCG -->
     <Group>
       <Tag>USCG_COP</Tag>
@@ -475,42 +813,199 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
     <Group>
       <Tag>USCG_Marine_4star</Tag>
       <VehicleModels>
-        <Model Multi="1">USCGMarine_4star</Model>
+        <Model Multi="3">USCGMarine_4star</Model>
+		<Model Multi="1">USCGDinghy_4star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>USCG_Marine_6star</Tag>
+      <Tag>USCG_Marine_7star</Tag>
       <VehicleModels>
-        <Model Multi="1">USCGMarine_6star</Model>
+        <Model Multi="3">USCGMarine_7star</Model>
+		<Model Multi="1">USCGDinghy_7star</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>USCG_Gunner</Tag>
+      <VehicleModels>
+		<Model Multi="1">USCGDinghy_Gunner</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>USCG_Heli</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">USCGSwift</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>USCG_Heli_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">USCGSwift_5star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>USCG_Heli_MSRT</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">USCGSwift_MSRT</Model>
+      </VehicleModels>
+    </Group>
+	
+	<!-- LSIAPD -->
+	<Group>
+      <Tag>LSIA_COP</Tag>
+      <VehicleModels>
+        <Model Multi="8">LSIACar</Model>
+        <Model Multi="6">LSIACar2</Model>
+		<Model Multi="4">LSIACar3</Model>
+        <Model Multi="2">PIACar</Model>
+        <Model Multi="2">PIACar2</Model>
+		<Model Multi="1">PIACar3</Model>
+		<Model Multi="1">PIACar4</Model>
+		<Model Multi="2">PIACar5</Model>
+		<Model Multi="1">PIADetectiveCar</Model>
+        <Model Multi="1">PIADetectiveCar2</Model>
+		<Model Multi="3" Limit="2" GlobalGroupLimitType="K9">LSIAK9Car</Model>
+      </VehicleModels>
+    </Group>
+    <Group>
+      <Tag>LSIA_COP_3star</Tag>
+      <VehicleModels>
+        <Model Multi="8">LSIACar_3star</Model>
+        <Model Multi="6">LSIACar2_3star</Model>
+		<Model Multi="4">LSIACar3_3star</Model>
+        <Model Multi="2">PIACar_3star</Model>
+        <Model Multi="2">PIACar2_3star</Model>
+		<Model Multi="1">PIACar3_3star</Model>
+		<Model Multi="1">PIACar4_3star</Model>
+        <Model Multi="2">PIACar5_3star</Model>
+		<Model Multi="1">PIADetectiveCar_3star</Model>
+        <Model Multi="1">PIADetectiveCar2_3star</Model>
+		<Model Multi="3" Limit="2" GlobalGroupLimitType="K9">LSIAK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSIA_SWAT</Tag>
+      <VehicleModels>
+		<Model Multi="1">LSIAExecutioner</Model>
+        <Model Multi="2">LSIAAngora</Model>
+        <Model Multi="1">LSIACenturion</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSIACenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSIAExecutionerHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSIA_SWAT_5star</Tag>
+      <VehicleModels>
+        <Model Multi="1">LSIAExecutioner</Model>
+        <Model Multi="2">LSIAAngora</Model>
+        <Model Multi="1">LSIACenturion</Model>
+		<Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">NooseInsurgent</Model>
+        <Model Multi="1">NooseRiot</Model>
+        <Model Multi="1">NooseUnmarked</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseCenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseRiotHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">NooseInsurgentHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSIACenturionHeavy</Model>
+		<Model Multi="1" Limit="1"  GlobalGroupLimitType="HeavyResp">LSIAExecutionerHeavy</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSIA_SWAT_HIGHSPEED</Tag>
+      <VehicleModels>
+        <Model Multi="1">LSIAExecutioner</Model>
+        <Model Multi="1">LSIAAngora</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSIA_SWAT_HIGHSPEED_5star</Tag>
+      <VehicleModels>
+        <Model Multi="2">LSIAExecutioner</Model>
+        <Model Multi="2">LSIAAngora</Model>
+		<Model Multi="1">NooseCenturion</Model>
+        <Model Multi="1">NooseInsurgent</Model>
+        <Model Multi="1">NooseRiot</Model>
+        <Model Multi="1">NooseUnmarked</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>LSIA_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">LSIAMaverick</Model>
+      </VehicleModels>
+    </Group>
+	
     <!-- PAP -->
     <Group>
       <Tag>PAP_COP</Tag>
       <VehicleModels>
-        <Model Multi="1">PAPCar</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
-      <Tag>PAP_COP_2star</Tag>
-      <VehicleModels>
-        <Model Multi="6">PAPCar</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car</Model>
+        <Model Multi="5">PAPCar</Model>
+		<Model Multi="4">PAPCar2</Model>
+		<Model Multi="3">PAPCar3</Model>
+		<Model Multi="2">PAPUnmarked</Model>
+		<Model Multi="2">PIACar</Model>
+        <Model Multi="2">PIACar2</Model>
+		<Model Multi="1">PIACar3</Model>
+		<Model Multi="1">PIACar4</Model>
+		<Model Multi="2">PIACar5</Model>
+		<Model Multi="1">PIADetectiveCar</Model>
+		<Model Multi="1">PIADetectiveCar2</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">PAPK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>PAP_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="4">PAPCar_3star</Model>
-        <Model Multi="2">PAPCar2_3star</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">LSPDK9Car_3star</Model>
+		<Model Multi="5">PAPCar_3star</Model>
+		<Model Multi="4">PAPCar2_3star</Model>
+		<Model Multi="3">PAPCar3_3star</Model>
+		<Model Multi="2">PAPUnmarked_3star</Model>
+		<Model Multi="2">PIACar_3star</Model>
+        <Model Multi="2">PIACar2_3star</Model>
+		<Model Multi="1">PIACar3_3star</Model>
+		<Model Multi="1">PIACar4_3star</Model>
+		<Model Multi="2">PIACar5_3star</Model>
+		<Model Multi="1">PIADetectiveCar_3star</Model>
+		<Model Multi="1">PIADetectiveCar2_3star</Model>
+		<Model Multi="2" Limit="2" GlobalGroupLimitType="K9">PAPK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>PAP_MARINE</Tag>
+      <Tag>PAP_Marine</Tag>
       <VehicleModels>
-        <Model Multi="1">PAPMarine</Model>
-        <Model Multi="1">PAPMarine2</Model>
+        <Model Multi="2">PAPMarine</Model>
+		<Model Multi="1">PAPSeashark</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>PAP_Marine_4star</Tag>
+      <VehicleModels>
+        <Model Multi="1">PAPMarine_4star</Model>
+      </VehicleModels>
+    </Group>
+	
+	<Group>
+      <Tag>Port_Security</Tag>
+      <VehicleModels>
+		<Model Multi="3">MerryweatherCar</Model>
+        <Model Multi="2">MerryweatherCar2</Model>
+        <Model Multi="1">MerryweatherCar3</Model>
+	    <Model Multi="3">PAPCar</Model>
+		<Model Multi="2">PAPCar2</Model>
+		<Model Multi="1">PAPCar3</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">PAPK9Car</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Port_Security_3star</Tag>
+      <VehicleModels>
+		<Model Multi="4">MerryweatherCar</Model>
+        <Model Multi="3">MerryweatherCar2</Model>
+        <Model Multi="2">MerryweatherCar3</Model>
+	    <Model Multi="4">PAPCar_3star</Model>
+		<Model Multi="3">PAPCar2_3star</Model>
+		<Model Multi="2">PAPCar3_3star</Model>
+		<Model Multi="1">PAPUnmarked</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">PAPK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <!-- SADCR -->
@@ -521,77 +1016,145 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>SADCR_2star</Tag>
-      <VehicleModels>
-        <Model Multi="5">SADCRCar</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="K9">SAHPK9Car</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
       <Tag>SADCR_3star</Tag>
       <VehicleModels>
-        <Model Multi="4">SADCRCar_3star</Model>
-        <Model Multi="2">SAHPCar_3star</Model>
-        <Model Multi="1">SAHPCar2_3star</Model>
-        <Model Multi="3">SAHPCar3_3star</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">SAHPK9Car_3star</Model>
+        <Model Multi="1">SADCRCar_3star</Model>
       </VehicleModels>
     </Group>
     <!-- SASPR -->
-    <Group>
-      <Tag>SASPR_COP</Tag>
+	<!-- North Wilderness -->
+	<Group>
+      <Tag>SASPR_BCSO</Tag>
       <VehicleModels>
         <Model Multi="1">SASPRATV</Model>
-        <Model Multi="4">SASPRCar</Model>
-        <Model Multi="2">SASPRCar2</Model>
-        <Model Multi="2">SASPRCar3</Model>
+        <Model Multi="3">SASPRCar</Model>
+        <Model Multi="1">SASPRCar2</Model>
+        <Model Multi="1">SASPRCar3</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car</Model>
+		<Model Multi="4">BCSOCar</Model>
+        <Model Multi="1">BCSOCar2</Model>
+        <Model Multi="2">BCSOCar3</Model>
+		<Model Multi="1">BCSOBike</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">BCSOK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>SASPR_COP_2star</Tag>
+      <Tag>SASPR_BCSO_3star</Tag>
+      <VehicleModels>
+        <Model Multi="1">SASPRATV_3star</Model>
+        <Model Multi="3">SASPRCar_3star</Model>
+        <Model Multi="1">SASPRCar2_3star</Model>
+        <Model Multi="2">SASPRCar3_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car_3star</Model>
+		<Model Multi="4">BCSOCar_3star</Model>
+        <Model Multi="1">BCSOCar2_3star</Model>
+        <Model Multi="2">BCSOCar3_3star</Model>
+        <Model Multi="1">BCSOBike_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">BCSOK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<!-- South Wilderness -->
+	<Group>
+      <Tag>SASPR_LSSD</Tag>
       <VehicleModels>
         <Model Multi="1">SASPRATV</Model>
+        <Model Multi="3">SASPRCar</Model>
+        <Model Multi="2">SASPRCar2</Model>
+        <Model Multi="2">SASPRCar3</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car</Model>
+		<Model Multi="4">LSSDCar</Model>
+        <Model Multi="2">LSSDCar2</Model>
+        <Model Multi="1">LSSDCar4</Model>
+		<Model Multi="1">LSSDOffroad</Model>
+        <Model Multi="1">LSSDOffroad2</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car</Model>
+      </VehicleModels>
+    </Group>
+    <Group>
+      <Tag>SASPR_LSSD_3star</Tag>
+      <VehicleModels>
+        <Model Multi="1">SASPRATV_3star</Model>
+        <Model Multi="3">SASPRCar_3star</Model>
+        <Model Multi="2">SASPRCar2_3star</Model>
+        <Model Multi="2">SASPRCar3_3star</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car_3star</Model>
+		<Model Multi="4">LSSDCar_3star</Model>
+        <Model Multi="2">LSSDCar2_3star</Model>
+        <Model Multi="1">LSSDCar4_3star</Model>
+        <Model Multi="1">LSSDOffroad</Model>
+        <Model Multi="1">LSSDOffroad2</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="K9">LSSDK9Car_3star</Model>
+      </VehicleModels>
+    </Group>
+	<!-- State Wilderness -->
+    <Group>
+      <Tag>SASPR_COP</Tag>
+      <VehicleModels>
+        <Model Multi="2">SASPRATV</Model>
         <Model Multi="4">SASPRCar</Model>
         <Model Multi="2">SASPRCar2</Model>
         <Model Multi="2">SASPRCar3</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">SASPRK9Car</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>SASPR_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="1">SASPRATV_3star</Model>
+        <Model Multi="2">SASPRATV_3star</Model>
         <Model Multi="4">SASPRCar_3star</Model>
         <Model Multi="2">SASPRCar2_3star</Model>
         <Model Multi="2">SASPRCar3_3star</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="K9">SASPRK9Car_3star</Model>
+        <Model Multi="2" Limit="2" GlobalGroupLimitType="K9">SASPRK9Car_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>SASPR_SWAT</Tag>
       <VehicleModels>
         <Model Multi="2">SASPRMarshal</Model>
+        <Model Multi="1">SASPRMarshal2</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>SASPR_SWAT_6star</Tag>
+      <VehicleModels>
+        <Model Multi="2">SASPRMarshal</Model>
         <Model Multi="2">SASPRMarshal2</Model>
-        <Model Multi="2">SASPRMarshal3</Model>
-        <Model Multi="1">FIBCenturion</Model>
-        <Model Multi="2">FIBUnmarked</Model>
-        <Model Multi="2">FIBUnmarked2</Model>
+        <Model Multi="1">SASPRMarshal3</Model>
+		<Model Multi="1">SASPRMarshal4</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="HeavyResp">SASPRMarshalHeavy</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="HeavyResp">SASPRMarshalHeavy2</Model>
+		<Model Multi="1" Limit="2" GlobalGroupLimitType="HeavyResp">SASPRMarshalHeavy3</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>SASPR_ATV</Tag>
       <VehicleModels>
         <Model Multi="1">SASPRATV</Model>
-        <Model Multi="2">SASPRCar3</Model>
+		<Model Multi="1">SASPRCar3</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>SASPR_ATV_3star</Tag>
       <VehicleModels>
         <Model Multi="1">SASPRATV_3star</Model>
-        <Model Multi="2">SASPRCar3_3star</Model>
+		<Model Multi="1">SASPRCar3_3star</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>SASPR_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">SASPRValkyrie</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>MtChil_7star</Tag>
+      <VehicleModels>
+		<Model Multi="1">SASPRCar3_3star</Model>
+		<Model Multi="1">SASPRATV_3star</Model>
+        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Paratroopers">MilitaryParatroopers</Model>
+      </VehicleModels>
+    </Group>
+	
     <!-- MERRYWEATHER-->
     <Group>
       <Tag>Merryweather_Security</Tag>
@@ -604,50 +1167,104 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
     <Group>
       <Tag>Merryweather_Response</Tag>
       <VehicleModels>
-        <Model Multi="1">MerryweatherCarResponse</Model>
-        <Model Multi="1">MerryweatherCarResponse2</Model>
+        <Model Multi="1">MerryweatherResponse</Model>
+        <Model Multi="1">MerryweatherResponse2</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Response_6star</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherResponse</Model>
+        <Model Multi="1">MerryweatherResponse2</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">MerryweatherResponseHeavy</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>Merryweather_Elite</Tag>
       <VehicleModels>
-        <Model Multi="1">MerryweatherCarElite</Model>
-        <Model Multi="1">MerryweatherCarElite3</Model>
-        <Model Multi="1">MerryweatherCarElite5</Model>
-        <Model Multi="1">MerryweatherCarElite6</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Paratrooper">SecurityParatroopers</Model>
+        <Model Multi="1">MerryweatherElite</Model>
+		<Model Multi="1">MerryweatherElite2</Model>
+        <Model Multi="1">MerryweatherElite3</Model>
+		<Model Multi="1">MerryweatherNightshark</Model>
+        <Model Multi="1">MerryweatherBike</Model>
+		<Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">MerryweatherJuggernaut</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>Merryweather_Elite_Rural</Tag>
+	<Group>
+      <Tag>Merryweather_Heli</Tag>
       <VehicleModels>
-        <Model Multi="1">MerryweatherCarElite2</Model>
-        <Model Multi="1">MerryweatherCarElite4</Model>
-        <Model Multi="1">MerryweatherCarElite5</Model>
-        <Model Multi="1">MerryweatherCarElite6</Model>
-        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Paratrooper">SecurityParatroopers</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">MerryweatherValkyrie2</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Paratroopers</Tag>
+      <VehicleModels>
+        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Paratroopers">MerryweatherParatroopers</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Gunner</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherGunner</Model>
+		<Model Multi="1">MerryweatherBarrage</Model>
       </VehicleModels>
     </Group>
     <Group>
-      <Tag>MERRYWEATHER_JUGGERNAUT</Tag>
+      <Tag>Merryweather_Juggernaut</Tag>
       <VehicleModels>
         <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">MerryweatherJuggernaut</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>MERRYWEATHER_KHANJALI</Tag>
-      <VehicleModels>
-        <Model Multi="1">Khanjali</Model>
-      </VehicleModels>
-    </Group>
-    <Group>
+	<Group>
       <Tag>Merryweather_Buzzard</Tag>
       <VehicleModels>
         <Model Multi="1">MerryweatherBuzzard</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>Merryweather_Akula</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherAkula</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Akula2</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherAkulaBarrage</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Savage</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherSavage</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_Fighters</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherRaiju</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_APC</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherAPC</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_APC2</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherAPC2</Model>
+      </VehicleModels>
+    </Group>
     <Group>
-      <Tag>Merryweather_Valkyrie</Tag>
+      <Tag>Merryweather_Khanjali</Tag>
+      <VehicleModels>
+        <Model Multi="1">MerryweatherKhanjali</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Merryweather_ArmedValk</Tag>
       <VehicleModels>
         <Model Multi="1">MerryweatherValkyrie</Model>
       </VehicleModels>
@@ -656,34 +1273,37 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
     <Group>
       <Tag>Military</Tag>
       <VehicleModels>
-        <Model Multi="5">SquaddieUnarmed</Model>
-        <Model Multi="3">SquaddieArmed</Model>
-        <Model Multi="1">Barracks3</Model>
-        <Model Multi="2"  Limit="1"  GlobalGroupLimitType="Paratrooper">MilitaryParatroopers</Model>
+        <Model Multi="4">SquaddieUnarmed</Model>
+		<Model Multi="2">MilitaryInsurgent</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">Barracks3</Model>
+		<Model Multi="1" Limit="2"  GlobalGroupLimitType="HeavyResp">InsurgentHeavy</Model>
+		<Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">SquaddieJuggernaut</Model>
+		<Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">InsurgentJuggernaut</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>USAF_SquaddieUnarmed</Tag>
-      <VehicleModels>
-        <Model Multi="1">USAFSquaddieUnarmed</Model>
-      </VehicleModels>
-    </Group>	
     <Group>
       <Tag>Military_Juggernaut</Tag>
       <VehicleModels>
         <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Juggernaut">SquaddieJuggernaut</Model>
       </VehicleModels>
     </Group>
-    <Group>
+	<Group>
       <Tag>Military_Gunner</Tag>
       <VehicleModels>
-        <Model Multi="1">SquaddieArmed</Model>
+        <Model Multi="3">SquaddieArmed</Model>
+		<Model Multi="1">InsurgentGunner</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>USAF_Gunner</Tag>
+	<Group>
+      <Tag>Military_Heli</Tag>
       <VehicleModels>
-        <Model Multi="1">USAFSquaddieArmed</Model>
+        <Model Multi="1" Limit="2" GlobalGroupLimitType="ExtraHeli">ArmyAnnihilator</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Military_Paratroopers</Tag>
+      <VehicleModels>
+        <Model Multi="1"  Limit="1"  GlobalGroupLimitType="Paratroopers">MilitaryParatroopers</Model>
       </VehicleModels>
     </Group>	
     <Group>
@@ -710,28 +1330,23 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">Hunter</Model>
       </VehicleModels>
     </Group>
-    <Group>
-      <Tag>Military_Annihilator3</Tag>
+	<Group>
+      <Tag>Military_Hunter2</Tag>
       <VehicleModels>
-        <Model Multi="1">Annihilator</Model>
+        <Model Multi="1">HunterBarrage</Model>
       </VehicleModels>
-    </Group>	
-    <Group>
-      <Tag>Military_Annihilator2</Tag>
-      <VehicleModels>
-        <Model Multi="1">ArmyAnnihilator</Model>
-      </VehicleModels>
-    </Group>	
+    </Group>
     <Group>
       <Tag>Military_Annihilator</Tag>
       <VehicleModels>
         <Model Multi="1">ArmyAnnihilator2</Model>
+		<!--<Model Multi="1">Annihilator</Model>-->
       </VehicleModels>
     </Group>
     <Group>
       <Tag>Military_Buzzard</Tag>
       <VehicleModels>
-        <Model Multi="1">Buzzard</Model>
+		<Model Multi="1">Buzzard</Model>
       </VehicleModels>
     </Group>
     <Group>
@@ -743,7 +1358,7 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
     <Group>
       <Tag>Military_Strikeforce</Tag>
       <VehicleModels>
-        <Model Multi="1">Strikeforce</Model>
+		<Model Multi="1" Limit="1">Strikeforce</Model>
       </VehicleModels>
     </Group>
     <Group>
@@ -758,25 +1373,83 @@ Limit will enforce how many of this group can be spawned. GlobalGroupLimitType w
         <Model Multi="1">USAFCar_3star</Model>
       </VehicleModels>
     </Group>
+	<Group>
+      <Tag>USAF_Squaddie</Tag>
+      <VehicleModels>
+        <Model Multi="1">USAFSquaddieUnarmed</Model>
+      </VehicleModels>
+    </Group>
     <!-- NYSP -->
     <Group>
       <Tag>NYSP_COP</Tag>
       <VehicleModels>
-        <Model Multi="1">NYSPCar</Model>
-        <Model Multi="1">NYSPCar2</Model>
+		<Model Multi="1">NYSPCar</Model>
+        <Model Multi="2">NYSPCar2</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>NYSP_COP_3star</Tag>
       <VehicleModels>
-        <Model Multi="1">NYSPCar_3star</Model>
-        <Model Multi="1">NYSPCar2_3star</Model>
+		<Model Multi="1">NYSPCar_3star</Model>
+        <Model Multi="2">NYSPCar2_3star</Model>
       </VehicleModels>
     </Group>
     <Group>
       <Tag>NYSP_SWAT</Tag>
       <VehicleModels>
         <Model Multi="1">NYSPSwat</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>NYSP_HELI</Tag>
+      <VehicleModels>
+        <Model Multi="1" Limit="1" GlobalGroupLimitType="ExtraHeli">NYSPMaverick</Model>
+      </VehicleModels>
+    </Group>
+	
+	<!-- El Rubio Cartel -->
+	<Group>
+      <Tag>Cartel_Guard</Tag>
+      <VehicleModels>
+        <Model Multi="1">CartelWinky</Model>
+		<Model Multi="1">CartelManchez</Model>
+		<Model Multi="1">CartelSquaddie</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Cartel_Guard_4star</Tag>
+      <VehicleModels>
+        <Model Multi="1">CartelWinkyFull</Model>
+		<Model Multi="1">CartelSquaddieFull</Model>
+		<Model Multi="1">CartelManchez</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Cartel_Guard_6star</Tag>
+      <VehicleModels>
+        <Model Multi="2">CartelWinkyFull</Model>
+		<Model Multi="2">CartelSquaddieFull</Model>
+		<Model Multi="2">CartelManchez</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="HeavyResp">CartelVetirFull</Model>
+		<Model Multi="1" Limit="1" GlobalGroupLimitType="Juggernaut">CartelSquaddieJuggernaut</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Cartel_Gunner</Tag>
+      <VehicleModels>
+        <Model Multi="1">CartelTechnical</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>Cartel_Buzzard</Tag>
+      <VehicleModels>
+        <Model Multi="1">CartelBuzzard</Model>
+      </VehicleModels>
+    </Group>
+	<Group>
+      <Tag>ElRubio_Valkyrie</Tag>
+      <VehicleModels>
+        <Model Multi="1">ElRubioValkyrie</Model>
       </VehicleModels>
     </Group>
     <!-- MISC -->

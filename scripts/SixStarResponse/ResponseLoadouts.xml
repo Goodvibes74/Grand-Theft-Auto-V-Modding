@@ -26,12 +26,12 @@
     <Loadout>
 	  <Tag>MarineTeamLeader_Loadout</Tag>
       <WeaponSets IgnoreBWStunGun="true">
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
         </WeaponSet>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
@@ -39,10 +39,10 @@
     <Loadout>
 	  <Tag>MarineMG_Loadout</Tag>
       <WeaponSets IgnoreBWStunGun="true">
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
         </WeaponSet>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
@@ -51,7 +51,8 @@
 	  <Tag>MilitaryJuggernaut_Loadout</Tag>
       <WeaponSets IgnoreBWStunGun="true">
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_COMBATMG_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MINIGUN</Model><Attachments/></Weapon>
+		  <Weapon Multi="4"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_COMBATMG_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -64,7 +65,7 @@
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
         <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -77,18 +78,13 @@
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
         <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
 	  <Tag>Airman_Loadout</Tag>
-      <WeaponSets IgnoreBWStunGun="true" RemoveAllWeapons="true">
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
-        </WeaponSet>
+      <WeaponSets IgnoreBWStunGun="true">
         <WeaponSet PassengerOnly="false">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments /></Weapon>
         </WeaponSet>
@@ -97,10 +93,17 @@
     <Loadout>
 	  <Tag>Merryweather_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="2"><Ammo>5000</Ammo><Model>None</Model><Attachments /></Weapon>
+        <WeaponSet PassengerOnly="true">
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
+        <WeaponSet PassengerOnly="false">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>MerryweatherPistol_Loadout</Tag>
+      <WeaponSets>
         <WeaponSet PassengerOnly="false">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
@@ -124,11 +127,14 @@
     <Loadout>
 	  <Tag>MerryweatherRappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_02</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_BULLPUPRIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
-       </WeaponSet>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
@@ -147,7 +153,7 @@
         </WeaponSet>
       </WeaponSets>
     </Loadout>
-    <Loadout>
+	<Loadout>
 	  <Tag>MerryweatherEliteBike_Loadout</Tag>
       <WeaponSets>
         <WeaponSet PassengerOnly="false">
@@ -174,8 +180,10 @@
 	  <Tag>MerryweatherJuggernaut_Loadout</Tag>
       <WeaponSets>
         <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_CARBINERIFLE_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_SUPP</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_05</Attachment></Attachments></Weapon>
-        </WeaponSet>
+          <Weapon Multi="3"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_COMBATMG_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MINIGUN</Model><Attachments/></Weapon>
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_ASSAULTSHOTGUN_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		</WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
@@ -193,22 +201,33 @@
         </WeaponSet>
       </WeaponSets>
     </Loadout>
+	<Loadout>
+	  <Tag>NOOSEBoatPilot_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false">
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_BULLPUPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet> 
+      </WeaponSets>
+    </Loadout>
     <Loadout>
 	  <Tag>NOOSERappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_02</Attachment><Attachment Chance="1.0">COMPONENT_SMG_CLIP_02</Attachment></Attachments></Weapon>
         </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
-	  <Tag>NOOSEHeavy_Loadout</Tag>
+	  <Tag>NOOSEElite_Loadout</Tag>
       <WeaponSets>
         <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_CARBINERIFLE_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_SUPP</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_05</Attachment></Attachments></Weapon>
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_CARBINERIFLE_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_05</Attachment></Attachments></Weapon>
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
         </WeaponSet> 
         <WeaponSet PassengerOnly="false">
@@ -220,15 +239,12 @@
 	  <Tag>NOOSEJuggernaut_Loadout</Tag>
       <WeaponSets>
         <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_CARBINERIFLE_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_SUPP</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_05</Attachment></Attachments></Weapon>
+          <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_CARBINERIFLE_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_05</Attachment></Attachments></Weapon>
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_ASSAULTSHOTGUN_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
         </WeaponSet>
-      </WeaponSets>
-    </Loadout>
-    <Loadout>
-	  <Tag>NOOSEJuggernautCQC_Loadout</Tag>
-      <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		<WeaponSet PassengerOnly="false">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -270,14 +286,14 @@
     <Loadout>
 	  <Tag>SWAT_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
@@ -285,11 +301,14 @@
     <Loadout>
 	  <Tag>SWATRappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -303,7 +322,7 @@
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATPISTOL_RDE</Model><Attachments><Attachment Chance="0.75">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PISTOL_RDE</Model><Attachments><Attachment Chance="0.75">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
-		  <Weapon Multi="5"><Ammo>5000</Ammo><Model>WEAPON_REVOLVER</Model><Attachments /></Weapon>
+		  <Weapon Multi="5"><Ammo>5000</Ammo><Model>WEAPON_REVOLVER_AI</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -323,9 +342,12 @@
     <Loadout>
 	  <Tag>SheriffSWATRappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_TACTICALRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH_REH</Attachment></Attachments></Weapon>
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -339,16 +361,19 @@
         </WeaponSet>
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CERAMICPISTOL_RDE</Model><Attachments /></Weapon>
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_REVOLVER</Model><Attachments /></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_REVOLVER_AI</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
-    <Loadout>
+	<Loadout>
 	  <Tag>MarshalRappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
- 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_02_SMG_MK2</Attachment></Attachments></Weapon>
+        </WeaponSet>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CERAMICPISTOL_RDE</Model><Attachments /></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_REVOLVER_AI</Model><Attachments /></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -381,73 +406,265 @@
         </WeaponSet>
       </WeaponSets>
     </Loadout>
+	<Loadout>
+	  <Tag>FIBCop_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CERAMICPISTOL_RDE</Model><Attachments /></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>FIBCopTactical_Loadout</Tag>
+      <WeaponSets>
+		<WeaponSet PassengerOnly="true" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CERAMICPISTOL_RDE</Model><Attachments /></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>BoatPilot_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>MilBoatPilot_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
     <Loadout>
 	  <Tag>USCG_Loadout</Tag>
       <WeaponSets>
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>USCGSwat_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>USCGMSRT_Loadout</Tag>
+        <WeaponSets>
+          <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+            <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+          </WeaponSet>
+        </WeaponSets>
+    </Loadout>
+    <Loadout>
+	  <Tag>USCGRappel_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SIGHTS</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment></Attachments></Weapon>
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="0.66">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
         </WeaponSet>
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
-    <Loadout>
-	  <Tag>USCGHeliRappel_Loadout</Tag>
+	<Loadout>
+	  <Tag>MSRTRappel_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SIGHTS</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MACRO_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
         </WeaponSet>
         <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
           <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>Marksman_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MARKSMANRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_LARGE_FIXED_ZOOM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_01</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MRFL_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>Sniper_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SNIPERRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>SniperRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SNIPERRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>PrecisionRifle_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PRECISIONRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>PrecisionRifleRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PRECISIONRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+    <Loadout>
+	  <Tag>HeavySniper_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSNIPER_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_HEAVYSNIPER_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_08</Attachment><Attachment Chance="1.0">COMPONENT_AT_SR_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeavySniperRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSNIPER_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment><Attachment Chance="1.0">COMPONENT_HEAVYSNIPER_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_08</Attachment><Attachment Chance="1.0">COMPONENT_AT_SR_BARREL_02</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
 	  <Tag>HeliMarksman_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MARKSMANRIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_LARGE_FIXED_ZOOM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_01</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MRFL_BARREL_02</Attachment></Attachments></Weapon>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MARKSMANRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_LARGE_FIXED_ZOOM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_01</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MRFL_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeliSniper_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SNIPERRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeliSniperRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_SNIPERRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeliPrecisionRifle_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PRECISIONRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeliPrecisionRifleRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PRECISIONRIFLE_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
-	  <Tag>HeliSniper_Loadout</Tag>
+	  <Tag>HeliHeavySniper_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSNIPER_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_HEAVYSNIPER_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_08</Attachment><Attachment Chance="1.0">COMPONENT_AT_SR_BARREL_02</Attachment></Attachments></Weapon>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSNIPER_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_HEAVYSNIPER_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_08</Attachment><Attachment Chance="1.0">COMPONENT_AT_SR_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>HeliHeavySniperRed_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSNIPER_AI</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment><Attachment Chance="1.0">COMPONENT_HEAVYSNIPER_MK2_CLIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_08</Attachment><Attachment Chance="1.0">COMPONENT_AT_SR_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
 	  <Tag>HeliCarbine_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_01</Attachment><Attachment Chance="1.0">COMPONENT_AT_CR_BARREL_02</Attachment></Attachments></Weapon>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_01</Attachment><Attachment Chance="1.0">COMPONENT_AT_CR_BARREL_02</Attachment></Attachments></Weapon>
         </WeaponSet>
-      </WeaponSets>
-    </Loadout>
-    <Loadout>
-	  <Tag>HeliCarbineSheriff_Loadout</Tag>
-      <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_TACTICALRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER_RED_REH</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
 	  <Tag>HeliCarbineold_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_CARBINERIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_FLSH</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
     <Loadout>
 	  <Tag>HeliMG_Loadout</Tag>
       <WeaponSets>
-        <WeaponSet PassengerOnly="false">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
 		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_LASER</Attachment><Attachment Chance="0.5">COMPONENT_COMBATMG_MK2_CLIP_TRACER</Attachment><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM_MK2</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment><Attachment Chance="1.0">COMPONENT_AT_MUZZLE_03</Attachment><Attachment Chance="1.0">COMPONENT_AT_MG_BARREL_02</Attachment></Attachments></Weapon>
+        </WeaponSet>
+		<WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
         </WeaponSet>
       </WeaponSets>
     </Loadout>
@@ -472,6 +689,22 @@
         </WeaponSet>
       </WeaponSets>
     </Loadout>
+	<Loadout>
+	  <Tag>ArmyPilot_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>JetPilot_Loadout</Tag>
+      <WeaponSets>
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL_RDE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_PI_FLSH</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
+    </Loadout>
     <Loadout>
 	  <Tag>Scuba_Loadout</Tag>
       <WeaponSets>
@@ -484,24 +717,56 @@
 	  <Tag>Unarmed_Loadout</Tag>
       <WeaponSets RemoveAllWeapons="true"></WeaponSets>
     </Loadout>
-    <Loadout>
+	<Loadout>
 	  <Tag>Gang_Loadout</Tag>
-      <WeaponSets>
-        <WeaponSet PassengerOnly="true" DoNotSpawnAmbiently="true">
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMPACTRIFLE</Model><Attachments /></Weapon>
-          <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PUMPSHOTGUN</Model><Attachments /></Weapon>
-        </WeaponSet>
-        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
-		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PISTOL</Model><Attachments /></Weapon>
-        </WeaponSet>
-      </WeaponSets>
-    </Loadout>
-    <Loadout>
-	  <Tag>K9_Loadout</Tag>
-	    <WeaponSets IgnoreBWStunGun="true">
-          <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+        <WeaponSets IgnoreBWStunGun="true">
+          <WeaponSet PassengerOnly="false">
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTRIFLE</Model><Attachments /></Weapon>
+          </WeaponSet>
+          <WeaponSet PassengerOnly="false">
+            <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_PISTOL</Model><Attachments /></Weapon>
           </WeaponSet>
         </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>Cartel_Loadout</Tag>
+        <WeaponSets IgnoreBWStunGun="true">
+          <WeaponSet PassengerOnly="false">
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_BATTLERIFLE</Model><Attachments><Attachment Chance="0.5">COMPONENT_BATTLERIFLE_CLIP_01</Attachment><Attachment Chance="0.5">COMPONENT_BATTLERIFLE_CLIP_02</Attachment></Attachments></Weapon>
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTRIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MILITARYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_SMALL</Attachment></Attachments></Weapon>
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MILITARYRIFLE</Model><Attachments /></Weapon>
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_COMBATSHOTGUN</Model><Attachments /></Weapon>
+          </WeaponSet>
+          <WeaponSet PassengerOnly="false">
+            <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL</Model><Attachments /></Weapon>
+          </WeaponSet>
+        </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>CartelRappel_Loadout</Tag>
+        <WeaponSets IgnoreBWStunGun="true">
+          <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+            <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_BATTLERIFLE</Model><Attachments><Attachment Chance="0.5">COMPONENT_BATTLERIFLE_CLIP_01</Attachment><Attachment Chance="0.5">COMPONENT_BATTLERIFLE_CLIP_02</Attachment></Attachments></Weapon>
+		    <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTRIFLE_MK2</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP_02</Attachment></Attachments></Weapon>
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MILITARYRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_SMALL</Attachment></Attachments></Weapon>
+			<Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MILITARYRIFLE</Model><Attachments /></Weapon>
+          </WeaponSet>
+          <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+            <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_HEAVYPISTOL</Model><Attachments /></Weapon>
+          </WeaponSet>
+        </WeaponSets>
+    </Loadout>
+	<Loadout>
+	  <Tag>CartelJuggernaut_Loadout</Tag>
+      <WeaponSets IgnoreBWStunGun="true">
+        <WeaponSet PassengerOnly="false" DoNotSpawnAmbiently="true">
+		  <Weapon Multi="1"><Ammo>5000</Ammo><Model>WEAPON_MINIGUN</Model><Attachments/></Weapon>
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_COMBATMG</Model><Attachments><Attachment Chance="1.0">COMPONENT_AT_SCOPE_MEDIUM</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_HEAVYSHOTGUN</Model><Attachments><Attachment Chance="1.0">COMPONENT_HEAVYSHOTGUN_CLIP_03</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+		  <Weapon Multi="2"><Ammo>5000</Ammo><Model>WEAPON_ASSAULTRIFLE</Model><Attachments><Attachment Chance="1.0">COMPONENT_ASSAULTRIFLE_CLIP_03</Attachment><Attachment Chance="1.0">COMPONENT_AT_AR_AFGRIP</Attachment></Attachments></Weapon>
+        </WeaponSet>
+      </WeaponSets>
     </Loadout>
   </Loadouts>
 </SixStarResponse>

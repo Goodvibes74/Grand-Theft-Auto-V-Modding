@@ -39,6 +39,7 @@ scripts/Disarm.dll              scripts/Stance.dll
 scripts/iFruitAddon2.dll        scripts/ImmersifyII.dll
 scripts/SixStarResponse.dll     scripts/LiveryChanger.dll      (RDE)
 scripts/EasyHook.dll            (RDE)
+scripts/SSRPlus.dll             (RDE E&E)
 ```
 
 ### b) The script hook layer in the root (about 4 MB)
@@ -55,7 +56,7 @@ EasyHook64.dll             # RDE hook library
 EasyHookPatch.dll          # RDE hook library
 ```
 
-### c) The OpenIV `Mods/` folder (about 4 GB, 11 RPF files)
+### c) The OpenIV `Mods/` folder (about 5.5 GB, 14 RPF files)
 
 **Do not commit these to git.** They are too big, and every edit rewrites the whole archive. Track the **manifest** instead: `Mods/MANIFEST.md` lists each RPF with its size and SHA-256 hash, so any change shows up as a diff. Regenerate it with `bash tools/update-mods-manifest.sh` (about 20 seconds).
 
@@ -69,6 +70,9 @@ Mods/update/x64/dlcpacks/forest_s/dlc.rpf    # add-on map
 Mods/update/x64/dlcpacks/gxetron/dlc.rpf     # add-on vehicle
 Mods/update/x64/dlcpacks/rde/dlc.rpf         # RDE (Rebalanced Dispatch Enhanced) police overhaul
 Mods/update/x64/dlcpacks/wov_expansion/dlc.rpf # installed by RDE
+Mods/update/x64/dlcpacks/rdeplus/dlc.rpf     # RDE Expanded & Enhanced
+Mods/x64/audio/sfx/SS_FF.rpf                 # RDE E&E sounds
+Mods/x64/audio/sfx/SS_GM.rpf                 # RDE E&E sounds
 Mods/update/x64/dlcpacks/urus2018/dlc.rpf    # add-on vehicle (Lamborghini Urus)
 Mods/update/x64/dlcpacks/vremastered/dlc.rpf # graphics/vehicle pack
 ```

@@ -5,569 +5,480 @@
             <Name>City</Name>
             <Variables>
                 <Var Name="$LocalCop" Value="LSPD_COP" />
-                <Var Name="$LocalCop_2star" Value="LSPD_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="LSPD_COP" />
                 <Var Name="$LocalCop_3star" Value="LSPD_COP_3star" />
-                <Var Name="$LocalSwat" Value="LSPD_SWAT" />
+				<Var Name="$LocalCop_4star" Value="LSPD_COP_3star" />
+				<Var Name="$LocalCop_HighSpeed" Value="LSPD_COP_HIGHSPEED" />
+                <Var Name="$LocalSWAT" Value="LSPD_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="LSPD_SWAT" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="LSPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="LSPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="LSPD_HELI" />
+				<Var Name="$LocalHeli_5star" Value="LSPD_HELI_5star" />
                 <Var Name="$FIB_Regular" Value="FIB" />
                 <Var Name="$FIB_Armored" Value="FIB_ARMORED" />
-                <Var Name="$FederalSWAT" Value="FIB_SWAT" />
-                <Var Name="$FederalJugg" Value="NOOSE_JUGGERNAUT" />
-                <Var Name="$LocalCop_HighSpeed" Value="LSPD_COP_HIGHSPEED_3star" />
-                <Var Name="$FIB_Regular_HighSpeed" Value="FIB_HIGHSPEED" />
-                <Var Name="$FIB_Armored_HighSpeed" Value="FIB_HIGHSPEED_ARMORED" />
+                <Var Name="$FederalSWAT" Value="FED_SWAT" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="FED_SWAT_HIGHSPEED" />
+				<Var Name="$FederalHeli" Value="FED_HELI" />
+				<Var Name="$Military" Value="Military" />
+				<Var Name="$Military_Gunner" Value="Military_Gunner" />
+				<Var Name="$Military_APC" Value="Military_APC" />
+				<Var Name="$Military_APC2" Value="Military_APC2" />
+				<Var Name="$Military_Rhino" Value="Military_Rhino" />
+				<Var Name="$Military_Hunter" Value="Military_Hunter" />
+				<Var Name="$Military_Hunter2" Value="Military_Hunter2" />
+				<Var Name="$Military_Buzzard" Value="Military_Buzzard" />
+				<Var Name="$Military_Annihilator" Value="Military_Annihilator" />
+				<Var Name="$Military_Fighters" Value="Military_Fighters" />
+				<Var Name="$Military_Strikeforce" Value="Military_Strikeforce" />
+				<Var Name="$Military_Paratroopers" Value="Military_Paratroopers" />
             </Variables>
-            <Spawns>
 <!-- Priority: domain (air, surface, or subsurface), then weight, then precise height ("high air" or "deep sub" which currently aren't used), then speed -->
+            <Spawns>
                 <ResponseClass Weight="regular" Speed="regular" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_2star</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_2star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$LocalCop_3star</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Regular</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalSWAT_5star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalSWAT_5star</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$FIB_Armored</Group>
+						<Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+						<Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+					    <Group SpawnInfo="SpawnInfo_3">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_Paratroopers">$Military_Paratroopers</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
+						<Group SpawnInfo="SpawnInfo_Paratroopers">$Military_Paratroopers</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="regular" Speed="veryfast" Height="regular">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_2star</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_HighSpeed</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_HighSpeed</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Regular_HighSpeed</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop_HighSpeed</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FIB_Armored_HighSpeed</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FederalSWAT</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Rhino</Group>
+						<Group SpawnInfo="SpawnInfo_Paratroopers">$Military_Paratroopers</Group>
                     </TenStar>
                 </ResponseClass>
                 <ResponseClass Weight="heavy" Speed="regular" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_2star</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$LocalCop_3star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FIB_Armored</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT_5star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalSWAT_5star</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$FIB_Armored</Group>
+						<Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">$Military_Annihilator</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heli">$Military_Annihilator</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_Rhino</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heli">$Military_Annihilator</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heavy">$Military_Rhino</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Heavy">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heli">$Military_Annihilator</Group>
                     </TenStar>
                 </ResponseClass>
                 <ResponseClass Weight="superheavy" Speed="regular" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_3star</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalSWAT</Group>
+					    <Group SpawnInfo="SpawnInfo_3">$LocalSWAT_5star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_4">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+						<Group SpawnInfo="SpawnInfo_4">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$Military_APC</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Rhino</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Rhino</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Gunner</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Rhino</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">$Military_Hunter2</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Strikeforce</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Rhino</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">$Military_Hunter2</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Strikeforce</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Rhino</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Rhino</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">$Military_Hunter2</Group>
+                        <Group SpawnInfo="SpawnInfo_1_PlaneHeavy">$Military_Strikeforce</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="air">
+                <ResponseClass Weight="regular" Speed="veryfast" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_2star</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_2star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_HighSpeed</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalCop_3star</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_HighSpeed</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT_HighSpeed</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Regular</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalCop_HighSpeed</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalSWAT_HighSpeed_5star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$LocalCop_HighSpeed</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalSWAT_HighSpeed</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_3">$FIB_Armored</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$FederalSWAT_HighSpeed</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+					    <Group SpawnInfo="SpawnInfo_4">$FederalSWAT_HighSpeed</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_5">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heavy">$Military_APC</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heavy">$Military_APC</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Heavy">$Military_Rhino</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="air">
+				<ResponseClass Weight="regular" Speed="regular" Height="high">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_2star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FIB_Armored</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli_5star</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+						<Group SpawnInfo="SpawnInfo_3">$LocalSWAT_5star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Hunter</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
                     </TenStar>
                 </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="helicopter" Height="air">
+				<ResponseClass Weight="regular" Speed="helicopter" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_2star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli_5star</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$LocalSWAT_5star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+					    <Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Hunter</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="plane" Height="air">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+				<ResponseClass Weight="heavy" Speed="helicopter" Height="regular">
+					<OneStar>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop_4star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalHeli_5star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_APC2</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_APC2</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_APC2</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="high">
+				<ResponseClass Weight="regular" Speed="plane" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop</Group>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_2star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$LocalCop_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalCop_4star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Buzzard</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Regular</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalSWAT_5star</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FIB_Regular</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Fighters</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Fighters</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_APC2</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop</Group>
+                <ResponseClass Weight="heavy" Speed="plane" Height="regular">
+					<OneStar>
+                        <Group SpawnInfo="SpawnInfo_1">$LocalCop_4star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalCop_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$LocalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalHeli_5star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalSWAT</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$FederalSWAT</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalCop_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FIB_Armored</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_APC2</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FIB_Armored</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FederalSWAT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FederalJugg</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_APC2</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_APC2</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_APC2</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_APC2</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Juggernaut</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_APC2</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </TenStar>
-                </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="helicopter" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Hunter</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_7">Military_Hunter</Group>
-                    </TenStar>
-                </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="plane" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Fighters</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_7">Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_APC2</Group>
                     </TenStar>
                 </ResponseClass>
             </Spawns>
@@ -577,44 +488,92 @@
             <Parent>City</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="LSSD_COP" />
-                <Var Name="$LocalCop_2star" Value="LSSD_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="LSSD_COP" />
                 <Var Name="$LocalCop_3star" Value="LSSD_COP_3star" />
-                <Var Name="$LocalSwat" Value="LSSD_SWAT" />
-                <Var Name="$LocalCop_HighSpeed" Value="LSSD_COP_HIGHSPEED_3star" />
+				<Var Name="$LocalCop_4star" Value="LSSD_COP_3star" />
+                <Var Name="$LocalSWAT" Value="LSSD_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="LSSD_SWAT" />
+                <Var Name="$LocalCop_HighSpeed" Value="LSSD_COP_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="LSSD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="LSSD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="LSSD_HELI" />
+				<Var Name="$LocalHeli_5star" Value="LSSD_HELI_5star" />
             </Variables>
         </Location>
         <Location>
             <Name>LSCounty_Rural</Name>
-            <Parent>BlaineCounty</Parent>
+            <Parent>LSCounty</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="LSSD_COP_RURAL" />
-                <Var Name="$LocalCop_2star" Value="LSSD_COP_RURAL_2star" />
+				<Var Name="$LocalCop_2star" Value="LSSD_COP_RURAL" />
                 <Var Name="$LocalCop_3star" Value="LSSD_COP_RURAL_3star" />
-                <Var Name="$LocalSwat" Value="LSSD_SWAT" />
-                <Var Name="$LocalCop_HighSpeed" Value="LSSD_COP_HIGHSPEED_3star" />
+				<Var Name="$LocalCop_4star" Value="LSSD_COP_RURAL_3star" />
+				<Var Name="$FIB_Regular" Value="FIB_RURAL" />
+                <Var Name="$FIB_Armored" Value="FIB_RURAL" />
+                <Var Name="$FederalSWAT" Value="FED_SWAT_RURAL" />
             </Variables>
         </Location>
         <Location>
             <Name>BlaineCounty</Name>
-            <Parent>City</Parent>
+            <Parent>LSCounty_Rural</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="BCSO_COP" />
-                <Var Name="$LocalCop_2star" Value="BCSO_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="BCSO_COP" />
                 <Var Name="$LocalCop_3star" Value="BCSO_COP_3star" />
-                <Var Name="$LocalSwat" Value="BCSO_SWAT" />
-                <Var Name="$FIB_Regular" Value="FIB_RURAL" />
-                <Var Name="$FIB_Armored" Value="FIB_RURAL_ARMORED" />
-                <Var Name="$FederalSWAT" Value="FIB_SWAT_RURAL" />
-                <Var Name="$LocalCop_HighSpeed" Value="BCSO_COP_HIGHSPEED_3star" />
+				<Var Name="$LocalCop_4star" Value="BCSO_COP_3star" />
+                <Var Name="$LocalSWAT" Value="BCSO_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="BCSO_SWAT" />
+                <Var Name="$LocalCop_HighSpeed" Value="BCSO_COP_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="BCSO_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="BCSO_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="BCSO_HELI" />
+				<Var Name="$LocalHeli_5star" Value="BCSO_HELI_5star" />
             </Variables>
+        </Location>
+		<Location>
+            <Name>PaletoBay</Name>
+            <Parent>BlaineCounty</Parent>
         </Location>
         <Location>
             <Name>PortAuthority</Name>
             <Parent>City</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="PAP_COP" />
-                <Var Name="$LocalCop_2star" Value="PAP_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="PAP_COP" />
                 <Var Name="$LocalCop_3star" Value="PAP_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="PAP_COP_3star" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>RockfordHills</Name>
+            <Parent>LSCounty</Parent>
+			<Variables>
+                <Var Name="$LocalCop" Value="RHPD_COP" />
+				<Var Name="$LocalCop_2star" Value="RHPD_COP" />
+                <Var Name="$LocalCop_3star" Value="RHPD_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="RHPD_COP_3star" />
+				<Var Name="$LocalSWAT" Value="RHPD_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="RHPD_SWAT" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="RHPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="RHPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="RHPD_HELI" />
+				<Var Name="$LocalHeli_5star" Value="RHPD_HELI_5star" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>DelPerro</Name>
+            <Parent>LSCounty</Parent>
+			<Variables>
+                <Var Name="$LocalCop" Value="DPPD_COP" />
+				<Var Name="$LocalCop_2star" Value="DPPD_COP" />
+                <Var Name="$LocalCop_3star" Value="DPPD_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="DPPD_COP_3star" />
+				<Var Name="$LocalSWAT" Value="DPPD_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="DPPD_SWAT" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="DPPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="DPPD_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="DPPD_HELI" />
+				<Var Name="$LocalHeli_5star" Value="DPPD_HELI_5star" />
             </Variables>
         </Location>
         <Location>
@@ -622,397 +581,247 @@
             <Parent>Highway</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="SADCR" />
-                <Var Name="$LocalCop_2star" Value="SADCR_2star" />
+				<Var Name="$LocalCop_2star" Value="SADCR" />
                 <Var Name="$LocalCop_3star" Value="SADCR_3star" />
+				<Var Name="$LocalCop_4star" Value="SADCR_3star" />
+				<Var Name="$FIB_Regular" Value="NOOSE_TRU" />
+                <Var Name="$FIB_Armored" Value="NOOSE_TRU" />
+				<Var Name="$FederalSWAT" Value="NOOSE_TRU_6star" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="NOOSE_TRU_6star" />
+				<Var Name="$FederalHeli" Value="NOOSE_ANNIHILATOR" />
             </Variables>
         </Location>
         <Location>
             <Name>Airport</Name>
             <Parent>City</Parent>
             <Variables>
-                <Var Name="$LocalCop" Value="PIA_COP" />
-                <Var Name="$LocalCop_2star" Value="PIA_COP" />
-                <Var Name="$LocalCop_3star" Value="PIA_COP_3star" />
-                <Var Name="$LocalSwat" Value="NOOSE_TRU" />
+                <Var Name="$LocalCop" Value="LSIA_COP" />
+				<Var Name="$LocalCop_2star" Value="LSIA_COP" />
+                <Var Name="$LocalCop_3star" Value="LSIA_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="LSIA_COP_3star" />
+                <Var Name="$LocalSWAT" Value="LSIA_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="LSIA_SWAT_5star" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="LSIA_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="LSIA_SWAT_HIGHSPEED_5star" />
+				<Var Name="$LocalHeli_5star" Value="NOOSE_HELI_5star" />
             </Variables>
         </Location>
         <Location>
             <Name>NooseHQ</Name>
             <Parent>Airport</Parent>
             <Variables>
-                <Var Name="$FederalSWAT" Value="NOOSE_TRU" />
+			    <Var Name="$LocalCop" Value="NOOSE_COP" />
+				<Var Name="$LocalCop_2star" Value="NOOSE_COP" />
+                <Var Name="$LocalCop_3star" Value="NOOSE_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="NOOSE_COP_3star" />
+                <Var Name="$LocalSWAT" Value="NOOSE_TRU" />
+				<Var Name="$LocalSWAT_5star" Value="NOOSE_TRU" />
+				<Var Name="$FIB_Regular" Value="NOOSE_TRU" />
+                <Var Name="$FIB_Armored" Value="NOOSE_TRU" />
+                <Var Name="$FederalSWAT" Value="NOOSE_TRU_6star" />
+				<Var Name="$LocalCop_HighSpeed" Value="NOOSE_COP_3star" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="NOOSE_TRU" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="NOOSE_TRU" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="NOOSE_TRU_6star" />
+				<Var Name="$LocalHeli" Value="NOOSE_HELI" />
+				<Var Name="$LocalHeli_5star" Value="NOOSE_HELI_5star" />
+				<Var Name="$FederalHeli" Value="NOOSE_ANNIHILATOR" />
+            </Variables>
+        </Location>
+		 <Location>
+            <Name>Downtown</Name>
+            <Parent>City</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="DOWNT_COP" />
+				<Var Name="$LocalCop_2star" Value="DOWNT_COP" />
+                <Var Name="$LocalCop_3star" Value="DOWNT_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="DOWNT_COP_3star" />
+				<Var Name="$LocalHeli" Value="DOWNT_HELI" />
+				<Var Name="$LocalHeli_5star" Value="DOWNT_HELI_5star" />
             </Variables>
         </Location>
         <Location>
             <Name>PillboxHill</Name>
-            <Parent>City</Parent>
+            <Parent>Downtown</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="PBOX_COP" />
-                <Var Name="$LocalCop_2star" Value="PBOX_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="PBOX_COP" />
                 <Var Name="$LocalCop_3star" Value="PBOX_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="PBOX_COP_3star" />
+				<Var Name="$LocalSWAT" Value="PBOX_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="PBOX_SWAT_5star" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="FIB" />
+				<Var Name="$LocalHeli_5star" Value="FIB_HELI" />
             </Variables>
         </Location>
         <Location>
             <Name>Highway</Name>
-            <Parent>BlaineCounty</Parent>
+            <Parent>LSCounty</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="SAHP_COP" />
-                <Var Name="$LocalCop_2star" Value="SAHP_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="SAHP_COP" />
                 <Var Name="$LocalCop_3star" Value="SAHP_COP_3star" />
-                <Var Name="$LocalSwat" Value="SAHP_SWAT" />
-                <Var Name="$LocalCop_HighSpeed" Value="SAHP_COP_HIGHSPEED_3star" />
+				<Var Name="$LocalCop_4star" Value="SAHP_COP_3star" />
+                <Var Name="$LocalSWAT" Value="SAHP_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="SAHP_SWAT" />
+                <Var Name="$LocalCop_HighSpeed" Value="SAHP_COP_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="SAHP_SWAT_HIGHSPEED" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="SAHP_SWAT_HIGHSPEED" />
+				<Var Name="$LocalHeli" Value="SAHP_HELI" />
+				<Var Name="$LocalHeli_5star" Value="SAHP_HELI_5star" />
             </Variables>
         </Location>
         <Location>
             <Name>FortZancudo</Name>
-            <Parent>City</Parent>
+            <Parent>Highway</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="USAF_COP" />
-                <Var Name="$LocalCop_2star" Value="USAF_COP" />
+				<Var Name="$LocalCop_2star" Value="USAF_COP" />
                 <Var Name="$LocalCop_3star" Value="USAF_COP_3star" />
-                <Var Name="$LocalSwat" Value="USAF_SquaddieUnarmed" />
-                <Var Name="$FIB_Regular" Value="USAF_SquaddieUnarmed" />
-                <Var Name="$FIB_Armored" Value="USAF_SquaddieUnarmed" />
+				<Var Name="$LocalCop_4star" Value="USAF_COP_3star" />
+                <Var Name="$LocalSWAT" Value="USAF_COP_3star" />
+				<Var Name="$LocalSWAT_5star" Value="USAF_COP_3star" />
+                <Var Name="$FIB_Regular" Value="USAF_Squaddie" />
+                <Var Name="$FIB_Armored" Value="USAF_Squaddie" />
                 <Var Name="$FederalSWAT" Value="Military" />
-                <Var Name="$FederalJugg" Value="Military_JUGGERNAUT" />
                 <Var Name="$LocalCop_HighSpeed" Value="USAF_COP_3star" />
-                <Var Name="$FIB_Regular_HighSpeed" Value="USAF_SquaddieUnarmed" />
-                <Var Name="$FIB_Armored_HighSpeed" Value="USAF_SquaddieUnarmed" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="USAF_COP_3star" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="USAF_COP_3star" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="Military" />
+				<Var Name="$LocalHeli" Value="Military_Heli" />
+				<Var Name="$LocalHeli_5star" Value="Military_Heli" />
+				<Var Name="$FederalHeli" Value="Military_Heli" />
             </Variables>
         </Location>
-        <Location>
+		<Location>
             <Name>NorthernWilderness</Name>
-            <Parent>BlaineCounty</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="SASPR_COP" />
-                <Var Name="$LocalCop_2star" Value="SASPR_COP_2star" />
-                <Var Name="$LocalCop_3star" Value="SASPR_COP_3star" />
-                <Var Name="$FederalSWAT" Value="SASPR_SWAT" />
-                <Var Name="$FederalJugg" Value="SASPR_SWAT" />
+            <Parent>PaletoBay</Parent>
+			<Variables>
+                <Var Name="$LocalCop" Value="SASPR_BCSO" />
+				<Var Name="$LocalCop_2star" Value="SASPR_BCSO" />
+                <Var Name="$LocalCop_3star" Value="SASPR_BCSO_3star" />
+				<Var Name="$LocalCop_4star" Value="SASPR_BCSO_3star" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
             </Variables>
         </Location>
         <Location>
             <Name>SouthernWilderness</Name>
+            <Parent>LSCounty_Rural</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="SASPR_LSSD" />
+				<Var Name="$LocalCop_2star" Value="SASPR_LSSD" />
+                <Var Name="$LocalCop_3star" Value="SASPR_LSSD_3star" />
+				<Var Name="$LocalCop_4star" Value="SASPR_LSSD_3star" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>Wilderness</Name>
             <Parent>Highway</Parent>
             <Variables>
                 <Var Name="$LocalCop" Value="SASPR_COP" />
-                <Var Name="$LocalCop_2star" Value="SASPR_COP_2star" />
+				<Var Name="$LocalCop_2star" Value="SASPR_COP" />
                 <Var Name="$LocalCop_3star" Value="SASPR_COP_3star" />
-                <Var Name="$FederalSWAT" Value="SASPR_SWAT" />
-                <Var Name="$FederalJugg" Value="SASPR_SWAT" />
+				<Var Name="$LocalCop_4star" Value="SASPR_COP_3star" />
+				<Var Name="$FIB_Regular" Value="SASPR_SWAT" />
+                <Var Name="$FIB_Armored" Value="SASPR_SWAT" />
+                <Var Name="$FederalSWAT" Value="SASPR_SWAT_6star" />
+				<Var Name="$LocalCop_HighSpeed" Value="SASPR_COP_3star" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="SASPR_SWAT_6star" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
+				<Var Name="$LocalHeli" Value="SASPR_Heli" />
             </Variables>
         </Location>
         <Location>
             <Name>Mt_Chiliad</Name>
-            <Parent>NorthernWilderness</Parent>
-            <Variables>
+            <Parent>Wilderness</Parent>
+			<Variables>
                 <Var Name="$LocalCop" Value="SASPR_ATV" />
-                <Var Name="$LocalCop_2star" Value="SASPR_ATV" />
+				<Var Name="$LocalCop_2star" Value="SASPR_ATV" />
                 <Var Name="$LocalCop_3star" Value="SASPR_ATV_3star" />
+				<Var Name="$LocalCop_4star" Value="SASPR_ATV_3star" />
+                <Var Name="$LocalSWAT" Value="SASPR_ATV_3star" />
+				<Var Name="$LocalSWAT_5star" Value="SASPR_ATV_3star" />
+                <Var Name="$FIB_Regular" Value="SASPR_ATV_3star" />
+                <Var Name="$FIB_Armored" Value="SASPR_ATV_3star" />
+                <Var Name="$FederalSWAT" Value="SASPR_ATV_3star" />
+                <Var Name="$LocalCop_HighSpeed" Value="SASPR_ATV_3star" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="SASPR_ATV_3star" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="SASPR_ATV_3star" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="SASPR_ATV_3star" />
+				<Var Name="$Military" Value="MtChil_7star" />
+				<Var Name="$Military_Gunner" Value="MtChil_7star" />
+				<Var Name="$Military_APC" Value="MtChil_7star" />
+				<Var Name="$Military_Rhino" Value="MtChil_7star" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>NorthYankton</Name>
+            <Parent>NooseHQ</Parent>
+            <Variables>
+                <Var Name="$LocalCop" Value="NYSP_COP" />
+				<Var Name="$LocalCop_2star" Value="NYSP_COP" />
+                <Var Name="$LocalCop_3star" Value="NYSP_COP_3star" />
+				<Var Name="$LocalCop_4star" Value="NYSP_COP_3star" />
+                <Var Name="$LocalSWAT" Value="NYSP_SWAT" />
+				<Var Name="$LocalSWAT_5star" Value="NYSP_SWAT" />
+				<Var Name="$FIB_Regular" Value="NYSP_SWAT" />
+                <Var Name="$FIB_Armored" Value="NYSP_SWAT" />
+				<Var Name="$FederalSWAT" Value="NOOSE_TRU_RURAL" />
+                <Var Name="$LocalCop_HighSpeed" Value="NYSP_COP_3star" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="NYSP_SWAT" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="NYSP_SWAT" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="NOOSE_TRU_RURAL" />
+				<Var Name="$LocalHeli" Value="NYSP_HELI" />
+				<Var Name="$LocalHeli_5star" Value="NYSP_HELI" />
+				<Var Name="$FederalHeli" Value="NOOSE_ANNIHILATOR" />
             </Variables>
         </Location>
         <Location>
             <Name>Merryweather</Name>
+			<Parent>PortAuthority</Parent>
             <Variables>
-                <Var Name="$EliteSec" Value="Merryweather_Elite" />
-                <Var Name="$EliteSec_AntiAir" Value="Merryweather_Elite" />
+				<Var Name="$LocalCop" Value="Port_Security" />
+				<Var Name="$LocalCop_2star" Value="Port_Security" />
+                <Var Name="$LocalCop_3star" Value="Port_Security_3star" />
+				<Var Name="$LocalCop_4star" Value="Port_Security_3star" />
+				<Var Name="$LocalCop_HighSpeed" Value="Port_Security_3star" />
+                <Var Name="$LocalSWAT" Value="Merryweather_Response" />
+				<Var Name="$LocalSWAT_5star" Value="Merryweather_Response" />
+				<Var Name="$LocalSWAT_HighSpeed" Value="Merryweather_Response" />
+				<Var Name="$LocalSWAT_HighSpeed_5star" Value="Merryweather_Response" />
+				<Var Name="$LocalHeli" Value="Merryweather_Heli" />
+				<Var Name="$LocalHeli_5star" Value="Merryweather_Heli" />
+                <Var Name="$FIB_Regular" Value="Merryweather_Response" />
+                <Var Name="$FIB_Armored" Value="Merryweather_Response" />
+                <Var Name="$FederalSWAT" Value="Merryweather_Elite" />
+				<Var Name="$FederalSWAT_HighSpeed" Value="Merryweather_Elite" />
+				<Var Name="$FederalHeli" Value="Merryweather_Heli" />
+				<Var Name="$Military" Value="Merryweather_Elite" />
+				<Var Name="$Military_Gunner" Value="Merryweather_Gunner" />
+				<Var Name="$Military_APC" Value="Merryweather_APC" />
+				<Var Name="$Military_APC2" Value="Merryweather_APC2" />
+				<Var Name="$Military_Rhino" Value="Merryweather_Khanjali" />
+				<Var Name="$Military_Hunter" Value="Merryweather_Akula" />
+				<Var Name="$Military_Hunter2" Value="Merryweather_Akula2" />
+				<Var Name="$Military_Buzzard" Value="Merryweather_Buzzard" />
+				<Var Name="$Military_Annihilator" Value="Merryweather_ArmedValk" />
+				<Var Name="$Military_Fighters" Value="Merryweather_Fighters" />
+				<Var Name="$Military_Strikeforce" Value="Merryweather_Savage" />
+				<Var Name="$Military_Paratroopers" Value="Merryweather_Paratroopers" />
             </Variables>
-            <Spawns>
-                <ResponseClass Weight="regular" Speed="regular" Height="regular">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Merryweather_Security</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_KHANJALI</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="superheavy" Speed="regular" Height="regular">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Merryweather_Security</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_KHANJALI</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Response</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_KHANJALI</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_KHANJALI</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$EliteSec</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_JUGGERNAUT</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">MERRYWEATHER_KHANJALI</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="air">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="air">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="plane" Height="air">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec_AntiAir</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Valkyrie</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Security</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Security</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Response</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Merryweather_Buzzard</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Buzzard</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Merryweather_Buzzard</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Merryweather_Buzzard</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$EliteSec_AntiAir</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$EliteSec</Group>
-                    </TenStar>
-                </ResponseClass>
-            </Spawns>
         </Location>
-        <Location>
+		<Location>
             <Name>HumaneLabs</Name>
             <Parent>Merryweather</Parent>
             <Variables>
-                <Var Name="$EliteSec" Value="Merryweather_Elite_Rural" />
-                <Var Name="$EliteSec_AntiAir" Value="Merryweather_Elite_Rural" />
+				<Var Name="$LocalCop" Value="Merryweather_Security" />
+				<Var Name="$LocalCop_2star" Value="Merryweather_Security" />
+                <Var Name="$LocalCop_3star" Value="Merryweather_Security" />
+				<Var Name="$LocalCop_4star" Value="Merryweather_Security" />
+				<Var Name="$LocalCop_HighSpeed" Value="Merryweather_Security" />
             </Variables>
         </Location>
         <Location>
@@ -1021,551 +830,630 @@
                 <Var Name="$LocalBoat" Value="USCG_Marine" />
                 <Var Name="$LocalBoat_3star" Value="USCG_Marine_3star" />
                 <Var Name="$LocalBoatSwat" Value="USCG_Marine_4star" />
-                <Var Name="$FedBoatSwat" Value="NOOSE_MARINE" />
-                <Var Name="$FedBoatMil" Value="USCG_Marine_6star" />
+				<Var Name="$LocalHeli" Value="USCG_Heli" />
+				<Var Name="$LocalHeli_5star" Value="USCG_Heli_5star" />
+                <Var Name="$FedBoatSwat" Value="USCG_Marine_4star" />
+                <Var Name="$FedBoatMil" Value="USCG_Marine_7star" />
+				<Var Name="$FederalHeli" Value="USCG_Heli_MSRT" />
+				<Var Name="$MilBoatGunner" Value="USCG_Gunner" />
+				<Var Name="$Military_Hunter" Value="Military_Hunter" />
+				<Var Name="$Military_Buzzard" Value="Military_Buzzard" />
+				<Var Name="$Military_Annihilator" Value="Military_Annihilator" />
+				<Var Name="$Military_Fighters" Value="Military_Fighters" />
             </Variables>
             <Spawns>
                 <ResponseClass Weight="regular" Speed="regular" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoat_3star</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalBoat_3star</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_5_Boat">$FedBoatSwat</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_5_Boat">$FedBoatMil</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_7">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="air">
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoat_3star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_5_Boat">$FedBoatSwat</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_5_Boat">$FedBoatMil</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_5_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">$Military_Buzzard</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">$Military_Buzzard</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_3_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">$Military_Buzzard</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="air">
+				<ResponseClass Weight="regular" Speed="regular" Height="air">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli_5star</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Buzzard</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+					    <Group SpawnInfo="SpawnInfo_4_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+					    <Group SpawnInfo="SpawnInfo_1_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
                     </TenStar>
                 </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="helicopter" Height="air">
+				<ResponseClass Weight="regular" Speed="helicopter" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli_5star</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Buzzard</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+					    <Group SpawnInfo="SpawnInfo_4_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+					    <Group SpawnInfo="SpawnInfo_1_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_6">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="plane" Height="air">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+				<ResponseClass Weight="heavy" Speed="helicopter" Height="regular">
+					<OneStar>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalHeli_5star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Fighters</Group>
-						<Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$MilBoatGunner</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_6">Military_Fighters</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="high">
+				<ResponseClass Weight="regular" Speed="plane" Height="regular">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Buzzard</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatSwat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Fighters</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Annihilator</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Fighters</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_3">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_1">$Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Annihilator</Group>
+						<Group SpawnInfo="SpawnInfo_3_Boat">$MilBoatGunner</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </TenStar>
                 </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">$LocalBoat</Group>
+                <ResponseClass Weight="heavy" Speed="plane" Height="regular">
+					<OneStar>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">$LocalBoat_3star</Group>
+						<Group SpawnInfo="SpawnInfo_1">$LocalHeli</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoat</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2">$LocalHeli_5star</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoat_3star</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2">$FederalHeli</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$LocalBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+						<Group SpawnInfo="SpawnInfo_1_Boat">$MilBoatGunner</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$LocalBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$FedBoatMil</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">$MilBoatGunner</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatSwat</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_2">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$MilBoatGunner</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">$MilBoatGunner</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_3">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">$FedBoatMil</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </TenStar>
-                </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="helicopter" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Hunter</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Hunter</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Hunter</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Hunter</Group>
-                    </TenStar>
-                </ResponseClass>
-				<ResponseClass Weight="heavy" Speed="plane" Height="high">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">Military_Fighters</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">Military_Fighters</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">Military_Fighters</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">Military_Fighters</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Military_Fighters</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Military_Fighters</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Military_Fighters</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_5">Military_Fighters</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_7">Military_Fighters</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_9">Military_Fighters</Group>
+						<Group SpawnInfo="SpawnInfo_2">$Military_Hunter</Group>
+                        <Group SpawnInfo="SpawnInfo_4">$Military_Fighters</Group>
+                        <Group SpawnInfo="SpawnInfo_4_Boat">$MilBoatGunner</Group>
                     </TenStar>
                 </ResponseClass>
                 <ResponseClass Weight="regular" Speed="regular" Height="sub">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub</Group>
                     </TenStar>
                 </ResponseClass>
                 <ResponseClass Weight="heavy" Speed="regular" Height="sub">
                     <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub</Group>
                     </OneStar>
                     <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </TwoStar>
                     <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub</Group>
                     </ThreeStar>
                     <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
+						<Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub</Group>
+                        <Group SpawnInfo="SpawnInfo_1_Boat">USCG_Sub2</Group>
                     </FourStar>
                     <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub2</Group>
                     </FiveStar>
                     <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub2</Group>
                     </SixStar>
                     <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_2_Boat">USCG_Sub2</Group>
                     </SevenStar>
                     <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub2</Group>
                     </EightStar>
                     <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub2</Group>
                     </NineStar>
                     <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub2</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="regular" Speed="regular" Height="deep">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_4">USCG_Sub</Group>
-                    </TenStar>
-                </ResponseClass>
-                <ResponseClass Weight="heavy" Speed="regular" Height="deep">
-                    <OneStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
-                    </OneStar>
-                    <TwoStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
-                    </TwoStar>
-                    <ThreeStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
-                    </ThreeStar>
-                    <FourStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
-                    </FourStar>
-                    <FiveStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_1">USCG_Sub2</Group>
-                    </FiveStar>
-                    <SixStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
-                    </SixStar>
-                    <SevenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
-                    </SevenStar>
-                    <EightStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_2">USCG_Sub2</Group>
-                    </EightStar>
-                    <NineStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub2</Group>
-                    </NineStar>
-                    <TenStar>
-                        <Group SpawnInfo="SpawnInfo_Patrol_3">USCG_Sub2</Group>
+                        <Group SpawnInfo="SpawnInfo_3_Boat">USCG_Sub2</Group>
                     </TenStar>
                 </ResponseClass>
             </Spawns>
         </Location>
+		<Location>
+            <Name>City_Water</Name>
+            <Parent>Ocean</Parent>
+            <Variables>
+                <Var Name="$LocalBoat" Value="PAP_Marine" />
+                <Var Name="$LocalBoat_3star" Value="PAP_Marine" />
+                <Var Name="$LocalBoatSwat" Value="PAP_Marine_4star" />
+				<Var Name="$LocalHeli" Value="LSPD_HELI" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>Airport_Water</Name>
+            <Parent>Ocean</Parent>
+            <Variables>
+                <Var Name="$LocalBoat" Value="NOOSE_Marine" />
+                <Var Name="$LocalBoat_3star" Value="NOOSE_Marine" />
+                <Var Name="$LocalBoatSwat" Value="NOOSE_Marine_4star" />
+				<Var Name="$LocalHeli" Value="NOOSE_HELI" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>Highway_Water</Name>
+            <Parent>Ocean</Parent>
+            <Variables>
+                <Var Name="$LocalBoat" Value="SAHP_Marine" />
+                <Var Name="$LocalBoat_3star" Value="SAHP_Marine" />
+                <Var Name="$LocalBoatSwat" Value="SAHP_Marine_4star" />
+				<Var Name="$LocalHeli" Value="SAHP_HELI" />
+            </Variables>
+        </Location>
+		<Location>
+            <Name>LSCounty_Water</Name>
+            <Parent>Ocean</Parent>
+            <Variables>
+                <Var Name="$LocalBoat" Value="LSSD_Marine" />
+                <Var Name="$LocalBoat_3star" Value="LSSD_Marine" />
+                <Var Name="$LocalBoatSwat" Value="LSSD_Marine_4star" />
+				<Var Name="$LocalHeli" Value="LSSD_HELI" />
+            </Variables>
+        </Location>
         <Location>
-            <Name>Alamo</Name>
+            <Name>BlaineCounty_Water</Name>
             <Parent>Ocean</Parent>
             <Variables>
                 <Var Name="$LocalBoat" Value="BCSO_Marine" />
                 <Var Name="$LocalBoat_3star" Value="BCSO_Marine" />
-                <Var Name="$LocalBoatSwat" Value="BCSO_Marine_Swat" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>PortAuthority_Water</Name>
-            <Parent>Ocean</Parent>
-            <Variables>
-                <Var Name="$LocalBoat" Value="PAP_MARINE" />
-                <Var Name="$LocalBoat_3star" Value="PAP_MARINE" />
-                <Var Name="$LocalBoatSwat" Value="PAP_MARINE" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>NorthYankton</Name>
-            <Parent>BlaineCounty</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="NYSP_COP" />
-                <Var Name="$LocalCop_2star" Value="NYSP_COP" />
-                <Var Name="$LocalCop_3star" Value="NYSP_COP_3star" />
-                <Var Name="$LocalSwat" Value="NYSP_SWAT" />
-                <Var Name="$FIB_Regular" Value="NYSP_SWAT" />
-                <Var Name="$FIB_Armored" Value="NYSP_SWAT" />
-                <Var Name="$FederalSWAT" Value="NYSP_SWAT" />
-                <Var Name="$FederalJugg" Value="NYSP_SWAT" />
-                <Var Name="$LocalCop_HighSpeed" Value="NYSP_COP_3star" />
-                <Var Name="$FIB_Regular_HighSpeed" Value="NYSP_SWAT" />
-                <Var Name="$FIB_Armored_HighSpeed" Value="NYSP_SWAT" />
-            </Variables>
-        </Location>
-        <Location>
-            <Name>CayoPerico</Name>
-            <Parent>Merryweather</Parent>
-        </Location>
-        <Location>
-            <Name>Null</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="NULLERS" />
-                <Var Name="$LocalCop_2star" Value="NULLERS" />
-                <Var Name="$LocalCop_3star" Value="NULLERS" />
-                <Var Name="$LocalSwat" Value="NULLERS" />
-                <Var Name="$FIB_Regular" Value="NULLERS" />
-                <Var Name="$FIB_Armored" Value="NULLERS" />
-                <Var Name="$FederalSWAT" Value="NULLERS" />
-                <Var Name="$FederalJugg" Value="NULLERS" />
-                <Var Name="$LocalCop_HighSpeed" Value="NULLERS" />
-                <Var Name="$FIB_Regular_HighSpeed" Value="NULLERS" />
-                <Var Name="$FIB_Armored_HighSpeed" Value="NULLERS" />
+                <Var Name="$LocalBoatSwat" Value="BCSO_Marine_4star" />
+				<Var Name="$LocalHeli" Value="BCSO_HELI" />
             </Variables>
         </Location>
 		<Location>
-            <Name>LibertyCity</Name>
-            <Parent>City</Parent>
-            <Variables>
-                <Var Name="$LocalCop" Value="LCPD_COP" />
-                <Var Name="$LocalCop_2star" Value="LCPD_COP" />
-                <Var Name="$LocalCop_3star" Value="LCPD_COP" />
-                <Var Name="$LocalSwat" Value="LCPD_SWAT" />
-                <Var Name="$FIB_Regular" Value="FIB" />
-                <Var Name="$FIB_Armored" Value="FIB_ARMORED" />
-                <Var Name="$FederalSWAT" Value="FIB_SWAT" />
-                <Var Name="$FederalJugg" Value="NOOSE_JUGGERNAUT" />
-                <Var Name="$LocalCop_HighSpeed" Value="LCPD_COP" />
-                <Var Name="$FIB_Regular_HighSpeed" Value="FIB_HIGHSPEED" />
-                <Var Name="$FIB_Armored_HighSpeed" Value="FIB_HIGHSPEED_ARMORED" />
+            <Name>CayoPerico</Name>
+			<Spawns>
+                <ResponseClass Weight="regular" Speed="regular" Height="regular">
+                    <OneStar>
+                        <Group SpawnInfo="SpawnInfo_1">Cartel_Guard</Group>
+                    </OneStar>
+                    <TwoStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+                    </TwoStar>
+                    <ThreeStar>
+                        <Group SpawnInfo="SpawnInfo_4">Cartel_Guard</Group>
+                    </ThreeStar>
+                    <FourStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard_4star</Group>
+                    </FourStar>
+                    <FiveStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_4star</Group>
+						<Group SpawnInfo="SpawnInfo_1">Cartel_Gunner</Group>
+                    </FiveStar>
+                    <SixStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_1">Cartel_Gunner</Group>
+                    </SixStar>
+                    <SevenStar>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+                    </SevenStar>
+                    <EightStar>
+					    <Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+                    </EightStar>
+                    <NineStar>
+						<Group SpawnInfo="SpawnInfo_4">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+                    </NineStar>
+                    <TenStar>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1_HeliHeavy">ElRubio_Valkyrie</Group>
+                    </TenStar>
+                </ResponseClass>
+				<ResponseClass Weight="heavy" Speed="regular" Height="regular">
+                    <OneStar>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+                    </OneStar>
+                    <TwoStar>
+                        <Group SpawnInfo="SpawnInfo_4">Cartel_Guard</Group>
+                    </TwoStar>
+                    <ThreeStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard_4star</Group>
+                    </ThreeStar>
+                    <FourStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_4star</Group>
+						<Group SpawnInfo="SpawnInfo_1">Cartel_Gunner</Group>
+                    </FourStar>
+                    <FiveStar>
+                        <Group SpawnInfo="SpawnInfo_3">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_1">Cartel_Gunner</Group>
+                    </FiveStar>
+                    <SixStar>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+                    </SixStar>
+                    <SevenStar>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+                    </SevenStar>
+                    <EightStar>
+					    <Group SpawnInfo="SpawnInfo_4">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+                    </EightStar>
+                    <NineStar>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">Cartel_Buzzard</Group>
+                    </NineStar>
+                    <TenStar>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">Cartel_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1_HeliHeavy">ElRubio_Valkyrie</Group>
+                    </TenStar>
+                </ResponseClass>
+				<ResponseClass Weight="superheavy" Speed="regular" Height="regular">
+                    <OneStar>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+                    </OneStar>
+                    <TwoStar>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Guard</Group>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard_4star</Group>
+                    </TwoStar>
+                    <ThreeStar>
+                        <Group SpawnInfo="SpawnInfo_5">Cartel_Guard_6star</Group>
+                    </ThreeStar>
+                    <FourStar>
+						<Group SpawnInfo="SpawnInfo_4">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_2">Cartel_Gunner</Group>
+                    </FourStar>
+                    <FiveStar>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Gunner</Group>
+                    </FiveStar>
+                    <SixStar>
+                        <Group SpawnInfo="SpawnInfo_2">Cartel_Guard_6star</Group>
+						<Group SpawnInfo="SpawnInfo_3">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_1_Heli">Cartel_Buzzard</Group>
+                    </SixStar>
+                    <SevenStar>
+                        <Group SpawnInfo="SpawnInfo_4">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">Cartel_Buzzard</Group>
+                    </SevenStar>
+                    <EightStar>
+						<Group SpawnInfo="SpawnInfo_5">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">Cartel_Buzzard</Group>
+                    </EightStar>
+                    <NineStar>
+						<Group SpawnInfo="SpawnInfo_4">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_3_Heli">Cartel_Buzzard</Group>
+                    </NineStar>
+                    <TenStar>
+						<Group SpawnInfo="SpawnInfo_4">Cartel_Gunner</Group>
+						<Group SpawnInfo="SpawnInfo_2_Heli">Cartel_Buzzard</Group>
+						<Group SpawnInfo="SpawnInfo_1_HeliHeavy">ElRubio_Valkyrie</Group>
+                    </TenStar>
+                </ResponseClass>
+			</Spawns>
+        </Location>
+		<Location>
+            <Name>Null</Name>
+            <Variables>			
+				<Var Name="$ClownCar" Value="NULLERS" />
             </Variables>
+			<Spawns>
+                <ResponseClass Weight="regular" Speed="regular" Height="regular">
+                    <OneStar>
+                        <Group SpawnInfo="SpawnInfo_1">$ClownCar</Group>
+                    </OneStar>
+                    <TwoStar>
+                        <Group SpawnInfo="SpawnInfo_3">$ClownCar</Group>
+                    </TwoStar>
+                    <ThreeStar>
+                        <Group SpawnInfo="SpawnInfo_4">$ClownCar</Group>
+                    </ThreeStar>
+                    <FourStar>
+                        <Group SpawnInfo="SpawnInfo_5">$ClownCar</Group>
+                    </FourStar>
+                    <FiveStar>
+						<Group SpawnInfo="SpawnInfo_6">$ClownCar</Group>
+                    </FiveStar>
+                    <SixStar>
+						<Group SpawnInfo="SpawnInfo_7">$ClownCar</Group>
+                    </SixStar>
+                    <SevenStar>
+					    <Group SpawnInfo="SpawnInfo_7">$ClownCar</Group>
+                    </SevenStar>
+                    <EightStar>
+						<Group SpawnInfo="SpawnInfo_7">$ClownCar</Group>
+                    </EightStar>
+                    <NineStar>
+                        <Group SpawnInfo="SpawnInfo_7">$ClownCar</Group>
+                    </NineStar>
+                    <TenStar>
+						<Group SpawnInfo="SpawnInfo_7">$ClownCar</Group>
+                    </TenStar>
+                </ResponseClass>
+			</Spawns>
         </Location>
     </ResponseLocations>
 </SixStarResponse>
