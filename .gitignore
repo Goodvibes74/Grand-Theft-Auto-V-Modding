@@ -29,7 +29,7 @@ ScriptHookVDotNet3.dll
 dinput8.dll
 
 # OpenIV & LML (Lennart's Mod Loader)
-/mods/
+# /Mods/ RPFs are ignored by *.rpf; tracked via Mods/MANIFEST.md instead
 /lml/
 vfs.log
 OpenIV.log
@@ -85,3 +85,17 @@ obj/
 !*.xml
 !*.txt
 !*.md
+
+# ==========================================
+# Mod binaries we DO track (see MOD_TRACKING.md)
+# ==========================================
+# SHVDN mods
+!scripts/*.dll
+# Script hook layer
+!/ScriptHookV.dll
+!/ScriptHookVDotNet2.dll
+!/ScriptHookVDotNet3.dll
+!/dinput8.dll
+!/xinput1_4.dll
+# Small mod assets
+!menyooStuff/*.mp3
