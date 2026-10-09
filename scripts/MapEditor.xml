@@ -10,7 +10,7 @@
   <InstructionalButtons>true</InstructionalButtons>
   <PropCounterDisplay>true</PropCounterDisplay>
   <SnapCameraToSelectedObject>true</SnapCameraToSelectedObject>
-  <ActivationKey>F7</ActivationKey>
+  <ActivationKey>F2</ActivationKey>
   <AutosaveInterval>5</AutosaveInterval>
   <DrawDistance>-1</DrawDistance>
   <LoadScripts>true</LoadScripts>

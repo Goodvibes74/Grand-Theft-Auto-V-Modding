@@ -103,27 +103,34 @@ GTA5.exe
 
 ## 3. Keybinds
 
-| Action | Keyboard | Controller | Set in |
-| --- | --- | --- | --- |
-| TrainerV menu | F3 | RB + X | `trainerv.ini` `[KeyBindings]` |
-| Menyoo menu | F8 | RB + D-pad Left | `menyooConfig.ini` `open_key` |
-| Menyoo Spooner | F9 | RB + D-pad Right | `menyooConfig.ini` `SpoonerModeHotkey` |
-| Menyoo FreeCam | F6 (code 117) | X + LS | `menyooConfig.ini` `FreeCamButton` |
-| Menyoo clone protection | F11 | none | `menyooConfig.ini` |
-| Better Chases+ menu | F7 | none | `BetterChasesConfig.xml` `<MenuKey>` |
-| SHVDN console | F4 | none | `ScriptHookVDotNet.ini` |
-| Stance menu | J | none | `Stance.ini` |
-| TrainerV teleport | F10 | none | `trainerv.ini` `TeleportKey` |
-| TrainerV god mode | Right Ctrl + F5 | none | `trainerv.ini` `GodKey*` |
-| Lua GUI | Numpad 8 / 2, Space | A + RB + RL / B + LB + LT | `scripts/libs/GUI.lua` |
+| Action | Keyboard | Xbox | PlayStation | Set in |
+| --- | --- | --- | --- | --- |
+| TrainerV menu | F3 | RB + X | R1 + Square | `trainerv.ini` `[KeyBindings]` |
+| TrainerV airbreak | G + 6 | RB + LS | R1 + L3 | `trainerv.ini` `AirBreakKey*`, `ControllerAirbreak*` |
+| Menyoo menu | F8 | RB + D-pad Left | R1 + D-pad Left | `menyooConfig.ini` `open_key` |
+| Menyoo Spooner | F9 | RB + D-pad Right | R1 + D-pad Right | `menyooConfig.ini` `SpoonerModeHotkey` |
+| Menyoo FreeCam | F6 (code 117) | X + LS | Square + L3 | `menyooConfig.ini` `FreeCamButton` |
+| Menyoo stop animation | Home (code 36) | none | none | `menyooConfig.ini` `stop_animation_key` |
+| Menyoo clone protection | F11 | none | none | `menyooConfig.ini` |
+| Better Chases+ menu | F7 | none | none | `BetterChasesConfig.xml` `<MenuKey>` |
+| Better Chases+ surrender | E | RB (cover) | R1 (cover) | `BetterChasesConfig.xml` `<SurrenderKey>` |
+| MapEditor | F2 | see in-game hints | see in-game hints | `scripts/MapEditor.xml` `<ActivationKey>` |
+| SHVDN console | F4 | none | none | `ScriptHookVDotNet.ini` |
+| Stance | Y | none | none | `Stance.ini` `stanceKey` |
+| TrainerV teleport | F10 | none | none | `trainerv.ini` `TeleportKey` |
+| TrainerV god mode | Right Ctrl + F5 | none | none | `trainerv.ini` `GodKey*` |
+| Lua GUI | Numpad 8 / 2, Space | A + RB + RS to open, B + LB + LT to close | Cross + R1 + R3 to open, Circle + L1 + L2 to close | `scripts/libs/GUI.lua` |
 
 ### Known conflicts
 
 - **F3 (fixed 2026-10-09):** the TrainerV menu and Menyoo FreeCam both used F3. FreeCam moved to F6 (`FreeCamButton = 117`). F10 was not an option because TrainerV uses it for teleport.
+- **F7 (fixed 2026-10-09):** Better Chases+ and MapEditor both opened on F7. MapEditor moved to F2.
+- **J (fixed 2026-10-09):** Stance, Menyoo stop animation and the TrainerV `J + Numpad` combos all used J. Stance moved to Y and Menyoo stop animation moved to Home. J now belongs to TrainerV only.
+- **X + LS on controller (fixed 2026-10-09):** Menyoo FreeCam and TrainerV airbreak both used it. TrainerV airbreak moved to RB + LS (R1 + L3).
 - **Numpad 8 / 2:** TrainerV and the Lua GUI both use these to navigate. They only clash if both menus are open at the same time.
-- **RB:** TrainerV, Menyoo and the Spooner all start their controller combos with RB. The second button tells them apart, so keep the second buttons different.
+- **RB:** TrainerV, Menyoo, the Spooner and TrainerV airbreak all start their controller combos with RB. The second button tells them apart, so keep the second buttons different.
 
-More clashes (F7, J, X + LS and others) are listed in [`docs/MODS.md`](docs/MODS.md#3-hotkey-conflicts).
+Remaining smaller clashes, mostly inside TrainerV, are listed in [`docs/MODS.md`](docs/MODS.md#3-hotkey-conflicts).
 
 **Rule:** before you give a new mod a key, check this table and update it afterwards. `KEYCODES.md` lists the numeric codes.
 

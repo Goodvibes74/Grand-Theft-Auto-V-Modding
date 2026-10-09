@@ -8,18 +8,18 @@ GUI.hidden = false
 GUI.menuOpen = false
 
 -- Controller mappings: Xbox name first, PlayStation equivalent in parentheses.
--- These are GTA V control IDs, not keyboard key codes from scripts/keys.lua.
+-- These are GTA V frontend control IDs (INPUT_FRONTEND_*), not keyboard key codes from scripts/keys.lua.
 GUI.controller = {
-	Up = 187,       -- D-pad Up / D-pad Up
-	Down = 188,     -- D-pad Down / D-pad Down
-	Accept = 201,   -- A / Cross
-	Back = 202,     -- B / Circle
-	A = 201,        -- A / Cross
-	B = 202,        -- B / Circle
-	RB = 107,       -- Right Bumper / R1
-	LB = 106,       -- Left Bumper / L1
-	RL = 205,       -- Right Stick click / R3
-	LT = 206        -- Left Trigger / L2
+	Up = 188,       -- INPUT_FRONTEND_UP: D-pad Up / D-pad Up
+	Down = 187,     -- INPUT_FRONTEND_DOWN: D-pad Down / D-pad Down
+	Accept = 201,   -- INPUT_FRONTEND_ACCEPT: A / Cross
+	Back = 202,     -- INPUT_FRONTEND_CANCEL: B / Circle
+	A = 201,        -- INPUT_FRONTEND_ACCEPT: A / Cross
+	B = 202,        -- INPUT_FRONTEND_CANCEL: B / Circle
+	RB = 206,       -- INPUT_FRONTEND_RB: Right Bumper / R1
+	LB = 205,       -- INPUT_FRONTEND_LB: Left Bumper / L1
+	RL = 210,       -- INPUT_FRONTEND_RS: Right Stick click / R3
+	LT = 207        -- INPUT_FRONTEND_LT: Left Trigger / L2
 }
 
 -- Menu toggle combos. Hold all three buttons together.
@@ -33,27 +33,49 @@ function GUI.isKeyboardPressed(key)
 	return false
 end
 
+-- LUA.asi exposes the old native namespace (CONTROLS); newer NativeDB names it PAD.
+local function controlNatives()
+	if PAD ~= nil then
+		return PAD
+	end
+	return CONTROLS
+end
+
 function GUI.isControllerPressed(control)
-	if PAD ~= nil and type(PAD.IS_CONTROL_JUST_PRESSED) == "function" then
-		return PAD.IS_CONTROL_JUST_PRESSED(0, control)
+	local natives = controlNatives()
+	if natives ~= nil and type(natives.IS_CONTROL_JUST_PRESSED) == "function" then
+		return natives.IS_CONTROL_JUST_PRESSED(0, control)
 	end
 	return false
 end
 
+function GUI.isControllerHeld(control)
+	local natives = controlNatives()
+	if natives ~= nil and type(natives.IS_CONTROL_PRESSED) == "function" then
+		return natives.IS_CONTROL_PRESSED(0, control)
+	end
+	return false
+end
+
+-- True on the frame the last button of the combo goes down while the others are held.
 function GUI.isComboPressed(combo)
 	if type(combo) ~= "table" then
 		return false
 	end
+	local justPressed = false
 	for _, controlName in ipairs(combo) do
 		local controlId = GUI.controller[controlName]
 		if controlId == nil then
 			return false
 		end
-		if not GUI.isControllerPressed(controlId) then
+		if not GUI.isControllerHeld(controlId) then
 			return false
 		end
+		if GUI.isControllerPressed(controlId) then
+			justPressed = true
+		end
 	end
-	return true
+	return justPressed
 end
 
 function GUI.addButton(name, func,args, xmin, xmax, ymin, ymax)

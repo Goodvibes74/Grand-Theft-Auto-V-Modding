@@ -27,12 +27,12 @@ These are checked with the helper function `get_key_pressed()`.
 
 ## Controller controls
 
-Controller support is also enabled in `scripts/libs/GUI.lua` using `PAD.IS_CONTROL_JUST_PRESSED(...)`.
+Controller support is also enabled in `scripts/libs/GUI.lua` using `IS_CONTROL_PRESSED` / `IS_CONTROL_JUST_PRESSED` (from `CONTROLS`, or `PAD` if the Lua runtime uses the newer native names). The IDs are the `INPUT_FRONTEND_*` controls.
 
 The menu now supports a custom combo-based toggle so it does not override the game’s normal key mapping:
 
-- Open menu: `A + RB + RL`
-- Close menu: `B + LB + LT`
+- Open menu: `A + RB + RS click` (PlayStation: `Cross + R1 + R3`)
+- Close menu: `B + LB + LT` (PlayStation: `Circle + L1 + L2`)
 - While the menu is open:
   - D-pad Up / Left stick Up = move selection up
   - D-pad Down / Left stick Down = move selection down
