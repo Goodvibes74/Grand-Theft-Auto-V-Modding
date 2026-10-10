@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    GTA Online - Offline (decompiled from the original 2021 build, then patched).
+    Shared settings (net48, SHVDN v3 and LemonUI references, copy into scripts\) come from
+    ..\..\Directory.Build.props and ..\..\Directory.Build.targets.
+    The output name must stay GTAOnline_Offline: the mod finds its ini and sounds by fixed paths in scripts\.
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>GTAOnline_Offline</AssemblyName>
+    <RootNamespace>GTAOnlineOffline</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);CS0618;CS0649;CS0169;CS0414;CS0219</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="NAudio.Core"><HintPath>$(GameScriptsDir)NAudio.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="NAudio.WinMM"><HintPath>$(GameScriptsDir)NAudio.WinMM.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="NAudio.WinForms"><HintPath>$(GameScriptsDir)NAudio.WinForms.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="NAudio"><HintPath>$(GameScriptsDir)NAudio.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
