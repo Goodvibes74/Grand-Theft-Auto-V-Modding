@@ -114,6 +114,13 @@
     <Control action="Enter / loot / intimidate / exit" keyboard="E" xbox="A" playstation="Cross" note="On-foot context button, near a marker or inside a robbed home." />
   </Mod>
 
+  <Mod name="GTA Online - Offline">
+    <Description>Single-player recreation of the GTA Online start: intro, character creator, Lester phone menus, apartment, Fleeca heist. The first launch plays the intro and switches you to a freemode character.</Description>
+    <Activate>Follow the on-screen prompts after loading. Its phone opens with F5 once unlocked. Do not buy Lester's "Cops turn a blind eye" if you want RDE and Better Chases+ to keep working.</Activate>
+    <Config>scripts/GTAOnline_Offline.ini (also holds your progress)</Config>
+    <Control action="Phone" keyboard="F5" note="Once unlocked. Also reacts to TrainerV god mode (Right Ctrl + F5)." />
+  </Mod>
+
   <Mod name="iFruitAddon2">
     <Description>Adds extra contacts from other mods to your phone.</Description>
     <Activate>Open the phone and go to Contacts.</Activate>

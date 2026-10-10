@@ -103,5 +103,8 @@ obj/
 # Small mod assets
 !menyooStuff/*.mp3
 
+# GTA Online - Offline voice and music files (181 MB). Keep them out of git; back them up separately.
+scripts/GTAOnlineOfflineAssets/*.wav
+
 # ApiDocGen downloads (NuGet packages, natives.json)
 ModDevelopment/tools/ApiDocGen/cache/

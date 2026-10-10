@@ -14,6 +14,7 @@ For keybinds see [`MODS.md`](MODS.md) and [`HOTKEYS.md`](HOTKEYS.md). For key co
 6. [iFruitAddon2](#6-ifruitaddon2)
 7. [FoSAShelter](#7-fosashelter)
    - 7a. [HomeInvasion](#7a-homeinvasion)
+   - 7b. [GTA Online - Offline](#7b-gta-online---offline)
 8. [TrainerV](#8-trainerv)
 9. [Menyoo](#9-menyoo)
 10. [Lua mod and GUI menu](#10-lua-mod-and-gui-menu)
@@ -263,6 +264,25 @@ Weapon values are `WeaponHash` names such as `SMG`, `CarbineRifle` or `Pistol`. 
 
 ---
 
+## 7b. GTA Online - Offline
+
+**File:** `scripts/GTAOnline_Offline.ini` · **Format:** INI (`[Section]`, `KEY = value`) · **Assets:** `scripts/GTAOnlineOfflineAssets/*.wav`, libraries `scripts/NAudio*.dll`
+
+The mod rewrites this file while you play, so it is your save as well as your config. Close the game before editing it.
+
+| Section | What it holds |
+| --- | --- |
+| `[LEVEL]` | `RANK`, `EXP`, `RANK UNLOCKS`, `WALLET`. |
+| `[INTRODUCTION]` | `INTRO` and `DIED FOR THE FIRST TIME`. `INTRO = False` makes the intro play on the next launch. Set it to `True` to skip it. |
+| `[CALLS]` | Which story calls and cutscenes already played (Trevor, Lester). |
+| `[CHARACTER CUSTOMIZATION]` | Face, parents, hair, outfit parts and `MICHAEL, FRANKLIN, OR TREVOR (1, 2, 3)`. Set by the character creator. |
+| `[PLAYER APARTMENTS]`, `[HEISTS]` | Eclipse Towers ownership and colour, Lester intro, heist difficulty and Fleeca progress. |
+| `[IGNORE]` | Internal flags. Do not touch. |
+
+Undo: restore a committed copy of the ini with git (it holds the wallet, purchases and progress). If wanted levels stay off after the "Cops turn a blind eye" purchase, restore the ini and restart the game; I have not tested that it clears the setting.
+
+---
+
 ## 8. TrainerV
 
 **File:** `trainerv.ini` (game root, about 6,000 lines) · **Format:** INI, comments start with `//` after a tab · **In-game menu:** F3
@@ -419,6 +439,7 @@ To add an add-on model, append a line with its model name and hash. The hash is 
 | iFruitAddon2 | `scripts/iFruitAddon2/config.ini` | INI | No |
 | FoSAShelter | `scripts/FoSAShelter.3.cs` | C# | No |
 | HomeInvasion | `scripts/HomeInvasion.xml` | XML | No |
+| GTA Online - Offline | `scripts/GTAOnline_Offline.ini` | INI | No |
 | TrainerV | `trainerv.ini` | INI (`//`) | Partly, F3 |
 | Menyoo | `menyooStuff/menyooConfig.ini` and `menyooStuff/*.xml` | INI (`;`), XML | Yes, F8 |
 | Lua GUI | `scripts/libs/GUI.lua`, `scripts/addins/*.lua` | Lua | No |
