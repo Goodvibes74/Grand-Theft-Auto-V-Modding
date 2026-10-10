@@ -35,6 +35,9 @@ public class CruelMastersOnlineOffline : Script
 
 	public static bool ContinueCOO = false;
 
+	// Patched: set when the player presses L in story mode. Nothing Online-related runs before that.
+	public static bool OnlineRequested = false;
+
 	public static string Player_Name = Function.Call<string>(Hash.GET_PLAYER_NAME, Function.Call<int>(Hash.PLAYER_ID));
 
 	public static int handle;
@@ -723,17 +726,9 @@ public class CruelMastersOnlineOffline : Script
 		StorySwitch = Config.GetValue("Main", "Progression", StorySwitch);
 		Aborted += onShutdown;
 		KeyDown += onKeyDown;
-		LogLine("constructor: removing and requesting IPLs");
-		foreach (string removeOnlyIPL in RemoveOnlyIPLS)
-		{
-			Function.Call(Hash.REMOVE_IPL, removeOnlyIPL);
-		}
-		foreach (string loadAllIPL in LoadAllIPLS)
-		{
-			Function.Call(Hash.REMOVE_IPL, loadAllIPL);
-			Function.Call(Hash.REQUEST_IPL, loadAllIPL);
-		}
-		LogLine("constructor: IPLs done");
+		// Patched: the MP IPLs are no longer loaded here. The game now starts in normal story mode and the
+		// start-up block in onTick loads them once the player presses L (see OnlineRequested).
+		LogLine("constructor: waiting in story mode, press L to start Online");
 		SETUP_CHAR_CREATOR_MENU();
 		SETUP_MAIN_MENU();
 	}
@@ -9384,6 +9379,10 @@ public class CruelMastersOnlineOffline : Script
 		{
 			MenuPool.Process();
 		}
+		if (!OnlineRequested)
+		{
+			return;
+		}
 		if (!ContinueCOO)
 		{
 			if (Game.IsLoading || Function.Call<bool>(Hash.GET_IS_LOADING_SCREEN_ACTIVE) || GTA.UI.Screen.IsFadingIn)
@@ -9406,9 +9405,14 @@ public class CruelMastersOnlineOffline : Script
 			LogLine("start-up: begin (xm_hatch_closed active: " + Interiors.IS_IPL_ACTIVE("xm_hatch_closed") + ")");
 			if (!Interiors.IS_IPL_ACTIVE("xm_hatch_closed"))
 			{
-				LogLine("start-up: ON_ENTER_SP/MP, removing and requesting IPLs");
+				// Patched: ON_ENTER_MP alone took about 22 s on 2026-10-10, so log and yield around each call.
+				LogLine("start-up: ON_ENTER_SP");
 				Function.Call(Hash.ON_ENTER_SP);
+				Script.Yield();
+				LogLine("start-up: ON_ENTER_MP");
 				Function.Call(Hash.ON_ENTER_MP);
+				Script.Yield();
+				LogLine("start-up: ON_ENTER_MP done, removing and requesting IPLs");
 				LoadingPrompt.Hide();
 				// Patched: log each IPL before touching it (the last line in the log names the one that stalls the game)
 				// and hand control back to the game every 4 IPLs instead of streaming about 190 in a single frame.
@@ -9473,6 +9477,10 @@ public class CruelMastersOnlineOffline : Script
 			Script.Wait(50);
 			LogLine("start-up: done, ContinueCOO = true");
 			ContinueCOO = true;
+			if (StorySwitch == 1 && MainMenu != null)
+			{
+				MainMenu.Visible = true;
+			}
 			return;
 		}
 		switch (StorySwitch)
@@ -10903,6 +10911,13 @@ public class CruelMastersOnlineOffline : Script
 
 	public void onKeyDown(object sender, KeyEventArgs e)
 	{
+		if (e.KeyCode == Keys.L && !OnlineRequested)
+		{
+			LogLine("L pressed: starting Online");
+			Notification.Show("Loading GTA ~r~Online~w~-~p~Offline~w~...");
+			OnlineRequested = true;
+			return;
+		}
 		if (e.KeyCode == Keys.Delete && DEBUG)
 		{
 			Function.Call(Hash.STOP_CUTSCENE_IMMEDIATELY);
