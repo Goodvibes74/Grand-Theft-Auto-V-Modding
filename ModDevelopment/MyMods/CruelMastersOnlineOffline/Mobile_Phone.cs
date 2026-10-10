@@ -391,6 +391,17 @@ internal class Mobile_Phone : Script
 
 	public static bool CAN_OPEN_PHONE = true;
 
+	// Patched: D-pad up is both INPUT_PHONE and "menu up", so the phone opened while scrolling up in a menu.
+	public static bool ANY_MENU_VISIBLE()
+	{
+		return CruelMastersOnlineOffline.MenuPool.AreAnyVisible || MPAiCreator.MenuPool.AreAnyVisible || MPClothesShop.MenuPool.AreAnyVisible || MPDealership.MDPool.AreAnyVisible || MPGeraldCMS.ContactPool.AreAnyVisible || MPInteractionMenu.MenuPool.AreAnyVisible || MPMaskShop.MenuPool.AreAnyVisible || MPModShop.MDPool.AreAnyVisible || MPSimeonCMS.ContactPool.AreAnyVisible || MPWeaponShop.MenuPool.AreAnyVisible;
+	}
+
+	public static bool SHARED_MENU_FLAG(string name)
+	{
+		return AppDomain.CurrentDomain.GetData(name) is bool open && open;
+	}
+
 	public static int MobileID = -1;
 
 	public static int CELLPHONE_IFRUIT = 0;
@@ -515,7 +526,10 @@ internal class Mobile_Phone : Script
 					DrawCellphoneCallScaleform();
 					PhoneSelection();
 				}
-				else if (Game.IsControlJustPressed(Control.Phone))
+				// Patched: only in the Online mode (story mode keeps the normal phone), never while a menu is open,
+				// and not while the Mod Guide or a TrainerV/Menyoo menu (tracked by PhoneGuard) is open. Both publish a flag
+				// through the AppDomain, because they tick after this script and their control disable comes too late.
+				else if (CruelMastersOnlineOffline.OnlineRequested && !ANY_MENU_VISIBLE() && !SHARED_MENU_FLAG("PhoneGuard.MenuOpen") && !SHARED_MENU_FLAG("ModGuide.MenuOpen") && Game.IsControlJustPressed(Control.Phone))
 				{
 					OPEN_PHONE();
 				}

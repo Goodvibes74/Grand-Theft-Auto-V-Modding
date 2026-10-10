@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    PhoneGuard
+    Shared settings (target framework, SHVDN and LemonUI references, copy into scripts\)
+    come from ..\Directory.Build.props and ..\Directory.Build.targets.
+  -->
+
+</Project>

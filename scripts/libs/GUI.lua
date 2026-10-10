@@ -109,6 +109,11 @@ function GUI.tick()
 	end
 
 	if(not GUI.hidden)then
+		-- D-pad up is both "menu up" and the phone (INPUT_PHONE, 27): keep the phone shut while the menu is open.
+		local natives = controlNatives()
+		if natives ~= nil and type(natives.DISABLE_CONTROL_ACTION) == "function" then
+			natives.DISABLE_CONTROL_ACTION(0, 27, true)
+		end
 		if( GUI.time == 0) then
 			GUI.time = GAMEPLAY.GET_GAME_TIMER()
 		end

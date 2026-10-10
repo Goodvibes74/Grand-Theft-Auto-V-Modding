@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/MyMods/">
+    <Project Path="MyMods/PhoneGuard/PhoneGuard.csproj" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path="Directory.Build.props" />

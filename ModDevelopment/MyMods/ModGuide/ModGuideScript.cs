@@ -1,4 +1,5 @@
 using GTA;
+using GTA.Native;
 using GTA.UI;
 using LemonUI;
 using LemonUI.Menus;
@@ -169,6 +170,14 @@ namespace ModGuide
 		private void OnTick(object sender, EventArgs e)
 		{
 			pool.Process();
+
+			// D-pad up is both "menu up" and the phone. Block the phone while the guide is open: the
+			// control disable covers the story-mode phone, the AppDomain flag covers the CruelMasters
+			// phone, which ticks before this script.
+			bool open = pool.AreAnyVisible;
+			AppDomain.CurrentDomain.SetData("ModGuide.MenuOpen", open);
+			if (open)
+				Function.Call(Hash.DISABLE_CONTROL_ACTION, 0, 27, true);
 
 			// Controller combo: hold the first button, press the second. Only checked on a gamepad,
 			// because the frontend controls are also mapped to keyboard keys.

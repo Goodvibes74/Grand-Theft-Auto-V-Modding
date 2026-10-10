@@ -115,8 +115,8 @@
   </Mod>
 
   <Mod name="CruelMasters Online Offline">
-    <Description>Single-player recreation of GTA Online: character editor, session mode, clothes, weapon and mod shops, dealership, phone, contracts and heists. The first launch runs the character editor and switches you to a freemode character.</Description>
-    <Activate>After the intro, press L to start a session. Visit the shops on the map. It replaces the pause menu and can fight RDE and Better Chases+ over wanted levels.</Activate>
+    <Description>Single-player recreation of GTA Online: character editor, session mode, clothes, weapon and mod shops, dealership, phone, contracts and heists. The game starts in story mode; the first L press loads Online, and the first time it runs the character editor.</Description>
+    <Activate>Press L to load Online (short black screen). After that, L opens the session menu. Visit the shops on the map. It replaces the pause menu and can fight RDE and Better Chases+ over wanted levels.</Activate>
     <Config>scripts/CruelMastersOnlineOffline.ini (also holds your progress), scripts/CruelMastersOnlineOfflineAssets/</Config>
     <Control action="Start session" keyboard="L" note="After the intro. Also flips the TrainerV right indicator." />
   </Mod>
@@ -179,6 +179,13 @@
   <Mod name="Map and graphics packs">
     <Description>forest_n and forest_s add forests to the map. vremastered improves world visuals.</Description>
     <Activate>Always on.</Activate>
+  </Mod>
+
+  <Mod name="PhoneGuard">
+    <Description>Keeps the phone shut while a TrainerV or Menyoo menu is open, so D-pad Up only scrolls the menu. It guesses whether a menu is open from the trainers' buttons.</Description>
+    <Activate>Always on.</Activate>
+    <Config>scripts/PhoneGuard.ini</Config>
+    <Control action="Reset if the phone won't open" keyboard="Backspace twice" xbox="B twice" playstation="Circle twice" note="Only needed if no menu is on screen and the phone stays shut." />
   </Mod>
 
   <Mod name="Background mods">

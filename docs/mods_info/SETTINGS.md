@@ -15,6 +15,7 @@ For keybinds see [`MODS.md`](MODS.md) and [`HOTKEYS.md`](HOTKEYS.md). For key co
 7. [FoSAShelter](#7-fosashelter)
    - 7a. [HomeInvasion](#7a-homeinvasion)
    - 7b. [CruelMasters Online Offline](#7b-cruelmasters-online-offline)
+   - 7c. [PhoneGuard](#7c-phoneguard)
 8. [TrainerV](#8-trainerv)
 9. [Menyoo](#9-menyoo)
 10. [Lua mod and GUI menu](#10-lua-mod-and-gui-menu)
@@ -269,6 +270,19 @@ Weapon values are `WeaponHash` names such as `SMG`, `CarbineRifle` or `Pistol`. 
 **File:** `scripts/CruelMastersOnlineOffline.ini` · **Format:** INI · **Data:** `scripts/CruelMastersOnlineOfflineAssets/` (save data, inventory, weapons, outfits, vehicles as XML)
 
 The mod rewrites these while you play, so they are your save as well as your config. Close the game before editing. `[MAIN] PROGRESSION`, `[RANK]` (level, RP), `[CASH]` (cash, bank) and `[CHARACTER]` (face, outfit) are the main parts. To start over, restore the ini from `ModDevelopment/MyMods/CruelMastersOnlineOffline/original/` and empty the XML files in the assets folder (the originals are in `GTA ONLINE MODS/`).
+
+## 7c. PhoneGuard
+
+**File:** `scripts/PhoneGuard.ini` · **Format:** INI
+
+| Key | Default | What it does |
+| --- | --- | --- |
+| `[Keys] TrainerVKey` | `F3` | TrainerV's keyboard open key. Must match `MenuKey` in `trainerv.ini` (114 = F3). |
+| `[Keys] MenyooKey` | `F8` | Menyoo's keyboard open key. Must match `open_key` in `menyooStuff/menyooConfig.ini` (119 = F8). |
+| `[Timing] BackCloseMs` | `3000` | After one back press, the menu counts as closed if no menu input follows within this many ms. |
+| `[Timing] IdleCloseMs` | `20000` | With no menu input at all for this many ms, the menu counts as closed. |
+
+The gamepad combos (TrainerV RB + X, Menyoo RB + D-pad Left) are fixed in the script. If you change a trainer's open key, change it here too.
 
 The older GTA Online - Offline mod was removed from `scripts/`. Its files (DLL, ini, 32 sound files, NAudio, two `.ytd` textures) are in `GTA ONLINE MODS/GTAONLINE-OFFLINE-4.1/`, and our patched source is in `ModDevelopment/MyMods/GTAOnlineOffline/`.
 
