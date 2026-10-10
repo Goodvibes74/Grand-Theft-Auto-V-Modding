@@ -9405,10 +9405,12 @@ public class CruelMastersOnlineOffline : Script
 			LogLine("start-up: begin (xm_hatch_closed active: " + Interiors.IS_IPL_ACTIVE("xm_hatch_closed") + ")");
 			if (!Interiors.IS_IPL_ACTIVE("xm_hatch_closed"))
 			{
-				// Patched: ON_ENTER_MP alone took about 22 s on 2026-10-10, so log and yield around each call.
-				LogLine("start-up: ON_ENTER_SP");
-				Function.Call(Hash.ON_ENTER_SP);
-				Script.Yield();
+				// Patched: ON_ENTER_MP alone took about 22 s on 2026-10-10, so log and yield around it.
+				// ON_ENTER_SP is skipped: the player is already in story mode, and calling it in free roam
+				// (start-up now waits for L) hung the game for good on 2026-10-10.
+				// The screen is faded out so the map swap happens with nothing on screen.
+				GTA.UI.Screen.FadeOut(500);
+				Script.Wait(600);
 				LogLine("start-up: ON_ENTER_MP");
 				Function.Call(Hash.ON_ENTER_MP);
 				Script.Yield();
@@ -9438,6 +9440,7 @@ public class CruelMastersOnlineOffline : Script
 				}
 				Function.Call(Hash.CLEAR_ALL_HELP_MESSAGES);
 				LogLine("start-up: IPL requests sent");
+				GTA.UI.Screen.FadeIn(1000);
 			}
 			if (DEBUG)
 			{

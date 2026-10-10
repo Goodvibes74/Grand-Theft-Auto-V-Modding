@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImmersifyData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Metadata>
-    <LastGameTime>12359666</LastGameTime>
+    <LastGameTime>15483851</LastGameTime>
     <LastUCUnitSpawnedAt>16474</LastUCUnitSpawnedAt>
   </Metadata>
   <EventDataHashSet>
     <EncounterId>DriveBy-1</EncounterId>
-    <LastExecutionTime>2026-10-10T01:39:58.9287751+03:00</LastExecutionTime>
-    <GameTimeAtLastExecution>7875965</GameTimeAtLastExecution>
+    <LastExecutionTime>2026-10-10T05:06:07.1130626+03:00</LastExecutionTime>
+    <GameTimeAtLastExecution>12741503</GameTimeAtLastExecution>
     <TimeSpentInGame />
   </EventDataHashSet>
   <EventDataHashSet>
     <EncounterId>GangWar-2</EncounterId>
-    <LastExecutionTime>2026-10-10T01:45:03.5250318+03:00</LastExecutionTime>
-    <GameTimeAtLastExecution>8164115</GameTimeAtLastExecution>
+    <LastExecutionTime>2026-10-10T05:39:35.3059272+03:00</LastExecutionTime>
+    <GameTimeAtLastExecution>14676151</GameTimeAtLastExecution>
     <TimeSpentInGame />
   </EventDataHashSet>
   <EventDataHashSet>
@@ -24,8 +24,8 @@
   </EventDataHashSet>
   <EventDataHashSet>
     <EncounterId>GangWar-1</EncounterId>
-    <LastExecutionTime>2026-10-10T02:16:59.2306138+03:00</LastExecutionTime>
-    <GameTimeAtLastExecution>9897620</GameTimeAtLastExecution>
+    <LastExecutionTime>2026-10-10T05:48:41.2742918+03:00</LastExecutionTime>
+    <GameTimeAtLastExecution>15215881</GameTimeAtLastExecution>
     <TimeSpentInGame />
   </EventDataHashSet>
   <EventDataHashSet>

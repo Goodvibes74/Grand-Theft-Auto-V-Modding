@@ -22,6 +22,6 @@ Single-player recreation of GTA Online (2023 mod "Online Content in Singleplayer
 | Problem | Fix |
 | --- | --- |
 | Online loaded at game start (MP IPLs in the constructor, `ON_ENTER_MP` and the character creator on the first tick). | The game stays in story mode until **L** is pressed (`OnlineRequested`). The first L press runs start-up, and with `PROGRESSION = 1` the session menu opens once loading is done. |
-| `ON_ENTER_MP` blocked about 22 s and SHVDN aborted the script (5 s per-tick limit). | Logs and `Script.Yield()` between `ON_ENTER_SP` and `ON_ENTER_MP`, and every 4 IPLs. |
+| `ON_ENTER_MP` blocked about 22 s and SHVDN aborted the script (5 s per-tick limit). | Logs and `Script.Yield()` after `ON_ENTER_MP` and every 4 IPLs. `ON_ENTER_SP` is no longer called: in free roam it hung the game. The screen fades out during the map swap. |
 
 Known risks, not changed: it sets wanted levels and the max wanted level, ends stock scripts (`atm_trigger`, `re_atmrobbery`), replaces the pause menu and calls `ChangeModel`. Not tested in game yet. Check `ScriptHookVDotNet.log` after each session.
