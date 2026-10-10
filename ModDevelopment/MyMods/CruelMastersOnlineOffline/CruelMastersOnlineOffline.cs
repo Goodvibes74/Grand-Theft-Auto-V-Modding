@@ -356,12 +356,32 @@ public class CruelMastersOnlineOffline : Script
 		return cutscene;
 	}
 
+	// Patched: the original waited forever when a dictionary is missing from the game files, which made SHVDN
+	// kill the whole script as "blocking". Now it gives up after 5 s and writes the name to
+	// scripts\CruelMastersOnlineOffline.log so the missing dictionary can be found.
+	public static void LogLine(string message)
+	{
+		try
+		{
+			File.AppendAllText(@"scripts\CruelMastersOnlineOffline.log", DateTime.Now.ToString("HH:mm:ss") + " " + message + Environment.NewLine);
+		}
+		catch (IOException)
+		{
+		}
+	}
+
 	public static string LoadDict(string dict)
 	{
+		int giveUpAt = Game.GameTime + 5000;
 		while (!Function.Call<bool>(Hash.HAS_ANIM_DICT_LOADED, dict))
 		{
 			Function.Call(Hash.REQUEST_ANIM_DICT, dict);
 			Script.Yield();
+			if (Game.GameTime > giveUpAt)
+			{
+				LogLine("LoadDict: anim dict \"" + dict + "\" did not load in 5 s, continuing without it");
+				break;
+			}
 		}
 		return dict;
 	}
