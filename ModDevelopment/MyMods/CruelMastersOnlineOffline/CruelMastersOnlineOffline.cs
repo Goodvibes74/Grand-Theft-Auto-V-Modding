@@ -372,16 +372,26 @@ public class CruelMastersOnlineOffline : Script
 
 	public static string LoadDict(string dict)
 	{
-		int giveUpAt = Game.GameTime + 5000;
+		// Real clock, not Game.GameTime: game time stops while the game is stalled, so it cannot time out a stall.
+		System.Diagnostics.Stopwatch watch = System.Diagnostics.Stopwatch.StartNew();
+		bool alreadyLoaded = Function.Call<bool>(Hash.HAS_ANIM_DICT_LOADED, dict);
+		if (!alreadyLoaded)
+		{
+			LogLine("LoadDict: requesting \"" + dict + "\"");
+		}
 		while (!Function.Call<bool>(Hash.HAS_ANIM_DICT_LOADED, dict))
 		{
 			Function.Call(Hash.REQUEST_ANIM_DICT, dict);
 			Script.Yield();
-			if (Game.GameTime > giveUpAt)
+			if (watch.ElapsedMilliseconds > 5000)
 			{
-				LogLine("LoadDict: anim dict \"" + dict + "\" did not load in 5 s, continuing without it");
-				break;
+				LogLine("LoadDict: \"" + dict + "\" did not load in 5 s, continuing without it");
+				return dict;
 			}
+		}
+		if (!alreadyLoaded)
+		{
+			LogLine("LoadDict: \"" + dict + "\" loaded in " + watch.ElapsedMilliseconds + " ms");
 		}
 		return dict;
 	}
@@ -713,6 +723,7 @@ public class CruelMastersOnlineOffline : Script
 		StorySwitch = Config.GetValue("Main", "Progression", StorySwitch);
 		Aborted += onShutdown;
 		KeyDown += onKeyDown;
+		LogLine("constructor: removing and requesting IPLs");
 		foreach (string removeOnlyIPL in RemoveOnlyIPLS)
 		{
 			Function.Call(Hash.REMOVE_IPL, removeOnlyIPL);
@@ -722,6 +733,7 @@ public class CruelMastersOnlineOffline : Script
 			Function.Call(Hash.REMOVE_IPL, loadAllIPL);
 			Function.Call(Hash.REQUEST_IPL, loadAllIPL);
 		}
+		LogLine("constructor: IPLs done");
 		SETUP_CHAR_CREATOR_MENU();
 		SETUP_MAIN_MENU();
 	}
@@ -9391,21 +9403,37 @@ public class CruelMastersOnlineOffline : Script
 					vehicle.Delete();
 				}
 			}
+			LogLine("start-up: begin (xm_hatch_closed active: " + Interiors.IS_IPL_ACTIVE("xm_hatch_closed") + ")");
 			if (!Interiors.IS_IPL_ACTIVE("xm_hatch_closed"))
 			{
+				LogLine("start-up: ON_ENTER_SP/MP, removing and requesting IPLs");
 				Function.Call(Hash.ON_ENTER_SP);
 				Function.Call(Hash.ON_ENTER_MP);
 				LoadingPrompt.Hide();
+				// Patched: log each IPL before touching it (the last line in the log names the one that stalls the game)
+				// and hand control back to the game every 4 IPLs instead of streaming about 190 in a single frame.
+				int iplCount = 0;
 				foreach (string removeOnlyIPL in RemoveOnlyIPLS)
 				{
+					LogLine("REMOVE_IPL " + removeOnlyIPL);
 					Function.Call(Hash.REMOVE_IPL, removeOnlyIPL);
+					if (++iplCount % 4 == 0)
+					{
+						Script.Yield();
+					}
 				}
 				foreach (string loadAllIPL in LoadAllIPLS)
 				{
+					LogLine("REQUEST_IPL " + loadAllIPL);
 					Function.Call(Hash.REMOVE_IPL, loadAllIPL);
 					Function.Call(Hash.REQUEST_IPL, loadAllIPL);
+					if (++iplCount % 4 == 0)
+					{
+						Script.Yield();
+					}
 				}
 				Function.Call(Hash.CLEAR_ALL_HELP_MESSAGES);
+				LogLine("start-up: IPL requests sent");
 			}
 			if (DEBUG)
 			{
@@ -9443,6 +9471,7 @@ public class CruelMastersOnlineOffline : Script
 			LoadDict("mp_facial");
 			LoadDict("anim@amb@carmeet@checkout_engine@");
 			Script.Wait(50);
+			LogLine("start-up: done, ContinueCOO = true");
 			ContinueCOO = true;
 			return;
 		}
