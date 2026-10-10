@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPInventory xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ownedInventorys>
+    <OwnedInventory>
+      <SuperLightArmor>0</SuperLightArmor>
+      <LightArmor>0</LightArmor>
+      <StandardArmor>0</StandardArmor>
+      <HeavyArmor>0</HeavyArmor>
+      <SuperHeavyArmor>0</SuperHeavyArmor>
+      <PQs>0</PQs>
+      <EgoChasers>0</EgoChasers>
+      <Meteorites>0</Meteorites>
+      <eColas>0</eColas>
+    </OwnedInventory>
+  </ownedInventorys>
+</MPInventory>

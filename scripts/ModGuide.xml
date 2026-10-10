@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
   Content of the in-game Mod Guide (scripts/ModGuide.dll). Edit freely, the script reads this file at startup.
   Each <Mod> becomes one entry in the menu:
@@ -114,11 +114,11 @@
     <Control action="Enter / loot / intimidate / exit" keyboard="E" xbox="A" playstation="Cross" note="On-foot context button, near a marker or inside a robbed home." />
   </Mod>
 
-  <Mod name="GTA Online - Offline">
-    <Description>Single-player recreation of the GTA Online start: intro, character creator, Lester phone menus, apartment, Fleeca heist. The first launch plays the intro and switches you to a freemode character.</Description>
-    <Activate>Follow the on-screen prompts after loading. Its phone opens with F5 once unlocked. Do not buy Lester's "Cops turn a blind eye" if you want RDE and Better Chases+ to keep working.</Activate>
-    <Config>scripts/GTAOnline_Offline.ini (also holds your progress)</Config>
-    <Control action="Phone" keyboard="F5" note="Once unlocked. Also reacts to TrainerV god mode (Right Ctrl + F5)." />
+  <Mod name="CruelMasters Online Offline">
+    <Description>Single-player recreation of GTA Online: character editor, session mode, clothes, weapon and mod shops, dealership, phone, contracts and heists. The first launch runs the character editor and switches you to a freemode character.</Description>
+    <Activate>After the intro, press L to start a session. Visit the shops on the map. It replaces the pause menu and can fight RDE and Better Chases+ over wanted levels.</Activate>
+    <Config>scripts/CruelMastersOnlineOffline.ini (also holds your progress), scripts/CruelMastersOnlineOfflineAssets/</Config>
+    <Control action="Start session" keyboard="L" note="After the intro. Also flips the TrainerV right indicator." />
   </Mod>
 
   <Mod name="iFruitAddon2">

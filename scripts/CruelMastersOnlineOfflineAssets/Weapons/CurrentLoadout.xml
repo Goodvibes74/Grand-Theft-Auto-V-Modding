@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPLoadout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CurrentLoadout>
+    <WeaponWithComponents>
+      <Weapon>Pistol</Weapon>
+      <Components>
+        <WeaponComponentHash>PistolClip01</WeaponComponentHash>
+      </Components>
+      <Tint>0</Tint>
+      <CompTint>0</CompTint>
+      <Ammo>9999</Ammo>
+    </WeaponWithComponents>
+    <WeaponWithComponents>
+      <Weapon>Unarmed</Weapon>
+      <Components />
+      <Tint>0</Tint>
+      <CompTint>0</CompTint>
+      <Ammo>0</Ammo>
+    </WeaponWithComponents>
+  </CurrentLoadout>
+</MPLoadout>

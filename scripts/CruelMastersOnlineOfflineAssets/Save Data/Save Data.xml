@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPSaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ContactSaveDatas>
+    <ContactSaveData>
+      <SimeonCutscene>false</SimeonCutscene>
+      <TrevorCutscene>false</TrevorCutscene>
+      <LesterCutscene>false</LesterCutscene>
+    </ContactSaveData>
+  </ContactSaveDatas>
+  <FirstDeathSaveDatas>
+    <FirstDeathSaveData>
+      <FirstDeathCutscene>false</FirstDeathCutscene>
+    </FirstDeathSaveData>
+  </FirstDeathSaveDatas>
+  <PIStyleSaveDatas />
+</MPSaveData>

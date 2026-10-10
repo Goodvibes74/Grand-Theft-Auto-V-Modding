@@ -48,7 +48,7 @@ These are mostly TrainerV clashing with itself. They're left as they are because
 | Low | N | TrainerV next song and spawn slot 9 (Left Alt + N) | Spawning slot 9 also skips the song. |
 | Low | F9 | Menyoo Spooner and NoEditorRestrictions | Only inside the Rockstar Editor. |
 | Low | E | Better Chases+ surrender, HomeInvasion enter/exit/intimidate, and the game's E | Better Chases+ only acts during a chase. HomeInvasion only acts at a red marker or inside a robbed home, but a robbery can start a chase, so mind which E you press. |
-| Low | F5 | GTA Online - Offline phone (only when its phone is unlocked) and TrainerV god mode (Right Ctrl + F5) | The mod reacts to F5 with or without Ctrl, so the god-mode combo also opens its phone. Rebind one of them if it bothers you. |
+| Low | L | CruelMasters Online Offline (start session) and TrainerV right indicator and sit (L + Numpad 0) | Pressing L to start the session also flips the right indicator in a car. |
 | Low | Numpad 8 / 2, Space | Lua GUI, TrainerV menu and airbreak, the game's Space | Only if the Lua GUI is enabled (off by default) and open along with TrainerV. |
 | Low | RB / R1 combos | TrainerV (+ X / Square), TrainerV airbreak (+ LS / L3), Menyoo (+ D-pad Left), Spooner (+ D-pad Right), Mod Guide (+ D-pad Down) | Fine while the second buttons differ. TrainerV menu navigation uses the D-pad, so holding RB while moving in TrainerV can open Menyoo. |
 

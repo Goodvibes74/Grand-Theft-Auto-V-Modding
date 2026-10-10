@@ -84,8 +84,7 @@ Also worth tracking as plain text: anything you extract from these RPFs with Ope
 
 ```text
 menyooStuff/JumpAroundMode.mp3   # Menyoo asset, ignored by *.mp3
-scripts/GTAOnline_Offline.dll    # GTA Online - Offline (needs scripts/NAudio*.dll next to it)
-scripts/NAudio*.dll              # audio library used by GTA Online - Offline
+scripts/CruelMastersOnlineOffline.dll  # CruelMasters Online Offline (replaced GTA Online - Offline)
 ```
 
 ---
@@ -102,7 +101,6 @@ scripts/NAudio*.dll              # audio library used by GTA Online - Offline
 | `*.log` (`asiloader.log`, `ScriptHookV.log`, `ScriptHookVDotNet.log`, `OpenIV.log`, ...) | Rewritten on every launch. Read them for debugging, but don't version them. |
 | `_Redist/`, `_Language Switcher/*.reg`, `unins000.*` | Installer leftovers. |
 | Soundtrack, Wallpapers, Satellite Map, Brady Guide | Media and extras. |
-| `scripts/GTAOnlineOfflineAssets/*.wav` (181 MB) | GTA Online - Offline voice lines and music. Ignored in `.gitignore`. Back them up separately. `scripts/GTAOnline_Offline.ini` stays tracked: it is small and holds the mod's save progress, so a bad intro or purchase can be rolled back with git. |
 
 ---
 

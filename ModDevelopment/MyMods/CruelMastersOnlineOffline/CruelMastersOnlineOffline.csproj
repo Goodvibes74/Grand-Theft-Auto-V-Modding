@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    CruelMasters Online Offline (decompiled from the original 2023 build, then patched).
+    Shared settings (net48, SHVDN v3 and LemonUI references, copy into scripts\) come from
+    ..\..\Directory.Build.props and ..\..\Directory.Build.targets.
+    The assembly name must stay CruelMastersOnlineOffline: the mod reads scripts\CruelMastersOnlineOffline.ini
+    and scripts\CruelMastersOnlineOfflineAssets\ by fixed paths.
+  -->
+
+  <PropertyGroup>
+    <AssemblyName>CruelMastersOnlineOffline</AssemblyName>
+    <RootNamespace>CruelMastersOnlineOffline</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);CS0618;CS0649;CS0169;CS0414;CS0219;CS0162;CS0168</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+
+</Project>

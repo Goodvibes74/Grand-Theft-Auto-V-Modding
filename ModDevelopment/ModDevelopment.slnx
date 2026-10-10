@@ -9,6 +9,6 @@
   </Folder>
   <Project Path="MyMods/ModGuide/ModGuide.csproj" />
   <Project Path="MyMods/HomeInvasion/HomeInvasion.csproj" />
-  <Project Path="MyMods/GTAOnlineOffline/GTAOnlineOffline.csproj" />
+  <Project Path="MyMods/CruelMastersOnlineOffline/CruelMastersOnlineOffline.csproj" />
   <Project Path="Samples/Samples.csproj" />
 </Solution>
