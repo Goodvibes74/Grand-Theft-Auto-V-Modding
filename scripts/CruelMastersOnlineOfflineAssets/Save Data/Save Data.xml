@@ -2,7 +2,7 @@
 <MPSaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ContactSaveDatas>
     <ContactSaveData>
-      <SimeonCutscene>false</SimeonCutscene>
+      <SimeonCutscene>true</SimeonCutscene>
       <TrevorCutscene>false</TrevorCutscene>
       <LesterCutscene>false</LesterCutscene>
     </ContactSaveData>

@@ -4,7 +4,7 @@
     <VehicleWithComponents>
       <VehicleName>StartVehicle</VehicleName>
       <VehicleHash>-326143852</VehicleHash>
-      <VehicleHandle>533768</VehicleHandle>
+      <VehicleHandle>344346</VehicleHandle>
       <ModPaint1>
         <int>0</int>
         <int>0</int>
@@ -109,7 +109,7 @@
         <int>-1</int>
         <int>-1</int>
         <int>-1</int>
-        <int>-1</int>
+        <int>0</int>
         <int>-1</int>
         <int>-1</int>
         <int>-1</int>
