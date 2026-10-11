@@ -35,6 +35,10 @@ All of them end up calling **native functions**: the 6,700 functions the game's 
 | [Downloads](../../docs/mods_info/DOWNLOADS.md) | Where to get every dependency, library, mod and tool. |
 | [Linux](../../docs/mods_info/LINUX.md) | Playing with mods and developing mods on Linux (Proton/Wine). |
 
+## GTA Online internals
+
+How GTA Online is built in this install and how to run its content fully offline: the script layers, the 1,143 compiled scripts, the Online data on disk (1,001 local mission files, stats, clothing catalogues, property entrances), the offline architecture and the research tools. Start at [online/README.md](online/README.md).
+
 ## Reference (every function)
 
 Generated from the files installed in the game, so it matches exactly what you can call. Re-generate after updating a library (see [Updating the reference](#updating-the-reference)).

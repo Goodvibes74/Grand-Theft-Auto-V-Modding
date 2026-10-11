@@ -4,6 +4,8 @@ Plan for improving our patched CruelMasters build (offline GTA Online simulation
 
 Tick items off as they ship (`[x]`), and add the commit hash next to them.
 
+Background reading: [GTA Online internals](../../docs/online/README.md) (how Online works and the offline architecture this roadmap follows).
+
 ## 1. Where things stand (session of 2026-10-11)
 
 Read from the logs of the game session on 2026-10-11, 01:52 to 02:55.
@@ -79,6 +81,8 @@ Inventory: [DLC-Packs.md](../../docs/reference/DLC-Packs.md). All 48 content upd
 
 ### H. AI online players
 
+The full design and phases are in section 5 (items 42 to 48). Items 23 to 26 are delivered through those phases.
+
 - [ ] **23.** Free-roam lobby simulation: 4 to 8 AI players with names, ranks, generated looks and personal vehicles. They join and leave with notices, have blips, and drive, wander and hang out. (L)
 - [ ] **24.** Behaviours for them: peaceful players and griefers, occasional police chases, races and fights between them, reactions to gunfire, respawns. Must coexist with SixStarResponse. (L)
 - [ ] **25.** Companion upgrades: their own rank and progress, levelling from missions, combat roles (driver, gunner, cover) and following in their own car. (M)
@@ -108,6 +112,7 @@ Inventory: [DLC-Packs.md](../../docs/reference/DLC-Packs.md). All 48 content upd
 - [ ] **38.** Save vehicles you enter: an interaction menu option "Claim this vehicle" that stores the car you are sitting in (model, colours, mods, plate) as an owned vehicle, using the existing `MPOwnedVehicles` and `VehicleWithComponents` save. Police, mission and emergency vehicles excluded. (M)
 - [ ] **39.** Garages: buy a garage (Dynasty 8 site, item 27), with an entrance marker, a vehicle interior (2, 6 or 10 cars), parking saves the car, selecting one spawns it outside. Vehicles from item 38 and the dealership go here. Today the mod has only one personal vehicle (`CurrentVehicle.xml`) and no property at all. (L)
 - [ ] **40.** Apartments and safehouses: a buyable apartment with entrance, bed (save and skip time), wardrobe (item 13) and garage link. Respawn there after death. (L)
+- [ ] **41.** Car tracking: every owned vehicle keeps a tracker blip and its last parked position (saved, so it survives a restart), the personal vehicle can be requested by phone (Mors Mutual or a mechanic), a destroyed car can be claimed through insurance, and a stolen owned car shows where it went. Depends on 38 and 39. (M)
 
 ## 4. What makes story and Online switching hard
 
@@ -119,7 +124,49 @@ Inventory: [DLC-Packs.md](../../docs/reference/DLC-Packs.md). All 48 content upd
 6. **CruelMasters assumes Online is permanent.** Its 50 scripts run off one `StorySwitch` value. Each has to clean up on exit: blips, contact calls, `NoCopsOnMission` and similar flags.
 7. **When switching is allowed:** never during a mission, cutscene, wanted level, death or while in a vehicle.
 
-## 5. Approach
+## 5. AI online players: ground plan
+
+Goal: a lobby of simulated Online players who feel alive and unpredictable. They have their own looks that change, their own cars, warehouses and money, they react to the player, and they can team up with the player on missions. Built in phases (items 42 to 48); each phase ships, gets tested in game, then the next starts. Items 23 to 26 are folded into these phases.
+
+### How the AI works
+
+**Two layers, so dozens of players cost almost nothing:**
+
+- **Roster (always running, cheap).** Every AI player is a data record: name, gender, rank, cash, personality, wardrobe, owned vehicles, properties, current activity, map position and relationship with the player. Saved per player in `scripts/CruelMastersOnlineOfflineAssets/Players/<name>.xml`, so they keep their progress between sessions. Players far from the player are simulated on paper: every few seconds their position moves toward their goal at driving or walking speed, and activities resolve with dice rolls ("sold a crate, +$40,000", "bought a Zentorno").
+- **Presence (only near the player).** When an AI player is within about 250 m (or is part of the player's job), a real ped and vehicle are spawned with their saved look and car, and GTA tasks carry out their current activity. Beyond about 400 m they turn back into data. A hard cap (start with 4 spawned at once) keeps PoolManager, RDE and SixStarResponse happy.
+
+**The brain: utility AI.** Every 10 to 30 seconds each AI player scores the activities it could do and picks one, with a little randomness so no two sessions play the same:
+
+- *Traits* (fixed per player, 0 to 1): aggression, sociability, greed, driving skill, vanity.
+- *Needs* (change over time): money, boredom, fatigue, style.
+- *Context:* time of day, the player's distance and wanted level, what the AI owns, its relationship with the player.
+- *Activities:* cruise, drive to a hangout, go home, change clothes, buy a vehicle, work its business (drive to the warehouse, source, sell), rob a store, race another AI, chase or fight the player, invite the player to a job, go offline.
+- Example: a greedy AI with low cash scores "work business" highly; a vain AI whose style need is high goes to change clothes; an aggressive AI that the player shot at scores "chase the player" highly.
+
+**Activities are small state machines** built on game tasks that already exist: `TASK_VEHICLE_DRIVE_TO_COORD_LONGRANGE`, `TASK_VEHICLE_DRIVE_WANDER`, `TASK_GO_TO_ENTITY`, scenarios (`TASK_START_SCENARIO_IN_PLACE`), combat (`TASK_COMBAT_PED`) and the companion code CruelMasters already has in `Groups.cs`. Each activity has a start, an update, a success or failure and a cleanup, and it works both spawned and on paper.
+
+**Session manager.** Keeps 4 to 8 of a roster of about 20 in the lobby. Players join and leave over time with "X joined" or "X left" notices, at a pace set in the ini.
+
+**Debug overlay.** An interaction menu toggle that lists every lobby player with their activity, needs and distance, plus a `lobby:` line in `CruelMastersOnlineOffline.log` for every decision, so a test session can be read back afterwards.
+
+### Phases
+
+- [ ] **42. Phase 1: roster and presence.** Data model and save files, 4 generated players, spawn and despawn by distance with name blips, simple cruise and walk activities, join and leave notices, the real player list with their own ranks and headshots (item 26). *Test: 4 named players appear, drive around, leave and come back; no ped pile-up after an hour.*
+- [ ] **43. Phase 2: looks and vehicles.** Generated faces (head blend, hair, colours), a personal wardrobe of 3 to 6 outfits drawn from the installed DLC clothing, and outfit changes when the AI goes home or after a while on paper. Each AI owns 1 to 5 vehicles from the DLC inventory, weighted by rank and cash, and arrives in one of them. *Test: the same player looks different on another day and drives their own cars.*
+- [ ] **44. Phase 3: the brain.** Traits, needs, the utility scorer, on-paper simulation and notifications ("X bought a Pegassi Zentorno"). *Test: the debug overlay shows varied, sensible choices; logs show no player stuck in one activity.*
+- [ ] **45. Phase 4: property and economy.** AI players own warehouses, offices, clubhouses and garages, placed at the real DLC property locations. Businesses earn money over time; AIs drive there to source and sell, and spend on cars, clothes and property. Shares the property code with items 39 and 40. *Test: an AI visibly drives to its warehouse and its cash and garage grow across sessions.*
+- [ ] **46. Phase 5: reactions and relationships.** A relationship score per AI, raised by helping or gifting and lowered by shooting or wrecking their car. Griefers who chase the player, friends who wave or help in fights, reactions to gunfire, respawns, and wanted levels that work with SixStarResponse (item 24). Interaction menu on a player: Invite to crew, Send text, Report, Kick. *Test: shooting an AI makes them hostile later; helping one makes them friendly.*
+- [ ] **47. Phase 6: collabs.** Invite AI players into a contact mission from the lobby screen (the players column already supports JOINED), where they fight as crew with roles (driver, gunner, cover), using the companion code (item 25). AI players also invite the player to their own jobs by text or phone call: helping with a warehouse sale or a business raid. Payouts are split and shown on the mission-passed screen. *Test: a Simeon mission with two AI teammates who drive and fight, and an AI-hosted sale the player can join.*
+- [ ] **48. Phase 7: polish.** Voice lines and gestures, crew names and colours, AI texts and emails (item 32), races between AIs and the player, an ini for lobby size, griefer rate and payout split.
+
+### Risks
+
+- **Performance:** every spawned player is a ped plus a vehicle. Keep the spawn cap low and despawn aggressively; RDE and SixStar already spawn a lot.
+- **Clashes:** AI wanted levels must not trigger SixStarResponse dispatch on the player. AI peds need their own relationship group (CruelMasters already creates `aiteam`).
+- **Leftovers:** every spawn is tracked and deleted on despawn, on mission start and on script abort.
+- **Save growth:** player files stay small (no history logs); the roster is capped.
+
+## 6. Approach
 
 - **Source of truth:** our patched sources in `ModDevelopment/MyMods/CruelMastersOnlineOffline/`. Build with `dotnet build -c Release ModDevelopment/ModDevelopment.slnx` with the game closed; the DLL is copied into `scripts/`.
 - **Verification:** Claude can't run the game. Every change adds a `LogLine` to `scripts/CruelMastersOnlineOffline.log`, the user plays, and Claude reads the log and `ScriptHookVDotNet.log` afterwards.
@@ -131,7 +178,7 @@ Inventory: [DLC-Packs.md](../../docs/reference/DLC-Packs.md). All 48 content upd
 - **Reverse engineering:** not needed for most of this, since we have full C# source. The `reverse-engineer-anything` skill becomes useful for memory offsets in `GTA5.exe` or for studying Rockstar's `freemode` script (items 20, 21, 27 option a).
 - **Commits:** one commit per shipped item or batch, in the existing style, only when the user asks.
 
-## 6. Priority order
+## 7. Priority order
 
 ### Batch 1: fix what feels broken (all small)
 
@@ -152,7 +199,11 @@ Inventory: [DLC-Packs.md](../../docs/reference/DLC-Packs.md). All 48 content upd
 
 ### Batch 3: big systems
 
-39, 40, 23, 24, 25, 26, then 21, 22, then 29, 20
+39, 40, 41, then AI phases 42, 43, 44, then 21, 22, then 29, 20
+
+### Batch 4: living lobby
+
+AI phases 45, 46, 47, 48
 
 ### Later or on request
 
