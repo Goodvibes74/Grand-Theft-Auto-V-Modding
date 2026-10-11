@@ -11,6 +11,7 @@ This directory is a modded **GTA V Legacy** (Enhanced is a different build) inst
 - Game version: `GTA5.exe` 1.0.3725.0 (ScriptHookV reports `VER_1_0_3717_0`). Check `ScriptHookV.log` after any game update. A version mismatch is the usual reason every script stops loading.
 - Launch: `PlayGTAV.bat` runs `PlayGTAV.exe -nobattleye`. BattlEye must stay disabled, because modded single player does not work with it.
 - Platform: Windows 11. Paths contain spaces, so always quote `"D:\Games\Grand Theft Auto V Legacy"`.
+- Hardware: a laptop with an i5-8350U and Intel UHD 620 integrated graphics (shares the 16 GB RAM). It is far below what the full mod stack needs, so keep new mods light, cap spawns, and never do per-frame file or heavy work. Settings, profiles and the freeze history: `docs/mods_info/PERFORMANCE.md`.
 - Outside the game folder, Windows needs the DirectX June 2010 runtime, Visual C++ 2013 and 2015-2022 x64 runtimes, .NET Framework 4.8 and Media Foundation (`docs/mods_info/SYSTEM_REQUIREMENTS.md`). `tools/check-system.ps1` checks them (read-only; `-Dev` adds the modding tools). Download sources: `docs/mods_info/DOWNLOADS.md`. Linux (Proton/Wine) setup and Linux mod development: `docs/mods_info/LINUX.md`.
 - Claude cannot run the game or see it. To test a change, the user launches the game and reports back, or Claude reads the logs written by the last session (see "Logs" below).
 
@@ -43,6 +44,7 @@ GTA5.exe
 | `tools/rpf.ps1` | Read-only RPF viewer: `list` and `extract` for unencrypted archives and files (add-on packs, files replaced in `Mods/`). See `docs/mods_info/RPF_TOOLS.md`. |
 | `tools/dlc-scan.ps1` | Read-only inventory of the encrypted vanilla DLC packs through the CodeWalker.Core library in `1cfcd8-CodeWalker30_dev46/` (pack names, vehicle models, file counts). Results: `ModDevelopment/docs/reference/DLC-Packs.md` (89 packs, all active, 581 DLC vehicle models). |
 | `tools/rpf-cw.ps1`, `tools/ysc-dump.ps1` | Read-only CodeWalker-based tools: list and extract files from any archive, including encrypted ones, and dump the strings of every compiled script. Used for the Online internals guides. |
+| `tools/mod-profile.ps1` | Switches mod sets before launch: `online-lite` keeps the police mods with lighter settings (originals saved as `.story`), `online` turns them off, `story` restores everything. Renames to `.disabled` and edits configs only. Run `story` before committing. See `docs/mods_info/PERFORMANCE.md`. |
 | `ModDevelopment/docs/online/` | How GTA Online works in this install and how to make it fully offline (architecture, script catalog, Online data files, offline plan, research tools). Read before building Online systems. |
 | `tools/check-system.ps1` | Read-only check that Windows has what the game, mods and modding need (DirectX June 2010, Visual C++ runtimes, .NET Framework 4.8, Media Foundation; `-Dev` adds the build tools). See `docs/mods_info/SYSTEM_REQUIREMENTS.md`. |
 | `MOD_TRACKING.md` | What to track and what never to track, plus a checklist for each modding session. |

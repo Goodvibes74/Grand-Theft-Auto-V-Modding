@@ -51,7 +51,7 @@ Pointers are `0x50000000`-based offsets into the block. Strings are stored in pa
 
 ## 5.3 Next steps that need more tooling
 
-1. **Decompiling scripts into readable code.** Strings show *what* a script touches; decompiling shows *how*. This needs a GTA V script decompiler (several community open-source ones exist). It is a third-party download, so it is installed only with the user's approval, into its own folder outside the game directory, and its output stays out of the repo.
+1. **Decompiling scripts into readable code.** Done: a decompiled set is in `D:GTA FITGGTA stuff` (guide 6). It matches build 3889; download the "Update for 1.72-3725.0" commit for an exact match if a detail disagrees with this install.
 2. **Naming the native calls.** In PC scripts the native table holds hashes for this specific build, stored rotated (each entry rotated left by `(code size + index) & 63` bits). Turning them into names needs a crossmap for build 3717 from the community native database. With it, each script's native list becomes readable (for example which scripts call `NET_GAMESERVER_*`).
 3. **Mapping the UGC format.** Plain JSON, so only careful reading is needed: start with a few `re_` files and document every key the subset interpreter needs (guide 4, section 4.5).
 

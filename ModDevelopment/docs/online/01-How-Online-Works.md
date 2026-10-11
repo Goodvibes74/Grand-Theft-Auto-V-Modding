@@ -20,12 +20,12 @@ GTA V is one engine (RAGE) running two modes on the same map: story mode and Onl
 | `freemode_init`, `freemode` | The Online main script. `freemode` runs for as long as the player is in an Online session and owns almost everything: the HUD, the interaction menu, blips, ambient events, properties, organisations, the economy hooks, and job launching. |
 | `ingamehud`, `pausemenu_multiplayer` | Online HUD and the Online pause menu (CruelMasters reuses this menu: roadmap item 20). |
 
-**Verified:** the script names, their sizes, and the names they reference (`maintransition`, `main_persistent`, `selector`, `ingamehud` and `pausemenu_multiplayer` all reference `freemode`). **Known:** the exact start order.
+**Verified:** the script names, their sizes, and the names they reference (`maintransition`, `main_persistent`, `selector`, `ingamehud` and `pausemenu_multiplayer` all reference `freemode`). **Verified in the decompiled code (guide 6):** `maintransition` starts `freemode` with `START_NEW_SCRIPT("freemode", 35250)`. **Known:** the rest of the start order.
 
 ## 1.3 The network session
 
 - In Online, every player's game joins a peer-to-peer **session** brokered by Rockstar's matchmaking. One machine is the session host; each *network script* (like `freemode` or a mission controller) also has a script host. **Known.**
-- Network scripts call `NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT`, then register **broadcast data** (`NETWORK_REGISTER_HOST_BROADCAST_VARIABLES`, `NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES`): memory that the engine keeps in sync between players. Most Online scripts keep their state there. **Verified** (natives exist); **Known** (usage).
+- Network scripts call `NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT`, then register **broadcast data** (`NETWORK_REGISTER_HOST_BROADCAST_VARIABLES`, `NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES`): memory that the engine keeps in sync between players. Most Online scripts keep their state there: 431 scripts register as network scripts, 367 register host broadcast data and 361 player broadcast data. **Verified** (decompiled code, guide 6).
 - The `NETWORK` namespace has 882 natives in this build: sessions, players, entity ownership and migration, voice, transitions, tunables and much more. **Verified.**
 - Without a session, `NETWORK_IS_GAME_IN_PROGRESS` is false, network scripts can't register broadcast data, and most Online scripts stop early or wait forever. This is the main reason Rockstar's Online scripts don't run in story mode. **Known.**
 
@@ -38,7 +38,7 @@ GTA V is one engine (RAGE) running two modes on the same map: story mode and Onl
 
 ## 1.5 Money and transactions
 
-- In Online, money changes are not just stat writes. Purchases and payouts go through the **game server**: the script opens a basket (`NET_GAMESERVER_BASKET_START`), adds catalogue items (`NET_GAMESERVER_BASKET_ADD_ITEM`), checks out (`NET_GAMESERVER_CHECKOUT_START`) and waits for the server. The `NETSHOPPING` namespace has 41 such natives, and `MONEY` has 359 more (`NETWORK_SPENT_*`, `NETWORK_EARN_*`). **Verified** (natives); **Known** (flow).
+- In Online, money changes are not just stat writes. Purchases and payouts go through the **game server**: the script opens a basket (`NET_GAMESERVER_BASKET_START`), adds catalogue items (`NET_GAMESERVER_BASKET_ADD_ITEM`), checks out (`NET_GAMESERVER_CHECKOUT_START`) and waits for the server. The `NETSHOPPING` namespace has 41 such natives, and `MONEY` has 359 more (`NETWORK_SPENT_*`, `NETWORK_EARN_*`). On PC this path is taken whenever `NET_GAMESERVER_USE_SERVER_TRANSACTIONS()` is true, and 292 scripts contain it. **Verified** (natives, and the flow in `clothes_shop_mp`, guide 6).
 - Prices come from the server catalogue (`NET_GAMESERVER_GET_PRICE`) and from tunables, though the clothing and vehicle-mod catalogues on disk also carry prices (guide 3). **Verified** (natives, files).
 - `networkshop.meta` only lists transaction and action type hashes; there is no local price list for vehicles. **Verified.**
 

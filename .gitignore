@@ -110,3 +110,7 @@ ModDevelopment/tools/ApiDocGen/cache/
 # Downloaded mod archives (other authors, large). Our patched copies live in ModDevelopment/MyMods/.
 GTA ONLINE MODS/
 1cfcd8-CodeWalker30_dev46/
+
+# Mods turned off by tools/mod-profile.ps1
+*.disabled
+*.story

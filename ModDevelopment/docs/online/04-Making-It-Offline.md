@@ -6,9 +6,9 @@ How to get GTA Online's content (all DLCs) working in single player, with no Roc
 
 People's first idea is to start `freemode` in story mode. It doesn't work, for reasons that come from guide 1:
 
-1. **No session.** `freemode`, the property scripts, the mission controllers and most `am_`, `gb_` and `fm_content_` scripts are *network scripts*. Without a session they can't register broadcast data, `NETWORK_IS_GAME_IN_PROGRESS` is false, and they stop or wait. **Known.**
+1. **No session.** `freemode`, the property scripts, the mission controllers and most `am_`, `gb_` and `fm_content_` scripts are *network scripts*. Without a session they can't register broadcast data, `NETWORK_IS_GAME_IN_PROGRESS` is false, and they stop or wait. **Verified** in the decompiled code: 431 scripts are network scripts (guide 6).
 2. **No stats.** On start, Online loads the character from server stats. Offline, the load fails and the transition stops (the `HUD_CLOUDFAILMSG` and `HUD_RETRYSTAT` messages in `maintransition`). **Verified** (strings); **Known** (behaviour).
-3. **No transactions.** Every purchase and payout waits for a server basket checkout (`NET_GAMESERVER_*`) that never answers. **Known.**
+3. **No transactions.** Every purchase and payout waits for a server basket checkout (`NET_GAMESERVER_*`) that never answers. **Verified** for PC in `clothes_shop_mp` (guide 6).
 4. **No tunables and no cloud jobs.** Prices, switches and most job files come from the cloud. **Known.**
 5. **Globals are shared and fragile.** Online scripts depend on each other through thousands of globals whose indices change with every game update. Faking them is a moving target. **Known.**
 

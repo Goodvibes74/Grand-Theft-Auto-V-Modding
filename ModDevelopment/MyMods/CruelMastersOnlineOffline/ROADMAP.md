@@ -107,6 +107,10 @@ The full design and phases are in section 5 (items 42 to 48). Items 23 to 26 are
 - [ ] **36.** Missions no longer teleport the player back to the contact marker when they end. 33 mission-pass endings in Gerald and Simeon went to the marker, several of them 1 m below the floor, so the player fell through the map. `MissionEndReturn` keeps the player where they finished; `[MISSIONS] RETURN TO CONTACT = true` restores the old return, placed on the ground. **Built 2026-10-11, awaiting in-game test.**
 - [ ] **37.** PhoneGuard missed Menyoo input: Menyoo disables the frontend controls while open, and PhoneGuard used the plain `IS_CONTROL_*` checks, so its guess timed out after 20 s and D-pad Up opened the phone. It now uses `IS_DISABLED_CONTROL_*`. **Built 2026-10-11, awaiting in-game test.**
 
+### M. Performance
+
+- [ ] **49.** Performance pass on CruelMasters: an optional timing log (ini switch) that records each script's tick time and writes the slowest to the log every minute, then fix the worst offenders (per-frame scaleform requests, file reads, menu rebuilds). Needed because the PC is a low-power laptop with integrated graphics (`docs/mods_info/PERFORMANCE.md`). (M)
+
 ### L. Vehicles and property
 
 - [ ] **38.** Save vehicles you enter: an interaction menu option "Claim this vehicle" that stores the car you are sitting in (model, colours, mods, plate) as an owned vehicle, using the existing `MPOwnedVehicles` and `VehicleWithComponents` save. Police, mission and emergency vehicles excluded. (M)
@@ -195,7 +199,7 @@ Goal: a lobby of simulated Online players who feel alive and unpredictable. They
 
 ### Batch 2: customization and phone
 
-38, 9, 10, 34, 27, 30, 35, 7, 4
+49, 38, 9, 10, 34, 27, 30, 35, 7, 4
 
 ### Batch 3: big systems
 

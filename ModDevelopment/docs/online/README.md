@@ -13,6 +13,7 @@ Everything marked **Verified** was read from this install's own files on 2026-10
 | 3 | [Online data files](03-Online-Data-Files.md) | The data Online reads that is on disk: 1,001 local mission files, stats definitions, clothing shop catalogues, preset outfits, property entrances, vehicle mods, DLC packs |
 | 4 | [Making it offline](04-Making-It-Offline.md) | Why Rockstar's Online scripts can't simply be run offline, the options, the recommended architecture, and a system-by-system gap table mapped to the roadmap |
 | 5 | [Research tools](05-Research-Tools.md) | How the facts were extracted, how to repeat it after a game update, and the next research steps |
+| 6 | [Decompiled scripts](06-Decompiled-Scripts.md) | Where the decompiled Rockstar scripts are, which build they match, how to search them, verified findings (network dependence, freemode start, PC purchase flow, the property table) and the next deep dives |
 
 ## The short version
 
