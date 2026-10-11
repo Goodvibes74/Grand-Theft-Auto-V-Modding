@@ -349,14 +349,108 @@ public class CruelMastersOnlineOffline : Script
 		return cutscene;
 	}
 
+	// Patched: the original re-requested forever, so a missing cutscene hung the script. Now it gives up after
+	// 10 s and logs the name once. Callers that loop on HAS_CUTSCENE_LOADED keep retrying, but no longer block.
+	private static readonly HashSet<string> CutsceneTimeoutsLogged = new HashSet<string>();
+
 	public static string LoadCutscene(string cutscene)
 	{
+		TryLoadCutscene(cutscene);
+		return cutscene;
+	}
+
+	public static bool TryLoadCutscene(string cutscene, int timeoutMs = 10000)
+	{
+		int start = Game.GameTime;
 		while (!Function.Call<bool>(Hash.HAS_CUTSCENE_LOADED, cutscene))
 		{
+			if (Game.GameTime - start > timeoutMs)
+			{
+				if (CutsceneTimeoutsLogged.Add(cutscene))
+				{
+					LogLine($"LoadCutscene: \"{cutscene}\" not loaded after {timeoutMs} ms, giving up");
+				}
+				return false;
+			}
 			Function.Call(Hash.REQUEST_CUTSCENE, cutscene, 8);
 			Script.Yield();
 		}
-		return cutscene;
+		return true;
+	}
+
+	// Added: every Gerald and Simeon mission ended by teleporting the player to the contact's marker, some of them
+	// 1 m below the floor (the player fell through the map). Now the player stays where the mission ended, like
+	// in Online. Set [MISSIONS] RETURN TO CONTACT = true in the ini to get the old return back; it then waits for
+	// collision and puts the player on the ground.
+	public static void MissionEndReturn(Vector3 contactSpot, float heading)
+	{
+		bool returnToContact = Config.GetValue("MISSIONS", "RETURN TO CONTACT", false);
+		Ped player = Game.Player.Character;
+		if (!returnToContact)
+		{
+			LogLine($"mission end: staying at {player.Position.X:F0}, {player.Position.Y:F0}, {player.Position.Z:F0}");
+			return;
+		}
+		Function.Call(Hash.REQUEST_COLLISION_AT_COORD, contactSpot.X, contactSpot.Y, contactSpot.Z);
+		Function.Call(Hash.SET_ENTITY_COORDS, player, contactSpot.X, contactSpot.Y, contactSpot.Z + 1f, true, false, false, true);
+		int deadline = Game.GameTime + 3000;
+		while (!Function.Call<bool>(Hash.HAS_COLLISION_LOADED_AROUND_ENTITY, player) && Game.GameTime < deadline)
+		{
+			Function.Call(Hash.REQUEST_COLLISION_AT_COORD, contactSpot.X, contactSpot.Y, contactSpot.Z);
+			Script.Wait(0);
+		}
+		float groundZ = World.GetGroundHeight(new Vector3(contactSpot.X, contactSpot.Y, contactSpot.Z + 2f));
+		float z = groundZ > 0f ? groundZ : contactSpot.Z + 1f;
+		Function.Call(Hash.SET_ENTITY_COORDS, player, contactSpot.X, contactSpot.Y, z, true, false, false, true);
+		Function.Call(Hash.SET_ENTITY_HEADING, player, heading);
+		LogLine($"mission end: returned to contact at {contactSpot.X:F0}, {contactSpot.Y:F0}, ground {z:F2}");
+	}
+
+	// Added: one safe sequence for cutscenes that star the player (MP_1). Fades out, loads with a timeout, hands
+	// the player ped to the cutscene with the same model trick the Gerald intro uses, fades back in once it runs,
+	// waits for the end and removes it. Returns false if the cutscene could not load (the caller should carry on).
+	public static bool PlayPlayerCutscene(string cutscene)
+	{
+		Ped player = Game.Player.Character;
+		LogLine($"cutscene: {cutscene} begin");
+		Function.Call(Hash.DO_SCREEN_FADE_OUT, 500);
+		int fadeDeadline = Game.GameTime + 2000;
+		while (!Function.Call<bool>(Hash.IS_SCREEN_FADED_OUT) && Game.GameTime < fadeDeadline)
+		{
+			Script.Wait(0);
+		}
+		PlayerModelSet(player);
+		int loadStart = Game.GameTime;
+		if (!TryLoadCutscene(cutscene))
+		{
+			PlayerModelSetBack(player);
+			Function.Call(Hash.REMOVE_CUTSCENE);
+			Function.Call(Hash.DO_SCREEN_FADE_IN, 500);
+			LogLine($"cutscene: {cutscene} skipped (did not load)");
+			return false;
+		}
+		LogLine($"cutscene: {cutscene} loaded in {Game.GameTime - loadStart} ms");
+		SetPedOutfitCutscene("MP_1", player);
+		Function.Call(Hash.REGISTER_ENTITY_FOR_CUTSCENE, player, "MP_1", 0, 0, 64);
+		Function.Call(Hash.START_CUTSCENE, 0);
+		Script.Wait(50);
+		PlayerModelSetBack(player);
+		GetPedOutfitCutscene("MP_1", player);
+		GET_MAIN_CHARACTER_WITHOUT_MODEL();
+		LoadingPrompt.Hide();
+		Screen_Effects.StopAllAnimPostFX();
+		Function.Call(Hash.DO_SCREEN_FADE_IN, 500);
+		while (!Cutscenes.HAS_CUTSCENE_FINISHED())
+		{
+			Script.Wait(0);
+		}
+		Function.Call(Hash.REMOVE_CUTSCENE);
+		if (!Function.Call<bool>(Hash.IS_SCREEN_FADED_IN))
+		{
+			Function.Call(Hash.DO_SCREEN_FADE_IN, 500);
+		}
+		LogLine($"cutscene: {cutscene} finished");
+		return true;
 	}
 
 	// Patched: the original waited forever when a dictionary is missing from the game files, which made SHVDN
@@ -11055,6 +11149,26 @@ public class CruelMastersOnlineOffline : Script
 			pushArgs(args);
 			Function.Call(Hash.END_SCALEFORM_MOVIE_METHOD);
 		}
+	}
+
+	// Added: lobbies pushed their data straight after ACTIVATE_FRONTEND_MENU, while the frontend movie was still
+	// loading. CallFunctionFrontend then dropped every SET_DATA_SLOT, so only the header showed. Call this after
+	// opening a frontend menu and before filling it.
+	public static void WaitForFrontendReady(string menuName)
+	{
+		int start = Game.GameTime;
+		int deadline = start + 3000;
+		while (!Function.Call<bool>(Hash.IS_FRONTEND_READY_FOR_CONTROL) && Game.GameTime < deadline)
+		{
+			Script.Wait(0);
+		}
+		bool ready = Function.Call<bool>(Hash.IS_FRONTEND_READY_FOR_CONTROL);
+		// A few extra frames: the column movies can lag the ready flag slightly.
+		for (int i = 0; i < 3; i++)
+		{
+			Script.Wait(0);
+		}
+		LogLine($"frontend: {menuName} {(ready ? "ready" : "NOT ready (timed out)")} after {Game.GameTime - start} ms");
 	}
 
 	public static void CallFunctionFrontendHeader(string name, params object[] args)

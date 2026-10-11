@@ -91,6 +91,8 @@ internal class MPCustomHeistCMS : Script
 						Function.Call(Hash.ACTIVATE_FRONTEND_MENU, Function.Call<Hash>(Hash.GET_HASH_KEY, "FE_MENU_VERSION_CORONA"), 0, -1);
 						Script.Wait(200);
 					}
+					CruelMastersOnlineOffline.WaitForFrontendReady("MPCustomHeistCMS lobby");
+					PreviousSelection = -1;
 					if (!CruelMastersOnlineOffline.IsFreemodeMale && !CruelMastersOnlineOffline.IsFreemodeFemale)
 					{
 						CruelMastersOnlineOffline.CallFunctionFrontendHeader("SET_CHAR_IMG", 0);

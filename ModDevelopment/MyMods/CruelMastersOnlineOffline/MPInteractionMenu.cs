@@ -24,6 +24,10 @@ internal class MPInteractionMenu : Script
 
 	public static int ButtonHoldTimer = 0;
 
+	public static int QuitConfirmUntil = 0;
+
+	public static NativeItem QuitItem;
+
 	public MPInteractionMenu()
 	{
 		Tick += onTick;
@@ -2240,6 +2244,26 @@ internal class MPInteractionMenu : Script
 			}
 		};
 		InteractionMenu.Add(6, nativeItem14);
+		// Added: the Online pause menu's Quit button relies on network code that isn't running, so the game
+		// could only be closed with Alt+F4. Select twice within 5 s to quit; rank and cash are already in the ini.
+		NativeItem QuitGameItem = new NativeItem("Quit Game", "Close GTA V. Select again within 5 seconds to confirm.", "");
+		QuitGameItem.Activated += (object sender, EventArgs e) =>
+		{
+			if (Game.GameTime > QuitConfirmUntil)
+			{
+				QuitConfirmUntil = Game.GameTime + 5000;
+				QuitGameItem.AltTitle = "Confirm?";
+				Function.Call(Hash.PLAY_SOUND_FRONTEND, -1, "SELECT", "HUD_FREEMODE_SOUNDSET", true);
+				return;
+			}
+			CruelMastersOnlineOffline.LogLine("interaction menu: Quit Game confirmed");
+			InteractionMenu.Visible = false;
+			Function.Call(Hash.DO_SCREEN_FADE_OUT, 500);
+			Script.Wait(600);
+			Function.Call(Hash.QUIT_GAME);
+		};
+		InteractionMenu.Add(7, QuitGameItem);
+		QuitItem = QuitGameItem;
 	}
 
 	public unsafe void onTick(object sender, EventArgs e)
@@ -2251,6 +2275,11 @@ internal class MPInteractionMenu : Script
 		if (MenuPool != null && MenuPool.AreAnyVisible)
 		{
 			MenuPool.Process();
+		}
+		if (QuitItem != null && QuitConfirmUntil != 0 && Game.GameTime > QuitConfirmUntil)
+		{
+			QuitConfirmUntil = 0;
+			QuitItem.AltTitle = "";
 		}
 		Function.Call(Hash.DISABLE_CONTROL_ACTION, 0, 244, 1);
 		if (Function.Call<bool>(Hash.DOES_SCRIPT_EXIST, "pi_menu"))

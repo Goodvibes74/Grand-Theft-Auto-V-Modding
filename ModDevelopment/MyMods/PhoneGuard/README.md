@@ -9,6 +9,7 @@ On a controller, D-pad Up is both "menu up" and the phone button (`INPUT_PHONE`,
 - **Opened or closed:** F3 or RB + X (TrainerV), F8 or RB + D-pad Left (Menyoo). Each press flips the state.
 - **Still open:** any menu input (D-pad, A, Num 2/4/5/6/8, arrows, Enter) keeps it open.
 - **Closed:** two back presses (B, Backspace or Num 0) within a second, or one back press followed by 3 s with no menu input, or 20 s with no menu input at all.
+- It reads the buttons with `IS_DISABLED_CONTROL_*`, because Menyoo disables the menu controls while it is open. With the plain checks it saw no input and gave up after 20 s (fixed 2026-10-11).
 
 It is a guess. If it gets out of step (the phone won't open with no menu on screen), press B twice. That always resets it.
 

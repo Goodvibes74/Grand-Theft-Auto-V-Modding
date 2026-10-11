@@ -249,11 +249,16 @@ internal class MPSimeonCMS : Script
 		{
 			ContactPool.Process();
 		}
-		if (MPRank.PlayerLevel < 3)
+		// Patched: Simeon used to wait for rank 3 only. Passing Gerald's first mission now unlocks him too.
+		MPSaveData mPSaveData = MPSaveData.GET_MAIN_SAVE_DATA("Save Data");
+		if (mPSaveData == null || mPSaveData.ContactSaveDatas.Count == 0)
 		{
 			return;
 		}
-		MPSaveData mPSaveData = MPSaveData.GET_MAIN_SAVE_DATA("Save Data");
+		if (MPRank.PlayerLevel < 3 && !mPSaveData.ContactSaveDatas[0].GeraldFirstMissionDone)
+		{
+			return;
+		}
 		if (mPSaveData.ContactSaveDatas[0].SimeonCutscene)
 		{
 			if (!SimeonContactAdded && Mobile_Phone.PHONE_LOADED)
@@ -323,6 +328,8 @@ internal class MPSimeonCMS : Script
 						Function.Call(Hash.ACTIVATE_FRONTEND_MENU, Function.Call<Hash>(Hash.GET_HASH_KEY, "FE_MENU_VERSION_CORONA"), 0, -1);
 						Script.Wait(200);
 					}
+					CruelMastersOnlineOffline.WaitForFrontendReady("MPSimeonCMS lobby");
+					PreviousSelection = -1;
 					if (!CruelMastersOnlineOffline.IsFreemodeMale && !CruelMastersOnlineOffline.IsFreemodeFemale)
 					{
 						CruelMastersOnlineOffline.CallFunctionFrontendHeader("SET_CHAR_IMG", 0);
@@ -1528,60 +1535,17 @@ internal class MPSimeonCMS : Script
 			Script.Wait(3000);
 			Mobile_Phone.SETUP_PHONECALL("Simeon", "char_simeon", "INCOMING CALL", "CONNECTED", isDialing: false, 4000, 4000);
 			Script.Wait(2000);
-			if (Game.Player.Character.Gender == Gender.Male)
-			{
-				CruelMastersOnlineOffline.LoadCutscene("mp_intro_mcs_11");
-				while (!Function.Call<bool>(Hash.HAS_CUTSCENE_LOADED))
-				{
-					CruelMastersOnlineOffline.LoadCutscene("mp_intro_mcs_11");
-					Script.Yield();
-				}
-				CruelMastersOnlineOffline.SetPedOutfitCutscene("MP_1", Game.Player.Character);
-				Function.Call(Hash.START_CUTSCENE, 0);
-				Script.Wait(50);
-				CruelMastersOnlineOffline.PlayerModelSetBack(Game.Player.Character);
-				CruelMastersOnlineOffline.GetPedOutfitCutscene("MP_1", Game.Player.Character);
-				CruelMastersOnlineOffline.GET_MAIN_CHARACTER_WITHOUT_MODEL();
-				LoadingPrompt.Hide();
-				Screen_Effects.StopAllAnimPostFX();
-				Function.Call(Hash.REMOVE_CUTSCENE);
-				Mobile_Phone.END_PHONECALL(isincutscene: true);
-				while (!Cutscenes.HAS_CUTSCENE_FINISHED())
-				{
-					Script.Wait(0);
-				}
-				mPSaveData.ContactSaveDatas[0].SimeonCutscene = true;
-				MPSaveData.SAVE_DATA(mPSaveData, "Save Data");
-				CruelMastersOnlineOffline.ShowContactAdded("Contact Added", "char_simeon", "char_simeon", "Simeon");
-				GTA.UI.Screen.ShowHelpText("Simeon Contact Missions have been unlocked. Go to the Simeon Blip ~HUD_COLOUR_YELLOW~~BLIP_293~~HUD_COLOUR_WHITE~ marked on the map to start up his contact missions.", 7000);
-			}
-			else
-			{
-				CruelMastersOnlineOffline.LoadCutscene("mp_intro_mcs_11_a1");
-				while (!Function.Call<bool>(Hash.HAS_CUTSCENE_LOADED))
-				{
-					CruelMastersOnlineOffline.LoadCutscene("mp_intro_mcs_11_a1");
-					Script.Yield();
-				}
-				CruelMastersOnlineOffline.SetPedOutfitCutscene("MP_1", Game.Player.Character);
-				Function.Call(Hash.START_CUTSCENE, 0);
-				Script.Wait(50);
-				CruelMastersOnlineOffline.PlayerModelSetBack(Game.Player.Character);
-				CruelMastersOnlineOffline.GetPedOutfitCutscene("MP_1", Game.Player.Character);
-				CruelMastersOnlineOffline.GET_MAIN_CHARACTER_WITHOUT_MODEL();
-				LoadingPrompt.Hide();
-				Screen_Effects.StopAllAnimPostFX();
-				Function.Call(Hash.REMOVE_CUTSCENE);
-				Mobile_Phone.END_PHONECALL(isincutscene: true);
-				while (!Cutscenes.HAS_CUTSCENE_FINISHED())
-				{
-					Script.Wait(0);
-				}
-				mPSaveData.ContactSaveDatas[0].SimeonCutscene = true;
-				MPSaveData.SAVE_DATA(mPSaveData, "Save Data");
-				CruelMastersOnlineOffline.ShowContactAdded("Contact Added", "char_simeon", "char_simeon", "Simeon");
-				GTA.UI.Screen.ShowHelpText("Simeon Contact Missions have been unlocked. Go to the Simeon Blip ~HUD_COLOUR_YELLOW~~BLIP_293~~HUD_COLOUR_WHITE~ marked on the map to start up his contact missions.", 7000);
-			}
+			// Patched: the intro never registered the player, removed the cutscene 50 ms after starting it and
+			// had no fade. It now goes through PlayPlayerCutscene. If the cutscene fails to load, Simeon is
+			// still unlocked so progression can't stall.
+			Mobile_Phone.END_PHONECALL(isincutscene: true);
+			string simeonIntro = Game.Player.Character.Gender == Gender.Male ? "mp_intro_mcs_11" : "mp_intro_mcs_11_a1";
+			CruelMastersOnlineOffline.PlayPlayerCutscene(simeonIntro);
+			mPSaveData.ContactSaveDatas[0].SimeonCutscene = true;
+			MPSaveData.SAVE_DATA(mPSaveData, "Save Data");
+			CruelMastersOnlineOffline.LogLine("progression: Simeon intro done, contact added");
+			CruelMastersOnlineOffline.ShowContactAdded("Contact Added", "char_simeon", "char_simeon", "Simeon");
+			GTA.UI.Screen.ShowHelpText("Simeon Contact Missions have been unlocked. Go to the Simeon Blip ~HUD_COLOUR_YELLOW~~BLIP_293~~HUD_COLOUR_WHITE~ marked on the map to start up his contact missions.", 7000);
 		}
 	}
 
@@ -2367,8 +2331,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -2991,8 +2954,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -3794,8 +3756,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -4397,8 +4358,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -5140,8 +5100,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -5882,8 +5841,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -6615,8 +6573,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -7420,8 +7377,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -8405,8 +8361,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -9184,8 +9139,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 24.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 24.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -10626,8 +10580,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 24.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 24.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -11386,8 +11339,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -11896,8 +11848,7 @@ internal class MPSimeonCMS : Script
 					Script.Wait(0);
 				}
 				MPVehicleLoadout.SPAWN_PERSONAL_VEHICLE(new Vector3(-75.16011f, -1101.33f, 26.1002f), 161.8743f);
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -33.94191f, -1111.962f, 25.42235f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 319.3282f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-33.94191f, -1111.962f, 25.42235f), 319.3282f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;

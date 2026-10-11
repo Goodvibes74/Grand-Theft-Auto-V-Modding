@@ -1236,8 +1236,12 @@ internal class Mobile_Phone : Script
 				APP_ACTIVE = true;
 				break;
 			case 3:
+				// Added: Quick Job sets a waypoint to the nearest unlocked contact mission.
+				QUICK_JOB();
 				break;
 			case 4:
+				// Added: Job List shows which contacts are unlocked.
+				SHOW_JOB_LIST();
 				break;
 			case 5:
 				break;
@@ -1267,6 +1271,44 @@ internal class Mobile_Phone : Script
 				break;
 			}
 		}
+	}
+
+	private static readonly Vector3 GeraldJobLocation = new Vector3(-90.81058f, -1525.272f, 33.6386f);
+
+	private static readonly Vector3 SimeonJobLocation = new Vector3(-32.04094f, -1111.233f, 26.42236f);
+
+	private static bool IsSimeonUnlocked()
+	{
+		MPSaveData save = MPSaveData.GET_MAIN_SAVE_DATA("Save Data");
+		return save != null && save.ContactSaveDatas.Count > 0 && save.ContactSaveDatas[0].SimeonCutscene;
+	}
+
+	public static void QUICK_JOB()
+	{
+		if (CruelMastersOnlineOffline.OnMission)
+		{
+			Notification.Show("Quick Job: finish the current job first.");
+			return;
+		}
+		Vector3 player = Game.Player.Character.Position;
+		Vector3 target = GeraldJobLocation;
+		string contact = "Gerald";
+		if (IsSimeonUnlocked() && player.DistanceTo(SimeonJobLocation) < player.DistanceTo(GeraldJobLocation))
+		{
+			target = SimeonJobLocation;
+			contact = "Simeon";
+		}
+		CLOSE_PHONE();
+		World.WaypointPosition = target;
+		Notification.Show($"Quick Job: waypoint set to {contact}'s contact missions.");
+	}
+
+	public static void SHOW_JOB_LIST()
+	{
+		string simeon = IsSimeonUnlocked() ? "~g~Unlocked" : "~r~Locked~s~ (pass Gerald's first job)";
+		string heists = MPRank.PlayerLevel >= 5 ? "~g~Unlocked" : $"~r~Locked~s~ (rank 5, you are {MPRank.PlayerLevel})";
+		CLOSE_PHONE();
+		Notification.Show($"~y~Job List~s~~n~Gerald: ~g~Unlocked~s~~n~Simeon: {simeon}~s~~n~Heists: {heists}");
 	}
 
 	public static void CREATE_TEXT(string contact = "Text_Contact", string message = "Text_Message", string pictxd = "char_default")

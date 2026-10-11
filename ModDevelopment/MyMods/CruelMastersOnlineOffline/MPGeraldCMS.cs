@@ -291,6 +291,8 @@ internal class MPGeraldCMS : Script
 					Function.Call(Hash.ACTIVATE_FRONTEND_MENU, Function.Call<Hash>(Hash.GET_HASH_KEY, "FE_MENU_VERSION_CORONA"), 0, -1);
 					Script.Wait(200);
 				}
+				CruelMastersOnlineOffline.WaitForFrontendReady("MPGeraldCMS lobby");
+				PreviousSelection = -1;
 				if (!CruelMastersOnlineOffline.IsFreemodeMale && !CruelMastersOnlineOffline.IsFreemodeFemale)
 				{
 					CruelMastersOnlineOffline.CallFunctionFrontendHeader("SET_CHAR_IMG", 0);
@@ -1882,7 +1884,8 @@ internal class MPGeraldCMS : Script
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED, "PAUSE", "CELEB_MISSION", 1);
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED2, "PAUSE", "CELEB_MISSION", 1);
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED3, "PAUSE", "CELEB_MISSION", 1);
-		int num6 = Function.Call<int>(Hash.GET_RANDOM_INT_IN_RANGE, 500, 1301);
+		// Patched: was a random 500-1300 RP, which made the Simeon unlock feel random. Fixed at 1250 (rank 2).
+		int num6 = 1250;
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED, "ADD_REP_POINTS_AND_RANK_BAR_TO_WALL", "CELEB_MISSION", num6, MPRank.CurrentXP, MPRank.XPStartLimit, MPRank.XPEndLimit, MPRank.PlayerLevel, MPRank.PlayerLevel + 1, "Rank", "UP");
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED2, "ADD_REP_POINTS_AND_RANK_BAR_TO_WALL", "CELEB_MISSION", num6, MPRank.CurrentXP, MPRank.XPStartLimit, MPRank.XPEndLimit, MPRank.PlayerLevel, MPRank.PlayerLevel + 1, "Rank", "UP");
 		Wall_Creator.CallFunction(Wall_Creator.MISSIONPASSED3, "ADD_REP_POINTS_AND_RANK_BAR_TO_WALL", "CELEB_MISSION", num6, MPRank.CurrentXP, MPRank.XPStartLimit, MPRank.XPEndLimit, MPRank.PlayerLevel, MPRank.PlayerLevel + 1, "Rank", "UP");
@@ -1929,8 +1932,7 @@ internal class MPGeraldCMS : Script
 		{
 			Script.Wait(0);
 		}
-		Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-		Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+		CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 		Cameras.RESET_GAMEPLAY_CAM();
 		Game.Player.CanControlCharacter = true;
 		Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -1942,6 +1944,13 @@ internal class MPGeraldCMS : Script
 		}
 		MPCash.ADD_CASH(num5);
 		MPRank.ADD_RP(num6);
+		MPSaveData geraldSave = MPSaveData.GET_MAIN_SAVE_DATA("Save Data");
+		if (geraldSave != null && geraldSave.ContactSaveDatas.Count > 0 && !geraldSave.ContactSaveDatas[0].GeraldFirstMissionDone)
+		{
+			geraldSave.ContactSaveDatas[0].GeraldFirstMissionDone = true;
+			MPSaveData.SAVE_DATA(geraldSave, "Save Data");
+			CruelMastersOnlineOffline.LogLine("progression: Gerald first mission passed, Simeon unlocked");
+		}
 		CruelMastersOnlineOffline.RadioAllowed = true;
 		CruelMastersOnlineOffline.NoCopsOnMission = false;
 		CruelMastersOnlineOffline.FuckOffCivilians = false;
@@ -3028,8 +3037,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -3602,8 +3610,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -4205,8 +4212,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -4782,8 +4788,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -5425,8 +5430,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -5994,8 +5998,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -6587,8 +6590,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -7151,8 +7153,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -7738,8 +7739,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 33.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 33.58508f), 170.8833f);
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
 				Function.Call(Hash.ALLOW_PLAYER_SWITCH_DESCENT);
@@ -8298,8 +8298,7 @@ internal class MPGeraldCMS : Script
 						{
 							Script.Wait(0);
 						}
-						Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-						Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+						CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 						Game.Player.Character.IsPositionFrozen = true;
 						Cameras.RESET_GAMEPLAY_CAM();
 						Game.Player.CanControlCharacter = true;
@@ -8954,8 +8953,7 @@ internal class MPGeraldCMS : Script
 						{
 							Script.Wait(0);
 						}
-						Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-						Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+						CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 						Game.Player.Character.IsPositionFrozen = true;
 						Cameras.RESET_GAMEPLAY_CAM();
 						Game.Player.CanControlCharacter = true;
@@ -9944,8 +9942,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -10477,8 +10474,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -11272,8 +11268,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -12246,8 +12241,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -14308,8 +14302,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -15467,8 +15460,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -16753,8 +16745,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;
@@ -18037,8 +18028,7 @@ internal class MPGeraldCMS : Script
 				{
 					Script.Wait(0);
 				}
-				Function.Call(Hash.SET_ENTITY_COORDS, Game.Player.Character, -91.57023f, -1523.439f, 32.58508f, true, false, false, true);
-				Function.Call(Hash.SET_ENTITY_HEADING, Game.Player.Character, 170.8833f);
+				CruelMastersOnlineOffline.MissionEndReturn(new Vector3(-91.57023f, -1523.439f, 32.58508f), 170.8833f);
 				Game.Player.Character.IsPositionFrozen = true;
 				Cameras.RESET_GAMEPLAY_CAM();
 				Game.Player.CanControlCharacter = true;

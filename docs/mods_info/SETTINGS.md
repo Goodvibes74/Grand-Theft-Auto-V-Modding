@@ -271,6 +271,8 @@ Weapon values are `WeaponHash` names such as `SMG`, `CarbineRifle` or `Pistol`. 
 
 The mod rewrites these while you play, so they are your save as well as your config. Close the game before editing. `[MAIN] PROGRESSION`, `[RANK]` (level, RP), `[CASH]` (cash, bank) and `[CHARACTER]` (face, outfit) are the main parts. To start over, restore the ini from `ModDevelopment/MyMods/CruelMastersOnlineOffline/original/` and empty the XML files in the assets folder (the originals are in `GTA ONLINE MODS/`).
 
+Optional key (not in the file by default): add `[MISSIONS]` with `RETURN TO CONTACT = true` to be put back at Gerald's or Simeon's marker after a mission. The default (`false`) leaves you where the mission ended.
+
 ## 7c. PhoneGuard
 
 **File:** `scripts/PhoneGuard.ini` · **Format:** INI

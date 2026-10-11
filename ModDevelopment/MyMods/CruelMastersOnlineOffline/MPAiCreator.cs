@@ -2730,14 +2730,10 @@ internal class MPAiCreator : Script
 		return cutscene;
 	}
 
+	// Patched: same 10 s timeout as CruelMastersOnlineOffline.LoadCutscene.
 	public static string LoadCutscene(string cutscene)
 	{
-		while (!Function.Call<bool>(Hash.HAS_CUTSCENE_LOADED, cutscene))
-		{
-			Function.Call(Hash.REQUEST_CUTSCENE, cutscene, 8);
-			Script.Yield();
-		}
-		return cutscene;
+		return CruelMastersOnlineOffline.LoadCutscene(cutscene);
 	}
 
 	public static string LoadDict(string dict)

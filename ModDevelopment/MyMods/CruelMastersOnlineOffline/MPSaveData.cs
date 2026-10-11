@@ -11,16 +11,30 @@ public class MPSaveData
 
 	public List<PIStyleSaveData> PIStyleSaveDatas = new List<PIStyleSaveData>();
 
+	// Patched: MPSimeonCMS read and deserialized "Save Data.xml" on every tick once rank 3 was reached. Saves are
+	// now cached in memory; SAVE_DATA updates the cache, so readers always see the latest written data.
+	private static readonly Dictionary<string, MPSaveData> Cache = new Dictionary<string, MPSaveData>();
+
 	public static void SAVE_DATA(MPSaveData newsavadata, string fileName)
 	{
 		XMLSerializer.SaveToXML(newsavadata, "scripts\\CruelMastersOnlineOfflineAssets\\Save Data\\" + fileName + ".xml");
+		Cache[fileName] = newsavadata;
 	}
 
 	public static MPSaveData GET_MAIN_SAVE_DATA(string fileName)
 	{
+		if (Cache.TryGetValue(fileName, out MPSaveData cached))
+		{
+			return cached;
+		}
 		if (File.Exists("scripts\\CruelMastersOnlineOfflineAssets\\Save Data\\" + fileName + ".xml"))
 		{
-			return XMLSerializer.DeserializeXML<MPSaveData>("scripts\\CruelMastersOnlineOfflineAssets\\Save Data\\" + fileName + ".xml");
+			MPSaveData loaded = XMLSerializer.DeserializeXML<MPSaveData>("scripts\\CruelMastersOnlineOfflineAssets\\Save Data\\" + fileName + ".xml");
+			if (loaded != null)
+			{
+				Cache[fileName] = loaded;
+			}
+			return loaded;
 		}
 		return null;
 	}

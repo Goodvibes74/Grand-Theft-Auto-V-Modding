@@ -138,12 +138,14 @@ namespace PhoneGuard
 
 		private static bool Pressed(int control)
 		{
-			return Function.Call<bool>(Hash.IS_CONTROL_PRESSED, 2, control);
+			// The DISABLED variants also report controls a trainer has disabled. Menyoo disables the frontend
+			// controls while its menu is open, so the plain variants missed every input and the guess timed out.
+			return Function.Call<bool>(Hash.IS_DISABLED_CONTROL_PRESSED, 2, control);
 		}
 
 		private static bool JustPressed(int control)
 		{
-			return Function.Call<bool>(Hash.IS_CONTROL_JUST_PRESSED, 2, control);
+			return Function.Call<bool>(Hash.IS_DISABLED_CONTROL_JUST_PRESSED, 2, control);
 		}
 	}
 }
